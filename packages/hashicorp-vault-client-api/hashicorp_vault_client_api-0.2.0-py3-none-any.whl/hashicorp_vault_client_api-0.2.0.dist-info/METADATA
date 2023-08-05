@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: hashicorp-vault-client-api
+Version: 0.2.0
+Summary: HashiCorp Vault Client API
+Author: Jerod Gawne
+Author-email: jerodgawne@gmail.com
+Requires-Python: >=3.9.0,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: base-client-api (>=2.0.0,<3.0.0)
