@@ -1,0 +1,4 @@
+[console_scripts]
+ganpdfs = ganpdfs.scripts.main:main
+postgans = ganpdfs.scripts.postgans:main
+
