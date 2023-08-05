@@ -1,0 +1,13 @@
+reporters_db/__init__.py,sha256=hW6OWfuQuMyTbfYq57xc8rOdfnNRizu0FpJKF875hBQ,1260
+reporters_db/make_csv.py,sha256=_nQyLagaDD7pMRm2Ri5o6NQHQCLdWGammvccobeqbuI,2048
+reporters_db/utils.py,sha256=Ieh5vC_-oSNT3Rd0jGblDYtduKpEsrrroENBo1tf8_o,5979
+reporters_db/data/case_name_abbreviations.json,sha256=S6kbWvi54AM7pPW47wHi8EHKNV0MaP0hH75ZOhp57jg,5942
+reporters_db/data/regexes.json,sha256=bleJHptCVUr2bvm122rMdDTL8m9SlyeyTEpgv1q1ibo,2639
+reporters_db/data/reporters.csv,sha256=5MUrlYo30wdnLJlsblaAczRha-AoYhXa7jgVH-YL3YI,93881
+reporters_db/data/reporters.json,sha256=sE2AkFJ2HYh3-UrV7T8zuz-IFcYToH-a62lHHX4lBzQ,470818
+reporters_db/data/state_abbreviations.json,sha256=4fakZfiMPZMZs9gcEfWrLUGAvjCdzhYmjAcwJbLxSrg,1231
+reporters_db-3.0.0.dist-info/LICENSE,sha256=qExY-gYGDnRoL-SAhAOggqNHL8OebkrCmSQd-fnH8b4,1300
+reporters_db-3.0.0.dist-info/METADATA,sha256=-tkkI1_EhY29fwwXCVcB1lHYSbMET8dp5wsRpGndYMo,13495
+reporters_db-3.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+reporters_db-3.0.0.dist-info/top_level.txt,sha256=jeNhZrB2R4eUk4NsKygvvcn6G_NvpfnnQD3QsMBGWLo,13
+reporters_db-3.0.0.dist-info/RECORD,,
