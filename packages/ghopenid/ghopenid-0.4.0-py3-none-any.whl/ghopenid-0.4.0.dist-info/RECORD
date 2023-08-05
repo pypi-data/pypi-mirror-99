@@ -1,0 +1,13 @@
+ghopenid/__init__.py,sha256=w5eDpP1x-zw3D01cvAeaUpYc_m6scguTr7Xt4UzyDiU,601
+ghopenid/connect/__init__.py,sha256=7pqW_yXtJeqnu_lbhAtbtvNjIObvjbGvt0eie-ZbSFo,1135
+ghopenid/connect/discovery.py,sha256=KHjLpgKzWx83F1TigdaiGmkQZiDOHF2jq64HUewdXwU,7669
+ghopenid/connect/grant_types.py,sha256=7CmyRyxJPsKuxs9zWe8gkYVWzMlU1L_OUelZ5IUXGBA,9771
+ghopenid/connect/repository.py,sha256=T1YTuIbPMXxwxLoDjse73kg9o7nvQ7TM6LGHywvwKEA,1607
+ghopenid/connect/request.py,sha256=G86vkK8IKWdfUtUY8B30mtvpq0wgU6rK3wsqpyLurSM,1515
+ghopenid/connect/validator.py,sha256=BryI4keS5DZsp_bDO1Gd9yiVcdLAlPID32nN3xsbYwQ,892
+ghopenid-0.4.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+ghopenid-0.4.0.dist-info/METADATA,sha256=QNbchZXqg2s-290gf8qr-jCtKXLV0gIclePrkZMeLiE,712
+ghopenid-0.4.0.dist-info/RECORD,,
+ghopenid-0.4.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+ghopenid-0.4.0.dist-info/metadata.json,sha256=2cYeHW9jM48SOQL8bLceXmeREpYSV8TCHSZH_ilDLwM,840
+ghopenid-0.4.0.dist-info/top_level.txt,sha256=rNf6YUxVAiwdwYVmhGukhDVPTa1of9w0JRrTY7FomxM,9
