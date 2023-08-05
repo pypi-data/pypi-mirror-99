@@ -1,0 +1,3 @@
+[console_scripts]
+meshx = meshx._cli:main
+

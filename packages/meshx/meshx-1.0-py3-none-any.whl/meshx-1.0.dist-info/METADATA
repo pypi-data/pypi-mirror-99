@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: meshx
+Version: 1.0
+Summary: A simple tool to convert mesh created from Gmsh to XDMF for use in FEniCS
+Home-page: https://github.com/iitrabhi/meshx
+Author: Abhinav Gupta
+Author-email: iitrabhi@gmail.com
+License: License :: OSI Approved :: MIT License
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: meshio
+Requires-Dist: tabulate
+
+# meshx
+
+
