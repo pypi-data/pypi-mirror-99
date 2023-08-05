@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: hello-world-martin
+Version: 0.0.1
+Summary: Ejemplo de paquete con Python
+Home-page: https://gitlab.com/masajo/pypi-package
+Author: Martin San Jose
+Author-email: martin@imaginagroup.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Ejemplo Paquete Pypi
+
+###### Esto es un proyecto de ejemplo que usamos en el curso de Python Avanzado
+
+--------------
+#### Para instalarlo:
+`pip install pypi-package`
+
