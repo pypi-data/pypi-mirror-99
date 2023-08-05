@@ -1,0 +1,16 @@
+ingeniamotion/__init__.cp36-win_amd64.pyd,sha256=ZEB3ciHOsQt4f2V-3mDOVQQ35BXBs1iJqxol-hbwOd4,22016
+ingeniamotion/capture.cp36-win_amd64.pyd,sha256=vX5U4hBuQzEhZusW_pt76FkW0trbSe_QVH5fOypJ_3o,35840
+ingeniamotion/communication.cp36-win_amd64.pyd,sha256=KHHxbX8Ev4O0c1ge8QcSLJc_xY-QearENWmsTN-I2xk,61440
+ingeniamotion/configuration.cp36-win_amd64.pyd,sha256=iQ6L7Ak0XkckDGGw4GXkCwSDo-pdwtpi5roPQs16c0Q,68608
+ingeniamotion/drive_tests.cp36-win_amd64.pyd,sha256=Tg-2CbZHhexp3VrtGi2WYTBpG2RvNwBUHtuvBGqQWFI,65536
+ingeniamotion/motion.cp36-win_amd64.pyd,sha256=npu6WJwXZebkVV1IruNiVNgtoEjizXvnvXKnsgT_sg8,82944
+ingeniamotion/motion_controller.cp36-win_amd64.pyd,sha256=VxlUc91jCer6Sj2s433lNavmaTZgBZ3ePWaolzauFJA,56832
+ingeniamotion/wizard_tests/__init__.cp36-win_amd64.pyd,sha256=8fySWDiDIq1na2BU8yFLF1CpjdaUZ7URqoMLLGAKOeU,21504
+ingeniamotion/wizard_tests/base_test.cp36-win_amd64.pyd,sha256=Yb-nkz13pVQ71HrpTbV8_ZCOiIGf4G24dL5bA7QuYUo,68096
+ingeniamotion/wizard_tests/feedback_test.cp36-win_amd64.pyd,sha256=jdrN1ilEwqQU7_w3uPicFcVMFMWMz1JYvlnQte2tgEI,173568
+ingeniamotion/wizard_tests/phase_calibration.cp36-win_amd64.pyd,sha256=9w89aV-fuNFMY4hXW5Dgq6mR1PI72WCaLUjrueIAkRI,106496
+ingeniamotion-0.1.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ingeniamotion-0.1.1.dist-info/METADATA,sha256=X3OcQeVnmPhYM6h_byHQCSgCQIjvKbQmDFLp8Gqs-N8,2894
+ingeniamotion-0.1.1.dist-info/WHEEL,sha256=epucrC2yyYTysDCMzXuz8eGMTMKryzRfNOvMGdslbjc,101
+ingeniamotion-0.1.1.dist-info/top_level.txt,sha256=6_yzz0WtSCNK0xH_xyuWgQymE3H3AyK3Vxe7I8tWAJw,14
+ingeniamotion-0.1.1.dist-info/RECORD,,
