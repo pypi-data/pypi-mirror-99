@@ -1,0 +1,56 @@
+{
+  "timezone": "Europe/Madrid",
+  "batch": {
+    "general": {
+      "ordenant_name": "Your company name",
+      "ordenant_address_1": "Company address",
+      "ordenant_address_2": "zip and postal code",
+      "ordenant_bic": "company BIC"
+    },
+    "sommobilitat": {
+      "ordenant_id": "SEPA ID 1",
+      "ordenant_iban": "SEPA IBAN 1"
+    },
+    "sm_partago": {
+      "ordenant_id": "SEPA ID 2",
+      "ordenant_iban": "SEPA IBAN 2"
+    }
+  },
+  "user": {
+    "person": {
+      "default_group_config": "",
+      "group": "",
+      "billingAccount": "",
+      "billingAccountBlocked": "-2",
+      "default_language": "",
+      "ownerGroup": ""
+    },
+    "billingAccount": {
+      "group": "",
+      "ownerGroup": ""
+    },
+    "allowed_user_langs": {
+      "es": "es",
+      "ca": "ca"
+    }
+  },
+  "tariff": {
+    "month_duration": {
+      "welcome": 3,
+      "default": 2
+    }
+  },
+  "zip_api": {
+    "api_key": ""
+  },
+  "email": {
+    "error_reports_mail": {
+      "address": "",
+      "password": ""
+    },
+    "server": {
+      "smtp": "",
+      "port": 0
+    }
+  }
+}

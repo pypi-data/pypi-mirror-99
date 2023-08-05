@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="successful_action_message_wizard">
+    <field name="name">Confirming modification on members</field>
+    <field name="model">sm_maintenance.successful_action_message</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="action"/>
+          <field name="model"/>
+        </group>
+        <footer>
+          <button string="Ok" special="cancel" class="oe_highlight"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

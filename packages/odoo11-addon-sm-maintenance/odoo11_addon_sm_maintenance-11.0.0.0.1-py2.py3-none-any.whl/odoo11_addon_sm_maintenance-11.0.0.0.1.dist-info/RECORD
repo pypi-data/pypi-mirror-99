@@ -1,0 +1,15 @@
+odoo/addons/sm_maintenance/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/sm_maintenance/__manifest__.py,sha256=2daRwFx9eM-kY0pQC_uZbxIdYxpV6o_xovvzS42Zito,963
+odoo/addons/sm_maintenance/demo_sommobilitat_config.json,sha256=IR-_RB4DKvXuEhNyVn_lWgdvdpERO17R_Ie5OnjQQdw,1081
+odoo/addons/sm_maintenance/models/__init__.py,sha256=4BXRHASGHMZS4CNqGT6qKWQBP3fGAZ7JXFqxIHPAvOI,144
+odoo/addons/sm_maintenance/models/mail_server.py,sha256=f8DPDflDMaj_2KB15L0D3bJNlNr5QOsA4rn5WPgTwDk,1554
+odoo/addons/sm_maintenance/models/models_load_data.py,sha256=DOGkVn1o7rhSAJ-6wZ-F9xVjo38H-ORfjVMyXRVfSHg,2880
+odoo/addons/sm_maintenance/models/models_sm_resources.py,sha256=WxYeByRPkKBFUyxUcQJCziC08Iea9zYdekyMKQQSxdM,1641
+odoo/addons/sm_maintenance/models/models_sm_successful_actions_message.py,sha256=X3xfMAlZatp8VvTWhCC06MVZzA7UEcKcnKi--HiqM40,247
+odoo/addons/sm_maintenance/models/models_sm_utils.py,sha256=CsYI0MajnUgcYDpO-I-SNV-wkN-2B-RVeofUPytMSq8,9691
+odoo/addons/sm_maintenance/security/ir.model.access.csv,sha256=8Hg8Itn2XK85lvhlurkQjJbGXDcypVzbhLMqIBpJgc4,76
+odoo/addons/sm_maintenance/views/views_successful_action_message.xml,sha256=SECpwv1IZb9EvA_LqL2MPYUVMohjPXs05siI6iLDxOo,587
+odoo11_addon_sm_maintenance-11.0.0.0.1.dist-info/METADATA,sha256=NbjSQaMs5UXxIhWe_eupkDJyILANead3O1c_IRcn-9U,658
+odoo11_addon_sm_maintenance-11.0.0.0.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+odoo11_addon_sm_maintenance-11.0.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo11_addon_sm_maintenance-11.0.0.0.1.dist-info/RECORD,,
