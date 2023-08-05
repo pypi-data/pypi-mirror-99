@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""
+Author: Ioannis Paraskevakos
+License: MIT
+Copyright: 2018-2019
+"""
+
+from iceberg_seals.search.tiling.tile_raster import parse_args, tile_raster
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    # unroll arguments
+    input_image = args.input_image
+    output_folder = args.output_folder
+    bands = [int(ele) for ele in args.bands.split(',')]
+    patch_size = args.patch_size
+    stride = args.stride
+    geotiff = args.geotiff
+
+    # tile image
+    tile_raster(input_image, output_folder, bands, patch_size, stride, geotiff)
+
