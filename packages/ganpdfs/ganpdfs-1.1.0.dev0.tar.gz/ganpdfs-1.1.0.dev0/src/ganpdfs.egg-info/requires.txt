@@ -1,0 +1,6 @@
+hyperopt
+numpy
+rich
+scipy
+tensorflow
+tqdm
