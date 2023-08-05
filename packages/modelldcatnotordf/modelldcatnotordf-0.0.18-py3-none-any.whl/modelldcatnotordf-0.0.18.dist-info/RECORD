@@ -1,0 +1,9 @@
+modelldcatnotordf/__init__.py,sha256=bccuw0nuMrOOTeBKb7Uqaglkir-KRCiE9vFodPSXzSo,386
+modelldcatnotordf/document.py,sha256=rwBJ-SEgkHzb7A_dA_HXCgoI8lAbZLNspV9HVi1NXFE,3404
+modelldcatnotordf/licensedocument.py,sha256=q3VqvD6S4JMer-bNaevU9yeuxV8OIYiUJRZS7ctfwmo,2640
+modelldcatnotordf/modelldcatno.py,sha256=McF6Q_e55b3_w4JQRq4LflLZlsBL1IJgUeiu_8Ag6zA,100501
+modelldcatnotordf/skolemizer.py,sha256=iCOQH1S8kxpama9goprWP_BAmuMUTzWzC7zaOWDeG9Q,2097
+modelldcatnotordf-0.0.18.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+modelldcatnotordf-0.0.18.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+modelldcatnotordf-0.0.18.dist-info/METADATA,sha256=RfTSAaoOaTyXji5vN-lX6Wg2wv0BKnaQLM8s0kaUG9U,3570
+modelldcatnotordf-0.0.18.dist-info/RECORD,,
