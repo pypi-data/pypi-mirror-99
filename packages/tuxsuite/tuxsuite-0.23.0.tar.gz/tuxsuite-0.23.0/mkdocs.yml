@@ -1,0 +1,42 @@
+strict: true
+site_name: TuxSuite Documentation
+site_description: |
+  Documentation for TuxSuite, a service from Linaro for building and testing
+  Linux kernels at scale.
+site_author: TuxSuite Team
+site_dir: public
+repo_url: https://gitlab.com/Linaro/tuxsuite/
+theme:
+  name: material
+  logo: tuxsuite.svg
+  favicon: tuxsuite_icon.svg
+extra_css:
+  - extra.css
+
+nav:
+- Getting Started: index.md
+- TuxBuild:
+  - Features:
+    - Powered by TuxMake: tuxbuild/tuxmake.md
+    - Architectures and Toolchains: tuxbuild/architectures-toolchains.md
+    - Build Sets: tuxbuild/build-sets.md
+    - Build Status: tuxbuild/build-status.md
+    - Metadata: tuxbuild/metadata.md
+  - Arguments:
+    - Required Arguments:
+      - Toolchains: tuxbuild/toolchains.md
+      - Kernel Configuration: tuxbuild/kconfig.md
+      - Git Repo: tuxbuild/git-repo.md
+      - Git Ref and Git SHA: tuxbuild/git-ref-sha.md
+      - Target Architectures: tuxbuild/target-architectures.md
+    - Optional Arguments:
+      - Build Name: tuxbuild/build-name.md
+      - Enviroment Variables: tuxbuild/environment-variables.md
+      - Additional Arguments: tuxbuild/additional-arguments.md
+    - Positional Arguments:
+      - Make Variables: tuxbuild/make-variables.md
+      - Make Targets: tuxbuild/make-targets.md
+- Reference:
+  - Python API: python-api.md
+- Community:
+  - Code of Conduct: code-of-conduct.md
