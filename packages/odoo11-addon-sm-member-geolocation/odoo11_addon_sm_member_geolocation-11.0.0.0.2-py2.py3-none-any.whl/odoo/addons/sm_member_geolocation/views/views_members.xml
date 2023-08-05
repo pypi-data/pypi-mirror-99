@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+    <record id="compute_address" model="ir.actions.server">
+      <field name="name">GEOLOCATION: Compute member address</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.compute_api_address_from_action()</field>
+    </record>
+    <record id="sanitize_db" model="ir.actions.server">
+      <field name="name">GEOLOCATION: Sanitize DB</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.sanitize_geolocation_db_action()</field>
+    </record>
+    <record id="view_members_form" model="ir.ui.view">
+      <field name="name">sm_member_geolocation.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="base_geolocalize.view_crm_partner_geo_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='geo_location']" position="replace">
+          <page name='geo_location' string="Geolocation">
+            <group name="container_row_2">
+              <field name="geolocation_computed" readonly="True"/>
+              <field name="computed_city" readonly="True"/>
+              <field name="computed_state" readonly="True"/>
+              <field name="computed_country" readonly="True"/>
+              <field name="member_lat" readonly="True"/>
+              <field name="member_lng" readonly="True"/>
+              <field name="partner_zones" readonly="True"/>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

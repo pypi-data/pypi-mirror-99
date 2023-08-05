@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+    <record id="view_members_zone_window" model="ir.actions.act_window">
+      <field name="name">Members zone</field>
+      <field name="res_model">sm_member_geolocation.members_zone</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_members_zone" model="ir.ui.view">
+      <field name="name">sm_member_geolocation.members_zone.list</field>
+      <field name="model">sm_member_geolocation.members_zone</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_members_zone_form" model="ir.ui.view">
+      <field name="name">sm_member_geolocation.members_zone.form</field>
+      <field name="model">sm_member_geolocation.members_zone</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit place" create="false" edit="true" delete="false">
+          <header></header>
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="lat"/>
+                  <field name="lng"/>
+                  <field name="rad"/>
+                  <field name="zone_partners"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_search_members_inside_workflow" model="ir.actions.server">
+      <field name="name">Search members inside</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_member_geolocation_members_zone"/>
+      <field name="binding_model_id" ref="model_sm_member_geolocation_members_zone"/>
+      <field name="state">code</field>
+      <field name="code">action = model.search_members_inside_action()</field>
+    </record>
+
+    <menuitem name="Geolocation" id="sm_member_geolocation.members_zone" 
+      parent="vertical_carsharing.menu_root" action="view_members_zone_window"/>
+
+  </data>
+</odoo>
