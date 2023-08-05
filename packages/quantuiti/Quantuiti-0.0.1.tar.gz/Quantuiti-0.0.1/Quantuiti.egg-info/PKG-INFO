@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Quantuiti
+Version: 0.0.1
+Summary: Quantuiti library for quantitative finance
+Home-page: https://github.com/quantuiti/python-quantuiti
+Author: Dylan Muraco
+Author-email: dylanjmuraco@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/quantuiti/python-quantuiti/issues
+Description: # Quantuiti
+        
+        Quantuiti is a platform designed to make automated trading easier
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
