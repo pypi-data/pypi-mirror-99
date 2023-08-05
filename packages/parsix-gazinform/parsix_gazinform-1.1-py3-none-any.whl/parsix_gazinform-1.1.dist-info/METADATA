@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: parsix-gazinform
+Version: 1.1
+Summary: A module that implements a test task for the Gazinformservice company
+Home-page: UNKNOWN
+Author: Aleksandr Zakora
+Author-email: zakorro@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+It helps to break down a string of log files into readable information.
+
+
