@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ckdb
+Version: 0.0.1
+Summary: CK DataBase
+Home-page: https://github.com/ctuning/ck
+Author: Grigori Fursin
+Author-email: gfursin@gmail.com
+License: Apache 2.0
+Description: # CK DataBase
+        
+        Prototyping the CK DataBase
+        
+        
+        
+        ## License
+        CKDB is licensed under the Apache License 2.0. 
+        
+        See [LICENSE](https://github.com/gfursin/ckdb/blob/master/LICENSE) for more information.
+        
+        ## Support
+        
+        [Create a GitHub issue](https://github.com/ckdb/connectme/issues/new/choose)
+        
+Keywords: ck,database,reuse,api
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown

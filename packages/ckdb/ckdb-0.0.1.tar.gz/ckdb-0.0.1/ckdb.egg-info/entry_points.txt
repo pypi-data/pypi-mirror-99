@@ -1,0 +1,4 @@
+[console_scripts]
+cb = ckdb.cli:run
+ckdb = ckdb.cli:run
+

@@ -1,0 +1,10 @@
+README.md
+setup.py
+ckdb/__init__.py
+ckdb.egg-info/PKG-INFO
+ckdb.egg-info/SOURCES.txt
+ckdb.egg-info/dependency_links.txt
+ckdb.egg-info/entry_points.txt
+ckdb.egg-info/not-zip-safe
+ckdb.egg-info/requires.txt
+ckdb.egg-info/top_level.txt
