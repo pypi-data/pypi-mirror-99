@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/sphinxcontrib_ads.egg-info/PKG-INFO
+src/sphinxcontrib_ads.egg-info/SOURCES.txt
+src/sphinxcontrib_ads.egg-info/dependency_links.txt
+src/sphinxcontrib_ads.egg-info/not-zip-safe
+src/sphinxcontrib_ads.egg-info/requires.txt
+src/sphinxcontrib_ads.egg-info/top_level.txt
+src/vendor/__init__.py
+src/vendor/__pycache__/__init__.cpython-39.pyc
