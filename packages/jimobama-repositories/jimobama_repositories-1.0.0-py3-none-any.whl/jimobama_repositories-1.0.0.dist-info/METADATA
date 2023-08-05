@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jimobama-repositories
+Version: 1.0.0
+Summary: Manager Json files easy for your configuration tools
+Home-page: https://github.com/miljimo/jimo_repositories.git
+Author: Obaro I. Johnson
+Author-email: johnson.obaro@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+
+A simple JSON database for quick application development.
+
