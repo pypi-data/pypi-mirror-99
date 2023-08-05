@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+AnsiColorsLib.egg-info/PKG-INFO
+AnsiColorsLib.egg-info/SOURCES.txt
+AnsiColorsLib.egg-info/dependency_links.txt
+AnsiColorsLib.egg-info/top_level.txt
+ansicolorslib.egg-info/PKG-INFO
+ansicolorslib.egg-info/SOURCES.txt
+ansicolorslib.egg-info/dependency_links.txt
+ansicolorslib.egg-info/top_level.txt
+src/ansicolorslib/__init__.py
+src/ansicolorslib/ansicolorslib.py
