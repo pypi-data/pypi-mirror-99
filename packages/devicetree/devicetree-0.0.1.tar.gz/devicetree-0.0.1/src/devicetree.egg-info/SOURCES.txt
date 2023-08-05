@@ -1,0 +1,10 @@
+setup.py
+src/devicetree/__init__.py
+src/devicetree/dtlib.py
+src/devicetree/edtlib.py
+src/devicetree/grutils.py
+src/devicetree.egg-info/PKG-INFO
+src/devicetree.egg-info/SOURCES.txt
+src/devicetree.egg-info/dependency_links.txt
+src/devicetree.egg-info/requires.txt
+src/devicetree.egg-info/top_level.txt
