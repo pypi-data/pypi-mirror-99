@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="cs_usage_res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">cs_usage.res.config.settings.view.form.inherit.base.setup</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="100"/>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[hasclass('settings')]" position="inside">
+        <div class="app_settings_block" data-string="CS Usage" string="CS Usage" data-key="cs_usage">
+          <div class="sm_reservation_rating">
+            <h2>Reservation Rating</h2>
+            <div class="row mt16 o_settings_container">
+              <group>
+                <field name="percentage_extra_minutes_cost"/>
+                <field name="percentage_not_used"/>
+                <field name="maxim_kms_per_hour"/>
+                <field name="maxim_kms_per_day"/>
+              </group>
+            </div>
+          </div>
+        </div>
+      </xpath>
+    </field>
+  </record>
+</odoo>
