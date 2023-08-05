@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: html-from-epub
+Version: 0.1.1
+Summary: Extract html library from Epub file
+Home-page: https://github.com/casperlehmann/html-from-epub
+Author: Casper Lehmann
+Author-email: casperlehmann@gmail.com
+License: UNKNOWN
+Description: # HTML from Epub
+        
+        Extract html library from .epub file.
+        
+        ## Install
+        
+        ``` bash
+        $ pip install html_from_epub
+        ```
+        
+        ## Use
+        
+        As command line tool:
+        
+        ``` text
+        To-do
+        ```
+        
+        Use in code:
+        
+        ``` python
+        >>> from html_from_epub import html_from_epub
+        >>> html_from_epub('path_to_file.epub')
+        ```
+        
+        ## Contribute
+        
+        Go ahead:
+        
+        ``` bash
+        $ git clone https://github.com/casperlehmann/html_from_epub.git
+        $ cd html_from_epub
+        $ pip install -r requirements.txt
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
