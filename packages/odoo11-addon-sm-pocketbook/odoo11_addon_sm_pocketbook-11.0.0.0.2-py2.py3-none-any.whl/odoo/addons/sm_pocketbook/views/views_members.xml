@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+    <record id="view_members_form" model="ir.ui.view">
+      <field name="name">sommobilitat.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="account.view_partner_property_form"/>
+      <field name="type">form</field>
+
+      <field name="arch" type="xml">
+        <xpath expr="//notebook" position="inside">
+          <page name='pocketbook' string="Pocketbook">
+            <group name="container_row_2">
+              <field name="pocketbook_records_total" readonly="True"/>
+              <field name="pocketbook_records_total_taxed" readonly="True"/>
+              <field name="pocketbook_record_ids" widget="one2many_list">
+                <tree string="Pocketbook records" create="true" edit="true" delete="true"
+                    open="true">
+                  <field name="name" />
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="related_analytic_account_id"/>
+                </tree>
+                <form>
+                  <sheet>
+                    <notebook>
+                      <page string="General">
+                        <group>
+                          <field name="name"/>
+                          <field name="date" readonly="True"/>
+                          <field name="amount" readonly="True"/>
+                          <field name="related_account_id" required="True"/>
+                          <field name="related_analytic_account_id" required="True"/>
+                          <field name="obs"/>
+                          <field name="history_line_ids" widget="one2many_list">
+                            <tree string="History" create="true" edit="true" delete="true" open="true">
+                              <field name="name" />
+                              <field name="date"/>
+                              <field name="amount"/>
+                              <field name="related_invoice_line_id"/>
+                              <field name="obs"/>
+                            </tree>
+                          </field>
+                        </group>
+                      </page>
+                    </notebook>
+                  </sheet>
+                </form>
+              </field>
+              <!-- We hide depecrated functionallity -->
+              <!-- <field name="cs_pocketbook" readonly="True"/>
+              <field name="pocketbook_history_ids" widget="one2many_list">
+                <tree string="Pocketbook history" create="false" edit="false" delete="false"
+                    open="true">
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="htype"/>
+                  <field name="obs"/>
+                </tree>
+              </field> -->
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,16 @@
+odoo/addons/sm_pocketbook/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/sm_pocketbook/__manifest__.py,sha256=0ZJGo0c_2zaqVS7CLiAONpSIsh8h9cNIEyJ5wouMXkI,969
+odoo/addons/sm_pocketbook/models/__init__.py,sha256=teIEXy0PQxyBEiAaIfNWDnPb-egQYWEMVHSrQxeb2XE,182
+odoo/addons/sm_pocketbook/models/models_pocketbook_history.py,sha256=WBfnLSyD2Yj8yDBNKXBgO64uGALd86lvAK5WNatt3L8,2457
+odoo/addons/sm_pocketbook/models/models_pocketbook_record.py,sha256=GNNv5s3Wm5Fgztm0gEhaawFPP7TVo67rNUP4qomQF7k,1368
+odoo/addons/sm_pocketbook/models/models_pocketbook_record_history.py,sha256=vTAVcQy5tH2trMc2SQ-hiIkPEC6lrT9EtyqLS15fvZw,676
+odoo/addons/sm_pocketbook/models/models_sm_member.py,sha256=7k5xmCB61edq1_ajVARivZDE8ckwKzItsRrbdzWdY6w,2204
+odoo/addons/sm_pocketbook/security/ir.model.access.csv,sha256=Jim8VuKlZOZp6fCnjq6EO0HZo7AgkK_BkIZPiAoJP7E,397
+odoo/addons/sm_pocketbook/views/views_members.xml,sha256=c_yvAmwg1xYLt9AtevcALF_kYbDQQITGVffKosGVaIQ,2906
+odoo/addons/sm_pocketbook/views/views_pocketbook_history.xml,sha256=Qh79NIbQIWRqIzNL2W-P-OHDqMICS2JjYyBhR4Wiw6A,1684
+odoo/addons/sm_pocketbook/views/views_pocketbook_record.xml,sha256=kN0k3Y9FmZa35MCWDKzK_EZ5Z1UfPByv_4OKwoE3o1k,3043
+odoo/addons/sm_pocketbook/views/views_pocketbook_record_history.xml,sha256=TgnxPFkJsyhC47daa6uP2JqerEwhwvOsLVYSfcMQcgc,1131
+odoo11_addon_sm_pocketbook-11.0.0.0.2.dist-info/METADATA,sha256=oz6YrwF4tvgV4w5f3ycGrZHBVXn11tooNMKVMk-kI0s,548
+odoo11_addon_sm_pocketbook-11.0.0.0.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+odoo11_addon_sm_pocketbook-11.0.0.0.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo11_addon_sm_pocketbook-11.0.0.0.2.dist-info/RECORD,,

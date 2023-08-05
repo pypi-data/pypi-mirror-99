@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <record id="view_pocketbook_history_window" model="ir.actions.act_window">
+      <field name="name">Pocketbook History</field>
+      <field name="res_model">pocketbook.pocketbook_history</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_pocketbook_history_form" model="ir.ui.view">
+      <field name="name">sm_pocketbook.pocketbook_history.form</field>
+      <field name="model">pocketbook.pocketbook_history</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit group" version="7.0">
+          <sheet>
+            <notebook>
+              <page string="Data">
+                <group>
+                  <field name="name"/>
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="htype" required="True"/>
+                  <field name="obs"/>
+                  <field name="is_partago_active" invisible="True"/>
+                  <field name="related_invoice_id"
+                       attrs="{'invisible': [('htype','!=','invoice_out')] }"/>
+                  <field name="related_invoice_report_id"
+                       attrs="{'invisible': [('htype','!=','invoice_report_out')] }"/>
+                  <field name="related_tariff_id"
+                       attrs="{'invisible': [('is_partago_active','=',False)] }"/>
+                  <field name="related_report_id"
+                       attrs="{'invisible': [('htype','!=','report_reward_in')] }"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>
