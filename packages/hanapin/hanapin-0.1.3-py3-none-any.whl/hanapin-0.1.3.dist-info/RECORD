@@ -1,0 +1,12 @@
+hanapin/__init__.py,sha256=rXG3P0YVUCZwIiX_uLTUDE0saX7w3rgvWh0VIRshR7s,78
+hanapin/bing.py,sha256=O7KzHIuz4l1wOmcWZ4SrRJAIvBsAGQEU2eLZ_zNxmGc,626
+hanapin/ddg.py,sha256=ImmRklIRT08PQUoMAr6dZavPFLmFB19-WUcIPSCiO1k,711
+hanapin/google.py,sha256=qTtagMauyEFVsvYzaRVE9T6N-FqeU-Cdn3E1BjuljpU,629
+hanapin/lib.py,sha256=WkX28SgZpTlmYBp5mtpkJZ9hOMVU9R4auJT7nf-jx_Q,1160
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_search.py,sha256=f6C4ocDK9iiYGZ_7KwJrO9fX1xsQRREslb8O2fBOU4Q,908
+hanapin-0.1.3.dist-info/LICENSE,sha256=0CHR2WdDSUANdeo6bSyrduMdDsYsynUbryTsnir2bpg,1070
+hanapin-0.1.3.dist-info/METADATA,sha256=a1dZx3OZ5xnSyRfz3FbxuwcnIxf3LOl-Ra8uvtsla7o,587
+hanapin-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hanapin-0.1.3.dist-info/top_level.txt,sha256=jdsRty-jODitP7l2nXFHykpSCUIh23WR6Kd_IZjBQMs,14
+hanapin-0.1.3.dist-info/RECORD,,
