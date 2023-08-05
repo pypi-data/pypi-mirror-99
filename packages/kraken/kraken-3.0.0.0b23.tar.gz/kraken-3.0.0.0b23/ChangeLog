@@ -1,0 +1,123 @@
+CHANGES
+=======
+
+3.0b23
+------
+
+* fix missing default model in rpred()
+* fix crash with native output in ocr module
+* fix overlapping regions after polygon simplification
+* correct side of line
+* proper line offsets
+* move serialization switch to top level cli driver
+
+3.0b22
+------
+
+* Revert "asynchronous loader from pytorch lightning"
+* Revert "Revert "suppress spurious bw/grayscale warning in blla""
+* add warning if polygonizer fails now
+* more numerical stability fixes in polygonizer
+* Revert "suppress spurious bw/grayscale warning in blla"
+* arg fix
+* asynchronous loader from pytorch lightning
+* suppress spurious bw/grayscale warning in blla
+* one more off-by-one error
+* ensure image is grayscale in polygon calculation
+* off-by-one error in bounds
+
+3.0b21
+------
+
+* add tests for resizing on layer level
+* tests for codec resizing
+* Fixes max epoch message not being shown for recognition training
+* Applies segtrain hyper params fix to reco training
+
+3.0b20
+------
+
+* Fixes crash on empty hyper\_params argument
+* Fixes lines and regions classes in the validation set absent of the training set interupting training
+* Fixes restart epoch count msg not being shown in all cases
+* Loads hyper params incrementaly and reset the epoch count when training on top of a model
+* print full tracebacks in debug log when sample loading fails
+* more helpful log messages when image transformation fails
+
+3.0b19
+------
+
+* allow selection of legacy segmenter again
+
+3.0b18
+------
+
+* pin scikit-image to < 0.18.0
+* also raise exception when adding text to PolygonGTDataset without transfrmations
+* change order of event callbacks in trainer
+* and cuda conda update
+* non-cuda pip install
+* update non-cuda environment file
+* new default segmentation model with non-semantic text region
+* shut up scipy warning on sato filter
+* make pdf loader work with different sized pages\`
+
+3.0b17
+------
+
+* fix regression in lstm layer with pytorch 1.7
+
+3.0b16
+------
+
+* check for character locations in padding
+* remove debug raise
+
+3.0b15
+------
+
+* hotfix for polygonization
+
+3.0b14
+------
+
+* catch errors in bl elongation code
+* correct feature calculation when given raw image in calculate\_polygonal\_environment
+* use correct scale for repolygonization script
+
+3.0b13
+------
+
+* index update
+* update readme for new segmenter
+* better hyperparameters
+* forgot to uncomment invalid seam skipping
+* revert to line-wise compute of polygons
+* fix default model selection for bl segmenter
+* Revert "test python 3.8 in travis"
+* skip anaconda build
+* test python 3.8 in travis
+* test fixes
+* make repolygonization switch work in segmentation\_overlay.py
+
+3.0b12
+------
+
+* region vectorizer fixes
+* baseline extension code fixes
+* fix None-ness test for polygon
+* fix docstrings
+* switch out contour finder with boundary tracing
+* new vectorizer without superpixels
+* change shape of separators to increase attachment to lines
+* more sensible region boundaries for polygonisation
+* add default model for segmenter
+* add @brobertson's printed word bbox spreader to contrib
+* new bl segmentation heatmap overlay script
+* assign lines not by centroid but actual line mid point to regions
+
+3.0b11
+------
+
+* disable batching per default
+* assign lines to regions based on centroid
