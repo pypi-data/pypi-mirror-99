@@ -1,0 +1,9 @@
+README.md
+setup.py
+muncher/__init__.py
+muncher.egg-info/PKG-INFO
+muncher.egg-info/SOURCES.txt
+muncher.egg-info/dependency_links.txt
+muncher.egg-info/not-zip-safe
+muncher.egg-info/requires.txt
+muncher.egg-info/top_level.txt
