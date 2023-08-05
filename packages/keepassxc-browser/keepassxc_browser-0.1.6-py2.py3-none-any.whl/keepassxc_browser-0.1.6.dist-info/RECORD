@@ -1,0 +1,10 @@
+keepassxc_browser/__init__.py,sha256=ohDGGuUMpG8z-QoZudDlgBXUHRDHsH0rbMGeqm75cuk,136
+keepassxc_browser/connection_posix.py,sha256=Q2KDdugma5iNdpjsvUExYZdN1AdsDomeR4y8zz79BxU,787
+keepassxc_browser/connection_win.py,sha256=RvV7Am2Lcs04gpSrXSgD1kFEXIRf9gcmFzuHi3N22so,1408
+keepassxc_browser/exceptions.py,sha256=UXXOnKPlBGL_NAQHClqo6wgfyi_cwOucX-uBIX2apXA,41
+keepassxc_browser/protocol.py,sha256=Nx3-1Ree-cAFI6ZSoSjL5lzExJSH3kuC7Otn7uYvkK0,13660
+keepassxc_browser-0.1.6.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+keepassxc_browser-0.1.6.dist-info/METADATA,sha256=4xMHGazl3iuTaz7sup0P7uZu_RMFbra9Xf8MHm4Bb6A,640
+keepassxc_browser-0.1.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+keepassxc_browser-0.1.6.dist-info/top_level.txt,sha256=uXkFoTHgvYIlx-NzZzXa2lF2YNglfAZDvv8bzc7V-DM,18
+keepassxc_browser-0.1.6.dist-info/RECORD,,
