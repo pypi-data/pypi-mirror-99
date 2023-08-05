@@ -1,0 +1,13 @@
+composites.libs/libgomp-f7e03b3e.so.1.0.0,sha256=GzmXB1qluHXQUhlsmNKuWncNm8Jezfq1jt5rKrV_8kQ,93080
+composites/version.py,sha256=8KcCYTXH99C2-gCLuPILJvtT9YftRWJsartIx6TQ2ZY,22
+composites/utils.py,sha256=gEP1vrRr58f9GdbL6XuZNBwB8rOaVSRk6BgDmPnM4Gg,5961
+composites/core.cpython-38-x86_64-linux-gnu.so,sha256=xm7O-FoK8qnFU7E65QUKE85oCVYpmLwfZSzrLuBXVK8,6004232
+composites/__init__.py,sha256=7bv423gyOBpVX4l0hvWylldEZy0PMrIgqoYpIFDUENI,1875
+composites-0.3.3.dist-info/WHEEL,sha256=RIeRBYNNiNK3sXfnenIjXDrR2Tzyz05xCMpKF2hJ1iA,111
+composites-0.3.3.dist-info/top_level.txt,sha256=8rFKbL1In6cv0XBeSaI5uG5g6oe1tYJjAc1mLlAvhWU,11
+composites-0.3.3.dist-info/RECORD,,
+composites-0.3.3.dist-info/METADATA,sha256=-rVI_VTQL3uYSqG6NKmYYaUJsp6Ml7VQ6YxOItTOtXw,1205
+composites-0.3.3.dist-info/LICENSE,sha256=CF-lnKvB4UJUm3w-LhQXXXOlEjOOEb5aDgHRo4L_Dlc,1310
+composites-0.3.3.data/data/version.py,sha256=8KcCYTXH99C2-gCLuPILJvtT9YftRWJsartIx6TQ2ZY,22
+composites-0.3.3.data/data/README.md,sha256=RB9WfG4P6zflivWx83srryZv7sz6DZORh5TG-dN9zI4,1512
+composites-0.3.3.data/data/LICENSE,sha256=CF-lnKvB4UJUm3w-LhQXXXOlEjOOEb5aDgHRo4L_Dlc,1310
