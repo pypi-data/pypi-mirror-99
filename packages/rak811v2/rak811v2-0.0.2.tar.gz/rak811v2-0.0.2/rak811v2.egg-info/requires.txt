@@ -1,0 +1,4 @@
+pyserial
+
+[:platform_machine == "armv7l" or platform_machine == "armv6l"]
+RPi.GPIO

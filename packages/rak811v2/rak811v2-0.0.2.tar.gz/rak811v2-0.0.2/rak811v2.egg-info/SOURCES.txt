@@ -1,0 +1,11 @@
+README.md
+setup.py
+rak811v2/__init__.py
+rak811v2/exception.py
+rak811v2/rak811v2.py
+rak811v2/serial.py
+rak811v2.egg-info/PKG-INFO
+rak811v2.egg-info/SOURCES.txt
+rak811v2.egg-info/dependency_links.txt
+rak811v2.egg-info/requires.txt
+rak811v2.egg-info/top_level.txt
