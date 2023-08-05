@@ -1,0 +1,6 @@
+example_packga/__init__.py,sha256=lbUZZ9q4m1PhvvxeGKUhkybFNOybPX-YXRDHuegBEG4,37
+example_packga/helloworld.py,sha256=X8z7HupMjrxYQZpvtKlFo5xQZq110i6ihvqBPMarUjg,42
+example_packga-0.0.1.dist-info/METADATA,sha256=tCJoAqGzqRWpVGMbhD2W235F-ntNQSsIQF5J3Q2ymVM,423
+example_packga-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+example_packga-0.0.1.dist-info/top_level.txt,sha256=XnR3WaWI8s5uIZJOPMWHavakHyokgjaqQpI6bu97kwQ,15
+example_packga-0.0.1.dist-info/RECORD,,
