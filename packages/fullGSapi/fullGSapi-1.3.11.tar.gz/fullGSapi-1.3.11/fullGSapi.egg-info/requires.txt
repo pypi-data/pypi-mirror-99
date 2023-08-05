@@ -1,0 +1,11 @@
+cryptography
+beautifulsoup4
+py-mini-racer
+requests
+pyyaml
+python-dateutil
+
+[cli]
+click
+tqdm
+pytz
