@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django_to_sqlserver_description
+Version: 0.1.3
+Summary: 根据django 的 model 自动生成sqlserver的列说明
+Home-page: https://www.cnblogs.com/Evan-fanfan/
+Author: evanyang
+Author-email: lightyiyi@qq.com
+License: MIT tencent_message
+Description: 
+        0.1.1根据django 的 model 自动生成sqlserver的列说明
+        
+        0.1.2增加了数据表的说明
+        
+        0.1.3修复了Linux的路径错误
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
