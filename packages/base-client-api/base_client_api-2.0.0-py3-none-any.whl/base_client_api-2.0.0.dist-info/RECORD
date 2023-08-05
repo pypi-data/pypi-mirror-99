@@ -1,0 +1,12 @@
+base_client_api/__init__.py,sha256=M7IahMbPdAAqurPTjLq1J7ItTjrBpSz4L4BkNJ4kLbo,1083
+base_client_api/base_client.py,sha256=clwsJWQXVXNvs5c54dT8gzGq8dNht5tlB823LGhZgvU,18173
+base_client_api/exceptions.py,sha256=8hS5cNH1DjkQupb36kBnQ7KKT7nvHwO-0e4orF52e5w,1776
+base_client_api/models/__init__.py,sha256=AwKeFzeiky_Ybv8UDIp0mDeG6DPXeAmFqbpoH4zyCU8,849
+base_client_api/models/base.py,sha256=VM9eOjBi78guvGmnsSriZqRRYQp-4F6Ml3qt5WWoV9M,1251
+base_client_api/models/record.py,sha256=7WeBAlEdOhj5ilAuhfPRWLJ7Jvto2GTmLmnNC32h5-o,4912
+base_client_api/models/results.py,sha256=BOknJ_ITI8c-RWvIhwKmj3uiR6SLqkLs1egPfEVW0ls,1963
+base_client_api/utils.py,sha256=ClTg_47whTpcjIx7ijEHgmvEbJSi7LHyA1oPF2kTm_o,7055
+base_client_api-2.0.0.dist-info/LICENSE.md,sha256=U8uzIGOCX-inN9Wj2c1CysI8N-YWDQmWjGFBXcst1e0,29583
+base_client_api-2.0.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+base_client_api-2.0.0.dist-info/METADATA,sha256=ZVcG6RiZ4U1qALx4d8FMlStLiT2FLc3eZ4TBuiLC8x4,744
+base_client_api-2.0.0.dist-info/RECORD,,
