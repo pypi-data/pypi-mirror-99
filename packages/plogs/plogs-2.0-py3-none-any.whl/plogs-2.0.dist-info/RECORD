@@ -1,0 +1,12 @@
+plogs/__init__.py,sha256=I3lsXL1c6jiwAH2YYpA3JTwOf99Nfefts9J1lnPhjSs,22983
+plogs/colors.py,sha256=i4yHz9ZbZM8fCOo8znHOCtLlNlv7qIFUUlMIGr38VzI,2226
+plogs/jsonlogger.py,sha256=oD0r-RheleHxDCndgOr4PTcd3A0IuQ3pMGrozZzpRqU,8827
+plogs/plogs.py,sha256=So_0YetjM_sh1umKIS8PY5IIgPMv3KcreodT2GIq0IU,1268
+plogs/test.py,sha256=7vX6BofKGUqS5bb7BwNAVhTkiHHR4gLKvfNKZhcr96Y,1281
+plogs/logzero/__init__.py,sha256=kkT5rHRXz7QYejigLAwV2zqv-NBAKXHL1grkiaR3J7I,22858
+plogs/logzero/colors.py,sha256=i4yHz9ZbZM8fCOo8znHOCtLlNlv7qIFUUlMIGr38VzI,2226
+plogs/logzero/jsonlogger.py,sha256=oD0r-RheleHxDCndgOr4PTcd3A0IuQ3pMGrozZzpRqU,8827
+plogs-2.0.dist-info/METADATA,sha256=KxGJO8ePjrmmCdhqq-ow8kztW6zlh_vrwUqtPcl-Ghg,329
+plogs-2.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+plogs-2.0.dist-info/top_level.txt,sha256=okSRQCm8Y2j1zDO6MuzMgmrq9Jsyl7qhTgc7_Tc0PqA,6
+plogs-2.0.dist-info/RECORD,,
