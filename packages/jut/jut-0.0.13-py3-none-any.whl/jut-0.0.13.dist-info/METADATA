@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: jut
+Version: 0.0.13
+Summary: Render Jupyter Notebook in the terminal
+Home-page: https://github.com/kracekumar/jut/
+License: MIT
+Author: kracekumar
+Author-email: me@kracekumar.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (==7.1.2)
+Requires-Dist: nbformat (==5.1.2)
+Requires-Dist: pydantic (==1.8.1)
+Requires-Dist: rich (==9.13.0)
+Project-URL: Repository, https://github.com/kracekumar/jut/
+Description-Content-Type: text/markdown
+
+`jut - JUpyter notebook Terminal viewer`.
+
+The command line tool view the IPython/Jupyter notebook in the terminal.
+
+### Install
+
+`pip install jut`
+
+### Usage
+
+``` shell
+$jut --help
+Usage: jut [OPTIONS]
+
+Options:
+  -u, --url TEXT             Render the ipynb file from the URL
+  -i, --input-file FILENAME  File from the local file-system
+  -h, --head INTEGER         Display first n cells. Default is 10
+  -t, --tail INTEGER         Display last n cells
+  -p, --single-page          Should the result be in a single page?
+  -f, --full-display         Should all the contents in the file displayed?
+  --help                     Show this message and exit.
+
+```
+
+### ASCIICinema Demo
+
+[![asciicast](https://asciinema.org/a/400349.svg)](https://asciinema.org/a/400349)
+
+
+### Display first five cells
+
+![jut-head-example](https://raw.githubusercontent.com/kracekumar/jut/main/images/jut-head.png)
+
+### Display last five cells
+
+![jut-tail-example](https://raw.githubusercontent.com/kracekumar/jut/main/images/jut-tail.png)
+
+### Download the file and display first five cells
+
+![jut-download-url](https://raw.githubusercontent.com/kracekumar/jut/main/images/jut-download.png)
+
