@@ -1,0 +1,2 @@
+py-dom-xpath-six
+requests>=2.11
