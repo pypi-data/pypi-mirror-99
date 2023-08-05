@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+h5py
+matplotlib
+opencv-python
+porespy
+ConfigArgParse
+tqdm
+ipython
+ct-segnet
