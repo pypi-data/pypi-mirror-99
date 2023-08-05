@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: muncher
+Version: 0.0.1
+Summary: Food API
+Home-page: https://gideontong.github.io/muncher
+Author: Gideon Tong
+Author-email: gideon@gideontong.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/gideontong/muncher/
+Project-URL: Tracker, https://github.com/gideontong/muncher/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Text Processing :: Indexing
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests (<3,>=2.25.1)
+
+# yum
+😋 The endgame API for food - groceries, restaurants, and nutrition
+
+
