@@ -1,0 +1,11 @@
+README.md
+setup.py
+sqlglot/__init__.py
+sqlglot/expressions.py
+sqlglot/parser.py
+sqlglot/tokens.py
+sqlglot/transpiler.py
+sqlglot.egg-info/PKG-INFO
+sqlglot.egg-info/SOURCES.txt
+sqlglot.egg-info/dependency_links.txt
+sqlglot.egg-info/top_level.txt

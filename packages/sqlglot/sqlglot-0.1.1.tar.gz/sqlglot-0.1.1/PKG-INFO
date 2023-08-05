@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: sqlglot
+Version: 0.1.1
+Summary: An easily customizable SQL parser and transpiler
+Home-page: https://github.com/tobymao/sqlglot
+Author: Toby Mao
+Author-email: toby.mao@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: SQL
+Classifier: Programming Language :: Python :: 3 :: Only
