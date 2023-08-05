@@ -1,0 +1,6 @@
+setup.py
+parsix_gazinform/__init__.py
+parsix_gazinform.egg-info/PKG-INFO
+parsix_gazinform.egg-info/SOURCES.txt
+parsix_gazinform.egg-info/dependency_links.txt
+parsix_gazinform.egg-info/top_level.txt
