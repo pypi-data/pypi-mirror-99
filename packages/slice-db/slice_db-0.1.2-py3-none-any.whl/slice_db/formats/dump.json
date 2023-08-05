@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "description": "Definition of slice to dump",
+  "title": "Slice dump definition",
+  "definitions": {
+    "column": {
+      "description": "Name of column",
+      "type": "string",
+      "title": "Column"
+    },
+    "reference": {
+      "description": "Reference to another table, i.e. a foreign key.",
+      "title": "Reference",
+      "required": [
+        "table",
+        "columns",
+        "id",
+        "referenceColumns",
+        "referenceTable"
+      ],
+      "properties": {
+        "columns": {
+          "description": "Local columns",
+          "title": "Local columns",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/column"
+          }
+        },
+        "directions": {
+          "default": ["forward", "reverse"],
+          "description": "Directions to use when discovering rows",
+          "items": {
+            "$ref": "#/definitions/referenceDirection"
+          },
+          "title": "Directions",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "id": {
+          "description": "Unique ID of foreign key",
+          "title": "ID",
+          "type": "string"
+        },
+        "referenceColumns": {
+          "description": "Foreign columns",
+          "title": "Foreign columns",
+          "items": {
+            "$ref": "#/definitions/column"
+          }
+        },
+        "referenceTable": {
+          "description": "ID of foreign table",
+          "title": "Foreign table ID",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "referenceDirection": {
+      "description": "Direction of reference",
+      "choices": ["forward", "reverse"],
+      "type": "string"
+    },
+    "table": {
+      "description": "Table",
+      "required": ["columns", "id", "name"],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name",
+          "type": "string"
+        },
+        "columns": {
+          "description": "Columns",
+          "items": {
+            "$ref": "#/definitions/column"
+          }
+        },
+        "schema": {
+          "default": null,
+          "description": "Schema name. If null, uses the usual schema search path.",
+          "type": ["null", "string"]
+        }
+      },
+      "type": "object"
+    }
+  },
+  "properties": {
+    "references": {
+      "description": "References",
+      "title": "References",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/reference"
+      }
+    },
+    "tables": {
+      "description": "Tables",
+      "title": "Tables",
+      "items": {
+        "$ref": "#/definitions/table"
+      },
+      "type": "array"
+    }
+  },
+  "required": ["references", "tables"],
+  "type": "object"
+}
