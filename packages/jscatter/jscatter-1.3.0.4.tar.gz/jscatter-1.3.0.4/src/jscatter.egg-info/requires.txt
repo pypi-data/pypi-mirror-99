@@ -1,0 +1,6 @@
+Pillow>=7.0
+cubature@ git+https://iffgit.fz-juelich.de/biehl/cubature.git
+cython
+matplotlib>=2
+numpy>=1.15
+scipy>=1.4
