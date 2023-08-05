@@ -1,0 +1,10 @@
+README.md
+setup.py
+maloja_lib.egg-info/PKG-INFO
+maloja_lib.egg-info/SOURCES.txt
+maloja_lib.egg-info/dependency_links.txt
+maloja_lib.egg-info/entry_points.txt
+maloja_lib.egg-info/requires.txt
+maloja_lib.egg-info/top_level.txt
+malojalib/__init__.py
+malojalib/__pkginfo__.py
