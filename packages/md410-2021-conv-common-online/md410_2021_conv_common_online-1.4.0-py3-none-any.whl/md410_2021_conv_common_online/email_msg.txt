@@ -1,0 +1,8 @@
+Good day %(name)s,
+
+as you're probably aware, the MD410 Council of Governors has taken the unfortunate but unavoidable decision to hold the 2021 MD410 Convention virtually. A letter from CC Herman Smit is attached with details of the decision.
+
+Our records indicate that we're holding R%(total)s that you paid for the 2020 MD Convention which was held over for the 2021 convention. The 2021 MD410 Convention Organising Committee now needs to refund this amount. If you have not already done so, please email your banking details to vanwykk@gmail.com. A refund will be processed as soon as possible.
+
+Regards
+The 2021 MD410 Convention Organising Committee
