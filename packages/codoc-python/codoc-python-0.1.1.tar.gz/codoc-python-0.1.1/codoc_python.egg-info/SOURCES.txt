@@ -1,0 +1,8 @@
+setup.py
+codoc/__init__.py
+codoc_python.egg-info/PKG-INFO
+codoc_python.egg-info/SOURCES.txt
+codoc_python.egg-info/dependency_links.txt
+codoc_python.egg-info/entry_points.txt
+codoc_python.egg-info/requires.txt
+codoc_python.egg-info/top_level.txt
