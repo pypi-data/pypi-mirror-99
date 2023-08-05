@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: superviolin
+Version: 0.7
+Summary: Python-based app to make superplots
+Home-page: UNKNOWN
+Author: Martin Kenny
+Author-email: sideproject1892@gmail.com
+Maintainer: Martin Kenny
+Maintainer-email: sideproject1892@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
