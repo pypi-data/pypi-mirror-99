@@ -1,0 +1,12 @@
+icdar21_mapseg_eval/__init__.py,sha256=Hw4cmTSBnNmZwD9VYHo8j38tDeCEYtpAZi-MTMlqBt0,312
+icdar21_mapseg_eval/__main__.py,sha256=Yw2oGT1afrz2eBskzdPYL8ReB_3liApmhFkN2EbDmc4,59
+icdar21_mapseg_eval/cli.py,sha256=UgHtAsQwKJE4htTVf-R5BidVEMWqzjEeRrfm67-eYLs,8808
+icdar21_mapseg_eval/coco.py,sha256=Y8N3mQNnsejntY7rGVyw-J9EaZPDmZz6N_IZvWRbsG0,2296
+icdar21_mapseg_eval/haussdorff.py,sha256=N6kYM8dJsnkY2N9w0ov8XDgkXMwCpCSrMKJR44z1WN0,1811
+icdar21_mapseg_eval/iou.py,sha256=47l8NIyPuC6q-CnkmHmP0eA_Aq-bNnfVXOI2lO1miJY,8380
+icdar21_mapseg_eval/point_detection.py,sha256=jU2gXc0Fl16mMtT1On40El5m_YS-w2nLsusPx1Sw3Oc,6870
+icdar21_mapseg_eval-1.0.1.dist-info/entry_points.txt,sha256=QlaTcOIs86nKR0EkxubXO7bc7bzDJ8dci1cGOwTBWGs,64
+icdar21_mapseg_eval-1.0.1.dist-info/LICENSE,sha256=bZkD3l4GLnObsb3DPLLUphdPC0M4xb8ffZHzAzEm8eo,1063
+icdar21_mapseg_eval-1.0.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+icdar21_mapseg_eval-1.0.1.dist-info/METADATA,sha256=drxOiGMIZfJX0BcA4y1kaL5FzlX2FhcpY4icQbxvrS0,11396
+icdar21_mapseg_eval-1.0.1.dist-info/RECORD,,
