@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: icdar21-mapseg-eval
+Version: 1.0.0
+Summary: Evaluation tools for ICDAR21 Competition on Historical Map Segmentation (MapSeg).
+License: MIT
+Author: icdar21-mapseg-contact(at)googlegroups.com
+Requires-Python: >=3.7.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: visualisation
+Requires-Dist: PyQt5 (>=5.15.4,<6.0.0); extra == "visualisation"
+Requires-Dist: matplotlib (>=3.3.4,<4.0.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Requires-Dist: pandas (>=1.1,<2.0)
+Requires-Dist: progress
+Requires-Dist: scikit-image (>=0.18.1,<0.19.0)
+Requires-Dist: scipy (>=1.6.1,<2.0.0)

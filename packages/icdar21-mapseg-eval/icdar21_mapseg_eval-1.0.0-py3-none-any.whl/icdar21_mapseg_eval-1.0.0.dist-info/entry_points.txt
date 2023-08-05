@@ -1,0 +1,3 @@
+[console_scripts]
+icdar21-mapseg-eval=icdar21_mapseg_eval:main
+
