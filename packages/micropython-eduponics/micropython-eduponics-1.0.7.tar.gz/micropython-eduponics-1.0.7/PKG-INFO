@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: micropython-eduponics
+Version: 1.0.7
+Summary: UNKNOWN
+Home-page: https://github.com/STEMinds/micropython-eduponics
+Author: STEMinds
+Author-email: contact@steminds.com
+License: MIT
+Download-URL: https://github.com/STEMinds/micropython-eduponics/archive/1.0.7.tar.gz
+Description: UNKNOWN
+Keywords: STEMinds,MicroPython,uPython,Eduponics-Mini,Eduponics,ESP32,ADS1x15,MCP23017,TDS,pH,bh1750,BME280,DS1307,AT24C02
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
