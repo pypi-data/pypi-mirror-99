@@ -1,0 +1,11 @@
+pdftextract/__init__.py,sha256=TuwbpnG9LTgZW7h1Ot8EUOF4JLxFuS9Kc99U8jdE8iw,57
+pdftextract/main.py,sha256=rW5OvjSsc7VcVWHwZ5yj1XSiO74icDu9Z5ik6992zac,10664
+pdftextract/utils.py,sha256=WG7MS9hPI5uJzRlltCqLmm75D1r4ZDMVqO9_DXJqXCw,7638
+pdftextract/xpdf/pdfimages.exe,sha256=S2mdPpWJt9yncjvqMdhTuJQvjgE-cF-d1rhrh4hCx7g,1032192
+pdftextract/xpdf/pdfinfo.exe,sha256=e4fmpjIFxOneEkBuCn7tVNQTrIOQIpFOqmStkLwb3ME,987648
+pdftextract/xpdf/pdftotext.exe,sha256=wNUjAP4amifjnB4rZd8GV_uN2zT19cGQAnGstaH1udk,1078784
+pdftextract-0.0.5.dist-info/LICENSE.txt,sha256=wwaTIeM5p1TYEKRnyL3ROkzDvoyNRr9VtroNBHjNQeo,35802
+pdftextract-0.0.5.dist-info/METADATA,sha256=sZVBFjLtZV2-_MVqGzafQ03nRhpTZWcjl2M2hCekrps,3504
+pdftextract-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pdftextract-0.0.5.dist-info/top_level.txt,sha256=SUNTqijydZHjI4u6S_GBWv6rvd-AKNqmbhcqvAF2pHU,12
+pdftextract-0.0.5.dist-info/RECORD,,
