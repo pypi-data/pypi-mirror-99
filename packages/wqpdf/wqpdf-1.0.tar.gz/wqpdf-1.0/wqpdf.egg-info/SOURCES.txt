@@ -1,0 +1,9 @@
+README.md
+setup.py
+wqpdf/__init__.py
+wqpdf/pdf2image.py
+wqpdf/pdf2text.py
+wqpdf.egg-info/PKG-INFO
+wqpdf.egg-info/SOURCES.txt
+wqpdf.egg-info/dependency_links.txt
+wqpdf.egg-info/top_level.txt
