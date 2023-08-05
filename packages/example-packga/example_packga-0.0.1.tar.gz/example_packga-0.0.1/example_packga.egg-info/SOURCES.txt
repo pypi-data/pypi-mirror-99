@@ -1,0 +1,8 @@
+README.md
+setup.py
+example_packga/__init__.py
+example_packga/helloworld.py
+example_packga.egg-info/PKG-INFO
+example_packga.egg-info/SOURCES.txt
+example_packga.egg-info/dependency_links.txt
+example_packga.egg-info/top_level.txt
