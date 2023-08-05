@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hamichlol
+Version: 1.4.0
+Summary: hamichlol API for Python
+Home-page: https://github.com/mordi-d/hamichlol
+Author: mordi
+Author-email: mordid.tech@gmail.com
+License: MIT
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests (<3.0.0,>=2.0.0)
+
+Wikipedia
+
+
