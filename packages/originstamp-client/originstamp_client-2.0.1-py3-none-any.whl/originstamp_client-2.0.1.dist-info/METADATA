@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: originstamp-client
+Version: 2.0.1
+Summary: OriginStamp API Client
+Home-page: https://originstamp.com
+Author: UNKNOWN
+Author-email: mail@originstamp.com
+License: UNKNOWN
+Keywords: Swagger,OriginStamp
+Platform: UNKNOWN
+Requires-Dist: certifi (>=2017.4.17)
+Requires-Dist: python-dateutil (>=2.1)
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.23)
+
+Python client for the trusted timestamping service OriginStamp, see https://github.com/OriginStampTimestamping/originstamp-client-python.
+
+
