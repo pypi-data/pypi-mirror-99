@@ -1,0 +1,855 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Series Class &mdash; imagedata 1.2.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Viewer Class" href="APIReferenceViewer.html" />
+    <link rel="prev" title="API Reference" href="APIReference.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> imagedata
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="UserGuide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#series-class">Series Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DICOMAttributes.html">DICOM Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Imagedata on the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plugins.html">Plugin Architecture</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="APIReference.html">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Series Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="APIReferenceViewer.html">Viewer Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="APIReferenceImagedata.html">Imagedata packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="APIReferenceFormats.html">Formats API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="APIReferenceArchives.html">Archives API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="APIReferenceTransports.html">Transports API Reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DeveloperDocumentation.html">Developer Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">imagedata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="UserGuide.html">User Guide</a> &raquo;</li>
+        
+          <li><a href="APIReference.html">API Reference</a> &raquo;</li>
+        
+      <li>Series Class</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/APIReferenceSeries.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="series-class">
+<span id="apireferenceseries"></span><h1>Series Class<a class="headerlink" href="#series-class" title="Permalink to this headline">¶</a></h1>
+<p>Series – a multidimensional array of medical imaging pixels.</p>
+<p>The Series class is a subclassed Numpy.ndarray enhancing the ndarray
+with relevant medical image methods and attributes.
+Most ndarray methods are inheritied, and are available with the Series class.</p>
+<p>See: <a class="reference external" href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a> for documentation on NumPy.</p>
+<dl class="py class">
+<dt id="imagedata.series.Series">
+<em class="property">class </em><code class="sig-prename descclassname">imagedata.series.</code><code class="sig-name descname">Series</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">input_order='none'</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">shape=(0</em>, <em class="sig-param">)</em>, <em class="sig-param">dtype=&lt;class 'float'&gt;</em>, <em class="sig-param">buffer=None</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">strides=None</em>, <em class="sig-param">order=None</em>, <em class="sig-param">template=None</em>, <em class="sig-param">geometry=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Series – a multidimensional array of medical imaging pixels.</p>
+<p>The Series class is a subclassed Numpy.ndarray enhancing the ndarray
+with relevant medical image methods and attributes.</p>
+<p>Series(data, input_order=’none’, opts=None, shape=(0,), dtype=float, order=None, template=None, geometry=None)</p>
+<p>Examples:</p>
+<blockquote>
+<div><p>Read the contents of an input directory</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">image</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;directory/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Make a Series instance from a Numpy.ndarray</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">image</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>data: (array_like or URL)</dt><dd><p>Input data, either explicit as np.ndarray, np.uint16, np.float32, or by URL to input data.</p>
+</dd>
+<dt>input_order: (str)</dt><dd><dl class="simple">
+<dt>How to sort the input data. Typical values are:</dt><dd><ul class="simple">
+<li><p>‘none’ : 3D volume or 2D slice (default).</p></li>
+<li><p>‘time’ : Time-resolved data.</p></li>
+<li><p>‘b’ : Diffusion data with variable b values.</p></li>
+<li><p>‘te’ : Varying echo times.</p></li>
+<li><p>‘fa’ : Varying flip angles.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>opts: Dict of input options, mostly for format specific plugins (argparse.Namespace or dict)
+shape: Tuple of ints, specifying shape of input data.
+dtype: Numpy data type. Default: float
+template: Input data to use as template for DICOM header (Series, array_like or URL)
+geometry: Input data to use as template for geometry (Series, array_like or URL)
+order: Row-major (C-style) or column-major (Fortran-style) order, {‘C’, ‘F’}, optional</p>
+</dd>
+<dt>Returns:</dt><dd><p>Series instance</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="imagedata.series.Series.DicomHeaderDict">
+<em class="property">property </em><code class="sig-name descname">DicomHeaderDict</code><a class="headerlink" href="#imagedata.series.Series.DicomHeaderDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>DICOM header dictionary</p>
+<p>DicomHeaderDict[slice].tuple(tagvalue, filename, dicomheader)</p>
+<dl>
+<dt>Returns:</dt><dd><p>DicomHeaderDict instance.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when DICOM header is not set.</p>
+</dd>
+<dt>Examples:</dt><dd><p>Get values for slice=0:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tagvalue</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">dicomheader</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">DicomHeaderDict</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.accessionNumber">
+<em class="property">property </em><code class="sig-name descname">accessionNumber</code><a class="headerlink" href="#imagedata.series.Series.accessionNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accession number</p>
+<p>DICOM accession number</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>accession number (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when accession number is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.axes">
+<em class="property">property </em><code class="sig-name descname">axes</code><a class="headerlink" href="#imagedata.series.Series.axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>axes – Return list of axis objects.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>List of Axis objects</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when the axes are not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.color">
+<em class="property">property </em><code class="sig-name descname">color</code><a class="headerlink" href="#imagedata.series.Series.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color interpretation</p>
+<p>Whether the array stores a color image, and the
+last index represents the color components</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>whether the array stores a color image (bool)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when color interpretation is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.columns">
+<em class="property">property </em><code class="sig-name descname">columns</code><a class="headerlink" href="#imagedata.series.Series.columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of columns</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Number of columns.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when number of columns is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.find_axis">
+<code class="sig-name descname">find_axis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.find_axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.find_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find axis with given name</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>name: Axis name to search for</p>
+</dd>
+<dt>Returns:</dt><dd><p>axis object with given name</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when no axis object has given name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.frameOfReferenceUID">
+<em class="property">property </em><code class="sig-name descname">frameOfReferenceUID</code><a class="headerlink" href="#imagedata.series.Series.frameOfReferenceUID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame of reference UID</p>
+<p>DICOM frame of reference UID</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>uid type, frame of reference UID (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when frame of reference UID is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.getDicomAttribute">
+<code class="sig-name descname">getDicomAttribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keyword</span></em>, <em class="sig-param"><span class="n">slice</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.getDicomAttribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.getDicomAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get named DICOM attribute.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>keyword: name (str) or dicom tag
+slice: optional slice to get attribute from (default: 0)
+tag: optional tag to get attribute from (default: 0)</p>
+</dd>
+<dt>Returns:</dt><dd><p>DICOM attribute</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.getPositionForVoxel">
+<code class="sig-name descname">getPositionForVoxel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em>, <em class="sig-param"><span class="n">transformation</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.getPositionForVoxel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.getPositionForVoxel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get patient position for center of given voxel r</p>
+<p>Use Patient Position and Image Orientation to calculate world
+coordinates for given voxel</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>r: (s,r,c) of voxel in voxel coordinates as numpy.array
+transformation: transformation matrix when different from self.transformationMatrix</p>
+</dd>
+<dt>Returns:</dt><dd><p>(z,y,x) of voxel in world coordinates (mm) as numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.getVoxelForPosition">
+<code class="sig-name descname">getVoxelForPosition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">transformation</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.getVoxelForPosition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.getVoxelForPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get voxel for given patient position p</p>
+<p>Use Patient Position and Image Orientation to calculate world
+coordinates for given voxel</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>p: (z,y,x) of voxel in world coordinates (mm) as numpy.array
+transformation: transformation matrix when different from self.transformationMatrix</p>
+</dd>
+<dt>Returns:</dt><dd><p>(s,r,c) of voxel in voxel coordinates as numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.get_roi">
+<code class="sig-name descname">get_roi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">roi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">'r'</span></em>, <em class="sig-param"><span class="n">follow</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vertices</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">im2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fig</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'gray'</span></em>, <em class="sig-param"><span class="n">window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.get_roi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.get_roi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Let user draw ROI on image</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>roi: Predefined ROI (optional) (NOT IMPLEMENTED).
+color: Color of polygon ROI. Default: r.
+follow: Copy ROI to next tag. Default: False.
+vertices: Return both grid mask and dictionary of vertices. Default: False.
+im2: Series or list of Series which will be displayed in addition to self.
+fig: matplotlib.plt.figure if already exist (optional).
+cmap: colour map for display. Default: gray
+window: window width of signal intensities. Default is DICOM Window Width.
+level: window level of signal intensities. Default is DICOM Window Center.
+link: whether scrolling is linked between displayed objects. Default: False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>grid mask: Series object with voxel=1 inside ROI. Series object with shape (nz,ny,nx) from original image, dtype ubyte. Voxel inside ROI is 1, 0 outside.
+vertices_dict: if vertices: Dictionary of vertices.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when image is not a subclass of Series, or too many viewports are requested.
+IndexError: when there is a mismatch with images and viewports.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.get_transformation_components_xyz">
+<code class="sig-name descname">get_transformation_components_xyz</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.get_transformation_components_xyz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.get_transformation_components_xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get origin and direction from transformation matrix in xyz convention.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self.transformationMatrix
+self.spacing</p>
+</dd>
+<dt>Returns:</dt><dd><p>origin: np.array size 3
+orientation: np.array size 6 (row, then column directional cosines) (DICOM convention)
+normal vector: np.array size 3 (slice direction)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.imagePositions">
+<em class="property">property </em><code class="sig-name descname">imagePositions</code><a class="headerlink" href="#imagedata.series.Series.imagePositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The [z,y,x] coordinates of the upper left hand corner (first pixel)
+of each slice.</p>
+<p>dict(imagePositions[slice]) of [z,y,x] in mm, as numpy array</p>
+<dl>
+<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">z</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imagePositions</span><span class="p">[</span><span class="nb">slice</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+<dt>Returns:</dt><dd><p>dict of imagePositions. dict.keys() are slice numbers (int)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when imagePositions are not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.imageType">
+<em class="property">property </em><code class="sig-name descname">imageType</code><a class="headerlink" href="#imagedata.series.Series.imageType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image type</p>
+<p>DICOM image type</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>image type, list of strings</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when image type is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.input_format">
+<em class="property">property </em><code class="sig-name descname">input_format</code><a class="headerlink" href="#imagedata.series.Series.input_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input format</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The input format (str).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.input_order">
+<em class="property">property </em><code class="sig-name descname">input_order</code><a class="headerlink" href="#imagedata.series.Series.input_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input order</p>
+<p>How to sort input files:
+INPUT_ORDER_NONE: No sorting
+INPUT_ORDER_TIME: Sort on image time (acquisition time or trigger time)
+INPUT_ORDER_B: Sort on b value
+INPUT_ORDER_FA: Sort on flip angle
+INPUT_ORDER_FAULTY: Correct erroneous attributes</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Current input order.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.input_sort">
+<em class="property">property </em><code class="sig-name descname">input_sort</code><a class="headerlink" href="#imagedata.series.Series.input_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input order</p>
+<p>How to sort output files:
+SORT_ON_SLICE: Run over slices first
+SORT_ON_TAG  : Run over input order first, then slices</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The input order.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when input order is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.orientation">
+<em class="property">property </em><code class="sig-name descname">orientation</code><a class="headerlink" href="#imagedata.series.Series.orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orientation</p>
+<p>The direction cosines of the first row and the first column with respect
+to the patient.
+These attributes shall be provided as a pair.
+Row value (column index) for the z,y,x axes respectively,
+followed by the column value (row index) for the z,y,x axes respectively.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>orientation as np.array with 6 elements.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when orientation is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.patientBirthDate">
+<em class="property">property </em><code class="sig-name descname">patientBirthDate</code><a class="headerlink" href="#imagedata.series.Series.patientBirthDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patient birth date</p>
+<p>DICOM patient birth date</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>patient birth date (str)</dt><dd><p>None: when no birth date is set</p>
+</dd>
+</dl>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when patient birth date is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.patientID">
+<em class="property">property </em><code class="sig-name descname">patientID</code><a class="headerlink" href="#imagedata.series.Series.patientID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patient ID</p>
+<p>DICOM patient ID</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>patient ID (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when patient ID is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.patientName">
+<em class="property">property </em><code class="sig-name descname">patientName</code><a class="headerlink" href="#imagedata.series.Series.patientName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patient name</p>
+<p>DICOM patient name</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>patient name (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when patient name is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.photometricInterpretation">
+<em class="property">property </em><code class="sig-name descname">photometricInterpretation</code><a class="headerlink" href="#imagedata.series.Series.photometricInterpretation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Photometric Interpretation</p>
+<p>DICOM Photometric Interpretation</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>photometric interpretation (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when photometric interpretation is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.rows">
+<em class="property">property </em><code class="sig-name descname">rows</code><a class="headerlink" href="#imagedata.series.Series.rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of rows</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Number of rows.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when number of rows is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.seriesDescription">
+<em class="property">property </em><code class="sig-name descname">seriesDescription</code><a class="headerlink" href="#imagedata.series.Series.seriesDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Series description</p>
+<p>DICOM series description.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>series description (string)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: When series description is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.seriesInstanceUID">
+<em class="property">property </em><code class="sig-name descname">seriesInstanceUID</code><a class="headerlink" href="#imagedata.series.Series.seriesInstanceUID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Series instance UID</p>
+<p>DICOM series instance UID</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>uid type, series instance UID (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when series instance UID is not set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.seriesNumber">
+<em class="property">property </em><code class="sig-name descname">seriesNumber</code><a class="headerlink" href="#imagedata.series.Series.seriesNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Series number</p>
+<p>DICOM series number.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>series number (int)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when series number is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.setDicomAttribute">
+<code class="sig-name descname">setDicomAttribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keyword</span></em>, <em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">slice</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.setDicomAttribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.setDicomAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set named DICOM attribute.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>keyword: name (str) or dicom tag
+value: new value for DICOM attribute
+slice: optional slice to set attribute for (default: all)
+tag: optional tag to set attribute for (default: all)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: When no DICOM tag is set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#imagedata.series.Series.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix shape</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Current matrix shape as tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">im2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fig</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'gray'</span></em>, <em class="sig-param"><span class="n">window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show image</p>
+<p>Courtesy of Erlend Hodneland (2021)</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>im2: Series or list of Series which will be displayed in addition to self.
+fig: matplotlib.plt.figure if already exist (optional).
+cmap: color map for display. Default: gray
+window: window width of signal intensities. Default is DICOM Window Width.
+level: window level of signal intensities. Default is DICOM Window Center.
+link: whether scrolling is linked between displayed images. Default: False</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when image is not a subclass of Series, or too many viewports are requested.
+IndexError: when there is a mismatch with images and viewports.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.sliceLocations">
+<em class="property">property </em><code class="sig-name descname">sliceLocations</code><a class="headerlink" href="#imagedata.series.Series.sliceLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slice locations</p>
+<p>Sorted numpy array of slice locations, in mm.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>List of slice locations as numpy array</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: When no slice locations are defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.slices">
+<em class="property">property </em><code class="sig-name descname">slices</code><a class="headerlink" href="#imagedata.series.Series.slices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of slices</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Number of slices.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when number of slices is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.sort_on">
+<em class="property">property </em><code class="sig-name descname">sort_on</code><a class="headerlink" href="#imagedata.series.Series.sort_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output order</p>
+<p>How to sort output files:
+SORT_ON_SLICE: Run over slices first
+SORT_ON_TAG  : Run over input order first, then slices</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Current output order.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when output order is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.spacing">
+<em class="property">property </em><code class="sig-name descname">spacing</code><a class="headerlink" href="#imagedata.series.Series.spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given as dz,dy,dx in mm.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>spacing: [dz,dy,dx] in mm, as numpy array</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when spacing is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.studyID">
+<em class="property">property </em><code class="sig-name descname">studyID</code><a class="headerlink" href="#imagedata.series.Series.studyID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Study ID</p>
+<p>DICOM study ID</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>study ID (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when study ID is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.studyInstanceUID">
+<em class="property">property </em><code class="sig-name descname">studyInstanceUID</code><a class="headerlink" href="#imagedata.series.Series.studyInstanceUID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Study instance UID</p>
+<p>DICOM study instance UID</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>uid type, study instance UID (str)</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: when study instance UID is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.tags">
+<em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#imagedata.series.Series.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image tags for each slice</p>
+<dl class="simple">
+<dt>Image tags can be an array of:</dt><dd><ul class="simple">
+<li><p>time points</p></li>
+<li><p>diffusion weightings (b values)</p></li>
+<li><p>flip angles</p></li>
+</ul>
+</dd>
+</dl>
+<p>tags is a dict with (slice keys, tag array)</p>
+<p>dict[slice] is np.array(tags)</p>
+<p>Examples:</p>
+<blockquote>
+<div><p>&gt;&gt;&gt;self.tags[slice][tag]</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Raises:</dt><dd><p>ValueError: when tags are not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.timeline">
+<em class="property">property </em><code class="sig-name descname">timeline</code><a class="headerlink" href="#imagedata.series.Series.timeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get timeline</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>timeline in seconds, as numpy array of floats</dt><dd><p>Delta time is given as seconds. First image is t=0.
+Length of array is number of tags.</p>
+</dd>
+</dl>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: tags for dataset is not time tags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.transformationMatrix">
+<em class="property">property </em><code class="sig-name descname">transformationMatrix</code><a class="headerlink" href="#imagedata.series.Series.transformationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation matrix</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self.spacing
+self.imagePositions
+self.orientation</p>
+</dd>
+<dt>Returns:</dt><dd><p>transformation matrix as numpy array</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: Transformation matrix cannot be constructed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="imagedata.series.Series.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">formats</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imagedata/series.html#Series.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagedata.series.Series.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write Series image</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self: Series array
+directory_name: directory name
+filename_template: template including %d for image number
+opts: Output options (argparse.Namespace or dict)
+formats: list of output formats, overriding opts.output_format (list or str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="APIReferenceViewer.html" class="btn btn-neutral float-right" title="Viewer Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="APIReference.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Erling Andersen.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
