@@ -1,0 +1,7 @@
+dask[complete]==2021.2.0
+dask-ml==1.8.0
+matplotlib>2.2.0
+pandas>0.25.1
+scikit-learn>0.21.3
+numpy>1.17.2
+dask>2021.1.0
