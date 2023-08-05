@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: codex-engine-pyqt
+Version: 0.0.5
+Summary: A universal translator for serial devices.
+Home-page: https://github.com/Codex-Engine/codex-engine-pyqt
+Author: David Kincaid
+Author-email: dlkincaid0@gmail.com
+License: UNKNOWN
+Keywords: codex,codex engine,serial
+Platform: any
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pyserial
+
+# Codex Engine for PyQt
+
+A universal translator for serial devices.
+
