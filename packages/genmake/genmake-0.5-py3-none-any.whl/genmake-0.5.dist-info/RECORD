@@ -1,0 +1,15 @@
+genmake/__init__.py,sha256=3Otkus7r2RGUTVNqEoUS7hTsq8lIAs1bHWZ2TR4ZuAk,892
+genmake/__main__.py,sha256=u-RZUkx3LgwNFrpi2Hb4lGXZJWf1-090WUPqXbJ3vyM,946
+genmake/args.py,sha256=ugY2CwpqY4xDabkG_bX9BwG-vazcuJ-wzn5MDrqYulk,1364
+genmake/build_rules.py,sha256=jTIKe5bTWM6tgZpq2eCziRR5kQXgH-4Hkh9lZX6KwR0,2848
+genmake/cli.py,sha256=pZ7eZgewD0btFprsNeZtVac2qpDj7w0TQfAHsU5ixhY,2225
+genmake/config.py,sha256=0b_KqFheVIyaRwGmPvwnQsjHkecC_aIOLBdKYW6CkPo,1009
+genmake/genmake.py,sha256=s55DsDPMPgnm2PDHKRs2pFQLCtYBEM6lT4mBg1NZLn0,1571
+genmake/makefile.py,sha256=jVlPqAnYj-T_mCrxX32yeaBCXLByguFB4fX10KqUFa8,4244
+genmake/source_file_maker.py,sha256=sXPBXm3l8tZ0PTBvkakwutg0bdaj_W5gils68z4POYo,3173
+genmake-0.5.dist-info/LICENSE.md,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+genmake-0.5.dist-info/METADATA,sha256=SA_AWWn6tzP2OtTDH1J7ydcnE_Jbs_qtXsQPM-FxWr4,2707
+genmake-0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+genmake-0.5.dist-info/entry_points.txt,sha256=70fl_2Ml_EDfzqXL802iB7iu4cTGbmfjv1tpPIJFYRw,50
+genmake-0.5.dist-info/top_level.txt,sha256=i3Bit7sfZ-MYero98E3CfI_bn0VWQALaiuf_R3FLtm0,8
+genmake-0.5.dist-info/RECORD,,
