@@ -1,0 +1,10 @@
+Losses/Mask_bce_loss.py,sha256=J1jkDNnCVBFwWVqaTX6e19WFUYXhYaWDbwBjXGEA-dc,6982
+Losses/Triplet_loss.py,sha256=LQm3Ows6B3dkKkoKBjA8_RVKpPo4-W-P3xspoBsWro0,601
+model/CBAM_Face_attention_Resnet_maskV2.py,sha256=INIBwA6Z8xX4fHZgdtEjJBghH3rd1FXF-TwjGXMEzwA,14391
+model/config_mask.py,sha256=PnMBrTZcsD6PVzSc0FF6kAibnZut48cz4-NRLKuUEO0,1842
+model/inference.py,sha256=yd1VE8R4uSBeIg5HBt2rnp180ZqMec7jWQ-cNlz2thc,7913
+model/test.py,sha256=DTIDw3KvkNwRBfswVSUNKk6OUOiG-N_eMSYrEJQG1uQ,460
+Mask_Face_Inference-0.0.1.dist-info/METADATA,sha256=_gQgA1SYAqBZKBvKzEVZg_BS5D9KylP17U8RF-JZG9M,698
+Mask_Face_Inference-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Mask_Face_Inference-0.0.1.dist-info/top_level.txt,sha256=DQZRjNIEWsnm360LlEKLjqWrxkw43MPyomCBYO6EDEI,13
+Mask_Face_Inference-0.0.1.dist-info/RECORD,,
