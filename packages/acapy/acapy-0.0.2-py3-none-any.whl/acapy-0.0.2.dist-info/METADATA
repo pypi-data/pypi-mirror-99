@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: acapy
+Version: 0.0.2
+Summary: AVALDATA AcapLib2 Python wrapper.
+Home-page: https://www.avaldata.co.jp/contact
+Author: AVALDATA
+Author-email: 
+License: 3-Clause BSD License
+Keywords: AVALDATA acapy
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+AVALDATA AcapLib2 Python wrapper
+
+
