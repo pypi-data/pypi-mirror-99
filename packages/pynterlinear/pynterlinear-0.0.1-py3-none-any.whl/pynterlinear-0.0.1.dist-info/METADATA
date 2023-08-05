@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pynterlinear
+Version: 0.0.1
+Summary: Converts interlinear text from CSV (or any source) to LaTeX and Microsoft Word
+Home-page: https://gitlab.com/florianmatter/pynterlinear
+Author: Florian Matter
+Author-email: florianmatter@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/florianmatter/pynterlinear/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python-docx
+Requires-Dist: pyperclip
+
+# pynterlinear
+
+The main functionality of `pynterlinear` is generating nicely formatted interlinear text from plain text csv files.
+It provides two command-line hooks:
+
+## `csv2word`
+
+## `csv2latex`
+
+
+You can also use `pynterlinear` in your own python scripts.
+
