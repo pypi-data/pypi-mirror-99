@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: hypycube
+Version: 0.0a0
+Summary: HyPyCube framework
+Home-page: https://github.com/hypycube/hypycube
+Author: Jakub Walczak, Mirko Stojiljkovic, Marco Mancini
+Author-email: jakub.walczak@cmcc.it, mirko.stojiljkovic@cmcc.it, marco.mancini@cmcc.it
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==20.2.0)
+Requires-Dist: bottleneck (==1.3.2)
+Requires-Dist: cftime (==1.2.1)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: distributed (==2.20.0)
+Requires-Dist: dask-jobqueue (==0.7.1)
+Requires-Dist: dask (==2.20.0)
+Requires-Dist: intake (==0.5.5)
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: xarray (==0.16.0)
+Requires-Dist: packaging (==20.4)
+Requires-Dist: pyparsing (==3.0.0a2)
+Requires-Dist: pytest-cov (==2.10.0)
+Requires-Dist: pytest (==5.4.2)
+Requires-Dist: bokeh (==2.0.1)
+Requires-Dist: sortedcontainers (==2.2.2)
+Requires-Dist: urllib3 (==1.25.11)
+Requires-Dist: zarr (==2.5.0)
+Requires-Dist: s3fs (<0.4)
+Requires-Dist: netCDF4 (==1.5.6)
+
+UNKNOWN
+
+
