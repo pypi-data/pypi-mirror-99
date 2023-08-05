@@ -1,0 +1,6 @@
+<odoo>
+  <data>
+    <menuitem name="Users" id="sommobilitat.users" parent="vertical_carsharing.menu_root"/>
+    <menuitem name="Accounts" id="sommobilitat.accounts" parent="vertical_carsharing.menu_root"/>
+  </data>
+</odoo>

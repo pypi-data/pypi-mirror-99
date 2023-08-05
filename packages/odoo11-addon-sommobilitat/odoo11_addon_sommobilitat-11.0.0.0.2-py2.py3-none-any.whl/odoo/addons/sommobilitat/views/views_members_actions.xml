@@ -1,0 +1,75 @@
+<odoo>
+  <data>
+    <record id="bank_account_validation" model="ir.actions.server">
+      <field name="name">Validate bank account</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.validate_bank_account_from_action()</field>
+    </record>
+
+    <record id="set_invoice_fields" model="ir.actions.server">
+      <field name="name">Set Invoice Fields</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.compute_invoice_fields_from_action()</field>
+    </record>
+
+    <record id="migrate_bank_account" model="ir.actions.server">
+      <field name="name">Migrate bank account</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.migrate_bank_account_action()</field>
+    </record>
+
+    <record id="mark_as_correct_bank_account" model="ir.actions.server">
+      <field name="name">Mark as correct bank account</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.mark_as_correct_bank_account_from_action()</field>
+    </record>
+
+    <record id="mark_as_cooperative" model="ir.actions.server">
+      <field name="name">Mark as cooperative member</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.mark_as_cooperative_from_action()</field>
+    </record>
+
+    <record id="mark_as_completed" model="ir.actions.server">
+      <field name="name">Mark as completed member</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.mark_as_completed()</field>
+    </record>
+
+    <record id="activate_member" model="ir.actions.server">
+      <field name="name">Activate member</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.activate_member_from_action()</field>
+    </record>
+
+    <record id="sanitize_app_members" model="ir.actions.server">
+      <field name="name">SomMobilitat: Sanitize DB</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.sanitize_reporting_db_action()</field>
+    </record>
+  </data>
+</odoo>

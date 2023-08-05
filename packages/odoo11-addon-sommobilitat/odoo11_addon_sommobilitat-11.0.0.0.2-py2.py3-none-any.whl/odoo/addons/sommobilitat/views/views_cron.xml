@@ -1,0 +1,28 @@
+<odoo>
+  <data noupdate="1">
+    <record id="ir_cron_fetch_www_members" model="ir.cron">
+      <field name="name">Fetch www members</field>
+      <field eval="False" name="active"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">1</field>
+      <field name="interval_type">hours</field>
+      <field name="numbercall">-1</field>
+      <field name="model_id" ref="model_sommobilitat_sm_cron"/>
+      <field name="state">code</field>
+      <field name="code">model.fetch_members_from_wp()</field>
+    </record>
+  </data>
+  <data noupdate="1">
+    <record id="ir_cron_activate_cooperative_members" model="ir.cron">
+      <field name="name">Activate cooperative members</field>
+      <field eval="False" name="active"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">1</field>
+      <field name="interval_type">hours</field>
+      <field name="numbercall">-1</field>
+      <field name="model_id" ref="model_sommobilitat_sm_cron"/>
+      <field name="state">code</field>
+      <field name="code">model.activate_cooperative_member()</field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,160 @@
+<odoo>
+  <data>
+
+    <record id="view_members_window" model="ir.actions.act_window">
+      <field name="name">Members</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,form,pivot</field>
+      <field name="context">{'search_default_cooperative_member_yes': 1}</field>
+    </record>
+
+    <record id="view_members_list" model="ir.ui.view">
+      <field name="name">sommobilitat.members.tree</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="replace">
+          <tree>
+            <field name="member_nr"/>
+            <field name="name"/>
+            <field name="email"/>
+            <field name="id"/>
+          </tree>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="view_members_pivot" model="ir.ui.view">
+      <field name="name">sommobilitat.members.pivot</field>
+      <field name="model">res.partner</field>
+      <field name="type">pivot</field>
+      <field name="arch" type="xml">
+
+        <pivot>
+          <field name="name" type="row"/>
+        </pivot>
+
+      </field>
+    </record>
+
+    <!-- BUG: mirar pk dona problemes amb variables que no existeixen
+    
+    <record model="ir.ui.view" id="partner_vendor_form_view_inherit">
+      <field name="name">res.partner.with.buttons</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//field[@name='child_ids']/kanban/field[@name='name']" position="before">
+            <field name="id"/>
+          </xpath>
+          <xpath expr="//field[@name='child_ids']/kanban/templates//div[@class='oe_kanban_details']/field[@name='name']" position="before">
+            <a t-att-href="'#id='+record.id.raw_value+'&amp;model=res.partner'" class="fa fa-fw o_button_icon fa-pencil-square-o pull-right">
+            </a>
+          </xpath>
+        </data>
+      </field>
+    </record>-->
+
+    <record id="view_members_search" model="ir.ui.view">
+      <field name="name">sommobilitat.members.search</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_res_partner_filter"/>
+      <field name="arch" type="xml">
+        <xpath expr="//search" position="replace">
+          <search>
+            <field name="name"
+              filter_domain="['|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self)]"/>
+            <field name="member_nr"/>
+            <field name="email"/>
+            <field name="dni"/>
+            <field name="cif"/>
+            <separator/>
+            <filter string="Cooperative Members" name="cooperative_member_yes"
+              domain="[('cooperative_member','=',1)]"/>
+            <filter string="Non Cooperative Members" name="cooperative_member_no"
+              domain="[('cooperative_member','=',0)]"/>
+            <separator/>
+            <filter string="Persons" name="type_person" domain="[('is_company','=',0)]"/>
+            <filter string="Companies" name="type_company" domain="[('is_company','=',1)]"/>
+            <separator/>
+            <filter string="Customers" name="customer"
+              domain="[('customer','=',1), ('parent_id', '=', False)]"/>
+            <filter string="Vendors" name="supplier"
+              domain="['|',('supplier','=',1), ('parent_id', '=', False)]"/>
+            <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            <separator/>
+            <filter string="Inscripció Complerta" name="membership_success_yes"
+              domain="[('membership_success','=',1)]"/>
+            <filter string="Inscripció NO Complerta" name="membership_success_no"
+              domain="[('membership_success','=',0)]"/>
+            <separator/>
+            <filter string="Correct bank account" name="bank_correct_yes"
+              domain="[('bank_correct','=',1)]"/>
+            <filter string="NOT Correct bank account" name="bank_correct_no"
+              domain="[('bank_correct','=',0)]"/>
+          </search>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="view_members_form" model="ir.ui.view">
+      <field name="name">sommobilitat.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='country_id']" position="before">
+          <field name="state"/>
+        </xpath>
+        <xpath expr="//field[@name='phone']" position="before">
+          <field name="phone_2" widget="phone"/>
+        </xpath>
+        <xpath expr="//group/group" position="before">
+          <group>
+            <field name="type"/>
+            <field name="active"/>
+            <field name="cooperative_member"/>
+            <field name="membership_success"/>
+            <field name="member_nr" attrs="{'invisible': [('cooperative_member','=', False)]}"/>
+            <field name="wp_member_id"/>
+            <field name="dni" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+            <field name="id_document_type" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+          </group>
+          <group>
+            <field name="firstname" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+            <field name="first_surname" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+            <field name="second_surname" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+            <field name="surname" attrs="{'invisible': [('company_type','=', 'company')], 'readonly': True}"/>
+            <field name="gender" attrs="{'invisible': [('company_type','=', 'company')]}"/>
+            <field name="social_reason" attrs="{'invisible': [('company_type','=', 'person')]}"/>
+            <field name="cif" attrs="{'invisible': [('company_type','=', 'person')]}"/>
+          </group>
+        </xpath>
+        <xpath expr="//notebook" position="inside">
+          <page name='invoice_details' string="Invoice details">
+            <group name="container_row_2">
+              <field name="bank_correct"/>
+              <field name="bank_correct_validation" attrs="{'readonly': True}"/>
+              <field name="bank_account_type"/>
+              <field name="bank_account_nr_1"/>
+              <field name="bank_account_nr_2"/>
+              <field name="bank_account_nr_3"/>
+              <field name="bank_account_nr_4"/>
+              <field name="iban_1"/>
+              <field name="iban_2"/>
+              <field name="iban_3"/>
+              <field name="iban_4"/>
+              <field name="iban_5"/>
+              <field name="iban_6"/>
+              <field name="invoicing_iban"/>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+    <menuitem name="Members" id="sommobilitat.menu_members" 
+      parent="sommobilitat.users" action="view_members_window"/>
+  </data>
+</odoo>
