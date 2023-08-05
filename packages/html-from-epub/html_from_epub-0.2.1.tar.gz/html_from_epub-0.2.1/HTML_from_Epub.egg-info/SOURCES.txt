@@ -1,0 +1,14 @@
+README.md
+setup.py
+HTML_from_Epub.egg-info/PKG-INFO
+HTML_from_Epub.egg-info/SOURCES.txt
+HTML_from_Epub.egg-info/dependency_links.txt
+HTML_from_Epub.egg-info/top_level.txt
+bin/html-from-epub
+html_from_epub/__init__.py
+html_from_epub/html_from_epub.py
+html_from_epub.egg-info/PKG-INFO
+html_from_epub.egg-info/SOURCES.txt
+html_from_epub.egg-info/dependency_links.txt
+html_from_epub.egg-info/requires.txt
+html_from_epub.egg-info/top_level.txt
