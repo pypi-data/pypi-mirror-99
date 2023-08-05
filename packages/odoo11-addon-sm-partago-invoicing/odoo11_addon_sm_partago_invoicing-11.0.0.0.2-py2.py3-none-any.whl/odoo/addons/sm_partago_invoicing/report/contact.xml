@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <template id="sm_contact" inherit_id="base.contact">
+      <xpath expr="//address" position="replace">
+        <div t-if="'name' in fields">
+          <t t-if="object.name">
+            <span itemprop="name" t-esc="name"/>
+            <br/>
+          </t>
+          <t t-if="object.cif">
+            <span itemprop="cif" t-esc="object.cif"/>
+            <br/>
+          </t>
+          <t t-if="not object.cif">
+            <t t-if="object.dni" >
+              <span itemprop="dni" t-esc="object.dni"/>
+              <br/>
+            </t>
+          </t>
+          <t t-if="object.street">
+            <span itemprop="street" t-esc="object.street"/>
+            <br/>
+          </t>
+          <t t-if="object.zip">
+            <span itemprop="zip" t-esc="object.zip"/>&#xA0;
+          </t>
+          <t t-if="object.city">
+            <span itemprop="city" t-esc="object.city"/>&#xA0;
+          </t>
+          <t t-if="object.state">
+            (<span itemprop="state" t-esc="object.state"/>)
+          </t>
+          <br/>
+          <t t-if="object.invoicing_email">
+            <span itemprop="invoicing_email" t-esc="object.invoicing_email"/><br/>
+          </t>
+          <span t-if="object.cooperative_member">Número de soci/a:
+            <span t-field="object.member_nr"/>
+          </span>
+        </div>
+      </xpath>
+    </template>
+  </data>
+</odoo>

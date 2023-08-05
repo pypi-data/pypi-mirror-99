@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="sm_report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+      <xpath expr="//span[@t-field='l.price_unit']" position="replace">
+        <span t-esc="'{0:,.2f}'.format(l.price_unit)" />
+      </xpath>
+      <xpath expr="//span[@t-field='l.product_uom_qty']" position="replace">
+        <span t-esc="'{0:,.2f}'.format(l.product_uom_qty)" />
+      </xpath>
+    </template>
+  </data>
+</odoo>
