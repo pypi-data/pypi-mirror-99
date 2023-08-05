@@ -1,0 +1,3 @@
+[console_scripts]
+croudtech-cloudformation = croudtech_cloudformation.cli:cli
+
