@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+
+    <template id="sm_header">
+      <div class="header" style="margin-top:60px;">
+        <div class="row">
+          <div class="col-xs-2">
+            <img t-if="res_company.logo_web"
+               t-att-src="'data:image/png;base64,%s' % to_text(res_company.logo_web)"
+               style="max-height:80px;"/>
+          </div>
+          <div class="col-xs-6" name="company_address">
+            <div t-field="res_company.partner_id"
+               t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;,&quot;street&quot;,&quot;zip&quot;,&quot;city&quot;,&quot;state&quot;,&quot;cif&quot;,&quot;dni&quot;,&quot;email&quot;], &quot;is_customer&quot;: false}"/>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="sm_footer">
+      <div class="footer">
+        <table class="table table-condensed">
+          <tr class="border-black">
+            <td>
+              <div class="text-center">
+                <ul class="list-inline">
+                  <li t-if="res_company.phone">Tel:
+                    <span t-field="res_company.phone"/>
+                  </li>
+                  <li t-if="res_company.email">Mail:
+                    <span t-field="res_company.email"/>
+                  </li>
+                  <li t-if="res_company.website">Web:
+                    <span t-field="res_company.website"/>
+                  </li>
+                </ul>
+                <div t-field="res_company.report_footer"/>
+                <div>
+                  Page:
+                  <span class="page"/>
+                  /
+                  <span class="topage"/>
+                </div>
+              </div>
+            </td>
+
+          </tr>
+        </table>
+
+      </div>
+    </template>
+
+    <template id="sm_external_layout">
+      <div class="article">
+        <t t-call="sm_reports.sm_header"/>
+        <t t-raw="0"/>
+        <t t-call="sm_reports.sm_footer"/>
+      </div>
+    </template>
+
+  </data>
+</odoo>

@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <record id="view_reporting_members_inherit_form" model="ir.ui.view">
+      <field name="name">sommobilitat.reposrting.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group" position="after">
+          <group>
+            <field name="reporting_related_member_id"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
