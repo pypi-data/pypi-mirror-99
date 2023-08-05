@@ -1,0 +1,8 @@
+README.md
+setup.py
+nameko_apscheduler.egg-info/PKG-INFO
+nameko_apscheduler.egg-info/SOURCES.txt
+nameko_apscheduler.egg-info/dependency_links.txt
+nameko_apscheduler.egg-info/requires.txt
+nameko_apscheduler.egg-info/top_level.txt
+nameko_apscheduler.egg-info/zip-safe
