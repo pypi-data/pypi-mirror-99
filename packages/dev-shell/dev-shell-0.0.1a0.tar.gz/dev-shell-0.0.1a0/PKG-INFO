@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dev-shell
+Version: 0.0.1a0
+Summary: Devloper shell for easy startup...
+License: GNU General Public License v3.0
+Author: Jens Diemer
+Author-email: python@jensdiemer.de
+Requires-Python: >=3.7,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cmd2
+Requires-Dist: gnureadline; sys_platform == "darwin"
+Description-Content-Type: text/markdown
+
+# A "dev-shell" for Python projects ;)
+
+tbd.
