@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: asmc-data-module
+Version: 0.0.1
+Summary: Something
+Home-page: UNKNOWN
+Author: Palamara Lab
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: cmake
+Requires-Dist: ninja
+Requires-Dist: jupyter
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: nbconvert ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+UNKNOWN
+
+
