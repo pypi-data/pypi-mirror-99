@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: divvunspell
+Version: 0.1.0
+Classifiers: Programming Language :: Rust
+Author: Brendan Molloy <brendan@bbqsrc.net>
+Author-Email: Brendan Molloy <brendan@bbqsrc.net>
