@@ -1,0 +1,8 @@
+CHANGES
+=======
+
+* 删除获取数据等待时间，减少延时
+* gstreamer 异常关闭的时候需要关闭并重置配置信息
+* reformat
+* update gstadapter
+* init commit
