@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['autojson']
+
+package_data = \
+{'': ['*']}
+
+setup_kwargs = {
+    'name': 'autojson',
+    'version': '0.1.2',
+    'description': 'A module in which Python classes define JSON',
+    'long_description': '========\nOverview\n========\n\nBy defining a Python class, you can define a JSON format.\nThere is no need to define your own JSON parser.\nYou can convert JSON to Python classes with a short code and support the type hints available in vscode\'s Pylance extension.\nHere\'s an example of it.\n\n\n.. code-block:: python\n\n    import json\n    from autojson import Object, Array, Int, Float, Boolean, String\n\n    # JSON file\n    txt = """\n    {\n        "name": "config",\n        "threshold": 0.5,\n        "flag": true,\n        "rectangles": [\n            {\n                "left": 0,\n                "top": 0,\n                "width": 100,\n                "height": 200\n            },\n            {\n                "left": 100,\n                "top": 100,\n                "width": 100,\n                "height": 200\n            }\n        ],\n        "area": [\n            [0, 0],\n            [1920, 0],\n            [1920, 1080],\n            [0, 1080]\n        ]\n    }\n    """\n\n    # define your JSON format\n    class Rectangle(Object):\n        left = Int()\n        top = Int()\n        width = Int()\n        height = Int()\n        right: int\n        bottom: int\n\n        def __autojson_init__(self):\n            self.right = self.left + self.width\n            self.bottom = self.top + self.height\n\n        @property\n        def ltwh(self):\n            return self.left, self.top, self.width, self.height\n\n        @property\n        def ltrb(self):\n            return self.left, self.top, self.right, self.bottom\n\n\n    class Config(Object):\n        name = String()\n        threshold = Float()\n        flag = Boolean()\n        rectangles = Array(Rectangle())\n        area = Array(Array(Int(), size=2))\n\n\n    # load JSON to your class\n    config = Config().parse_json(json.loads(txt))\n    # To change parameter\n    config.threshold = Float(0.7)\n    # or\n    config["threshold"] = Float(0.3)\n\n    for rectangle in config.rectangles:\n        print("ltrb", rectangle.ltrb)\n        print("ltwh", rectangle.ltwh)\n\n    # if you don\'t have json template, create the template\n    print(json.dumps(Config().get_default_json()))\n    # Object is subclass of dict\n    # so you can save it as json\n\n\n=======\nClasses\n=======\n\nThis module provides six classes: Object, Array, Int, Float, Boolean, and String.\n\n\nInt\n===\n\nInt is a subclass of int, with additional methods for JSON, but it behaves the same as int.\n\n\nFloat\n=====\n\nFloat is a subclass of float, with additional methods for JSON, but it behaves the same as float.\n\n\nBoolean\n=======\n\nBoolean is NOT a subclass of bool, with additional methods for JSON, but it behaves the same as bool.\nHowever, it will not work correctly for the is operator.\nAlso, if you assign a value to a variable annotated as a bool type, an error message will be displayed,\nso please use bool() or Boolean.value when assigning.\n\n\nString\n======\n\nString is a subclass of str, with additional methods for JSON, but it behaves the same as str.\n\n\nArray\n=====\n\nArray is a subclass of list, with additional methods for JSON, but it behaves the same as list.\nHowever, since `__init__` is overridden, the constructor behaves differently from list.\nIt is always generated as an empty list.\n\n\nObject\n======\n\nObject is a subclass of dict, with additional methods for JSON, but it behaves the same as dict.\nThis class is assumed to be inherited. As shown in the sample above, you can use this class by specifying instances of these five classes in the class variables of the class that inherits from it.\nThe combination of these instances will be the definition of JSON.\n\n\n=======\nMethods\n=======\n\nAll classes are defined as subclasses of the AutoJson class.\nAny class that inherits from it will always have two instance methods defined.\n\n\nget_default_json\n================\n\nIt can be used to create a template for a JSON file when the JSON file is not trivial.\nThe return value is equivalent to json.loads, but int is replaced with Int, float with Float, str with String, list with Array, and dict with Object.\n\n\nparse_json\n==========\n\nIt takes the result of parsing with json.load and returns the defined class with the attributes properly defined.\n\n\n===============\nSpecial Methods\n===============\n\n\n`__autojson_init__`\n===================\n\nThis is only valid for the Object class.\nInitialization functions that can be added by the user.\nIt does not accept any arguments, but allows the user to add code that will be executed after being initialized by parse_json.\nIt is used to modify the information read from the file.\n',
+    'author': 'Hirahara. Taiki',
+    'author_email': 'hirahara.taiki@gmail.com',
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': 'https://github.com/hirahara-taiki/autojson',
+    'packages': packages,
+    'package_data': package_data,
+    'python_requires': '>=3.7,<4.0',
+}
+
+
+setup(**setup_kwargs)
