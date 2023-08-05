@@ -1,0 +1,11 @@
+esbmtk/__init__.py,sha256=hshGxzLYYlAZDifafNSTc2AzY2i-ad4W7u6b6wycGe0,512
+esbmtk/carbonate_chemisrty.py,sha256=MpF3pX1-6k9OzdIDq7DLIofgUoT7BetGW3V6a-FJmP8,12659
+esbmtk/connections.py,sha256=_bMROJlHfuxRlfRRrKjGA-Qw_gfvkfo6TAlps8emDMc,42500
+esbmtk/esbmtk.py,sha256=XkyaR7CKUiDEitFYsVx3tI_n3wlM4FYLYPkLx8LX4UM,100971
+esbmtk/processes.py,sha256=hWTl5z_YPKy2d4kJpVJ4oAB7TgYAM4MiUxJUcuC-944,42429
+esbmtk/species_definitions.py,sha256=IuDg_2PGMl2k-OjPE_wUvwYUI6Plgt3dt_2JWaroPfE,6586
+esbmtk/utility_functions.py,sha256=mJVz02LJ4fEhAXI3UZBySyzgknStc_LVmSWfE-5hJSA,16857
+esbmtk-0.4.0.0.dist-info/METADATA,sha256=20D-KwuEcnjrrE4H162c5iFRlEWkp927i05IRh0SvxY,9608
+esbmtk-0.4.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+esbmtk-0.4.0.0.dist-info/top_level.txt,sha256=hkMeTpqKL93s_qt1KNCG250Fj7Sm2uXXuT_7DNSSyV0,7
+esbmtk-0.4.0.0.dist-info/RECORD,,
