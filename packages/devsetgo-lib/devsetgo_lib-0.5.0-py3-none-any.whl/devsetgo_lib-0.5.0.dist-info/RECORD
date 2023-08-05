@@ -1,0 +1,10 @@
+devsetgo_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devsetgo_lib/calendar_functions.py,sha256=P0SI6_87FeXQqtJJfmzKZeMsJt9Qo97aI4ntd2AWzCA,394
+devsetgo_lib/file_functions.py,sha256=pUN3C47xd5If6RK7GvbBUCR9bktBojfABWU3viDvmI0,11061
+devsetgo_lib/folder_functions.py,sha256=C1X4zF9xcZu8Iq_OqBWuygsIemYBzMDY6FEy4G9bMHI,2044
+devsetgo_lib/patterns.py,sha256=GJCe5_zgWxURxJAM_KZK1R0FJjlzXsnhGZ8TDzH2Zl4,4585
+devsetgo_lib-0.5.0.dist-info/LICENSE,sha256=_DFQW1C-xi2B3yP9GxS6x1KsbPB22PX4Ad5lPsCLPYE,1066
+devsetgo_lib-0.5.0.dist-info/METADATA,sha256=rm72uGx067u1Yb4y51_LKXlS_NruLoNSSAzS-cOcZ0o,3058
+devsetgo_lib-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+devsetgo_lib-0.5.0.dist-info/top_level.txt,sha256=GIW7j7ZSq3QsD7oyOVfv6OQTKL2U2zg_Pa7muITkQj0,13
+devsetgo_lib-0.5.0.dist-info/RECORD,,
