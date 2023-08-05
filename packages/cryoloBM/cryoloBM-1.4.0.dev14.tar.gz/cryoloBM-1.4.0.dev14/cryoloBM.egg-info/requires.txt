@@ -1,0 +1,5 @@
+matplotlib==2.2.3
+cryolo>=1.8.0b23
+numpy<1.19.0,>=1.16.0
+pyStarDB==0.1.0b3
+pandas==1.1.4
