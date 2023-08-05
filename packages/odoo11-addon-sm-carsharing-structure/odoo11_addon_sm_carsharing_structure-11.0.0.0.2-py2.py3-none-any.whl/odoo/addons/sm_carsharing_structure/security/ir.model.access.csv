@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cs_car,fleet.vehicle,model_fleet_vehicle,,1,1,1,0
+access_cs_carconfig,sm_carsharing_structure.cs_carconfig,model_sm_carsharing_structure_cs_carconfig,,1,1,1,0
+access_cs_production_unit,sm_carsharing_structure.cs_production_unit,model_sm_carsharing_structure_cs_production_unit,,1,1,1,0
+access_cs_community,sm_carsharing_structure.cs_community,model_sm_carsharing_structure_cs_community,,1,1,1,0

@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+    <record id="view_cs_car_window" model="ir.actions.act_window">
+      <field name="name">Carsharing car</field>
+      <field name="res_model">fleet.vehicle</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_cs_car_list" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_car.tree</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//tree"  position="replace">
+          <tree string="Vehicle" decoration-warning="contract_renewal_due_soon and not contract_renewal_overdue" decoration-danger="contract_renewal_overdue">
+              <field name="active" invisible="1"/>
+              <field name="license_plate" />
+              <field name="model_id" />
+              <field name="driver_id" />
+              <field name="project_id" />
+              <field name="db_car_id" />
+              <field name="db_car_owner_group_index" />
+              <!-- <field name="state_id"/> -->
+              <field name="contract_renewal_due_soon" invisible="1"/>
+              <field name="contract_renewal_overdue" invisible="1" />
+              <field name="contract_renewal_total" invisible="1"/>
+          </tree>
+        </xpath>
+      </field>
+    </record>
+    <record id="view_cs_car_form" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_car.form</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet" position="inside">
+          <group string="System relations">
+            <field name="project_id" />
+            <field name="analytic_account_id" />
+            <field name="db_car_id" />
+            <field name="db_car_owner_group_index" />
+            <field name="db_carconfigs_id" />
+            <field name="cs_carconfigs_id" />
+            <field name="cs_production_units_id" />
+            <field name="cs_communities_id" />
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+    <menuitem name="CS Cars" id="sm_carsharing_structure.cs_car" parent="sm_carsharing_structure.menu_root"
+          action="view_cs_car_window"/>
+
+  </data>
+</odoo>

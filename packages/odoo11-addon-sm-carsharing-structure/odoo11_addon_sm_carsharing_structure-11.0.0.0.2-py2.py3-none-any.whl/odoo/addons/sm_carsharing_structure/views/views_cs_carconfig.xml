@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+
+    <record id="view_cs_carconfig_window" model="ir.actions.act_window">
+      <field name="name">Carsharing Carconfig</field>
+      <field name="res_model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_cs_carconfig_search" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_carconfig.search</field>
+      <field name="model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="type">search</field>
+      <field name="arch" type="xml">
+        <search string="DB cs carconfigs search">
+          <field name="name"/>
+          <field name="production_unit_id"/>
+          <field name="db_carconfig_id"/>
+          <field name="db_carconfig_name"/>
+          <field name="db_carconfig_group_index"/>
+          <field name="db_carconfig_owner_group_index"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_cs_carconfig_list" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_carconfig.tree</field>
+      <field name="model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="production_unit_id"/>
+          <field name="db_carconfig_id"/>
+          <field name="db_carconfig_name"/>
+        </tree>
+      </field>
+    </record>
+    <record id="view_cs_carconfig_form" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.cs_carconfig.form</field>
+      <field name="model">sm_carsharing_structure.cs_carconfig</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit cs carconfig" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="name"/>
+                  <field name="db_carconfig_id"/>
+                  <field name="db_carconfig_group_index"/>
+                  <field name="db_carconfig_owner_group_index"/>
+                  <field name="production_unit_id"/>
+                  <field name="community_id"/>
+                  <field name="analytic_account_id"/>
+                  <field name="teletac_analytic_account_id"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <menuitem name="CS Carconfig" id="sm_carsharing_structure.cs_carconfig" parent="sm_carsharing_structure.menu_root"
+          action="view_cs_carconfig_window"/>
+
+  </data>
+</odoo>

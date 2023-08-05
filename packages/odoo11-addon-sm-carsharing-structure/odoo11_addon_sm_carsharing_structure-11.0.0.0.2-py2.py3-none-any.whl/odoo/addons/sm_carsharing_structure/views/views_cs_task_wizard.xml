@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <record id="view_cs_task_service_wizard" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure.task_service_wizard.form</field>
+      <field name="model">sm_carsharing_structure.cs_task_service_wizard</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Create a Service">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group>
+                  <field name="service_car_id" attrs="{'required':True}"/>
+                  <field name="service_type_id"/>
+                  <field name="amount"/>
+                  <field name="related_member_id"/>
+                  <field name="vendor_id"/>
+                  <field name="related_invoice_id"/>
+                  <field name="date"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <footer>
+            <button name="create_service"
+              string="Create" type="object"
+              class="btn-primary"/>
+            <button string="Cancel"
+              class="btn-default"
+              special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
