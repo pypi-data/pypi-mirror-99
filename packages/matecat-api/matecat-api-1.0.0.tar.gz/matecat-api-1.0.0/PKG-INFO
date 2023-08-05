@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: matecat-api
+Version: 1.0.0
+Summary: MateCat API
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description:     We developed a set of Rest API to let you integrate Matecat in your translation management system or in any other application. Use our API to create projects and check their status.  # noqa: E501
+            
+Keywords: Swagger,MateCat API
+Platform: UNKNOWN
