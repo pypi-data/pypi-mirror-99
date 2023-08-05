@@ -1,0 +1,7 @@
+simplejpeg>=1.0.0
+Pillow-SIMD
+docopt
+jinja2
+numpy
+sh
+tqdm
