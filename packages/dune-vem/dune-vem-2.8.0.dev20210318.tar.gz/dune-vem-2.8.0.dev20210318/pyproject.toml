@@ -1,0 +1,3 @@
+[build-system]
+requires = ['setuptools', 'wheel', 'scikit-build', 'cmake', 'ninja', 'requests', 'dune-fem<=2.8.0.dev20210318', 'dune-alugrid<=2.8.0.dev20210318', 'matplotlib', 'triangle', 'scipy', 'sortedcontainers']
+build-backend = 'setuptools.build_meta'
