@@ -1,0 +1,5 @@
+requests
+bs4
+wcwidth
+hyper
+pycryptodome
