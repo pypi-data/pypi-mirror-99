@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+test.py
+swz_test_package_v3.egg-info/PKG-INFO
+swz_test_package_v3.egg-info/SOURCES.txt
+swz_test_package_v3.egg-info/dependency_links.txt
+swz_test_package_v3.egg-info/entry_points.txt
+swz_test_package_v3.egg-info/top_level.txt
+test_package/__init__.py
+test_package/bin/__init__.py
+test_package/bin/cmdt.py
+test_package/t_package/__init__.py
+test_package/t_package/print.py
+test_package1/__init__.py
+test_package1/test.py
