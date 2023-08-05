@@ -1,0 +1,4 @@
+[console_scripts]
+dir_PL_work = research_kit.__main__:read_plot_save
+dir_hl3 = research_kit.__main__:dir_hl3
+
