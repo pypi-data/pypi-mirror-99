@@ -1,0 +1,15 @@
+igenius_adapters_sdk/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+igenius_adapters_sdk/entities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+igenius_adapters_sdk/entities/attribute.py,sha256=GnL6-X0y1cyn2LXwdFxcFU3-nYmVZMmJMyhtxH-2kHE,5606
+igenius_adapters_sdk/entities/collection.py,sha256=46hoihHVGPXNowycrm9jf7ZgsY4Y1J8r-SA-pNvl0EE,727
+igenius_adapters_sdk/entities/data.py,sha256=EGzbFiKxj4ET-N5js6oEemhSFvQ-Fv9xm_1r7rqpdGE,2132
+igenius_adapters_sdk/entities/errors.py,sha256=SLx3z72BN_iYQcdAM60Wmp8O_1LwHpcCmXO4btJqZFQ,213
+igenius_adapters_sdk/entities/i18n.py,sha256=KNi_bwNWBxlt4uy45IMbDoj8qEyACK71vGf31Lfr-IM,178
+igenius_adapters_sdk/entities/numeric_binning.py,sha256=ldug2igpuBUadECtQoQIPrC-K-LbtBiFrIqLBK-36CE,1339
+igenius_adapters_sdk/entities/params.py,sha256=fBu_Own_qE055IzT0RM2hH_0tKpTTx3tgCuW6fFVdsk,8006
+igenius_adapters_sdk/entities/query.py,sha256=cnjffDpcIHpC5njPk-gIv17_0Jlij9zCGegBnyZA8SE,2485
+igenius_adapters_sdk/entities/uri.py,sha256=sSlsXH96hqnKcjkXwTdFLo0veXXSIJ-3H5pjQ6YX9e8,2097
+igenius_adapters_sdk-1.0.2.dist-info/LICENSE,sha256=px8wna-QbzlQ0a-W8Ik0ZMjV739_Ot9hGqb_oNwLBqU,11343
+igenius_adapters_sdk-1.0.2.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+igenius_adapters_sdk-1.0.2.dist-info/METADATA,sha256=MvNnI-t6DQ9zsE4B-0EhM7Q1d-otqrekhgezceQ7VvA,1546
+igenius_adapters_sdk-1.0.2.dist-info/RECORD,,
