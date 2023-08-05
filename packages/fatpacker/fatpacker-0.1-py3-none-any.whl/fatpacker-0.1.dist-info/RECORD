@@ -1,0 +1,8 @@
+fatpacker/__init__.py,sha256=DJ-4MgSpfOYtzNcpoonkrt1AqHiI_8FEtGWXkTHNJ2s,54
+fatpacker/cli.py,sha256=Q4VgMu__H7pYvc7pby8x-9NzlwZ04c7lKdfBrbaIubY,3077
+fatpacker-0.1.data/scripts/fatpacker,sha256=Yj-DNIkUDEX91QFfhR9cYFv6STfREdZA07KYVQBHn_Q,97
+fatpacker-0.1.dist-info/LICENSE,sha256=NAtHT3hC2qRFqibWaHe2kh3Rq9SxegubkUjmVpzyNd4,1057
+fatpacker-0.1.dist-info/METADATA,sha256=dJsUfJBNNkOH7YC33xvancyEG5yMPPuT--TRsQ2cXLs,756
+fatpacker-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fatpacker-0.1.dist-info/top_level.txt,sha256=z1ATJiugWJ54MH9rOYOrj47RnvAWBk1xYmPmQMC_Lj8,10
+fatpacker-0.1.dist-info/RECORD,,
