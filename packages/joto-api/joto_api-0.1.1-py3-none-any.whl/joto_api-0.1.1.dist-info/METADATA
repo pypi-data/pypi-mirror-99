@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: joto-api
+Version: 0.1.1
+Summary: A package to interact with api.joto.io
+Home-page: http://github.com/plaetzchen/joto_api
+Author: Philip Brechler
+Author-email: pbrechler@mac.com
+License: MIT
+Keywords: joto api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# joto_api
+A python package to interact with the Joto API
+
+
