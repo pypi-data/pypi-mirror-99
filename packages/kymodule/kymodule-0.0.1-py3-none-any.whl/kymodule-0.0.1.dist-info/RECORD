@@ -1,0 +1,8 @@
+kymodule/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kymodule/example.py,sha256=rtp5iCmv1JVLYd04PB57dNkwIlV2tNXQyher3x-0N8c,135
+kymodule/exceptions.py,sha256=IXxdLIRfn2yTkuJnKY0MTb7j-dGoTMXadMLZ6YLY3Zc,211
+kymodule-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+kymodule-0.0.1.dist-info/METADATA,sha256=VUbBSPSvyzsX6_apfylTRx17PFFrVKP8H97DQbopYQA,562
+kymodule-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kymodule-0.0.1.dist-info/top_level.txt,sha256=ueDZBKB8UwZV2uWjNdkfSiSadTSHYDqBAenKJhw7ZgM,9
+kymodule-0.0.1.dist-info/RECORD,,
