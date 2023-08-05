@@ -1,0 +1,13 @@
+README.md
+setup.py
+Losses/Mask_bce_loss.py
+Losses/Triplet_loss.py
+Mask_Face_Inference.egg-info/PKG-INFO
+Mask_Face_Inference.egg-info/SOURCES.txt
+Mask_Face_Inference.egg-info/dependency_links.txt
+Mask_Face_Inference.egg-info/requires.txt
+Mask_Face_Inference.egg-info/top_level.txt
+model/CBAM_Face_attention_Resnet_maskV2.py
+model/config_mask.py
+model/inference.py
+model/test.py

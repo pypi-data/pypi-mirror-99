@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Mask-Face-Inference
+Version: 0.0.1
+Summary: Mask Face detection
+Home-page: http://www.github.com
+Author: cangwang
+Author-email: 284699931@qq.com
+License: UNKNOWN
+Description: 
+        sample:
+        recognition = FaceRecognitionMaskV2()
+        if recognition.dectect(img1_path, img2_path) < 0.1:
+            print("same people")
+        else:
+            print("not same people")
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
