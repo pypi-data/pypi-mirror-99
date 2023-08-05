@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+#
+#  This file is part of Sequana software
+#
+#  Copyright (c) 2016-2021 - Sequana Dev Team (https://sequana.readthedocs.io)
+#
+#  File author(s):
+#      Thomas Cokelaer <thomas.cokelaer@pasteur.fr>
+#
+#  Distributed under the terms of the 3-clause BSD license.
+#  The full license is in the LICENSE file, distributed with this software.
+#
+#  Website:       https://github.com/sequana/sequana
+#  Documentation: http://sequana.readthedocs.io
+#  Contributors:  https://github.com/sequana/sequana/graphs/contributors
+##############################################################################
+
+
+
+
+rule fastp:
+    """Calls fastp on input data sets (paired or not)
+
+    Required input:
+        - __fastp__input_fastq:
+
+    Required output:
+        - __fastp__output_done
+
+    """
+    # we could have a dynamic search or based on config file
+    input:
+        fastq = __fastqc_%(name)s__input_fastq
+    output:
+        touch(__fastqc_%(name)s__output_done)
+    params:
+        wkdir = __fastqc_%(name)s__wkdir,
+        kargs = config['fastqc']['options']
+    threads: config['fastqc']['threads'] if 'thread' in config['fastqc'] else 4
+    log:
+        fastqc = __fastqc_%(name)s__log
+    run:
+        # if the content of the file is empty, this will fail. We need to
+        # touch  a file in such case. 
+        #from sequana import FastQ
+        newinput = []
+        if isinstance(input.fastq, str):
+            input_fastq = [input.fastq]
+        else:
+            input_fastq = input.fastq
+
+        if len(input_fastq) != 0:
+            for this in input_fastq:
+                if this.endswith(".bam") or this.endswith("sam"):
+                    shell(
+                        " fastp -t {threads} --outdir {params.wkdir} "
+                        " {input_fastq} {params.kargs} &> {log.fastqc}")  
+                else:
+                    shell(
+                        " fastqc -t {threads} --outdir {params.wkdir} -f fastq "
+                        " {input_fastq} {params.kargs} &> {log.fastqc}")
