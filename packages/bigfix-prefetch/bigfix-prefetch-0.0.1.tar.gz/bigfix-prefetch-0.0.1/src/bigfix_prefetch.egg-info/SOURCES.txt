@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+src/bigfix_prefetch.egg-info/PKG-INFO
+src/bigfix_prefetch.egg-info/SOURCES.txt
+src/bigfix_prefetch.egg-info/dependency_links.txt
+src/bigfix_prefetch.egg-info/top_level.txt
