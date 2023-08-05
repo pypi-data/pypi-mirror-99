@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: async-etcd
+Version: 0.0.0
+Summary: Asyncio based etcd-v3 client
+Home-page: https://github.com/se7entyse7en/async-etcd
+License: Apache-2.0
+Author: Lou Marvin Caraig
+Author-email: loumarvincaraig@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Repository, https://github.com/se7entyse7en/async-etcd
+Description-Content-Type: text/markdown
+
+# async-etcd
+Asyncio based etcd-v3 client
+
