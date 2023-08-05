@@ -1,0 +1,4 @@
+pillow
+pypiwin32
+pyscreenshot
+tkcalendar
