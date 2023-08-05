@@ -1,0 +1,3 @@
+[pytest11]
+pytest-rts = pytest_rts.plugin
+
