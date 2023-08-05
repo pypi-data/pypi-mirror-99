@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rr-graph
+Version: 0.0.1.post4
+Summary: SymbiFlow RR Graph libraries
+Home-page: https://github.com/SymbiFlow/symbiflow-rr-graph
+Author: SymbiFlow Authors
+Author-email: symbiflow@lists.librecores.org
+License: ISC
+Description: SymbiFlow Routing Resources Graph (RR Graph) Libraries
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
