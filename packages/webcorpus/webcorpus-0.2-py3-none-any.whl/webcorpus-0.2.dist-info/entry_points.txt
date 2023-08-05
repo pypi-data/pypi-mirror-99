@@ -1,0 +1,6 @@
+[console_scripts]
+webcorpus = webcorpus:cli
+
+[scrapy]
+settings = webcorpus.crawlers.settings
+
