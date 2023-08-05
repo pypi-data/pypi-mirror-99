@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/lead/__init__.py
+src/lead.egg-info/PKG-INFO
+src/lead.egg-info/SOURCES.txt
+src/lead.egg-info/dependency_links.txt
+src/lead.egg-info/top_level.txt

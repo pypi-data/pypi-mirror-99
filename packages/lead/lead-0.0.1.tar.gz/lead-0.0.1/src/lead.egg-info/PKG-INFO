@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: lead
+Version: 0.0.1
+Summary: Lead
+Home-page: https://github.com/Maroloccio/lead
+Author: Marco Ippolito
+Author-email: maroloccio@gmail.com
+Maintainer: Marco Ippolito
+Maintainer-email: maroloccio@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Maroloccio/lead/issues
+Description: # Lead
+        
+        Lead.
+        
+Keywords: organiser,organizer,planner
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
