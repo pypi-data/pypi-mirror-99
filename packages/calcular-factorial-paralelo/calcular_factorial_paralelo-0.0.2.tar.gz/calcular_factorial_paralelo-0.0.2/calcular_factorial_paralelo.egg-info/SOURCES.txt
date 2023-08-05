@@ -1,0 +1,8 @@
+README.md
+setup.py
+calcular_factorial_paralelo.egg-info/PKG-INFO
+calcular_factorial_paralelo.egg-info/SOURCES.txt
+calcular_factorial_paralelo.egg-info/dependency_links.txt
+calcular_factorial_paralelo.egg-info/top_level.txt
+calculo_factorial_paralelo/__init__.py
+calculo_factorial_paralelo/main.py

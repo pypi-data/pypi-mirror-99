@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: calcular_factorial_paralelo
+Version: 0.0.2
+Summary: Libreria que calcula los numeros factoriales en paralelo
+Home-page: https://github.com/MSH-Marcos/Mr-Fix
+Author: msolazhe
+Author-email: msolazhe@mercadona.es
+Maintainer: Marcos
+License: UNKNOWN
+Description: # Proyecto de ejemplo
+        
+        Libreria que calcula numeros primos en paralelo
+        
+        ### Para instalarlo simplemente ejecuta:
+        
+        `pip install calcular_factorial_paralelo`
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
