@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-comments
+Version: 0.0.1.dev0
+Summary: Add your favorite vendor comments embed code to your documentation pages.
+Home-page: https://github.com/cizario/sphinxcontrib-comments/
+Author: Nizar DELLELI
+Author-email: nizar.delleli@gmail.com
+License: BSD-3-Clause
+Download-URL: https://github.com/cizario/sphinxcontrib-comments/
+Project-URL: Issue Tracker, https://github.com/cizario/sphinxcontrib-comments/issues
+Project-URL: Source Code, https://github.com/cizario/sphinxcontrib-comments/
+Project-URL: Documentation, https://sphinxcontrib-comments.readthedocs.io/en/latest/
+Keywords: sphinx extension,comments,disqus,github
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Documentation
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: Sphinx
+
+Sphinx Contrib Ads
+==================
+
+Add your favorite vendor ads embed code to your documentation pages.
+
+Under active development ..
+
+
