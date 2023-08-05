@@ -1,0 +1,11 @@
+score.http-0.5.6-py3.7-nspkg.pth,sha256=Sc8n-AjC4efQEM9N970YYvqthmC_oBMk9MryXA8wB9c,534
+score/http/__init__.py,sha256=JIDzO3fRT6BVR1VbSXfVqJKemfmOZw93-OkQidLE3Go,1744
+score/http/_conf.py,sha256=4uhlz7RaRoFqjMjXM6T0Rm-AgaADrlihpqRPHr2hxFc,9385
+score/http/_init.py,sha256=sxOkkWrmtAqUoSoFspLspkGVcMzBDOfUu9Hwmik-YJw,26412
+score/http/_urltpl.py,sha256=a2mPxHRKucAes68zVzsE-bkBsHQzox4eYxkZ3IUua2g,8390
+score.http-0.5.6.dist-info/COPYING.LESSER.txt,sha256=Okmm5A9QcXz_d-8FH0qPxEG_r_Yc0bM07KQZHBTzAH8,42870
+score.http-0.5.6.dist-info/METADATA,sha256=UDlLx-hmnMFvOizg8kWKsgnwLS0QjwqtAv3nlMSR1Dc,2957
+score.http-0.5.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+score.http-0.5.6.dist-info/namespace_packages.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.http-0.5.6.dist-info/top_level.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.http-0.5.6.dist-info/RECORD,,
