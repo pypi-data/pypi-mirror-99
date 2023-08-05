@@ -1,0 +1,3 @@
+include quantuiti/template.txt
+
+recursive-include data *
