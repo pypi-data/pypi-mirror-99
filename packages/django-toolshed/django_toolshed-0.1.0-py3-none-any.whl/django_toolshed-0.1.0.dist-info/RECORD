@@ -1,0 +1,15 @@
+django_toolshed/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+django_toolshed/apps.py,sha256=H2ICY2xTqdKTnLLLDXmdNF8a2HWC05LJWDx3Ccsk8p4,268
+django_toolshed/management/commands/list_apps.py,sha256=raaigDdUhUZD0Uv0pDfqJXN9XKtgolPalaQK1U5G9R8,264
+django_toolshed/management/commands/list_users.py,sha256=i9LPRpOojrjLGJytZMKwNJUVVJ_RmheEzef0vQ3bzhw,337
+django_toolshed/models.py,sha256=DuQzAHQX3730qYZ2un7zNgnw0UfBsdw0jpGXBROlRJk,31
+django_toolshed/signals.py,sha256=2rnD1VnIqgXknHtidL-7yNKKPNuO4HXq730k6YbxtQ8,37
+django_toolshed/static/django_toolshed/css/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_toolshed/static/django_toolshed/images/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_toolshed/static/django_toolshed/js/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_toolshed/templates/django_toolshed/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_toolshed/urls.py,sha256=gR8a7S5CAtdYHfZftydxkLCiST1Mf8xM6ni02NC57wo,77
+django_toolshed-0.1.0.dist-info/LICENSE,sha256=xvPu9ZyN0nnUQZvB001a64myGmRNNS-deUGM7o9AP3s,1069
+django_toolshed-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+django_toolshed-0.1.0.dist-info/METADATA,sha256=7yFHM4V05T2aTq6fWx2t0d029eayaIou2LeGgcYuKzI,494
+django_toolshed-0.1.0.dist-info/RECORD,,
