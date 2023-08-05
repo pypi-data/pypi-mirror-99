@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hello-pratyush1606
+Version: 1.0.0
+Summary: Read the latest Real Python tutorials
+Home-page: https://github.com/Pratyush1606/hello_pratyush1606.git
+Author: Pratyush Jaiswal
+Author-email: jaiswalpratyush2015@gmail.com
+License: MIT
+Description: # Hello_PRATYUSH1606
+        
+        ## Developed for practice
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
