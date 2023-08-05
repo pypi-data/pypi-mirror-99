@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: bfsccylinder
+Version: 0.1.4
+Summary: Implementation of the BFSC cylinder finite element
+Home-page: https://github.com/saullocastro/bfsccylinder
+Author: Saullo G. P. Castro
+Author-email: S.G.P.Castro@tudelft.nl
+License: 2-Clause BSD
+Keywords: finite elements shell structural analysis buckling vibration dynamics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: composites
+
+Implementation of the BFSC cylinder, for linear and nonlinear analyses.
+
+Github Actions status:
+
+[![Actions Status](https://github.com/saullocastro/bfsccylinder/workflows/pytest/badge.svg)](https://github.com/saullocastro/bfsccylinder/actions)
+
+Coverage status:
+
+[![Codecov Status](https://codecov.io/gh/saullocastro/bfsccylinder/branch/master/graph/badge.svg?token=KD9D8G8D2P)](https://codecov.io/gh/saullocastro/bfsccylinder)
+
+
+License
+-------
+Distrubuted in the 2-Clause BSD license (https://raw.github.com/saullocastro/bfsccylinder/master/LICENSE).
+
+Contact: S.G.P.Castro@tudelft.nl
+
+
+
