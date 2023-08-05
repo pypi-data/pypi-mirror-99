@@ -1,0 +1,66 @@
+<odoo>
+  <data noupdate="1">
+
+    <record id="email_template_lopd" model="mail.template">
+      <field name="name">email_tmpl_lopd</field>
+      <field name="email_from">socis@sommobilitat.coop</field>
+      <field name="subject">Avís sobre la legislació de la LOPD.</field>
+      <field name="partner_to">${object.id}</field>
+      <field name="model_id" ref="sm_lopd.model_res_partner"/>
+      <field name="auto_delete" eval="False"/>
+      <field name="body_html"><![CDATA[
+
+<div style="font-family: helvetica;font-size: 14px;">
+  <p style="margin-bottom: 0.14in;" align="justify">
+    <strong>CLÀUSULA INFORMATIVA DE PRIVADESA</strong>
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    Benvolgut/da,
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    Des de Som Mobilitat ens posem en contacte amb tu perquè l'empresa on treballes (<strong>${object.parent_id.name}</strong>) ens ha facilitat les teves dades per tal que puguis ser usuari dels nostres serveis de carsharing. En aplicació del nou reglament europeu de protecció de dades i amb l'objectiu de garantir un tractament acurat de les teves dades personals et comuniquem que:
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    1.- Les dades personals de nom, cognoms, DNI, domicili, adreça telèfon i correu electrònic han estat cedides per <strong>${object.parent_id.name}</strong> a SOM MOBILITAT</strong>, amb domicili a Carrer Tol·ló 18, Espai Can Fugarolas, 08301 de Mataró, amb les següents finalitats:
+  </p>
+  <ul>
+    <li>
+      <p style="margin-bottom: 0.14in;" align="justify">
+        Que els treballadors de la <strong>${object.parent_id.name}</strong> puguin fer ús i contractar els serveis que presta <strong>SOM MOBILITAT</strong>.
+      </p>
+    </li>
+    <li>
+      <p style="margin-bottom: 0.14in;" align="justify">
+        Que <strong>SOM MOBILITAT</strong> pugui enviar directament als Membres o Usuaris comunicacions i informació rellevant sobre el servei de mobilitat elèctrica compartida de Som Mobilitat.
+      </p>
+    </li>
+  </ul>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    <strong>En tots dos casos, la base jurídica del tractament de les dades és el consentiment que vas donar a ${object.parent_id.name}.</strong>
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    2.- Es conservaran les teves dades fins que en retiris el consentiment o bé fins que <strong>${object.parent_id.name}</strong> ens insti a retirar-les.
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    3.- <strong>SOM MOBILITAT</strong> no comunicarà les teves dades a cap tercera entitat, a excepció de les següents categories d’encarregats del tractament: proveïdors de correu electrònic i ofimàtica en línia, proveïdors de programes de gestió empresarial, gestoria, comptabilitat, auditoria i advocats. <strong>SOM MOBILITAT</strong> podrà transferir les dades de caràcter personal a Encarregats ubicats als Estats Units d'Amèrica adherits al Privacy Shield que compta amb una decisió d'adequació de la Comissió (Decisió d'execució (UE) 2016/1250 de la Comissió).
+  </p>
+  <p style="margin-bottom: 0.14in;" align="justify">
+    4.- Et recordem que pots exercir els drets d’accés, rectificació, supressió, limitació del tractament, portabilitat de les dades, oposició i a no ser objecte de decisions individuals automatitzades, inclosa l’elaboració de perfils davant de <strong>SOM MOBILITAT</strong> mitjançant escrit per correu electrònic, aportant còpia del DNI, a
+    <a href="mailto:info@sommobilitat.coop">
+      <span style="color: #1155cc;">
+        <u>info@sommobilitat.coop</u>
+    </span>
+    </a> . Així mateix, els treballadors de <strong>${object.parent_id.name}</strong> podran retirar el consentiment atorgat en qualsevol moment, sense que això afecti a la licitud del tractament basat en el consentiment previ a la seva retirada. Té dret a presentar una reclamació davant l’autoritat de control si ho estima oportú.
+  </p>
+  <br>
+  <p style="margin-bottom: 0.14in;" align="justify">Mataró, ${object.member_email_date}</p>
+  <br>
+</div>
+% if ctx.get('send_from_code'):
+  ${user.signature|safe}
+% endif
+
+      ]]></field>
+    </record>
+  </data>
+</odoo>

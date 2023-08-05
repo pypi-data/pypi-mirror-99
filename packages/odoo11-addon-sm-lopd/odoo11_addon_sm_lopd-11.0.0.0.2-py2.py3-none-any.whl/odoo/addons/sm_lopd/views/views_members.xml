@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record id="notify_companies_about_lopd" model="ir.actions.server">
+      <field name="name">LOPD: Notify about lopd</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_res_partner"/>
+      <field name="binding_model_id" ref="model_res_partner"/>
+      <field name="state">code</field>
+      <field name="code">action = model.notify_about_lopd_action()</field>
+    </record>
+    <record id="view_members_form" model="ir.ui.view">
+      <field name="name">sm_lopd.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="sm_partago_user.view_smp_members_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='cs_registration_info_ok']" position="after">
+          <field name="lopd_mail_sent"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

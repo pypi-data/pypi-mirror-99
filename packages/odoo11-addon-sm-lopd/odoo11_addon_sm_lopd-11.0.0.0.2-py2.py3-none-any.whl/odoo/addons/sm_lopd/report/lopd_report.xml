@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+  <data>
+    <report
+      id="sm_lopd_companies_report"
+      model="res.partner"
+      string="contracte LOPD PDF"
+      name="sm_lopd.sm_lopd_companies_report_view"
+      file="sm_lopd.sm_lopd_companies_report"
+      report_type="qweb-pdf"/>
+
+    <template id="sm_lopd_companies_report_view">
+      <t t-call="web.html_container">
+        <t t-call="sm_reports.sm_external_layout">
+          <t t-foreach="docs" t-as="doc">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.lang})"/>
+            <div class="page">
+              <h4 style="padding-bottom:35px;">
+                <strong>CONTRACTE DE CESSIÓ DE DADES PERSONALS</strong>
+                <strong>ENTRE  <span t-field="doc.name"/> I SOM MOBILITAT</strong>
+              </h4>
+
+              <p style="padding-bottom:15px;">
+                D'una banda, <span t-field="doc.social_reason"/>, entitat de nacionalitat espanyola amb domicili social a <span t-field="doc.report_address"/> i proveïda amb número d'identificació fiscal <span t-field="doc.cif"/> 
+                (en endavant,"<span t-field="doc.name"/>"). Es troba representada en aquest acte per 
+                <span t-field="doc.name"/>, qui actua en la seva condició de Apoderat.
+              </p>
+              <p style="padding-bottom:15px;"><br/>
+                D'altra banda, SOM MOBILITAT, SCCL, entitat de nacionalitat espanyola amb domicili social a Carrer Tol·ló 18, Espai Can Fugarolas, 08301 de Mataró i proveïda amb número d'identificació fiscal F-66835125 (en endavant, "SOM MOBILITAT"). Es troba representada en aquest acte per Ricard Jornet i Ginestà, qui actua en la seva condició de President. Les dues parts podran denominar-se conjuntament com "les parts" o individualment com "la
+                Part";. Les parts, de les seves lliures i espontànies voluntats, manifesten tenir i es reconeixen, mútua i recíprocament, la capacitat legal per atorgar el present contracte, i als efectes
+              </p>
+
+              <p style="padding-bottom:15px;"><strong>EXPOSEN</strong></p>
+              <ul>
+                <li>
+                  Que SOM MOBILITAT és una cooperativa sense ànim de lucre que presta serveis per a una mobilitat més sostenible, sent el principal servei el de lloguer de vehicles elèctrics.
+                </li>
+                <li>Que <span t-field="doc.name"/> és soci de la Cooperativa SOM MOBILITAT.</li>
+                <li>
+                  Que <span t-field="doc.name"/> està interessada en que tots els seus treballadors puguin gaudir dels serveis que ofereix la Cooperativa.
+                </li>
+                <li>
+                  Que, per poder prestar els serveis als treballadors del <span t-field="doc.name"/>, SOM MOBILITAT requereix poder identificar aquestes persones quan s’adrecin a la Cooperativa per utilitzar els seus serveis.
+                </li>
+                <li>
+                  Que les parts volen deixar constància de l’obligació d’informació i obtenció del consentiment de <span t-field="doc.name"/> front els seus treballadors (en endavant, "Membre/s" o "Usuari/s") quant a la cessió de les dades dels mateixos. Per tot això, les Parts subscriuen el present document de CESSIÓ DE DADES DE MEMBRES en virtut de les següents
+                </li>
+              </ul>
+              <p style="padding-bottom:15px;"><strong>CLÀUSULES</strong></p>
+              <p style="padding-bottom:15px;">
+                PRIMER.- Mitjançant el present contracte, <span t-field="doc.name"/> es fa responsable de demanar el consentiment exprés e inequívoc i de facilitar la informació deguda a l’hora d’obtenir aquest consentiment dels Membres, en els termes que s’indiquen a continuació:
+              </p>
+              <p style="padding-bottom:15px;">
+                1.- Les dades personals de nom, cognoms, DNI, domicili, telèfon i correu electrònic es cediran a SOM MOBILITAT, amb domicili a Carrer Tol·ló 18, Espai Can Fugarolas, 08301 de Mataró, amb les següents finalitats:
+              </p>
+              <ul>
+                <li>
+                  a) Que els treballadors de <span t-field="doc.name"/> puguin fer ús dels serveis que presta SOM MOBILITAT.
+                </li>
+                <li>
+                  b) Que SOM MOBILITAT pugui enviar directament als Membres o Usuaris comunicacions sobre els serveis que presta i les novetats relacionades amb els mateixos serveis.
+                </li>
+              </ul>
+              <p style="padding-bottom:15px;">
+                En tots dos casos, la base jurídica del tractament de les dades és el consentiment prestat pel Membre o Usuari.
+              </p>
+              <p style="padding-bottom:15px;">
+                2.- El període de conservació en els fitxers de SOM MOBILITAT de les dades que es cedeixin serà fins que el treballador de <span t-field="doc.name"/> retiri el seu consentiment.
+              </p>
+              <p style="padding-bottom:15px;">
+                3.- SOM MOBILITAT no comunicarà les dades dels treballadors de <span t-field="doc.name"/> a cap tercera entitat, a excepció de les següents categories d’encarregats del tractament: proveïdors de correu electrònic i ofimàtica en línia, proveïdors de programes de gestió empresarial, gestoria, comptabilitat, auditoria i advocats. SOM MOBILITAT podrà transferir les dades de caràcter personal a Encarregats ubicats als Estats Units d'Amèrica adherits al Privacy Shield que compta amb una decisió d'adequació de la Comissió (Decisió d'execució (UE) 2016/1250 de la Comissió).
+              </p>
+              <p style="padding-bottom:15px;">
+                4.- Els treballadors de <span t-field="doc.name"/> podran exercir els drets d’accés, rectificació, supressió, limitació del tractament, portabilitat de les dades, oposició i a no ser objecte de decisions individuals automatitzades, inclosa l’elaboració de perfils davant de SOM MOBILITAT mitjançant escrit per correu electrònic, aportant còpia del DNI, a info@sommobilitat.coop. Així mateix, els treballadors de <span t-field="doc.name"/> podran retirar el consentiment atorgat en qualsevol moment, sense que això afecti a la licitud del tractament basat en el consentiment previ a la seva retirada. Els treballadors de <span t-field="doc.name"/> tenen dret a presentar una reclamació davant l’autoritat de control si ho estima oportú.
+              </p>
+              <p style="padding-bottom:15px;">
+                SEGON.- <span t-field="doc.name"/> es fa responsable de la captació del consentiment exprés e inequívoc descrit en la clàusula primera per a les finalitats descrites en aquest document.
+              </p>
+              <p style="padding-bottom:15px;">
+                Mataró, 10 de Juliol 2019</p>
+              <p>
+                <span t-field="doc.name"/> SOM MOBILITAT
+              </p>
+              <p style="padding-bottom:15px;">
+                <img src='/sm_lopd/static/src/img/logo-firma.png'/>
+              </p>
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+  </data>
+</odoo>
