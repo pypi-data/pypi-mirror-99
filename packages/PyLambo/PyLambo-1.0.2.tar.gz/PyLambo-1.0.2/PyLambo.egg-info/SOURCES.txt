@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+PyLambo.egg-info/PKG-INFO
+PyLambo.egg-info/SOURCES.txt
+PyLambo.egg-info/dependency_links.txt
+PyLambo.egg-info/entry_points.txt
+PyLambo.egg-info/requires.txt
+PyLambo.egg-info/top_level.txt
+reader/__init__.py
+reader/__main__.py
+reader/config.cfg
+reader/feed.py
+reader/viewer.py
