@@ -1,0 +1,14 @@
+License.txt
+MANIFEST.in
+New Text Document.txt
+README.md
+ReadMe.md
+setup.cfg
+setup.py
+src/baseballforecaster.py
+src/baseballforecaster.egg-info/PKG-INFO
+src/baseballforecaster.egg-info/SOURCES.txt
+src/baseballforecaster.egg-info/dependency_links.txt
+src/baseballforecaster.egg-info/requires.txt
+src/baseballforecaster.egg-info/top_level.txt
+tests/forecaster_drafter_test.py
