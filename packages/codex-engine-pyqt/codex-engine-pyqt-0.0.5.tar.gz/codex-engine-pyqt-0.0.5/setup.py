@@ -1,0 +1,37 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+import pathlib
+from setuptools import setup
+
+
+here = pathlib.Path(__file__).parent
+
+
+DESCRIPTION = "A universal translator for serial devices."
+LONG_DESCRIPTION = (here / "README.md").read_text()
+CLASSIFIERS = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+
+setup(
+    name="codex-engine-pyqt",
+    version="0.0.5",
+    packages=["codex"],
+    install_requires=["pyserial"],
+    # setup_requires=[],
+    # tests_require=[],
+    platforms=["any"],
+
+    author="David Kincaid",
+    author_email="dlkincaid0@gmail.com",
+    description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    classifiers=CLASSIFIERS,
+    keywords=["codex", "codex engine", "serial"],
+    url="https://github.com/Codex-Engine/codex-engine-pyqt"
+)
