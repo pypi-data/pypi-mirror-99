@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/localcosmos_appkit_utils/AppImageCreator.py
+src/localcosmos_appkit_utils/AppTheme.py
+src/localcosmos_appkit_utils/MetaAppDefinition.py
+src/localcosmos_appkit_utils/__init__.py
+src/localcosmos_appkit_utils/image_utils.py
+src/localcosmos_appkit_utils/logger.py
+src/localcosmos_appkit_utils.egg-info/PKG-INFO
+src/localcosmos_appkit_utils.egg-info/SOURCES.txt
+src/localcosmos_appkit_utils.egg-info/dependency_links.txt
+src/localcosmos_appkit_utils.egg-info/requires.txt
+src/localcosmos_appkit_utils.egg-info/top_level.txt
+src/localcosmos_appkit_utils/resources/images/adaptive_launcher_background.png
+src/localcosmos_appkit_utils/resources/images/adaptive_launcher_background.svg
