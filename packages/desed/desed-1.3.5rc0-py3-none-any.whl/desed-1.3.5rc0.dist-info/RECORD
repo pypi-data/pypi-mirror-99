@@ -1,0 +1,12 @@
+desed/__init__.py,sha256=Kj3mZUvaswNWCKXFXdytJv2J0qBtX9RnAFamc6LfDiI,324
+desed/download.py,sha256=argmSxbmemk5Uf1csm7wctbwwj03URlK3AxWR__FY-M,28964
+desed/generate_synthetic.py,sha256=h_3bEYpfANoF1aPJl4MBiRHS2-zhJrWf1w5_mRxGAXI,18301
+desed/logger.py,sha256=L08TcAvOwgVsnKqrOTPRgRu7pzpPZVft1b8VmuWJrZk,1652
+desed/post_process.py,sha256=rsI47yMw3QlGtGWWAm8_RcPFp44-3ulPM3HJQ9ZV0Jg,13877
+desed/soundscape.py,sha256=BBRMX0a3qjQohsIX_MC2pzBYJ8arcqct5d9zoKwkU8Q,24754
+desed/utils.py,sha256=1v4jrWMDs-TykQn2dfDWiv9CUF9Yzss_MNKxwFM3RBM,7384
+desed-1.3.5rc0.dist-info/LICENSE,sha256=bblqFT4IuKu2BaiOaigOT2tCxaCGXi-uOTuAmpCh6uU,16337
+desed-1.3.5rc0.dist-info/METADATA,sha256=Bgn5m_cjc3r8mOFdTryZwMewcTIHRhU_NMIfYW2W_wU,12328
+desed-1.3.5rc0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+desed-1.3.5rc0.dist-info/top_level.txt,sha256=1h0-vo_lArUKImjI8zy80fe-risBRMKdHGBoiOR0ZLg,6
+desed-1.3.5rc0.dist-info/RECORD,,
