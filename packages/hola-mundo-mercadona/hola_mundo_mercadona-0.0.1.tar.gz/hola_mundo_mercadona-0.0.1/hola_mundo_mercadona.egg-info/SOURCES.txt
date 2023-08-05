@@ -1,0 +1,8 @@
+README.md
+setup.py
+hola_mundo/__init__.py
+hola_mundo/main.py
+hola_mundo_mercadona.egg-info/PKG-INFO
+hola_mundo_mercadona.egg-info/SOURCES.txt
+hola_mundo_mercadona.egg-info/dependency_links.txt
+hola_mundo_mercadona.egg-info/top_level.txt
