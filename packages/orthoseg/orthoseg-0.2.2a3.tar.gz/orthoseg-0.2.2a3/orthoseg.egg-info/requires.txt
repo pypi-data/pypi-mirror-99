@@ -1,0 +1,9 @@
+geopandas
+fiona
+geofileops>=0.2.1
+owslib
+pycron
+pillow
+rasterio
+segmentation-models<1.1,>=1.0
+tensorflow<2.5,>=2.4
