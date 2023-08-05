@@ -1,0 +1,6 @@
+README.md
+setup.py
+gmshgeometry.egg-info/PKG-INFO
+gmshgeometry.egg-info/SOURCES.txt
+gmshgeometry.egg-info/dependency_links.txt
+gmshgeometry.egg-info/top_level.txt
