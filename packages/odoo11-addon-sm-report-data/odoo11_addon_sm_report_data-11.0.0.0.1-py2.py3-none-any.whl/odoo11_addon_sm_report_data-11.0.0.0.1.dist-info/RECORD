@@ -1,0 +1,16 @@
+odoo/addons/sm_report_data/__init__.py,sha256=JgvapLUmwcvZBKWFjSAe4Z7cme_F5oqLR-Vsh5bh428,68
+odoo/addons/sm_report_data/__manifest__.py,sha256=z1Qwld5NBQZfVLkHfkUoBIcQrNRA7E1teQbu4IE3GDo,910
+odoo/addons/sm_report_data/models/__init__.py,sha256=ZK65Cv45RfTIMFb44XiU3l6dvmTahHWlpnso-otV1Ak,99
+odoo/addons/sm_report_data/models/model_reports_cron.py,sha256=SBHIrCC41XCXs6pqVb7IvquSbIZxi07hKH6oDGWk4Js,372
+odoo/addons/sm_report_data/models/models_report_configuration.py,sha256=RuZymmyLs3ZgAR7F8dYjZeRfFLu5r-k6sYiNbp6uQ0E,6145
+odoo/addons/sm_report_data/models/report_helper.py,sha256=wk0mrkGZ91kvKi8QF1BU4xQ2Bd6UiXnJp55FD28b554,14043
+odoo/addons/sm_report_data/reports/__init__.py,sha256=C9DaLQyP6LWYSA4pmI616XPwQnuIMaC1uyFNrJ95If8,28
+odoo/addons/sm_report_data/reports/mossos_report.py,sha256=ewz5RArX04R12cXmk1NDmzLi18_Uau9-LD5XoUyFqQg,1704
+odoo/addons/sm_report_data/security/ir.model.access.csv,sha256=1Tmqs22NX-Rq78u3UVGP_GexKi8sz77yFj0Is505O64,188
+odoo/addons/sm_report_data/views/templates.xml,sha256=r2w5WhgPRLATLe_zxCs8qEeqM3nNJbJp__3hXKXm5TI,872
+odoo/addons/sm_report_data/views/views.xml,sha256=cDFc-YbktP3zuDSeL10qyBXrkCP55rZVyKCvi4aTbb4,168
+odoo/addons/sm_report_data/views/views_report_configuration.xml,sha256=IEdfIP0J9B-yfMeZdL3dNmFVVJvLgjDJHaUymwWfo5A,2822
+odoo11_addon_sm_report_data-11.0.0.0.1.dist-info/METADATA,sha256=OSd_UaqlTWSVkVwVzyJJ4kT9SwguDeO6zy4Oiwrx5vM,609
+odoo11_addon_sm_report_data-11.0.0.0.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+odoo11_addon_sm_report_data-11.0.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo11_addon_sm_report_data-11.0.0.0.1.dist-info/RECORD,,

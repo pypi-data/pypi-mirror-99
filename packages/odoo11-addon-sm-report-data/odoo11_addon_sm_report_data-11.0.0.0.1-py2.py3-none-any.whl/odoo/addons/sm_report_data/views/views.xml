@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem name="Data reports" id="sm_report_data.sm_report_data_parent"
+          parent="vertical_carsharing.menu_root"/>
+    </data>
+</odoo>

@@ -1,0 +1,81 @@
+<odoo>
+  <data>
+    <record id="view_data_report_configuration_window" model="ir.actions.act_window">
+      <field name="name">Data reports</field>
+      <field name="res_model">sm_report_data.sm_report_data</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_data_report_configuration_list" model="ir.ui.view">
+      <field name="name">sm_report_data.sm_report_data.tree</field>
+      <field name="model">sm_report_data.sm_report_data</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="report_model"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_data_report_configuration_form" model="ir.ui.view">
+      <field name="name">sm_report_data.sm_report_data.form</field>
+      <field name="model">sm_report_data.sm_report_data</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Edit contribution" version="7.0" delete="false">
+          <sheet>
+            <notebook>
+              <page string="General">
+                <group col="4">
+                  <field name="name"/>
+                  <field name="active"/>
+                </group>
+                <group>
+                  <field name="report_model"/>
+                  <field name="email_template"/>
+                </group>
+                <group>
+                  <field name="recipient"/>
+                </group>
+                <group>
+                  <field name="description"/>
+                </group>
+                <group col="4">
+                  <field name="last_execution"/>
+                  <field name="next_execution"/>
+                </group>
+                <group col="4">
+                  <field name="general_range"/>
+                  <field name="daily_range"/>
+                </group>
+              </page>
+
+              <page string="Email template">
+                <group>
+                  <field name="email_subject"/>
+                  <field name="email_body"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="send_data" model="ir.actions.server">
+      <field name="name">Send email</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_report_data_sm_report_data"/>
+      <field name="binding_model_id" ref="model_sm_report_data_sm_report_data"/>
+      <field name="state">code</field>
+      <field name="code">model.send_email()</field>
+    </record>
+
+    <menuitem name="Reports"
+      id="sm_report_data.sm_report_data"
+      parent="sm_report_data.sm_report_data_parent"
+      action="view_data_report_configuration_window"/>
+
+  </data>
+</odoo>
