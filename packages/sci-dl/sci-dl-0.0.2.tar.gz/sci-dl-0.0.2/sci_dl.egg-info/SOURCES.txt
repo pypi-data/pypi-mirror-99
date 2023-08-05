@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+sci-dl.icns
+sci_dl.py
+setup.py
+sci_dl.egg-info/PKG-INFO
+sci_dl.egg-info/SOURCES.txt
+sci_dl.egg-info/dependency_links.txt
+sci_dl.egg-info/entry_points.txt
+sci_dl.egg-info/requires.txt
+sci_dl.egg-info/top_level.txt

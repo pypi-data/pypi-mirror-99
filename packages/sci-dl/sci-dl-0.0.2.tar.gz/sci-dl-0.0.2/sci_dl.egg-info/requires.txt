@@ -1,0 +1,8 @@
+requests
+pyyaml
+appdirs
+click
+validators
+beautifulsoup4
+rich
+pysocks
