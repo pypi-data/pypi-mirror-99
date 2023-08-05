@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+
+    <record id="view_reset_state_rewards_workflow" model="ir.actions.server">
+      <field name="name">Reset state</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.reset_state_action()</field>
+    </record>
+
+    <!-- <record id="view_sanitize_db_workflow" model="ir.actions.server">
+      <field name="name">Sanitize DB</field>
+      <field name="type">ir.actions.server</field>
+      <field name="model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="binding_model_id" ref="model_sm_rewards_sm_reward"/>
+      <field name="state">code</field>
+      <field name="code">action = model.sanitize_reward_db_action()</field>
+    </record> -->
+
+  </data>
+</odoo>

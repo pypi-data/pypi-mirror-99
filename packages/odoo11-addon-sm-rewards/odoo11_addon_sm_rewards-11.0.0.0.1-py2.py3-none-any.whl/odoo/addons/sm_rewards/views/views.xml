@@ -1,0 +1,5 @@
+<odoo>
+  <data>
+    <menuitem name="CS Rewards" id="sm_rewards.menu_root" parent="vertical_carsharing.menu_root"/>
+  </data>
+</odoo>

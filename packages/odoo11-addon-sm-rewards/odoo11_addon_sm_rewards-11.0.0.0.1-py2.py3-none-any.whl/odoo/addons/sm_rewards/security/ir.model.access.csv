@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sm_rewards_sm_member_related_coupon,sm_rewards_sm_member_related_coupon,model_sm_rewards_sm_member_related_coupon,,1,1,1,0
+access_sm_rewards_sm_reward,sm_rewards.sm_reward,model_sm_rewards_sm_reward,,1,1,1,0
+access_sm_rewards_sm_reward_fetch_wizard,sm_rewards.sm_reward_fetch_wizard,model_sm_rewards_sm_reward_fetch_wizard,,1,1,1,0
