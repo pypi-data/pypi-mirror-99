@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: bluesky-adaptive
+Version: 0.1.0
+Summary: Tools for writing adaptive plans
+Home-page: https://github.com/bluesky/bluesky-adaptive
+Author: NSLS-II
+Author-email: dama@bnl.gov
+License: BSD (3-clause)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: bluesky
+Requires-Dist: numpy
+
+================
+bluesky-adaptive
+================
+
+.. image:: https://img.shields.io/travis/bluesky/bluesky-adaptive.svg
+        :target: https://travis-ci.org/bluesky/bluesky-adaptive
+
+.. image:: https://img.shields.io/pypi/v/bluesky-adaptive.svg
+        :target: https://pypi.python.org/pypi/bluesky-adaptive
+
+
+Tools for writing adaptive plans
+
+* Free software: 3-clause BSD license
+* Documentation: (COMING SOON!) https://bluesky.github.io/bluesky-adaptive.
+
+Features
+--------
+
+* TODO
+
+
