@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tests/__init__.py
+tests/test_engine.py
+thumbor_wand_engine/__init__.py
+thumbor_wand_engine/engine.py
+thumbor_wand_engine.egg-info/PKG-INFO
+thumbor_wand_engine.egg-info/SOURCES.txt
+thumbor_wand_engine.egg-info/dependency_links.txt
+thumbor_wand_engine.egg-info/requires.txt
+thumbor_wand_engine.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+thumbor
+Wand
+
+[tests]
+black
+colorama
+flake8
+isort
+pytest
+pytest-cov
+pytest-mock
+twine
+wheel
