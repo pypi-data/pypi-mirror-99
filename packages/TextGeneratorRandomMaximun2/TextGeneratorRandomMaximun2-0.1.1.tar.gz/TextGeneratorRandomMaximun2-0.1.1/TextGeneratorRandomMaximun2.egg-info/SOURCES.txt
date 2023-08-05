@@ -1,0 +1,6 @@
+README.md
+setup.py
+TextGeneratorRandomMaximun2.egg-info/PKG-INFO
+TextGeneratorRandomMaximun2.egg-info/SOURCES.txt
+TextGeneratorRandomMaximun2.egg-info/dependency_links.txt
+TextGeneratorRandomMaximun2.egg-info/top_level.txt
