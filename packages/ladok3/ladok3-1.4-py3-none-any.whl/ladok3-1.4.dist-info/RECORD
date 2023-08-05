@@ -1,0 +1,10 @@
+etc/bash_completion.d/ladok.bash,sha256=KqkaBQfW6LdTwGiA6meJ-O9RZMp_NICk7hwE8D7MrEM,1432
+ladok3/__init__.py,sha256=a4bEbSxPSqPlMrv4-p7gv61-oqrCcZS7ZFF9QS-Owbo,220150
+ladok3/cli.py,sha256=zoSJ3mtq4wqEwvh0dgPZUOpOYmxORFCGLyXGL705tpU,1643
+ladok3/data.py,sha256=pQQxJlnZiNhdPxKmS8oP0Wh4icmoDrNgMrOE8ir6apk,2605
+ladok3-1.4.dist-info/LICENSE,sha256=RMXWqzjw9U2EhHnr1HkkC1Mgv8VZaVq_8WDmRa_1CQk,1149
+ladok3-1.4.dist-info/METADATA,sha256=Tfibq6WwkCJquSk_L1XMcepEtQZoAUbA3c_BcvdeGWM,6210
+ladok3-1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ladok3-1.4.dist-info/entry_points.txt,sha256=aLbP6aX-tsGzI7NPuFUypFE1znMuiaWEafpbwJt2BhQ,43
+ladok3-1.4.dist-info/top_level.txt,sha256=39c0E5tp-Z5rcLLiA_IC7UiyB5EwRowcCUTtRGmqqfY,7
+ladok3-1.4.dist-info/RECORD,,
