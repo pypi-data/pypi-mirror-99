@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-18 10:08-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: loducode_utils/apps.py:6
+msgid "utils"
+msgstr "Utilidades"
+
+#: loducode_utils/models.py:22 loducode_utils/models/audit.py:22
+msgid "creation date"
+msgstr "Fecha de creación"
+
+#: loducode_utils/models.py:23 loducode_utils/models/audit.py:23
+msgid "date when the object was created"
+msgstr "fecha de creación del objeto."
+
+#: loducode_utils/models.py:28 loducode_utils/models/audit.py:28
+msgid "update date"
+msgstr "fecha de actualización"
+
+#: loducode_utils/models.py:29 loducode_utils/models/audit.py:29
+msgid "date when the object was modified"
+msgstr "fecha en que se modificó el objeto"
+
+#: loducode_utils/models.py:35 loducode_utils/models/audit.py:35
+msgid "creation user"
+msgstr "usuario de creación"
+
+#: loducode_utils/models.py:36 loducode_utils/models/audit.py:36
+msgid "user who created the object"
+msgstr "usuario que creó el objeto"
+
+#: loducode_utils/models.py:42 loducode_utils/models/audit.py:42
+msgid "update user"
+msgstr "actualizar usuario"
+
+#: loducode_utils/models.py:43 loducode_utils/models/audit.py:43
+msgid "user who performed the update"
+msgstr "usuario que realizó la actualización"
+
+#: loducode_utils/models.py:97 loducode_utils/models/city.py:44
+msgid "name"
+msgstr "nombre"
+
+#: loducode_utils/models.py:98 loducode_utils/models/city.py:45
+msgid "departament"
+msgstr "departamento"
+
+#: loducode_utils/models.py:99 loducode_utils/models/city.py:46
+msgid "active"
+msgstr "activo"
+
+#: loducode_utils/models.py:102 loducode_utils/models/city.py:49
+msgid "city"
+msgstr "ciudad"
+
+#: loducode_utils/models.py:103 loducode_utils/models/city.py:50
+msgid "cities"
+msgstr "ciudades"
+
+#: loducode_utils/views_api.py:43 loducode_utils/views_api.py:51
+msgid "Service to log in using token, with username and password"
+msgstr "Servicio para iniciar sesión mediante token, con usuario y contraseña"
+
+#: loducode_utils/views_api.py:62
+msgid "has closed session correctly"
+msgstr "ha cerrado la sesión correctamente"
+
+#: loducode_utils/views_api.py:68
+msgid "Service to log out."
+msgstr "Servicio para cerrar sesión."
+
+#: loducode_utils/views_api.py:88 loducode_utils/views_api.py:134
+msgid "Service to forget password. ** {\"username\": \"user1\"} **"
+msgstr "Servicio para olvidar contraseña. ** {\"username\": \"user1\"} **"
+
+#: loducode_utils/views_api.py:109 loducode_utils/views_api.py:115
+#: loducode_utils/views_api.py:124
+msgid "Your new password is:"
+msgstr "Tu nueva contraseña es:"
+
+#: loducode_utils/views_api.py:127 loducode_utils/views_api.py:130
+msgid "the new password has been send to Email."
+msgstr "la nueva contraseña ha sido enviada a correo electrónico."
