@@ -1,0 +1,11 @@
+py_casim/__init__.py,sha256=AaVMSykH7gUWJeS259QYkMptJcxzFexEqeF3YIdMF8I,208
+py_casim/casim.py,sha256=hiUeiXqO_SEJy68H8rEzHuV61KGNDZl3Qi5Y0dsd7Gk,10032
+py_casim/cli.py,sha256=ogoewY-Rdq3fTb6Xf4rCeIspkFyY907TV-sKLxE5NOA,2635
+py_casim/tools.py,sha256=o5SWS1RYw_qynV1diL05ZUMfXxKa7rHNdPoHWkW1QUw,1719
+py_casim-2.0.0.dist-info/AUTHORS.rst,sha256=a0OOb9KTWcVUwvUnWSDqnj2srMri6KeX-hGAFEJ9e4k,159
+py_casim-2.0.0.dist-info/LICENSE,sha256=N75sT_SdRLJ4CKZ5x1GyKv9W2UaxLTRZ-QRpjM1unvY,1070
+py_casim-2.0.0.dist-info/METADATA,sha256=akOobQOiSSmkK0kbXd85G5-amQC9E7a-YRyzQzYkfOI,3552
+py_casim-2.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+py_casim-2.0.0.dist-info/entry_points.txt,sha256=TrC4gxcW7lUbhsTfkYpxFhHh9ykCnurUBWcjH2Cax7s,47
+py_casim-2.0.0.dist-info/top_level.txt,sha256=2LnZBaAWeYBMHj19mY-Vao7xYD9zsL55yZTXZGbDJsI,9
+py_casim-2.0.0.dist-info/RECORD,,
