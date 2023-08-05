@@ -1,0 +1,14 @@
+pymodaq_femto/VERSION,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+pymodaq_femto/__init__.py,sha256=Nvx2KWw88Krq8ye3t03wzUYlXnIx0O9eHzU2hbvjOKI,926
+pymodaq_femto/graphics.py,sha256=1SQzHcKWwaqWO3AgRdw3G0YfHoiuwcsmt9Mb73N0JCY,9569
+pymodaq_femto/materials.py,sha256=FBSMOOdvKBMmhQqY96bhs6UHr2MZXOLRmmtdNjY-mNc,398
+pymodaq_femto/pnps.py,sha256=Vlunp7O6R5kE-UcKBfoLALoJbcFm-vBwdy3YbKtF2jw,1386
+pymodaq_femto/retriever.py,sha256=CnXe6CUUItznLI3cafs597wIHu0-WEhSJ1f738l_wUI,50419
+pymodaq_femto/simulation.py,sha256=pshluLsqdgp5MpeTC-og9LVlpVYQmnAexHCemHECq-w,23413
+pymodaq_femto/viewers.py,sha256=63kMpmoOj4U1F7klIuuU1Ea8W00l_tzSs6vpdb4Tz7I,1871
+pymodaq_femto-0.0.1.dist-info/LICENSE,sha256=JZ0FsAvt7hRTKixoNKCoHNqWfSzLHLXhbByq2MDd3jA,21395
+pymodaq_femto-0.0.1.dist-info/METADATA,sha256=Zyq2bv2ZjUPv_LD7-PZBDuu8aegRG4biKm0ovDazZmo,913
+pymodaq_femto-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymodaq_femto-0.0.1.dist-info/entry_points.txt,sha256=m6uCBn07y3Pf7bm9jthOASgS_w7diI_hUgUCPuaJ3CA,146
+pymodaq_femto-0.0.1.dist-info/top_level.txt,sha256=6i8wcSJL07bvTg3jvySMPZ3xa7xL15yBdk8ZHgo3RNw,14
+pymodaq_femto-0.0.1.dist-info/RECORD,,
