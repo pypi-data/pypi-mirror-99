@@ -1,0 +1,8 @@
+mepdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mepdf/pdf2image.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mepdf/pdf2text.py,sha256=p9X905KIHmvqUAopyZ-h0h56MmCFBDgcSA6TQPVVA1I,38
+kasempdf-1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+kasempdf-1.0.dist-info/METADATA,sha256=eeG-GPpR6Ryoa2pzIngIvFJaBwZOGaLcR5Z4eZde4WE,199
+kasempdf-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kasempdf-1.0.dist-info/top_level.txt,sha256=FWpH71HsFFTH9ZmK3T3EZrt2ho4ShsqowYUQpRikU4o,6
+kasempdf-1.0.dist-info/RECORD,,
