@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: transform-parameters
+Version: 0.0.1
+Summary: Small transformation package to specific project
+Home-page: https://github.com/rogerzs/libraries
+Author: Rogério Ferreira
+Author-email: rogeroficial1506@gmail.com
+License: UNKNOWN
+Description: # libraries
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
