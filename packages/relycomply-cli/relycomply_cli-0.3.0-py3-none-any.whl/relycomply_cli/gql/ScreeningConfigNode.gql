@@ -1,0 +1,94 @@
+{
+  id
+  name
+  label
+  description
+  screeningType
+  ... on WatchlistScreeningConfigNode {
+    enableReviewStage
+    rescreeningFrequency
+    nameWeight
+    birthdateWeight
+    nationalityWeight
+    idCodeWeight
+    nameDefault
+    birthdateDefault
+    nationalityDefault
+    idCodeDefault
+    threshold
+    sources {
+      edges {
+        node {
+          id
+          name
+          label
+        }
+      }
+    }
+  }
+  ... on ZaIdentityScreeningConfigNode {
+    enableReviewStage
+    automaticallyCloseFailedCases
+    validateFacePhoto
+    validateDocumentCharacteristics
+    validateFacePhotoMatchesIdDocument
+    validateFacePhotoMatchesEasydebit
+    validateFacePhotoMatchesNiis
+    validatePreloadedIidentifiiChecks
+    forceManualCitizenVerification
+    forceManualAsylumSeekerVerification
+    forceManualRefugeeVerification
+    forceManualPassportVerification
+  }
+  ... on KeIdentityScreeningConfigNode {
+    enableReviewStage
+    validateFacePhoto
+    validateDetailsMatchNrb
+    validateKraPin
+    automaticallyCloseFailedCases
+    forceManualVerification
+  }
+  ... on EddScreeningConfigNode {
+    requireDocuments
+    requireCommitteeReview
+    allowRiskReRating
+
+    residentCountry
+
+    clientTypeMethod
+    clientTypeDefault
+    clientTypeExplicitDataKey
+    clientLimitedRiskThresholdDefault
+    clientLimitedRiskThresholdExplicitDataKey
+
+    industryMethod
+    industryScoreDefault
+    industryCodeDefault
+    industryCodeExplicitDataKey
+
+    productServiceScore
+    distributionChannelScore
+
+    occupationMethod
+    occupationScoreDefault
+
+    mediumRiskMinimumScore
+    highRiskMinimumScore
+
+    lowRiskRescreeningFrequency
+    mediumRiskRescreeningFrequency
+    highRiskRescreeningFrequency
+  }
+  ... on TransactionScreeningConfigNode {
+    enableReviewStage
+    sources {
+      edges {
+        node {
+          id
+          name
+          label
+        }
+      }
+    }
+  }
+}

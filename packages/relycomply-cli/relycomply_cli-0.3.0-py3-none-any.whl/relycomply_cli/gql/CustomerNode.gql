@@ -1,0 +1,20 @@
+{
+  id
+  firstName
+  middleName
+  lastName
+  idDocumentCode
+  nationality
+  residence
+  birthdate
+  identifier
+  data {
+    edges {
+      node {
+        id
+        key
+        value
+      }
+    }
+  }
+}
