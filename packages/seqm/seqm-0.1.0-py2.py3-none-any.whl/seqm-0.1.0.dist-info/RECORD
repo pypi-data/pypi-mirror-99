@@ -1,0 +1,16 @@
+seqm/__init__.py,sha256=I2PB7o0okxZ7MDrEYatyZ1X-2jMsVfjkSmTkeLw4DAw,985
+seqm/__main__.py,sha256=83zmnEi_dLPYktFaNz4QZWkQLwb3WsbUXMImIkJmrNE,2153
+seqm/__utils__.py,sha256=-watc0xJ6IRcJcO_u5yzCAXw0AbReDlyWjsZkeqHygY,1441
+seqm/conversion.py,sha256=YA1dm1whH6dvLxkbokqn0SGnAK_ismrDMwHyv25XwLM,5290
+seqm/distance.py,sha256=-aEEjrDTTeIttvmQYpzP1Qne6S7LnGcnnc_N5AYfv9E,910
+seqm/metrics.py,sha256=1X3hQI58nVUPE97pyZq4v5NQo4Im2lwxExpKECgiti0,6584
+seqm/objects.py,sha256=g56cdLiMt_O-CIqUchgdvGJNH17apaNJUdOANVj2D9o,5495
+seqm/utils.py,sha256=7i9Ekrvqk4VwGobRxAxDoVfanyYMilR_eOccP34qz74,1205
+seqm/bin/Darwin/oligotm,sha256=_26NHJVKS39ax3GF_hMXVkNt4dwfa6sYhdjs7ELa3_0,26620
+seqm/bin/Linux/oligotm,sha256=W659cFlTAOGezLcULvB1ZgBnN45O5aRB1hL13bBnXyg,53984
+seqm-0.1.0.dist-info/LICENSE,sha256=hptGbSXiGpdGCfmsdZ9PUwIhTgz5ChEaM-0xfq0g1Zc,1073
+seqm-0.1.0.dist-info/METADATA,sha256=9o5bVP8KZA4ZuGZj2pp-5mZdrPHdPFOrdvMl862IENU,9576
+seqm-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+seqm-0.1.0.dist-info/entry_points.txt,sha256=MOTdNtm5ayh0Fs_SKmVbBhfxskeCvgSx_jgryF8TdIo,45
+seqm-0.1.0.dist-info/top_level.txt,sha256=kSP9lvb4z4gWxE0eVBGSh-X64I7HZNjH-BVOhW4rLUA,5
+seqm-0.1.0.dist-info/RECORD,,
