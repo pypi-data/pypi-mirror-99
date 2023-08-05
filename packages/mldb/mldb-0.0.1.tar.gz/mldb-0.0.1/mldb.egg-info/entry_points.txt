@@ -1,0 +1,4 @@
+[console_scripts]
+mb = mldb.cli:run
+mldb = mldb.cli:run
+

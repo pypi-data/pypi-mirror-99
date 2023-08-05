@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: mldb
+Version: 0.0.1
+Summary: ML DataBase
+Home-page: https://github.com/ctuning/ck
+Author: Grigori Fursin
+Author-email: gfursin@gmail.com
+License: Apache 2.0
+Description: # ML DataBase
+        
+        Prototyping the ML DataBase
+        
+        
+        
+        ## License
+        MLDB is licensed under the Apache License 2.0. 
+        
+        See [LICENSE](https://github.com/gfursin/mldb/blob/master/LICENSE) for more information.
+        
+        ## Support
+        
+        [Create a GitHub issue](https://github.com/mldb/connectme/issues/new/choose)
+        
+Keywords: ck,database,reuse,api
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
