@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import sys
+from pynterlinear import csv2latex
+
+if len(sys.argv) < 2:
+    print("Please provide a csv file with examples.")
+elif len(sys.argv) < 3:
+    print("Getting all examples…")
+    csv2latex.convert(
+        filename=sys.argv[1],
+        all=True,
+        example_ids=[]
+    )
+elif len(sys.argv) > 2:
+    print(f"Getting examples {','.join(sys.argv[2:])}")
+    csv2latex.convert(
+        filename=sys.argv[1],
+        example_ids=sys.argv[2:]
+    )

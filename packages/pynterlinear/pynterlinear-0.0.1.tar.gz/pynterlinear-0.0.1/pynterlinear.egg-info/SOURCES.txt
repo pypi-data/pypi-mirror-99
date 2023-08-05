@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+bin/csv2latex
+bin/csv2word
+pynterlinear/__init__.py
+pynterlinear/csv2latex.py
+pynterlinear/csv2word.py
+pynterlinear.egg-info/PKG-INFO
+pynterlinear.egg-info/SOURCES.txt
+pynterlinear.egg-info/dependency_links.txt
+pynterlinear.egg-info/requires.txt
+pynterlinear.egg-info/top_level.txt

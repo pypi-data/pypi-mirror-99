@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+import sys
+import argparse
+from pynterlinear import csv2word
+
+parser = argparse.ArgumentParser(description="Process arguments and options")
+parser.add_argument("filename", metavar="filename", type=str, nargs=1,
+                    help="A csv file containing examples")
+parser.add_argument("example_ids", metavar="example_ids", type=str, nargs="*", help="A list of Example_IDs from the csv file. If none are specified, all will be printed.")
+parser.add_argument("-f", "--file", nargs="?", const=None, help="A text file containing a linebreak-separated list of Example_IDs. IDs on the same line separated by a space will be printed as a multi-part example.")
+parser.add_argument("-t", "--tabs", dest="tabs", action="store_true", help="Use tabs instead of tables.")
+
+args = parser.parse_args()
+filename = args.filename[0]
+example_ids = args.example_ids
+id_file = args.file
+use_tabs = args.tabs
+
+if id_file:
+    pex_ids = open(id_file).read().split("\n")
+    for line in pex_ids:
+        ex_ids = line.split(" ")
+        csv2word.convert(
+            filename=filename,
+            example_ids=ex_ids,
+            tabs=use_tabs
+        )
+else:
+    if not example_ids:
+        csv2word.convert(
+            filename=filename,
+            all=True,
+            tabs=use_tabs
+        )
+    else:
+        csv2word.convert(
+            filename=filename,
+            example_ids=example_ids,
+            tabs=use_tabs
+        )
