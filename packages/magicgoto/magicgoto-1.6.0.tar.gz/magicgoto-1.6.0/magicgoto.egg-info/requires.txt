@@ -1,0 +1,3 @@
+pyperclip
+gitpython
+future

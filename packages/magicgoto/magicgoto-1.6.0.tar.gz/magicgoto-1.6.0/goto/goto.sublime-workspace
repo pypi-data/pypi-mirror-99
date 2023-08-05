@@ -1,0 +1,1220 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_",
+				"_failing_cmd_should_not_print_ah_hoy_twice"
+			],
+			[
+				"_fail",
+				"_failing_cmd_should_give_human_message"
+			],
+			[
+				"_cmd",
+				"_cmd_should_fail"
+			],
+			[
+				"open_new",
+				"open_new_tab\tfunction"
+			],
+			[
+				"_cm",
+				"_cmd_should_fail"
+			],
+			[
+				"magic",
+				"magicword"
+			],
+			[
+				"Goto",
+				"GotoWarning\tclass"
+			],
+			[
+				"expe",
+				"expected_message"
+			],
+			[
+				"mess",
+				"message_name\tstatement"
+			],
+			[
+				"mes",
+				"message_name\tstatement"
+			],
+			[
+				"magi",
+				"magicword\tstatement"
+			],
+			[
+				"mag",
+				"magicword\tstatement"
+			],
+			[
+				"shared",
+				"shared_magic\tstatement"
+			],
+			[
+				"share",
+				"shared_folder\tstatement"
+			],
+			[
+				"ex",
+				"expanduser\tfunction"
+			],
+			[
+				"list",
+				"list_shortcuts"
+			],
+			[
+				"remove",
+				"remove_shortcut"
+			],
+			[
+				"add",
+				"add_shortcut"
+			],
+			[
+				"menu",
+				"menu_item\tstatement"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"ref",
+				"refresh_tokens\tfunction"
+			],
+			[
+				"upda",
+				"update_tokens\tfunction"
+			],
+			[
+				"create",
+				"createMenuItemV2\tfunction"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"clas",
+				"classmethod\tclass"
+			],
+			[
+				"profil",
+				"profile_non_premium\tstatement"
+			],
+			[
+				"get",
+				"get_items\tfunction"
+			],
+			[
+				"confi",
+				"config_utils\tmodule"
+			],
+			[
+				"upload",
+				"upload_session"
+			],
+			[
+				"Veri",
+				"VerifyHMACSignatureMiddleware"
+			],
+			[
+				"ver",
+				"verifyhmac_mock\tparam"
+			],
+			[
+				"patch",
+				"patch-object"
+			],
+			[
+				"verif",
+				"verifyscope_mock\tparam"
+			],
+			[
+				"statu",
+				"status_code"
+			],
+			[
+				"set",
+				"set_trace\tfunction"
+			],
+			[
+				"expire",
+				"expires_at"
+			],
+			[
+				"Upl",
+				"UploadSession"
+			],
+			[
+				"Upload",
+				"UploadSessionV3\tclass"
+			],
+			[
+				"mock",
+				"_mock_gaplib\tfunction"
+			],
+			[
+				"sess",
+				"session_id"
+			],
+			[
+				"Att",
+				"AttachmentForm\tclass"
+			],
+			[
+				"ses",
+				"session_id\tstatement"
+			],
+			[
+				"Uplo",
+				"UploadSessionV3\tclass"
+			],
+			[
+				"ZSH",
+				"ZSH_VERSION"
+			],
+			[
+				"BASH",
+				"BASH_VERSION"
+			],
+			[
+				"_fai",
+				"_fail_test"
+			],
+			[
+				"test",
+				"testcdpath"
+			],
+			[
+				"_cmd_",
+				"_cmd_should_succeed"
+			],
+			[
+				"goto",
+				"goto_main"
+			],
+			[
+				"PROJ",
+				"PROJECTFILE"
+			],
+			[
+				"OUT",
+				"OUTPUTFILE"
+			],
+			[
+				"Sub",
+				"SubmissionType"
+			],
+			[
+				"miss",
+				"missing_magicword_and_uri"
+			],
+			[
+				"resu",
+				"result_file"
+			],
+			[
+				"res",
+				"result_file"
+			],
+			[
+				"_cmd_sh",
+				"_cmd_should_fail"
+			],
+			[
+				"exis",
+				"existing_magicword"
+			],
+			[
+				"return",
+				"return_type\tparam"
+			],
+			[
+				"NON",
+				"none_existing_key\tstatement"
+			],
+			[
+				"exp",
+				"expected_value\tstatement"
+			],
+			[
+				"elem",
+				"element_type"
+			],
+			[
+				"element",
+				"element_type\tparam"
+			],
+			[
+				"okdb",
+				"okob_provider\tparam"
+			],
+			[
+				"okob",
+				"okob_provider\tparam"
+			],
+			[
+				"logo",
+				"logoheight\tstatement"
+			],
+			[
+				"Ticket",
+				"TicketTypeUXModelAdmin\tclass"
+			],
+			[
+				"on",
+				"on_delete"
+			],
+			[
+				"rel",
+				"related_name"
+			],
+			[
+				"Produ",
+				"ProductionAdmin\tclass"
+			],
+			[
+				"Pero",
+				"PerformanceInline\tclass"
+			],
+			[
+				"Res",
+				"Reservation"
+			],
+			[
+				"reser",
+				"reservations"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/browser.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/browser.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/browser.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"syn bash",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"lint",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"pyth",
+				"Build With: Python + Virtualenv"
+			],
+			[
+				"enab",
+				"Anaconda: Enable linting on this file"
+			],
+			[
+				"Package setting",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"anaconda sett",
+				"Anaconda: Set Python interpreter"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"syn bas",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"synt ini",
+				"Set Syntax: INI"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Xdebug Settings – User"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"syn python",
+				"Set Syntax: Python"
+			],
+			[
+				"BEAY",
+				"HTMLBeautify"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"indend",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"show",
+				"Anaconda: Show error list"
+			],
+			[
+				"tog",
+				"Toggle Comment"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spac",
+				"Set Syntax: Apache Conf"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"syn sass",
+				"Set Syntax: AppleScript"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/technocake/code/goto/goto"
+	],
+	"file_history":
+	[
+		"/Users/technocake/code/goto/goto/the_real_goto.py",
+		"/Users/technocake/code/goto/goto/goto.sublime-project",
+		"/Users/technocake/code/goto/requirements_dev.txt",
+		"/Users/technocake/code/goto/goto/commands/rm.py",
+		"/Users/technocake/code/goto/bin/goto",
+		"/Users/technocake/code/goto/bin/install_goto",
+		"/Users/technocake/code/goto/goto/gotomagic/text.py",
+		"/Users/technocake/code/goto/bin/project",
+		"/Users/technocake/code/goto/goto/tests/test_text.py",
+		"/Users/technocake/code/goto/goto/gotomagic/git.py",
+		"/Users/technocake/code/goto/bin/_install_goto",
+		"/Users/technocake/code/goto/requirements.txt",
+		"/Users/technocake/code/goto/build/lib/goto/gotomagic/magic.py",
+		"/Users/technocake/code/goto/build/lib/gotomagic/magic.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/articles/urls.py",
+		"/Users/technocake/code.meta/ccms/brandonline.po3.txt",
+		"/Users/technocake/code.meta/ccms/brandonline.p2.txt",
+		"/Users/technocake/code/storebrand/helseapp-gb/articles",
+		"/Users/technocake/code/storebrand/helseapp-gb/fixtures/articles.json",
+		"/Users/technocake/Desktop/face.txt",
+		"/Users/technocake/code/overtones/wav.py",
+		"/Users/technocake/code/overtones/series.py",
+		"/Users/technocake/code/overtones/math.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/articles/pagination.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/pagination.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/menu_items/tests/utils.py",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/requirements.txt",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/src/settings.py",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/gap/admin.py",
+		"/Users/technocake/Downloads/GB.postman_collection.json",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/forms/v3/upload_session.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/middleware.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/views/v3.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/tests/test_upload.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/urls.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/forms/v3/__init__.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/settings.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/services.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/online_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/question_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/request_claim_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/request_referral_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/sakid.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/support_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/forgot_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v3/offline_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/email_utils.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/forgot_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/offline_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/online_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/question_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/request_claim_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/request_referral_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/sakid.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/v2/support_email.html",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/articles/admin.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/getwell_backend/urls.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/api/settings.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/menu_items/models.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/views/v3/__init__.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/question_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/models/models.py",
+		"/Users/technocake/Desktop/fix_goto.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/forgot_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/offline_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/online_booking.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/request_claim_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/request_referral_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/templates/support_email.html",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/utils.py",
+		"/Users/technocake/code/storebrand/helseapp-common/helseapp_common/tests/test_decorators.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/.circleci/config.yml",
+		"/Users/technocake/code/goto/goto/tests/test_end_to_end.sh",
+		"/Users/technocake/code/goto/bin/_gotoutils",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/requirements.txt",
+		"/Users/technocake/code/goto/tox.ini",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/gap_lib/__init__.py",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/gap_lib/tests/test_decorators.py",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/gap_lib/tests/test_jwt_utils.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/utils/settings.py",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/gap_lib/utils.py",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/gap_lib/tests/test_utils.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/management/commands/test_sakid.py",
+		"/Users/technocake/code/storebrand/helseapp-gap-lib/setup.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/utils/tests/test_utils.py",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/gap/urls.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/getwell_backend/settings/_default.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/api/tests/test_get_closest_clinics.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/services/provider_processing.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/models/providers.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/api/integrations/get_providers.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/views.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/models/enums.py",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/gap/forms.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/views.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/forms/base.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/models/choices.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/models/email_subject_data.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/migrations/0034_auto_20190515_0804.py",
+		"/Users/technocake/code/storebrand/helseapp-aps/app/aps/tests/test_get_subject.py",
+		"/Users/technocake/code/storebrand/helseapp-gap/app/src/urls.py",
+		"/Users/technocake/Desktop/hiblan/hurra.py",
+		"/Users/technocake/Desktop/hiblan/hiblan-demo.py",
+		"/Users/technocake/Library/Application Support/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/Users/technocake/.goto/projects/api-testing",
+		"/Users/technocake/code/storebrand/helseapp-blifrisk-rn/src/features/providerMap/ProviderMap.js",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/services/__init__.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/api/views/providers.py",
+		"/Users/technocake/Downloads/test-uttrekk.json",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/management/commands/import_providers.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/management/commands/import_uttrekk.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/apps/online_booking/management/commands/download_uttrekk.py",
+		"/Users/technocake/code/storebrand/helseapp-gb/utils/email/factory.py",
+		"/Users/technocake/code/fargespill-live/public_html/wp-includes/ID3/module.tag.id3v2.php",
+		"/Users/technocake/Downloads/IE9-Win7-VMWare-e3011d71.vmss",
+		"/Users/technocake/jonas-shell.sh",
+		"/Users/technocake/code/dotfiles/brew.sh",
+		"/Users/technocake/code/nctg/dist/hello/hello",
+		"/Users/technocake/code/bilettreservasjon/reservation/models/shows.py",
+		"/Users/technocake/code/bilettreservasjon/billett/settings.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/static/colors.sass",
+		"/Users/technocake/code/bilettreservasjon/billett/urls.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/views.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/forms/reservation.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/models/tickets.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/models/common.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/admin.py",
+		"/Users/technocake/code/bilettreservasjon/reservation/templates/admin/base_site.html"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 383.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "goto.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test_end",
+				"goto/tests/test_end_to_end.sh"
+			],
+			[
+				"text",
+				"build/lib/gotomagic/text.py"
+			],
+			[
+				"Make",
+				"Makefile"
+			],
+			[
+				"err",
+				"goto/gotomagic/text/error.py"
+			],
+			[
+				"warni",
+				"goto/gotomagic/text/warning.py"
+			],
+			[
+				"the",
+				"goto/the_real_goto.py"
+			],
+			[
+				"requ",
+				"requirements_dev.txt"
+			],
+			[
+				"proje",
+				"bin/project"
+			],
+			[
+				"_goto",
+				"bin/_gotoutils"
+			],
+			[
+				"",
+				"setup.py"
+			],
+			[
+				"setu",
+				"setup.py"
+			],
+			[
+				"_defau",
+				"getwell_backend/settings/_default.py"
+			],
+			[
+				"_defa",
+				"getwell_backend/settings/_default.py"
+			],
+			[
+				"envir",
+				"environment_dev.sh"
+			],
+			[
+				"apps/onlinepagio",
+				"apps/online_booking/pagination.py"
+			],
+			[
+				"menu models",
+				"apps/menu_items/models.py"
+			],
+			[
+				"tok",
+				"tokens.py"
+			],
+			[
+				"key",
+				"keycloak.py"
+			],
+			[
+				"menu test uti",
+				"apps/menu_items/tests/utils.py"
+			],
+			[
+				"menu model",
+				"apps/menu_items/models.py"
+			],
+			[
+				"menu test util",
+				"apps/menu_items/tests/utils.py"
+			],
+			[
+				"menu test",
+				"apps/menu_items/tests/test_menu_items.py"
+			],
+			[
+				"_Defau",
+				"getwell_backend/settings/_default.py"
+			],
+			[
+				"sett",
+				"src/settings.py"
+			],
+			[
+				"te",
+				"app/aps/tests/test_upload.py"
+			],
+			[
+				"set",
+				"app/aps/settings.py"
+			],
+			[
+				"view v3",
+				"app/aps/views/v3.py"
+			],
+			[
+				"setti",
+				"app/aps/settings.py"
+			],
+			[
+				"test_u",
+				"app/aps/tests/test_upload.py"
+			],
+			[
+				"url",
+				"app/aps/urls.py"
+			],
+			[
+				"test",
+				"app/gap/tests/test_router.py"
+			],
+			[
+				"aps setti",
+				"apps/api/settings.py"
+			],
+			[
+				"v3 models",
+				"helseapp-aps/app/aps/models/v3/models.py"
+			],
+			[
+				"v3 mod",
+				"helseapp-aps/app/aps/models/v3/models.py"
+			],
+			[
+				"provider_por",
+				"apps/online_booking/services/provider_processing.py"
+			],
+			[
+				"generate",
+				"apps/online_booking/management/commands/generate_providers.py"
+			],
+			[
+				"models",
+				"app/aps/models/models.py"
+			],
+			[
+				"rules",
+				"app/aps/mail_rules.py"
+			],
+			[
+				"email",
+				"app/aps/email_utils.py"
+			],
+			[
+				"insta",
+				"bin/install_goto"
+			],
+			[
+				"views",
+				"helseapp-aps/app/aps/views.py"
+			],
+			[
+				"email_uti",
+				"helseapp-aps/app/aps/email_utils.py"
+			],
+			[
+				"goto",
+				"bin/goto"
+			],
+			[
+				"the_",
+				"goto/the_real_goto.py"
+			],
+			[
+				"proj",
+				"bin/project"
+			],
+			[
+				"end",
+				"goto/tests/test_end_to_end.sh"
+			],
+			[
+				"aps services.py",
+				"helseapp-aps/app/aps/services.py"
+			],
+			[
+				"require",
+				"helseapp-aps/app/requirements.txt"
+			],
+			[
+				"tox.i",
+				"tox.ini"
+			],
+			[
+				"gap_lib",
+				"helseapp-gap-lib/gap_lib/__init__.py"
+			],
+			[
+				"_def",
+				"helseapp-gb/getwell_backend/settings/_default.py"
+			],
+			[
+				"gap urls.py",
+				"helseapp-gap/app/gap/urls.py"
+			],
+			[
+				"test_util",
+				"helseapp-gb/utils/tests/test_utils.py"
+			],
+			[
+				"sakid.py",
+				"helseapp-gb/apps/online_booking/management/commands/test_sakid.py"
+			],
+			[
+				"utils settings",
+				"helseapp-gb/utils/settings.py"
+			],
+			[
+				"settings.py",
+				"helseapp-gap/app/src/settings.py"
+			],
+			[
+				"test_utils",
+				"helseapp-gb/utils/tests/test_utils.py"
+			],
+			[
+				"utils setting",
+				"helseapp-gb/utils/settings.py"
+			],
+			[
+				"aps models.",
+				"helseapp-aps/app/aps/models/models.py"
+			],
+			[
+				"email_Uti",
+				"helseapp-aps/app/aps/email_utils.py"
+			],
+			[
+				"aps services",
+				"helseapp-aps/app/aps/services.py"
+			],
+			[
+				"aps views.py",
+				"helseapp-aps/app/aps/views.py"
+			],
+			[
+				"test_get_cl",
+				"helseapp-gb/apps/api/tests/test_get_closest_clinics.py"
+			],
+			[
+				"providers.py",
+				"helseapp-gb/apps/online_booking/models/providers.py"
+			],
+			[
+				"gb views.py",
+				"helseapp-gb/apps/online_booking/views.py"
+			],
+			[
+				"aps urls.py",
+				"helseapp-aps/app/aps/urls.py"
+			],
+			[
+				"aps urls.p",
+				"helseapp-gap/app/src/urls.py"
+			],
+			[
+				"urls",
+				"helseapp-gb/getwell_backend/urls.py"
+			],
+			[
+				"settings aps",
+				"helseapp-aps/app/aps/settings.py"
+			],
+			[
+				"aps requir",
+				"helseapp-aps/app/requirements.txt"
+			],
+			[
+				"views.py",
+				"helseapp-aps/app/aps/views.py"
+			],
+			[
+				"forms",
+				"helseapp-gap/app/gap/forms.py"
+			],
+			[
+				"aps enums",
+				"helseapp-aps/app/aps/models/enums.py"
+			],
+			[
+				"aps views.",
+				"helseapp-aps/app/aps/views.py"
+			],
+			[
+				"aps model",
+				"helseapp-aps/app/aps/models/models.py"
+			],
+			[
+				"processing",
+				"helseapp-gb/apps/online_booking/services/provider_processing.py"
+			],
+			[
+				"magi",
+				"gotomagic/magic.py"
+			],
+			[
+				"test_get_close",
+				"helseapp-gb/apps/api/tests/test_get_closest_clinics.py"
+			],
+			[
+				"test_times",
+				"helseapp-gb/apps/api/tests/test_timeslots.py"
+			],
+			[
+				"test_single",
+				"helseapp-gb/apps/online_booking/tests/provider_test_data_single.json"
+			],
+			[
+				"providers_test",
+				"helseapp-gb/apps/online_booking/tests/providers_test_data.json"
+			],
+			[
+				"EMAIL",
+				"helseapp-gb/utils/email/email.py"
+			],
+			[
+				"import",
+				"helseapp-gb/apps/online_booking/management/commands/import_providers.py"
+			],
+			[
+				"provider_pro",
+				"helseapp-gb/apps/online_booking/services/provider_processing.py"
+			],
+			[
+				"import_pro",
+				"helseapp-gb/apps/online_booking/management/commands/import_providers.py"
+			],
+			[
+				"admin",
+				"reservation/admin.py"
+			],
+			[
+				"download_utt",
+				"helseapp-gb/apps/online_booking/management/commands/download_uttrekk.py"
+			],
+			[
+				"import_utt",
+				"helseapp-gb/apps/online_booking/management/commands/import_uttrekk.py"
+			],
+			[
+				"import_prov",
+				"helseapp-gb/apps/online_booking/management/commands/import_providers.py"
+			],
+			[
+				"fac",
+				"helseapp-gb/utils/email/factory.py"
+			],
+			[
+				"factory.py",
+				"helseapp-gb/utils/email/factory.py"
+			],
+			[
+				"comm",
+				"bilettreservasjon/reservation/models/common.py"
+			],
+			[
+				"tice",
+				"bilettreservasjon/reservation/models/tickets.py"
+			],
+			[
+				"admi",
+				"bilettreservasjon/reservation/admin.py"
+			],
+			[
+				"show",
+				"bilettreservasjon/reservation/models/shows.py"
+			],
+			[
+				"commo",
+				"bilettreservasjon/reservation/models/common.py"
+			],
+			[
+				"adm",
+				"bilettreservasjon/reservation/admin.py"
+			],
+			[
+				"ad",
+				"bilettreservasjon/reservation/admin.py"
+			],
+			[
+				"common",
+				"bilettreservasjon/reservation/models/common.py"
+			],
+			[
+				"urs",
+				"bilettreservasjon/billett/urls.py"
+			],
+			[
+				"base_site",
+				"bilettreservasjon/reservation/templates/admin/base_site.html"
+			],
+			[
+				"ticke",
+				"bilettreservasjon/reservation/models/tickets.py"
+			],
+			[
+				"reserv",
+				"bilettreservasjon/reservation/forms/reservation.py"
+			],
+			[
+				"ticket",
+				"bilettreservasjon/reservation/models/tickets.py"
+			],
+			[
+				"base",
+				"bilettreservasjon/reservation/templates/base.html"
+			],
+			[
+				"vie",
+				"bilettreservasjon/reservation/views.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 423.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
