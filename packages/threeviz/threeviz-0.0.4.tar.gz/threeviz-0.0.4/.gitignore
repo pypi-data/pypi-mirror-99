@@ -1,0 +1,7 @@
+.projectile
+node_modules/
+test_image.png
+threeviz.egg-info
+*.mypy_cache
+*.pyc
+test.py
