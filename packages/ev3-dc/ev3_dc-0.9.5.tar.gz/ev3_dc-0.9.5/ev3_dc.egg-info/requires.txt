@@ -1,0 +1,2 @@
+thread_task>=0.9.7
+pyusb
