@@ -1,0 +1,11 @@
+truck_telemetry/__init__.py,sha256=XNBA5MglDyIjSv_6gQjr3WT7yFZGztfZ903MqXEv8sk,51
+truck_telemetry/truck_telemetry.py,sha256=02z1XO3h3DIgUWS4_aNlyjbihfbuAUcM_f480pw1kWY,905
+truck_telemetry/version.py,sha256=JRmXEyM1k69KcAewGejrUWxIrp7GcytRWI_gtjdHynE,59
+truck_telemetry/telemetry_version/__init__.py,sha256=rRpDnlKf40ahItblEF-EDGFVcOBCvHcFrPC4ByJzErI,21
+truck_telemetry/telemetry_version/unpack.py,sha256=fGDiLxnKBLDWqAKmBv9-_ZfVgrCqz4sLWKwSzoUO2Og,3672
+truck_telemetry/telemetry_version/v1_10.py,sha256=xcWjm38ip-OJIUT8ukewf-P1w-b9_jNC-G6SQdkuiSM,13337
+truck_telemetry-0.0.1.dist-info/LICENSE,sha256=HC3Y09oh8amBDNNsY9MKQYTr8fDFqBD_5kRxqW_3myw,1077
+truck_telemetry-0.0.1.dist-info/METADATA,sha256=1q-DTsPWtpduv7VNTVwA2CZmqiP9YZGSMLVJ0740xUk,1263
+truck_telemetry-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+truck_telemetry-0.0.1.dist-info/top_level.txt,sha256=KuhS1XSUETBx4vIkCF6Td8XR5jG4mY6Eau4GPBEfnKc,16
+truck_telemetry-0.0.1.dist-info/RECORD,,
