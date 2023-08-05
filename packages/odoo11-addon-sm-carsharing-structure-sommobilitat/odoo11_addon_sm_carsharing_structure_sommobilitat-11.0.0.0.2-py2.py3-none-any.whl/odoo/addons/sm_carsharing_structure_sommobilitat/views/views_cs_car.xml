@@ -1,0 +1,72 @@
+<odoo>
+  <data>
+
+    <record id="view_cs_car_form" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure_instance.cs_car.form</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='acquisition_date']"  position="after">
+          <field name="bougth_date"/>
+          <field name="bougth_km"/>
+        </xpath>
+        <xpath expr="//field[@name='horsepower_tax']"  position="after">
+          <label for="battery_size"/>
+          <div class="o_row">
+            <field name="battery_size"/><span>kW/h</span>
+          </div>
+        </xpath>
+        <xpath expr="//sheet" position="inside">
+          <group col="2">
+            <group string="Type">
+              <field name="car_type" />
+              <field name="battery_fee" />
+              <field name="battery_rental" />
+            </group>
+        
+            <group string="Dates">
+              <field name="next_revision" />
+              <field name="next_tech_revision" />
+            </group>
+
+            <group string="Assegurança">
+              <field name="insurance_company" />
+              <field name="insurance_age" />
+              <field name="insurance_policy" />
+              <field name="insurance_expiricy" />
+              <field name="insurance_extras" />
+            </group>
+
+            <group string="Via-T">
+              <field name="viat_applies"/>
+              <field name="viat_pan" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_expiricy" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_onplace" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_eco_accepted" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_eco_approved_date" attrs="{'invisible':[('viat_applies','=',False)]}" />
+            </group>
+            <group string="Live / SMOU">
+              <field name="live_card_status" />
+              <field name="live_card" />
+              <field name="live_smou" />
+              <field name="smou_email_id" />
+            </group>
+            <group string="Altres" >
+              <field name="r_link_update" />
+              <field name="vinyl" />
+              <field name="key_number" />
+              <field name="secondary_key_location" />
+              <field name="ivtm_status" />
+              <field name="electromaps_code" />
+              <field name="garagekey_code" />
+              <field name="contact_person_txt" />
+              <field name="origin" />
+              <field name="drive_docs" />
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
