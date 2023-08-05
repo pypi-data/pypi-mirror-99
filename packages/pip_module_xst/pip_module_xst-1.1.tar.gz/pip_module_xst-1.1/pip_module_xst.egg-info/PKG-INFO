@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pip-module-xst
+Version: 1.1
+Summary: 一个非常NB的包
+Home-page: https://github.com/wupeiqi/fucker
+Author: xiaoshutong
+Author-email: xiaoshutong@live.com
+License: UNKNOWN
+Description: 是一个吊炸天的工具...
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
