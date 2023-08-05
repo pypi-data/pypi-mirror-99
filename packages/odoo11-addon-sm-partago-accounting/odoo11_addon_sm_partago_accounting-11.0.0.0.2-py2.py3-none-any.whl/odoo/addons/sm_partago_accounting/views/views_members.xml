@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record id="view_smp_accounting_members_form" model="ir.ui.view">
+      <field name="name">sm_partago_accounting.members.form</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//notebook" position="inside">
+          <page name='carsharing_accounting' string="Carsharing accounting">
+            <group>
+              <!--TODO: TObe added on the moment of migration -->
+              <!--<field name="cs_accounting_state"/>-->
+              <field name="personal_billing_account_index"/>
+              <field name="related_cs_billing_account_id"/>
+              <field name="related_cs_billing_account_mintuesleft"/>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
