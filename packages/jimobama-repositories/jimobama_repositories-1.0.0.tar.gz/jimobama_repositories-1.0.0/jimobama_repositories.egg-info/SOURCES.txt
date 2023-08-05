@@ -1,0 +1,14 @@
+README.md
+setup.py
+jimo_repositories.egg-info/PKG-INFO
+jimo_repositories.egg-info/SOURCES.txt
+jimo_repositories.egg-info/dependency_links.txt
+jimo_repositories.egg-info/top_level.txt
+jimobama_repositories/__init.py
+jimobama_repositories/argsinitialiser.py
+jimobama_repositories/fileinfo.py
+jimobama_repositories/repository.py
+jimobama_repositories.egg-info/PKG-INFO
+jimobama_repositories.egg-info/SOURCES.txt
+jimobama_repositories.egg-info/dependency_links.txt
+jimobama_repositories.egg-info/top_level.txt
