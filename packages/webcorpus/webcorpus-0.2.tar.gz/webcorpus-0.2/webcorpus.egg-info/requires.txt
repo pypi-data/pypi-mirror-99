@@ -1,0 +1,11 @@
+morfessor
+boilerpipe3
+tldextract
+click
+scrapy
+tqdm
+pandas
+scrapyd
+nltk
+scrapyd-client
+htmldate
