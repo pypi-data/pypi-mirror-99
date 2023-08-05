@@ -1,0 +1,15 @@
+fedcloudclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fedcloudclient/checkin.py,sha256=GO9ndMYc8nKdxnbUAuBsMQ6hLLfPTia2Y8VFtZ6MKBA,8308
+fedcloudclient/cli.py,sha256=UXMdApkNfYI3NjRDU8CgC28s2KOgDmJx5zLq2aitFvQ,431
+fedcloudclient/endpoint.py,sha256=ad5vrs3vMcKkTTn6KgDSOKOnODyAnLgcPweAfz4cvlM,16091
+fedcloudclient/openstack.py,sha256=KAkGfKffLnN8h5-bTCrhhw0AUNYcTBvn__HYx0M33mQ,9815
+fedcloudclient/schema.json,sha256=eXQqh1qzHXNiwNXMpvZ2llkrsgq1D9GIyaSTQ5Ao7wk,1687
+fedcloudclient/sites.py,sha256=A3nXtZdNjb2bAJld1shQ023O6ja7hDN1CPhj0p72z6Q,8250
+fedcloudclient-1.1.2.dist-info/AUTHORS,sha256=FcNH40GQTSqC76yPnOgUnWj_kUevERMFEoOZufq2JPc,29
+fedcloudclient-1.1.2.dist-info/LICENSE,sha256=em4oJUKQK43w1uiAmPoBys-ambhzvIKBR5H2MaEqqzU,1068
+fedcloudclient-1.1.2.dist-info/METADATA,sha256=nJMjOaO_ZgoirITPF_8_tq-KCy5KKjP8dZtSJZ6oVzQ,8421
+fedcloudclient-1.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fedcloudclient-1.1.2.dist-info/entry_points.txt,sha256=2KtuV1EWt3acpX6SvFzTw_5M0-KrMH8lJ_8K2XIGpXQ,53
+fedcloudclient-1.1.2.dist-info/pbr.json,sha256=ItOB-CAxMDTcne9lLOo2KXuRoz0bU6JUdjKkcb1v7t0,47
+fedcloudclient-1.1.2.dist-info/top_level.txt,sha256=BndM8mtXYZVTvk3Pdtmln0MJdVi3yw2-tqvFmfdB5LI,15
+fedcloudclient-1.1.2.dist-info/RECORD,,
