@@ -1,0 +1,6 @@
+pandoc man/botd.8.md -s -t man -o man/botd.8
+gzip man/botd.8
+pandoc man/botctl.8.md -s -t man -o man/botctl.8
+gzip man/botctl.8
+python3 setup.py install_data
+mandb
