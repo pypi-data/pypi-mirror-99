@@ -1,0 +1,8 @@
+README.md
+setup.py
+hypycube/__init__.py
+hypycube.egg-info/PKG-INFO
+hypycube.egg-info/SOURCES.txt
+hypycube.egg-info/dependency_links.txt
+hypycube.egg-info/requires.txt
+hypycube.egg-info/top_level.txt

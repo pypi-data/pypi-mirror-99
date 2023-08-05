@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hypycube
+Version: 0.0a0
+Summary: HyPyCube framework
+Home-page: https://github.com/hypycube/hypycube
+Author: Jakub Walczak, Mirko Stojiljkovic, Marco Mancini
+Author-email: jakub.walczak@cmcc.it, mirko.stojiljkovic@cmcc.it, marco.mancini@cmcc.it
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
