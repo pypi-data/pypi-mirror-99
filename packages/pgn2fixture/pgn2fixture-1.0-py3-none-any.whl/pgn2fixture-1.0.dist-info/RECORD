@@ -1,0 +1,8 @@
+pgn2fixture/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn2fixture/pgn2fixture.py,sha256=OE8JW1xoX_QICzMudm9RVVPlFp-J52gY7YQYB_U6qW8,2277
+pgn2fixture/utils.py,sha256=1L-_7FLxISVU4e_NB6gLaazin2hCk0pFCH9mqPJh7dk,744
+pgn2fixture-1.0.dist-info/LICENSE,sha256=qOngFXFkLup2irMa-4C9PSTVhFGgDDts1do2hFWZfJU,1073
+pgn2fixture-1.0.dist-info/METADATA,sha256=B1THP9hGp6YNAVEqPdA48G2f5bJEDWDtruF4H4kZ8aM,3488
+pgn2fixture-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pgn2fixture-1.0.dist-info/top_level.txt,sha256=a_qZ4-37q769sxW8sgF1N4GF-m7q0v1Yr-BJnPVOeXE,12
+pgn2fixture-1.0.dist-info/RECORD,,
