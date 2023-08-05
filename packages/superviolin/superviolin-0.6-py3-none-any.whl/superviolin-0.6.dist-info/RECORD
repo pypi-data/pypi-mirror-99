@@ -1,0 +1,12 @@
+superviolin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+superviolin/plot.py,sha256=RB3djfvz5JeqVDrYMGOWNLw6mMaZfL8samB56adGmgw,25073
+superviolin/plot_cli.py,sha256=Nz6MNF5DpdAOX0xz9gTW5oqLEpsX-ilqrchytruLn5g,3147
+superviolin/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+superviolin/templates/args.txt,sha256=ma-rXhmdIaHivbMxt8d2wa9v7NVVkthCLIMyOXERVn4,2563
+superviolin/templates/demo_args.txt,sha256=MmPStHQYmWSljV8NLdz9TchfpqJLhznX4kuMojqHVyg,2241
+superviolin/templates/demo_data.csv,sha256=SJ-SLa_hvFe-3F2-coNNSPjN9NpIRJVC83-5_Yqx8ew,81733
+superviolin-0.6.dist-info/METADATA,sha256=Nw652up8atxEEu0GUxIAsYSs5GXabAhRguqK4lwrjVQ,673
+superviolin-0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+superviolin-0.6.dist-info/entry_points.txt,sha256=DJWZTjYDHVzKOqnytWgTUAjw8PgA7GHbEEVgeczpYkM,58
+superviolin-0.6.dist-info/top_level.txt,sha256=7sTyYxbGJVXx4Wf62f8Frm6TscJd55bwz3t8sC3SdjY,26
+superviolin-0.6.dist-info/RECORD,,
