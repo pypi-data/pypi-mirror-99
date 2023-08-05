@@ -1,0 +1,242 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>corelibs.lazy &#8212; corelibs 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">corelibs 1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">corelibs.lazy</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for corelibs.lazy</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&gt;&gt;&gt;</span>
+<span class="sd">.. module:: lazy.py</span>
+<span class="sd">    :platform: Unix, Windows</span>
+<span class="sd">    :synopsis: Module avec des fonctions, décorateurs, etc. utiles pour les grosses faignasses comme moi qui n&#39;ont pas</span>
+<span class="sd">    envie de tout réécrire à chaque fois... =}</span>
+
+<span class="sd">.. moduleauthor:: Michel TRUONG &lt;michel.truong@gmail.com&gt;</span>
+
+<span class="sd">&gt;&gt;&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">logging</span> <span class="k">as</span> <span class="nn">log</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">coloredlogs</span> <span class="k">as</span> <span class="nn">cl</span>
+
+<span class="kn">import</span> <span class="nn">corelibs.config</span> <span class="k">as</span> <span class="nn">config</span>
+
+<span class="c1"># config pour utilisation interne de la log ---------------------------------------------------------------------------#</span>
+<span class="n">cl</span><span class="o">.</span><span class="n">DEFAULT_FIELD_STYLES</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_FIELD_STYLES</span>
+<span class="n">cl</span><span class="o">.</span><span class="n">DEFAULT_LEVEL_STYLES</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LEVEL_STYLES</span>
+<span class="n">cl</span><span class="o">.</span><span class="n">DEFAULT_LOG_FORMAT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOG_FORMAT</span>
+<span class="n">cl</span><span class="o">.</span><span class="n">DEFAULT_DATE_FORMAT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOG_DATE_FORMAT</span>
+
+<span class="n">default_log_label</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOG_LABEL</span> <span class="o">!=</span> <span class="s2">&quot;SHORT&quot;</span><span class="p">:</span>
+    <span class="n">default_log_label</span> <span class="o">=</span> <span class="vm">__file__</span>
+
+<span class="n">cl</span><span class="o">.</span><span class="n">install</span><span class="p">(</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOG_LEVEL</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="n">cl</span><span class="o">.</span><span class="n">DEFAULT_LOG_FORMAT</span>
+<span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="n">log</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">default_log_label</span><span class="p">)</span>
+<span class="c1"># config pour utilisation interne de la log /--------------------------------------------------------------------------#</span>
+
+
+<div class="viewcode-block" id="get_timestamp"><a class="viewcode-back" href="../../index.html#corelibs.lazy.get_timestamp">[docs]</a><span class="k">def</span> <span class="nf">get_timestamp</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retourne un timestamp normalisé au format YYYYMMDD_HHMMSS.SSSSSS ; utile pour suffixer les noms des fichiers</span>
+
+<span class="sd">    .. todo::</span>
+<span class="sd">        blah blah</span>
+<span class="sd">        hé hé</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">            timestamp</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">date_time</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">date_time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">date_time</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="get_abspath"><a class="viewcode-back" href="../../index.html#corelibs.lazy.get_abspath">[docs]</a><span class="k">def</span> <span class="nf">get_abspath</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">dir_2_join</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retourne le chemin absolu normalisé à partir d&#39;un répertoire racine et un dossier</span>
+
+<span class="sd">        :param root_dir:</span>
+<span class="sd">            répertoire racine (e.g. &quot;C:\documents\dir&quot;)</span>
+<span class="sd">        :param dir_2_join:</span>
+<span class="sd">            dosssier à concaténer (e.g. &quot;toto&quot;)</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">            le chemin normalisé (e.g. &quot;C:\documents\dir\toto&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">dir_2_join</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="get_basename"><a class="viewcode-back" href="../../index.html#corelibs.lazy.get_basename">[docs]</a><span class="k">def</span> <span class="nf">get_basename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        TODO:: retourner un couple basename + dirname</span>
+<span class="sd">        Retourne le basename à partir d&#39;un chemin normalisé (e.g. &quot;C:\documents\dir&quot; retournera &quot;dir&quot;)</span>
+
+<span class="sd">        :param path:</span>
+<span class="sd">            chemin normalisé</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">            le basename du chemin normalisé donné en paramètre</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">path</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="get_script_path"><a class="viewcode-back" href="../../index.html#corelibs.lazy.get_script_path">[docs]</a><span class="k">def</span> <span class="nf">get_script_path</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retourne le chemin du script courant (ou celui dans l&#39;interpréteur de commandes)</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">            os.path.realpath(sys.argv[0])</span>
+<span class="sd">            ou</span>
+<span class="sd">            os.path.dirname(path)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">path</span>
+
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="mkdir"><a class="viewcode-back" href="../../index.html#corelibs.lazy.mkdir">[docs]</a><span class="k">def</span> <span class="nf">mkdir</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_log</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Créer un répertoire standard de manière récursive ; si le ou les parents n&#39;existent pas, ils seront créés dans</span>
+<span class="sd">        la foulée.</span>
+
+<span class="sd">        Par défaut, lorsque `lazy.mkdir()` est appelé, 2 répertoires en plus sont créés :</span>
+<span class="sd">            * 1 pour recevoir les fichiers logs</span>
+<span class="sd">            * 1 pour recevoir les sorties</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            Les noms respectifs des répertoires log et de sortie sont gérés par des constantes nommées :</span>
+<span class="sd">                * `config.DEFAULT_LOGS_DIR_NAME = &quot;__LOGS__&quot;`</span>
+<span class="sd">                * `config.DEFAULT_OUTPUT_DIR_NAME = &quot;__OUTPUT__&quot;`</span>
+
+<span class="sd">            Ces constantes peuvent être définies dans un fichier conf ou réécrasées dans le programme courant qui</span>
+<span class="sd">            appelle `lazy.mkdir()`</span>
+
+<span class="sd">        :param location:</span>
+<span class="sd">            la location du répertoire à créer.,</span>
+<span class="sd">            defaults to le chemin retourné par `lazy.get_script_path()`</span>
+<span class="sd">        :param is_log:</span>
+<span class="sd">            spécifie le type de répertoire à créer (standard ou un répertoire avec 2 sous répertoires LOG &amp; OUTPUT).,</span>
+<span class="sd">            defaults to True</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">            Rien...</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">default_output_dir_path</span> <span class="o">=</span> <span class="n">get_abspath</span><span class="p">(</span><span class="n">get_script_path</span><span class="p">(),</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_DIR_NAME</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">default_output_dir_path</span> <span class="o">=</span> <span class="n">get_abspath</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_OUTPUT_DIR_NAME</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_log</span><span class="p">:</span>
+            <span class="n">dir_path</span> <span class="o">=</span> <span class="n">get_abspath</span><span class="p">(</span><span class="n">default_output_dir_path</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOGS_DIR_NAME</span><span class="p">)</span>
+            <span class="n">dir_2_make</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">DEFAULT_LOGS_DIR_NAME</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dir_path</span> <span class="o">=</span> <span class="n">location</span>
+            <span class="n">dir_2_make</span> <span class="o">=</span> <span class="n">get_basename</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+        <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Le fichier existe déjà&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Fichier ou répertoire inexistant&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Habilitations insuffisantes&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Le nom du fichier contient des caractères interdits&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Le dossier </span><span class="si">{dir_2_make}</span><span class="s2"> a été correctement créé à l&#39;emplacement </span><span class="si">{logs_path}</span><span class="s2">&quot;</span>
+                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dir_2_make</span><span class="o">=</span><span class="n">dir_2_make</span><span class="p">,</span> <span class="n">logs_path</span><span class="o">=</span><span class="n">dir_path</span><span class="p">)</span>
+                 <span class="p">)</span></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">corelibs 1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">corelibs.lazy</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Michel TRUONG.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

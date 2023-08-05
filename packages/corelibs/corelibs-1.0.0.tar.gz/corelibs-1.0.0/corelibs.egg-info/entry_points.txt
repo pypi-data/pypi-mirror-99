@@ -1,0 +1,3 @@
+[console_scripts]
+corelibs = corelibs.cli:main
+
