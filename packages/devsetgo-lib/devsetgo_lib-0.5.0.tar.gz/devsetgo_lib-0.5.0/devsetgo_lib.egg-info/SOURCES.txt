@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+devsetgo_lib/__init__.py
+devsetgo_lib/calendar_functions.py
+devsetgo_lib/file_functions.py
+devsetgo_lib/folder_functions.py
+devsetgo_lib/patterns.py
+devsetgo_lib.egg-info/PKG-INFO
+devsetgo_lib.egg-info/SOURCES.txt
+devsetgo_lib.egg-info/dependency_links.txt
+devsetgo_lib.egg-info/top_level.txt
