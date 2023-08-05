@@ -1,0 +1,10 @@
+plmini/__init__.py,sha256=QE1GqxJqaoF41HIz0UkOpW_qEH-PSo8xgknZfJFrOUc,98
+plmini/client.py,sha256=XEuaafVZFQ6pCuCApR05x6Ne2JMgQ-TWj3jOan-e4rc,2682
+plmini/dispatcher.py,sha256=jehFOJlmcBM3PADJ2l58BXqRPTQ81RHnNJBxzM2X2Lg,721
+plmini/driver.py,sha256=maWnEGC-pr9RnPlgs3PssLsEcNhDETaldij1xM41pBU,2426
+plmini/pb/__init__.py,sha256=Ab371AXCHK-sLQ9vpQ3qz0WnuNm3iqo_bzdjX6zribA,81
+plmini/pb/plmini_pb2.py,sha256=J6vXmOfeLdUjufxAJVrJpry88cvebNUmcTYmdU3G5WQ,23757
+plmini/pb/plmini_pb2_grpc.py,sha256=yMFwXj2bI-LmKI811w2W35Hx5_ByjJwEN3vK2DslgUM,12504
+plmini-0.0.6.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+plmini-0.0.6.dist-info/METADATA,sha256=1dUNMf53ZHAuiGi91GMGsLI2y-1Ug9GKeDYZ9okjkyM,672
+plmini-0.0.6.dist-info/RECORD,,
