@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Colosseum-client
+Version: 0.0.1
+Summary:  
+Home-page: https://github.com/PettingZoo-Team/Colosseum
+Author: PettingZoo-Team
+Author-email: justinkterry@gmail.com
+License: UNKNOWN
+Description: Description will be added
+Keywords: Reinforcement Learning,game,RL,AI,gym
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6, <3.10
+Description-Content-Type: text/markdown
