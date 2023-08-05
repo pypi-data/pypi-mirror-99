@@ -1,0 +1,10 @@
+fedbiomed_cli/__init__.py,sha256=E7gb0s7Qy8IkFSEihluEspUfwq10h-JetNso_TtEiDA,957
+fedbiomed_cli/data_manager.py,sha256=Gt-3hPKPubbGUBkQbqVbITugF2deMGikkwkUtgVgKYk,3999
+fedbiomed_cli/json.py,sha256=F2FzDfFO4Zpdb2ljEqb8dSfpOQtWNM2CuR63_Mj8bA0,938
+fedbiomed_cli/mqtt.py,sha256=TsiJUX4D927fDuX6ftsYR9Ty9Or_sEEJtv5WdnMSP2o,2457
+fedbiomed_cli/tasks.py,sha256=7XbmIwjnGmlwtrZ_ydU0nULT7OWI_m2lZ9hzLQmMsu4,2920
+fedbiomed_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fedbiomed_cli/utils/requests.py,sha256=QErFGWLEhhM3NEjGnln90qi_9hyalF8cyhVR7SarKLE,4258
+fedbiomed_cli-0.1.2.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+fedbiomed_cli-0.1.2.dist-info/METADATA,sha256=I3ATa3T65Vsra2xM1iOm7N5ha-MzUDCHsWIWS19WqWY,787
+fedbiomed_cli-0.1.2.dist-info/RECORD,,
