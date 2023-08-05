@@ -1,0 +1,3 @@
+[console_scripts]
+fedbiomed-add=fedbiomed_cli.utils.cli:add_database
+
