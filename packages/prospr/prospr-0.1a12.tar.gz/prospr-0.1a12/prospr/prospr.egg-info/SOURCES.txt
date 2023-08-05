@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+prospr/core/core_module.cpp
+prospr/prospr.egg-info/PKG-INFO
+prospr/prospr.egg-info/SOURCES.txt
+prospr/prospr.egg-info/dependency_links.txt
+prospr/prospr.egg-info/not-zip-safe
+prospr/prospr.egg-info/requires.txt
+prospr/prospr.egg-info/top_level.txt
