@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <record id="view_car_config_form_inherited" model="ir.ui.view">
+      <field name="name">sm_partago_tariffs.sm_car_config.form.inherit</field>
+      <field name="model">smp.sm_car_config</field>
+      <field name="inherit_id" ref="sm_partago_db.view_car_config_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page" position="after">
+          <page string="Invoicing">
+            <group>
+              <field name="related_price_group_id"/>
+              <field name="initial_price"/>
+              <field name="cs_carconfig_ids"/>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
