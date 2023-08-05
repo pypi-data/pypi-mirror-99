@@ -1,0 +1,10 @@
+README.md
+setup.py
+vidstream/__init__.py
+vidstream/audio.py
+vidstream/streaming.py
+vidstream.egg-info/PKG-INFO
+vidstream.egg-info/SOURCES.txt
+vidstream.egg-info/dependency_links.txt
+vidstream.egg-info/requires.txt
+vidstream.egg-info/top_level.txt
