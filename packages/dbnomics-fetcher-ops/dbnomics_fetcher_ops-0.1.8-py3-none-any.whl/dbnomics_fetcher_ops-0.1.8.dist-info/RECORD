@@ -1,0 +1,13 @@
+dbnomics_fetcher_ops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbnomics_fetcher_ops/app_args.py,sha256=3PT5NoSbBKnOa53FgE2AqnF2uwg1hP5SLmCq0T_9h2E,1173
+dbnomics_fetcher_ops/cli.py,sha256=2ZJmqPT2doP8rTdSPMxNGZJhEO7YTRI0Aq7BQtLVf7U,2049
+dbnomics_fetcher_ops/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbnomics_fetcher_ops/commands/configure.py,sha256=rxMlO2gkkeYM3G_JcE_0FmoGKsjf6SpCUQJJxt1bSxw,14000
+dbnomics_fetcher_ops/commands/list.py,sha256=k3lrEPcfgdTK1C2dc7xXGHV9G-XMj3DBtu0rZbVbzog,1707
+dbnomics_fetcher_ops/loaders.py,sha256=bzQZM0eYrKotdBBcQ_xs8bLAZ6DPpJiEFo1n1XHWK3w,1711
+dbnomics_fetcher_ops/model.py,sha256=eC2fO-bVciMKG9eVpBZVhPopumB_xRn-ab7RmVYYK1k,1550
+dbnomics_fetcher_ops/ssh.py,sha256=EdcbceVxpK3k9ybVCXFmmv-m8TliHiINr7ExaZLOKvg,1713
+dbnomics_fetcher_ops-0.1.8.dist-info/entry_points.txt,sha256=nxTIxfCB4gV7HZ6MouCywO7069pA4kNJqNig5AqHlrc,67
+dbnomics_fetcher_ops-0.1.8.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+dbnomics_fetcher_ops-0.1.8.dist-info/METADATA,sha256=3OM1PDntakoKSw9Tgl6dX6AQCnBS8TK4ncNDT0bTYwM,811
+dbnomics_fetcher_ops-0.1.8.dist-info/RECORD,,
