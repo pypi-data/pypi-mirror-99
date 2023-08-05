@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+opennsfw_standalone/__init__.py
+opennsfw_standalone/__main__.py
+opennsfw_standalone/inference_runner.py
+opennsfw_standalone/open-nsfw.onnx
+opennsfw_standalone.egg-info/PKG-INFO
+opennsfw_standalone.egg-info/SOURCES.txt
+opennsfw_standalone.egg-info/dependency_links.txt
+opennsfw_standalone.egg-info/requires.txt
+opennsfw_standalone.egg-info/top_level.txt
+tests/__init__.py
+tests/test_inference_runner.py
