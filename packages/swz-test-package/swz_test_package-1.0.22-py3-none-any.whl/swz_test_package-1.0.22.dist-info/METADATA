@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: swz-test-package
+Version: 1.0.22
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: swz
+License: Apache LICENSE 2.0
+Platform: any
+Requires-Python: >=3.8
+Requires-Dist: cryptography (<=2.8)
+
+UNKNOWN
+
+
