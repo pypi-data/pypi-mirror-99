@@ -1,0 +1,13 @@
+bfsccylinder.libs/libgomp-f7e03b3e.so.1.0.0,sha256=GzmXB1qluHXQUhlsmNKuWncNm8Jezfq1jt5rKrV_8kQ,93080
+bfsccylinder-0.1.5.data/data/README.md,sha256=JE4H0OiK4T3KxmoBUJAlHSW4wlt1pc9cotF_V1MTGwc,588
+bfsccylinder-0.1.5.data/data/LICENSE,sha256=jR-bWpVMMWzkmXO1Vs4pDj5Sjnaivhcc4e9e9_yw0X4,1308
+bfsccylinder/version.py,sha256=rPSfWgIeq2YWVPyESOAwCBt8vftsTpIkuLAGDEzyRQc,22
+bfsccylinder/quadrature.py,sha256=C6JMKSnjBHbPj0pSTqSLXr7KVW1cSMrM-tx76YsvpVU,8509
+bfsccylinder/bfsccylinder.cpython-39-x86_64-linux-gnu.so,sha256=d7wHIRIzn9NW-H2zD4kXINxLsfUQULWJzHSmu5Yag7I,4324848
+bfsccylinder/utils.py,sha256=O3hmGsDR9kkeW_fhLs8Jbwz4k-zfPGsZivpvQjnYe9s,693
+bfsccylinder/__init__.py,sha256=F9qiHCvF2DmC_GGZKuhGoESPIwIccQYmVwih-rnePuo,309
+bfsccylinder-0.1.5.dist-info/WHEEL,sha256=C-sg6l2ppbqlkU_0fUt0o5fTSvsM-h9TfVKAh4ryMfI,111
+bfsccylinder-0.1.5.dist-info/top_level.txt,sha256=-ZxwRg1f4jcnTolfFatHW86P40EuzvmqcGgJTaZ0frQ,13
+bfsccylinder-0.1.5.dist-info/RECORD,,
+bfsccylinder-0.1.5.dist-info/METADATA,sha256=xM1rVE17ukz_6XdI6BbRBDyhu4q55d92TAYuM2sMT-Y,1578
+bfsccylinder-0.1.5.dist-info/LICENSE,sha256=jR-bWpVMMWzkmXO1Vs4pDj5Sjnaivhcc4e9e9_yw0X4,1308
