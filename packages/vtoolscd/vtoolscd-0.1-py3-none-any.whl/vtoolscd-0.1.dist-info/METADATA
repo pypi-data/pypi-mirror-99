@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: vtoolscd
+Version: 0.1
+Summary: vtools
+Home-page: https://github.com/repos/CastellaniDavide/vtools
+Author: DavideC03
+Author-email: help@castellanidavide.it
+License: GNU
+Platform: linux_distibution
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: tabular-log (>=2.5)
+
+Manage vitual machines, getting some informations (eg. OS).
+
+
