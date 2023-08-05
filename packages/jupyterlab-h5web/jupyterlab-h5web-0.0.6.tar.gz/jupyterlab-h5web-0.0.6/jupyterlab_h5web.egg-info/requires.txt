@@ -1,0 +1,4 @@
+jupyterlab_hdf
+
+[full]
+hdf5plugin
