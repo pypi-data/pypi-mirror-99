@@ -1,0 +1,9 @@
+README.md
+setup.py
+pgn2fixture/__init__.py
+pgn2fixture/pgn2fixture.py
+pgn2fixture/utils.py
+pgn2fixture.egg-info/PKG-INFO
+pgn2fixture.egg-info/SOURCES.txt
+pgn2fixture.egg-info/dependency_links.txt
+pgn2fixture.egg-info/top_level.txt
