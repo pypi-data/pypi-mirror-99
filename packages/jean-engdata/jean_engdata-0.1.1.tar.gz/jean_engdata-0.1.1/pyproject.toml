@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["jeangavb <jean.martins@gavb.com.br>"]
+description = ""
+name = "jean_engdata"
+version = "0.1.1"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[[tool.poetry.source]]
+default = true
+name = "azure"
+url = "https://pkgs.dev.azure.com/jeanfelipemartinsdacosta/Test/_packaging/Feed/pypi/simple/"
