@@ -1,0 +1,17 @@
+pydicom>=1.0.1
+pynetdicom>=1.2.0
+itk>=5.0
+nibabel
+numpy>=1.13
+scipy
+fs
+python-magic
+ghostscript
+imageio
+scandir
+pathfinder
+pillow
+matplotlib
+
+[:python_version < "3.8"]
+importlib-metadata

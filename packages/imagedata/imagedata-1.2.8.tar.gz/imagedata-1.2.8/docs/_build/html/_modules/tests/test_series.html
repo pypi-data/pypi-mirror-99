@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tests.test_series &mdash; imagedata 1.2.8 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> imagedata
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../UserGuide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../DeveloperDocumentation.html">Developer Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">imagedata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>tests.test_series</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for tests.test_series</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">nose.tools</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="c1"># import logging</span>
+<span class="kn">import</span> <span class="nn">pydicom.datadict</span>
+
+<span class="kn">from</span> <span class="nn">.context</span> <span class="kn">import</span> <span class="n">imagedata</span>
+<span class="kn">from</span> <span class="nn">imagedata.series</span> <span class="kn">import</span> <span class="n">Series</span>
+<span class="kn">import</span> <span class="nn">imagedata.axis</span>
+
+
+<div class="viewcode-block" id="TestSeries"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries">[docs]</a><span class="k">class</span> <span class="nc">TestSeries</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_get_keyword&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_get_keyword"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_get_keyword">[docs]</a>    <span class="k">def</span> <span class="nf">test_get_keyword</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span>
+            <span class="s1">&#39;data/dicom/time/time00/Image_00000.dcm&#39;</span><span class="p">)</span>
+        <span class="n">pname</span> <span class="o">=</span> <span class="n">si1</span><span class="o">.</span><span class="n">getDicomAttribute</span><span class="p">(</span><span class="s1">&#39;PatientName&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">si1</span><span class="o">.</span><span class="n">getDicomAttribute</span><span class="p">(</span><span class="s1">&#39;PatientName&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;PHANTOM^T1&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">si1</span><span class="o">.</span><span class="n">getDicomAttribute</span><span class="p">(</span>
+                <span class="n">pydicom</span><span class="o">.</span><span class="n">datadict</span><span class="o">.</span><span class="n">tag_for_keyword</span><span class="p">(</span><span class="s1">&#39;PatientID&#39;</span><span class="p">)),</span>
+            <span class="s1">&#39;19.02.07-14:04:17-STD-1.3.12.2.1107.5.2.43.66035&#39;</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_create_series&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_create_series"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_create_series">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_print_header&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_print_header"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_print_header">[docs]</a>    <span class="k">def</span> <span class="nf">test_print_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="c1">#print(si.slices)</span>
+        <span class="n">si</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1">#print(si.spacing)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">spacing</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_copy_series&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_copy_series"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_copy_series">[docs]</a>    <span class="k">def</span> <span class="nf">test_copy_series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">si1</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">si2</span> <span class="o">=</span> <span class="n">si1</span>
+        <span class="c1">#print(si2.slices)</span>
+        <span class="c1">#print(si2.spacing)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si2</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">si2</span><span class="o">.</span><span class="n">spacing</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_copy_series2&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_copy_series2"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_copy_series2">[docs]</a>    <span class="k">def</span> <span class="nf">test_copy_series2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">si1</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">si2</span> <span class="o">=</span> <span class="n">si1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="c1">#print(si2.slices)</span>
+        <span class="c1">#print(si2.spacing)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si2</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">si2</span><span class="o">.</span><span class="n">spacing</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_subtract_series&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_subtract_series"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_subtract_series">[docs]</a>    <span class="k">def</span> <span class="nf">test_subtract_series</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">b</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">spacing</span>
+
+        <span class="n">si</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+        <span class="c1">#print(si.slices)</span>
+        <span class="c1">#print(si.spacing)</span>
+        <span class="c1">#print(type(si.spacing))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">spacing</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_increase_ndim&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_increase_ndim"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_increase_ndim">[docs]</a>    <span class="k">def</span> <span class="nf">test_increase_ndim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">):</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_slicing_y&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_slicing_y"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_slicing_y">[docs]</a>    <span class="k">def</span> <span class="nf">test_slicing_y</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:,:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_slicing_x&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_slicing_x"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_slicing_x">[docs]</a>    <span class="k">def</span> <span class="nf">test_slicing_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_assign_slice_x&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_assign_slice_x"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_assign_slice_x">[docs]</a>    <span class="k">def</span> <span class="nf">test_assign_slice_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">a</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">s</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">s</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">],</span> <span class="n">p</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_assign_slice&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_assign_slice"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_assign_slice">[docs]</a>    <span class="k">def</span> <span class="nf">test_assign_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">)</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">[:]</span>
+        <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[:]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_slicing_z&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_slicing_z"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_slicing_z">[docs]</a>    <span class="k">def</span> <span class="nf">test_slicing_z</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">sliceLocations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+        <span class="k">for</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">imagePositions</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nb">slice</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">slice</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="p">}</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">sliceLocations</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]))</span>
+        <span class="c1"># Compare imagePositions</span>
+        <span class="n">ipp2</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">ipp2</span><span class="p">[</span><span class="nb">slice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">slice</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">imagePositions</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ipp2</span><span class="p">))</span>
+        <span class="k">for</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span>
+                <span class="n">s_slice</span><span class="o">.</span><span class="n">imagePositions</span><span class="p">[</span><span class="nb">slice</span><span class="p">],</span>
+                <span class="n">ipp2</span><span class="p">[</span><span class="nb">slice</span><span class="p">])</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_slicing_t&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_slicing_t"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_slicing_t">[docs]</a>    <span class="k">def</span> <span class="nf">test_slicing_t</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">a2</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">input_order</span><span class="o">=</span><span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">INPUT_ORDER_TIME</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">tags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="n">s</span><span class="p">],</span> <span class="n">tags</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_multiple_ellipses&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_multiple_ellipses"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_multiple_ellipses">[docs]</a>    <span class="k">def</span> <span class="nf">test_multiple_ellipses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">a2</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">input_order</span><span class="o">=</span><span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">INPUT_ORDER_TIME</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">tags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">):</span>
+            <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="o">...</span><span class="p">]</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_ellipsis_first&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_ellipsis_first"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_ellipsis_first">[docs]</a>    <span class="k">def</span> <span class="nf">test_ellipsis_first</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">a2</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a2</span>
+        <span class="c1"># a = np.vstack([a2,a2,a2,a2])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">input_order</span><span class="o">=</span><span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">INPUT_ORDER_TIME</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">tags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_ellipsis_middle&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_ellipsis_middle"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_ellipsis_middle">[docs]</a>    <span class="k">def</span> <span class="nf">test_ellipsis_middle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a1</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">])</span>
+        <span class="n">a2</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a2</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">input_order</span><span class="o">=</span><span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">INPUT_ORDER_TIME</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">):</span>
+            <span class="n">tags</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="n">s</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">tags</span>
+
+        <span class="n">a_slice</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">s_slice</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">a_slice</span><span class="p">,</span> <span class="n">s_slice</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">slices</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">slices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s_slice</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_cross_talk&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_cross_talk"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_cross_talk">[docs]</a>    <span class="k">def</span> <span class="nf">test_cross_talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;data/dicom/time&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">si</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">si1</span><span class="o">.</span><span class="n">seriesNumber</span> <span class="o">=</span> <span class="n">si</span><span class="o">.</span><span class="n">seriesNumber</span> <span class="o">+</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertNotEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">,</span> <span class="n">si1</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">)</span>
+
+        <span class="n">si2</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;data/dicom/time&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span> <span class="o">+=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertNotEqual</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">,</span> <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSeries.test_cross_talk_spacing"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_cross_talk_spacing">[docs]</a>    <span class="nd">@nose</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">)</span>
+    <span class="c1">#@unittest.skip(&quot;skipping test_cross_talk_spacing&quot;)</span>
+    <span class="k">def</span> <span class="nf">test_cross_talk_spacing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;data/dicom/time&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">si</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">si1</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">spacing</span><span class="p">,</span> <span class="n">si1</span><span class="o">.</span><span class="n">spacing</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_cross_talk_2&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_cross_talk_2"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_cross_talk_2">[docs]</a>    <span class="k">def</span> <span class="nf">test_cross_talk_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;data/dicom/time/time00&#39;</span><span class="p">)</span>
+        <span class="n">si2</span> <span class="o">=</span> <span class="n">si1</span>
+        <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span> <span class="o">+=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">si1</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">,</span> <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">)</span></div>
+
+    <span class="c1">#@unittest.skip(&quot;skipping test_cross_talk_3&quot;)</span>
+<div class="viewcode-block" id="TestSeries.test_cross_talk_3"><a class="viewcode-back" href="../../source/tests.html#tests.test_series.TestSeries.test_cross_talk_3">[docs]</a>    <span class="k">def</span> <span class="nf">test_cross_talk_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">si1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="s1">&#39;data/dicom/time00&#39;</span><span class="p">)</span>
+        <span class="n">si2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">si1</span><span class="p">)</span>
+        <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span> <span class="o">+=</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertNotEqual</span><span class="p">(</span><span class="n">si1</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">,</span> <span class="n">si2</span><span class="o">.</span><span class="n">seriesNumber</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Erling Andersen.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

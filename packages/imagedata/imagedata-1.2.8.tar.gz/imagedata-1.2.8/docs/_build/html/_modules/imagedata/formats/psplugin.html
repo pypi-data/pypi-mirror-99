@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>imagedata.formats.psplugin &mdash; imagedata 1.2.8 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> imagedata
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../UserGuide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../DeveloperDocumentation.html">Developer Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">imagedata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imagedata.formats.psplugin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imagedata.formats.psplugin</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Read/Write PostScript files</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Copyright (c) 2013-2019 Erling Andersen, Haukeland University Hospital,</span>
+<span class="c1"># Bergen, Norway</span>
+
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">magic</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">ghostscript</span> <span class="kn">import</span> <span class="n">_gsprint</span> <span class="k">as</span> <span class="n">gs</span>
+<span class="kn">from</span> <span class="nn">ghostscript</span> <span class="kn">import</span> <span class="n">GhostscriptError</span>
+<span class="kn">import</span> <span class="nn">imageio</span>
+
+<span class="kn">import</span> <span class="nn">imagedata.formats</span>
+<span class="kn">from</span> <span class="nn">imagedata.formats.abstractplugin</span> <span class="kn">import</span> <span class="n">AbstractPlugin</span>
+
+
+<div class="viewcode-block" id="ImageTypeError"><a class="viewcode-back" href="../../../APIReferenceFormats.html#imagedata.formats.psplugin.ImageTypeError">[docs]</a><span class="k">class</span> <span class="nc">ImageTypeError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Thrown when trying to load or save an image of unknown type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="DependencyError"><a class="viewcode-back" href="../../../APIReferenceFormats.html#imagedata.formats.psplugin.DependencyError">[docs]</a><span class="k">class</span> <span class="nc">DependencyError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Thrown when a required module could not be loaded.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="PSPlugin"><a class="viewcode-back" href="../../../APIReferenceFormats.html#imagedata.formats.psplugin.PSPlugin">[docs]</a><span class="k">class</span> <span class="nc">PSPlugin</span><span class="p">(</span><span class="n">AbstractPlugin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Read PostScript files.</span>
+<span class="sd">    Writing PostScript files is not implemented.&quot;&quot;&quot;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ps&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Read PostScript files.&quot;</span>
+    <span class="n">authors</span> <span class="o">=</span> <span class="s2">&quot;Erling Andersen&quot;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;www.helse-bergen.no&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PSPlugin</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">authors</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_read_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">opts</span><span class="p">,</span> <span class="n">hdr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read image data from given file handle</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: format plugin instance</span>
+<span class="sd">            f: file handle or filename (depending on self._need_local_file)</span>
+<span class="sd">            opts: Input options (dict)</span>
+<span class="sd">            hdr: Header dict</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Tuple of</span>
+<span class="sd">                hdr: Header dict</span>
+<span class="sd">                    Return values:</span>
+<span class="sd">                        - info: Internal data for the plugin</span>
+<span class="sd">                            None if the given file should not be included (e.g. raw file)</span>
+<span class="sd">                si: numpy array (multi-dimensional)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span> <span class="o">=</span> <span class="mi">150</span>  <span class="c1"># dpi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="s1">&#39;png16m&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">legal_attributes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dpi&#39;</span><span class="p">,</span> <span class="s1">&#39;driver&#39;</span><span class="p">,</span> <span class="s1">&#39;rotate&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="s1">&#39;psopt&#39;</span> <span class="ow">in</span> <span class="n">opts</span> <span class="ow">and</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;psopt&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">[</span><span class="s1">&#39;psopt&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">):</span>
+                <span class="n">attr</span><span class="p">,</span><span class="n">value</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">legal_attributes</span><span class="p">:</span>
+                    <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown attribute </span><span class="si">{}</span><span class="s1"> set in psopt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attr</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">}:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;psopt rotate value </span><span class="si">{}</span><span class="s1"> is not implemented&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">))</span>
+        <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">tempdir</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;PSPlugin.read: tempdir </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tempdir</span><span class="p">))</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Convert filename to PNG</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_convert_to_png</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">tempdir</span><span class="p">,</span> <span class="s2">&quot;fname</span><span class="si">%02d</span><span class="s2">.png&quot;</span><span class="p">)</span>
+                <span class="c1"># self._pdf_to_png(f, os.path.join(tempdir.name, &quot;fname.png&quot;))</span>
+            <span class="k">except</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">NotImageError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">NotImageError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> does not look like a PostScript file&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+            <span class="c1"># Read the PNG file(s)</span>
+            <span class="n">image_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">tempdir</span><span class="p">)):</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempdir</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;PSPlugin.read: call ITKPlugin </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">imageio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="n">image_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No image data read&#39;</span><span class="p">)</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">image_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">image_list</span><span class="p">),)</span> <span class="o">+</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">dtype</span>
+        <span class="n">si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">image_list</span><span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;read: img </span><span class="si">{}</span><span class="s1"> si </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+            <span class="n">si</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+        <span class="c1"># Color space: RGB</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;photometricInterpretation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MONOCHROME2&#39;</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">==</span> <span class="s1">&#39;png16m&#39;</span> <span class="ow">and</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="c1"># Photometric interpretation = &#39;RGB&#39;</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;photometricInterpretation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;RGB&#39;</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span> <span class="o">==</span> <span class="mi">90</span><span class="p">:</span>
+            <span class="n">si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rot90</span><span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+        <span class="c1"># Let a single page be a 2D image</span>
+        <span class="k">if</span> <span class="n">si</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">si</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;read: si </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+        <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">si</span>
+
+    <span class="k">def</span> <span class="nf">_need_local_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Do the plugin need access to local files?</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Boolean</span>
+<span class="sd">                - True: The plugin need access to local filenames</span>
+<span class="sd">                - False: The plugin can access files given by an open file handle</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">_set_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_list</span><span class="p">,</span> <span class="n">hdr</span><span class="p">,</span> <span class="n">si</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set header tags.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: format plugin instance</span>
+<span class="sd">            image_list: list with (info,img) tuples</span>
+<span class="sd">            hdr: Header dict</span>
+<span class="sd">            si: numpy array (multi-dimensional)</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            hdr: Header dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1">#super(PSPlugin, self)._set_tags(image_list, hdr, si)</span>
+
+        <span class="c1"># Default spacing and orientation</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;imagePositions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;imagePositions&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;orientation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># Set tags</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">_actual_shape</span> <span class="o">=</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">_color</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="s1">&#39;color&#39;</span> <span class="ow">in</span> <span class="n">hdr</span> <span class="ow">and</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]:</span>
+            <span class="n">_actual_shape</span> <span class="o">=</span> <span class="n">si</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">_color</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">_actual_ndim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">_actual_shape</span><span class="p">)</span>
+        <span class="n">nz</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span>
+            <span class="s1">&#39;row&#39;</span><span class="p">,</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;imagePositions&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">_actual_shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="p">)</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span>
+            <span class="s1">&#39;column&#39;</span><span class="p">,</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;imagePositions&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span>
+            <span class="n">_actual_shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">_actual_ndim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">nz</span> <span class="o">=</span> <span class="n">_actual_shape</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">UniformLengthAxis</span><span class="p">(</span>
+                <span class="s1">&#39;slice&#39;</span><span class="p">,</span>
+                <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;imagePositions&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">nz</span><span class="p">,</span>
+                <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;spacing&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">_color</span><span class="p">:</span>
+            <span class="n">axes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imagedata</span><span class="o">.</span><span class="n">axis</span><span class="o">.</span><span class="n">VariableAxis</span><span class="p">(</span>
+                <span class="s1">&#39;rgb&#39;</span><span class="p">,</span>
+                <span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
+            <span class="p">)</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;axes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">axes</span>
+
+        <span class="n">tags</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nz</span><span class="p">):</span>
+            <span class="n">tags</span><span class="p">[</span><span class="nb">slice</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tags</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span> <span class="nf">_convert_to_png</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">tempdir</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Convert file from PostScript to PNG</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            filename: PostScript file</span>
+<span class="sd">            tempdir:  Output directory</span>
+<span class="sd">            fname:    Output filename</span>
+<span class="sd">                    Multi-page PostScript files will be converted to fname-N.png</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Verify that the input file is a PostScript file</span>
+        <span class="k">if</span> <span class="n">magic</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mime</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;application/postscript&#39;</span> <span class="ow">and</span> \
+           <span class="n">magic</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mime</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;application/pdf&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">NotImageError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> does not look like a PostScript or PDF file&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;gs&quot;</span><span class="p">,</span>  <span class="c1"># actual value doesn&#39;t matter</span>
+            <span class="s2">&quot;-dNOPAUSE&quot;</span><span class="p">,</span> <span class="s2">&quot;-dBATCH&quot;</span><span class="p">,</span> <span class="s2">&quot;-dSAFER&quot;</span><span class="p">,</span> <span class="s2">&quot;-dQUIET&quot;</span><span class="p">,</span>
+            <span class="c1"># &quot;-sDEVICE=pnggray&quot;,</span>
+            <span class="c1"># &quot;-sDEVICE=png16m&quot;,</span>
+            <span class="s2">&quot;-r</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">),</span>
+            <span class="s2">&quot;-sDEVICE=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">),</span>
+            <span class="s2">&quot;-sOutputFile=&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempdir</span><span class="p">,</span> <span class="n">fname</span><span class="p">),</span>
+            <span class="c1"># &quot;-c&quot;, &quot;.setpdfwrite&quot;,</span>
+            <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">filename</span>
+        <span class="p">]</span>
+
+        <span class="c1"># arguments have to be bytes, encode them</span>
+        <span class="n">encoding</span> <span class="o">=</span> <span class="n">locale</span><span class="o">.</span><span class="n">getpreferredencoding</span><span class="p">()</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;_convert_to_png: args </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">instance</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">new_instance</span><span class="p">()</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">init_with_args</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+            <span class="n">code1</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">code</span> <span class="o">==</span> <span class="n">gs</span><span class="o">.</span><span class="n">e_Quit</span><span class="p">:</span>
+                <span class="n">code</span> <span class="o">=</span> <span class="n">code1</span>
+            <span class="n">gs</span><span class="o">.</span><span class="n">delete_instance</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">code</span> <span class="o">==</span> <span class="n">gs</span><span class="o">.</span><span class="n">e_Quit</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">DependencyError</span><span class="p">(</span><span class="s2">&quot;Cannot run Ghostscript: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">GhostscriptError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;_convert_to_png: error: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="n">DependencyError</span><span class="p">(</span><span class="s2">&quot;Cannot run Ghostscript: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+    <span class="c1"># @staticmethod</span>
+    <span class="c1"># def _pdf_to_png(inputPath, outputPath):</span>
+    <span class="c1">#     &quot;&quot;&quot;Convert from pdf to png by using python gfx</span>
+    <span class="c1">#</span>
+    <span class="c1">#     The resolution of the output png can be adjusted in the config file</span>
+    <span class="c1">#     under General -&gt; zoom, typical value 150</span>
+    <span class="c1">#     The quality of the output png can be adjusted in the config file under</span>
+    <span class="c1">#     General -&gt; antiAlise, typical value 5</span>
+    <span class="c1">#</span>
+    <span class="c1">#     :param inputPath: path to a pdf file</span>
+    <span class="c1">#     :param outputPath: path to the location where the output png will be</span>
+    <span class="c1">#         saved</span>
+    <span class="c1">#     &quot;&quot;&quot;</span>
+    <span class="c1">#     print(&quot;converting pdf {} {}&quot;.format(inputPath, outputPath))</span>
+    <span class="c1">#     gfx.setparameter(&quot;zoom&quot;, config.readConfig(&quot;zoom&quot;))  # Gives the image higher resolution</span>
+    <span class="c1">#     doc = gfx.open(&quot;pdf&quot;, inputPath)</span>
+    <span class="c1">#     img = gfx.ImageList()</span>
+    <span class="c1">#</span>
+    <span class="c1">#     img.setparameter(&quot;antialise&quot;, config.readConfig(&quot;antiAliasing&quot;))  # turn on antialising</span>
+    <span class="c1">#     page1 = doc.getPage(1)</span>
+    <span class="c1">#     img.startpage(page1.width, page1.height)</span>
+    <span class="c1">#     page1.render(img)</span>
+    <span class="c1">#     img.endpage()</span>
+    <span class="c1">#     img.save(outputPath)</span>
+
+<div class="viewcode-block" id="PSPlugin.write_3d_numpy"><a class="viewcode-back" href="../../../APIReferenceFormats.html#imagedata.formats.psplugin.PSPlugin.write_3d_numpy">[docs]</a>    <span class="k">def</span> <span class="nf">write_3d_numpy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Write 3D numpy image as PostScript file</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: ITKPlugin instance</span>
+<span class="sd">            si: Series array (3D or 4D), including these attributes:</span>
+<span class="sd">            -   slices,</span>
+<span class="sd">            -   spacing,</span>
+<span class="sd">            -   imagePositions,</span>
+<span class="sd">            -   transformationMatrix,</span>
+<span class="sd">            -   orientation,</span>
+<span class="sd">            -   tags</span>
+
+<span class="sd">            destination: dict of archive and filenames</span>
+<span class="sd">            opts: Output options (dict)</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            imagedata.formats.WriteNotImplemented: Always, writing is not implemented.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">WriteNotImplemented</span><span class="p">(</span>
+            <span class="s1">&#39;Writing PostScript files is not implemented.&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PSPlugin.write_4d_numpy"><a class="viewcode-back" href="../../../APIReferenceFormats.html#imagedata.formats.psplugin.PSPlugin.write_4d_numpy">[docs]</a>    <span class="k">def</span> <span class="nf">write_4d_numpy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Write 4D numpy image as PostScript files</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: ITKPlugin instance</span>
+<span class="sd">            si[tag,slice,rows,columns]: Series array, including these attributes:</span>
+<span class="sd">            -   slices,</span>
+<span class="sd">            -   spacing,</span>
+<span class="sd">            -   imagePositions,</span>
+<span class="sd">            -   transformationMatrix,</span>
+<span class="sd">            -   orientation,</span>
+<span class="sd">            -   tags</span>
+
+<span class="sd">            destination: dict of archive and filenames</span>
+<span class="sd">            opts: Output options (dict)</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            imagedata.formats.WriteNotImplemented: Always, writing is not implemented.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">imagedata</span><span class="o">.</span><span class="n">formats</span><span class="o">.</span><span class="n">WriteNotImplemented</span><span class="p">(</span>
+            <span class="s1">&#39;Writing PostScript files is not implemented.&#39;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Erling Andersen.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
