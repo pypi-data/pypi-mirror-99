@@ -1,0 +1,10 @@
+README.md
+setup.py
+jimo_repositories/__init.py
+jimo_repositories/argsinitialiser.py
+jimo_repositories/fileinfo.py
+jimo_repositories/repository.py
+jimo_repositories.egg-info/PKG-INFO
+jimo_repositories.egg-info/SOURCES.txt
+jimo_repositories.egg-info/dependency_links.txt
+jimo_repositories.egg-info/top_level.txt
