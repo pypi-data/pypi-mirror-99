@@ -1,0 +1,3 @@
+[console_scripts]
+devshell=dev_shell.cmd2app:devshell_cmdloop
+
