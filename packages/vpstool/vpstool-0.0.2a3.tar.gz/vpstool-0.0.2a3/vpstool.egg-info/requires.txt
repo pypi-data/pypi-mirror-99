@@ -1,0 +1,9 @@
+colorlog>=4.6.1
+tqdm
+lxml
+smart-open
+pillow
+bs4
+arrow
+numpy
+termcolor

@@ -1,0 +1,8 @@
+README.md
+setup.py
+vpstool.egg-info/PKG-INFO
+vpstool.egg-info/SOURCES.txt
+vpstool.egg-info/dependency_links.txt
+vpstool.egg-info/entry_points.txt
+vpstool.egg-info/requires.txt
+vpstool.egg-info/top_level.txt
