@@ -1,0 +1,6 @@
+[backwork.backups]
+consul = consul:ConsulBackup
+
+[backwork.restores]
+consul = consul:ConsulRestore
+
