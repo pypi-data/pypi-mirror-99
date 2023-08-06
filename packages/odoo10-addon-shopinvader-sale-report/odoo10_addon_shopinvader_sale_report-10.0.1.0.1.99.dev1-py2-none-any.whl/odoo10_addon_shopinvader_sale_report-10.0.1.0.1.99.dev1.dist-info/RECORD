@@ -1,0 +1,10 @@
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_sale_report/__init__.py,sha256=zjVGiAuFIYb06u3qHs--H2Mo7rFyWbDEqphTuAwa-Cc,142
+odoo/addons/shopinvader_sale_report/__manifest__.py,sha256=TPWLJ5a3OV43wtyl0bsICFBXTGWAohIgxLRPIixW9GY,483
+odoo/addons/shopinvader_sale_report/reports/__init__.py,sha256=tYGUWoKHvudanlktKA6Zs7LbYGkhmRJGqXMKF1v12ZQ,170
+odoo/addons/shopinvader_sale_report/reports/sale_report.py,sha256=5D-wqv1YUJcIRcv14L-8XPYw32BgAI_v4SpNUk8hjLI,805
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1.dist-info/METADATA,sha256=YqMuaRCX1Z6MfJ0Q_M2coH37DV8l2DTrQ8xn3U3LXrw,531
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_sale_report-10.0.1.0.1.99.dev1.dist-info/RECORD,,

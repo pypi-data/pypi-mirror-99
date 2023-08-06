@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo10-addon-shopinvader-sale-report
+Version: 10.0.1.0.1.99.dev1
+Summary: Shopinvader addons to extend sale report with backend
+Home-page: https://github.com/shopinvader/odoo-shopinvader
+Author: ACSONE SA/NV
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: ~=2.7
+Requires-Dist: odoo10-addon-shopinvader
+Requires-Dist: odoo (<10.1dev,>=10.0)
+
+UNKNOWN
+
+
