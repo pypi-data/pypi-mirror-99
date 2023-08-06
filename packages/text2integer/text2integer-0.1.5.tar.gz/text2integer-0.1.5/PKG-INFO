@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: text2integer
+Version: 0.1.5
+Summary: Converts text to integers
+Home-page: UNKNOWN
+Author: Vikash Kumar Prasad
+Author-email: prasad.vikash05@gmail.com
+License: MIT license
+Description: The package is used to convert texts to integers. You can use the below examples to get started
+        
+        pip install text2integer
+        
+        from text_2_integer.t2i import text_2_integer
+        
+        ti = text_2_integer.text_2_int()
+        
+        ti.text2int("five lakh",scales_use='hi')
+        #500000
+        ti.text2int("paanch lakh",scales_use='hi')
+        #500000
+        
+        ti.text2int("nine point five lakh",scales_use='hi')
+        #950000
+        
+        ti.text2int("paanch hazaar",scales_use='hi')
+        #5000
+        
+        
+        We support hindi/english languages and the work is in developmental phase
+        
+        ## License
+        MIT License
+        License: MIT + file text_2_integer.py
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
