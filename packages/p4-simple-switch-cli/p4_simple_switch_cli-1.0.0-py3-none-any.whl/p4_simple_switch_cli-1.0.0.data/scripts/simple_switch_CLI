@@ -1,0 +1,7 @@
+#!python
+import bm_cli
+import sys
+sys.path.append(bm_cli.__path__[0])
+
+import sswitch_CLI
+sswitch_CLI.main()
