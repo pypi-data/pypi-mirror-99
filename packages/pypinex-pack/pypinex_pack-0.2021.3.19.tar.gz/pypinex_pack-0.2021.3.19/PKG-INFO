@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pypinex_pack
+Version: 0.2021.3.19
+Summary: PyPine extension that supports various ways of compressing/uncompressing files: gzip, bzip2, xz, tar and uploadpack.
+Home-page: UNKNOWN
+Author: Jürgen Knauth
+Author-email: pubsrc@binary-overflow.de
+License: Apache2
+Description: pypinex_pack
+        ==========
+        
+        Introduction
+        ------------
+        
+        PyPine extension that supports various ways of compressing/uncompressing files: gzip, bzip2, xz, tar and uploadpack.
+        
+        Information about this module can be found here:
+        
+        * [github.org](https://github.com/jkpubsrc/pypinex-pack)
+        * [pypi.python.org](https://pypi.python.org/pypi/pypinex-pack)
+        
+        Documentation
+        ----------------
+        
+        (TODO)
+        
+        Author
+        -------------------
+        
+        List of Authors:
+        
+        * Jürgen Knauth: pubsrc@binary-overflow.de
+        
+        License
+        -------
+        
+        This software is provided under the following license:
+        
+        * Apache Software License 2.0
+        
+        
+        
+        
+Keywords: pypine,pypinex,gzip,bzip2,xz,uploadpack,tar
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
