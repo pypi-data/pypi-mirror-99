@@ -1,0 +1,10 @@
+pandas
+netcdf4
+numpy
+cartopy
+matplotlib
+datetime
+regex
+
+[test]
+pytest-cov
