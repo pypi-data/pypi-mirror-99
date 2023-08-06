@@ -1,0 +1,8 @@
+tests/__init__.py,sha256=qPMtwpsln8cQOqhImR5YecoV5WYDJjhu9HACRSir56c,15
+tests/skippy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/skippy/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/skippy/core/test_utils.py,sha256=B8G4ZKACVBvfeaqoyp0kP9NlRDt5domOtQYHrFz9UUE,553
+edgerun_skippy_core-0.1.0.dist-info/METADATA,sha256=_1D6zHhPiq_afvVRkTltxfQnq5hezNN9uuK713hhi14,636
+edgerun_skippy_core-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+edgerun_skippy_core-0.1.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+edgerun_skippy_core-0.1.0.dist-info/RECORD,,
