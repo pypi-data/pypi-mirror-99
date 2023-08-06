@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+cowboe.egg-info/PKG-INFO
+cowboe.egg-info/SOURCES.txt
+cowboe.egg-info/dependency_links.txt
+cowboe.egg-info/requires.txt
+cowboe.egg-info/top_level.txt
