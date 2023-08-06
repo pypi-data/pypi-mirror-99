@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: openglass
+Version: 0.3.0
+Summary: Openglass is a tool to query various social network and search for different type of information. Openglass is in its first versions still. Please expect bugs. If you want to contribute please do get in touch.
+Author: Hiro
+Author-email: hiro@torproject.org
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Sphinx (>=3.4.3,<4.0.0)
+Requires-Dist: Telethon (>=1.17.5,<2.0.0)
+Requires-Dist: recommonmark (>=0.7.1,<0.8.0)
+Requires-Dist: six (>=1.15.0,<2.0.0)
+Requires-Dist: tweepy (>=3.9.0,<4.0.0)
