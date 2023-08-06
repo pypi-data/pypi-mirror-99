@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: whatsappchatbot
+Version: 0.0.4
+Summary: Whatsapp chatbot
+Home-page: https://github.com/maxsanwal/whatsappChatbot
+Author: Seemant Singh
+Author-email: seemantskype@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/maxsanwal/whatsappChatbot/issues
+Description: # Whatsapp Chatbot
+        Chatbot trained using your whatsapp chat history. 
+        Steps to run the program:
+        1. download your whatsapp chats
+        2. pip install whatsappchatbot
+        3. import whatsappchatbot
+        4. whatsappchatbot.start_chat("Your-contact's-name-same-as-in-the-file", "Your-name-same-as-in-the-file", "Chatfile-location") 
+        5. scan qr after whatsapp page loads up on your chrome browser and wait for main page to load and then press enter on your terminal or whatever you are running the code on.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
