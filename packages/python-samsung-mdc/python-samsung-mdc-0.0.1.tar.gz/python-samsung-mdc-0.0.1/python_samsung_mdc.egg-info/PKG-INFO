@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: python-samsung-mdc
+Version: 0.0.1
+Summary: http://github.com/vgavro/samsung-mdc
+Home-page: http://github.com/vgavro/samsung-mdc
+Author: Victor Gavro
+Author-email: vgavro@gmail.com
+License: BSD
+Description: http://github.com/vgavro/samsung-mdc
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
