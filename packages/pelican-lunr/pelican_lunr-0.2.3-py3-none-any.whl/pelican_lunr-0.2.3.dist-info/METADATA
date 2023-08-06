@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pelican-lunr
+Version: 0.2.3
+Summary: A plugin that provides lunr index creation for the Pelican static site generator.
+Home-page: https://github.com/kattni/pelican-lunr
+Author: R Hooper
+Author-email: rhooper@toybox.ca
+License: MIT
+Project-URL: Bug Tracker, https://github.com/kattni/pelican-lunr/issues
+Project-URL: Source, https://github.com/kattni/pelican-lunr/
+Keywords: pelican lunr search plugin
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: pelican (<5,>4.5.0)
+Requires-Dist: lunr
+
+# Pelican-Lunr
+
+Plugin for Pelican to use Lunr.js for integrated search.
+
+
