@@ -1,0 +1,43 @@
+- name: debug
+  debug:
+    msg: "jeste provisionere"
+
+- include_tasks: users.yml
+
+- block:
+  - name: set hostname
+    hostname:
+      name: "{{inventory_hostname}}{% if domain|default(False)%}.{{domain}}{%endif%}"
+  - name: install epel
+    yum:
+      name: epel-release
+    retries: 10
+
+  - name: add hostname to /etc/hosts
+    lineinfile:
+      path: /etc/hosts
+      line: "127.0.0.1 {{ inventory_hostname }} # inventory_hostname"
+      regexp: ".* # inventory_hostname"
+      mode: 0644
+
+  - name: configure yum repos
+    yum_repository:
+      name: "{{item.key}}"
+      description: "{{item.value.description|default(item.key)}}"
+      baseurl: "{{item.value.baseurl}}"
+      gpgcheck: "{{item.value.gpgcheck|default(omit)}}"
+      skip_if_unavailable: "{{item.value.skip_if_unavailable|default(omit)}}"
+    loop: "{{configs.repos|default({})|dict2items}}"
+
+  - name: populate service facts
+    service_facts:
+
+  - name: turn off firewalld
+    service:
+      name: firewalld
+      state: stopped
+      enabled: False
+    when: services['firewalld.service']|default(False)
+  when: inventory_hostname != "localhost"
+
+  become: True
