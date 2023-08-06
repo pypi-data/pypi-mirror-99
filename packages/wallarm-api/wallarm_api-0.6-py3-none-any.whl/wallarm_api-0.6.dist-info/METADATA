@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: wallarm-api
+Version: 0.6
+Summary: Wallarm API client
+Home-page: https://github.com/Neraverin/wallarm-api-python
+Author: Vladimir Salykin
+Author-email: neraverin@gmail.com
+License: Apache license 2.0
+Download-URL: https://github.com/Neraverin/wallarm-api-python/archive/v0.6.tar.gz
+Keywords: Wallarm,API client
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6, <4
+Requires-Dist: requests
+Requires-Dist: pydantic
+Requires-Dist: urllib3
+
+UNKNOWN
+
+
