@@ -1,0 +1,1 @@
+from .prediction_info import AiCensorPredictionInfo
