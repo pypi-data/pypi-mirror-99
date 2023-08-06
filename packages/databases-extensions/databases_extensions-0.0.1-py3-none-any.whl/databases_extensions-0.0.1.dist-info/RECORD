@@ -1,0 +1,12 @@
+databases_extensions-0.0.1.data/data/LICENSE.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extensions/__init__.py,sha256=dprMdbxY6rP878KpS-jmjseA4IEBNUVS_iZbecfUnxY,249
+extensions/exceptions.py,sha256=bg7LxEZN5PZZH0DL1Ev1vm6XkJ_w8oqx0sWHWDES9Ck,43
+extensions/pagination.py,sha256=PeJfM2f_JEAc05_XgVIEtAm3NyTaS4stbO9Sl9Depak,4923
+extensions/query_builder.py,sha256=nnaUKelu8XyHVd7I6L2NVqL6N5dR-KtjDc6Cvx507q4,4670
+extensions/types.py,sha256=K8k6bDmvwiFIWAC9miN6sWbV3Dmgu19pvkkHcaEPwaE,2496
+extensions/utils.py,sha256=3GRxCNgilt4dfCAfUDTq-S768gAL2T1FOOkK3uP_Qls,1019
+databases_extensions-0.0.1.dist-info/LICENSE.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+databases_extensions-0.0.1.dist-info/METADATA,sha256=6T5eqEQl2pgwuPyTLgFINyZYm6VbJTimj9IYzVFRDiU,1920
+databases_extensions-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+databases_extensions-0.0.1.dist-info/top_level.txt,sha256=4Py5Ff6_7VXJFhUCvEjIh4Ed6038XVx9AV82fHO5dW4,11
+databases_extensions-0.0.1.dist-info/RECORD,,
