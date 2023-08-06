@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: 3ETool
+Version: 0.0.4
+Summary: Tools for performing exergo-economic and exergo-environmental analysis
+Home-page: https://www.dief.unifi.it/vp-473-exergo-economic-analysis-software.html
+Author: Pietro Ungar
+Author-email: pietro.ungar@unifi.it
+License: GNU GPLv3
+Download-URL: https://github.com/pietroUngar/3ETool/archive/refs/tags/0.0.4.tar.gz
+Description: # 3ETool
+        
+        __3ETool__ contains some useful tools developed by the [SERG research group](https://www.dief.unifi.it/vp-177-serg-group-english-version.html) 
+        of the [University of Florence](https://www.unifi.it/changelang-eng.html) for performing exergo-economic and exergo environmental analysis.
+        
+        __MainModules__ directory contains Base modules such as _Block, Connection, ArrayHandler and Drawer Classes._<br/>
+        __Block Sublcasses__ contains a Block subclass for each component type (e.g. expander, compressor etc.)<br/>
+        __Tools__ contains different APIs needed for the program to run (e.g. the cost correlation handler, 
+        the EES code generator, and the importer and exporter for both Excel and xml files)
+        
+        __-------------------------- !!! THIS IS A BETA VERSION !!! --------------------------__ 
+        
+        please report any bug or problems in the installation to _pietro.ungar@unifi.it_<br/>
+        for further information visit: https://www.dief.unifi.it/vp-473-exergo-economic-analysis-software.html
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
