@@ -1,0 +1,15 @@
+sqlalchemy_mixins/__init__.py,sha256=MF7gDQQnTF07UDz31NcXZLM8-60CRARxmTVbiWbe4Kk,630
+sqlalchemy_mixins/activerecord.py,sha256=ZMGyqGAzZuIX-_wBCN9sMI6a-KKXhULGdiYAGd6eMw8,2304
+sqlalchemy_mixins/eagerload.py,sha256=sWuMvb-xcA_AoPaV76UtVKo2nPoao1lhyOEa7mJACmA,4100
+sqlalchemy_mixins/inspection.py,sha256=brsjZ9H-PBUZhWz6ib6Zdz-dxmPbX5Q2pRu1tFGn6p4,1817
+sqlalchemy_mixins/repr.py,sha256=hSr2Alsprpkvvx8eO-Kx_BoHd1jHXB6wSmbEXOnLPWw,1539
+sqlalchemy_mixins/serialize.py,sha256=M4LSIDyccXCaAxyxNlvWfhHek8RxSPfXFmLfxQy0ghs,1129
+sqlalchemy_mixins/session.py,sha256=Bxj8XCkWA8RoL_ou28mK6R1eYl1fhUTbBae9_Iifdqs,781
+sqlalchemy_mixins/smartquery.py,sha256=srzg7MpUAFr8B8X21mwBBdp72cvqHKNz3LNfrfZi7-0,14720
+sqlalchemy_mixins/timestamp.py,sha256=CgsE1t5FvmE4ZtdyJYqpxG_RIS0n1qBE1_gYGIILAtQ,699
+sqlalchemy_mixins/utils.py,sha256=_i_C0hBVIwUh8CqQrQ3qCRNgTDGDlpYYCPF8jfrnZNs,296
+sqlalchemy_mixins-1.3.dist-info/LICENSE.txt,sha256=rrolOME3ROsjeD8tnLQS-6s_mneOGWmg11rZBfKkW7Y,1113
+sqlalchemy_mixins-1.3.dist-info/METADATA,sha256=M-CU3Q4zF0T02R9QbK6YEo27v1_gbefGBy5nEsuGrQc,1275
+sqlalchemy_mixins-1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sqlalchemy_mixins-1.3.dist-info/top_level.txt,sha256=DZqXOHa1dkpPju6QKxbVLQ99UNOZFfgCGiKPnNT9tkw,18
+sqlalchemy_mixins-1.3.dist-info/RECORD,,
