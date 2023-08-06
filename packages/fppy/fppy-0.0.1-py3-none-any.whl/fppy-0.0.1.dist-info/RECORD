@@ -1,0 +1,14 @@
+fpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fpy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fpy/tests/test_composable.py,sha256=hIBYuy3DTZKfyZeAgLNZ3A4NR9HBvQsgDe0lEZSvWw8,2618
+fpy/tests/test_cont.py,sha256=RHSR3Jd_8CsKenT65SigvhF2DPsMcYZ3SAKiBOd3a0o,755
+fpy/tests/test_do.py,sha256=JzdxcEx14pMudUX8szMaAlxTaYmofXjPl89SHG6yNOA,2133
+fpy/tests/test_either.py,sha256=ckOOgPuQSGLwODnlOnVehPNU95ojV7NB7alVEF1SwWc,1838
+fpy/tests/test_function.py,sha256=qKklqxT_L_w5MTz0Xy3ObJpTjOPvWPXatZ8K8ZwQaBA,772
+fpy/tests/test_maybe.py,sha256=YrswtRqpLiSo3RiMUN5O-bfCjxim_CS8QBbP6yLr6jk,1812
+fpy/tests/test_parsec.py,sha256=KaMl4T0ILX3PsaG0IYzix3heQFAqjQx0K9-lv76gSYA,1854
+fppy-0.0.1.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fppy-0.0.1.dist-info/METADATA,sha256=sGUVC58NGwAktpS8R5e8ykQy0OOcBhhtYz6PzzXgP_U,5246
+fppy-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fppy-0.0.1.dist-info/top_level.txt,sha256=3nf3--fgEUY5lNWm-FCjfalXddRZ69s7ULpkKgdEY6o,4
+fppy-0.0.1.dist-info/RECORD,,
