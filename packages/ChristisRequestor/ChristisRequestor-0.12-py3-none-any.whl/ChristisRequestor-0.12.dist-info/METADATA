@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ChristisRequestor
+Version: 0.12
+Summary: a package to interact with ChristisAPI
+Home-page: https://dev.azure.com/cloudarmin/K8sChristis
+Author: Armin Aminian
+Author-email: rmin.aminian@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+UNKNOWN
+
+
