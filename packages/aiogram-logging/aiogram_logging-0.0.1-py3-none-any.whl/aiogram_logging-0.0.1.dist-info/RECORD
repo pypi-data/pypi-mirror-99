@@ -1,0 +1,8 @@
+aiogram_logging/__init__.py,sha256=HMRjI5kCE9OSwurORnAtnjzsV7pCJz1oqEPcQnbzTcw,116
+aiogram_logging/logger.py,sha256=I9sjMbB5D-3beYftYfgcHVzZ7USTg9fgeDgsVm70GnI,1597
+aiogram_logging/sender.py,sha256=0jnvOscr9FPB0CBd-SwtQFzkhXWqjoMjQAXAIuRQpZk,2198
+aiogram_logging-0.0.1.dist-info/LICENSE,sha256=SuqK9Z4G-xUQOwS5QmA9E2uxPO9rFSnPfbx-E9vUHko,1063
+aiogram_logging-0.0.1.dist-info/METADATA,sha256=OAJazoD3m1h4oETv43wxVjot3UXl3Synao7A1FvJKo4,1769
+aiogram_logging-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiogram_logging-0.0.1.dist-info/top_level.txt,sha256=BFL7_yWwivhRmMtD_QZpAqEU5f_c8vBCulJ7Eh70dgM,16
+aiogram_logging-0.0.1.dist-info/RECORD,,
