@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: telethon-cryptg
+Version: 0.0.1
+Summary: telethon bindings for the tgcrypto module
+Home-page: https://github.com/painor/telethon-tgcrypto
+Author: Painor
+Author-email: pi.oussama@gmail.com
+License: MIT License
+Description: # waiting for andrew to pr a good readme
+Keywords: telethon tgcrypto
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
