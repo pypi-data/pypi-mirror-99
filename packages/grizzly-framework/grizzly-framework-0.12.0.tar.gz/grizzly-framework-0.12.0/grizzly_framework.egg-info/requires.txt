@@ -1,0 +1,15 @@
+cssbeautifier
+fasteners
+ffpuppet
+FuzzManager
+jsbeautifier
+lithium-reducer>=0.5
+prefpicker
+psutil>=4.4.0
+
+[dev]
+pre-commit
+tox
+
+[s3]
+boto3
