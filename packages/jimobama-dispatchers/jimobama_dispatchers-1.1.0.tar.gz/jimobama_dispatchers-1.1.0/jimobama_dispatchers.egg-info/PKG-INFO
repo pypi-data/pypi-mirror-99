@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jimobama-dispatchers
+Version: 1.1.0
+Summary: A simple thread dispatcher for STA modelling
+Home-page: https://github.com/miljimo/dispatchers.git
+Author: Obaro I. Johnson
+Author-email: johnson.obaro@hotmail.com
+License: UNKNOWN
+Description: A simple thread dispatcher message queue implementation for operations
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
