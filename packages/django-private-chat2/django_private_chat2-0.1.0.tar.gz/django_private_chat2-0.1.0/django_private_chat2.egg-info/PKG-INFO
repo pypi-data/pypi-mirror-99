@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: django-private-chat2
+Version: 0.1.0
+Summary: Your project description goes here
+Home-page: https://github.com/delneg/django_private_chat2
+Author: Bearle
+Author-email: tech@bearle.ru
+License: MIT
+Description: 
+        
+        History
+        -------
+        
+        0.1.0 (2021-03-06)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: django_private_chat2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
