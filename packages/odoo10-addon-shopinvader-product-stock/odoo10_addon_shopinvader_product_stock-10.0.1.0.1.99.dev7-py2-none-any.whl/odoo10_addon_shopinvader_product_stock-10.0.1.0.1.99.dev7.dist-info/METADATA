@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: odoo10-addon-shopinvader-product-stock
+Version: 10.0.1.0.1.99.dev7
+Summary: This module is used to choose a stock field during theexport (by backend)
+Home-page: https://github.com/shopinvader/odoo-shopinvader
+Author: Akretion,ACSONE SA/NV
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: ~=2.7
+Requires-Dist: odoo10-addon-connector-search-engine
+Requires-Dist: odoo10-addon-queue-job
+Requires-Dist: odoo10-addon-shopinvader
+Requires-Dist: odoo10-addon-shopinvader-search-engine
+Requires-Dist: odoo (<10.1dev,>=10.0)
+Requires-Dist: openupgradelib
+Requires-Dist: slugify
+
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
+
+==============
+Shopinvader
+==============
+
+This is shopinvader product stock module.
+This module is used to export a specific stock field on product.product,
+only if the value has been updated.
+
+Installation
+============
+
+TODO
+
+Configuration
+=============
+
+TODO
+
+
+Usage
+=====
+
+TODO
+
+Known issues / Roadmap
+======================
+
+
+Bug Tracker
+===========
+
+Bugs are tracked on `GitHub Issues
+<https://github.com/akretion/shopinvader/issues>`_. In case of trouble, please
+check there if your issue has already been reported. If you spotted it first,
+help us smashing it by providing a detailed and welcomed feedback.
+
+Credits
+=======
+
+Contributors
+------------
+
+* Sebastien BEAU <sebastien.beau@akretion.com>
+* François Honoré <francois.honore@acsone.eu>
+
+Funders
+-------
+
+The development of this module has been financially supported by:
+
+* Akretion R&D
+* Adaptoo
+* Encresdubuit
+* Abilis
+
+
