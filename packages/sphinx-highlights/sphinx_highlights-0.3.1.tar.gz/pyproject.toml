@@ -1,0 +1,71 @@
+[build-system]
+requires = [ "whey",]
+build-backend = "whey"
+
+[project]
+name = "sphinx-highlights"
+version = "0.3.1"
+description = "Sphinx extension to display a selection of highlights from a Python library."
+readme = "README.rst"
+keywords = [ "sphinx", "documentation", "sphinx-extension",]
+dynamic = []
+dependencies = [
+    "default-values>=0.4.2",
+    "docutils>=0.16",
+    "domdf-python-tools>=2.2.0",
+    "sphinx<3.4.0,>=3.2.0",
+    "sphinx-panels>=0.5.1",
+    "sphinx-toolbox>=1.9.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+requires-python = ">=3.7"
+
+[[project.authors]]
+email = "dominic@davis-foster.co.uk"
+name = "Dominic Davis-Foster"
+
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/sphinx-toolbox/sphinx-highlights"
+"Issue Tracker" = "https://github.com/sphinx-toolbox/sphinx-highlights/issues"
+"Source Code" = "https://github.com/sphinx-toolbox/sphinx-highlights"
+Documentation = "https://sphinx-highlights.readthedocs.io/en/latest"
+
+[tool.whey]
+base-classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+python-versions = [ "3.7", "3.8", "3.9",]
+python-implementations = [ "CPython", "PyPy",]
+platforms = [ "Windows", "macOS", "Linux",]
+license-key = "MIT"
+package = "sphinx_highlights"
