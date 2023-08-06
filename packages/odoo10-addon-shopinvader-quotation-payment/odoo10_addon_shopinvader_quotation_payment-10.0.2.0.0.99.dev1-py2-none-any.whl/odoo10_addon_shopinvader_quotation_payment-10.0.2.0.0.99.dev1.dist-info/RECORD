@@ -1,0 +1,17 @@
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_quotation_payment/README.rst,sha256=kOIKshjH458VfViGXMwXGmWEkYeh5DdIgz2dCG-6IhU,2515
+odoo/addons/shopinvader_quotation_payment/__init__.py,sha256=qksdRxAxHhEXpY0NZlTEolhxFILjRI5o7J0O4UrAE04,23
+odoo/addons/shopinvader_quotation_payment/__manifest__.py,sha256=tYdNO5dBKnCgjRHDqVwrDGEj1xdR7Z715ZXxrHtsL30,581
+odoo/addons/shopinvader_quotation_payment/readme/CONTRIBUTORS.rst,sha256=BcLPQMLYjT9xzYzk_s_qdKUjLUaJgHHE2Lmdgb2iwn4,91
+odoo/addons/shopinvader_quotation_payment/readme/CREDITS.rst,sha256=zb84c76ej0YfIpd4G7RFAQfyCM9-2Kt-k2bQ76428AY,94
+odoo/addons/shopinvader_quotation_payment/readme/DESCRIPTION.rst,sha256=cVJ2DGynDQp0xCRIn_LYGG2CymyabGsLhx0nOG7zWNc,373
+odoo/addons/shopinvader_quotation_payment/services/__init__.py,sha256=RIU4n4BVAQg7toBX3_VInCHw4L3TTyXhMqF58a5hLhE,81
+odoo/addons/shopinvader_quotation_payment/services/cart.py,sha256=WQ_J2UwtibiqkHf2rsA_BQNI6Bubw_U-JG3h-809-Gc,872
+odoo/addons/shopinvader_quotation_payment/services/invader_payment_service.py,sha256=bEFxR0lQqSKZFXUUtezmw3vjLY7EYLWdPEx9E7W9rnA,1375
+odoo/addons/shopinvader_quotation_payment/services/quotation.py,sha256=UojDCdBFKRBr5hfSh3kIa9vzMcXQ5-LoqNwZHvsU1Gs,735
+odoo/addons/shopinvader_quotation_payment/static/description/index.html,sha256=GGj1rsQCPg4jzYlc08QnS48v2YE7IS8Bu_hPbpnrvUE,11779
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1.dist-info/METADATA,sha256=VdgIWoZEDQF9QaoiIflsOmdiOOeUXcuU7Q1D3QFhrcs,3082
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_quotation_payment-10.0.2.0.0.99.dev1.dist-info/RECORD,,
