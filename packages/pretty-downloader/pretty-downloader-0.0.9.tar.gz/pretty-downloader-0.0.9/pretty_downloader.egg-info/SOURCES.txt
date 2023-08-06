@@ -1,0 +1,9 @@
+README.md
+setup.py
+pretty_downloader/__init__.py
+pretty_downloader/pretty_downloader.py
+pretty_downloader.egg-info/PKG-INFO
+pretty_downloader.egg-info/SOURCES.txt
+pretty_downloader.egg-info/dependency_links.txt
+pretty_downloader.egg-info/requires.txt
+pretty_downloader.egg-info/top_level.txt
