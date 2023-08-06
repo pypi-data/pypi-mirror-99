@@ -1,0 +1,12 @@
+setup.py
+odoo/addons/purchase_products_only_from_vendors/__init__.py
+odoo/addons/purchase_products_only_from_vendors/__manifest__.py
+odoo/addons/purchase_products_only_from_vendors/models/__init__.py
+odoo/addons/purchase_products_only_from_vendors/models/purchase_order.py
+odoo/addons/purchase_products_only_from_vendors/views/purchase_order_view.xml
+odoo12_addon_purchase_products_only_from_vendors.egg-info/PKG-INFO
+odoo12_addon_purchase_products_only_from_vendors.egg-info/SOURCES.txt
+odoo12_addon_purchase_products_only_from_vendors.egg-info/dependency_links.txt
+odoo12_addon_purchase_products_only_from_vendors.egg-info/not-zip-safe
+odoo12_addon_purchase_products_only_from_vendors.egg-info/requires.txt
+odoo12_addon_purchase_products_only_from_vendors.egg-info/top_level.txt
