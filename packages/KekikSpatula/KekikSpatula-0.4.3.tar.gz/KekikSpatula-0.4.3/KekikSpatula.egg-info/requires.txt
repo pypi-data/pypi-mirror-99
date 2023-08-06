@@ -1,0 +1,12 @@
+requests
+tabulate
+beautifulsoup4
+lxml
+html5lib
+pandas
+attrdict
+pytube
+pytz
+parsel
+pyshorteners
+fake_useragent
