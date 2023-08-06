@@ -1,0 +1,15 @@
+lpm/__init__.py,sha256=wJitUD0VbqpxZz93-vvxrkuTOUmQo8O6mstzBByaBZ4,686
+lpm/__main__.py,sha256=MH9n7sLQNDcjNP4SkH5VWPbAoTMJuhmN3CZAcE00_oM,137
+lpm/commandline.py,sha256=7gpKtqVRpquzEf-i-QZe5TyVsPvpF8dEtiWc7f0xZFI,3347
+lpm/config.py,sha256=RG890dTZJP7-YwjHGSoKxlArBIjHvhFUOtJXgeLvltM,3381
+lpm/game.py,sha256=tQXjD5jms8V-w03WwD4hKlXyDUm90oiDPqkPK0WGJUA,7485
+lpm/screen.py,sha256=7OExVruCsCwr6c-r60LCXwtA2MIue9yWm6kVzFnsRwM,12099
+lpm/snippets.py,sha256=RhmoKXSyyHx36q6CaiJrF8oaX34b_QHRTzvjE94_mEY,5440
+lpm/stats.py,sha256=GymvdsQnOzdDLjdnhmThNnBr4nC5k9_77XE-J_8vbvk,6571
+lpm-0.0.5.dist-info/LICENSE.txt,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+lpm-0.0.5.dist-info/METADATA,sha256=6kA0Vy1uxL9NpMggeuC3oProKthg2fx8Nf66YJ56g3M,2057
+lpm-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lpm-0.0.5.dist-info/entry_points.txt,sha256=qsc2oK9RbNbaGRPZNsEdttFNtAarQrqzI8y46MLUTBw,42
+lpm-0.0.5.dist-info/top_level.txt,sha256=B2SMOZAvJ8Y2-LN7aE4kPDgFjbFCUW0Vd9pDrDT8Ae0,4
+lpm-0.0.5.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+lpm-0.0.5.dist-info/RECORD,,
