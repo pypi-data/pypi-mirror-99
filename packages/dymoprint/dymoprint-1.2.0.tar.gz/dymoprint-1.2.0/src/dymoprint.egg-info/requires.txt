@@ -1,0 +1,7 @@
+appdirs
+Pillow<9,>=8.1.2
+PyQRCode<2,>=1.2.1
+python-barcode>=0.13.1<1
+
+[:python_version < "3.8"]
+importlib-metadata
