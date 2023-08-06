@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+xchainpy_client/__init__.py
+xchainpy_client/interface.py
+xchainpy_client.egg-info/PKG-INFO
+xchainpy_client.egg-info/SOURCES.txt
+xchainpy_client.egg-info/dependency_links.txt
+xchainpy_client.egg-info/requires.txt
+xchainpy_client.egg-info/top_level.txt
