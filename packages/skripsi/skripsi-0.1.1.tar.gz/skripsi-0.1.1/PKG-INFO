@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: skripsi
+Version: 0.1.1
+Summary: Alat bantu skripsi berbasis python
+Home-page: https://github.com/hexatester/skripsi
+License: GPL-3.0-onlyr
+Keywords: skripsi
+Author: hexatester
+Author-email: hexatester@protonmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education
+Project-URL: Repository, https://github.com/hexatester/skripsi
+Description-Content-Type: text/markdown
+
+# skripsi
+
+Alat bantu skripsi berbasis python.
+
+Aplikasi ini masih dalam tahap pengembangan awal!
+
