@@ -1,0 +1,5 @@
+setup.py
+pianist.egg-info/PKG-INFO
+pianist.egg-info/SOURCES.txt
+pianist.egg-info/dependency_links.txt
+pianist.egg-info/top_level.txt
