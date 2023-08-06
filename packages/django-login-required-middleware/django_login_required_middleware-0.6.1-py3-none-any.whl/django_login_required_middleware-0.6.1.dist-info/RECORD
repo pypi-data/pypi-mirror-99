@@ -1,0 +1,8 @@
+login_required/__init__.py,sha256=Fgk9QS5ed5ObySbz-o3-TNToXF5mLUeQQolNjRfd5LY,429
+login_required/apps.py,sha256=Gl8DWOJoT7zFL_5IL6whTHz2ST5QRXS0mOL6BA5r1Qw,500
+login_required/middleware.py,sha256=9HMD-o29CPA0hsQsktWoLxWQTKL60pRUxQvRxbKJtNQ,1404
+django_login_required_middleware-0.6.1.dist-info/LICENSE,sha256=z4QB8Hq353D5o9i0XBeLD-wDbBDSJR7E8MQxjo-hDCE,1082
+django_login_required_middleware-0.6.1.dist-info/METADATA,sha256=KNkXTtiLf0jVT4_bEd9dLhGOIva91SaM8tHUOHoeNnA,3497
+django_login_required_middleware-0.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_login_required_middleware-0.6.1.dist-info/top_level.txt,sha256=uQ7GELt_I8A9acHXLq45nKzB-hVbUsFacAUMWcDFP-8,15
+django_login_required_middleware-0.6.1.dist-info/RECORD,,
