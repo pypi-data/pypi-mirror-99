@@ -1,0 +1,52 @@
+\indexentry{module@\spxentry{module}!corelibs.cleanse@\spxentry{corelibs.cleanse}|hyperpage}{9}
+\indexentry{corelibs.cleanse@\spxentry{corelibs.cleanse}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!cleanse.py@\spxentry{cleanse.py}|hyperpage}{9}
+\indexentry{cleanse.py@\spxentry{cleanse.py}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{is\_datetime() (in module corelibs.cleanse)@\spxentry{is\_datetime()}\spxextra{in module corelibs.cleanse}|hyperpage}{9}
+\indexentry{is\_str() (in module corelibs.cleanse)@\spxentry{is\_str()}\spxextra{in module corelibs.cleanse}|hyperpage}{10}
+\indexentry{module@\spxentry{module}!corelibs.lazy@\spxentry{corelibs.lazy}|hyperpage}{15}
+\indexentry{corelibs.lazy@\spxentry{corelibs.lazy}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!lazy.py@\spxentry{lazy.py}|hyperpage}{15}
+\indexentry{lazy.py@\spxentry{lazy.py}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{add\_dir\_path\_2\_project() (in module corelibs.lazy)@\spxentry{add\_dir\_path\_2\_project()}\spxextra{in module corelibs.lazy}|hyperpage}{15}
+\indexentry{convert\_2\_dict() (in module corelibs.lazy)@\spxentry{convert\_2\_dict()}\spxextra{in module corelibs.lazy}|hyperpage}{16}
+\indexentry{copy() (in module corelibs.lazy)@\spxentry{copy()}\spxextra{in module corelibs.lazy}|hyperpage}{17}
+\indexentry{datetime\_2\_epoch() (in module corelibs.lazy)@\spxentry{datetime\_2\_epoch()}\spxextra{in module corelibs.lazy}|hyperpage}{18}
+\indexentry{delete\_files() (in module corelibs.lazy)@\spxentry{delete\_files()}\spxextra{in module corelibs.lazy}|hyperpage}{20}
+\indexentry{epoch\_2\_datetime() (in module corelibs.lazy)@\spxentry{epoch\_2\_datetime()}\spxextra{in module corelibs.lazy}|hyperpage}{21}
+\indexentry{get\_abspath() (in module corelibs.lazy)@\spxentry{get\_abspath()}\spxextra{in module corelibs.lazy}|hyperpage}{22}
+\indexentry{get\_bytes\_size\_4\_human() (in module corelibs.lazy)@\spxentry{get\_bytes\_size\_4\_human()}\spxextra{in module corelibs.lazy}|hyperpage}{22}
+\indexentry{get\_bytes\_size\_formats() (in module corelibs.lazy)@\spxentry{get\_bytes\_size\_formats()}\spxextra{in module corelibs.lazy}|hyperpage}{23}
+\indexentry{get\_caller\_line\_number() (in module corelibs.lazy)@\spxentry{get\_caller\_line\_number()}\spxextra{in module corelibs.lazy}|hyperpage}{24}
+\indexentry{get\_caller\_module\_name() (in module corelibs.lazy)@\spxentry{get\_caller\_module\_name()}\spxextra{in module corelibs.lazy}|hyperpage}{25}
+\indexentry{get\_closest\_value\_in\_list() (in module corelibs.lazy)@\spxentry{get\_closest\_value\_in\_list()}\spxextra{in module corelibs.lazy}|hyperpage}{26}
+\indexentry{get\_dir\_n\_basename() (in module corelibs.lazy)@\spxentry{get\_dir\_n\_basename()}\spxextra{in module corelibs.lazy}|hyperpage}{27}
+\indexentry{get\_file\_extension() (in module corelibs.lazy)@\spxentry{get\_file\_extension()}\spxextra{in module corelibs.lazy}|hyperpage}{28}
+\indexentry{get\_home() (in module corelibs.lazy)@\spxentry{get\_home()}\spxextra{in module corelibs.lazy}|hyperpage}{29}
+\indexentry{get\_hostname() (in module corelibs.lazy)@\spxentry{get\_hostname()}\spxextra{in module corelibs.lazy}|hyperpage}{29}
+\indexentry{get\_module\_name() (in module corelibs.lazy)@\spxentry{get\_module\_name()}\spxextra{in module corelibs.lazy}|hyperpage}{30}
+\indexentry{get\_module\_path() (in module corelibs.lazy)@\spxentry{get\_module\_path()}\spxextra{in module corelibs.lazy}|hyperpage}{30}
+\indexentry{get\_path\_docs\_dir() (in module corelibs.lazy)@\spxentry{get\_path\_docs\_dir()}\spxextra{in module corelibs.lazy}|hyperpage}{31}
+\indexentry{get\_path\_input\_dir() (in module corelibs.lazy)@\spxentry{get\_path\_input\_dir()}\spxextra{in module corelibs.lazy}|hyperpage}{32}
+\indexentry{get\_path\_logs\_dir() (in module corelibs.lazy)@\spxentry{get\_path\_logs\_dir()}\spxextra{in module corelibs.lazy}|hyperpage}{33}
+\indexentry{get\_path\_output\_dir() (in module corelibs.lazy)@\spxentry{get\_path\_output\_dir()}\spxextra{in module corelibs.lazy}|hyperpage}{34}
+\indexentry{get\_path\_scaffold\_directories() (in module corelibs.lazy)@\spxentry{get\_path\_scaffold\_directories()}\spxextra{in module corelibs.lazy}|hyperpage}{35}
+\indexentry{get\_timestamp() (in module corelibs.lazy)@\spxentry{get\_timestamp()}\spxextra{in module corelibs.lazy}|hyperpage}{37}
+\indexentry{get\_username() (in module corelibs.lazy)@\spxentry{get\_username()}\spxextra{in module corelibs.lazy}|hyperpage}{39}
+\indexentry{is\_file\_exists() (in module corelibs.lazy)@\spxentry{is\_file\_exists()}\spxextra{in module corelibs.lazy}|hyperpage}{39}
+\indexentry{is\_jupyter() (in module corelibs.lazy)@\spxentry{is\_jupyter()}\spxextra{in module corelibs.lazy}|hyperpage}{40}
+\indexentry{is\_namedtuple\_instance() (in module corelibs.lazy)@\spxentry{is\_namedtuple\_instance()}\spxextra{in module corelibs.lazy}|hyperpage}{41}
+\indexentry{is\_platform() (in module corelibs.lazy)@\spxentry{is\_platform()}\spxextra{in module corelibs.lazy}|hyperpage}{42}
+\indexentry{is\_stdin() (in module corelibs.lazy)@\spxentry{is\_stdin()}\spxextra{in module corelibs.lazy}|hyperpage}{42}
+\indexentry{is\_validated\_schema() (in module corelibs.lazy)@\spxentry{is\_validated\_schema()}\spxextra{in module corelibs.lazy}|hyperpage}{43}
+\indexentry{merge\_dictionaries() (in module corelibs.lazy)@\spxentry{merge\_dictionaries()}\spxextra{in module corelibs.lazy}|hyperpage}{48}
+\indexentry{mkdir() (in module corelibs.lazy)@\spxentry{mkdir()}\spxextra{in module corelibs.lazy}|hyperpage}{49}
+\indexentry{move() (in module corelibs.lazy)@\spxentry{move()}\spxextra{in module corelibs.lazy}|hyperpage}{53}
+\indexentry{open\_explorer() (in module corelibs.lazy)@\spxentry{open\_explorer()}\spxextra{in module corelibs.lazy}|hyperpage}{54}
+\indexentry{rename() (in module corelibs.lazy)@\spxentry{rename()}\spxextra{in module corelibs.lazy}|hyperpage}{55}
+\indexentry{reverse\_named\_tuple() (in module corelibs.lazy)@\spxentry{reverse\_named\_tuple()}\spxextra{in module corelibs.lazy}|hyperpage}{59}
+\indexentry{module@\spxentry{module}!corelibs.log@\spxentry{corelibs.log}|hyperpage}{61}
+\indexentry{corelibs.log@\spxentry{corelibs.log}!module@\spxentry{module}|hyperpage}{61}
+\indexentry{module@\spxentry{module}!log.py@\spxentry{log.py}|hyperpage}{61}
+\indexentry{log.py@\spxentry{log.py}!module@\spxentry{module}|hyperpage}{61}
+\indexentry{ColorLog (class in corelibs.log)@\spxentry{ColorLog}\spxextra{class in corelibs.log}|hyperpage}{61}

@@ -1,0 +1,7 @@
+# schema_conf_test.yaml
+list(include("person"), min=1)
+---
+person:
+  first name: str()
+  last name: str()
+  age: int(max=130, required=False)

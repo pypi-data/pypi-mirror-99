@@ -1,0 +1,13 @@
+- first name: "Kim Marie Adélie"
+  last name: "TRUONG"
+  age: 6
+
+- first name: "Anne"
+  last name: "TRUONG"
+
+- first name: "Michel"
+  last name: "TRUONG"
+  age: 231  # erreur car age supérieur à 130 qui est le maximum autorisé
+  unknown key: "yeah!"  # erreur car clé inconnue
+
+- mt: False  # erreur car clé inconnu dans un nouveau bloc
