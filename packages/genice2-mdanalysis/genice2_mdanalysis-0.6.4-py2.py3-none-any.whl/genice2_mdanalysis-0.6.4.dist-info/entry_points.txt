@@ -1,0 +1,3 @@
+[genice2_format]
+mdanalysis = genice2_mdanalysis.formats.mdanalysis
+
