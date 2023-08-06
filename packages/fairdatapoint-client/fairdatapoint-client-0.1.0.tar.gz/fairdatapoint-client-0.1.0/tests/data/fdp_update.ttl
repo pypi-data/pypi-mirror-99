@@ -1,0 +1,23 @@
+@prefix ns1: <http://www.w3.org/ns/dcat#> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns3: <http://rdf.biosemantics.org/ontologies/fdp-o#> .
+@prefix ns4: <http://www.re3data.org/schema/3-0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fdp.fairdatapoint.nl/fdp> a ns4:Repository ;
+    rdfs:label "FAIR Data Point service of Plant Breeding group at Wageningen University and Research." ;
+    ns2:conformsTo <https://github.com/FAIRDataTeam/FAIRDataPoint-Spec> ;
+    ns2:description "This service provides machine-readable descriptions about available datasets (metadata)." ;
+    ns2:hasVersion "2.0" ;
+    ns2:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    ns2:publisher <http://orcid.org/0000-0003-1711-7961> ;
+    ns2:title "FAIR Data Point service of Plant Breeding group at Wageningen University and Research." ;
+    ns3:metadataIdentifier <http://example.com/ns#fdp> ;
+    ns3:metadataIssued "2019-04-09T10:01:00"^^xsd:dateTime ;
+    ns3:metadataModified "2019-05-10T09:00:00"^^xsd:dateTime ;
+    ns4:dataCatalog <http://fdp.fairdatapoint.nl/catalog/catalog01>,
+        <http://fdp.fairdatapoint.nl/catalog/catalog02> ;
+    ns4:repositoryIdentifier <http://example.com/ns#fdp_repositoryID> .

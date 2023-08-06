@@ -1,0 +1,14 @@
+rdflib
+rdflib-jsonld
+requests
+
+[docs]
+Sphinx
+ipython
+
+[tests]
+pytest
+pytest-datadir-ng
+pytest-cov
+coveralls
+requests-mock
