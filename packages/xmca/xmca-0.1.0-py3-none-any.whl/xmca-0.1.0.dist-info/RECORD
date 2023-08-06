@@ -1,0 +1,13 @@
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/array.py,sha256=qulGLpkg6o8meJRN9AifeaiCQFZT1DNXCDSLteB-xn4,2277
+tools/rotation.py,sha256=kCPwBepFwKoCApBiC88ju0cXlD-O9zeZLtcyt5IAsvI,4341
+tools/text.py,sha256=3A-2tV8FeHD0PWF2v9ySU7KvY2G2ga4yyRqS9sBCAhA,795
+tools/xarray.py,sha256=pqf5J6mnphdlDa7MK1H3Xyt0mRa-rpE_vI5vFcRF4SI,3266
+xmca/__init__.py,sha256=pirfe4j0AjyuJ_uGsHvJJgE1A0OAk6p6mdSPGGjO1wQ,56
+xmca/array.py,sha256=w7sU2TwGCFE1PuayGFl2kMvWpPk6Muh3pMCcIt6eAUc,38535
+xmca/xarray.py,sha256=RenkrmNpEMZT9Ys8n3bM9nVK1Fj_TkTcmTO2hwaL0Ts,33383
+xmca-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xmca-0.1.0.dist-info/METADATA,sha256=M8KK2QCNpXJA6K52H4H3lXGGNNdlAgvRv6kxJlIwj5s,1531
+xmca-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xmca-0.1.0.dist-info/top_level.txt,sha256=_3xUEylyN2KGoJaHcdSDMfATZk8TkHdelSsQyaXq6x4,11
+xmca-0.1.0.dist-info/RECORD,,
