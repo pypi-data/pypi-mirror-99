@@ -1,0 +1,9 @@
+fastrank-0.7.0.dist-info/METADATA,sha256=hmBcyqgPBafIJNgrENTLgOFKjunnUenLstkqU7ezhB4,1788
+fastrank-0.7.0.dist-info/WHEEL,sha256=bHu2CsMc1D8oQ0zb1gwwi0q1J_EdbY3_sTS-XRg-feQ,109
+fastrank/training.py,sha256=Mq8gjokDI5TDh1_fDpU5lOpCa2okfFWvgObKEhqQ1pI,4525
+fastrank/__init__.py,sha256=alIrSys9kjk2DGQAI_p3-Kna6-09ic3r4Ku1khplqCE,258
+fastrank/clib.py,sha256=hsmyW7HVIdMVyipgWsYwU5dy3eJO9ILUGpyqopPnCs4,18189
+fastrank/fastrank/__init__.py,sha256=fAua8dQbFJlLpwheN-qdKEbbyLPRoS-P40C4XkthPaQ,142
+fastrank/fastrank/ffi.py,sha256=JE_HJjHBjXvC-smrD5G7Ed8lFW5mnBKJeGTPF33fkyI,2459
+fastrank/fastrank/native.so,sha256=Imp2vj7mlr7pOpZLuBcAwo3_zMgMtgaq64UU8rEi3Rc,2004136
+fastrank-0.7.0.dist-info/RECORD,,
