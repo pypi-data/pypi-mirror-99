@@ -1,0 +1,10 @@
+pyhdfs_client/__init__.py,sha256=yE74e613DQBe6JOOTTP0JKvXdrLpajo4EUwyBz9AYak,140
+pyhdfs_client/cli.py,sha256=DXhRLMB7677iVR7LYRLWXQ47m0ofoRYQhi8wHClfcbk,473
+pyhdfs_client/pyhdfs_client.py,sha256=_pVdZIHTGczVYAMvdLpiZh7Z0K35QZzXFePl_lfXe_8,4404
+pyhdfs_client-0.1.1.dist-info/AUTHORS.rst,sha256=Q-TlRZ9QYpaAt9_ngGrddV6DS3gqHOFfZ81qxXTxXZA,147
+pyhdfs_client-0.1.1.dist-info/LICENSE,sha256=kkss9oBe7OQiIUjd10Tgnw2RpMnsMh4g15cSAEqTryE,1092
+pyhdfs_client-0.1.1.dist-info/METADATA,sha256=LjImx3woQHAkcAFMa5cbvB217bs3yljCZTuKlbA6lts,1822
+pyhdfs_client-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pyhdfs_client-0.1.1.dist-info/entry_points.txt,sha256=zW18W-hFI1Y2vEaQkfOCmUu_MwBugFTGwCOF9JEtN8o,58
+pyhdfs_client-0.1.1.dist-info/top_level.txt,sha256=8ygTzvNy4tMYi-GH4qnU7m2yD793oOZaWq_YNw4zPLs,14
+pyhdfs_client-0.1.1.dist-info/RECORD,,
