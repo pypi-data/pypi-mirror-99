@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: flatten-xyz
+Version: 0.2.0
+Summary: A example for flatten arrays
+Home-page: https://github.com/adrian-zumbler/flatten_xyz
+Author: Adrian Meza
+Author-email: adrianm1@outlook.com
+License: BSD 2-clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.6

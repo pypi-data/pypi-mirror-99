@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+src/flatten_xyz/__init__.py
+src/flatten_xyz/flatten.py
+src/flatten_xyz.egg-info/PKG-INFO
+src/flatten_xyz.egg-info/SOURCES.txt
+src/flatten_xyz.egg-info/dependency_links.txt
+src/flatten_xyz.egg-info/top_level.txt
