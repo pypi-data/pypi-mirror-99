@@ -1,0 +1,4 @@
+django
+django-redis>=4.12.1
+django-apiview>=0.9.25
+requests>=2.25.1
