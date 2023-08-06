@@ -1,0 +1,15 @@
+corradin_ovp_utils/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+corradin_ovp_utils/_nbdev.py,sha256=t8WEAbV9nDrjTT-aQeu3AjqY29TRjq3pPkRzcDMfFnM,1584
+corradin_ovp_utils/catalog.py,sha256=kM6uI8TLH-ojJiEn8lumK0qSiUimLOOYlZ6V-4BdDJc,436
+corradin_ovp_utils/core.py,sha256=nHJRmrNLZ-Mpi-4HwSpAeNEpac0AaSpQ6BcRUVEupaE,101
+corradin_ovp_utils/datasets/CombinedGenoPheno.py,sha256=ZWT6dsBGUKMKgbYnx5um4w2y8c_tWbl-bvd7dPxVQ-Q,2552
+corradin_ovp_utils/datasets/OVPDataset.py,sha256=juOo-kCO4Ut2m6he44DrgxMshOTJTXaGlj7QCDzYVo0,9257
+corradin_ovp_utils/datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corradin_ovp_utils/datasets/genetic_file.py,sha256=Uvu7EZfNvHn57rU2FHS9ZSHMCBvgz3ds7hQSRnJVgGs,8647
+corradin_ovp_utils/datasets/sample_file.py,sha256=___609Y0XxJrnlJwdEc3chZf-bt61gr1diuF-lVgRxY,1318
+corradin_ovp_utils/datasets/utils.py,sha256=kH-ycg9qDQjAIuaC7KsUnjvaFss2T5yWIiFDNTrEpLY,305
+corradin_ovp_utils/odds_ratio.py,sha256=kD4cTU26MqYG9XLp3yEwLl3es7kFBy1VuXMKWGThgG4,1955
+corradin_ovp_utils-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+corradin_ovp_utils-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+corradin_ovp_utils-0.1.0.dist-info/METADATA,sha256=203jetYmfOZyCersAfeN3jxiegx6_Yegpc16FqsJRmo,288
+corradin_ovp_utils-0.1.0.dist-info/RECORD,,
