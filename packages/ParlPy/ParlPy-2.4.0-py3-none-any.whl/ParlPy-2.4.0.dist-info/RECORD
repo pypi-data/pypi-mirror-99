@@ -1,0 +1,17 @@
+parlpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parlpy/bills/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parlpy/bills/bill_details_iterator.py,sha256=yWYUTc8ndIByxrVsn2NmKLBmQorOnnV0EU8syATntJQ,2513
+parlpy/bills/bill_list_fetcher.py,sha256=atTgWhJvNZ34E4XKmZLXT1TZWAEMMth3HVfDQ2uLMeg,15636
+parlpy/bills/bill_votes_fetcher.py,sha256=87nERi33e4Xz9Y6sif93sSoNEIkt8xkviZsdzY2ItQQ,5624
+parlpy/bills/summary_fetcher.py,sha256=0n9GclodIoLVOR5GfVxPqeRb1Lg6KeA1txIf1WoYgRg,2462
+parlpy/mps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parlpy/mps/mp_fetcher.py,sha256=D-W1vAtKXgwDK13YqO-mfmY_DrksQ6Iqvj4jLy3K3to,6994
+parlpy/mps/parties_fetcher.py,sha256=E8hkbQUJvy0D3GDcTC38jws5nVGcLrq3V6X2mRCu-zU,746
+parlpy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parlpy/utils/constituency.py,sha256=-xRN6k7T3aB0ADD8lJClNO_bK79nhthPt88-SeGrRr0,582
+parlpy/utils/dates.py,sha256=h93xgrKR4Ju9EGPM1mJkYN-PYpeHjF64_hhmcMjx3iM,1145
+ParlPy-2.4.0.dist-info/LICENSE.txt,sha256=68bmPVqUcBHsrViQyfuyEr4Hc5pZM3YwsMI2rhmczq4,1088
+ParlPy-2.4.0.dist-info/METADATA,sha256=QkUu4gI4DDg-lxXyF8MG92F7_ETvkGUNYWpMo5k6Iq4,6993
+ParlPy-2.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ParlPy-2.4.0.dist-info/top_level.txt,sha256=WW-A8SPTTznsvPHhm_cS-ygCOJREnTIIQ3HKswsDar8,7
+ParlPy-2.4.0.dist-info/RECORD,,
