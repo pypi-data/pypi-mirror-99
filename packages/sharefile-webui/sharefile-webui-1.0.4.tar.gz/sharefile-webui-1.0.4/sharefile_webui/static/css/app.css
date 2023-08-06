@@ -1,0 +1,51 @@
+body{
+    font-family: monospace;
+}
+a {
+    color: black;
+    font-weight: bold;  
+}
+
+.dir-container {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    background-image: url(../img/folder.png);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+}
+
+.dir {
+    padding: 2px 20px 2px 20px;
+}
+
+.file-container {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    background-image: url(../img/file.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+}
+
+.file, .filesize {
+    padding: 2px 20px 2px 0;
+    display: inline;
+}
+.file {
+    padding: 2px 20px 2px 28px;
+}
+
+.filesize {
+    color: gray;
+}
+
+.dir-container:hover, .file-container:hover {
+    background-color: #eee;
+}
