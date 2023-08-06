@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+jbird/Jbird.py
+jbird/Key.py
+jbird/Value.py
+jbird/__init__.py
+jbird.egg-info/PKG-INFO
+jbird.egg-info/SOURCES.txt
+jbird.egg-info/dependency_links.txt
+jbird.egg-info/not-zip-safe
+jbird.egg-info/top_level.txt
