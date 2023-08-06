@@ -1,0 +1,65 @@
+Metadata-Version: 1.1
+Name: datacoco-sf_tools
+Version: 0.1.0
+Summary: Data common code for SF Interaction by Equinox
+Home-page: https://github.com/equinoxfitness/datacoco-sf_tools
+Author: Equinox Fitness
+Author-email: UNKNOWN
+License: MIT
+Description: datacoco-sf_tools
+        =======================
+        
+        
+        Installation
+        ------------
+        
+        datacoco-sf_tools requires Python 3.6+
+        
+        ::
+        
+            python3 -m venv <virtual env name>
+            source <virtual env name>/bin/activate
+            pip install datacoco-sf-tools
+        
+        Quickstart
+        ----------
+        
+        
+        
+        Development
+        -----------
+        
+        Getting Started
+        ~~~~~~~~~~~~~~~
+        
+        It is recommended to use the steps below to set up a virtual environment for development:
+        
+        ::
+        
+            python3 -m venv <virtual env name>
+            source <virtual env name>/bin/activate
+            pip install -r requirements.txt
+        
+        Testing
+        ~~~~~~~
+        
+        ::
+        
+            pip install -r requirements-dev.txt
+        
+        To run the testing suite, simply run the command: ``tox`` or ``python -m unittest discover tests``
+        
+        Contributing
+        ------------
+        
+        Contributions to datacoco\_sf\_tools are welcome!
+        
+        Please reference guidelines to help with setting up your development
+        environment
+        `here <https://github.com/equinoxfitness/datacoco-sf_tools/blob/master/CONTRIBUTING.rst>`__.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
