@@ -1,0 +1,12 @@
+pytest_httpx_blockage/__init__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+pytest_httpx_blockage/blockage.py,sha256=K_A4LKRNzrDc7EvkZYiO5mCv95U3eLqhD0paeyGz4xI,1022
+pytest_httpx_blockage/exceptions.py,sha256=fUdAlr9FVf-GeQEo-ZqjUhxSqIyIUbsfZj9F1BGH3ww,52
+pytest_httpx_blockage/plugin.py,sha256=dwQ51mMCjx9EpXjrmQG7nO3TP7ghfLddv6CDRbcZveo,1491
+pytest_httpx_blockage/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_httpx_blockage-0.0.4.dist-info/LICENSE,sha256=RCxGil0fbE3fuK7Ldu6IFb2rtfXFl_2VL0lLx7YXQaQ,1071
+pytest_httpx_blockage-0.0.4.dist-info/METADATA,sha256=ujAsTBKHOoPgfCGMHqP1Qkx-kCFUHebWv9aC9OJYwbo,2021
+pytest_httpx_blockage-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_httpx_blockage-0.0.4.dist-info/entry_points.txt,sha256=Y0yUP1tG7dGr57NhNSaPjZTjhwtt6HwSZG_VZnupirU,58
+pytest_httpx_blockage-0.0.4.dist-info/top_level.txt,sha256=ByqF-Ydtd_rOOd4jzfTXoh-VI4aZb4QbEZLzxjDLfnM,22
+pytest_httpx_blockage-0.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pytest_httpx_blockage-0.0.4.dist-info/RECORD,,
