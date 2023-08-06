@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "summarytools"
+version = "0.1.0"
+description = "This is a port of the summarytools library in R. It provides a simple exploratory data analysis report of a pandas dataframe."
+authors = ["6chaoran"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "pandas>=1.1.1", "numpy>=1.18.5", "matplotlib>=3.3.0", "ipython>=7.20.0"]
+build-backend = "poetry.core.masonry.api"

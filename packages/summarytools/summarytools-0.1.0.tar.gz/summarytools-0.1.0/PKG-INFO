@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: summarytools
+Version: 0.1.0
+Summary: This is a port of the summarytools library in R. It provides a simple exploratory data analysis report of a pandas dataframe.
+Author: 6chaoran
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
