@@ -1,0 +1,18 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>paste buffer != (system) clipboard</li>
+<li>iedere copy creëert een nieuwe buffer, bovenaan een <strong>stack van buffers</strong></li>
+<li><code>list-buffers</code> toont de stack</li>
+<li>
+plakken uit buffer plakt uit de top van de stack<ul>
+<li>popt niet van de stack!</li>
+</ul>
+</li>
+<li><code>choose-buffer</code> staat toe er een te kiezen om te kopiëren</li>
+<li>eigenlijk is het deze buffer stack die gedeeld is over alle sessies heen</li>
+</ul>
+
+{% endblock course_content %}

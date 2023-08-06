@@ -1,0 +1,39 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>systeembrede configuratie: <code>/etc/tmux.conf</code></li>
+<li>lokale configuratie: <code>~/.tmux.conf</code></li>
+<li>
+gewijzigde configuratie laden:<ul>
+<li>kan alle sessies sluiten en opnieuw beginnen</li>
+<li>kan in command mode <code>source-file <configuratiefile></code> ingeven</li>
+</ul>
+</li>
+<li>onderstaande config syntax bestaat eigenlijk uit gewone tmux commands, dus <code>.conf</code> mag gewone tmux commands bevatten!</li>
+</ul>
+<h3>Config syntax</h3>
+<p>(TODO: eventueel opsplitsen in meerdere knopen)</p>
+<ul>
+<li><code>#</code> voor comments</li>
+<li>
+<code>set-option</code> om een waarde in te stellen<ul>
+<li>specifiek voor zaken die iets zeggen over hoe we met de sessie interageren</li>
+<li>kan afgekort worden tot <code>set</code></li>
+<li><code>-g</code> om dit voor alle sessies te laten gelden</li>
+</ul>
+</li>
+<li>
+<code>bind</code> (gevolgd door een toets of combinatie) om een shortcut voor een commando te maken (of meerdere commando's gescheiden door <code>\;</code>)<ul>
+<li><code>unbind</code> is nogal duidelijk</li>
+</ul>
+</li>
+<li>
+<code>setw</code> is voor iets dat binnen scope van een venster is (en dus voor elk window apart gedefinieerd is)<ul>
+<li>e.g. pane indexen</li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

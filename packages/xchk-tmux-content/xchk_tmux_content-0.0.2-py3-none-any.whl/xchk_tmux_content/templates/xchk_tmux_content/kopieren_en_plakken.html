@@ -1,0 +1,17 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>zoek eerst in copy mode naar de plaats om te starten met kopiëren</li>
+<li><code>space</code> om te beginnen selecteren</li>
+<li><code>enter</code> om tekst in paste buffer te plaatsen</li>
+<li><code>prefix ]</code> om tekst uit paste buffer te plakken</li>
+<li>
+<strong>deze paste buffer is niet hetzelfde als system clipboard</strong><ul>
+<li><strong>hij wordt gedeeld over alle tmux sessies heen</strong></li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

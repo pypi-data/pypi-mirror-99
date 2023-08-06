@@ -1,0 +1,14 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>één sessie: groepeert verwante vensters, is toegankelijk vanaf meerdere machines</li>
+<li>
+<code>tmux new-session -s <name></code><ul>
+<li><code>tmux new -s <name></code> gaat ook</li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

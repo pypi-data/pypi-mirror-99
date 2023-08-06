@@ -1,0 +1,14 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>een commando wordt gestuurd naar copy mode met <code>-X</code> optie</li>
+<li>
+de <code>mode-keys</code> optie bepaalt hierbij welke key table wordt gebruikt: <code>copy-mode</code> of <code>copy-mode-vi</code><ul>
+<li>afhankelijk van deze key table krijgen commands andere bindings, bv. in <code>copy-mode-vi</code> voert <code>j</code> het commando <code>cursor-down</code> uit (zoals in Vim)</li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

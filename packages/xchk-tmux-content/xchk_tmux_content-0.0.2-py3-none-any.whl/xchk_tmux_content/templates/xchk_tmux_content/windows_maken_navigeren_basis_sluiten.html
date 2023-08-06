@@ -1,0 +1,25 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>
+vergelijkbaar met tabs in een browser,...<ul>
+<li>hebben een naam (kan gewijzigd worden)</li>
+<li>hebben een indexnummer (standaard 0-based, kan gewijzigd worden)</li>
+</ul>
+</li>
+<li>aanmaken: <code>prefix c</code></li>
+<li>hernoemen: <code>prefix ,</code> (van binnenin het window)</li>
+<li>
+eerste venster in een sessie kan een naam krijgen met <code>-n</code> vlag<ul>
+<li>niet echt memoriseren waard?</li>
+</ul>
+</li>
+<li><code>prefix n</code> voor het volgende venster ("next")</li>
+<li><code>prefix p</code> voor het vorige venster</li>
+<li><code>prefix <indexnummer-van-de-sessie></code> springt direct, maar gaat maar tot 9...</li>
+<li><strong>volledig window</strong> sluiten: <code>prefix-&</code></li>
+</ul>
+
+{% endblock course_content %}

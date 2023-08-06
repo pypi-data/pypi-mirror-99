@@ -1,0 +1,12 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>handig als we effect willen van één sessie waarin beide gebruikers onafhankelijk kunnen handelen, e.g. verschillende vensters bekijken,...</li>
+<li>syntax: <code>tmux new-session -t $bestaande-sessie -s $nieuwe-naam-sessie</code></li>
+<li>kopieert bestaande sessie maar staat dan toe onafhankelijk vensters te maken,... in de nieuwe sessie</li>
+<li>TODO: mee experimenteren en effecten tonen via animatie, nog niet helemaal duidelijk wat er bv. gebeurt als er een vim-venster open staat en daar gebeuren aanpassingen in,...</li>
+</ul>
+
+{% endblock course_content %}
