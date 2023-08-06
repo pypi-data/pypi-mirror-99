@@ -1,0 +1,14 @@
+include *.py
+include */*.py
+include README.rst
+include tox.ini
+recursive-include cubicweb_bootstrap *.py
+recursive-include cubicweb_bootstrap/data *.gif *.png *.ico *.css *.js *.eot *.svg *.ttf *.woff *.woff2
+recursive-include cubicweb_bootstrap/i18n *.po
+recursive-include test/data bootstrap_cubes *.py
+recursive-include doc *.rst Makefile README.rst
+
+prune debian
+exclude cubicweb-bootstrap.spec
+exclude .gitlab-ci.yml
+exclude .yamllint
