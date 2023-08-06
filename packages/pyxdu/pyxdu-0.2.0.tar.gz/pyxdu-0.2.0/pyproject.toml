@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "pyxdu"
+version = "0.2.0"
+description = "Display the output of \"du\" in a window."
+authors = ["Andrey Vlasovskikh <andrey.vlasovskikh@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/vlasovskikh/pyxdu"
+keywords = ["gui", "disk-usage", "tkinter", "xdu", "disk-space"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: MacOS X",
+    "Environment :: X11 Applications",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Desktop Environment :: File Managers",
+    "Topic :: System :: Filesystems",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+docopt = "^0.6.2"
+
+[tool.poetry.dev-dependencies]
+black = {extras = ["d"], version = "^20.8b1"}
+pytest = "^6.1.1"
+coverage = "^5.3"
+pyinstrument = "^3.2.0"
+pre-commit = "^2.11.0"
+flake8 = "^3.8.4"
+mypy = "^0.812"
+
+[tool.poetry.scripts]
+pyxdu = "pyxdu.__main__:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
