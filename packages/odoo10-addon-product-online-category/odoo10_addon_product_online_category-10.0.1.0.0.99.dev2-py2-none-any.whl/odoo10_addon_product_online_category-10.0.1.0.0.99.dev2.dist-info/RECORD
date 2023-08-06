@@ -1,0 +1,11 @@
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/product_online_category/README.rst,sha256=f_DOpaZT7MpIIWpNCL1XHKLwKkq6WAYVfUGHeZyCvnY,1183
+odoo/addons/product_online_category/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/product_online_category/__manifest__.py,sha256=EOdWAAy3QqeyB8RRuzVIFSBmgHEmbov99ffJK2jgmes,549
+odoo/addons/product_online_category/models/__init__.py,sha256=YkJ6gC3bB8c1TrZty9vZUIoQD2KlF_WLxVqjovQU9cs,47
+odoo/addons/product_online_category/models/product.py,sha256=dvJJgQyS0l1qSQAHZe8nmM3lFaTqRDbYNwMhtdubQhA,596
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2.dist-info/METADATA,sha256=Vtd6WeXMxhQsLMFbhGx-UwOy3gMR0hzuhiofpF35YGY,1703
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_product_online_category-10.0.1.0.0.99.dev2.dist-info/RECORD,,
