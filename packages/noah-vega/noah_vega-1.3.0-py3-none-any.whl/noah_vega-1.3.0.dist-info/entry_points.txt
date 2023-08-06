@@ -1,0 +1,7 @@
+
+        [console_scripts]
+        vega=vega.tools.run_pipeline:run_pipeline
+        vega-kill=vega.tools.kill:_kill
+        vega-verify-cluster=vega.tools.verify_cluster:_verify_cluster
+        vega-fine-tune=vega.tools.fine_tune:_fine_tune
+      
