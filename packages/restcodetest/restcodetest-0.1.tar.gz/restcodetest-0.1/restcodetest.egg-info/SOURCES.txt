@@ -1,0 +1,7 @@
+README.md
+setup.py
+restcodetest.egg-info/PKG-INFO
+restcodetest.egg-info/SOURCES.txt
+restcodetest.egg-info/dependency_links.txt
+restcodetest.egg-info/requires.txt
+restcodetest.egg-info/top_level.txt
