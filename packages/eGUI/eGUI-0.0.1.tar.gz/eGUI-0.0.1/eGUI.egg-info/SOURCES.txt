@@ -1,0 +1,9 @@
+README.md
+setup.py
+eGUI/__init__.py
+eGUI/main.py
+eGUI.egg-info/PKG-INFO
+eGUI.egg-info/SOURCES.txt
+eGUI.egg-info/dependency_links.txt
+eGUI.egg-info/requires.txt
+eGUI.egg-info/top_level.txt
