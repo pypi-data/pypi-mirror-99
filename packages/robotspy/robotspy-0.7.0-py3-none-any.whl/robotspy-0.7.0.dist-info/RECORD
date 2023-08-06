@@ -1,0 +1,10 @@
+robots/__init__.py,sha256=kaTBpLhGhh29HBfeJw_otepZfrDiHwvr01rgZxfMgEk,218
+robots/__main__.py,sha256=ctU-JVvJQuXRcRPcRSrvhrn7FLSLz6ZgfNXZWeYjm_g,2568
+robots/parser.py,sha256=rdxX75s-JElpOcaDX4hYBW0T75AFjXaHzUs1-yFXLvQ,15168
+robots/robotparser.py,sha256=N2ERVQ7MZMRyR0Zj6SW5gJxwT2s6nJohO2ABBWdRc14,2727
+robotspy-0.7.0.dist-info/LICENSE.md,sha256=cjtZLjFImpwLWY45KdlnJvvAtKiY2GJlD2LT1yt_vuc,1083
+robotspy-0.7.0.dist-info/METADATA,sha256=f56PdkXdWJnWKlPTcWy1QY09NejZIsYiY26s0BcO0H0,11454
+robotspy-0.7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+robotspy-0.7.0.dist-info/entry_points.txt,sha256=ENqLfnbLZ2pB_HTTmhz4FzC6vYrAjp1ecYErtWK_cGw,49
+robotspy-0.7.0.dist-info/top_level.txt,sha256=XJinDVfJzHKU_bYg5poDH-4wQdoPDmEC-yr3MFhHh6Y,7
+robotspy-0.7.0.dist-info/RECORD,,
