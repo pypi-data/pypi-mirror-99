@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+assets/tags.json
+snake_charmer/__init__.py
+snake_charmer/__main__.py
+snake_charmer/api.py
+snake_charmer/github_api.py
+snake_charmer/models.py
+snake_charmer.egg-info/PKG-INFO
+snake_charmer.egg-info/SOURCES.txt
+snake_charmer.egg-info/dependency_links.txt
+snake_charmer.egg-info/requires.txt
+snake_charmer.egg-info/top_level.txt
