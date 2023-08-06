@@ -1,0 +1,10 @@
+README.md
+setup.py
+windows_tools.virtualization.egg-info/PKG-INFO
+windows_tools.virtualization.egg-info/SOURCES.txt
+windows_tools.virtualization.egg-info/dependency_links.txt
+windows_tools.virtualization.egg-info/namespace_packages.txt
+windows_tools.virtualization.egg-info/not-zip-safe
+windows_tools.virtualization.egg-info/requires.txt
+windows_tools.virtualization.egg-info/top_level.txt
+windows_tools/virtualization/__init__.py
