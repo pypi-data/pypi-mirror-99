@@ -1,0 +1,1 @@
+Daktari is a tool to assist in setting up developer environments by running checks (e.g. that certain software is installed) and providing suggestions on how to install/configure if the checks fail, possibly tailored by OS.

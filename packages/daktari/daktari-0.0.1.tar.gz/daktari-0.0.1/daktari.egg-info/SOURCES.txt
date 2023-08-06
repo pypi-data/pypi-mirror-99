@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+daktari/__init__.py
+daktari/__main__.py
+daktari/check.py
+daktari/check_runner.py
+daktari/command_utils.py
+daktari/git_checks.py
+daktari/os.py
+daktari/result_printer.py
+daktari.egg-info/PKG-INFO
+daktari.egg-info/SOURCES.txt
+daktari.egg-info/dependency_links.txt
+daktari.egg-info/entry_points.txt
+daktari.egg-info/requires.txt
+daktari.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: daktari
+Version: 0.0.1
+Summary: Assist in setting up developer environments
+Home-page: UNKNOWN
+License: MIT
+Description: Daktari is a tool to assist in setting up developer environments by running checks (e.g. that certain software is installed) and providing suggestions on how to install/configure if the checks fail, possibly tailored by OS.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
