@@ -1,0 +1,3 @@
+[console_scripts]
+mtpkg = mtpkg.cli:main
+
