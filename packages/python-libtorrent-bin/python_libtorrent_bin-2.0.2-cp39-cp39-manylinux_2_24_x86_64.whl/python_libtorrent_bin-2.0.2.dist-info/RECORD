@@ -1,0 +1,6 @@
+libtorrent.so,sha256=R2qwGSd9BCBlJKkyUDfbyDpZnUUbAvWjhQ9xyluCX2w,9251464
+python_libtorrent_bin-2.0.2.dist-info/METADATA,sha256=vBHJZx9nd-fVtAyYkCTINu-W3SC9QFwtmIqev3pFCek,340
+python_libtorrent_bin-2.0.2.dist-info/RECORD,,
+python_libtorrent_bin-2.0.2.dist-info/top_level.txt,sha256=Va3S8jfMOK-hJMDdMSrC7MrqlelkXSU30H5E4QppA3c,11
+python_libtorrent_bin-2.0.2.dist-info/WHEEL,sha256=HzpLFutx6LWeZ-oFSMk1IgmVzC64JeU3AtMeUG0exDA,112
+python_libtorrent_bin.libs/libboost_python39-7a69bd6a.so.1.73.0,sha256=c0I1vC4ifsuZdQywpLhUVDzT4VcSWHDfpoVd1CIoGVg,337112
