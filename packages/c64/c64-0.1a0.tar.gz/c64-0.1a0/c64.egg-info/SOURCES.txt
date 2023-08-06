@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+c64/__init__.py
+c64.egg-info/PKG-INFO
+c64.egg-info/SOURCES.txt
+c64.egg-info/dependency_links.txt
+c64.egg-info/requires.txt
+c64.egg-info/top_level.txt
