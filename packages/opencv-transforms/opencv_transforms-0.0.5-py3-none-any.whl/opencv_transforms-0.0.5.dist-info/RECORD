@@ -1,0 +1,8 @@
+opencv_transforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencv_transforms/functional.py,sha256=8A-cYqDSRUgoOtFrK_Jj-z2IIUtoSx5LHlzEV1j8sBs,25347
+opencv_transforms/transforms.py,sha256=_O6ev9mNgxnlu_ar3ZfPTHCbs3DBWZMXSntI4wxXjns,40407
+opencv_transforms-0.0.5.dist-info/LICENSE,sha256=08rqCX_laF7BOtujj_RjjelH5sy7t6q1P7-iEshUMQU,1090
+opencv_transforms-0.0.5.dist-info/METADATA,sha256=bT7WbZH-KFhojdArZuw1XRfaNBo4j8UDAM6TCJv8uYw,3171
+opencv_transforms-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+opencv_transforms-0.0.5.dist-info/top_level.txt,sha256=NSyHIZtLcIQlrFrXlNo5URcSl8Y6IqV64RkKcJJQNOw,18
+opencv_transforms-0.0.5.dist-info/RECORD,,
