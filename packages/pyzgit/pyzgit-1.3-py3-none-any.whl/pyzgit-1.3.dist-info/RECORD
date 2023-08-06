@@ -1,0 +1,17 @@
+g/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+g/g.py,sha256=dAW-oqF1cHxlntbt6cqdXq1kMC388vdfiTs04I5oJkI,612
+g/gitoptions.py,sha256=rNcqDXvG2sBAdf30vM5cHCHCh6OXz77VbS4JdZ8-UcQ,21894
+g/helper.py,sha256=FnAtrMsiICYIb_kclIZUBWPwlQHyM1WfsIIeJrftkD4,716
+g/shared.py,sha256=Qx3RJ093c4m3jFlpOKX0P_dfLVcZhLuCSzq_lZ1VgaU,791
+git/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git/gitoptions.py,sha256=XpufrncSejeOuI0lsF7C46wN4zMw6l4vqXAkwW2hYHY,23504
+git/helper.py,sha256=OADCyJ7d78KhDtTM3Mh4tnzX5eu8SYTqbRID1hc7Smc,1922
+git/main.py,sha256=kPFlgbaq8LCo_k8Tex-AKW6lb8bvKNLbyfmVyceJe7E,708
+git/shared.py,sha256=UYRCBmrQY-zy14hQ9Wp7r8-zeOJg8ViAaB3bpdHHgwU,1315
+git/shell_complete.py,sha256=QhUWZ6KF7F-JPr03_lP1krTr9lDc6ZwQ3fVzMDlDZjc,3814
+pyzgit-1.3.dist-info/LICENSE,sha256=uzSKdFjkCmiL2A2e39HF96AFvTQpfFWHjx8ZbmnZRSk,1064
+pyzgit-1.3.dist-info/METADATA,sha256=kQGwwOUbLi8d8m7KvT4VCNA9N2TQVDjjvIoydJQK3hA,1071
+pyzgit-1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyzgit-1.3.dist-info/entry_points.txt,sha256=vDlUljXnrB4iqjFJFtq3GAyLi9a16mT66SejhDEvZCM,52
+pyzgit-1.3.dist-info/top_level.txt,sha256=0hzDuIp8obv624V3GmbqsagBWkk8ohtGU-Bc1PmTT0o,4
+pyzgit-1.3.dist-info/RECORD,,
