@@ -1,0 +1,4 @@
+click
+inquirer
+dockerfile-parse
+kachery_p2p>=0.8.2
