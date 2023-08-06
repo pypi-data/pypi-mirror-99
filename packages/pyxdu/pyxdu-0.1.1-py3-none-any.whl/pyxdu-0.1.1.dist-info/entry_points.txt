@@ -1,0 +1,3 @@
+[console_scripts]
+pyxdu=pyxdu.__main__:run
+
