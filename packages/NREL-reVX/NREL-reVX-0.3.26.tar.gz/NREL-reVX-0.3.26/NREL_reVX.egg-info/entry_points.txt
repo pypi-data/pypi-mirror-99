@@ -1,0 +1,13 @@
+[console_scripts]
+mean-wind-dirs = reVX.wind_dirs.mean_wind_dirs_cli:main
+offshore-assembly-areas = reVX.offshore.assembly_areas_cli:main
+offshore-dist-to-ports = reVX.offshore.dist_to_ports_cli:main
+offshore-inputs = reVX.offshore.offshore_inputs_cli:main
+plexos-plants = reVX.plexos.plexos_plants_cli:main
+prominent-wind-dirs = reVX.wind_dirs.prominent_wind_dirs_cli:main
+reV-ReEDS = reVX.reeds.reeds_cli:main
+reV-plexos = reVX.plexos.rev_reeds_plexos_cli:main
+reV-rpm = reVX.rpm.rpm_cli:main
+reVX = reVX.cli:main
+wind-setbacks = reVX.wind_setbacks.wind_setbacks_cli:main
+
