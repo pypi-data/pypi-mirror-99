@@ -1,0 +1,19 @@
+# This file is part of the Data Cleaning Library (openclean).
+#
+# Copyright (c) 2018-2021 New York University.
+#
+# openclean is released under the Revised BSD License. See file LICENSE for
+# full license details.
+
+include LICENSE
+include *.rst
+include openclean_notebook/controller/spreadsheet/schema.json
+include openclean_notebook/ui/templates/*.json
+include openclean_notebook/ui/build/
+include openclean_notebook/ui/templates/
+recursive-include openclean_notebook *.py
+recursive-include docs *.py
+recursive-include docs *.rst
+global-exclude *.py[co]
+prune docs/_build
+prune openclean_notebook/ui/node_modules
