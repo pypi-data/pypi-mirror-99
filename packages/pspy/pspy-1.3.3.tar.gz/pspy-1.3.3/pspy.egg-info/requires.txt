@@ -1,0 +1,5 @@
+numpy
+healpy
+pyFFTW
+pillow
+pixell>=0.7.0
