@@ -1,0 +1,9 @@
+vtb_py_logging/__about__.py,sha256=rSPJfijOSydqkPRph4VYhRHTTKzuZX5Ty8sdlz6NgB4,292
+vtb_py_logging/__init__.py,sha256=YZpJgwpVsdzeSSc7YB5Yfs7VAo1XdisN2xCvYnGjAPY,49
+vtb_py_logging/filters.py,sha256=GYjpvoTJxvGA9eD4cAQzJS3mWnoiC80VbfiIGDB2uLw,199
+vtb_py_logging/formatters.py,sha256=6xHT4LnWu0wGUKCsag7ANb-RjTtpVhqswWB7QhxlVpY,2417
+vtb_py_logging/utils.py,sha256=t0ixmBoPmj08oqdHEV3ajLYm-d1ndrUP0KykWuuxeLs,506
+vtb_py_logging-1.0.6.dist-info/METADATA,sha256=ZmvVnL8N6UGX_4KLsnaT21edj-Sb5ORNldkleVvLWw8,230
+vtb_py_logging-1.0.6.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+vtb_py_logging-1.0.6.dist-info/top_level.txt,sha256=7JCVEGc_apZeF9TyfxT4blpx9L7XPYQ4PxqZfqm7Id8,15
+vtb_py_logging-1.0.6.dist-info/RECORD,,
