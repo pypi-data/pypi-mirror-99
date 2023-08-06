@@ -1,0 +1,113 @@
+# Copyright © 2017 Tom Hacohen
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, version 3.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+import base64
+
+from django.db.models.expressions import RawSQL
+from django.contrib.auth import get_user_model
+from rest_framework import serializers
+from . import models
+
+User = get_user_model()
+
+
+class BinaryBase64Field(serializers.Field):
+    def to_representation(self, value):
+        return base64.b64encode(value).decode('ascii')
+
+    def to_internal_value(self, data):
+        return base64.b64decode(data)
+
+
+class JournalSerializer(serializers.ModelSerializer):
+    content = BinaryBase64Field()
+    owner = serializers.SlugRelatedField(
+        slug_field=User.USERNAME_FIELD,
+        read_only=True
+    )
+    key = serializers.SerializerMethodField('get_key_from_context')
+    readOnly = serializers.SerializerMethodField('get_read_only_from_context')
+    lastUid = serializers.SerializerMethodField('get_last_uid')
+
+    class Meta:
+        model = models.Journal
+        fields = ('version', 'uid', 'content', 'owner', 'key', 'readOnly', 'lastUid')
+
+    def get_key_from_context(self, obj):
+        request = self.context.get('request', None)
+        if request is not None:
+            try:
+                member = obj.members.get(user=request.user)
+                serialized_member = JournalMemberSerializer(member)
+                return serialized_member.data['key']
+            except models.JournalMember.DoesNotExist:
+                pass
+        return None
+
+    def get_read_only_from_context(self, obj):
+        request = self.context.get('request', None)
+        if request is not None:
+            try:
+                member = obj.members.get(user=request.user)
+                return member.readOnly
+            except models.JournalMember.DoesNotExist:
+                pass
+        return False
+
+    def get_last_uid(self, obj):
+        last = models.Entry.objects.filter(
+                id=RawSQL('SELECT MAX(journal_entry.id) FROM journal_entry WHERE journal_entry.journal_id = %s GROUP BY journal_entry.journal_id', (obj.id, ))
+            ).first()
+        if last:
+            return last.uid
+        return None
+
+
+class JournalUpdateSerializer(JournalSerializer):
+    class Meta(JournalSerializer.Meta):
+        fields = ('content', )
+
+
+class EntrySerializer(serializers.ModelSerializer):
+    content = BinaryBase64Field()
+
+    class Meta:
+        model = models.Entry
+        fields = ('uid', 'content')
+
+
+class UserInfoSerializer(serializers.ModelSerializer):
+    content = BinaryBase64Field()
+    pubkey = BinaryBase64Field()
+
+    class Meta:
+        model = models.UserInfo
+        fields = ('version', 'pubkey', 'content')
+
+
+class UserInfoPublicSerializer(UserInfoSerializer):
+    class Meta(JournalSerializer.Meta):
+        fields = ('version', 'pubkey')
+
+
+class JournalMemberSerializer(serializers.ModelSerializer):
+    user = serializers.SlugRelatedField(
+        slug_field=User.USERNAME_FIELD,
+        queryset=User.objects
+    )
+    key = BinaryBase64Field()
+
+    class Meta:
+        model = models.JournalMember
+        fields = ('user', 'key', 'readOnly')
