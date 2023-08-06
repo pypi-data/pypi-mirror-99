@@ -1,0 +1,16 @@
+boo/__init__.py,sha256=7J764A-EE9rD6NCOykRIZJk-LboOz3oJMXI_vvzkduU,145
+boo/cli.py,sha256=2DVUlNAbrc1VFwWnlwxbxNy2N9xHge_9hDkPQXpRQzM,2078
+boo/columns.py,sha256=GQkUVn41zWUIRK9LsVQCBHFPOWBDWUlbVyxo2djB_d0,8874
+boo/dataframe/__init__.py,sha256=7vGomdyFKGzt-yRdyqyLeHXMc6bdnjknlpsnlFiH1gk,32
+boo/dataframe/canonic.py,sha256=T5g-cblqGbD8GAOCOEgwtIqJkhv0-fi2cz-PnSB10IU,4379
+boo/dataframe/filter.py,sha256=N2TfaVfJR4Ha0nCbx6xcYSbaiyCH0imHQbbGNT1bwvI,2076
+boo/dataframe/util.py,sha256=o4WAhDj8e_EqBscMOAl_95udQp8dq9zs0WoNwGU8lsM,757
+boo/downloader.py,sha256=ukI9L1yd5TXJfCJUAfOUEABeAa5PkaPfWQoVTpyBfFM,5442
+boo/okved/__init__.py,sha256=ZeIn6n1MqCBJwtXqYadYvfst4D1RQh9p2Rv4U9HqlZY,41
+boo/okved/okved.py,sha256=qjO1uoeUDRDGzbemFM-ik-WISldwXA4JcBo31tDCGTk,267147
+boo/reader.py,sha256=0NDpWfVbWHNduaInbl5D6JLfzTlUZTl00pD3h8U30HQ,982
+boo/whatis.py,sha256=5SwkmQoDCkP74RI9UC6pw5qz5RMEzwdN470fmVzYj6Q,12290
+boo-0.2.0.dist-info/LICENSE,sha256=oRq2ZGzN7NESsg-jEwyhTXB2Gb5ATPkMGODZrgqq8ec,1090
+boo-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+boo-0.2.0.dist-info/METADATA,sha256=dUhbJf3iD9ZlLkBg6Nw_bsugMuOphkGOSR_CMaZLw40,493
+boo-0.2.0.dist-info/RECORD,,
