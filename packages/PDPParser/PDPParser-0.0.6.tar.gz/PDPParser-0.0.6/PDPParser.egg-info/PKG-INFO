@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: PDPParser
+Version: 0.0.6
+Summary: Simple package to help parse PDP on Footsites!
+Home-page: UNKNOWN
+Author: Mrbeastmode
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Check https://github.com/MrbeastmodeXD/PDP-Parser for documentation! : D
+Keywords: python,pdp,footlocker
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
