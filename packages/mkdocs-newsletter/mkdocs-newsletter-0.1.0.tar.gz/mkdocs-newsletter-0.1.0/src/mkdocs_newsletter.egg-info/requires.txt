@@ -1,0 +1,8 @@
+python-dateutil
+mkdocs
+mkdocs-section-index
+mkdocs-autolinks-plugin
+pydantic
+gitpython
+python-semantic-release
+deepdiff

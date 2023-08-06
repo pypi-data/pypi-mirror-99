@@ -1,0 +1,88 @@
+---
+site_name: MkDocs Newsletter
+site_author: Lyz
+site_url: https://lyz-code.github.io/mkdocs-newsletter
+nav:
+  - Overview: index.md
+  - Reference: reference.md
+  - Contributing:
+      - contributing.md
+  - Architecture Decision Records:
+      - adr/adr.md
+      - '001: High level problem analysis': adr/001-initial_approach.md
+      - '002: Initial mkdocs plugin design': adr/002-initial_plugin_design.md
+      - '003: Select the changes to record': adr/003-select_the_changes_to_record.md
+      - '004: Article newsletter structure': adr/004-article_newsletter_structure.md
+      - '005: Article newsletter creation': adr/005-create_the_newsletter_articles.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          rendering:
+            show_root_heading: true
+            heading_level: 1
+      watch:
+        - src
+  - autolinks
+  - git-revision-date-localized:
+      type: timeago
+      fallback_to_build_date: true
+  - mermaid2:
+      arguments:
+        securityLevel: loose
+  # Not compatible with mermaid2
+  # - minify:
+  #    minify_html: true
+  - section-index
+
+markdown_extensions:
+  - abbr
+  - def_list
+  - admonition
+  - markdown_include.include:
+      base_path: docs
+  - meta
+  - toc:
+      permalink: true
+      baselevel: 2
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: '!!python/name:pymdownx.emoji.to_svg'
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+theme:
+  name: material
+  custom_dir: docs/theme
+  # logo: 'images/logo.bmp'
+  features:
+    - navigation.instant
+  palette:
+    primary: blue grey
+    accent: light blue
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/links.css
+
+repo_name: lyz-code/mkdocs-newsletter
+repo_url: https://github.com/lyz-code/mkdocs-newsletter
