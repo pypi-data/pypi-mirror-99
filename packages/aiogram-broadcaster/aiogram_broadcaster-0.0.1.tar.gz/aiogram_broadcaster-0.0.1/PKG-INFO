@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: aiogram-broadcaster
+Version: 0.0.1
+Summary: Simple and lightweight library based on aiogram for creating telegram mailings
+Home-page: https://github.com/fonco/aiogram-broadcaster/
+Keywords: telegram,bot,api,asyncio,aiogram,broadcaser,broadcast,mailing
+Author: F0rzend
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiogram (>=2.12,<3.0)
+Project-URL: Repository, https://github.com/fonco/aiogram-broadcaster/
+Description-Content-Type: text/markdown
+
+# aiogram_broadcaster
+Simple and lightweight library based on aiogram for creating telegram mailings
+
