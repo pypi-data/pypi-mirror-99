@@ -1,0 +1,12 @@
+README.md
+setup.py
+hidebehind/__init__.py
+hidebehind/__main__.py
+hidebehind/binutils.py
+hidebehind/image.py
+hidebehind/secret.py
+hidebehind.egg-info/PKG-INFO
+hidebehind.egg-info/SOURCES.txt
+hidebehind.egg-info/dependency_links.txt
+hidebehind.egg-info/requires.txt
+hidebehind.egg-info/top_level.txt
