@@ -1,0 +1,7 @@
+setup.py
+gnani_ats_rest_ap.egg-info/PKG-INFO
+gnani_ats_rest_ap.egg-info/SOURCES.txt
+gnani_ats_rest_ap.egg-info/dependency_links.txt
+gnani_ats_rest_ap.egg-info/top_level.txt
+gnani_python_client/__init__.py
+gnani_python_client/client.py
