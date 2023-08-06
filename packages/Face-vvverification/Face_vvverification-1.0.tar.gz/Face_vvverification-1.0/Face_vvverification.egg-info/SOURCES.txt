@@ -1,0 +1,5 @@
+setup.py
+Face_vvverification.egg-info/PKG-INFO
+Face_vvverification.egg-info/SOURCES.txt
+Face_vvverification.egg-info/dependency_links.txt
+Face_vvverification.egg-info/top_level.txt
