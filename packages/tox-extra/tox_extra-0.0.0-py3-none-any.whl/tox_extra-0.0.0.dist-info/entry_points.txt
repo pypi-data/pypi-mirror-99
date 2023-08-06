@@ -1,0 +1,3 @@
+[tox]
+extra = tox_extra.hooks
+
