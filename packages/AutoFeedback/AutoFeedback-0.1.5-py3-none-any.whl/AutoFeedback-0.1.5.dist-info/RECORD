@@ -1,0 +1,17 @@
+AutoFeedback/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AutoFeedback/bcolors.py,sha256=pY1Aqv0jFoCFf2kgv-87Aq61wwX_FJaLq5dfDEx5YFg,229
+AutoFeedback/funcchecks.py,sha256=3wkiqDEnoNpIC2PTjMDVEUL1n3yiFrjaFO5BkM9_3QI,2695
+AutoFeedback/function_error_messages.py,sha256=imMzihUgm70icVxOo7GVKQFqTmdRAiDsqZLFimCvgGA,3251
+AutoFeedback/plot_error_messages.py,sha256=NWJt7IrcP7MUQJvTqGuubzEY6UI2cnt5ToQFDz8g1sA,3264
+AutoFeedback/plotchecks.py,sha256=AmqZWV8oIyTnKtjIFPGuOa8zwPaPdO0pK94ItSJ2VY8,4124
+AutoFeedback/plotclass.py,sha256=U9Gb43oWHRCyMQubrjoQxsS_ZdW0vWAXy8vFgEQSnvY,2326
+AutoFeedback/varchecks.py,sha256=IfGlnDK8RsjERgNCCusOE_vgZHM2JvKsOk39a6DHadQ,2232
+AutoFeedback/variable_error_messages.py,sha256=W_MU9VygPUDL3Zr3auiASumapJ7CsUnxBz14QpjGw2Q,2515
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/testfuncs.py,sha256=MDd5S-hTQnA5Hufkxqpp1Z-kcdv9ar1NHUfkoXpmfKU,1775
+test/testplot.py,sha256=MKYcgQEsoINn1QDMgEgl3UxqlkvMGTx5YbW8OPmkros,3102
+test/testvars.py,sha256=CqDWEMGrbdlyISqwnFJ7DB_awRjC22Q_X_qa0w-kc_U,1616
+AutoFeedback-0.1.5.dist-info/METADATA,sha256=6_e5VUaOsGGeVpiqKgQ3r3MSONhuGCL1y-ZJRVFwXuU,790
+AutoFeedback-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+AutoFeedback-0.1.5.dist-info/top_level.txt,sha256=LQK6-gUzFw1rfc4ZHRnKvR9EcGoCn5AqT4rg1Rj5LAM,18
+AutoFeedback-0.1.5.dist-info/RECORD,,
