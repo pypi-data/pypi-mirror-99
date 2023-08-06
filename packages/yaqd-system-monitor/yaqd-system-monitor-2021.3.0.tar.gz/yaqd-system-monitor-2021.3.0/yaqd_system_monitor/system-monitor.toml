@@ -1,0 +1,12 @@
+protocol = "system-monitor"
+doc = "Sensor daemon to monitor local system performance (CPU, memory, uptime, and disk)."
+traits = ["has-measure-trigger", "is-sensor", "is-daemon"]
+
+[links]
+source = "https://gitlab.com/yaq/yaqd-system-monitor"
+bugtracker = "https://gitlab.com/yaq/yaqd-system-monitor/-/issues"
+
+[installation]
+PyPI = "https://pypi.org/project/yaqd-system-monitor/"
+conda-forge = "https://anaconda.org/conda-forge/yaqd-system-monitor/"
+

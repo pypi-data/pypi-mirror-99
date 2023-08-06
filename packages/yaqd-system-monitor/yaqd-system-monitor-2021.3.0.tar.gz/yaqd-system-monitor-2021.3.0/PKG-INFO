@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: yaqd-system-monitor
+Version: 2021.3.0
+Summary: yaq daemon for monitoring system usage
+Home-page: https://yaq.fyi
+Author: yaq developers
+Author-email: blaise@untzag.com
