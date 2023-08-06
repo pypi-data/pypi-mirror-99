@@ -1,0 +1,165 @@
+#! /usr/bin/env python3
+
+
+import os
+import re
+import time
+import shutil
+import argparse
+
+home = os.path.expanduser('~')
+downloads = os.path.join(home,'Downloads')
+documents = os.path.join(home,'Documents')
+desktop = os.path.join(home,'Desktop')
+
+class FileType:
+    def __init__(self,folder,regex):
+        self.folder = folder
+        self.regex = regex
+
+    def match(self,filename):
+        for r in self.regex:
+            if re.search(r,filename):
+                return True
+        return False
+
+    def save(self,filename,parent_dir,group_dir):
+        source = os.path.join(parent_dir,filename)
+        group_dir = os.path.join(parent_dir,group_dir)
+        target = os.path.join(group_dir,self.folder)
+        destination = os.path.join(target,filename)
+        #make the group folder if it doesn't exist
+        if not os.path.exists(group_dir):
+            os.mkdir(group_dir)
+
+        if not os.path.exists(target):
+            os.mkdir(target)
+       
+         #move file
+        shutil.move(source,destination)
+
+class Group:
+    def __init__(self,filetypes,directory):
+        self.filetypes = filetypes
+        self.directory = directory
+
+def getfiles(directory):
+    files = []
+    li = os.listdir(directory)
+    for f in li:
+        if os.path.isfile(os.path.join(directory,f)):
+            files.append(f)
+    return files
+
+def cleanup(groups,directories):
+    for g in groups:
+        for d in directories:
+            files = getfiles(d)
+            for f in files:
+                for filetype in g.filetypes:
+                    if filetype.match(f):
+                        filetype.save(f,d,g.directory)
+                        break
+    #account for files without extensions(executables)
+    for d in directories:
+        files = getfiles(d)
+        target_folder = os.path.join(d,'Executables')
+        for f in files:
+            if '.' not in f:
+                if not os.path.exists(target_folder):
+                    os.mkdir(target_folder)
+                source = os.path.join(d,f)
+                destination = os.path.join(target_folder,f)
+                shutil.move(source,destination)
+
+def main():
+    document_types = []
+    picture_types = []
+    audio_types = []
+    video_types = []
+    coding_types = []
+
+    pdf_ft = FileType('PDF',['\.pdf$'])
+    jpg_ft = FileType('JPG',['\.jpg$','\.jpeg$'])
+    mp3_ft = FileType('MP3',['\.mp3$'])
+    golang_ft = FileType('Golang',['\.go$'])
+    python_ft = FileType('Python',['\.py$'])
+    epub_ft = FileType('Epub(Ebooks)',['\.epub$'])
+    html_ft = FileType('HTML',['\.html$'])
+    json_ft = FileType('JSON',['\.json$'])
+    text_ft = FileType('Text',['\.txt$'])
+    mp4_ft = FileType('MP4',['\.mp4$'])
+    png_ft = FileType('PNG',['\.png$'])
+    webp_ft = FileType('WEBP',['\.webp$'])
+  
+   
+    document_types.append(pdf_ft)
+    picture_types.append(jpg_ft)
+    audio_types.append(mp3_ft)
+    document_types.append(epub_ft)
+    coding_types.append(python_ft)
+    coding_types.append(golang_ft)
+    coding_types.append(html_ft)
+    coding_types.append(json_ft)
+    document_types.append(text_ft)
+    video_types.append(mp4_ft)
+    picture_types.append(png_ft)
+    picture_types.append(webp_ft)    
+
+    document_group = Group(document_types,'Documents')
+    picture_group = Group(picture_types,'Pictures')
+    audio_group = Group(audio_types,'Audio')
+    video_group = Group(video_types,'Video')
+    coding_group = Group(coding_types,'Code')
+
+    groups = [document_group, picture_group, audio_group,video_group,coding_group]
+    directories = [downloads,desktop,documents]    
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-b","--background",help="Runs sorta indefinitely",action="store_true")
+    parser.add_argument("-d","--directory",help="Run sorta on a single directory",action="store_true")
+    parser.add_argument("-i","--interval",type=int,help="how frequently you want sorta to cleanup your folders, in minutes")
+   
+    args = parser.parse_args()
+
+    if args.background:
+        print("Running sorty in the background.")
+        interval = 30
+        path = ''
+
+        if args.interval:
+            interval = args.interval
+        else:
+            print("Interval not set. Using default {0} minutes.".format(interval))
+
+        if args.directory:
+            path=input("Enter directory: ")
+            if not os.path.exists(path):
+                print("That path does not exists. Aborting.")
+                exit(1)
+            else:
+                print(f'Cleaning up {path} every {interval} minutes.')
+                directories = [path]
+        else:
+            print("Cleaning general directories(downloads,documents,desktop) every {0} minutes.".format(interval))
+    
+        print("Press Ctrl+c to exit. . .")
+        try:        
+            while True:
+                print("Cleaning up. . .")
+                cleanup(groups,directories)
+                time.sleep(60*interval)
+        except KeyboardInterrupt:
+            print("Exitting.")
+        
+    elif args.directory:
+        path=input("Enter directory: ")
+        if not os.path.exists(path):
+            print("That path does not exist. Aborting.")
+        else:
+            cleanup(groups,[path])
+    else:
+        cleanup(groups,directories)
+
+if __name__=='__main__':
+    main()
