@@ -1,0 +1,5 @@
+light_curve_python-0.2.4.dist-info/METADATA,sha256=bRjHBGDIYkIucCk-qx7ioFaEaDQHjz_AAuhTWjz53Uk,769
+light_curve_python-0.2.4.dist-info/WHEEL,sha256=ZqoNMJP3u20ttrVaUoCKdt8a2FFm0uOuvErq9yOq74g,114
+light_curve/__init__.py,sha256=YtSQFUzuC7Lh9i6tXtKyL3WQfbN0hru1m8yUsb0zcX8,27
+light_curve/light_curve.cpython-36m-x86_64-linux-gnu.so,sha256=xFTUv5yLEzzviq8WToevvd0GuYWCI4O1_8ib4GRuxKI,2735512
+light_curve_python-0.2.4.dist-info/RECORD,,
