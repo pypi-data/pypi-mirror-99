@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pyzgit
+Version: 1.3b1
+Summary: Simple terminal tool of Git.
+Home-page: https://github.com/zlj-zz/pyzgit.git
+Author: Zachary Zhang
+Author-email: zlj1997122@outlook.com
+License: UNKNOWN
+Description: A terminal tool, help you use git more simple.
+        
+        Just support Linux, MacOs or other UNIX-like.
+        
+        You can use Pipy install it.
+        
+        ```shell
+        pip3 install pyzgit --user
+        ```
+        
+        Then you can use it with `g` , like this:
+        
+        ```shell
+        [pyzgit]
+        
+        A terminal tool, help you use git more simple. Support Linux and MacOS.
+        
+        Usage: g <option> [<args>]
+        You can use -h and --help to get how to use pyzgit.
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
