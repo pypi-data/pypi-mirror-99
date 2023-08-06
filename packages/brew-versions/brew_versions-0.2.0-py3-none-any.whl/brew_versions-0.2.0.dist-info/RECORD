@@ -1,0 +1,12 @@
+brewv/__init__.py,sha256=5kTOZwXVcIsiBj8lkz_0rCC3ImV50oNZlpdkBHcbTQo,381
+brewv/__main__.py,sha256=ubt6XyZvcHwdjCQ90B_U4MeP-3YJduz5GWUC9yOgkrg,27
+brewv/cli.py,sha256=5vLSmT49vJLxa0niVm60TjE3bH4B1P-lUqZq_jqDzZA,1035
+brewv/constants.py,sha256=FaKEwPdvc-KDJAliAv-YOYwKoOwqH_kQPQzairMaeXU,291
+brewv/core.py,sha256=aZ-K_CahcCT7dMLPKukIdXcWvwsQ_jI5538wdtTs3g8,7578
+brewv/util.py,sha256=EgMZgpMrieSjkPcHOpgwzHiz4WlQh2F2nizbsNjzcS4,1545
+brew_versions-0.2.0.dist-info/LICENSE,sha256=PzYgiyYMAnbvR5sbOlU77-jxWjg-Gk33ueHEtzpOyj4,1061
+brew_versions-0.2.0.dist-info/METADATA,sha256=V1X0ouL_RggXc5dThyVC2mqA9feTmaV7TuM8sre06kw,4166
+brew_versions-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+brew_versions-0.2.0.dist-info/entry_points.txt,sha256=23QHsxPOo1Bi68_i3MRHelWfM8WqyImiOzl-xM68hP0,38
+brew_versions-0.2.0.dist-info/top_level.txt,sha256=Z5P8cp1XXa4zFl-Y7KD7pi8Kk6PZ2qHfglE-5s34r8I,6
+brew_versions-0.2.0.dist-info/RECORD,,
