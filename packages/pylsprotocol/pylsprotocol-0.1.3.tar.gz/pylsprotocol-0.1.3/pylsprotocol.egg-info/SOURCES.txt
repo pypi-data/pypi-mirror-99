@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pylsprotocol/__init__.py
+pylsprotocol/lsprotocol.py
+pylsprotocol.egg-info/PKG-INFO
+pylsprotocol.egg-info/SOURCES.txt
+pylsprotocol.egg-info/dependency_links.txt
+pylsprotocol.egg-info/not-zip-safe
+pylsprotocol.egg-info/top_level.txt
