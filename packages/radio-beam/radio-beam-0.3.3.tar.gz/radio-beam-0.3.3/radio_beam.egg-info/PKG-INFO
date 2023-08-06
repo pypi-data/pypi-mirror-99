@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: radio-beam
+Version: 0.3.3
+Summary: Operations for radio astronomy beams with astropy
+Home-page: http://radio_beam.readthedocs.org
+Author: Adam Leroy, Adam Ginsburg, Erik Rosolowsky, Tom Robitaille, and Eric Koch
+Author-email: adam.g.ginsburg@gmail.com, koch.eric.w@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: all
