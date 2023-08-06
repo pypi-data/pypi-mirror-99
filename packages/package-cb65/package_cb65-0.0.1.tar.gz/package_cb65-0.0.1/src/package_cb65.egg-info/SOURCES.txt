@@ -1,0 +1,13 @@
+README
+pyproject.toml
+setup.cfg
+setup.py
+src/package_cb65/__init__.py
+src/package_cb65/__main__.py
+src/package_cb65/impl.py
+src/package_cb65.egg-info/PKG-INFO
+src/package_cb65.egg-info/SOURCES.txt
+src/package_cb65.egg-info/dependency_links.txt
+src/package_cb65.egg-info/entry_points.txt
+src/package_cb65.egg-info/requires.txt
+src/package_cb65.egg-info/top_level.txt

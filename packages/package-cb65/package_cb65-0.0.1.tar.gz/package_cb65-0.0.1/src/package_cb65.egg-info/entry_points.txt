@@ -1,0 +1,3 @@
+[console_scripts]
+component_build = package_cb65.__main__:main
+
