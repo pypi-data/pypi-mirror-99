@@ -1,0 +1,14 @@
+numpy>=1.8.0
+cython>=0.21.0
+six
+
+[docs]
+sphinx_rtd_theme
+nbsphinx
+pandoc
+ipython
+jupyter
+
+[test]
+pytest
+scipy
