@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: kpt
+Version: 0.0.5
+Summary: Kinematics with PyTorch
+Home-page: https://github.com/jihoonerd/Kinematics-PyTorch
+Author: Jihoon Kim
+Author-email: jihoon_kim@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: pytorch3d
+
+# Kinematics-PyTorch
+WIP Project. Codes are subject to change anytime.
+
+## Installation
+
+```
+pip install kpt
+```
+
+## Quick Start
+
+
+## To Do
+
+* Update README
+
+## Test
+
+```bash
+pytest
+```
+
+
+## Reference
+
+```
+@inproceedings{pavllo:quaternet:2018,
+  title={QuaterNet: A Quaternion-based Recurrent Model for Human Motion},
+  author={Pavllo, Dario and Grangier, David and Auli, Michael},
+  booktitle={British Machine Vision Conference (BMVC)},
+  year={2018}
+}
+```
+
