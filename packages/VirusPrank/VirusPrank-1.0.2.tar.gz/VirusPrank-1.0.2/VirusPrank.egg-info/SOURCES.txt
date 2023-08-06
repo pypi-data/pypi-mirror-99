@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+VirusPrank.egg-info/PKG-INFO
+VirusPrank.egg-info/SOURCES.txt
+VirusPrank.egg-info/dependency_links.txt
+VirusPrank.egg-info/entry_points.txt
+VirusPrank.egg-info/top_level.txt
+virus/__init__.py
+virus/__main__.py
+virus/functions.py
