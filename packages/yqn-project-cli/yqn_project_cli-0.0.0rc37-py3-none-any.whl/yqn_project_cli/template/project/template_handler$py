@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# Author: ZKH
+# Date：2021/3/23
+import json
+import os
+from config import ProjectConfig
+from yqn_project_cli.utils.handler import auto_view
+_config = json.load(
+    open(os.path.join(ProjectConfig.project_base_dir, 'config/{}.json'.format(ProjectConfig.name)), 'rb')
+)
+
+
+if __name__ == '__main__':
+    auto_view(_config)

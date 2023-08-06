@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: yqn-project-cli
+Version: 0.0.0rc37
+Summary: for more faster to create flask project
+Home-page: https://blog.zoukaihua.com
+Author: ZouKaihua
+Author-email: zoukaihua@aliyun.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: aniso8601 (>=9.0.1)
+Requires-Dist: bleach (>=3.3.0)
+Requires-Dist: Brotli (>=1.0.9)
+Requires-Dist: certifi (>=2020.12.5)
+Requires-Dist: cffi (>=1.14.5)
+Requires-Dist: chardet (>=4.0.0)
+Requires-Dist: click (>=7.1.2)
+Requires-Dist: colorama (>=0.4.4)
+Requires-Dist: cryptography (>=3.4.6)
+Requires-Dist: DBUtils (>=2.0)
+Requires-Dist: docutils (>=0.16)
+Requires-Dist: Flask (>=1.1.2)
+Requires-Dist: Flask-Compress (>=1.8.0)
+Requires-Dist: Flask-Cors (>=3.0.10)
+Requires-Dist: Flask-JSON (>=0.3.4)
+Requires-Dist: flask-restx (>=0.2.0)
+Requires-Dist: Flask-SQLAlchemy (>=2.4.4)
+Requires-Dist: idna (>=2.10)
+Requires-Dist: importlib-metadata (>=3.7.3)
+Requires-Dist: itsdangerous (>=1.1.0)
+Requires-Dist: jeepney (>=0.6.0)
+Requires-Dist: Jinja2 (>=2.11.3)
+Requires-Dist: jsonschema (>=2.6.0)
+Requires-Dist: keyring (>=23.0.0)
+Requires-Dist: MarkupSafe (>=1.1.1)
+Requires-Dist: packaging (>=20.9)
+Requires-Dist: pika (>=1.2.0)
+Requires-Dist: pkginfo (>=1.7.0)
+Requires-Dist: pyasn1 (>=0.4.8)
+Requires-Dist: pycparser (>=2.20)
+Requires-Dist: Pygments (>=2.8.1)
+Requires-Dist: PyMySQL (>=1.0.2)
+Requires-Dist: pyodps (>=0.10.6)
+Requires-Dist: pyparsing (>=2.4.7)
+Requires-Dist: pytz (>=2021.1)
+Requires-Dist: PyYAML (>=5.4.1)
+Requires-Dist: readme-renderer (>=29.0)
+Requires-Dist: redis (>=3.5.3)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: requests-toolbelt (>=0.9.1)
+Requires-Dist: rfc3986 (>=1.4.0)
+Requires-Dist: SecretStorage (>=3.3.1)
+Requires-Dist: six (>=1.15.0)
+Requires-Dist: SQLAlchemy (>=1.3.23)
+Requires-Dist: termcolor (>=1.1.0)
+Requires-Dist: tqdm (>=4.59.0)
+Requires-Dist: urllib3 (>=1.26.3)
+Requires-Dist: webencodings (>=0.5.1)
+Requires-Dist: Werkzeug (>=1.0.1)
+Requires-Dist: zipp (>=3.4.1)
+
+# yqn_project_cli
+
+####console runner:
+yqn-project -c absolute_json_file_path
+
+####json-file format:
+```json
+{
+  "app_id": 22010,
+  "app_name": "project_name",
+  "app_path": "absolute_project_dir_path",
+  "path_list": [
+    {
+      "path": "/actuator/info/", 
+      "module": "main",
+      "view_cls": "Index",
+      "view_mth": "get_index",
+      "http_methods": ["GET", "POST"],
+      "doc": "默认"
+    },
+    {
+      "path": "/tool/",
+      "module": "tool",
+      "view_cls": "Index",
+      "view_mth": "get_tool",
+      "http_methods": ["GET", "POST"],
+      "doc": "工具"
+    }
+  ]
+}
+```
+
+####参数解释：
+****
+#####app_id：项目唯一数字标识
+#####项目(app_name)位于路径(app_path)下
+#####path_list：所有需路由对象信息数组
+****
+#####path: http请求路径
+#####module: api下的对应模块，便于分块，如 main、tool
+#####view_cls: api对应模块下views.py文件内的视图类, 如 Index
+#####view_mth: 对应视图类下实例方法, 如 get_index、get_tool，http请求时产生调用
+#####http_methods: 支持http请求方式
+#####doc: 视图类doc描述
+
+
+
+
+
+
