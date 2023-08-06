@@ -1,0 +1,3 @@
+[console_scripts]
+gbt = gbt:main
+
