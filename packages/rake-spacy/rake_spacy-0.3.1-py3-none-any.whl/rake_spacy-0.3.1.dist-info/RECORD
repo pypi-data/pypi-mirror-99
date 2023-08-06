@@ -1,0 +1,13 @@
+rake_spacy/__init__.py,sha256=osNP9qlw3UuXhaBBd6qb7EJq6UUjvGaC2NYtXkhKb6g,342
+rake_spacy/__version__.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+rake_spacy/aggregators.py,sha256=lvl_nzZPMKtGL2liRpaiTmNylAtz3HMKqIgwCZpp358,1247
+rake_spacy/cog.py,sha256=x7cT0hQhT5zTrmn1IEuzLX0ZxpWxADyiJkrWcGySu_Q,3418
+rake_spacy/mappers.py,sha256=PMRlwZ6UjgUcGJKGLb49ObTcd3T9GJVxHDjLm-Jw7X0,912
+rake_spacy/phrasers.py,sha256=yk9v8oQ_sItCO-QU-zTL-bf-S-qHeTqbzICULTLOxdU,2357
+rake_spacy/rake.py,sha256=e9-hqL7VOq4-9paaCrBoSseuDKPIC85CelKGHMa9_PU,5447
+rake_spacy/scorers.py,sha256=zHYkvd2zbNUghxo0QyvlMP_0vleWwcMbt3uyo5LUqxE,1295
+rake_spacy/stop_tokens.py,sha256=X24TN0t3rBHjNRPCVX5xjXy0IkqjeZqNmrzGrZHr8s0,659
+rake_spacy-0.3.1.dist-info/LICENSE,sha256=SPULD7THN6F6uslXTQfc07-ao_P147H7PkifB33eYxg,1068
+rake_spacy-0.3.1.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+rake_spacy-0.3.1.dist-info/METADATA,sha256=nQtoqN0PGWiIhY9RCgcKHyl-3WqmjF8FOi8BlFWLshE,14382
+rake_spacy-0.3.1.dist-info/RECORD,,
