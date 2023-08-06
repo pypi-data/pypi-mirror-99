@@ -1,0 +1,12 @@
+markdown_vidify/__init__.py,sha256=EzpIifqI9XM1OcgY90pKs6EnHWIYUH6qynGd6xefRCQ,60
+markdown_vidify/markdown_vidify.py,sha256=8fWyI7tIgR3hCpPdcFgzkZBQ6ccc4sNK6aCV39SAQJU,2073
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_vidify.py,sha256=DpfkGZilzQdn5uxdbN3My5WAWFjOivHwSqqqD326Yis,2406
+vidify/__init__.py,sha256=h1GtS4xU0DmCHyRbxcdQOXvU5p4ewqhT141kjMsqUYs,51
+vidify/vidify.py,sha256=sxlruwFH3kX-qrARN7WXjdAtBBo40PT-Y9bz_W6MINI,2071
+markdown_vidify-0.1.2.dist-info/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+markdown_vidify-0.1.2.dist-info/METADATA,sha256=XZuxi4alUKP-B_5M9S0-WV3pB8RO7qmCh0KuJg2oYDs,3202
+markdown_vidify-0.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+markdown_vidify-0.1.2.dist-info/entry_points.txt,sha256=PqD9QQ6rDWPO2RIPn5bU0S_TKn44qhrKNuSH4GVKedk,55
+markdown_vidify-0.1.2.dist-info/top_level.txt,sha256=ARjMQ50qPIByzWl2wQ2SL6r4894v7tEAaulFxROZmBw,21
+markdown_vidify-0.1.2.dist-info/RECORD,,
