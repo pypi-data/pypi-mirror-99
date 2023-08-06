@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+Vivek.egg-info/PKG-INFO
+Vivek.egg-info/SOURCES.txt
+Vivek.egg-info/dependency_links.txt
+Vivek.egg-info/top_level.txt

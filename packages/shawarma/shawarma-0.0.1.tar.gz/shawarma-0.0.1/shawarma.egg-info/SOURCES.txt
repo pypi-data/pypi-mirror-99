@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+Vivek.egg-info/SOURCES.txt
+Vivek.egg-info/dependency_links.txt
+Vivek.egg-info/top_level.txt
+shawarma.egg-info/PKG-INFO
+shawarma.egg-info/SOURCES.txt
+shawarma.egg-info/dependency_links.txt
+shawarma.egg-info/top_level.txt
