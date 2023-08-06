@@ -1,0 +1,2 @@
+deepops>=1.6.2
+netaddr
