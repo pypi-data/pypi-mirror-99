@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+sfst.egg-info/PKG-INFO
+sfst.egg-info/SOURCES.txt
+sfst.egg-info/dependency_links.txt
+sfst.egg-info/not-zip-safe
+sfst.egg-info/top_level.txt
