@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ftp_loader/__init__.py
+ftp_loader/loader.py
+ftp_loader/main.py
+ftp_loader.egg-info/PKG-INFO
+ftp_loader.egg-info/SOURCES.txt
+ftp_loader.egg-info/dependency_links.txt
+ftp_loader.egg-info/entry_points.txt
+ftp_loader.egg-info/requires.txt
+ftp_loader.egg-info/top_level.txt
