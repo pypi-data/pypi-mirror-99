@@ -1,0 +1,5 @@
+simplebot>=1.0.1
+translators>=4.7.16
+
+[test]
+pytest>=6.2.2
