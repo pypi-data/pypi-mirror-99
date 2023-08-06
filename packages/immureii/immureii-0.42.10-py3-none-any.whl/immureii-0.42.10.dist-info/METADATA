@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: immureii
+Version: 0.42.10
+Summary: Immure Iniquitous Intent
+Home-page: https://gitlab.com/immureii/immureii
+Author: Scott McCallum (sr.ht/~scott91e1)
+Author-email: cto@immureii.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: SQL
+Classifier: Programming Language :: Forth
+Classifier: Programming Language :: JavaScript
+Classifier: Topic :: Education
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: Proxy Servers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: System :: Networking :: Firewalls
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Immure Iniquitous Intent
+
+
+

@@ -1,0 +1,7 @@
+immureii/__init__.py,sha256=6a0nKEbuGWlTYW7SNodwWxJFev0TioWoIbaeyaho2y0,25
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_immureii.py,sha256=3TcsxRivEo4xwYhfORyvwLwQCnn4ZcdncurFKR2nZcw,96
+immureii-0.42.10.dist-info/METADATA,sha256=EudkOCR9gfTpj5o6eCIWZ2VXdFJrOGqDD_A1Q_AG5To,1747
+immureii-0.42.10.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+immureii-0.42.10.dist-info/top_level.txt,sha256=1Jk6Bfz0GLdGT-T8CeVMvxVWNwtmg6GfPk-6Vsfo4Bw,15
+immureii-0.42.10.dist-info/RECORD,,
