@@ -1,0 +1,15 @@
+Pillow
+altair
+branca
+folium
+jinja2
+matplotlib
+numpy
+pandas
+python-dateutil
+scipy
+sklearn
+sphinx
+sphinx-gallery
+sphinx_rtd_theme
+vincent
