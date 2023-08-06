@@ -1,0 +1,6 @@
+[console_scripts]
+deeptest=deeptest.cli:run
+
+[pytest11]
+deeptest=deeptest.pytest_plugin
+
