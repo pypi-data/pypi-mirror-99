@@ -1,0 +1,11 @@
+beautifulsoup4
+fake_useragent
+fuzzywuzzy
+html5lib
+lxml
+measurement
+more-itertools
+numpy
+pandas
+pyhelpers>=1.2.12
+requests
