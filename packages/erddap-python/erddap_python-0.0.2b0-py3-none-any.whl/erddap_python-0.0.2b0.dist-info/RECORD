@@ -1,0 +1,16 @@
+erddapClient/__init__.py,sha256=IL-42yFE366sNLEO9UIW9a7o9lG9yqyRhYOcnR4Gwtw,303
+erddapClient/erddap_constants.py,sha256=aXrxUHc18AB5R4u_HmFvqXPdI_IC1-nCFChkhbleQWE,583
+erddapClient/erddap_dataset.py,sha256=q0BFPsUi_e0wldRC9A896X4NGWANFV_5jv7BJGqCSC0,5354
+erddapClient/erddap_griddap.py,sha256=A8qU9ZZG-bst1Zig8_fcHVJQTYYqzO849KIkhErMui8,1706
+erddapClient/erddap_server.py,sha256=FY4etGQR6EXrILLPrNNf9olxH-PBS6uI-3FPK-P6Rnw,21330
+erddapClient/erddap_tabledap.py,sha256=LIa777IWlHAhWNuuGScCXQ5zSbjynPqmnvM6YoVXI-I,3910
+erddapClient/formatting.py,sha256=nBcOm1TmsTKrdPhR8yDc8qaUrIGeQVoRlbgo_WIkawQ,2984
+erddapClient/parse_utils.py,sha256=4qsY15aLCqNvJ3ESgJkdMe8cB2_CBVMC5jF6X3Ntb9M,6815
+erddapClient/pyerddap.py,sha256=-32avo-rOs6HQGlN9oZaU81TsnxjwWb3HT39QwoFxTk,6093
+erddapClient/remote_requests.py,sha256=RJ_sDLjzGSeuhrMPRRU2s4ap9OfjCQIluDSBQegzANE,651
+erddapClient/url_operations.py,sha256=qv7Jg3kfmLd-CjMXc_iUAKdhFn1NZRn4ACgGa1bOA9o,605
+erddap_python-0.0.2b0.dist-info/LICENSE.txt,sha256=V_GB7AM1C1Zr2RDuC2NGNuqk9GoRzVghPEuSFViGC3I,1069
+erddap_python-0.0.2b0.dist-info/METADATA,sha256=x6_3NhMv7LLM0poxtraKvZwxWixz3_H4pzp18LLb2Kg,4893
+erddap_python-0.0.2b0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+erddap_python-0.0.2b0.dist-info/top_level.txt,sha256=hq9agfpgYkPh2IrDfnSBw7yoe2xtzT4FGKKv_JDvQDU,13
+erddap_python-0.0.2b0.dist-info/RECORD,,
