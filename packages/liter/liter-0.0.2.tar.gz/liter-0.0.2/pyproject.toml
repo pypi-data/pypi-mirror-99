@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "liter"
+version = "0.0.2"
+description = "Tool for automating basic python packages task."
+authors = ["Jorge Morgado <jorge.morgadov@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+liter = 'liter.console:app'
