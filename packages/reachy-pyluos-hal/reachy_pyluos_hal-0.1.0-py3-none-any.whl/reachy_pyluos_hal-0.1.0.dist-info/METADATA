@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: reachy-pyluos-hal
+Version: 0.1.0
+Summary: Reachy HAL implementation via Pyluos
+Home-page: https://github.com/pollen-robotics/reachy_mockup_hardware
+Author: Pollen Robotics
+Author-email: contact@pollen-robotics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pyserial
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
