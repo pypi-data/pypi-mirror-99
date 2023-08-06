@@ -1,0 +1,3 @@
+[console_scripts]
+weasel_result_fetcher=weasel_client.scripts.raw_result_fetcher:main
+
