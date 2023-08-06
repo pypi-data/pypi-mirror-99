@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+automation_api/__init__.py
+automation_api/api.py
+automation_api/utils/__init__.py
+automation_api/utils/dcm.py
+automation_api/utils/mongodb.py
+automation_api_deffets.egg-info/PKG-INFO
+automation_api_deffets.egg-info/SOURCES.txt
+automation_api_deffets.egg-info/dependency_links.txt
+automation_api_deffets.egg-info/top_level.txt
