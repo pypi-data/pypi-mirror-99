@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+src/bigfix_prefetch/__init__.py
+src/bigfix_prefetch/prefetch.py
+src/bigfix_prefetch/prefetch_from_dictionary.py
+src/bigfix_prefetch/prefetch_from_file.py
+src/bigfix_prefetch/prefetch_from_url.py
+src/bigfix_prefetch/prefetch_parse.py
+src/bigfix_prefetch/prefetch_validate.py
+src/bigfix_prefetch/prefetches_have_matching_hashes.py
+src/bigfix_prefetch.egg-info/PKG-INFO
+src/bigfix_prefetch.egg-info/SOURCES.txt
+src/bigfix_prefetch.egg-info/dependency_links.txt
+src/bigfix_prefetch.egg-info/top_level.txt
