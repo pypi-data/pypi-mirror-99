@@ -1,0 +1,93 @@
+Metadata-Version: 1.2
+Name: evescript
+Version: 0.2.1
+Summary: A simple script language for event-based automation tasks.
+Home-page: https://github.com/charlee/evescript
+Author: Charlee Li
+Author-email: oda.charlee@gmail.com
+License: MIT
+Project-URL: Documentation, https://evescript.readthedocs.io/
+Project-URL: Changelog, https://evescript.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/charlee/evescript/issues
+Description: ================
+        EveScript
+        ================
+        
+        **EveScript** is a simple script language for event-based automation tasks.
+        
+        
+        
+        ::
+        
+          from evescript.compiler import EveScriptCompiler
+          from evescript.executor import EveScriptExecutor
+        
+          script = '''
+          if ($lightSensor > 20) {
+            say("It's daytime now!")
+          }
+          '''
+        
+          def lightSensor():
+              return read_light_sensor_port()
+        
+          compiler = EveScriptCompiler()
+          compiled_script = compiler.compile(script)
+        
+          executor = EveScriptExector({
+              'actions': { 'say': lambda x: print(x) },
+              'variables': { '$lightSensor': lightSensor },
+          })
+        
+          executor.run_script(compiled_script)
+          # Out: It's daytime now!
+        
+        
+        EveScript allows you to write simple event-based scripts that evaluate various conditions
+        and execute actions. The conditions and actions are highly customizable to maximize the 
+        flexibility. EveScript can be used in embedded systems (such as Raspberry Pi) to implement
+        a flexible event-based system.
+        
+        
+        Installation
+        ------------
+        
+        ::
+        
+          pip install evescript
+        
+        
+        Changelog
+        =========
+        
+        
+        0.2.1 (2021-03-20)
+        ------------------
+        
+        * Added decompiler.
+        * Compiler will not rename built-in operators.
+        
+        0.1.1 (2021-03-19)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: script,evescript,automation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
