@@ -1,0 +1,17 @@
+pyyaml==5.4.1
+yamlordereddictloader==0.4.0
+docutils==0.16
+comtypes==1.1.7
+psutil==5.8.0
+
+[:python_version < "3.6"]
+configparser==4.0.2
+
+[:python_version >= "3.6"]
+configparser==5.0.0
+
+[dev]
+wheel
+
+[test]
+pytest
