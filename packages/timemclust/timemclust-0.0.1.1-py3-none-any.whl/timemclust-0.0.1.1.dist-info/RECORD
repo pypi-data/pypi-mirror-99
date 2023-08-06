@@ -1,0 +1,10 @@
+timemclust/__init__.py,sha256=K0KBCs5ZHIHQxzqJSHDJ7swPWtvcqGYXK0VPANepy2A,242
+timemclust/em_alg.py,sha256=qaPGeGWMa8H1kAyLQQKTseJC68cTHCtgyWzxRz3LwyM,4553
+timemclust/exponential_hawkes.py,sha256=-qfs6mCvhK4vnoWFY6QviIqDWHNrPq60_KnN50bvEzI,2175
+timemclust/helper.py,sha256=hWXpoNSSil4hKmCbNooqCPGyrZBVB1fq7T-1HPXZdwg,1974
+timemclust/simulations.py,sha256=m4lEYiIe2-1FcRNtJOm332GakbhAw-RRJgsf2okwxC0,1926
+timemclust/tweet_getter.py,sha256=toFMrI3luCIYqWrlbwUPolooLb24gwYhXp6ILB2GnsQ,1598
+timemclust-0.0.1.1.dist-info/METADATA,sha256=Izj8zRi6bdn9sqzKiY5vJorcjxLHB8aaq9OSKUUFPDU,656
+timemclust-0.0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+timemclust-0.0.1.1.dist-info/top_level.txt,sha256=zmQnw-byicyG1BDTWSIqCQB9pXSGPLVjG3YTAT997Zc,11
+timemclust-0.0.1.1.dist-info/RECORD,,
