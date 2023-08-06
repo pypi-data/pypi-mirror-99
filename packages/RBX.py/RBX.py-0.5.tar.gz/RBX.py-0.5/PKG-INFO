@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: RBX.py
+Version: 0.5
+Summary: A simple API wrapper for ROBLOX
+Home-page: https://github.com/token631/RBX.py
+Author: Token
+Author-email: c@tokyran.com
+License: MIT
+Download-URL: https://github.com/token631/RBX.py/archive/v_01.tar.gz
+Description: Please view the GitHub page (project Homepage) for more information.
+Keywords: Roblox
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
