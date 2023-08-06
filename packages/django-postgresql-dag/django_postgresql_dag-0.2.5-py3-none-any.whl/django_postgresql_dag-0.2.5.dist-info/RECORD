@@ -1,0 +1,13 @@
+django_postgresql_dag/_query_strings.py,sha256=yq_kMODkKvgQXHQhHg9SV74XR71UsDdvd8uSpJxOLok,1094
+django_postgresql_dag/exceptions.py,sha256=_2BJ9RbUO-t34im-1NdzBtMt3ncr-XRMnwch_KFjJXw,391
+django_postgresql_dag/models.py,sha256=j64GUq0tCywrgyYKzE6P9BPtkQdUMusfddmWEQgghBs,26556
+django_postgresql_dag/query_builders.py,sha256=Iaebqf7kuYc7FXqVkDBxKJkRSv6ECYupaLcW9mbGrXU,22755
+django_postgresql_dag/query_strings.py,sha256=KlicK0gmDMWRYc7ZA6c0h8jjgEbjOMGoG9NTbJiVzQ0,6871
+django_postgresql_dag/transformations.py,sha256=deuv9jTVB2mswkixzGZDFJfYgqK-uo3dag4hhZ6lKKQ,2332
+django_postgresql_dag/urls.py,sha256=S1bImjsD9_Q_j4hlHWPdMxHiSfhXzqK6Ori6CIAan_I,141
+django_postgresql_dag/utils.py,sha256=lLFTFjBoBHEz0Z-R54rZJ66-jgQMCUGjkSSKX_VrTWg,6691
+django_postgresql_dag-0.2.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_postgresql_dag-0.2.5.dist-info/METADATA,sha256=NiTssl2iTx7R_lpFmcFgzCmARYS4SaDrkCcFwLUvTcU,3855
+django_postgresql_dag-0.2.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_postgresql_dag-0.2.5.dist-info/top_level.txt,sha256=cOaDJPPkzWcBkMU-gV1r1tMc7yinpQU_bdA0bMFQvJc,22
+django_postgresql_dag-0.2.5.dist-info/RECORD,,
