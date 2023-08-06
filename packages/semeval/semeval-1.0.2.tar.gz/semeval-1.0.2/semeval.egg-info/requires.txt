@@ -1,0 +1,10 @@
+mikatools
+argparse
+numpy
+gensim
+fastapi
+uvicorn
+ujson
+requests
+scikit-learn
+hickle
