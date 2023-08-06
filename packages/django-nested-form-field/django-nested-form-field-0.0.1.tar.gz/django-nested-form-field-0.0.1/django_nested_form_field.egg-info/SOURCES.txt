@@ -1,0 +1,13 @@
+README.md
+setup.py
+django_nested_form_field.egg-info/PKG-INFO
+django_nested_form_field.egg-info/SOURCES.txt
+django_nested_form_field.egg-info/dependency_links.txt
+django_nested_form_field.egg-info/requires.txt
+django_nested_form_field.egg-info/top_level.txt
+nested_form_field/__init__.py
+nested_form_field/admin.py
+nested_form_field/apps.py
+nested_form_field/models.py
+nested_form_field/tests.py
+nested_form_field/views.py
