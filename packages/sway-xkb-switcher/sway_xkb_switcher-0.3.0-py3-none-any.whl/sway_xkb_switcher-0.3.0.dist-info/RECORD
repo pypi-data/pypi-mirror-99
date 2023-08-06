@@ -1,0 +1,9 @@
+emacs_sway_xkb/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+emacs_sway_xkb/emacs_sway_xkb.py,sha256=YoKhzPumoEFjwYqQcl6LqWQp2jPe3_qSGU4UHVp8LGg,450
+sway_xkb_switcher/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+sway_xkb_switcher/switcher.py,sha256=_rWT1XFSe1_XCJKUDAiWkG2UzrNyypEZhfa6r-oew6c,5270
+sway_xkb_switcher-0.3.0.dist-info/entry_points.txt,sha256=XGzILx4E_4W2Yf07x-1HGA2SfOxnoynqKA-pRR_7giI,119
+sway_xkb_switcher-0.3.0.dist-info/LICENSE,sha256=R9wCZdlBUqGalUgqy1LJp8kULnjPthb61DIACxVb_-o,1073
+sway_xkb_switcher-0.3.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+sway_xkb_switcher-0.3.0.dist-info/METADATA,sha256=UfhKYywZXhu2Nltnhzx6-k6MYvZ8mC0njezjFeKd1eo,2607
+sway_xkb_switcher-0.3.0.dist-info/RECORD,,

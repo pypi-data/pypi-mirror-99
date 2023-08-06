@@ -1,0 +1,4 @@
+[console_scripts]
+emacs-sway-xkb=emacs_sway_xkb.emacs_sway_xkb:main
+sway-xkb-switcher=sway_xkb_switcher.switcher:main
+
