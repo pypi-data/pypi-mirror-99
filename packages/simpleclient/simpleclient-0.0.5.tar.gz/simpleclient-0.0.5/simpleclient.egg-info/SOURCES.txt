@@ -1,0 +1,8 @@
+README.md
+setup.py
+simpleclient/__init__.py
+simpleclient/simpleclient.py
+simpleclient.egg-info/PKG-INFO
+simpleclient.egg-info/SOURCES.txt
+simpleclient.egg-info/dependency_links.txt
+simpleclient.egg-info/top_level.txt
