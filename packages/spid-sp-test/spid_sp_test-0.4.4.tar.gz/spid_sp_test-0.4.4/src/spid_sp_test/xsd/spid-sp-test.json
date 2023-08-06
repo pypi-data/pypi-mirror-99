@@ -1,0 +1,88 @@
+{
+  "test": {
+    "sp": {
+      "metadata_strict": {
+        "SpidSpMetadataCheck": [
+          {
+            "result": "failure",
+            "test": "The entityID attribute must be a valid HTTPS url",
+            "value": "http://localhost:8000/spid/metadata"
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_SPSSODescriptor : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_xmldsig with `xmlsec1 --verify --insecure --id-attr:ID urn:oasis:names:tc:SAML:2.0:metadata:EntityDescriptor /tmp/tmp259dpr3g` : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_Signature : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_KeyDescriptor : OK",
+            "value": ""
+          },
+          {
+            "result": "failure",
+            "test": "The Location attribute in SingleLogoutService element must be a valid URL - AV n\u00b0 1 and n\u00b0 3",
+            "value": "http://localhost:8000/spid/ls/post/"
+          },
+          {
+            "result": "failure",
+            "test": "The Location attribute must be a valid HTTPS url - TR pag. 20 and AV n\u00b0 1",
+            "value": "http://localhost:8000/spid/acs/"
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_AttributeConsumingService : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheck.test_Organization : OK",
+            "value": ""
+          }
+        ]
+      },
+      "metadata_extra": {
+        "SpidSpMetadataCheckExtra": [
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheckExtra.test_Signature_extra : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheckExtra.test_AttributeConsumingService_extra : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheckExtra.test_SPSSODescriptor_extra : OK",
+            "value": ""
+          },
+          {
+            "result": "success",
+            "test": "SpidSpMetadataCheckExtra.test_Organization : OK",
+            "value": ""
+          }
+        ]
+      },
+      "authnrequest_strict": {
+        "SpidSpAuthnReqCheckExtra": [
+          {
+            "result": "success",
+            "test": "SpidSpAuthnReqCheckExtra.test_AuthnRequest_extra : OK",
+            "value": ""
+          }
+        ]
+      }
+    }
+  }
+}
