@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/pytular/__init__.py
+src/pytular/util.py
+src/pytular.egg-info/PKG-INFO
+src/pytular.egg-info/SOURCES.txt
+src/pytular.egg-info/dependency_links.txt
+src/pytular.egg-info/not-zip-safe
+src/pytular.egg-info/requires.txt
+src/pytular.egg-info/top_level.txt
