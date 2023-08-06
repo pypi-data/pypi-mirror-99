@@ -1,0 +1,12 @@
+etdot/__init__.py,sha256=pluroxpwFXJRhbLOBD4RwmPgCr8DOy9GHKmZtI_gHKU,1258
+etdot/cpp_dotc/CMakeLists.txt,sha256=4Iq2pYj76uj1F8f8cet99wldo_0oXtREJR5sKcw47k8,2836
+etdot/cpp_dotc/dotc.cpp,sha256=QaUjwsr6s3iBdAFYPCwNpOEGHjLec0JWenuElztHEA4,2155
+etdot/cpp_dotc/dotc.rst,sha256=hLC_cUhwmwOg5c9TvFf_1Kc1KMt2CFw-4XSt7eXdYGM,630
+etdot/f90_dotf/CMakeLists.txt,sha256=Jy9RDIOrUOJyycmd__zQzBuadHDvgXFmuhsWUUfnqY8,10405
+etdot/f90_dotf/dotf.f90,sha256=nIRGmJPWaBrEuSGpVo6CTpgcCbkJ2d08t1l5ZTKDm9Q,2107
+etdot/f90_dotf/dotf.rst,sha256=ME_nv2kCMNNv5uByzaF7eLRlU25QYqiJQ_rKbwMnpqs,632
+etdot-1.3.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+etdot-1.3.0.dist-info/LICENSE,sha256=nrHqrFIqTBdSluz8ezhZUzYFnjYVwMGj23_xHabJBYQ,1072
+etdot-1.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+etdot-1.3.0.dist-info/METADATA,sha256=0WOhgtKx0Um1-sjDXPDDpsiCQlnDfpAtIOrlXP8ecEk,819
+etdot-1.3.0.dist-info/RECORD,,
