@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: subsparser
+Version: 0.0.6
+Summary: subtitle parser for srt and text
+Home-page: https://github.com/baloda/subparser
+Author: Dharmveer Baloda
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: chardet
+
+UNKNOWN
+
+
