@@ -1,0 +1,1 @@
+(self.webpackChunkmitosheet=self.webpackChunkmitosheet||[]).push([[568],{1568:(e,l,a)=>{"use strict";a.r(l),a.d(l,{MODULE_NAME:()=>t.o,MODULE_VERSION:()=>t.Y,ExampleModel:()=>E.ExampleModel,ExampleView:()=>E.ExampleView,default:()=>p});var t=a(8657),s=a(4480),E=a(8778);const p=s.default}}]);
