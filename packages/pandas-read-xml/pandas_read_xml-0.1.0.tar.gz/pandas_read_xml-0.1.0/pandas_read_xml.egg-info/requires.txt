@@ -1,0 +1,7 @@
+pyarrow
+pandas
+xmltodict
+requests
+zipfile36
+distlib
+urllib3>=1.26.3
