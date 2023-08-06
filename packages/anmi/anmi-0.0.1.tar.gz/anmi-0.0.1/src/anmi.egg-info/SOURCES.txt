@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+src/anmi/__init__.py
+src/anmi.egg-info/PKG-INFO
+src/anmi.egg-info/SOURCES.txt
+src/anmi.egg-info/dependency_links.txt
+src/anmi.egg-info/top_level.txt
+src/anmi/T2/__init__.py
+src/anmi/T2/funcs_LUD.py
+src/anmi/T2/funcs_gram_schmidt.py
+src/anmi/T2/funcs_householder_QR.py
+src/anmi/T2/funcs_met_iters.py
+src/anmi/genericas/__init__.py
