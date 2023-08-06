@@ -1,0 +1,12 @@
+pydeepimagej/DeepImageJConfig.py,sha256=c4sLq6kSHoUIiVHyTi1H3fOdrc34WLEZMv-9S1m4Vig,3758
+pydeepimagej/__init__.py,sha256=pPSCF25KCqSm37bgPI9yP9H32HWvNysvxKFwTA_YarQ,32
+pydeepimagej/xml/__init__.py,sha256=8ZleHfwMdNHhSVzBxWvVwQhCuOa7v8obEzM4KS6nMTw,28
+pydeepimagej/xml/create_config.py,sha256=VVSQKaFQbBhCoPAChyDEVvfjQch-asA3ASWGD34z9Ig,15068
+pydeepimagej/yaml/__init__.py,sha256=kX2r8D39RKXB-kgoujItEMjfB9J45q7yajxMpu0AyDU,29
+pydeepimagej/yaml/bioimageio_specifications.py,sha256=2F4Q3krvyhT45ZCqGbTaMZ4r9DGpTnEeKK8Tz-vxEPQ,5957
+pydeepimagej/yaml/create_config.py,sha256=6RAXgiVyLCIWWkF2H0UrN23O95iOYOpzHOB_l7Ikim4,32736
+pydeepimagej-2.0.5.7.dist-info/LICENSE,sha256=6O7N8dKsY55VmRvrZdusjhCIB_HAoNckldB3QAqLFdk,1346
+pydeepimagej-2.0.5.7.dist-info/METADATA,sha256=FypVHPqRjzf77gnijp135VZ1d18hpLZsXMdmyyBC1Hw,13209
+pydeepimagej-2.0.5.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pydeepimagej-2.0.5.7.dist-info/top_level.txt,sha256=vDZAoJlqa2Xu8yNeLh4U5gbbGQZ3JiYIE6eg6IHjXgw,13
+pydeepimagej-2.0.5.7.dist-info/RECORD,,
