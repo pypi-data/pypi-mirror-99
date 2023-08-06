@@ -1,0 +1,15 @@
+fstk/Dialogs.py,sha256=DX0VcFRlgkXPUl-rX55IBx0Q-VzwzWwf9De-vf2DMLE,8635
+fstk/Fstk.py,sha256=L2VuChBKufIZV-GEUymZO_3xKMkw7IHCQs_zlHKgnvo,19554
+fstk/Globals.py,sha256=RmRrL1e8g80b-UpEACTFIWjzWq0nwuffycoSs7RaLd4,880
+fstk/SaveFiles.py,sha256=KHZVqBdtn6_lSKun7gIAnDJLLTWiCmSL5ghLo26ebAI,4742
+fstk/Updater.py,sha256=Op915KLbjcZi2vSz9MXtqQDrFc78iWh6YXgvvlvrIWM,1542
+fstk/Utils.py,sha256=37dZ7y_CJh4WlT_oZMx6V6G8Dc5cHc_TqgLmoqzprfY,317
+fstk/__init__.py,sha256=r_cKr7sbAG8wXvZQ-5WkC2eXGKMDWp6Xe_hNXu43MT0,21
+fstk/__main__.py,sha256=o3CG2TnYEohLYI4RXYHc4ZYRcxXTCOYUsaKfISI0lPM,3129
+fstk/assets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fstk/assets/fast-switch-time-keeper.desktop,sha256=F-6bXBvp8fjF0R6aJhrzGQIrn2rY5vQTzrKJsKKrrjo,158
+fstk/assets/icon.png,sha256=fmWIYnG-JeyBNPaM9RDO8M2-a55JCoEZoBwsnaZ3fL0,14412
+fstk-0.1.2.dist-info/METADATA,sha256=P4Cnoeq8blYSrR9PAGICqKE6w9TosTA96SNE9Q5ZGGI,900
+fstk-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fstk-0.1.2.dist-info/top_level.txt,sha256=jCGTGXOm3ec6CwE6xHLcuocg-VwLzz8HEeXkE9Ziisk,5
+fstk-0.1.2.dist-info/RECORD,,
