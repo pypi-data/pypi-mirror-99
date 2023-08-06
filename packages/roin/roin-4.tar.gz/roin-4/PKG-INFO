@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: roin
+Version: 4
+Summary: This is just a module for easier installation of Rosehip dependencies
+Home-page: https://github.com/donno2048/roin
+Author: Elisha Hollander
+Author-email: just4now666666@gmail.com
+License: MIT
+Description: # roin
+        
+        This is just a module for easier installation of Rosehip dependencies
+        
+        ## To use
+        
+        Just install the package.
+        
+        ### From PyPI
+        
+        `py -m pip install roin`
+        
+        ### From GitHub
+        
+        `py -m pip install git+https://github.com/donno2048/roin`
+        
+Platform: UNKNOWN
