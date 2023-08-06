@@ -1,0 +1,8 @@
+from setuptools import setup
+
+setup(name='PSM_testbed',
+      version='0000.00.00.00',
+      description='A testbed package for Phillip Maire',
+      packages=['PSM_testbed'],
+      author_email='phillip.maire@gmail.com',
+      zip_safe=False)
