@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: athenautility
+Version: 0.0.1
+Summary: Athena Utility
+Home-page: UNKNOWN
+Author: KnowledgeLens
+Author-email: karthik.madhamanchi@knowledgelens.com
+License: UNKNOWN
+Description: AWS Athena utility based on PyAthena
+Platform: UNKNOWN
