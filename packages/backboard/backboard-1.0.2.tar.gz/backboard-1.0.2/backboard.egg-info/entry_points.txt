@@ -1,0 +1,3 @@
+[console_scripts]
+backboard = backboard.__main__:main
+
