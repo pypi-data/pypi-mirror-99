@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hypeme
+Version: 0.1.0
+Summary: hype yourself up!
+License: Unlicense
+Author: sneakers-the-rat
+Requires-Python: >=3.3
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
