@@ -1,0 +1,9 @@
+setup.py
+willacy_cardGames/__init__.py
+willacy_cardGames/card_setup.py
+willacy_cardGames/old_maid.py
+willacy_cardGames.egg-info/PKG-INFO
+willacy_cardGames.egg-info/SOURCES.txt
+willacy_cardGames.egg-info/dependency_links.txt
+willacy_cardGames.egg-info/not-zip-safe
+willacy_cardGames.egg-info/top_level.txt
