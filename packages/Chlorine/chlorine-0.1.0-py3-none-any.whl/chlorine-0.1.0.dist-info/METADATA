@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: chlorine
+Version: 0.1.0
+Summary: The core part of project fluorine
+Home-page: https://github.com/rice0208/chlorine
+Author: Fluorine Team
+Author-email: riceforever0208@outlook.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/rice0208
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Chlorine
+
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Frice0208%2Fchlorine%2Fbadge&style=flat)](https://actions-badge.atrox.dev/rice0208/chlorine/goto)
+
+Chlorine是一款适用于“语言不精确输入”的应用，其目的在于改善搜索引擎中由于不规范中文导致结果偏离的问题。
+
+目前Chlorine可以在PyPI中安装，提供了whl文件和.tar.gz的安装包。
+
+```shell
+$ pip install chlorine
+```
+
+## Repository Info
+
+作者：Fluorine团队（[@z-t-y](https://github.com/z-t-y)与[@rice0208](https://github.com/rice0208)）
+
+Python包：`chlorine`（支持所有平台，Python≥3.8）；URL: [chlorine](https://pypi.org/project/chlorine)
+
+

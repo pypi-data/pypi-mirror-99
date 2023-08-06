@@ -1,0 +1,9 @@
+chlorine/__init__.py,sha256=RhknPgWB9NDf2rbN_sk5nNNafYXblBu9Fpmzkb-0Z_M,216
+chlorine/translate.py,sha256=d301ITd0OTscE8EsouBWC0v3VqO-SnPLjyj_g8Awrr8,6305
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_translate.py,sha256=QHgyGyzz6yChzoC7X8UrgcRlmwcMbFJk0vJjKpgeVRU,425
+chlorine-0.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+chlorine-0.1.0.dist-info/METADATA,sha256=zUKxn3P2zMTdFo8SE2NYvTopjBOnXdrjI9-tW3IiOow,1182
+chlorine-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chlorine-0.1.0.dist-info/top_level.txt,sha256=PjLiVUw5bJCsjUVTpwrpU_sP6UFrGVo9y_0PdnFEIAQ,15
+chlorine-0.1.0.dist-info/RECORD,,
