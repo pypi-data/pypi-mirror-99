@@ -1,0 +1,9 @@
+README.md
+setup.py
+reus/__init__.py
+reus/teams.py
+reus.egg-info/PKG-INFO
+reus.egg-info/SOURCES.txt
+reus.egg-info/dependency_links.txt
+reus.egg-info/requires.txt
+reus.egg-info/top_level.txt
