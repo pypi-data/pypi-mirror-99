@@ -1,0 +1,12 @@
+colorlog>=4.6.1
+tqdm
+lxml
+requests
+dofast
+smart-open
+pillow
+bs4
+arrow
+numpy
+termcolor
+pycrytpo
