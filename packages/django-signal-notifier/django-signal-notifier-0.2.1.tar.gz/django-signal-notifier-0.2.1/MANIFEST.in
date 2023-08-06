@@ -1,0 +1,22 @@
+include LICENSE
+include CHANGELOG
+include README.rst
+recursive-include django_signal_notifier *
+include LICENSE
+include README.rst
+
+include docs/Makefile
+recursive-include docs *.rst
+recursive-include docs *.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * empty
+recursive-exclude insite_messaging *
+recursive-exclude Publish *
+recursive-exclude static *
+recursive-exclude staticfiles *
+recursive-exclude testDjango *
+recursive-exclude venv *
+
+
