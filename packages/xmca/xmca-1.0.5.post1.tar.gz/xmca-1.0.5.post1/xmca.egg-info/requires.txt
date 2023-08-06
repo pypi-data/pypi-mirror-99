@@ -1,0 +1,6 @@
+numpy
+xarray
+matplotlib
+statsmodels
+tqdm
+cartopy
