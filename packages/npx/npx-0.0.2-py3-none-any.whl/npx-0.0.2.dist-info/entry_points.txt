@@ -1,0 +1,3 @@
+[console_scripts]
+npx-show = npx.cli:show
+
