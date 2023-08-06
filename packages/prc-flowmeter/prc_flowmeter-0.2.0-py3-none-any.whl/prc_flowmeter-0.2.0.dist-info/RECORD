@@ -1,0 +1,8 @@
+flowmeter/__init__.py,sha256=mWttkUMqr0eeyMuDAQZ-OduVZ-fd13hqJmezExb6BQ8,115
+flowmeter/flowmeter.py,sha256=T9yrIuTgZVyj5Xdrq5x9aJBcjLXAVQWJtFk-5nGwqFg,59779
+flowmeter/flowsession.py,sha256=OPyguMPo9Ggx5V9sGQaGRPzrVnpEQjbcq1wbR0NkoY0,3238
+prc_flowmeter-0.2.0.dist-info/LICENSE,sha256=GJsa-V1mEVHgVM6hDJGz11Tk3k0_7PsHTB-ylHb3Fns,18431
+prc_flowmeter-0.2.0.dist-info/METADATA,sha256=HOl38KxaelmY3K3wHmjzlALgLdDoRLbbeDTFedkp_7Q,2064
+prc_flowmeter-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+prc_flowmeter-0.2.0.dist-info/top_level.txt,sha256=0Y49cDq3Pa-Xxc-ZPIkiTicYKOtcEtd_QACX-E8x1go,10
+prc_flowmeter-0.2.0.dist-info/RECORD,,
