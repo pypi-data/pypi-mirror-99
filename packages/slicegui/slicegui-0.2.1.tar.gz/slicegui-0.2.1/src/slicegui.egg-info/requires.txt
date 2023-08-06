@@ -1,0 +1,15 @@
+fontTools>=4.21.1
+
+[dev]
+coverage
+pytest
+pytest-qt
+tox
+flake8
+black
+isort
+
+[maintain]
+wheel
+setuptools
+twine
