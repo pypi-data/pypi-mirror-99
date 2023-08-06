@@ -1,0 +1,493 @@
+import boto3
+import boto3
+import logging
+import hashlib
+import os
+import requests
+import time
+import concurrent.futures
+
+logger = logging.getLogger(__name__)
+CHUNK_SIZE_16M = 16777216
+CHUNK_SIZE_32M = 33554432
+CHUNK_SIZE_128M = 134217728
+MB_512 = 536870912
+GB_1 = 1073741274
+GB_5 = 5368706371
+GB_10 = 10737412742
+GB_100 = 107374127424
+# TODO: tohle bude v samotne libce
+
+def read_in_chunks(file_object, chunk_size=CHUNK_SIZE_16M):
+    """Lazy function (generator) to read a file piece by piece.
+    Default chunk size: 1k."""
+    while True:
+        data = file_object.read(chunk_size)
+        if not data:
+            break
+        yield data
+
+
+def get_file_chunk_size(file_size):
+    def getnumchunks(file_size, max_size):
+        num = int(file_size / max_size)
+        if num % max_size:
+            num += 1
+        return num
+    if file_size < MB_512:
+        return 1, file_size
+    elif file_size < GB_10:
+        return getnumchunks(file_size, CHUNK_SIZE_16M), CHUNK_SIZE_16M
+    elif file_size < GB_100:
+        return getnumchunks(file_size, CHUNK_SIZE_128M), CHUNK_SIZE_128M
+    else:
+        return getnumchunks(file_size, MB_512), MB_512
+
+
+def create_presigned_upload_part(client, bucket, key, upload_id, part_no):
+    return client.generate_presigned_url(ClientMethod='upload_part',
+                                         Params={'Bucket': bucket,
+                                                 'Key': key,
+                                                 'UploadId': upload_id,
+                                                 'PartNumber': part_no})
+
+
+def upload_part_(client, bucket, key, upload_id, part_no, part):
+    signed_url = create_presigned_upload_part(client, bucket, key, upload_id, part_no)
+    logger.info(f"Uploading part [{part_no}]...")
+    logger.debug(f"[{part_no}] Presigned url {signed_url}")
+    res = requests.put(signed_url, data=part)
+    logger.debug(f"headers: {res.headers}")
+    etag = res.headers.get('ETag')
+    logger.debug(f"part: [{part_no}] Etag {etag}")
+    return {'ETag': etag, 'PartNumber': part_no}  # you have to append etag and partnumber of each parts
+
+def upload_part(url, file_name, cursor, part_no, chunk_size):
+    with open(file_name, "rb") as rf:
+        rf.seek(cursor)
+        data = rf.read(chunk_size)
+        if data is None or len(data) == 0:
+            return None
+        logger.info(f"Uploading part [{part_no}]...")
+        for i in range(0, 5):
+            try:
+                logger.info(f"Uploading part [{part_no}] to url: {url}...")
+                res = requests.put(url, data=data)
+                if "Connection" in res.headers and res.headers["Connection"] == "close":
+                    continue
+                logger.debug(f"{part_no} - headers: {res.headers}")
+                etag = res.headers.get('ETag', "")
+                return {'ETag': etag.replace("\"", ""), 'PartNumber': part_no}
+            except Exception as e:
+                logger.error(f"Error {e} tryies: {i}")
+                time.sleep(1)
+
+
+class S3Client:
+
+    def __init__(self, address, access_key, secret_access_key):
+        self.address = address
+        self.client = boto3.client('s3',
+                                   endpoint_url=address,
+                                   aws_access_key_id=access_key,
+                                   aws_secret_access_key=secret_access_key)
+        self.resource = boto3.resource('s3',
+                                       endpoint_url=address,
+                                       aws_access_key_id=access_key,
+                                       aws_secret_access_key=secret_access_key)
+
+    def signed_s3_multipart_upload(self, bucket, object_name, size, pk, checksum_update, origin, finish_url) -> dict:
+        self.create_bucket_if_not_exists(bucket)
+        upload_id = self.create_multipart_upload(bucket, object_name)
+        max_parts, chunk_size = get_file_chunk_size(size)
+        logger.debug(f"max parts {max_parts}, chunk size: {chunk_size}")
+        parts = self.create_presigned_urls_for_multipart_upload(object_name, upload_id, max_parts, bucket)
+        return {"parts_url": parts,
+                "chunk_size": chunk_size,
+                "checksum_update": checksum_update,
+                "upload_id": upload_id,
+                "origin": origin,
+                "num_chunks": max_parts,
+                "finish_url": f"{finish_url}/"
+                }
+
+    def create_bucket_if_not_exists(self, bucket_name, **kwargs):
+        """
+        Creates bucket in S3
+        :param bucket_name:
+        :param kwargs: {
+            "ACL": 'private'|'public-read'|'public-read-write'|'authenticated-read',
+            "Bucket": 'string',
+            "CreateBucketConfiguration": {
+                'LocationConstraint': 'EU'|'eu-west-1'|'us-west-1'|'us-west-2'|'ap-south-1'|'ap-southeast-1'|'ap-southeast-2'|'ap-northeast-1'|'sa-east-1'|'cn-north-1'|'eu-central-1'
+            },
+            "GrantFullControl"='string',
+            "GrantRead"='string',
+            "GrantReadACP"='string',
+            "GrantWrite"='string',
+            "GrantWriteACP"='string',
+            "ObjectLockEnabledForBucket"=True|False
+            }
+        :return: dict
+        """
+        bucket = self.resource.Bucket(bucket_name)
+
+        if bucket.creation_date:
+            logger.info(f"The bucket exists {bucket_name}")
+        else:
+            logger.info(f"The bucket does not exist {bucket_name}")
+            return self.client.create_bucket(Bucket=bucket_name, **kwargs)
+
+    def create_multipart_upload(self, bucket, object_name, expires=3600):
+        if bucket is None:
+            bucket = self.bucket
+        res = self.client.create_multipart_upload(Bucket=bucket, Key=object_name, Expires=expires)
+        return res['UploadId']
+
+    def finish_multipart_upload(self, object_name, parts, upload_id, bucket=None):
+        if bucket is None:
+            bucket = self.bucket
+        try:
+            self.client.complete_multipart_upload(Bucket=bucket,
+                                                     Key=object_name,
+                                                     MultipartUpload={'Parts': parts},
+                                                     UploadId=upload_id)
+        except Exception as e:
+            logger.error(f"finish exc {e}")
+
+
+    def create_presigned_upload_part(self, object_name, upload_id, part_no, bucket=None):
+        if bucket is None:
+            bucket = self.bucket
+        return create_presigned_upload_part(self.client, bucket, object_name, upload_id, part_no)
+
+    def finish_file_metadata(self, object_name, filename, bucket):
+        s3_object = self.get_object_head(object_name, bucket=bucket)
+
+        self.update_metadata_object(object_name,
+                                    {'contentLength': str(s3_object["ContentLength"]),
+                                     'contentType': s3_object['ContentType'],
+                                     'contentName': filename}, bucket)
+
+    def create_presigned_urls_for_multipart_upload(self, object_name, upload_id, max_part, bucket):
+        logger.debug(f"{object_name} - {upload_id} - {max_part}")
+        return [self.create_presigned_upload_part(object_name, upload_id, num, bucket) for num in range(1, max_part+1)]
+
+    def upload_local_file_multipart(self, local_file, bucket, object_name, chunk_size=MB_512):
+        """
+        Upload file to s3 with multipart upload this method is for large files
+        :param local_file: path to local file
+        :param object_name: how should be object named in S3
+        :param chunk_size: size of chunk which will be uploaded
+        :return:
+        """
+        upload_id = self.create_multipart_upload(bucket, object_name)
+        parts = []
+        futures = {}
+        num = 1
+        filename = os.path.basename(local_file)
+        with open(local_file, 'rb') as f:
+            #with concurrent.futures.ProcessPoolExecutor(max_workers=6) as executor:
+            for file_data in read_in_chunks(f, chunk_size=chunk_size):
+                logger.debug(f"Uploading part [{num}] with uxpload id: {upload_id} for object {object_name}")
+                logger.debug(f"Uploading part [{num}] with uxpload id: {upload_id} for object {object_name}")
+                #futures[num] = executor.submit(upload_part, self.client, self.bucket, object_name, upload_id,
+                #                               num, file_data)
+                parts.append(upload_part(self.client, bucket, object_name, upload_id, num, file_data))
+                num += 1
+                # for n_future in concurrent.futures.as_completed(futures):
+                #     future = futures[n_future]
+                #     try:
+                #         res = future.result()
+                #         parts.append(res)
+                #     except Exception as exc:
+                #         logger.error(f'generated an exception: {exc}')
+
+        logger.debug(parts)
+        logger.info("Completing upload multipart...")
+        logger.debug("Completing upload multipart...")
+        # After completing for all parts, you will use complete_multipart_upload api which requires that parts list
+        res = self.finish_multipart_upload(bucket, object_name, parts, upload_id)
+        self.finish_file_metadata(bucket, object_name, filename)
+
+        return res
+
+    def upload_local_file(self, local_file, object_name):
+        """
+
+        :param local_file:
+        :param object_name:
+        :param size:
+        :return:
+        """
+        # file is greater then 512 mb we have to upload it with multipart
+        file_size = os.path.getsize(local_file)
+        chunks, max_size = get_file_chunk_size(file_size)
+        logger.debug(f"chunks {chunks}, {max_size}")
+        if chunks > 1:
+            self.upload_local_file_multipart(local_file, object_name, chunk_size=max_size)
+        else:
+            response_api = self.sign_s3_upload(object_name, local_file)
+            s3_request_data = response_api["data"]["fields"]
+            url = response_api["data"]["url"]
+            filename = os.path.basename(local_file)
+            with open(local_file, "rb") as rf:
+                s3_response = requests.post(url, data=s3_request_data, files={"file": (filename, rf)})
+                logger.debug(s3_response, s3_response.text)
+                self.finish_file_metadata(object_name, filename)
+                return s3_response
+
+    def sign_s3_upload(self, object_name, fields=None, conditions=None, expires=3600, bucket=None) -> dict:
+        """
+        Create presigned url for upload of object to S3. This method is for smaller files.
+
+        :param object_name: The name of the bucket to presign the post to
+        :param fields:  A  dictionary  of  prefilled  form  fields  to  build  on  top  of.   Elements  that  may  be
+                        included  are  acl,  Cache-Control,  Content-Type,  Content-Disposition, Content-Encoding,
+                        Expires, success_action_redirect, redirect, success_action_status, and x-amz-meta-.
+                        Note that if a particular element is included in the fields dictionary it will not
+                        be automatically added to the conditions list.  You must specify a condition
+                        for the element as well.
+        :param conditions: A list of conditions to include in the policy.
+                        Each element can be either a list or a structure.
+                        For example:[{“acl”:  “public-read”}, [”content-length-range”, 2, 5],
+                            [”starts-with”, “$success_action_redirect”, “”]]
+                        Conditions that are included may pertain to acl,  content-length-range,  Cache-Control,
+                        Content-Type,  Content-Disposition,  Content-Encoding,  Expires,  success_action_redirect,
+                        redirect, success_action_status, and/or x-amz-meta-.Note that if you include a condition,
+                        you must specify the a valid value in the fields dictionary as well.
+                        A value will not be added automatically to the fields dictionary based on the conditions.
+        :param expires: The number of seconds the presigned post is valid for.
+        :return: {
+            "data": {...},
+            "url": string
+        }
+        """
+        if bucket is None:
+            bucket = self.bucket
+        object_name += "-${filename}"
+        presigned_post = self.client.generate_presigned_post(
+            Bucket=bucket,
+            Key=object_name,
+            Fields=fields,
+            Conditions=conditions,
+            ExpiresIn=expires
+        )
+        url = os.path.join(self.address, self.bucket, object_name)
+        return {
+            'data': presigned_post,
+            'url': f'{url}'
+        }
+
+    def sign_s3_download(self, object_name, filename, expires=3600, bucket=None) -> dict:
+        """
+        Presigned url for download of file.
+        :param object_name: The name of the object to presign
+        :param filename: How should file named after download
+        :param expires: The  number  of  seconds  the  presigned  url  is  valid  for.
+                    By default it expires in an hour (3600 seconds)
+        :return:{
+            "url": string
+        }
+        """
+        if bucket is None:
+            bucket = self.bucket
+        logger.debug(f"Signing url for {object_name} in bucket {bucket}")
+        logger.info(f"Signing url for {object_name} in bucket {bucket}")
+
+        presigned_url = self.client.generate_presigned_url(
+            'get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': object_name,
+                'ResponseContentDisposition': f'attachment; attachment; filename={filename}'
+            },
+            ExpiresIn=expires
+        )
+        return {
+            'url': presigned_url
+        }
+
+    def copy_from_s3(self, object_name, destination_path, chunk_size=CHUNK_SIZE_16M, bucket=None):
+        """
+        Function will copy data from s3 to destination_path. For download is used get_object function which is dict which
+        contains in Body key StreamingBody -> loading by chunks.
+
+        :param object_name: The name of the object
+        :param destination_path: destination where should object be downloaded
+        :param chunk_size:
+        :return:
+        """
+        if bucket is None:
+            bucket = self.bucket
+        logger.info(f"Copy data from S3 for: {object_name} from bucket: {bucket} to path: {destination_path}")
+        response = self.client.get_object(Bucket=bucket, Key=object_name)
+
+        digest = hashlib.sha256()
+        try:
+            with open(destination_path, 'wb') as wf:
+                for chunk in response["Body"].iter_chunks(chunk_size):
+                    if chunk is None or not any(chunk):
+                        break
+                    digest.update(chunk)
+                    wf.write(chunk)
+            checksum_result = digest.hexdigest()
+            logger.info(f"Checksum result: {checksum_result}")
+            return checksum_result
+        except Exception as e:
+            logger.error(f"Something goes wrong in copy from S3 response: {response}, "
+                         f"destination = {destination_path}, "
+                         f"object_name: {object_name}"
+                         f"bucket: {bucket}"
+                         f"error: {e}"
+                         )
+
+    def copy_to_s3(self, from_path, object_name, extra_args=None, bucket=None):
+        """
+        Copy file from local storage to S3.
+        :param from_path: path to file
+        :param object_name: how should object name
+        :param extra_args: dict data which will be bind in object
+        :return:
+        """
+        if bucket is None:
+            bucket = self.bucket
+        logger.info(f"Copy data to S3 for: {object_name} to bucket: {bucket} from path: {from_path}")
+        bucket = self.resource.Bucket(bucket)
+        return bucket.upload_file(from_path, object_name, ExtraArgs=extra_args)
+
+    def copy_from_bucket_to_bucket(self, object_name, source_bucket, destination_bucket):
+        """
+        Copy objects from one bucket to another
+        :param object_name: The name of the object to copy
+        :param source_bucket:
+        :param destination_bucket:
+        :return:
+        """
+        copy_source = {
+            'Bucket': source_bucket,
+            'Key': object_name
+        }
+        logger.info(f"Copy data between buckets S3 for: {object_name} source bucket: {source_bucket} "
+                    f"destination bucket: {destination_bucket}")
+        to_bucket = self.resource.Bucket(destination_bucket)
+        return to_bucket.copy(copy_source, object_name)
+
+    def __paginate(self, marker, size, iterator, bucket=None):
+        result = []
+        page = None
+        if bucket is None:
+            bucket = self.bucket
+        while True:
+            response_iterator = iterator(bucket, marker)
+
+            for page in response_iterator:
+                logger.debug(page)
+                result.append(page)
+            if page is None:
+                return page, result
+            if size is not None:
+                if len(result) > size:
+                    return page['Marker'], result
+            try:
+                previous = marker
+                marker = page['Marker']
+            except KeyError:
+                break
+            if previous == marker and len(previous) > 0 and len(marker) > 0:
+                break
+
+    def list_objects(self, prefix=None, max_items=100, start_from=None, size=100, bucket=None):
+        """
+        List objects from bucket
+
+        :param prefix: filter objects which starts with
+        :param max_items: max items on page
+        :param start_from: marker from which will be data fetched
+        :param size: max size of result data is is None return all data
+        :return: marker, [objects]
+        """
+        config = {'PageSize': max_items}
+        if prefix is not None:
+            config.update({'Prefix': prefix})
+        marker = start_from
+        paginator = self.client.get_paginator('list_objects')
+        if bucket is None:
+            bucket = self.bucket
+
+        def iterate(bucket, mark):
+            config.update({'StartingToken': mark})
+            return paginator.paginate(
+                Bucket=bucket,
+                PaginationConfig=config)
+
+        return self.__paginate(marker, size, iterate, bucket)
+
+    def search_objects(self, query, start_from=None, max_items=100, size=100, bucket=None):
+        """
+        Search by query in https://jmespath.org/ format.
+        :param query:
+        :param start_from: marker from start
+        :param max_items: max items on page
+        :param size: max size of result data is is None return all data
+        :return: marker, [objects]
+        """
+        config = {'PageSize': max_items}
+        marker = start_from
+        paginator = self.client.get_paginator("list_objects")
+        if bucket is None:
+            bucket = self.bucket
+
+        def iterate(bucket, mark):
+            config.update({'StartingToken': mark})
+            page_iterator = paginator.paginate(
+                Bucket=bucket,
+                PaginationConfig=config)
+            return page_iterator.search(query)
+
+        return self.__paginate(marker, size, iterate, bucket)
+
+    def list_buckets(self):
+        """
+        List all buckets from S3
+        :return:
+        """
+        return self.client.list_buckets()
+
+    def delete_object(self, object_name, bucket=None):
+        if bucket is None:
+            bucket = self.bucket
+        logger.debug(f'Deleting object {object_name} from bucket {bucket}')
+        response = self.resource.Object(bucket, object_name).delete()
+        return response
+
+    def update_metadata_object(self, object_name, metadata, bucket):
+        logger.debug(f"Update metadata on object {object_name} in bucket: {self.bucket} With metdata: {metadata}")
+        s3_object = self.resource.Object(bucket, object_name)
+        s3_object.metadata.update(metadata)
+        result = s3_object.copy_from(CopySource={'Bucket': bucket, 'Key': object_name},
+                                     Metadata=s3_object.metadata,
+                                     MetadataDirective='REPLACE')
+        return result
+
+    def get_object_head(self, object_name, bucket=None):
+        """
+        Get mostly metadatada about object.
+        :param object_name:
+        :return:
+        """
+        if bucket is None:
+            bucket = self.bucket
+        response = self.client.head_object(Bucket=bucket, Key=object_name)
+        return response
+
+    def get_object(self, object_name, bucket=None):
+        """
+        Get whole object
+        :param object_name:
+        :return:
+        """
+        if bucket is None:
+            bucket = self.bucket
+        response = self.client.get_object(Bucket=bucket, Key=object_name)
+        return response

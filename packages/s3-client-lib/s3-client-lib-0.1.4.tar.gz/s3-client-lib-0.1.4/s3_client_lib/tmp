@@ -1,0 +1,127 @@
+import json
+import boto3
+import configparser
+from io import BytesIO
+import hashlib
+import os
+import logging
+
+logger = logging.getLogger(__name__)
+config = configparser.ConfigParser()
+_ = config.read(filenames="config.conf")
+with open(config.get("s3", "s3Config"), "rb") as rf:
+    json_conf = json.load(rf)
+
+access_key = json_conf["keys"][0]["access_key"]
+secret_key = json_conf["keys"][0]["secret_key"]
+user = json_conf["keys"][0]["user"]
+archive_bucket = config.get("s3", "s3ArchiveBucket")
+cache_bucket = config.get("s3", "s3CacheBucket")
+s3_client = boto3.client('s3', endpoint_url=config.get("s3", "s3Address"),
+                         aws_access_key_id=access_key, aws_secret_access_key=secret_key)
+s3_resource = boto3.resource('s3', endpoint_url=config.get("s3", "s3Address"),
+                         aws_access_key_id=access_key, aws_secret_access_key=secret_key)
+CHUNK_SIZE_16M = 2048 * 2 ** 10
+def _create_bucket_if_not_exists(bucket_name):
+    bucket = s3_resource.Bucket(bucket_name)
+
+    if bucket.creation_date:
+        logger.info(f"The bucket exists {bucket_name}")
+    else:
+        logger.info(f"The bucket does not exist {bucket_name}")
+        s3_resource.create_bucket(Bucket=bucket_name)
+
+def sign_s3_upload(object_name, pk, checksum, origin) -> dict:
+    bucket = ltp_setting.AWS_STORAGE_BUCKET_NAME
+    _create_bucket_if_not_exists(bucket)
+    url = ltp_setting.AWS_S3_ENDPOINT_URL
+
+    url_path = os.path.join(ltp_setting.LTP_UPLOADED_URL, str(pk))
+    object_name += "-${filename}"
+    presigned_post = s3_client.generate_presigned_post(
+        Bucket=bucket,
+        Key=object_name,
+        Fields={"acl": "public-read", "Content-Type": "application/zip",
+                "success_action_redirect": f"{url_path}/?checksum={checksum}?origin={origin}"
+                },
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": "application/zip"},
+            {"success_action_redirect": f"{url_path}/?checksum={checksum}?origin={origin}"},
+        ],
+        # hour
+        ExpiresIn=3600
+    )
+    presigned_post['url'] = re.sub(r'(' + bucket + ')$', f'{ltp_setting.AWS_STORAGE_S3_TENANT}' +
+                                   r'\1', presigned_post['url'])
+    return {
+        'data': presigned_post,
+        'url': f'{url}{bucket}/{object_name}'
+    }
+
+
+def sign_s3_download(object_name, bucket, filename) -> dict:
+    logger.info(f"Signing url for {object_name} in bucket {bucket}")
+
+    _create_bucket_if_not_exists(bucket)
+
+    presigned_url = s3_client.generate_presigned_url('get_object',
+                                                     Params={
+                                                      'Bucket': bucket,
+                                                      'Key': object_name,
+                                                      'ResponseContentDisposition':
+                                                        f'attachment; attachment; filename={filename}'
+                                                      },
+                                                     ExpiresIn=3600)
+    return {
+        'url': presigned_url
+    }
+def _copy_from_s3(object_name, destination_path, bucket=archive_bucket, chunk_size=CHUNK_SIZE_16M):
+    """
+    Function will copy data from s3 to destination_path. For download is used get_object function which is dict which
+    contains in Body key StreamingBody -> loading by chunks.
+
+    :param object_name:
+    :param destination_path:
+    :param bucket:
+    :param chunk_size:
+    :return:
+    """
+    logger.info(f"Copy data from S3 for: {object_name} from bucket: {bucket} to path: {destination_path}")
+    response = s3_client.get_object(Bucket=bucket, Key=object_name)
+
+    digest = hashlib.sha256()
+    try:
+        with open(destination_path, 'wb') as wf:
+            for chunk in response["Body"].iter_chunks(chunk_size):
+                if chunk is None or not any(chunk):
+                    break
+                digest.update(chunk)
+                wf.write(chunk)
+        checksum_result = digest.hexdigest()
+        logger.info(f"Checksum result: {checksum_result}")
+        return checksum_result
+    except Exception as e:
+        logger.error(f"Something goes wrong in copy from S3 response: {response}, "
+                     f"destination = {destination_path}, "
+                     f"object_name: {object_name}"
+                     f"bucket: {bucket}")
+
+
+def _copy_to_s3(from_path, object_name, bucket_name=archive_bucket, metetadata=None):
+    logger.info(f"Copy data to S3 for: {object_name} to bucket: {bucket_name} from path: {from_path}")
+    bucket = s3_resource.Bucket(bucket_name)
+    bucket.upload_file(from_path, object_name, ExtraArgs=metetadata)
+    return _copy_from_s3(object_name, os.devnull, bucket_name)
+
+
+def _copy_from_s3_to_s3(object_name, source_bucket=archive_bucket, destination_bucket=cache_bucket):
+    copy_source = {
+        'Bucket': source_bucket,
+        'Key': object_name
+    }
+    logger.info(f"Copy data between buckets S3 for: {object_name} source bucket: {source_bucket} "
+                f"destination bucket: {destination_bucket}")
+    to_bucket = s3_resource.Bucket(destination_bucket)
+    to_bucket.copy(copy_source, object_name)
+    return _copy_from_s3(object_name, os.devnull, destination_bucket)
