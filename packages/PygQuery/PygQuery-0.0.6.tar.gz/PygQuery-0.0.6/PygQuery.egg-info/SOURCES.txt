@@ -1,0 +1,9 @@
+README.md
+setup.py
+PygQuery.egg-info/PKG-INFO
+PygQuery.egg-info/SOURCES.txt
+PygQuery.egg-info/dependency_links.txt
+PygQuery.egg-info/requires.txt
+PygQuery.egg-info/top_level.txt
+pygquery/__init__.py
+pygquery/bigquery.py
