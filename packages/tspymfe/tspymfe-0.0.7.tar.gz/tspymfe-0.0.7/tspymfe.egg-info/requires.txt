@@ -1,0 +1,9 @@
+nolds
+numpy
+pymfe
+statsmodels>=0.12.2
+scipy
+scikit-learn
+matplotlib
+arch
+supersmoother
