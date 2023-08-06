@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+scsilicon/SCSilicon.egg-info/PKG-INFO
+scsilicon/SCSilicon.egg-info/SOURCES.txt
+scsilicon/SCSilicon.egg-info/dependency_links.txt
+scsilicon/SCSilicon.egg-info/requires.txt
+scsilicon/SCSilicon.egg-info/top_level.txt
