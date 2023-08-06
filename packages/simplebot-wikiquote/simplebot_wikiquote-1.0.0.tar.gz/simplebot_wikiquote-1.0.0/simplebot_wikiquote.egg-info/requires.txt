@@ -1,0 +1,6 @@
+simplebot>=1.0.1
+wikiquote>=0.1.14
+
+[test]
+pytest>=6.2.2
+requests>=2.25.1

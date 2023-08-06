@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_wikiquote = simplebot_wikiquote
+

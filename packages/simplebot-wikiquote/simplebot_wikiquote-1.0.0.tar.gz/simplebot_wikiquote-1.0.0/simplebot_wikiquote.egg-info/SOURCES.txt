@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+simplebot_wikiquote.py
+simplebot_wikiquote.egg-info/PKG-INFO
+simplebot_wikiquote.egg-info/SOURCES.txt
+simplebot_wikiquote.egg-info/dependency_links.txt
+simplebot_wikiquote.egg-info/entry_points.txt
+simplebot_wikiquote.egg-info/not-zip-safe
+simplebot_wikiquote.egg-info/requires.txt
+simplebot_wikiquote.egg-info/top_level.txt
