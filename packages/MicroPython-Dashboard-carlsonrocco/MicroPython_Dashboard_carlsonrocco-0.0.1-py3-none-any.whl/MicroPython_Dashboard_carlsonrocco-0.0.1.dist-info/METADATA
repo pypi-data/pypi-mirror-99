@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MicroPython-Dashboard-carlsonrocco
+Version: 0.0.1
+Summary: A modular dashboard made using WS2812b individually addressable LEDs and an ESP8266 microcontroller running MicroPython
+Home-page: UNKNOWN
+Author: Rocco Carlson
+Author-email: rocstrrr@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This is a simple package to create a dashboard using WS2812b LED's and an ESP8266 running micropython. It uses the Open Weather API as well as the Alpha Vantage API, both are free, all thats needed are the keys. Right now it only has four possible objects: Temperature, Humidity/Precipitation, Stock Price, and WiFi status. More functionality is certainly possible.
+
+
