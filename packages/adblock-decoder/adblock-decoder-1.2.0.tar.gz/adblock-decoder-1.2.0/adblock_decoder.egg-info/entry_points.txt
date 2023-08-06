@@ -1,0 +1,4 @@
+[console_scripts]
+adblock2hosts = adblock_decoder.cli:adblock2host
+adblock2plain = adblock_decoder.cli:adblock2plain
+
