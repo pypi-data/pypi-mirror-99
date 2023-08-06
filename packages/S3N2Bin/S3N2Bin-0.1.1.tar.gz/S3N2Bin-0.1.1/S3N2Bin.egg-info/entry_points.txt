@@ -1,0 +1,3 @@
+[console_scripts]
+S3N2Bin = s3n2bin.main:main
+
