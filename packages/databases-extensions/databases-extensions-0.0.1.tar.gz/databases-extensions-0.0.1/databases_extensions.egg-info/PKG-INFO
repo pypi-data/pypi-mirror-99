@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: databases-extensions
+Version: 0.0.1
+Summary: Extensions for sqlalchemy with databases
+Home-page: https://github.com/chapagainmanoj/databases-query-extension
+Author: Manoj Chapagain
+Author-email: chapagainmanoj35@gmail.com
+License: BSD
+Description: # databases-query-extensions
+        Pagination, filter, search and sorting extensions for sqlalchey with encode/databases
+        
+        ## Installation
+        
+        ```pip install databases-query-extensions```
+        
+        
+        ## Example
+        Construct page params
+          ```python
+          page_params = PaginationParams.construct(
+                first=3, filter={"completed.is_true": ""}
+            )
+          ```
+        apply pagination and get results
+          ```python
+            query = example.select()
+            pagination = CursorPagination(database, query)
+            paginated = await pagination.page(page_params)
+          ```
+        
+        apply filters, search, sorting or pagination and get query 
+        
+        ```
+            query = example.select()
+            cursor_column="created_date"
+            query = query_builder(query, page_params, cursor_column)
+        ```
+        
+          A complete query params example
+        ```python
+        {
+            "first": 100,
+            "after": <cursor>,
+            "afterWith": <cursor>,
+            "search": {
+              "columns": ["col1", "col2"],
+              "value": "new"
+            },
+            "filter": {
+              "conversationType.eq": "Call"
+              "conversationStatus.eq": "NoAanswer"
+            },
+            "sort": "createdAt",
+            "order": "asc"
+          }
+          ```
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
