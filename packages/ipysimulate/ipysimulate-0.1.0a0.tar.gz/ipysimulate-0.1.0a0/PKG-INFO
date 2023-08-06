@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ipysimulate
+Version: 0.1.0a0
+Summary: Interactive interface to control and visualize simulations in Python
+Home-page: https://github.com/JoelForamitti/ipysimulate
+Author: Joël Foramitti
+Author-email: joel.foramitti@uab.cat
+License: UNKNOWN
+Description: Interactive interface to control and visualize simulations in Python
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
