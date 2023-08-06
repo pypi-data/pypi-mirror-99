@@ -1,0 +1,15 @@
+README.md
+setup.py
+tools/__init__.py
+tools/array.py
+tools/rotation.py
+tools/text.py
+tools/xarray.py
+xmca/__init__.py
+xmca/array.py
+xmca/xarray.py
+xmca.egg-info/PKG-INFO
+xmca.egg-info/SOURCES.txt
+xmca.egg-info/dependency_links.txt
+xmca.egg-info/requires.txt
+xmca.egg-info/top_level.txt
