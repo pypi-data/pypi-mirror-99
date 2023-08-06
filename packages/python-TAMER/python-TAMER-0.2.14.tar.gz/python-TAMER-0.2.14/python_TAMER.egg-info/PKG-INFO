@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: python-TAMER
+Version: 0.2.14
+Summary: Toolkit for Analysis and Maps of Exposure Risk
+Home-page: https://github.com/tch521/python-TAMER
+Author: Todd C. Harris
+Author-email: todd.harris@meteoswiss.ch
+License: BSD-3-Clause license
+Description: ============================
+        Introduction to python-TAMER
+        ============================
+        
+        The Toolkit for Analysis and Maps of Exposure Risk (TAMER) is designed to calculate estimates of individual and
+        population exposure across a geographic area. Currently, the project is focused on erythemal UV radiation 
+        exposure, but the tools provided by TAMER could be used in a variety of contexts provided there is appropriate
+        source data. In addition to providing a simple methods for basic exposure calculations, (such as mean, median,
+        and maximum intensities over certain time periods,) TAMER allows users to calculate daily doses by integrating
+        the exposure over time. 
+        
+        In the context of UV, the dose received by an exposed individual is far more relevant to their corresponding 
+        health risk than the ambient level of UV. Usually, these doses are measured by wearable devices. Harris et al.
+        2021 (https://doi.org/10.3390/atmos12020268) explains the various benefits of instead estimating such doses
+        based on satellite-derived data with sufficiently high spatial and temporal resolution. The Swiss UV 
+        climatology provided by Vuilleumier et al. 2020 (https://doi.org/10.1016/j.envint.2020.106177) is Currently
+        the most appropriate source data for TAMER as it provides erythemal UV at an approximately 1.5km spatial
+        resolution and an hourly temporal resolution. Harris et al. 2021 shows that with location, date, and time
+        information, reasonable ambient doses can be calculated. However, to calculate personal doses, the Exposure
+        Ratio (ER) must also be known, that being the ratio between the ambient dose and the personal dose received
+        by a certain body part. Different body parts have varying ERs which also depend on body posture, for example
+        the ER of the forehead is lower when bowing down than when standing normally. TAMER includes a model from
+        Vernez et al. 2015 (https://doi.org/10.1038/jes.2014.6) to calculate ERs according to anatomic zone, posture,
+        and time of year. python-tamer.SpecificDoses is a table-like class designed to take location, date, time, 
+        posture, and anatomic zone information to calculate specific ambient and personal doses of the described
+        individuals. 
+        
+        A large part of TAMER is dedicated to producing high quality maps of a variety of exposure metrics. 
+        
+        
+        * Free software: BSD-3-Clause license
+        
+        
+        Features
+        --------
+        
+        * Calculate doses rapidly with custom exposure schedules
+        * Analyse exposure distributions per pixel and calculate a variety of metrics to describe exposure
+        * Produce maps to represent chronic and acute exposure 
+        * Replicate dosimetry measurements using Exposure Ratio modelling
+        
+        
+        =======
+        History
+        =======
+        
+        0.2 Alpha (2021-03-11)
+        -----------------------
+        
+        * Added documentation
+        * Added basic unit tests for each class (SpecificDoses and ExposureMap)
+        * Added histogram descriptor calculator functions to subroutines.
+        * Added map making functionality for ExposureMap class, limited consideration of map_options at this stage
+        * Fixed errors when working with single day test data (but anticipate further issues with this, to be fixed in a later release)
+        
+        
+        0.1 (2021-03-02)
+        ------------------
+        
+        * Alpha release on github only, no documentation and limited functionality
+        
+Keywords: python-TAMER UV
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: test
