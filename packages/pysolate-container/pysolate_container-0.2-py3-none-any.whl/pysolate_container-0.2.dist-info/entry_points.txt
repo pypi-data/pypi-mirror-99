@@ -1,0 +1,4 @@
+[console_scripts]
+c = pysolate.cli:main
+pysolate = pysolate.cli:main
+
