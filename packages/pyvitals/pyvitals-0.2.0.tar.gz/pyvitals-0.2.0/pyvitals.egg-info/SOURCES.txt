@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pyvitals/__init__.py
+pyvitals/main.py
+pyvitals.egg-info/PKG-INFO
+pyvitals.egg-info/SOURCES.txt
+pyvitals.egg-info/dependency_links.txt
+pyvitals.egg-info/requires.txt
+pyvitals.egg-info/top_level.txt
