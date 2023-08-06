@@ -1,0 +1,2 @@
+MDAnalysis>=2.0.0
+GenIce2>=2.1b0
