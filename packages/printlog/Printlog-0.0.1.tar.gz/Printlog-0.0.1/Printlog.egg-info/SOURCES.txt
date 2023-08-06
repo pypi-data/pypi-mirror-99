@@ -1,0 +1,9 @@
+README.txt
+setup.cfg
+setup.py
+Printlog.egg-info/PKG-INFO
+Printlog.egg-info/SOURCES.txt
+Printlog.egg-info/dependency_links.txt
+Printlog.egg-info/top_level.txt
+printlog/__init__.py
+printlog/log.py
