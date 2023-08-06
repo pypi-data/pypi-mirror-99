@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "bizztreat_base"
+version = "0.1.0"
+description = "Set of helpers to help you build Bizzflow components easily"
+authors = ["Tomas Votava <tomas.votava@bizztreat.com>", "Ondrej Lanc <ondrej.lanc@bizztreat.com>"]
+
+[mypy]
+ignore_missing_imports = true
+show_error_codes = true
+
+[tool.black]
+line-length = 119
+
+[tool.poe.tasks]
+pylint = "pylint bizztreat_base"
+mypy = "mypy bizztreat_base --config pyproject.toml"
+lint = ["pylint", "mypy"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+jsonschema = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+poethepoet = "^0.10.0"
+pylint = "^2.7.2"
+black = "^20.8b1"
+mypy = "^0.812"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
