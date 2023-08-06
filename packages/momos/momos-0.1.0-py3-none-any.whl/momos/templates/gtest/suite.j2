@@ -1,0 +1,101 @@
+{% macro get_type(value) -%}
+    {% if value is string %}
+        std::string
+    {% elif value is float %}
+        float
+    {% elif value is integer %}
+        int
+    {% else %}
+        auto
+    {% endif %}
+{%- endmacro %}
+
+#include <iostream>
+
+#include <gtest/gtest.h>
+#include <momos.hpp>
+
+{% for include in includes %}
+#include "{{ include }}"
+{% endfor %}
+
+
+#define LOG(x)  std::cout << "[ #        ] " << x << std::endl 
+#define WARN(x) std::cerr << "[ !        ] " << x << std::endl
+
+
+class StateEnv : public ::testing::Environment
+{
+public:
+    void SetUp() override {
+        HOOK_RUN(before_all);
+    }
+
+    void TearDown() override {
+        HOOK_RUN(after_all);
+    }
+};
+
+
+class StateTest : public ::testing::Test
+{
+protected:
+    void SetUp() override
+    {
+        HOOK_RUN(before);
+    }
+
+    void TearDown() override
+    {
+        HOOK_RUN(after);
+    }
+};
+
+{% for case in suite.cases %}
+TEST_F(StateTest, {{ case.id }})
+{
+    LOG("Description: {{ case.description }}");
+
+    {% for step in case.steps %}
+    {% set from_state = step.transition.from_state %}
+    {% set to_state = step.transition.to_state %}
+    {% set trigger = step.trigger %}
+    {% set mode = step.mode %}
+    {% set step_index = loop.index %}
+
+    // [Step {{ step_index }}]: {{ step.description }} ----------
+    LOG("{{ from_state.id }} -> {{ to_state.id }} [{{ trigger.type }}]");
+
+    ASSERT_EQ(STATE_VAR_GET(), STATE_GET({{ from_state.id }}));
+
+    {% for arg in step.arguments %}
+    {% set arg_name = 'arg_' ~ step_index ~ '_' ~ loop.index %}
+    {{ get_type(arg) }} {{ arg_name }} = {{ arg | default('0', true) }};
+    if (!PREPARE_RUN({{ from_state.id }}, {{ to_state.id }}, {{ step.trigger.name }}, {{ step.trigger.variant }}, &{{ arg_name }}))
+    {
+        WARN("Transition preparation undefined for {{ from_state.id }} -> {{ to_state.id }}");
+    }
+    HOOK_RUN(process);
+    {% endfor %}
+
+    {% if step.fails %}
+    ASSERT_NE(STATE_VAR_GET(), STATE_GET({{ to_state.id }}));
+    {% else %}
+    ASSERT_EQ(STATE_VAR_GET(), STATE_GET({{ to_state.id }}));
+    {% endif %}
+
+    {% endfor %}
+}
+
+{% endfor %}
+
+
+int main(int argc, char **argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    ::testing::InitGoogleMock(&argc, argv);
+
+    ::testing::AddGlobalTestEnvironment(new StateEnv());
+
+    return RUN_ALL_TESTS();
+}

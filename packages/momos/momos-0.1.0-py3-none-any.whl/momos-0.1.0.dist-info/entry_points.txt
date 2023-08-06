@@ -1,0 +1,3 @@
+[console_scripts]
+momos=momos.cli:run
+

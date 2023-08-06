@@ -1,0 +1,32 @@
+?start : definition+
+
+?definition : state
+            | transition
+
+state         : "@state" identifier [ "[" option "]" ]
+transition    : "@transition" ( identifier | implicit ) "->" identifier [ "[" trigger "]" ]
+
+trigger       : identifier ["#" identifier] ( "," option )*
+option        : flag | pair
+pair          : identifier "=" literal
+flag          : NOT? NAME
+
+?literal      : flag | integer | float | character | string
+implicit      : "."
+identifier    : NAME
+string        : "\"" STRING "\""
+character     : "'" CHAR "'"
+float         : SIGNED_FLOAT
+integer       : SIGNED_INT
+
+NOT           : "!"
+STRING         : /[\x21\x23-\x7E]+/
+CHAR           : /[\x21-\x26\x28-\x7E]/
+
+%import python.NAME
+
+%import common.SIGNED_INT
+%import common.SIGNED_FLOAT
+%import common.WS
+
+%ignore WS
