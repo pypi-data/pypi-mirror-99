@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ocp-windows-386
+Version: 0.1.4
+Summary: Open Collaboration Platform binary package
+Home-page: https://github.com/OpenCollaborationPlatform
+Maintainer: Stefan Troeger
+Maintainer-email: stefantroeger@gmx.net
+License: LGPL2.1+
+Download-URL: https://github.com/OpenCollaborationPlatform
+Platform: windows
+
+UNKNOWN
+
+
