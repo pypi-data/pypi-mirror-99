@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+ffmaxflow/__init__.py
+ffmaxflow.egg-info/PKG-INFO
+ffmaxflow.egg-info/SOURCES.txt
+ffmaxflow.egg-info/dependency_links.txt
+ffmaxflow.egg-info/requires.txt
+ffmaxflow.egg-info/top_level.txt

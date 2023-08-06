@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: ffmaxflow
+Version: 0.0.3
+Summary: Implementation of the  Fork Fulkerson method to find the max posible flow of a network
+Home-page: UNKNOWN
+Author: Equipo 2
+Author-email: a@b.c
+License: MIT
+Description: UNKNOWN
+Keywords: max flow
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
