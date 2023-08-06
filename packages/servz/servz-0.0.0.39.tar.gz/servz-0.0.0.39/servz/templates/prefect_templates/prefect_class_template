@@ -1,0 +1,4 @@
+
+class {{class_name}}(Task):
+    def run(self):
+        ShellTask({{command}})
