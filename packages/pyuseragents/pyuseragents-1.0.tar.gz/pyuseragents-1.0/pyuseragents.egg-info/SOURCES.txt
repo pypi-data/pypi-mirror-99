@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyuseragents.egg-info/PKG-INFO
+pyuseragents.egg-info/SOURCES.txt
+pyuseragents.egg-info/dependency_links.txt
+pyuseragents.egg-info/top_level.txt
+useragents/__init__.py
+useragents/_backward_compatibility.py
+useragents/_useragents.py
