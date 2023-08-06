@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pypkg-deb
+Version: 1.0.2
+Summary: A WIP dpkg alternative, written in Python!
+Home-page: https://github.com/Monotrix/pypkg
+Author: Monotrix
+Author-email: ajaidan0@gmail.com
+License: ML-1.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# pypkg
+pypkg is a WIP dpkg alternative, written entirely in Python!
+
+# Installation
+To install, run ``python -m pip install pypkg-deb``.
+
+# NOTE:
+Depends on ``ar`` (which is included in ``binutils``) to extract debs.
+Also requires additional setup (see [here](https://github.com/monotrix/pypkg/blob/main/LZMA.md))
+
