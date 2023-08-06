@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: neptune-lightgbm
+Version: 0.9.0
+Summary: Neptune.ai LightGBM integration library
+Home-page: https://github.com/neptune-ai/neptune-client
+Author: neptune.ai
+Author-email: contact@neptune.ai
+License: MIT License
+Description: # Neptune - lightgbm integration
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: all
