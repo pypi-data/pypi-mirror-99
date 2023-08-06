@@ -1,0 +1,10 @@
+mangadex_downloader/__init__.py,sha256=hECwstEKjo6QBgnJBMarGzkUK6-wSPs7JEaqiD-ufTY,6782
+mangadex_downloader/constants.py,sha256=2U18tJsHpYOpvU1UD1dFQp_XY1p2THhvK9xpVg_Qu34,4752
+mangadex_downloader/errors.py,sha256=lgVr8C90AlULrTIVMRmsgBWpEYc4XiH6I5lnd-vzdQc,375
+mangadex_downloader/fetcher.py,sha256=SG6UP4cRipfkruq09WOBvuDmjWHRno7FDbxLMki7Iu0,5903
+mangadex_downloader/parser.py,sha256=dK7hg5dXsqLdqFKDPhhWCKwPNx9AHrtL2058t-ll0Bk,2699
+mangadex_downloader-0.0.5.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+mangadex_downloader-0.0.5.dist-info/METADATA,sha256=BoT493dWys--3REmrAy-M9YdajZM07vFbb_NBwpTZD4,4403
+mangadex_downloader-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mangadex_downloader-0.0.5.dist-info/top_level.txt,sha256=051w9ydLVtPdpH5lH94Wjc3pbA7_R3-3u5L-w1TSIwM,20
+mangadex_downloader-0.0.5.dist-info/RECORD,,
