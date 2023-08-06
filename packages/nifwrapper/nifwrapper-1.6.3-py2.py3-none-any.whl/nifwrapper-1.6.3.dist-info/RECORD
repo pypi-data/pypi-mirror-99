@@ -1,0 +1,13 @@
+nifwrapper/__init__.py,sha256=Bs7-dZ2YxGv4nMowTnt4oVd78TtDfJX4UO4UaEtr2Mg,265
+nifwrapper/nifAnnotation.py,sha256=UADD7-kGGaaUT0sSJHGByCgTpoFuuWDV-6EYJcw7WDE,3825
+nifwrapper/nifBenchmark.py,sha256=79UuKvWO4JJoEYOWld2cCgKZvs2mh-xBLKhlUV4w-0o,9217
+nifwrapper/nifDocument.py,sha256=Fgzep8dhkg4qYZLlVzgcncE7-wDI3jYTOaGb6Nk1eQU,4440
+nifwrapper/nifParser.py,sha256=-ozCTjmpSjFflO03Oa8bmvXX12sULb8JuJ6B-V9S1FM,25713
+nifwrapper/nifSentence.py,sha256=0NsBfFURwMEe-Gcm_ow79cIjDapmme5VPBrWYi-EqM0,4614
+nifwrapper/nifUtils.py,sha256=gvG6-b1WsGOiQrL2Uth5Khx_3nExLrkTcsHD3lVXW6I,4132
+nifwrapper/nifWrapper.py,sha256=PUaJPZbUNQBoSyvICiaVTqFzjS9GWe8wiNo5Sjun6Gc,29003
+nifwrapper-1.6.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nifwrapper-1.6.3.dist-info/METADATA,sha256=Kzvgj3V-4ZyY8pHqFiZ9i7aflkPIm5fmx37TU33w_ZY,6254
+nifwrapper-1.6.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+nifwrapper-1.6.3.dist-info/top_level.txt,sha256=louCi6PVUc1rshEHKy6_llvg59yioflTTTlph8LyElE,11
+nifwrapper-1.6.3.dist-info/RECORD,,
