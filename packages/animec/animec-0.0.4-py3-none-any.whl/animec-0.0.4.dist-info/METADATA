@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: animec
+Version: 0.0.4
+Summary: An unofficial API to extract character data from myanimelist
+Home-page: https://github.com/DriftAsimov/animec
+Author: DriftAsimov
+Author-email: driftasimov@gmail.com
+License: MIT
+Keywords: animecharacter anime api character myanimelist
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: google-search (==1.0.2)
+Requires-Dist: bs4 (==0.0.1)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: google (==3.0.0)
+
+# Anime Character API
+
+This is an unofficial API to extract an anime character data from [myanimelist](https://myanimelist.net/).
+
+Currently, the API is very basic, but I will be adding a lot of stuff to easily extract data.
+
+If you wish to see a feature, please raise an issue. We will surely work on it.
+
+## Installation and Usage
+
+To install the library:
+```python
+pip install animec
+```
+
+To import the library:
+```python
+import animec
+# OR
+from animec import *
+```
+
+## Example 
+
+### Obtaining the character's image url
+
+```python
+from animec import *
+
+result = charsearch("okabe rintarou")
+
+print(result.title, result.url, result.image_url, sep="\n")
+
+'''
+Output:
+Rintarou Okabe (å²¡éƒ¨ å€«å¤ªéƒŽ)
+https://myanimelist.net/character/35252/Rintarou_Okabe
+https://cdn.myanimelist.net/images/characters/6/122643.jpg
+'''
+```
+
+## API Documentation
+
+List of properties and methods currently supported by animec.
+
+```
+charsearch()
+â”œâ”€â”€ .title
+â”œâ”€â”€ .url
+â”œâ”€â”€ .image_url
+```
+
+## Credits
+
+```
+Author: DriftAsimov
+GitHub: https://github.com/DriftAsimov
+Language Used: Python
+```
+
+## Contact Us
+```
+Mail: driftasimov@gmail.com
+Discord: Drift Asimov#3338
+```
+
+> Note: I do not own myanimelist or any imported module or api. I have just used them to extract the data.
+
