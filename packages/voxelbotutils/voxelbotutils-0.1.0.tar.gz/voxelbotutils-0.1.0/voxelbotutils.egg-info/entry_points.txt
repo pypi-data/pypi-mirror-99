@@ -1,0 +1,3 @@
+[console_scripts]
+voxelbotutils = voxelbotutils.__main__:main
+
