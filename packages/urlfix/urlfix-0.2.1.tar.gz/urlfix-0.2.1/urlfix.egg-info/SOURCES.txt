@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+urlfix/__init__.py
+urlfix/__main__.py
+urlfix/dirurlfix.py
+urlfix/urlfix.py
+urlfix/version.py
+urlfix.egg-info/PKG-INFO
+urlfix.egg-info/SOURCES.txt
+urlfix.egg-info/dependency_links.txt
+urlfix.egg-info/not-zip-safe
+urlfix.egg-info/top_level.txt
