@@ -1,0 +1,5 @@
+m9s-PyWebDAV3>=0.9.14.1
+m9s-trytond<5.3,>=5.2
+m9s_webdav<5.3,>=5.2
+trytond_party<5.3,>=5.2
+vobject>=0.8.0
