@@ -1,0 +1,10 @@
+README.md
+setup.py
+windows_tools.impersonate.egg-info/PKG-INFO
+windows_tools.impersonate.egg-info/SOURCES.txt
+windows_tools.impersonate.egg-info/dependency_links.txt
+windows_tools.impersonate.egg-info/namespace_packages.txt
+windows_tools.impersonate.egg-info/not-zip-safe
+windows_tools.impersonate.egg-info/requires.txt
+windows_tools.impersonate.egg-info/top_level.txt
+windows_tools/impersonate/__init__.py
