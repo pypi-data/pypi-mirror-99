@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pyvmrun/__init__.py
+src/pyvmrun/pyvmrun.py
+src/pyvmrun.egg-info/PKG-INFO
+src/pyvmrun.egg-info/SOURCES.txt
+src/pyvmrun.egg-info/dependency_links.txt
+src/pyvmrun.egg-info/top_level.txt
