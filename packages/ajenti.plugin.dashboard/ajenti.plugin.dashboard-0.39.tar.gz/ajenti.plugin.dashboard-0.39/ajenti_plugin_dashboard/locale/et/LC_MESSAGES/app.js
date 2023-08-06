@@ -1,0 +1,1 @@
+{"": "", "1 min": "", "15 min": "", "5 min": "", "Active cores": "", "Add": "", "Add widget": "", "CPU usage": "", "Configure": "", "Hostname": "", "Memory usage": "", "Remove": "", "Rename": "", "Save": "", "Tabs": "", "Total": "", "Uptime": "", "Dashboard": "", "New name": "", "${$scope.userConfig.dashboard.tabs[index].name}": "", "Cancel": "", "Load average": ""}
