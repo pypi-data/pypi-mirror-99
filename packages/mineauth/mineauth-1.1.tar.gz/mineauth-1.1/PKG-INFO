@@ -1,0 +1,61 @@
+Metadata-Version: 1.0
+Name: mineauth
+Version: 1.1
+Summary: Minecraft authentication API wrapper
+Home-page: UNKNOWN
+Author: Foster Reichert
+Author-email: fosterhreichert@gmail.com
+License: MIT
+Description: # MineAuth
+        ##### Version 1.0 | Stable
+        
+        MineAuth is an easy to use python library that serves as a wrapper for the Minecraft Authentication API
+        
+        ## Usage
+        
+        MineAuth requires the `requests` and `json` libary to run.
+        
+        Install the `requests` dependency if need be (these are built in libraries).
+        
+        ```
+        pip install requests
+        ```
+        
+        Next, install the library on your device.
+        
+        ```
+        pip install mineauth
+        ```
+        
+        Import MineAuth into your code using the following:
+        
+        ```
+        from mineauth import User
+        ```
+        
+        From here, you can create a variable for the class.
+        
+        ```
+        user  = User("email@example.com", "password")
+        ```
+        
+        Now you can call on the following variables:
+        
+        - `user.raw()` returns the raw post result in json format
+        - `user.email` returns the email used to authenticate
+        - `user.authenticated` returns `True` if successfully logged in
+        - `user.agent` returns the agent used in the post request in json format
+        - `user.client_token` returns the client token used in the post request
+        - `user.access_token` returns the access token used in the post request
+        
+        You can view information about the profiles as listed below.
+        
+        - `user.selected_profile` returns the first profile on the account as a `Profile` object
+        - `user.selected_profile.name` returns the name of the selected profile
+        - `user.selected_profile.id` returns the id of the selected profile
+        - `user.available_profiles` reeturns all profiles on account as an array of `Profile` objects
+        
+        ## License
+        
+        MIT
+Platform: UNKNOWN
