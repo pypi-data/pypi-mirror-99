@@ -1,0 +1,11 @@
+COPYING
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+urllib_gssapi/__init__.py
+urllib_gssapi/__main__.py
+urllib_gssapi.egg-info/PKG-INFO
+urllib_gssapi.egg-info/SOURCES.txt
+urllib_gssapi.egg-info/dependency_links.txt
+urllib_gssapi.egg-info/top_level.txt
