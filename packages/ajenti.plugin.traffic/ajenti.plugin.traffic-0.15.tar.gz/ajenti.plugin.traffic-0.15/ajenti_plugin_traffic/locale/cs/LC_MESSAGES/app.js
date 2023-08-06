@@ -1,0 +1,1 @@
+{"": "", "/s": "/s", "Interface": "Rozhran\u00ed", "Traffic": "Provoz"}
