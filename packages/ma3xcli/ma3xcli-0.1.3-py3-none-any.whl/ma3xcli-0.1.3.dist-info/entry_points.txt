@@ -1,0 +1,4 @@
+[console_scripts]
+command_one=one:main
+command_two=two:main
+
