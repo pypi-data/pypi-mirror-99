@@ -1,0 +1,7 @@
+README.md
+myfirstpypidemo.py
+setup.py
+zrchnpypidemo.egg-info/PKG-INFO
+zrchnpypidemo.egg-info/SOURCES.txt
+zrchnpypidemo.egg-info/dependency_links.txt
+zrchnpypidemo.egg-info/top_level.txt
