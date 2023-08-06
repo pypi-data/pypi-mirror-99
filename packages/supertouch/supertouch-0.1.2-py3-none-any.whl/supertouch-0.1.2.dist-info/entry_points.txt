@@ -1,0 +1,3 @@
+[console_scripts]
+st = supertouch.cli:main
+
