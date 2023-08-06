@@ -1,0 +1,105 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['uvicore',
+ 'uvicore.auth',
+ 'uvicore.auth.authenticators',
+ 'uvicore.auth.commands',
+ 'uvicore.auth.config',
+ 'uvicore.auth.contractsOLD',
+ 'uvicore.auth.database.seeders',
+ 'uvicore.auth.database.tables',
+ 'uvicore.auth.middleware',
+ 'uvicore.auth.models',
+ 'uvicore.auth.support',
+ 'uvicore.auth.user_providers',
+ 'uvicore.cache',
+ 'uvicore.cache.backends',
+ 'uvicore.configuration',
+ 'uvicore.configuration.commands',
+ 'uvicore.console',
+ 'uvicore.console.commands',
+ 'uvicore.console.commands.stubs',
+ 'uvicore.console.handlers',
+ 'uvicore.container',
+ 'uvicore.container.commands',
+ 'uvicore.contracts',
+ 'uvicore.database',
+ 'uvicore.database.OBSOLETE',
+ 'uvicore.database.commands',
+ 'uvicore.database.commands.stubs',
+ 'uvicore.database.handlers',
+ 'uvicore.events',
+ 'uvicore.events.commands',
+ 'uvicore.factories',
+ 'uvicore.foundation',
+ 'uvicore.foundation.config',
+ 'uvicore.foundation.decorators',
+ 'uvicore.foundation.events',
+ 'uvicore.http',
+ 'uvicore.http.OBSOLETE',
+ 'uvicore.http.commands',
+ 'uvicore.http.controllers',
+ 'uvicore.http.events',
+ 'uvicore.http.middleware',
+ 'uvicore.http.routing',
+ 'uvicore.http.servers',
+ 'uvicore.http.templating',
+ 'uvicore.logging',
+ 'uvicore.orm',
+ 'uvicore.orm.commands',
+ 'uvicore.orm.commands.stubs',
+ 'uvicore.package',
+ 'uvicore.package.commands',
+ 'uvicore.redis',
+ 'uvicore.support',
+ 'uvicore.typing']
+
+package_data = \
+{'': ['*'], 'uvicore.auth': ['http/public/*', 'http/public/assets/js/*']}
+
+install_requires = \
+['aioredis>=1.3.0,<1.4.0',
+ 'argon2-cffi>=20.1.0,<20.2.0',
+ 'asyncclick>=7.1.0,<7.2.0',
+ 'colored>=1.4.0,<1.5.0',
+ 'cryptography>=3.4.0,<3.5.0',
+ 'environs>=9.3.0,<9.4.0',
+ 'prettyprinter>=0.18.0,<0.19.0']
+
+extras_require = \
+{'database': ['sqlalchemy>=1.3.0,<1.4.0',
+              'alembic>=1.5.0,<1.6.0',
+              'databases[sqlite,postgresql,mysql]>=0.4.0,<0.5.0'],
+ 'web': ['fastapi>=0.63.0,<0.64.0',
+         'uvicorn>=0.13.0,<0.14.0',
+         'gunicorn>=20.0.0,<20.1.0',
+         'aiofiles>=0.6.0,<0.7.0',
+         'Jinja2>=2.11.0,<2.12.0',
+         'requests>=2.25.0,<2.26.0',
+         'itsdangerous>=1.1.0,<1.2.0',
+         'uvloop>=0.14.0,<0.15.0',
+         'httptools>=0.1.0,<0.2.0',
+         'python-multipart>=0.0.0,<0.1.0',
+         'PyJWT>=2.0.0,<2.1.0']}
+
+setup_kwargs = {
+    'name': 'uvicore',
+    'version': '0.1.10',
+    'description': 'The Async Python Framework for Artisans. An Elegant Fullstack Python Web, API and CLI Framework',
+    'long_description': '# Uvicore\n\nWelcome to Uvicore!  The Async Python Framework for Artisans. An Elegant Fullstack Python Web, API and CLI Framework.\n\n\n\n* Asynchronous database layer for MySQL, SQLite and Postgres.\n* All new custom asynchronous ORM (NOT another django ORM clone) with support for every relationship including polymorphism.  Enjoy Laravel\'s Eloquent ORM?  You\'ll love this one.\n* Full python type hinting for IDE code intellisense across every module including ORM model fields and methods.\n\n\n\n## What is Uvicore?\n\n* A fullstack blazing fast asynchronous python Web, API and CLI framework.\n* Inspiration taken heavily from the elegance and design quality of Laravel.\n* Not a mirco framework, up and running with a complete system in minutes, no boilerplate.\n* Deeply config driven with extremely deep merged and overridable package configs.\n* Package based.  Apps are packages, packages are apps.  No "shell" or "project" required.  Run it or use it in another running app, all in one.\n* Service Provider style package bootstrapping.\n* Full async database query builder build on encode/databases...or use the ORM!\n* Elegant custom async ORM inspired by Eloquent (but still very different).\n* Complex and complete ORM relations including polymorphism.\n* Easy redis caching system (great for optimizing API database hits).\n* IoC (Inversion of Control).  Framework looks back to your app to determine import of every module.  You can override ANYTHING from core or other developers packages!\n* Blazing fast DUAL routers for Web and API usage, built on Starlette and FastAPI.\n* Perfectly suited for old-school server-side traditional post-back template driven web apps.\n* Perfectly suited for API backend only, quicker and easier that Django Rest Framework, built on FastAPI but with fullstack routing, controllers, ORM, caching...no boilerplate.\n* Websockets!  Well yeah, its async!\n* ORM Models can query local database OR switch to remote API and query the data over uvicore automatic ORM crud APIs without code changing, syntax identical.  What?  This means your package IS the "server" and also the "client/sdk for API access".  Let that sink in a bit.\n* Automatic ORM Crud API\'s out of the box.  Never write a single controller or endpoint again.  Simply build Models. Instant API with granular roles and permission management.\n* Granular groups, roles, permission management with Authentication middleware and route guards.\n* Quick and easy JWT authentication with an external IDP (FusionAuth!)\n* Multiple middleware authenticators.  APIs can autodetect and respond to Basic Auth, Digest, JWT and more.\n* Automatic OpenAPI 3.0 generated documentation for all API routes include automatic model router.\n* Fully async CLI based on asyncclick.  Query async ORM models and jobs from the CLI exactly as you would from an async web controller.  Everything can call async methods!\n* Event pub/sub system.  Subscribe to all Uvicore core events in the bootstrap process, ORM CRUD, authentication systems and any event fired from your packages.\n* And much more....documentation to come soon!\n\n\n## Warning\n\nThis project is currently under heavy **active** development.  Although I am using this framework in Production personally, I would advise you against it just yet.  It is mostly stable but not feature complete.\n\n\n## Feeling Dangerous?\n\nIt works with a full installer, but there is little documentation yet so its up to you to deduce the system, though it\'s reasonably self explanatory.\n\n```bash\nwget https://raw.githubusercontent.com/uvicore/framework/master/bin/uvicore-installer\nmv uvicore-installer /usr/local/bin\nchmod a+x /usr/local/bin/uvicore-installer\n\ncd ~/Code\nuvicore-installer  # To see help\nuvicore-installer ./blog\n\n# Follow the post-installation instructions\n# Review your .env\n# Review all configs\n# Download this https://github.com/uvicore/framework code and review the guts since there are no docs yet :)  Look in the tests/apps/app1 folder for a small test app to glean how to use it.\n# Sorry, it\'s not done yet, but working hard on it!\n```\n\n\n## Stable v1.0 Roadmap\n\nI am tracking issues and enhancements for v1.0 in the Issues Milestones (and on a million sticky notes).  Before this project can be considered ready for public use I need to complete the following:\n\n* Proof the system by finishing several Production sites, APIs and CLIs at my current company.\n* Write far more tests and attempt 100% coverage\n* Build the main website at https://uvicore.io\n* Complete elegant documentation (ever read Laravels docs?  Like that.) at https://docs.uvicore.io\n\n\n\n## License\n\nThe Uvicore framework is open-sourced software licensed under the MIT license.\n',
+    'author': 'Matthew Reschke',
+    'author_email': 'mail@mreschke.com',
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': 'https://github.com/uvicore/framework',
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'extras_require': extras_require,
+    'python_requires': '>=3.7,<4.0',
+}
+
+
+setup(**setup_kwargs)
