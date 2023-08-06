@@ -1,0 +1,14 @@
+-c requirements.txt
+pip
+setuptools
+wheel
+pip-tools
+black
+flake8
+flake8-string-format
+pytest
+pytest-cov
+mypy
+pre-commit
+eth-index>=0.4.0
+tox
