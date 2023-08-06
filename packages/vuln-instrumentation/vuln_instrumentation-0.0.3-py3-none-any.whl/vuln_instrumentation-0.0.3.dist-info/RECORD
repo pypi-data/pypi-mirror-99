@@ -1,0 +1,5 @@
+pkg/__init__.py,sha256=GiM7kuvWUtuiezjEXnnKsFV_K9oTZhGNfOZ3-isw1_4,18
+vuln_instrumentation-0.0.3.dist-info/METADATA,sha256=EVGiw1vNrr0XBwvQ3RaPPrCZs4lZJ14tgVBQ4jrOMNI,576
+vuln_instrumentation-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vuln_instrumentation-0.0.3.dist-info/top_level.txt,sha256=8jjfKuFvlaNGG7JiuNtS31gIuwOm8thUcUQoNbsxxls,4
+vuln_instrumentation-0.0.3.dist-info/RECORD,,
