@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: static-downsampler
+Version: 0.0.2
+Summary: A tool to downsample MOM static files
+Home-page: https://github.com/raphaeldussin/static_downsampler
+Author: Raphael Dussin
+Author-email: raphael.dussin@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
