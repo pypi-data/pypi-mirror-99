@@ -1,0 +1,7 @@
+setuptools
+requests
+six
+websocket-client
+Amino.py
+pathlib
+unicodedata
