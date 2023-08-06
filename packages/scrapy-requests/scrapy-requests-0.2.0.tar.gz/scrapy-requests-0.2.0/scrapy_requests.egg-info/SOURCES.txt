@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+scrapy_requests/__init__.py
+scrapy_requests/middleware.py
+scrapy_requests/request.py
+scrapy_requests.egg-info/PKG-INFO
+scrapy_requests.egg-info/SOURCES.txt
+scrapy_requests.egg-info/dependency_links.txt
+scrapy_requests.egg-info/requires.txt
+scrapy_requests.egg-info/top_level.txt
+tests/__init__.py
+tests/test_request.py
