@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: yinhua-airworks
+Version: 0.0.1
+Summary: yinhua-airworks-api sdk
+Home-page: UNKNOWN
+Author: valuesimplex
+License: UNKNOWN
+Description: # python sdk for yinhua indicator
+        
+        更新流程：
+        http://confluence.shangjian.tech:8090/pages/viewpage.action?pageId=67778936
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
