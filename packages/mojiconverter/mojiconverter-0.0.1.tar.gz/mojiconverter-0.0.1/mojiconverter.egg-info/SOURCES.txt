@@ -1,0 +1,8 @@
+README.md
+setup.py
+mojiconverter/__init__.py
+mojiconverter/app.py
+mojiconverter.egg-info/PKG-INFO
+mojiconverter.egg-info/SOURCES.txt
+mojiconverter.egg-info/dependency_links.txt
+mojiconverter.egg-info/top_level.txt
