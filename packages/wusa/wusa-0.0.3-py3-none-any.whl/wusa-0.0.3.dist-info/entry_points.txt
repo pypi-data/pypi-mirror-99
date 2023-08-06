@@ -1,0 +1,3 @@
+[console_scripts]
+wusa=wusa.main:app
+
