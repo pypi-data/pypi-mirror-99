@@ -1,0 +1,8 @@
+click
+colorlog
+requests
+
+[dev]
+black
+flake8
+pytest
