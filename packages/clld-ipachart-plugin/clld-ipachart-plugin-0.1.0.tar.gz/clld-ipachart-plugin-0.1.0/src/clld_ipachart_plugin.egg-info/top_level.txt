@@ -1,0 +1,1 @@
+clld_ipachart_plugin
