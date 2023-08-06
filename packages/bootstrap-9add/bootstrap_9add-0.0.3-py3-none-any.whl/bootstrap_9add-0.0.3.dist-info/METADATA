@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: bootstrap-9add
+Version: 0.0.3
+Summary: A small example package
+Home-page: https://github.com/phfrohring/python
+Author: Pierre-Henry Fröhring
+Author-email: contact@phfrohring.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/phfrohring/python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: program-9ef5
+
+Very explicit readme
+
+https://www.mozilla.org/en-US/MPL/2.0/
+
+
