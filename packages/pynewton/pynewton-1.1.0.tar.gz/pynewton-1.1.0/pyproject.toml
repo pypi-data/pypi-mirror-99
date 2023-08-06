@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pynewton"
+version = "1.1.0"
+description = "An asyncio-based wrapper for the newton-api"
+authors = ["Nils Theres"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/HitaloSama/pynewton"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+httpx = {extras = ["http2"], version = "^0.17.1"}
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
