@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pklib
+Version: 0.0.2
+Summary: Machine Learning Simplified Library
+Home-page: UNKNOWN
+Author: Parthiban Kannan
+Author-email: parthiban_kannan@outlook.com
+License: UNKNOWN
+Description: # lib_machine_learning
+        Machine Learning Libraries
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
