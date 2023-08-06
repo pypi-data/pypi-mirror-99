@@ -1,0 +1,15 @@
+numpy>=1.19
+astropy
+
+[docs]
+sphinx
+sphinx-automodapi
+numpydoc
+sphinx-rtd-theme
+stsci-rtd-theme
+
+[test]
+psutil
+pytest>=4.6.0
+pytest-doctestplus
+pytest-openfiles>=0.5.0
