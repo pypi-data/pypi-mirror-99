@@ -1,0 +1,14 @@
+trickster/__init__.py,sha256=NGkXMCYRnJbiVFpw4uMz3rHD_1q67XxHJEDUebvCHbw,756
+trickster/api_app.py,sha256=NtXS7Bwo2B3pObqW8TBO5SrUkevVMgkNrj5Q-N0dYdw,1267
+trickster/auth.py,sha256=-8dEd2NkyxTc3FIc7tC2kK2-h_CHMhKyLkmVjWzvFsk,10297
+trickster/collections.py,sha256=b4VHAmDw6-0P7TnDj67Ha6Z4eJHJkOKWK6l-K2P_ATo,2281
+trickster/endpoints.py,sha256=3rSY8QSxidK3yIAgvO9S63b9N3C6HWY47m4e1kTVQB0,4540
+trickster/input.py,sha256=THiwaGB7ccD_UDpcRhoo-iswX_MGy_wqQpJTS2pMq2M,3816
+trickster/routing.py,sha256=p3GQCnuzFwkSBe2pKs2_YOWWcP-tFtQKjtO0Yj5cT7g,12304
+trickster/sys.py,sha256=VKyFYDDLMhrthg62LM4BSghxDdBEfpe3WUUQa0vVrBo,554
+trickster/validation.py,sha256=pMS543tzpo6CBHhlITyjpsEDWbzj1H5SSIgto2kVzPw,1537
+trickster-1.0.7.dist-info/METADATA,sha256=nTYkgRxMFzyPzD-QlFzatpakDloiM29f5u5y_IyDCAM,4055
+trickster-1.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+trickster-1.0.7.dist-info/entry_points.txt,sha256=hER9g06q388tE_-r51BT6WsujMU8S7Nx9mDl5h8GnzA,39
+trickster-1.0.7.dist-info/top_level.txt,sha256=M9GYIVfUUOHhUlOHgSLLlhQD6P3imDbNOgWYXmPKU14,10
+trickster-1.0.7.dist-info/RECORD,,
