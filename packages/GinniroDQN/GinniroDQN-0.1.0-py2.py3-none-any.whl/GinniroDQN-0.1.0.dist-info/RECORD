@@ -1,0 +1,8 @@
+ginniro/__init__.py,sha256=GLdMGsm5_CnATyh19At20Hmb1MsXZvPxNvg70bHYChk,19
+ginniro/dqn_imp.py,sha256=IuWlu6iwiJrptSNdeJ3Hd8oV9D2LCNWNNrfa_1Bu6x0,697
+ginniro/dueling_imp.py,sha256=5h8RAib69ZS2kHt7pV19hZUHG9O0GcJXRehTDQoO4aA,961
+GinniroDQN-0.1.0.dist-info/LICENSE,sha256=JV5DK3d3OPHQ7409cUyIwXEP--PwLCcDR-Uq_BHleF0,1089
+GinniroDQN-0.1.0.dist-info/METADATA,sha256=tGfri9Frz4xq4HBJJK6hzgfuIfU37Dk_NB2gqzJ2gKo,652
+GinniroDQN-0.1.0.dist-info/WHEEL,sha256=JZXtYepZFsf4IoivNpnSgKIc4qTHan08DRd56koo_DM,116
+GinniroDQN-0.1.0.dist-info/top_level.txt,sha256=rg2pvUYkwrLcMLbGMhOuVPJ6HrSb5HUIapbv6MnZHjA,8
+GinniroDQN-0.1.0.dist-info/RECORD,,
