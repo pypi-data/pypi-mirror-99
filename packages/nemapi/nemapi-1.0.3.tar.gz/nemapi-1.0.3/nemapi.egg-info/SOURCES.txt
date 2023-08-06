@@ -1,0 +1,9 @@
+README.md
+setup.py
+nemapi/URLs.py
+nemapi/__init__.py
+nemapi.egg-info/PKG-INFO
+nemapi.egg-info/SOURCES.txt
+nemapi.egg-info/dependency_links.txt
+nemapi.egg-info/requires.txt
+nemapi.egg-info/top_level.txt
