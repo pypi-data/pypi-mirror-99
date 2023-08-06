@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+alphaconfig/AlphaConfig.py
+alphaconfig/__init__.py
+alphaconfig.egg-info/PKG-INFO
+alphaconfig.egg-info/SOURCES.txt
+alphaconfig.egg-info/dependency_links.txt
+alphaconfig.egg-info/top_level.txt
