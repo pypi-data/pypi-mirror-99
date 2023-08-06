@@ -1,0 +1,11 @@
+headerexposer/__init__.py,sha256=RUBHDhh-sh8G1xL6s0C_-dFRQxsLv9gyqQ99vpVyAS8,24923
+headerexposer/__main__.py,sha256=SXXbGMgj30SvJI-MTEGKHQjG1nRXddfnIW33gKCZ9WQ,13959
+headerexposer/baseline.json,sha256=ocTIx7elVZ0IN_an8EJyawRN2sNGygFobu_zOC72IL4,28212
+headerexposer/baseline_schema.json,sha256=kYGdsWvDmJwZKHZIc6XVFGTTlkbKFTWqE_Pyfapm1CE,6866
+headerexposer/baseline_short.json,sha256=X3xLDoJiiWdqDZG3PeCBLAK5vU-iAbYSQkLP8prCGvI,8548
+headerexposer-0.8a15.dist-info/LICENSE.txt,sha256=jVa0BUaKrRH4erV2P5AeJ24I2WRv9chIGxditreJ6e0,34524
+headerexposer-0.8a15.dist-info/METADATA,sha256=7WwUdcdHQy4dxjwMiOaNhmVCeLSZDsvGQ5QU0tTC3KQ,14994
+headerexposer-0.8a15.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+headerexposer-0.8a15.dist-info/entry_points.txt,sha256=IMUQ6FfQ0_dldYiAexjAqLAuDRMEmG0176vTuP_GtfA,63
+headerexposer-0.8a15.dist-info/top_level.txt,sha256=qy0PeKISRvoDPI9hMhSDz8nSmNEoixOsODAOM-Lg5kE,14
+headerexposer-0.8a15.dist-info/RECORD,,
