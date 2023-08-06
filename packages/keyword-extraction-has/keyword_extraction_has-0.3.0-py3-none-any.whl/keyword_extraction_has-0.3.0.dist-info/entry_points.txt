@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    extract_keywords=has_keyword_extractor.cli:keyword_extractor
+    

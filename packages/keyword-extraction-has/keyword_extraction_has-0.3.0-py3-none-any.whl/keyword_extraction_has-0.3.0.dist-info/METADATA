@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: keyword-extraction-has
+Version: 0.3.0
+Summary: the implementation  ths keyword extraction technique described in the following paper : https://tinyurl.com/59b9ewb2
+Home-page: UNKNOWN
+Author: Simon Meoni
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click (~=7.1.2)
+Requires-Dist: nltk (~=3.4.4)
+Requires-Dist: spacy (~=3.0.4)
+Requires-Dist: alive-progress (~=1.6.2)
+
+UNKNOWN
+
+
