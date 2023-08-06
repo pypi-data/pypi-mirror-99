@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nn-pruning
+Version: 0.1.1
+Summary: nn_pruning is a python package for pruning PyTorch models.
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: MIT
+Description: nn_pruning is a python package for pruning PyTorch models.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Topic :: Text Processing
+Provides-Extra: examples
