@@ -1,0 +1,10 @@
+python_http_parser/__init__.py,sha256=T7D2WPaGId04ieV9DQu9gGSuFe1sAmly0OAmG-1C76o,3577
+python_http_parser/constants.py,sha256=xRy3WmxYuAaUsmtvMoVKI4YUe9zAmD6rZy43kpE4_LY,411
+python_http_parser/errors.py,sha256=fvQJzamqIz_B2AWDb3frVBCAmwwrggYLSA-0ezrDEf0,1117
+python_http_parser/stream_parser.py,sha256=rebLaxgmpvYdgFuXCMFNzRe7qu5Poh3CVq9XBdAi8c0,5028
+python_http_parser/utils.py,sha256=RhqQHScsRoRuLqs0aNf1Jnhh-kP_MBcevwNn_Nan1bU,5414
+python_http_parser-0.3.0.dist-info/LICENSE,sha256=YDmD89cscNc4pyB81rpova08Dv3FVL8B1X05qIABLGY,1072
+python_http_parser-0.3.0.dist-info/METADATA,sha256=yAnegaCYs-dKMA7_MwfqtGyGGfdL1AC-bvar8aaxULc,3193
+python_http_parser-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_http_parser-0.3.0.dist-info/top_level.txt,sha256=_XZhyYPI2nGfTqwxT3v4v7_YzPzlv1y-JCDFaKntcMQ,19
+python_http_parser-0.3.0.dist-info/RECORD,,
