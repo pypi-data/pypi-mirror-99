@@ -1,0 +1,6 @@
+aiohttp>=3.6.3
+certifi>=2019.3.9
+pyjwt>=1.7.1
+python-dateutil
+six
+urllib3
