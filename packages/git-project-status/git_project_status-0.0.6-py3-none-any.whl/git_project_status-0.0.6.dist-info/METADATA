@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: git-project-status
+Version: 0.0.6
+Summary: Git repo status checker.
+Home-page: https://github.com/yaleman/git_project_status
+Author: James Hodgkinson
+Author-email: yaleman+pypi_git_project_status@ricetek.net
+License: MIT
+Keywords: git
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: gitdb
+Requires-Dist: GitPython
+Requires-Dist: loguru
+
+Checks the local directory and subdirs for git repo status.
+
+
