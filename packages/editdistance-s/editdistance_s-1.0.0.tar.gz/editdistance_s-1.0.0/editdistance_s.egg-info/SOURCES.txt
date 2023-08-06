@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+_editdistance.cpp
+_editdistance.h
+editdistance_s.py
+editdistance_s_build.py
+setup.cfg
+setup.py
+editdistance_s.egg-info/PKG-INFO
+editdistance_s.egg-info/SOURCES.txt
+editdistance_s.egg-info/dependency_links.txt
+editdistance_s.egg-info/requires.txt
+editdistance_s.egg-info/top_level.txt
