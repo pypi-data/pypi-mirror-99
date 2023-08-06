@@ -1,0 +1,12 @@
+README.md
+setup.py
+selfies/__init__.py
+selfies/decoder.py
+selfies/encoder.py
+selfies/grammar_rules.py
+selfies/kekulize.py
+selfies/utils.py
+selfies.egg-info/PKG-INFO
+selfies.egg-info/SOURCES.txt
+selfies.egg-info/dependency_links.txt
+selfies.egg-info/top_level.txt
