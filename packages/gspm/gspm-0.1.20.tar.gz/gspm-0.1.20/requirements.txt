@@ -1,0 +1,10 @@
+pyyaml
+gitpython
+dotmap
+wget
+packaging
+cookiecutter
+sphinx
+sphinx_rtd_theme
+twine
+wheel
