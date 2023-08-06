@@ -1,0 +1,3 @@
+[console_scripts]
+deploycli = deploy4s.cli:main
+

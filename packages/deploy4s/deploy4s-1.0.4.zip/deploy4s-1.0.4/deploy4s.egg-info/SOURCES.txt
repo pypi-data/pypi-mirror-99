@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+deploy4s/__init__.py
+deploy4s/cli.py
+deploy4s/deploy.py
+deploy4s.egg-info/PKG-INFO
+deploy4s.egg-info/SOURCES.txt
+deploy4s.egg-info/dependency_links.txt
+deploy4s.egg-info/entry_points.txt
+deploy4s.egg-info/not-zip-safe
+deploy4s.egg-info/requires.txt
+deploy4s.egg-info/top_level.txt
