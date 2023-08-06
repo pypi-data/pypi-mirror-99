@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: metronome-loop
+Version: 0.1.0
+Summary: Library for easy timing without time.sleep()
+Home-page: https://github.com/JakubAndrysek/metronome_loop
+Author: Jakub Andrýsek
+Author-email: email@kubaandrysek.cz
+License: MIT
+Keywords: metronome_loop,loop,sleep,time
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# metronome-loop
+
+Library for easy timing without `time.sleep()`
+
+
+
+## Example use
+````py
+import metronome_loop
+
+
+def five_sec_prin():
+    print("five_sec")
+
+
+one_sec = metronome_loop.metronome(1000, lambda: print("one_sec"))
+five_sec = metronome_loop.metronome(5000, five_sec_prin)
+ten_sec = metronome_loop.metronome(10000)
+
+while True:
+    one_sec.loop()
+
+    five_sec.loop()
+
+    if ten_sec.loop():
+        print("ten_sec")
+
+````
+
