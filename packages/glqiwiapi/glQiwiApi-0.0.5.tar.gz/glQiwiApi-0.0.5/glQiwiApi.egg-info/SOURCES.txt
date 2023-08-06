@@ -1,0 +1,11 @@
+setup.py
+glQiwiApi/__init__.py
+glQiwiApi/api.py
+glQiwiApi/configs.py
+glQiwiApi/data.py
+glQiwiApi/funcs.py
+glQiwiApi.egg-info/PKG-INFO
+glQiwiApi.egg-info/SOURCES.txt
+glQiwiApi.egg-info/dependency_links.txt
+glQiwiApi.egg-info/requires.txt
+glQiwiApi.egg-info/top_level.txt
