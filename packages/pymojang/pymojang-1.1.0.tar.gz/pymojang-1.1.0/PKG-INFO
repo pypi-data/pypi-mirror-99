@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pymojang
+Version: 1.1.0
+Summary: It's a full wrapper arround de Mojang API and Mojang Authentication API
+Home-page: https://github.com/Lucino772/pymojang
+Author: Lucino772
+Author-email: lucapalmi772@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/Lucino772/pymojang
+Project-URL: Documentation, https://pymojang.readthedocs.io/en/latest/
+Description: [![Documentation Status](https://readthedocs.org/projects/pymojang/badge/?version=latest)](https://pymojang.readthedocs.io/en/latest/?badge=latest)
+        
+        # Pymojang
+        Pymojang is a full wrapper arround de [Mojang API](https://wiki.vg/Mojang_API) and [Mojang Authentication API](https://wiki.vg/Authentication).
+        
+        ## Installation
+        
+        To install the library use the following command:
+        
+        ```bash
+        pip install pymojang
+        ```
+        
+        ## Usage
+        
+        Retrieve information about a user
+        
+        ```python
+        import mojang
+        profile = mojang.user('Notch')
+        print(profile.uuid)
+        # '069a79f444e94726a5befca90e38aaf5'
+        print(profile.skins[0].source)
+        # 'http://textures.minecraft.net/texture/292009a4925b58f02c77dadc3ecef07ea4c7472f64e0fdc32ce5522489362680'
+        ```
+        
+        Checkout the [documentation](https://pymojang.readthedocs.io/en/latest/)
+        
+        ## Licence
+        This project uses a
+        **MIT** Licence [view](https://github.com/Lucino772/pymojang/blob/main/LICENSE)
+Keywords: minecraft,mojang,python3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
