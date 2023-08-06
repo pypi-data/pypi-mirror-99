@@ -1,0 +1,265 @@
+Metadata-Version: 2.1
+Name: blip-flowanalysis
+Version: 0.6.0
+Summary: A solution for chatbot constructors to identify problems in flow structure.
+Home-page: UNKNOWN
+Author: Squad XD
+Author-email: anaytics.dar@take.net
+Maintainer: daresearch
+Maintainer-email: anaytics.dar@take.net
+License: MIT License
+Keywords: chatbot,flow,analysis
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Requires-Dist: pytest-cov (<3.0,>=2.8.1) ; extra == 'tests'
+Requires-Dist: pytest-mock (<2.0,>=1.7.1) ; extra == 'tests'
+Requires-Dist: pytest (<4.0,>=3.4) ; extra == 'tests'
+
+# Blip Flow Analysis
+Blip Flow Analysis provides a solution for chatbot constructors to identify problems in flow structure 
+that can be originated from bad structuring or poor organization.
+
+# Installation
+Use [pip](https://pip.pypa.io/en/stable/) to install:
+
+```shell script
+pip install blip_flowanalysis
+```
+
+# Usage
+
+## Missing Trackings analysis
+
+Using the `MissingTrackigns` analyser:
+
+```python
+import blip_flowanalysis as bfa
+
+# Replace __chatbot_as_json__ parameter by your json bot.
+bot_flow = bfa.Flow(__chatbot_as_json__)
+analyser = bfa.MissingTrackings(minimum=1)
+
+# Return `True` if amount of Trackings is above minimum, `False` otherwise.
+print(analyser.analyse(bot_flow)) 
+```
+
+## Process HTTP Return Validation analysis
+
+Using the `ProcessHTTPReturnValidation` analyser:
+
+```python
+# import json
+import blip_flowanalysis as bfa
+
+bot_json = str("Your chatbot json here.")
+# bot_json = json.load("or your chatbot json file here")
+
+bot_flow = bfa.Flow(bot_json)
+http_analyser = bfa.ProcessHTTPReturnValidation()
+
+# Report with "summary" and "details" with long scripts detections.
+report = http_analyser.analyse(bot_flow)
+
+print(report)
+```
+
+Output is like:
+
+```
+{
+    "summary": {
+        "process HTTP actions": n_process_http,
+        "process HTTP actions regular": n_regular,
+        "process HTTP actions missing status": n_missing_status,
+        "process HTTP actions missing body": n_missing_body,
+        "process HTTP actions improper declared body": n_improper_declared_body,
+        "process HTTP actions any used body before status": n_any_used_body_before_status,
+        "states count": n_states,
+        "states with irregular process HTTP action": n_irregular_states
+    },
+    "details": [
+        {
+            "state id": state_id,  # State ID on bot flow.
+            "state name": state_name,  # State name on bot flow.
+            "io action": io_action,  # Any of inputActions and outputActions.
+            "action number": action_number,  # Action position on actions list.
+            "http method": http_method,  # Examples: GET, PUT, POST, ...
+            "status variable": status_variable,  # Variable with response status value
+            "body variable": body_variable,  # Variable with response body value
+            "all paths used status": true/false,  # Check if all paths after process HTTP used status
+            "all paths used body": true/false,  # Check if all paths after process HTTP used body
+            "declared status": true/false,  # Check if status variable was declared
+            "declared body": true/false,  # Check if body variable was declared
+            "must use body": true/false,  # Check if HTTP method requires use body
+            "must not declare body": true/false,  # Check if HTTP method requires not use body
+            "paths with missing status": [  # Empty if "all paths used status" is true
+                {
+                    "path": [
+                        {"id": state_id, "name": state_name},  # States on this path
+                        ...
+                    ],
+                    "status use": {}  # On "paths with miss status" it is empty
+                    "body use": {
+                        "state": {"id": state_id, "name": state_name},  # State with first body use
+                        "stage on state": stage,  # inputActions, outputs or outputActions
+                        "index on stage": index  # Index on stage with first body use
+                    }
+                },
+                ...
+            ],
+            "paths with missing body": [
+                {
+                    "path": [
+                        {"id": state_id, "name": state_name},  # States on this path
+                        ...
+                    ],
+                    "status use": {
+                        "state": {"id": state_id, "name": state_name},  # State with first status use
+                        "stage on state": stage,  # inputActions, outputs or outputActions
+                        "index on stage": index  # Index on stage with first status use
+                    }
+                    "body use": {}  # On "paths with miss body" it is empty
+                },
+                ...
+            ],
+            "paths with body before status": [
+                {
+                    "path": [
+                        {"id": state_id, "name": state_name},  # States on this path
+                        ...
+                    ],
+                    "status use": {
+                        "state": {"id": state_id, "name": state_name},  # State with first status use
+                        "stage on state": stage,  # inputActions, outputs or outputActions
+                        "index on stage": index  # Index on stage with first status use
+                    }
+                    "body use": {
+                        "state": {"id": state_id, "name": state_name},  # State with first body use
+                        "stage on state": stage,  # inputActions, outputs or outputActions
+                        "index on stage": index  # Index on stage with first body use
+                    }
+                },
+                ...
+            ],
+            "causes": causes  # Explain why this process HTTP return validation is irregular.
+        },
+        ...
+    ]
+}
+```
+
+## Long Scripts analysis
+
+Using the `LongScript` analyser:
+
+```python
+# import json
+import blip_flowanalysis as bfa
+
+bot_json = str("Your chatbot json here.")
+# bot_json = json.load("or your chatbot json file here")
+
+bot_flow = bfa.Flow(bot_json)
+ls_analyser = bfa.LongScript()
+
+# Report with "summary" and "details" with long scripts detections.
+report = ls_analyser.analyse(bot_flow)
+
+print(report)
+```
+
+Output is like:
+
+```
+{
+    "summary": {
+        "scripts count": n_scripts,
+        "scripts too long": n_long_scripts,
+        "states count": n_states,
+        "states with too long scripts": n_irregular_states
+    },
+    "details": [
+        {
+            "state id": state_id,  # State ID on bot flow.
+            "state name": state_name,  # State name on bot flow.
+            "io action": io_action,  # Any of inputActions and outputActions.
+            "action number": action_number,  # Action position on actions list.
+            "script": script,  # Script.
+            "chars": length,  # Code characters quantity.
+            "lines": lines,  # Not blank code lines quantity.
+            "functions": functions,  # Top level functions quantity.
+            "commands": commands,  # Commands quantity.
+            "lines by commands": lines_by_commands,  # Lines commands ratio.
+            "causes": cause  # Explain why this script was detected.
+        },
+        ...
+    ]
+}
+```
+
+## Duplicated Paths analysis
+
+Using the `DuplicatedPaths` analyser:
+
+```python
+# import json
+import blip_flowanalysis as bfa
+
+bot_json = str("Your chatbot json here.")
+# bot_json = json.load("or your chatbot json file here")
+
+bot_flow = bfa.Flow(bot_json)
+dp_analyser = bfa.DuplicatedPaths()
+
+# Report with "summary" and "details" with long scripts detections.
+report = dp_analyser.analyse(bot_flow)
+
+print(report)
+```
+
+Output is like:
+
+```
+{
+    "summary": {
+        "pairs of duplicated paths": n_duplicated_paths,
+        "states count": n_states,
+        "states on duplicated paths": n_irregular_states
+    },
+    "details": [
+        {
+            "levels quantity": n_levels,  # Quantity of levels on path
+            "states quantity": n_states_on_path,  # Quantity of states on path
+            "root 0": {"id": state_id, "name": state_name},  # State as root on path 0
+            "root 1": {"id": state_id, "name": state_name},  # State as root on path 1
+            "path 0": {  # Path 0
+                "level 0": [  # First level on path 0
+                    {"id": state_id, "name": state_name},  # States on level 0 on path 0
+                    ...  # Other states
+                ],
+                ...  # Other levels
+            },
+            "path 1": {  # Path 1
+                "level 0": [  # First level on path 1
+                    {"id": state_id, "name": state_name},  # States on level 0 on path 1
+                    ...  # Other states
+                ],
+                ...  # Other levels
+            },
+        },
+        ...
+    ]
+}
+```
+
+# Author
+[Take Data&Analytics Research](anaytics.dar@take.net)
+
+# License
+[MIT License](LICENSE)
+
+
