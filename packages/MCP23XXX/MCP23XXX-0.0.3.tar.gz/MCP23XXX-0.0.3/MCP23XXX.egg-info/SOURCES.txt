@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+MCP23XXX/MCP23017_I2C.py
+MCP23XXX/__init__.py
+MCP23XXX/config.yaml
+MCP23XXX.egg-info/PKG-INFO
+MCP23XXX.egg-info/SOURCES.txt
+MCP23XXX.egg-info/dependency_links.txt
+MCP23XXX.egg-info/top_level.txt
+MCP23XXX/static/cbpi.png
+MCP23XXX/static/index.html
+MCP23XXX/static/style.css
