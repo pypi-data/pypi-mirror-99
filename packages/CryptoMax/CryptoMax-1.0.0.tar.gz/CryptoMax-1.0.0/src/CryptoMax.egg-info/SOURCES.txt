@@ -1,0 +1,7 @@
+setup.py
+src/CryptoMax.py
+src/CryptoMax.egg-info/PKG-INFO
+src/CryptoMax.egg-info/SOURCES.txt
+src/CryptoMax.egg-info/dependency_links.txt
+src/CryptoMax.egg-info/requires.txt
+src/CryptoMax.egg-info/top_level.txt
