@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+TouchPortalAPI/__init__.py
+TouchPortal_API.egg-info/PKG-INFO
+TouchPortal_API.egg-info/SOURCES.txt
+TouchPortal_API.egg-info/dependency_links.txt
+TouchPortal_API.egg-info/requires.txt
+TouchPortal_API.egg-info/top_level.txt
