@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flit
+Version: 3.2.0
+Summary: A simple packaging tool for simple packages.
+Home-page: None
+Author: None
+Author-email: Thomas Kluyver <thomas@kluyver.me.uk>
