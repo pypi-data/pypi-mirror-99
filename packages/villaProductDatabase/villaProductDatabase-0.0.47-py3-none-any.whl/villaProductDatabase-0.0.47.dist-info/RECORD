@@ -1,0 +1,16 @@
+villaProductDatabase/None.py,sha256=RjzCYWFC0NaxX_RvhZsZvcm_4_BlgLyWiDAQl7tcTe4,1742
+villaProductDatabase/__init__.py,sha256=OkbXUm6WCcFd54358Y0HZk3Aq5hLc0sK6xgxJ6RmT5M,23
+villaProductDatabase/_nbdev.py,sha256=YwFQiN0SBA5552C8FQ2JZobxijI6qQ7o71mEpB3hhio,2765
+villaProductDatabase/database.py,sha256=CbzcvJ_H_1rPWybqG49xX0TcO7rNMNPlcvogLAr8DzE,7589
+villaProductDatabase/helper.py,sha256=4H_WEYoAghY56f_pq8Px49EemKA3894k1687HLj5brc,1348
+villaProductDatabase/helpers.py,sha256=71wRGvpa535iyTFE-CGQMZfVcxkbhBxcD6G3q6_C2Vc,2407
+villaProductDatabase/query.py,sha256=_kmYDqL6FCV0CiFNbLWWp87N8PJ945ghIxntRkWwVAg,2322
+villaProductDatabase/s3.py,sha256=X3I-OFBX8vfSOYYVQsAz5ey_5dp5gpHVUOkIFols_e0,4134
+villaProductDatabase/schema.py,sha256=4TGrz5kqfYGjWwig6VZb6GZiG3IAD_rMRJirGqMiOes,3098
+villaProductDatabase/update.py,sha256=ZuUELfC73qCd4hkb0AyOpYXwa2hazXWdjQ1iSU9cmSQ,7306
+villaProductDatabase-0.0.47.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+villaProductDatabase-0.0.47.dist-info/METADATA,sha256=jFDaX12ux3rd8LVUAXhxqiqWTQCcdI-Cf0trJLh7vRI,6793
+villaProductDatabase-0.0.47.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+villaProductDatabase-0.0.47.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+villaProductDatabase-0.0.47.dist-info/top_level.txt,sha256=aWaLT97tdm4bObBM9ukQZZrJXeKOlgKIiMzEWX2JjYw,21
+villaProductDatabase-0.0.47.dist-info/RECORD,,
