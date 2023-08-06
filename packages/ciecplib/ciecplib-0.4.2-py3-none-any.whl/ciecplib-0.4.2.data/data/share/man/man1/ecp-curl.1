@@ -1,0 +1,62 @@
+.TH ecp-curl "1" Manual
+.SH NAME
+ecp-curl \- transfer a url using saml/ecp authentication
+.SH SYNOPSIS
+.B ecp-curl
+[-i IDENTITY_PROVIDER] [-k] [-u USERNAME] [-h] [-l] [-V] [-c FILE] [-d] [-o FILE] [-s] url
+.SH DESCRIPTION
+ecp\-curl attemps to use existing cookies for the target domain
+and prompts for authorisation information if required.
+Persistent cookies acquired during transactions are automatically
+recorded in the cookie file, but session cookies are discarded (unless
+\-\-store\-session\-cookies is given).
+
+Currently only HTTP GET requests are supported (patches welcome!).
+.SH OPTIONS
+.TP
+\fBurl\fR
+the URL to transfer
+
+.TP
+\fB\-i\fR \fI\,IDENTITY_PROVIDER\/\fR, \fB\-\-identity\-provider\fR \fI\,IDENTITY_PROVIDER\/\fR
+name of institution providing the identity (e.g. 'Cardiff University'), or domain name of IdP host (e.g. idp.cf.ac.uk), see \-\-list\-idps for a list of Identity Provider (IdPs) and their IdP URL. Shortened institution names (e.g. 'Cardiff') can be given as long as they uniquely match a full institution name known by CILogon
+
+.TP
+\fB\-k\fR, \fB\-\-kerberos\fR
+enable kerberos negotiation
+
+.TP
+\fB\-u\fR \fI\,USERNAME\/\fR, \fB\-\-username\fR \fI\,USERNAME\/\fR
+authentication username, will be prompted for if not given and not using \-\-kerberos
+
+.TP
+\fB\-c\fR FILE, \fB\-\-cookiefile\fR FILE
+cookie file to use
+
+.TP
+\fB\-d\fR, \fB\-\-debug\fR
+write debug output (uses both stderr and stdout)
+
+.TP
+\fB\-o\fR FILE, \fB\-\-output\fR FILE
+write to FILE instead of stdout
+
+.TP
+\fB\-s\fR, \fB\-\-store\-session\-cookies\fR
+store session cookies in the cookie file
+
+.TP
+\fB\-l\fR, \fB\-\-list\-idps\fR
+show IdP names and URLs and exit
+
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+show program's version number and exit
+
+.SH AUTHORS
+.B ciecplib
+was written by Duncan Macleod <duncan.macleod@ligo.org>.
+.SH DISTRIBUTION
+The latest version of ciecplib may be downloaded from
+.UR https://pypi.org/project/ciecplib
+.UE
