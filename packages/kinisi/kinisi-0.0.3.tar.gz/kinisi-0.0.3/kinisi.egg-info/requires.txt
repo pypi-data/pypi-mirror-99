@@ -1,0 +1,12 @@
+numpy
+pandas
+statsmodels
+matplotlib
+scikit-learn
+scipy
+emcee
+tqdm
+uncertainties
+dynesty
+uravu>=1.2.4
+periodictable
