@@ -1,0 +1,3 @@
+[console_scripts]
+ghat = ghat.__main__:main
+
