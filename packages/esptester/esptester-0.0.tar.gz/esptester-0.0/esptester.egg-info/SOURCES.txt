@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+esptester/__init__.py
+esptester.egg-info/PKG-INFO
+esptester.egg-info/SOURCES.txt
+esptester.egg-info/dependency_links.txt
+esptester.egg-info/not-zip-safe
+esptester.egg-info/top_level.txt
