@@ -1,0 +1,13 @@
+pyphrasy/README.md,sha256=T2J91iF1j4G8Te7Rgn3ayJMUNUonM_W9zc7Caa9aMlM,2742
+pyphrasy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyphrasy/app.py,sha256=BZw8Lm1ssx-k-QHlrpthaNYIOF12e6nY-_M94cVFcLU,1265
+pyphrasy/inflect.py,sha256=yLfzdqyoZuymxnsPpeCSp4UsvHlO18IDAelQcpy4quY,6790
+pyphrasy/test.py,sha256=w-qIn6nuRtzB7BaOJh9rWUoY3qX_F_JuExJGg8kr2IU,7718
+pyphrasy/static/css/bootstrap.min.css,sha256=EyuK0jZVoDZ9q-ROskkepKCcwS-GY724ehwPc8nlx_o,36290
+pyphrasy/static/css/main.css,sha256=BMILJ9D3bii-p3e3GzPqTTkHZZwIiYnv4LM1J3jFkLM,261
+pyphrasy/static/js/main.js,sha256=v5ktAMuTbr9mFKp4oqG26nkpVo0mGyv_ctxr5eHJIOM,2135
+pyphrasy/templates/index.html,sha256=zkVtqP0tvx96-AjgeZR6eiGT_oqsY2PqkUZHyqC7_NY,3714
+pyphrasy-0.1.dist-info/METADATA,sha256=OMyKPCjsYVGjQXDrhwmK3C8hnLZQGDBVJ7ocxMJL5aI,3846
+pyphrasy-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyphrasy-0.1.dist-info/top_level.txt,sha256=wn23FQvcmpvfqGaXZOBo3wMRKiG21KCtLOgOuMEAxMU,9
+pyphrasy-0.1.dist-info/RECORD,,
