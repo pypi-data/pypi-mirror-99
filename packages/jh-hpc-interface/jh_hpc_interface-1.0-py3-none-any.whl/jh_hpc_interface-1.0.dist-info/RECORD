@@ -1,0 +1,10 @@
+jh_hpc_interface/__init__.py,sha256=fotMDkbDqE1U51qjvXSQRCMHwO67Gz3CWM-wcEz2FFM,120
+jh_hpc_interface/jh_environment.py,sha256=8pC9qQ4gLOq6W_1MviEUkiiCbLq1R_9mGKqzhTrySQ4,5099
+jh_hpc_interface/jh_interface.py,sha256=MDdLxL29xM061xpDPhBUY6ZhVY6rDXyo0KMAnyqSSL0,1926
+jh_hpc_interface/config/jh_config.ini,sha256=PamSJ_XcSrfgQ_XFQNjmp8qYuBB7W7o0--KRXPwLk9Q,1710
+jh_hpc_interface-1.0.data/scripts/jh_wrapper,sha256=ErOTz7CYGYX7vKQ86WhinhiUPXjXeaX3W-khNinODmc,3531
+jh_hpc_interface-1.0.dist-info/LICENSE,sha256=RL0FEoyNZ5LE3njYVEnv7PK52ZbfvxLtGCIsLFvrOF4,1096
+jh_hpc_interface-1.0.dist-info/METADATA,sha256=pQO0SDQ69crSxSnUciOtogRAjN1UXRX-VxT4zK2uaqg,10188
+jh_hpc_interface-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jh_hpc_interface-1.0.dist-info/top_level.txt,sha256=qMo06F2AxNui9ERwk2SgeaJRLu_sABqWUDI2adPuDS4,17
+jh_hpc_interface-1.0.dist-info/RECORD,,
