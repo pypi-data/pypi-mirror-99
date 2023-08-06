@@ -1,0 +1,10 @@
+my_pack/__init__.py,sha256=d-kW5mLklmj2wp1cYfVdCiodi7CS2mKRqWWSaw69pYM,54
+my_pack/gcd.py,sha256=47vxdvU4PoMhxLKJsdI1b2CBby007WQVxTI7yeudBY8,298
+my_pack/read_file.py,sha256=NvJ0Oy4eCd5j4bnU_n4lUO9I_UIwHNwjOAI6jjtyafY,291
+my_pack/traffic_lights.py,sha256=UG78hdxtE0PMc4HLUh_Or2cyWt6vhRgoRQaMAjTZuwY,368
+my_pack/xor.py,sha256=YjdjMhNhN2ndOYJLMp5MzS95OLbqvKozNyXftjy1PRY,343
+my_pack_Ilya_Kryukov-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+my_pack_Ilya_Kryukov-0.0.1.dist-info/METADATA,sha256=2c8iCqPTrSjAdYAS1b4bsDI_tFQH7dIRzjJZmV4zT4o,676
+my_pack_Ilya_Kryukov-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+my_pack_Ilya_Kryukov-0.0.1.dist-info/top_level.txt,sha256=h9SUHvcf2gMse-X_nMqRvfChxLp5cnpaInUuShTBaYA,8
+my_pack_Ilya_Kryukov-0.0.1.dist-info/RECORD,,
