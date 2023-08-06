@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: synonym_finder
+Version: 0.0.1
+Summary: This package consists of synonym finder class 
+Home-page: https://github.com/AlouiAmine/Synonym-Finder
+Author: Aloui Amine
+Author-email: aloui@eurecom.fr
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
