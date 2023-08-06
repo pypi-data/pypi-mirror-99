@@ -1,0 +1,9 @@
+Pillow
+numpy
+seaborn
+matplotlib
+
+[tests]
+pytest
+pytest-cov
+coverage
