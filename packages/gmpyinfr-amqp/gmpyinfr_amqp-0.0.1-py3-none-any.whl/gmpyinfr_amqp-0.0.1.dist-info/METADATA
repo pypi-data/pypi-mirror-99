@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gmpyinfr-amqp
+Version: 0.0.1
+Summary: Infraestrutura amqp python de uma equipe de Ciência de Dados
+Home-page: UNKNOWN
+Author: Alex Newman
+Author-email: a.newmanvs@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pika (>=1.2)
+
+UNKNOWN
+
+
