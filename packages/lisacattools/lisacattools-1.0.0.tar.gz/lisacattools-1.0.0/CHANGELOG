@@ -1,0 +1,103 @@
+Changelog
+=========
+
+
+(unreleased)
+------------
+- Bumped version number to 1.0.0! [Tyson Littenberg]
+- Update to docs. [Tyson Littenberg]
+- A few more typos. [Tyson Littenberg]
+- Renaming *source_sample to *source_samples. [Tyson Littenberg]
+- Fixed typo. [Tyson Littenberg]
+- Update documentation describng GWcatalog(s) tools. [Tyson Littenberg]
+- Update README.md. [Tyson Littenberg]
+- Update to ucb parameter tables example. [Tyson Littenberg]
+- Merge pull request #8 from J-Christophe/main. [Tyson Littenberg]
+
+  Fix the bug related to the cache
+- Merge remote-tracking branch 'upstream/main' into main. [Jean-
+  Christophe Malapert]
+- Update gallery. [Tyson Littenberg]
+- Expanding source table example to demo GWCatalogs. [Tyson Littenberg]
+- Merge pull request #7 from J-Christophe/main. [Tyson Littenberg]
+
+  Add extra_directories option to load catalogs
+- Fix the bug related to cache. [Jean-Christophe Malapert]
+- Add extra_directories option to load catalogs Add tests for plugin
+  creation Add documentation. [Jean-Christophe Malapert]
+- Merge pull request #6 from J-Christophe/main. [Tyson Littenberg]
+
+  Rename LISA to MBH
+- Cleaning. [Jean-Christophe Malapert]
+- Merge branch 'main' of https://github.com/J-Christophe/lisacattools
+  into main. [Jean-Christophe Malapert]
+- Rename the enumerate LISA to MBH. [Jean-Christophe Malapert]
+- Merge pull request #5 from J-Christophe/main. [Tyson Littenberg]
+
+  Reducing IO (simple cache system) and tasks for package release
+- Merge branch 'main' into main. [Tyson Littenberg]
+- Fix galactic coordinate examples. [Tyson Littenberg]
+- Fix typo. [Jean-Christophe Malapert]
+- Merge remote-tracking branch 'upstream/main' into main. [Jean-
+  Christophe Malapert]
+- Update to webpage? [Tyson Littenberg]
+- Trying workflow after clean clone. [Tyson Littenberg]
+- Merge pull request #4 from J-Christophe/main. [Tyson Littenberg]
+
+  Fix logger and performances for tests
+- Add tasks to release the pypi package on both test and prod plateform.
+  [Jean-Christophe Malapert]
+- Add cache system on the UCB plugin to reduce the IO. [Jean-Christophe
+  Malapert]
+- Merge remote-tracking branch 'upstream/main' into main. [Jean-
+  Christophe Malapert]
+- Trying to fix webpage. [Tyson Littenberg]
+- Learning to use the makefile :) [Tyson Littenberg]
+- Add tutorial/data in .gitignore. [Jean-Christophe Malapert]
+- Remove old script. [Jean-Christophe Malapert]
+- Merge remote-tracking branch 'upstream/main' into main. [Jean-
+  Christophe Malapert]
+- Adding time-evolving posteriors to ucb example. [Tyson Littenberg]
+- Merge pull request #3 from J-Christophe/main. [Tyson Littenberg]
+
+  Refactoring
+- Add reference to gh-pages. [Jean-Christophe Malapert]
+- Clean up. [Jean-Christophe Malapert]
+- Avoid to access multiple time to the same file => improve IO
+  performances. [Jean-Christophe Malapert]
+- Fix problem with logger. [Jean-Christophe Malapert]
+- Do not use root logger but the module one. [Jean-Christophe Malapert]
+- Update .gitignore. [Jean-Christophe Malapert]
+- Clean up. [Jean-Christophe Malapert]
+- Clean up. [Jean-Christophe Malapert]
+- Reformatting. [Jean-Christophe Malapert]
+- Merge branch 'refactoring' of
+  https://github.com/J-Christophe/lisacattools into refactoring. [Jean-
+  Christophe Malapert]
+- Fix numpy warnings. [Jean-Christophe Malapert]
+- Fix numpy warnings. [Jean-Christophe Malapert]
+- Remove push all from Makefile. [Jean-Christophe Malapert]
+- Improve makefile and doc generation. [Jean-Christophe Malapert]
+- Add submodule for github. [Jean-Christophe Malapert]
+- Add directory for gh-pages. [Jean-Christophe Malapert]
+- Update .gitignore. [Jean-Christophe Malapert]
+- Update docs with gallery, coverage report and tests report. [Jean-
+  Christophe Malapert]
+- Add tests. [Jean-Christophe Malapert]
+- Refactor the code to take into account the different structures of the
+  file formats. Using a plugin approach. [Jean-Christophe Malapert]
+- Add log configuration in the package during the distribution to avoid
+  warnings. [Jean-Christophe Malapert]
+- Add dependencies in setup.py. [Jean-Christophe Malapert]
+- Change requirements to requirements.txt. [Jean-Christophe Malapert]
+- Add licence in the header of each python file. [Jean-Christophe
+  Malapert]
+- Refactoring. [Jean-Christophe Malapert]
+- Adding chirp mass function. [Tyson Littenberg]
+- Cleanup. [Tyson Littenberg]
+- Adding docs. [Tyson Littenberg]
+- Adding __init__.py. [Tyson Littenberg]
+- Adding source code to repo. [Tyson Littenberg]
+- Initial commit. [Tyson Littenberg]
+
+
