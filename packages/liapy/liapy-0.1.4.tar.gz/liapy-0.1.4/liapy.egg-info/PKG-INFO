@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: liapy
+Version: 0.1.4
+Summary: Software lock-in amplifier written in python
+Home-page: https://github.com/edmundsj/liapy
+Author: Jordan Edmunds
+Author-email: edmundsj@uci.edu
+License: MIT
+Description: LockInAmplifier - A python-based Lock-in Amplifier
+        =====================================================
+        I wrote this to be a python-based lock-in amplifier for some measurements I was
+        doing in the course of my Ph.D. at UC Berkeley. Documentation, including an
+        API, can be found [here](https://edmundsj.github.io/LockInAmplifier/)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
