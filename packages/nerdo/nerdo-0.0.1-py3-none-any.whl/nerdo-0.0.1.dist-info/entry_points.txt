@@ -1,0 +1,3 @@
+[console_scripts]
+nerdo = nerdo.main:main
+
