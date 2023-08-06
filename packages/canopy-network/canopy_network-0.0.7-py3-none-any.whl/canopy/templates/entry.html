@@ -1,0 +1,44 @@
+$def with (entry)
+
+<article class=h-entry>
+$ type = discover_post_type(entry)
+$if type == "note":
+    $var title: $entry["content"]
+    <p><big class=p-content>$entry["content"]</big></p>
+$elif type == "like":
+    $ like = entry["like-of"][0]
+    $var title: Liked $like["name"]
+    <p class=p-name><big class="h-cite u-like-of">Liked <a class="p-name u-url"
+    href=$like["url"]>$like["name"]</a></big></p>
+$elif type == "bookmark":
+    $ bookmark = entry["bookmark-of"][0]
+    $var title: Bookmarked $bookmark["name"]
+    <p><big>Bookmarked <a class=u-bookmark-of
+    href=$bookmark["url"]>$bookmark["name"]</a></big></p>
+$elif type == "identification":
+    $ identification = entry["identification-of"][0]
+    $var title: Identified $identification["name"]
+    <p><big>Identified <a class=u-identification-of
+    href=$identification["url"]>$identification["name"]</a></big></p>
+$elif type == "follow":
+    $ follow = entry["follow-of"][0]
+    $var title: Followed $follow["name"]
+    <p><big>Followed <a class=u-follow-of
+    href=$follow["url"]>$follow["name"]</a></big></p>
+$elif type == "rsvp":
+    $ event = entry["in-reply-to"][0]
+    $var title: RSVP'd $entry["rsvp"] to $event["name"]
+    <p><big>RSVP'd <code>$entry["rsvp"]</code> <a class=u-bookmark-of
+    href=$event["url"]>$event["name"]</a></big></p>
+$ a = entry["author"]
+<p class="p-author h-card"><a class="u-url p-name"
+href=$a["url"][0]>$a["name"]</a></p>
+<p>
+<small><a class=u-url href=$entry["url"]><time class=dt-published
+datetime="$entry['published'].isoformat()">$entry["published"].diff_for_humans()</time></a></small></p>
+</article>
+
+<style>
+big.p-name {
+    font-size: 2em; }
+</style>

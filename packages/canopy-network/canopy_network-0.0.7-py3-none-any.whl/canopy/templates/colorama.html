@@ -1,0 +1,31 @@
+$def with ()
+$var title: Colorama
+
+<input type=range min=0 max=255 value=0 id=colorRed>
+<input type=range min=0 max=255 value=0 id=colorGreen>
+<input type=range min=0 max=255 value=0 id=colorBlue>
+
+$def head():
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      root('/colorama', { color: [0, 0, 0] }, {
+        colorRed: '/color/0',
+        colorBlue: '/color/1',
+        colorGreen: '/color/2'
+      }, (data) => {
+        console.log(data)
+        document.querySelector('body').style.backgroundImage =
+          `linear-gradient(135deg, black, rgb($${data.color[0]},
+                                              $${data.color[1]},
+                                              $${data.color[2]}))`
+      })
+    })
+    </script>
+    
+    <style>
+    html, body {
+      height: 100%; }
+    body {
+      overflow: hidden; }
+    </style>
+$var head = head

@@ -1,0 +1,22 @@
+$def with (now)
+$var title: Now
+
+<ul id=shared_browsing>
+$for url in now.get("browsing", []):
+    <li><a href=$url>$url</a></li>
+</ul>
+
+$def head():
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      root('/now', {
+        shared_browsing: '/browsing',
+      }, (data) => {
+        console.log(data)
+      })
+    })
+    </script>
+
+    <style>
+    </style>
+$var head = head

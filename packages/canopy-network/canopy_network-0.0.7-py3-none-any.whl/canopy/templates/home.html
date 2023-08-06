@@ -1,0 +1,57 @@
+$def with (card, entries)
+$var title: $card["name"]
+
+<h1 class=h-card><a class="u-url u-uid p-name"
+href=/>$card["name"]</a></h1>
+
+<article class=h-feed>
+
+<div id=recent>
+$for entry in entries:
+    $ e = entry["resource"]
+    $ type = discover_post_type(e)
+    <div class=h-entry>
+    $if type == "note":
+        <p><big class=p-content>$e["content"]</big></p>
+    $elif type == "like":
+        $ like = e["like-of"][0]
+        <p><big>Liked <a class=u-like-of
+        href=$like["url"]>$like["name"]</a></big></p>
+    $elif type == "bookmark":
+        $ bookmark = e["bookmark-of"][0]
+        <p><big>Bookmarked <a class=u-bookmark-of
+        href=$bookmark["url"]>$bookmark["name"]</a></big></p>
+    $elif type == "identification":
+        $ identification = e["identification-of"][0]
+        <p><big>Identified <a class=u-identification-of
+        href=$identification["url"]>$identification["name"]</a></big></p>
+    $elif type == "follow":
+        $ follow = e["follow-of"][0]
+        <p><big>Followed <a class=u-follow-of
+        href=$follow["url"]>$follow["name"]</a></big></p>
+    $elif type == "rsvp":
+        $ event = e["in-reply-to"][0]
+        <p><big>RSVP'd <code>$e["rsvp"]</code> <a class=u-in-reply-to
+        href=$event["url"]>$event["name"]</a></big></p>
+    <p><small><a class="dt-published u-url"
+    href=$e["url"]>$e["published"].diff_for_humans()</a></small></p>
+    </div>
+</div>
+
+</article>
+
+$if tx.user.is_owner:
+    <p>Hello $card["name"] &mdash; <a href=/about>update your profile</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // TODO root('/', { entries: [] }, {}, (data) => {
+  // TODO   // TODO iterate through entries, add
+  // TODO   var recent = document.querySelector('#recent')
+  // TODO   var entry = document.createElement('div')
+  // TODO   entry.classList.add('h-entry')
+  // TODO   entry.innerHTML = `<p><big class=p-name>$${body.name}</big></p>`
+  // TODO   recent.insertBefore(entry, recent.firstChild)
+  // TODO })
+})
+</script>
