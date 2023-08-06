@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: odoo10-addons-shopinvader-odoo-shopinvader-payment
+Version: 10.0.20190925.0
+Summary: Meta package for shopinvader-odoo-shopinvader-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-invader-payment
+Requires-Dist: odoo10-addon-invader-payment-manual
+Requires-Dist: odoo10-addon-invader-payment-sips
+Requires-Dist: odoo10-addon-invader-payment-stripe
+Requires-Dist: odoo10-addon-invader-sale-payment
+Requires-Dist: odoo10-addon-shopinvader-payment
+Requires-Dist: odoo10-addon-shopinvader-payment-manual
+Requires-Dist: odoo10-addon-shopinvader-payment-sips
+Requires-Dist: odoo10-addon-shopinvader-payment-stripe
+Requires-Dist: odoo10-addon-shopinvader-quotation-payment
+Requires-Dist: odoo10-addon-test-invader-payment
+Requires-Dist: odoo10-addon-test-shopinvader-payment
+
+UNKNOWN
+
+
