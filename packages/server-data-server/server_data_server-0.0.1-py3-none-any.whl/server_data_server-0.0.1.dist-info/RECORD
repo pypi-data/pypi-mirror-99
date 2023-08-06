@@ -1,0 +1,10 @@
+server_data_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+server_data_server/__main__.py,sha256=Ev0khc0QK3BuHQUHuFPxOyTmDPRu0974BINhyL4HZrQ,3092
+server_data_server/template/app.py,sha256=Xves3_JeQ8MfJckSMi6pEZWEavPjexe-lGm5vokOlaE,2055
+server_data_server/template/config.json,sha256=-cWigdlxHQgCDr9LIdNmfo-ElEg5dC17r4V0H0GlemE,326
+server_data_server/template/requirements.txt,sha256=Xnk6tE219chuPLURD51xIiNMLpP24dY3C_XctLE417A,12
+server_data_server-0.0.1.dist-info/METADATA,sha256=zBWjJmelRI3c7uMY9qCf__40GL_DWqimpKXTwGxlnzE,533
+server_data_server-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+server_data_server-0.0.1.dist-info/entry_points.txt,sha256=2h2eKgq5PFivPj7Iqd-LLD_rG3C2h5TJyLq3Li1qRmo,57
+server_data_server-0.0.1.dist-info/top_level.txt,sha256=GQhRCFJg9hgYGzDPR_8PJmSb910VBzdAptiMAYhMFBM,19
+server_data_server-0.0.1.dist-info/RECORD,,

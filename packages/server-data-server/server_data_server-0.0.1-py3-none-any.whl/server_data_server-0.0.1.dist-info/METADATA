@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: server-data-server
+Version: 0.0.1
+Summary: Server information server generation
+Home-page: https://github.com/VoIlAlex/server-data-server
+Author: Ilya Vouk
+Author-email: ilya.vouk@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Click (==7.0)
+Requires-Dist: Flask (==1.1.2)
+
+UNKNOWN
+
+
