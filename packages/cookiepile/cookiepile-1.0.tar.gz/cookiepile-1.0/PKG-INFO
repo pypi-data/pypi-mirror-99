@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cookiepile
+Version: 1.0
+Summary: Cookiepile is a new compiler program. It supports compiling almost anything. You can run python and shell commands, have a ToS page, an intro, and outro. Wiki page coming soon.
+Home-page: UNKNOWN
+Author: EnderC00kiez
+Author-email: EnderC00kiez@pm.me
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Installer,Compiler
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
