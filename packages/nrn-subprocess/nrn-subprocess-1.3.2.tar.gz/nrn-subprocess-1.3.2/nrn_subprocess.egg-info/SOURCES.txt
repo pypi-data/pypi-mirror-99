@@ -1,0 +1,9 @@
+README.md
+setup.py
+nrn_subprocess.egg-info/PKG-INFO
+nrn_subprocess.egg-info/SOURCES.txt
+nrn_subprocess.egg-info/dependency_links.txt
+nrn_subprocess.egg-info/requires.txt
+nrn_subprocess.egg-info/top_level.txt
+nrnsub/__init__.py
+nrnsub/_worker.py
