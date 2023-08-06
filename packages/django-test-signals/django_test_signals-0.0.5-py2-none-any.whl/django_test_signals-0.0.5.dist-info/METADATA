@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-test-signals
+Version: 0.0.5
+Summary: Django test case which helps to test Django signals.
+Home-page: https://github.com/zakamarek/django-test-signals
+Author: Zakamarek
+Author-email: Zakamarek.REMOVETHIS@gmail.AND.THIS.com
+License: MIT
+Platform: ALL
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: django (>=1.0)
+
+Django test case which helps to test Django signals.
+
+
