@@ -1,0 +1,4 @@
+[console_scripts]
+kcwi_masksky_ds9 = kcwidrp.scripts.kcwi_masksky_ds9:mainsmart_reduce_kcwi = kcwidrp.scripts.smart_reduce_kcwi:main
+reduce_kcwi = kcwidrp.scripts.reduce_kcwi:main
+
