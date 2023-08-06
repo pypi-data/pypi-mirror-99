@@ -1,0 +1,4 @@
+[console_scripts]
+tinc_mesh_install = tinc_mesh.setup:service_install
+tinc_mesh_uninstall = tinc_mesh.setup:service_uninstall
+

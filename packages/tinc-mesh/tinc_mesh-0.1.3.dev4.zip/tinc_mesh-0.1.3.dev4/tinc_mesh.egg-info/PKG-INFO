@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tinc-mesh
+Version: 0.1.3.dev4
+Summary: tinc mesh vpn
+Home-page: https://github.com/random-python/tinc_mesh
+Author: Andrei Pozolotin
+Author-email: andrei.pozolotin@gmail.com
+License: Apache-2
+Description: # tinc_mesh
+        
+        
+Keywords: tinc,mesh,systemd
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown; charset=UTF-8
