@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: lfstool
+Version: 0.1.1.dev0
+Summary: A serial utility to sync local folder to Espressif ESP8266 & ESP32 chips.
+Home-page: https://github.com/iotctl/lfstool
+Author: Pavel Sklenar (pajikos)
+Author-email: sklenar.pav@gmail.com
+License: GPLv2+
+Description: 
+        ==========
+        lfstool.py
+        ==========
+        A command line utility to communicate with the ROM bootloader in Espressif ESP8266 & ESP32 microcontrollers and syncing local folder with remote LittleFS partition.
+        
+        Internally it uses esptool when communicating with microcontrollers.
+        
+        The lfstool.py project is hosted on github: https://github.com/iotctl/lfstool
+        
+        Installation
+        ------------
+        
+        lfstool can be installed via pip:
+        
+          $ pip install --upgrade lfstool
+        
+        lfstool supports Python 3.5 or newer.
+        
+        lfstool supports both ESP8266 & ESP32.
+        
+        Usage
+        -----
+        
+        Please see the `Usage section of the README.md file <https://github.com/iotctl/lfstool#usage>`_.
+        
+        You can also get help information by running `lfstool.py --help`.
+        
+        Contributing
+        ------------
+        Please see the `CONTRIBUTING.md file on github <https://github.com/iotctl/lfstool/blob/master/CONTRIBUTING.md>`_.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

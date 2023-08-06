@@ -1,0 +1,8 @@
+README.md
+lfstool.py
+setup.py
+lfstool.egg-info/PKG-INFO
+lfstool.egg-info/SOURCES.txt
+lfstool.egg-info/dependency_links.txt
+lfstool.egg-info/requires.txt
+lfstool.egg-info/top_level.txt
