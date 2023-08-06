@@ -1,0 +1,14 @@
+chromedriver-autoinstaller
+comtypes
+html2text
+js2py
+keyboard
+markdown2
+opencv-python
+pygame
+pygame-gui
+pyttsx3
+pywin32
+requests
+selenium
+wheel
