@@ -1,0 +1,10 @@
+pelican/plugins/series/__init__.py,sha256=aT4AfU6kRbJTVQ0WA4UY8iZ8PArgTtBEjuGX62Cn1no,30
+pelican/plugins/series/conftest.py,sha256=nKzO4-zqSYQ8Lx4vmwtrbCiDXE8N0XBlpwM8DK0LZ-M,975
+pelican/plugins/series/series.py,sha256=kAYDY8gnXnPkHXViT7FcTczKJIBYesmJJy3QlikxfeU,2119
+pelican/plugins/series/test_data/series_article_1.md,sha256=jvIz3Obc6d0qXGNg406ko1R2BYTLpJRSg6RHr0BXTis,146
+pelican/plugins/series/test_data/series_article_2.md,sha256=9Npc9y2hcHLZwJ55tsQpcM2ACC2FTmA8S4F6uKzJo7k,146
+pelican/plugins/series/test_data/series_article_3.md,sha256=lDYSyy-yWeETxqnMyNsFLjZYe2WdeEOLQhmnqOScrc4,146
+pelican/plugins/series/test_series.py,sha256=BAvXk9465GCWvI4UeoM-M5lqEaiutQtw31G-E40c__4,1350
+pelican_series-2.0.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pelican_series-2.0.0.dist-info/METADATA,sha256=w5uAhaeuZqYfpBqURueCBzUTftWvpyHgrJ9kUA80PeM,4619
+pelican_series-2.0.0.dist-info/RECORD,,
