@@ -1,0 +1,8 @@
+README.md
+setup.py
+audio/__init__.py
+rest_python3_client.egg-info/PKG-INFO
+rest_python3_client.egg-info/SOURCES.txt
+rest_python3_client.egg-info/dependency_links.txt
+rest_python3_client.egg-info/requires.txt
+rest_python3_client.egg-info/top_level.txt
