@@ -1,0 +1,13 @@
+bandit
+black; python_version > '3.5'
+codecov
+flake8
+flake8-cognitive-complexity
+ipython
+mypy
+pylint
+pytest
+pytest-cov
+d8s-file_system==0.3.0
+d8s-strings==0.2.0
+bump2version
