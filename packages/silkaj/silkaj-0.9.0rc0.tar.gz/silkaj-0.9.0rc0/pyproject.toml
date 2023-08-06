@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "silkaj"
+version = "0.9.0rc"
+description = "Powerfull, lightweight, and multi-platform command line client written with Python for Duniter’s currencies: Ğ1 and Ğ1-Test."
+authors = ["Moul <moul@moul.re>"]
+maintainers = ["Moul <moul@moul.re>"]
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+homepage =  "https://silkaj.duniter.org"
+repository = "https://git.duniter.org/clients/python/silkaj"
+documentation = "https://git.duniter.org/clients/python/silkaj/tree/dev/doc"
+keywords = ["g1", "duniter", "cryptocurrency", "librecurrency", "RTM"]
+
+[tool.poetry.dependencies]
+python = "^3.6.8"
+duniterpy = "0.62.0"
+click = "^7.1.2"
+tabulate = "^0.8.7"
+texttable = "^1.6.3"
+pendulum = "^2.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+pre-commit = "^2.10.1"
+pytest = "^6.0"
+pytest-cov = "^2.7"
+pytest-asyncio = "^0.14.0"
+asynctest = "^0.13.0"
+coverage-badge = "^1.0"
+pytest-sugar = "^0.9.2"
+
+[tool.poetry.scripts]
+silkaj = "silkaj.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Natural Language :: English"
+]
