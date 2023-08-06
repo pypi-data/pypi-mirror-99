@@ -1,0 +1,12 @@
+build>=0.3.0
+
+[all]
+
+[docs]
+sphinx
+sphinx-automodapi
+
+[test]
+pytest
+pytest-doctestplus
+pytest-cov
