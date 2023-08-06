@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: myt
+Version: 0.2.0
+Summary: Time, zones
+Home-page: https://github.com/datadavev/t
+License: Apache 2.0
+Keywords: time,timezones,utility
+Author: datadavev
+Author-email: 605409+datadavev@users.noreply.github.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: dateparser (>=1.0.0,<2.0.0)
+Requires-Dist: pytz (>=2021.1,<2022.0)
+Project-URL: Repository, https://github.com/datadavev/t
