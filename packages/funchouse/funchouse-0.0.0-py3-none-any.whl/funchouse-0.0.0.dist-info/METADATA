@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: funchouse
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: dagster (==0.10.2)
+Requires-Dist: dagit (==0.10.2)
+Requires-Dist: pytest
+
+UNKNOWN
+
+
