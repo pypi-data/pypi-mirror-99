@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tular
+Version: 0.0
+Summary: tular
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: UNKNOWN
+Keywords: web pyramid pylons
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Dist: clld
+Requires-Dist: clld-cognacy-plugin
+Requires-Dist: clld-glottologfamily-plugin (>=4.0)
+Requires-Dist: clldmpg
+Requires-Dist: conllu
+Requires-Dist: pyglottolog
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: waitress ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage (>=4.2) ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: pytest-clld ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest (>=5.4) ; extra == 'test'
+Requires-Dist: selenium ; extra == 'test'
+Requires-Dist: zope.component (>=3.11.0) ; extra == 'test'
+
+UNKNOWN
+
+
