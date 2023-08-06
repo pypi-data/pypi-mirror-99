@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: lbk-cli
+Version: 0.2.0
+Summary: Terminal client for Logbook
+Home-page: https://github.com/sonnvest/lbk-client
+Author: Marcel Härle
+Author-email: marcel.haerle@sonnvest.de
+License: MIT
+Description: A command line interface for Logbook.
+        
+Keywords: Logbook CLI
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Documentation
