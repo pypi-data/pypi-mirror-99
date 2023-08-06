@@ -1,0 +1,4 @@
+[console_scripts]
+one=one:main
+two=two:main
+
