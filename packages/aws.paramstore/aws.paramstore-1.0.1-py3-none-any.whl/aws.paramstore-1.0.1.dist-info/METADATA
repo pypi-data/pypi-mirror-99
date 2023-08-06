@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aws.paramstore
+Version: 1.0.1
+Summary: Parameter Store class that allows dict-like access.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: boto3 (==1.17.33)
+
+UNKNOWN
+
+
