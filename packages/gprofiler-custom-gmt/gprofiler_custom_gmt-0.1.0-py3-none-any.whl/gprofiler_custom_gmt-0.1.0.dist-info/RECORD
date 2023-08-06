@@ -1,0 +1,6 @@
+gprofiler_custom_gmt/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+gprofiler_custom_gmt/main.py,sha256=tDqLqz1CGHuLSvHguZRpcVanqTIgOOsQGNJJ7B2TT_s,1953
+gprofiler_custom_gmt/test.gmt,sha256=3cd0kkZKzZ37Yw_ocA4bmmg21xY5r7EUu_dcLkA72q4,35
+gprofiler_custom_gmt-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+gprofiler_custom_gmt-0.1.0.dist-info/METADATA,sha256=z7B8-r13ZEcY4PRD7PfUBSGoFuclVHuF5dxgn3L5GlE,449
+gprofiler_custom_gmt-0.1.0.dist-info/RECORD,,
