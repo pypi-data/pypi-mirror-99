@@ -1,0 +1,28 @@
+#  Configuration file for tpRigToolkits-core
+
+libs:]
+  - datalibrary
+  - controlrig
+  - ziva
+
+tools:
+  - namemanager
+  - renamer
+  - datalibrary
+  - jointorient
+  - controlrig
+  - symmesh
+  - rigtoolbox
+  - rigscript
+  # - rigbuilder
+  - rignode
+  - spaceswitcher
+  - skeletoncreator
+  - jointfacialrig
+  - interpolateit
+  - musclespline
+#  - puppeteer
+  - animpicker
+  - weightseditor
+  - morphretarget
+  - rigio
