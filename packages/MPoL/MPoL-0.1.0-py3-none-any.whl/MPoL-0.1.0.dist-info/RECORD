@@ -1,0 +1,16 @@
+mpol/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+mpol/connectors.py,sha256=Rjol2aIrI6vbfwUfRpAJ5waAbLOrM0KmaNoldnbm8SQ,5072
+mpol/constants.py,sha256=1xXKWKD_en4euYNX322ZZUCNJ7xx3oWNPi2Z263s0Vc,276
+mpol/coordinates.py,sha256=MEhQGqwz3PzI1zn3VC7SJ-GPNt3_RPHjEB5le3TR_j4,9633
+mpol/datasets.py,sha256=k8huWZchK4y5PnpBvvKDc7I21-N6n1hdzocm9-g5q14,6860
+mpol/gridding.py,sha256=nK1-D8bWvnOTV3K6VnoqTtJU8U7MWCVMLN147RzNNjI,20909
+mpol/images.py,sha256=eshbinuS8b1AKTwpX6_dfIC0TZCxScxVm1w49I4trCE,26233
+mpol/losses.py,sha256=PB70N7hKGb5v2KiliV5lWZBUwI5QVYm9iEpYeB4ewKo,9857
+mpol/precomposed.py,sha256=-onfA5U7eTYufxxn9Zux-iDJfJnL6RF7Mj0HBFjnNkg,2707
+mpol/spheroidal_gridding.py,sha256=lDHmxtl2UMmx3BdrzR7ZVRaKomxbOqVCUfR4f_yV6OM,21694
+mpol/utils.py,sha256=OGCmzqrQI5siCHRB21dayL5iYFHPPZHol8zGjvgqhBQ,11042
+MPoL-0.1.0.dist-info/LICENSE,sha256=x7cRJXS0FQkssBqqF0YuXGfMh2GNS04cQb11NzjDv50,1068
+MPoL-0.1.0.dist-info/METADATA,sha256=cDCUEP9pr2aayL2ulVa_w0dnT15BjRNkYticEHKbCDU,3518
+MPoL-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+MPoL-0.1.0.dist-info/top_level.txt,sha256=VcItbJKqsM6P6KDXSpkMQUI4kvEbvrP3CA_GInrgq64,5
+MPoL-0.1.0.dist-info/RECORD,,
