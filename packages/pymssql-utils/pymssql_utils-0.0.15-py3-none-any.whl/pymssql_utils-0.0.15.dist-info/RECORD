@@ -1,0 +1,9 @@
+pymssqlutils/__init__.py,sha256=ndctskny_9n2zQf_7e2CoFqgNZyzdm3jBI--dtvhRnU,387
+pymssqlutils/databaseresult.py,sha256=RbSmsAiiRPutWL1NPhM6aSYmNVz_TJ9IYPp2rEsrcsM,5025
+pymssqlutils/helpers.py,sha256=PWjXyzT87UCyJu2jBNCxezNNfZiRC17zmxmXOo8ydSE,261
+pymssqlutils/methods.py,sha256=nFy7_I1QxipRuAe6thBvx_6P4w0Oo0GNKdIruT_CBGU,12504
+pymssql_utils-0.0.15.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+pymssql_utils-0.0.15.dist-info/METADATA,sha256=pXXRBsDDuDIZ_PXUGjaNZRwPwHi2_nulAr8IpRlAejw,11028
+pymssql_utils-0.0.15.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymssql_utils-0.0.15.dist-info/top_level.txt,sha256=qWNlcpsbF1VCTY3Bgl6DStEPTxz403cZRo-EZ_3Uok4,13
+pymssql_utils-0.0.15.dist-info/RECORD,,
