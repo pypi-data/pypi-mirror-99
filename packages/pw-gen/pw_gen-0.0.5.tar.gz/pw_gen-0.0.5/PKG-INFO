@@ -1,0 +1,72 @@
+Metadata-Version: 1.1
+Name: pw_gen
+Version: 0.0.5
+Summary: A library for generating secure passwords
+Home-page: https://github.com/lunAr-creator/password_generator
+Author: Soma Benfell
+Author-email: lunArcreator3@gmail.com
+License: MIT
+Description: A library for generating secure randomised passwords.
+        
+        
+        Usage (Simple password):
+        ------------------------
+        from pw_gen import Simple
+        
+        var = Simple(20)
+        
+        print(var.generate(3))
+        
+        print(var.return_result(1))
+        
+        Usage (Complex password):
+        -------------------------
+        from pw_gen import Complex
+        
+        var = Complex(20, 'both', True, False)
+        
+        print(var.generate(3))
+        
+        print(var.return_result(1))
+        
+        Usage (Memorable password):
+        ---------------------------
+        from pw_gen import Memorable
+        
+        var = Memorable(True)
+        
+        print(var.generate(3))
+        
+        print(var.return_result(1))
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (13/03/2021)
+        -------------------
+        - First Release
+        
+        0.0.2 (24/03/2021)
+        -------------------
+        - Second Release
+        
+        0.0.3 (25/03/2021)
+        -------------------
+        - Third Release
+        
+        0.0.4 (25/03/2021)
+        -------------------
+        - Fourth Release
+        
+        0.0.5 (25/03/2021)
+        -------------------
+        - Fifth Release
+        
+Keywords: password
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
