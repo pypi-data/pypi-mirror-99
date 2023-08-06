@@ -1,0 +1,14 @@
+include *.md
+recursive-include question_creation_distributable_app *.png
+recursive-include question_creation_distributable_app *.ico
+recursive-include question_creation_distributable_app *.txt
+recursive-include question_creation_distributable_app *.js
+recursive-include question_creation_distributable_app *.html
+recursive-include question_creation_distributable_app *.json
+recursive-include question_creation_distributable_app *.css
+recursive-include question_creation_distributable_app *.map
+recursive-include question_creation_distributable_app *.woff
+recursive-include question_creation_distributable_app *.woff2
+recursive-include question_creation_distributable_app *.ttf
+recursive-include question_creation_distributable_app *.ttf
+recursive-include question_creation_distributable_app *.sqlite3
