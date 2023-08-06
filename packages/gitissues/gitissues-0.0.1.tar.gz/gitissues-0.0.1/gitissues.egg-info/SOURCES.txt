@@ -1,0 +1,14 @@
+README.md
+setup.py
+gitissues/__init__.py
+gitissues/classes.py
+gitissues/cli.py
+gitissues/colour.py
+gitissues/utils.py
+gitissues.egg-info/PKG-INFO
+gitissues.egg-info/SOURCES.txt
+gitissues.egg-info/dependency_links.txt
+gitissues.egg-info/entry_points.txt
+gitissues.egg-info/not-zip-safe
+gitissues.egg-info/requires.txt
+gitissues.egg-info/top_level.txt

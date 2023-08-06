@@ -1,0 +1,8 @@
+click
+certifi
+urllib3
+chardet
+idna
+requests
+tabulate
+timeago
