@@ -1,0 +1,15 @@
+notebook
+pynwb
+h5py
+pyopenephys
+neo
+spikeextractors
+spiketoolkit
+spikesorters
+spikecomparison
+spikewidgets
+klusta
+klustakwik2
+herdingspikes
+nwb-conversion-tools
+nwb-web-gui

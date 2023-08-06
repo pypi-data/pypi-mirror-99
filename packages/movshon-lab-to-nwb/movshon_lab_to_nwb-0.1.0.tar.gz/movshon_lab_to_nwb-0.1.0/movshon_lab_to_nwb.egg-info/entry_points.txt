@@ -1,0 +1,3 @@
+[console_scripts]
+nwbgui-movshon = movshon_lab_to_nwb.cmd_line:cmd_line_shortcut
+
