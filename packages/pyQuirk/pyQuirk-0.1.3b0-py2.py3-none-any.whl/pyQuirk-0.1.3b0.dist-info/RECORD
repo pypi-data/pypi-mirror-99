@@ -1,0 +1,13 @@
+pyQuirk/__init__.py,sha256=PMcLvyM66e90JgtWMHsLfIS0-y5jnxW3XqtB4WO4eFY,1022
+pyQuirk/_version.py,sha256=MAiVflaqVM3jIBY7R5AoMfZi9hH1HjBt88fqmPDVdrk,385
+pyQuirk/quirk.py,sha256=GR_ib6jDrzZvQTauRicKXtu573vd6x8dkb8Z4v-8QZs,5353
+pyQuirk-0.1.3b0.data/data/etc/jupyter/nbconfig/notebook.d/pyQuirk.json,sha256=BfDJODgB-dY4O6qhojRGQJZWm063LrUaGJuCOMZhlp8,61
+pyQuirk-0.1.3b0.data/data/share/jupyter/nbextensions/pyquirk/a344cd889e9a479207a9caf74eed7f79.html,sha256=Qag6AfBUAhiH6lrk2SwEZaQkWfkrhvqpApEfefTNG7k,602485
+pyQuirk-0.1.3b0.data/data/share/jupyter/nbextensions/pyquirk/extension.js,sha256=-p8PYf_9Rx1RkY0BVft80E7RBUuwADF77I_G4-u-LGI,1192
+pyQuirk-0.1.3b0.data/data/share/jupyter/nbextensions/pyquirk/index.js,sha256=ha1Vq6nNzHdY_jXkzs8O-i_7nEaJt_hGKHLBhtBHB9Y,76873
+pyQuirk-0.1.3b0.data/data/share/jupyter/nbextensions/pyquirk/index.js.map,sha256=vMGCvM7nxrayS9945N7tMWsk2ygwt_kKOJr4JaizSv4,701501
+pyQuirk-0.1.3b0.dist-info/LICENSE,sha256=tfU-3NwH6Ag8PVkkdi0IWv2UTrKFFAXODW7jDy3zjvU,10821
+pyQuirk-0.1.3b0.dist-info/METADATA,sha256=KvXzDe8uaAbaEI2UEOliKtrfI6MgTS1VUJwKdP9IXXs,1012
+pyQuirk-0.1.3b0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pyQuirk-0.1.3b0.dist-info/top_level.txt,sha256=5ruFDq7vg2fO2T3L14SJm22of00qUBRinqafwn7MmpU,8
+pyQuirk-0.1.3b0.dist-info/RECORD,,
