@@ -1,0 +1,10 @@
+README.md
+setup.py
+xterm256_converter/__init__.py
+xterm256_converter/core.py
+xterm256_converter/message.py
+xterm256_converter.egg-info/PKG-INFO
+xterm256_converter.egg-info/SOURCES.txt
+xterm256_converter.egg-info/dependency_links.txt
+xterm256_converter.egg-info/entry_points.txt
+xterm256_converter.egg-info/top_level.txt

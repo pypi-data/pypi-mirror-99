@@ -1,0 +1,3 @@
+[console_scripts]
+xterm256-converter = xterm256_converter.core:main
+
