@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+./pyethswarm/__init__.py
+./pyethswarm/api.py
+./pyethswarm/common.py
+./pyethswarm/debug_api.py
+pyethswarm.egg-info/PKG-INFO
+pyethswarm.egg-info/SOURCES.txt
+pyethswarm.egg-info/dependency_links.txt
+pyethswarm.egg-info/requires.txt
+pyethswarm.egg-info/top_level.txt
