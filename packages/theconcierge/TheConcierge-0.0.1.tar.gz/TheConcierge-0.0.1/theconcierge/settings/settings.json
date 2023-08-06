@@ -1,0 +1,17 @@
+{
+    "system": {
+        "api_id": "YOUR API ID",
+        "api_hash": "YOUR API HASH",
+        "bot_token": "YOUR BOT TOKEN"
+    },
+    "handlers": {
+        "module": [
+            "handler_one",
+            "handler_two"
+        ]
+    },
+    "app": {
+        "command_char": "!",
+        "break_args": " "
+    }
+}

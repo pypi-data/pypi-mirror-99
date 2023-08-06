@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "TheConcierge"
+version = "0.0.1"
+description = "The Concierge allows you to create a simple project for the development of a ready-to-use Telegram Bot."
+authors = ["luigimalaguti <malaguti.luigi@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+keywords = ["theconcierge", "telegram", "bot", "async"]
+
+homepage = "https://github.com/luigimalaguti/TheConcierge"
+repository = "https://github.com/luigimalaguti/TheConcierge"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Telethon = "^1.21.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
