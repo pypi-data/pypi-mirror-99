@@ -1,0 +1,10 @@
+README.md
+setup.py
+aiogram_logging/__init__.py
+aiogram_logging/logger.py
+aiogram_logging/sender.py
+aiogram_logging.egg-info/PKG-INFO
+aiogram_logging.egg-info/SOURCES.txt
+aiogram_logging.egg-info/dependency_links.txt
+aiogram_logging.egg-info/requires.txt
+aiogram_logging.egg-info/top_level.txt

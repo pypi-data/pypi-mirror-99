@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: aiogram-logging
+Version: 0.0.1
+Summary: Simplifies sending logs from your bots to DB.
+Home-page: https://github.com/dkeysil/aiogram-logging
+Author: Dmitry Keysil
+Author-email: kl0opa.11@gmail.com
+License: MIT
+Description: # aiogram-logger
+        ---
+        ### Simplifies sending logs from your bots to DB.
+        ![example](https://i.imgur.com/gFfQDmD.png)
+        ---
+        ## Quick start with InfluxDB + Grafana
+        Install package from pip
+        ```
+        pip install aiogram_logging
+        ```
+        
+        Prepare InlfuxDB and Grafana with this [repo](https://github.com/DKeysil/influxdb-grafana-docker-compose).
+        
+        Import and create instances
+        ```python
+        from aiogram_logging import Logger, InfluxSender
+        
+        sender = InfluxSender(host='localhost',
+                              db='db-name',
+                              username='db-user',
+                              password='db-password')
+        logger = Logger(sender)
+        ```
+        
+        Create StatMiddleware to logging every incoming message
+        ```python
+        class StatMiddleware(BaseMiddleware):
+        
+            def __init__(self):
+                super(StatMiddleware, self).__init__()
+        
+            async def on_process_message(self, message: types.Message, data: dict):
+                await logger.write_logs(self._manager.bot.id, message, parse_text=True)
+        
+        
+        dp.middleware.setup(StatMiddleware())
+        ```
+        
+        Create dashboard by yourself or import from `grafana-dashboard.json`
+        
+        Yeah, you can connect several bots for one InfluxDB
+        ## TODO:
+        1. Explain how to manage logs from several bots in Grafana
+        2. Parse more different data
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
