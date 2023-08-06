@@ -1,0 +1,9 @@
+README.md
+setup.py
+docstr/__init__.py
+docstr/docstring.py
+docstr.egg-info/PKG-INFO
+docstr.egg-info/SOURCES.txt
+docstr.egg-info/dependency_links.txt
+docstr.egg-info/requires.txt
+docstr.egg-info/top_level.txt
