@@ -1,0 +1,8 @@
+README.md
+argdeco.py
+setup.py
+argdeco_josugoar.egg-info/PKG-INFO
+argdeco_josugoar.egg-info/SOURCES.txt
+argdeco_josugoar.egg-info/dependency_links.txt
+argdeco_josugoar.egg-info/requires.txt
+argdeco_josugoar.egg-info/top_level.txt
