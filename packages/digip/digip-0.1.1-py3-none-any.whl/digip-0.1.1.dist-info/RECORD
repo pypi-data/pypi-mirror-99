@@ -1,0 +1,9 @@
+digip/__init__.py,sha256=AkeyMNzYgruq8NlE9_Q_FJ_7YsG5H9A3NqZ5HWP1v7E,21
+digip/cie_1931_standard_colorimetric_observer.py,sha256=A4JvB42M4EMdw3uPbU0eeP97pOfM2NcvmvKwHZEMmmw,10976
+digip/digip.py,sha256=hyL_74EUhnOdcQgkz1AdbLHptsDJI9aX59aWnzlzavk,26128
+digip/srgb_gamut.py,sha256=79NKrPItPIHDi2EsiN7ZkjW-hkdrUHqoHi0suPID1XY,1407
+digip-0.1.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+digip-0.1.1.dist-info/METADATA,sha256=HBTKqPjmbptUghB_MitLnhoVBov9LzlLH9G2EJjPrxM,1309
+digip-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+digip-0.1.1.dist-info/top_level.txt,sha256=qRQU4gu_zNPgjVo1MlBdjoUUsOcBsLox0SOAuRqnoSA,6
+digip-0.1.1.dist-info/RECORD,,
