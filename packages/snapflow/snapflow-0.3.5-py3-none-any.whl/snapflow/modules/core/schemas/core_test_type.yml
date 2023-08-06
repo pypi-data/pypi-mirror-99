@@ -1,0 +1,22 @@
+name: CoreTestSchema
+version: 1
+description: All-purpose testing schema
+unique_on:
+  - k1
+  - k2
+updated_at_field_name: f4
+fields:
+  k1:
+    type: Integer
+    validators:
+      - NotNull
+  k2:
+    type: Integer
+  f1:
+    type: Text
+  f2:
+    type: Float
+  f3:
+    type: Text
+  f4:
+    type: DateTime
