@@ -1,0 +1,9 @@
+pytest
+docker
+adcm_client>=2020.02.11.12
+allure-pytest
+requests
+version_utils
+ifaddr
+retry
+deprecated
