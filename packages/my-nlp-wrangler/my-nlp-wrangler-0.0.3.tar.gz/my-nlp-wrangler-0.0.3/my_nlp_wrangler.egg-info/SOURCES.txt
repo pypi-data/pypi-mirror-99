@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+my_nlp_wrangler.egg-info/PKG-INFO
+my_nlp_wrangler.egg-info/SOURCES.txt
+my_nlp_wrangler.egg-info/dependency_links.txt
+my_nlp_wrangler.egg-info/not-zip-safe
+my_nlp_wrangler.egg-info/requires.txt
+my_nlp_wrangler.egg-info/top_level.txt
+mynlpwrangler/__init__.py
+mynlpwrangler/cleaner.py
+mynlpwrangler/tokenizer.py
