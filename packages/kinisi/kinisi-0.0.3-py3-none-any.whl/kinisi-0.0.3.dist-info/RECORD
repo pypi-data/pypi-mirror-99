@@ -1,0 +1,17 @@
+kinisi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinisi/analyze.py,sha256=N_OigewDruvN_tOwF7u-lLnK35Nj6vUfn0at8FruoNc,10205
+kinisi/arrhenius.py,sha256=SXmdC8_Tunzs9KlFbFj_c0C2jxWVe-3UMWWZR4ZJO2A,5018
+kinisi/diffusion.py,sha256=-fTJndN5qhgvV-HCS9L0soWKXgWmYYWrq9-mSmr_ifk,11462
+kinisi/parser.py,sha256=-WcANpPHQYasiWbvVhMSBsk0c1eKyfVQuDpDJOGk3LU,16960
+kinisi/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinisi/tests/test_arrhenius.py,sha256=Asa5wVBRRDjRKQiuk96RpAGEbm4JOqFga5nrgaGryCs,1997
+kinisi/tests/test_diffusion.py,sha256=SXSpTcixf9ZIZaDA_FJ7BXIlvw8T6QCWm4FDi5_6TlA,3807
+kinisi/tests/test_parser.py,sha256=Rxqt5Y3YTPVq-bDBxOMalS7KzKqGK3rJuj7vYtBnRRs,6072
+kinisi/tests/inputs/example_LAMMPS.data,sha256=H6qiqUPnPFZbslIYVHLudUB0JUH7Y633435MmFtzgBw,46919
+kinisi/tests/inputs/example_LAMMPS.dcd,sha256=qnejxvUT2aCQ7vXXaUYcY_MhJprrIWCY3jba8eOWMEA,630756
+kinisi/tests/inputs/example_XDATCAR.gz,sha256=zbEetPSQJ3c5_TD7ka-H0KmJVs4TktVsE4IlICd5c_I,842426
+kinisi-0.0.3.dist-info/LICENSE,sha256=OeUObkPYXrNnhmbXvayQp0hYsL2QMFruNYlHpdoqMUQ,1099
+kinisi-0.0.3.dist-info/METADATA,sha256=0FeYz2NgL9rcL_DtsCmpi6lCLW1rJTpnhrhWW2AlALg,1996
+kinisi-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kinisi-0.0.3.dist-info/top_level.txt,sha256=OgSaEQUFenc-bqNhx76Gr4L70LPaQlMlUolkBuJX018,7
+kinisi-0.0.3.dist-info/RECORD,,
