@@ -1,0 +1,8 @@
+README.md
+setup.py
+string_booster/__init__.py
+string_booster/string_booster.py
+string_booster_pack.egg-info/PKG-INFO
+string_booster_pack.egg-info/SOURCES.txt
+string_booster_pack.egg-info/dependency_links.txt
+string_booster_pack.egg-info/top_level.txt
