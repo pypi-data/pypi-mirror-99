@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_translator = simplebot_translator
+
