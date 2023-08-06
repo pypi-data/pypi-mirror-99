@@ -1,0 +1,9 @@
+django_s3_csv_2_sfdc/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+django_s3_csv_2_sfdc/classes.py,sha256=yT7M8IXEhFB9KobjMh3cvksm-RQxHo0G5nor1M2FU8M,5940
+django_s3_csv_2_sfdc/csv_helpers.py,sha256=91yhy6uKHYaca8_IB15BC914s7h2zmoE7qMCee3Alio,1243
+django_s3_csv_2_sfdc/s3_helpers.py,sha256=pbuHKXyDwilxVCF8eW9t6VffzENqRHk9leGK9oElV1Q,3367
+django_s3_csv_2_sfdc/sfdc_helpers.py,sha256=lCfU5eF49ctW3ENDc8faD2i6xV4_FPwKHhT-H85czJM,1441
+django_s3_csv_2_sfdc/utils.py,sha256=u0UmWPj6rkR1Wd9I8DZ6pqWDZNbwT5O03vblzjC4kjk,498
+django_s3_csv_2_sfdc-0.2.10.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_s3_csv_2_sfdc-0.2.10.dist-info/METADATA,sha256=TUql34YTSy7UANit0HczE9-fjW2pI-XvmKOk9ezOzY8,2221
+django_s3_csv_2_sfdc-0.2.10.dist-info/RECORD,,
