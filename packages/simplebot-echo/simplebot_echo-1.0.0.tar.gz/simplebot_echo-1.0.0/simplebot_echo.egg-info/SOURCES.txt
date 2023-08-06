@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+simplebot_echo.py
+simplebot_echo.egg-info/PKG-INFO
+simplebot_echo.egg-info/SOURCES.txt
+simplebot_echo.egg-info/dependency_links.txt
+simplebot_echo.egg-info/entry_points.txt
+simplebot_echo.egg-info/not-zip-safe
+simplebot_echo.egg-info/requires.txt
+simplebot_echo.egg-info/top_level.txt
