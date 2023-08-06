@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: AshaLib
+Version: 0.0.1
+Summary: A small package to work with prime numbers
+Home-page: https://github.com/maryann2013/AshaLib
+Author: Asha Shiju
+Author-email: ashaplackal@gmail.com
+License: UNKNOWN
+Description: # AshaLib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
