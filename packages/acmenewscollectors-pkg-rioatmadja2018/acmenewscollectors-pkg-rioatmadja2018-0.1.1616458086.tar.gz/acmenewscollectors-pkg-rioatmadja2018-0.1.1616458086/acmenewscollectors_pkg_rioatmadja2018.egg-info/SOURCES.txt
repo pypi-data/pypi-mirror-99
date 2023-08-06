@@ -1,0 +1,17 @@
+README.md
+setup.py
+acme_news/__init__.py
+acmenewscollectors_pkg_rioatmadja2018.egg-info/PKG-INFO
+acmenewscollectors_pkg_rioatmadja2018.egg-info/SOURCES.txt
+acmenewscollectors_pkg_rioatmadja2018.egg-info/dependency_links.txt
+acmenewscollectors_pkg_rioatmadja2018.egg-info/requires.txt
+acmenewscollectors_pkg_rioatmadja2018.egg-info/top_level.txt
+acmenewscollectors_pkg_rioatmadja2018.egg-info/zip-safe
+browser/__init__.py
+engines/__init__.py
+scripts/__init__.py
+tests/__init__.py
+tests/unit/__init__.py
+tests/unit/test_browser.py
+utils/__init__.py
+utils/tools/__init__.py
