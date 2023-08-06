@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+anmotordesign/__init__.py
+anmotordesign/run.py
+anmotordesign/server.py
+anmotordesign/server_run_back.py
+anmotordesign.egg-info/PKG-INFO
+anmotordesign.egg-info/SOURCES.txt
+anmotordesign.egg-info/dependency_links.txt
+anmotordesign.egg-info/requires.txt
+anmotordesign.egg-info/top_level.txt
