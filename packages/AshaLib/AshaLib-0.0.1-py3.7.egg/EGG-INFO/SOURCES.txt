@@ -1,0 +1,6 @@
+README.md
+setup.py
+AshaLib.egg-info/PKG-INFO
+AshaLib.egg-info/SOURCES.txt
+AshaLib.egg-info/dependency_links.txt
+AshaLib.egg-info/top_level.txt
