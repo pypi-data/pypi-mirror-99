@@ -1,0 +1,18 @@
+<a class="sidebar-brand{% if logo %} centered{% endif %}" href="{{ nav.homepage.url|url }}">
+  {% block brand_content %}
+  {%- if logo %}
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="#" alt="Logo"/>
+  </div>
+  {%- endif %}
+  {%- if theme_light_logo and theme_dark_logo %}
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="#" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="#" alt="Dark Logo"/>
+  </div>
+  {%- endif %}
+  {% if not theme_sidebar_hide_name %}
+  <span class="sidebar-brand-text">{{ config.site_name }} 文档</span>
+  {%- endif %}
+  {% endblock brand_content %}
+</a>

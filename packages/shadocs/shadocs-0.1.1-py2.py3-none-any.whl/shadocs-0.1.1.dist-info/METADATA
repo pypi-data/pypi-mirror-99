@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: shadocs
+Version: 0.1.1
+Summary: Cookiecutter ShaPackage 包含创建Python包所需的所有模板文件。
+Home-page: https://github.com/llango/shadocs
+Author: Rontom ai
+Author-email: rontomai@gmail.com
+License: MIT license
+Keywords: shadocs
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: Click (>=7.0)
+
+=======
+Shadocs
+=======
+
+
+.. image:: https://img.shields.io/pypi/v/shadocs.svg
+        :target: https://pypi.python.org/pypi/shadocs
+
+.. image:: https://img.shields.io/travis/llango/shadocs.svg
+        :target: https://travis-ci.com/llango/shadocs
+
+.. image:: https://readthedocs.org/projects/shadocs/badge/?version=latest
+        :target: https://shadocs.readthedocs.io/en/latest/?version=latest
+        :alt: 文档状态
+
+
+
+
+Shadocs 一个清新美丽的mkdocs 主题。
+
+
+* 开源协议: MIT license
+* 文档: https://shadocs.readthedocs.io.
+
+
+特征
+--------
+
+* ` pip install shadocs ` 进行安装便可。
+*  修改mkdocs.yml 文件theme: name: 设置为 shadocs 便可。
+
+鸣谢
+-------
+
+该包使用了 Cookiecutter_ 和 `llango/cookiecutter-shapackage`_ 模板创建。
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`llango/cookiecutter-shapackage`: https://github.com/llango/cookiecutter-shapackage
+
+
+=======
+历史
+=======
+
+0.1.0 (2021-03-21)
+------------------
+
+* 在 PyPI 首个版本
+
+0.1.1 (2021-03-22)
+------------------
+
+* 修改搜索页面。
+
+
