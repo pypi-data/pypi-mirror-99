@@ -1,0 +1,9 @@
+distro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+distro/__main__.py,sha256=dLqa3yaSF5V8czQDVPG6tzceJs87-8nv9HudFD1-9z0,135
+distro/data.py,sha256=Q6r42iUF_h-Nhe6L1F1pwZMg7qm7oGHbuQp6h8YvBHw,7385
+distro/distro.py,sha256=bxlHAmj3Hd5-UrHxhSGjaSWx9oeNVG5u2cpqB3v7c6c,3574
+distro_names-0.0.7.dist-info/entry_points.txt,sha256=_xm6iVHDkNzF3nXs3l8awaXHQsNMcyI7gjRi44SeygM,45
+distro_names-0.0.7.dist-info/LICENSE.txt,sha256=F9hfyK3TGd_GIVKe7usOsId4QOVBU_I5oMUKlOPrOpM,1051
+distro_names-0.0.7.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+distro_names-0.0.7.dist-info/METADATA,sha256=kcZkj4vIZ7Y-IZgNg6o9HPUlggNLtsy6zDL0I2ntfMw,1944
+distro_names-0.0.7.dist-info/RECORD,,
