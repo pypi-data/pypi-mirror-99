@@ -1,0 +1,3 @@
+[console_scripts]
+generic_tree = Generic_Tree.generic_tree:main
+
