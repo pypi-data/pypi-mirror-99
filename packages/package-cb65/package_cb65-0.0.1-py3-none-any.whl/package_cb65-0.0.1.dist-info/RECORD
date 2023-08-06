@@ -1,0 +1,9 @@
+package_cb65/__init__.py,sha256=BiqyYAkcErJoCelomJfXBiDFZLLBcflda8eWmENtECk,73
+package_cb65/__main__.py,sha256=u44np6pbMo0C5ic2CYLYBR-1s1w_S6CS4T_3QtCRPG4,146
+package_cb65/impl.py,sha256=YRz9dJItbTeZvYANNEg0493KLLzoTHJ7CzMXmTZUtdc,5666
+package_cb65-0.0.1.dist-info/LICENSE,sha256=M_pcfCFD4UWBTRmRN9KJRnx0gOxbi_4_Kwlk-DPlOEs,43
+package_cb65-0.0.1.dist-info/METADATA,sha256=DJtvXVUJn25Z-7VsNTby0qVNUgskpyadK63jBBDL2ys,602
+package_cb65-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+package_cb65-0.0.1.dist-info/entry_points.txt,sha256=QDMNDcix8wiBHAkfXJMtekOfHwQgVFOyMHzzNLZNx44,64
+package_cb65-0.0.1.dist-info/top_level.txt,sha256=2fdShCRhMei-QujIp2k9dk3-BCalCi00L70YNXVHE4U,13
+package_cb65-0.0.1.dist-info/RECORD,,
