@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: comicmeteor
+Version: 0.2
+Summary: A small library designed to help the obtaining of images from Comic Meteor.
+Home-page: https://github.com/Lewis-Trowbridge/comicmeteor
+Author: Lewis Trowbridge
+Author-email: trowbridgelewis01@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Comic Meteor Helper
+
+## What is it?
+A small library designed to help the obtaining of images from [Comic Meteor](https://comic-meteor.jp/). I have no
+relationship with Comic Meteor.
+
+## Why?
+Hubris. Again.
+
+## Acknowledgements
+
+- [Requests](https://pypi.org/project/requests/)
+- [Beautiful Soup](https://pypi.org/project/beautifulsoup4/)
+- [Pillow](https://pypi.org/project/Pillow/)
+
