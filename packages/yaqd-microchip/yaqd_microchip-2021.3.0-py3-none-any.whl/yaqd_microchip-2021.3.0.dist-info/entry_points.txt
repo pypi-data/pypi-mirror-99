@@ -1,0 +1,4 @@
+[console_scripts]
+yaqd-mcp3428=yaqd_microchip._mcp3428:MCP3428.main
+yaqd-mcp9600=yaqd_microchip._mcp9600:MCP9600.main
+
