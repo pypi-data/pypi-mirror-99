@@ -1,0 +1,12 @@
+README
+setup.cfg
+setup.py
+fast_layers/__init__.py
+fast_layers/fast_layers.py
+fast_layers/layer.py
+fast_layers/sequence.py
+fast_layers.egg-info/PKG-INFO
+fast_layers.egg-info/SOURCES.txt
+fast_layers.egg-info/dependency_links.txt
+fast_layers.egg-info/requires.txt
+fast_layers.egg-info/top_level.txt
