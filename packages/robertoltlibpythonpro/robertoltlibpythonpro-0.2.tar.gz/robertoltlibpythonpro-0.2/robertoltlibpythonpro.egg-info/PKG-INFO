@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: robertoltlibpythonpro
+Version: 0.2
+Summary: Module to exemplify the creations of releases
+Home-page: https://github.com/robertolt/robertollibpythonpro
+Author: Robertolt
+Author-email: rl.beto.lorenzoni@gmail.com
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+Description: #robertoltlibpythonpro
+        
+        Module to exemplify the creations of releases
+        
+        '''console 
+        python3 -m venv .venv 
+        source .venv/bin/activate
+        pip install requirements-dev.txt'''
+        
+        To evaluate code quality: console -> flake8
+        
+        [![Build Status](https://www.travis-ci.com/Robertolt/robertoltlibpythonpro.svg?branch=main)](https://www.travis-ci.com/Robertolt/robertoltlibpythonpro)
+        [![Updates](https://pyup.io/repos/github/Robertolt/robertoltlibpythonpro/shield.svg)](https://pyup.io/repos/github/Robertolt/robertoltlibpythonpro/)
+        [![Python 3](https://pyup.io/repos/github/Robertolt/robertoltlibpythonpro/python-3-shield.svg)](https://pyup.io/repos/github/Robertolt/robertoltlibpythonpro/)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Pytest
+Description-Content-Type: text/markdown
