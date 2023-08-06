@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: getgfs
+Version: 0.0.3
+Summary: Extracts weather forecast variables from the NOAA GFS forecast in a pure python, no obscure dependencies way
+Home-page: https://getgfs.readthedocs.io/
+Author: Jago Strong-Wright
+Author-email: jagoosw@protonmail.com
+License: LICENSE.txt
+Description: Please see the homepage as the readme wouldn't render here
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Markup :: Markdown
