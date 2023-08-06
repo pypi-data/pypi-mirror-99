@@ -1,0 +1,9 @@
+README.md
+setup.py
+blip/__init__.py
+blip/blip.py
+blip.egg-info/PKG-INFO
+blip.egg-info/SOURCES.txt
+blip.egg-info/dependency_links.txt
+blip.egg-info/entry_points.txt
+blip.egg-info/top_level.txt
