@@ -1,0 +1,3 @@
+[console_scripts]
+yqn-project = yqn_project_cli.init_project:main
+
