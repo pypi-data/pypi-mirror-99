@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: reus
+Version: 0.0.2
+Summary: A package that allows you to pull soccer club information
+Home-page: https://github.com/ian-shepherd/reus
+Author: Ian Shepherd
+Author-email: ian.shepherd123@gmail.com
+License: UNKNOWN
+Description: A package that allows you to pull soccer club information, primarily from Transfermarkt
+Keywords: python,transfermarkt,soccer,football
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
