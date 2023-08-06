@@ -1,0 +1,7 @@
+setup.py
+hcword/__init__.py
+hcword/hcword.py
+hcword.egg-info/PKG-INFO
+hcword.egg-info/SOURCES.txt
+hcword.egg-info/dependency_links.txt
+hcword.egg-info/top_level.txt
