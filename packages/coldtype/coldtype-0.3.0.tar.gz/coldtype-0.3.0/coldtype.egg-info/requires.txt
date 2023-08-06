@@ -1,0 +1,17 @@
+drafting>=0.1.2
+defcon
+mido
+skia-python>=86.0
+easing-functions
+numpy
+watchdog<=0.10.3
+noise
+PyOpenGL
+PyOpenGL-accelerate
+glfw
+SimpleWebSocketServer
+more-itertools
+docutils
+exdown
+srt
+timecode
