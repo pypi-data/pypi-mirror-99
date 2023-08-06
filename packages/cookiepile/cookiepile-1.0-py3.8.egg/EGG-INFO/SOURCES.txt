@@ -1,0 +1,6 @@
+setup.py
+cookiepile/__init__.py
+cookiepile.egg-info/PKG-INFO
+cookiepile.egg-info/SOURCES.txt
+cookiepile.egg-info/dependency_links.txt
+cookiepile.egg-info/top_level.txt
