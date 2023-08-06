@@ -1,0 +1,54 @@
+.. Django-Backend-Auth-Api documentation master file, created by
+   sphinx-quickstart on Wed Mar 24 10:29:08 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Django-Backend-Auth-Api's documentation!
+===================================================
+
+###Setup your project
+1. Create you django api project in my case my project name is backend
+
+Your project seems like this:
+
+   backend/
+      __init__.py
+      settings.py
+      urls.py
+      wsgi.py
+   manage.py
+   requirements.txt
+
+2. Install the package in command line on your project directory like this:
+   
+   cd backend/  after activate your virtual environment
+   pip install django-backend-auth-api == 0.2
+
+3. Add "authapi" to your INSTALLED_APPS setting like this::
+
+   INSTALLED_APPS = [
+      ...
+      'authapi',
+   ]
+
+4. Include the authapi URLconf in your project urls.py like this::
+
+   path('authapi/', include('authapi.urls')),
+
+5. Run `python manage.py migrate` to create the authapi models.
+
+
+6. Visit http://127.0.0.1:8000/authapi/ to see all urls related to  a backend authentication.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
