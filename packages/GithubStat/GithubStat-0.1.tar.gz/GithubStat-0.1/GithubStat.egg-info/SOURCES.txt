@@ -1,0 +1,10 @@
+README.md
+setup.py
+GithubStat/__init__.py
+GithubStat.egg-info/PKG-INFO
+GithubStat.egg-info/SOURCES.txt
+GithubStat.egg-info/dependency_links.txt
+GithubStat.egg-info/entry_points.txt
+GithubStat.egg-info/requires.txt
+GithubStat.egg-info/top_level.txt
+GithubStat.egg-info/zip-safe
