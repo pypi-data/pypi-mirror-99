@@ -1,0 +1,6 @@
+[plover.extension]
+plover_cards_hook = plover_cards.plover_hook:Main
+
+[plover.gui.qt.tool]
+plover_cards = plover_cards.card_builder:CardBuilder
+
