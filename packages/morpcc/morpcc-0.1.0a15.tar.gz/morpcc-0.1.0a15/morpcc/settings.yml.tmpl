@@ -1,0 +1,29 @@
+server:
+  listen_host: 127.0.0.1
+  listen_port: 5000
+  server_url: http://localhost:5000
+
+configuration:
+  morpfw.scan:
+    - {{ app_module }}
+  morpfw.authn.policy: morpcc.app:AuthnPolicy
+
+  morpfw.storage.sqlstorage.dburl: '{{ dburl }}'
+  morpfw.blobstorage.url: '{{ blobstorage_url }}'
+  morpfw.secret.fernet_key: {{ fernet_key }}
+  morpfw.beaker.session.type: {{ beaker_session_type }}
+  morpfw.beaker.session.url: '{{ beaker_session_url }}'
+  morpfw.beaker.cache.type: {{ beaker_cache_type }}
+  morpfw.beaker.cache.url: '{{ beaker_cache_url }}'
+
+  morpfw.celery:
+    # celery settings variables
+    broker_url: '{{ celery_broker_url }}'
+    result_backend: '{{ celery_result_backend }}'
+
+  alembic.migration_script_location: '{{ migration_script_location }}'
+
+application:
+  title: {{ app_title }}
+  class: {{ app_cls }}
+  development_mode: true
