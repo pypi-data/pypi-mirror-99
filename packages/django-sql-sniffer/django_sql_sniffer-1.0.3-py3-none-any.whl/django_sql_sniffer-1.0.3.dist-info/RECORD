@@ -1,0 +1,11 @@
+django_sql_sniffer/__init__.py,sha256=aPZd67JHwKeYQpkPx2xeKQzURWqccZRuS_6cls3V0HA,18
+django_sql_sniffer/analyzer.py,sha256=OM4mNOtdM7h77PiVEc0j7cv4RDih9TINNaLR4b1PPWc,2632
+django_sql_sniffer/injector.py,sha256=jEqlnBPubJ9YEQE_TE5MO9C4m9_ZkcFiSmLFTaDlZtI,1549
+django_sql_sniffer/listener.py,sha256=OqtWH1PkxqfA9emTQKFFPGdSRJ93E94i073rWR8kuy0,4001
+django_sql_sniffer/sniffer.py,sha256=RlKqCO9W94K14uAzqEwNH8SyGDq-H0Or5tAogCXSCrs,3405
+django_sql_sniffer-1.0.3.dist-info/LICENSE,sha256=s22KTWJvIyjaEghYeN_L8pjVUQH2VsaFwKocknFNsy8,1068
+django_sql_sniffer-1.0.3.dist-info/METADATA,sha256=EVxTkWmQj7JExxaXpZa-9pNtkCwF0qInS6XvC9abHgY,1987
+django_sql_sniffer-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_sql_sniffer-1.0.3.dist-info/entry_points.txt,sha256=oQryK1PO6lHtu9i3K1EqgSggcFo1wbarTwco63MwgX4,73
+django_sql_sniffer-1.0.3.dist-info/top_level.txt,sha256=q7E7s4AYa6DjTJG6V4l4fkzFSPLfesN6kugJHabfiAw,19
+django_sql_sniffer-1.0.3.dist-info/RECORD,,
