@@ -1,0 +1,4 @@
+PyYAML
+wheel>=0.24.0
+sphinx
+unidecode

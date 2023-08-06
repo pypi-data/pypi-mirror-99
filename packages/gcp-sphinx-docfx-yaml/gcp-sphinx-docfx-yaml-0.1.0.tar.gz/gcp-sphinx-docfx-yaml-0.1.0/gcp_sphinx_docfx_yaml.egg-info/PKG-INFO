@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: gcp-sphinx-docfx-yaml
+Version: 0.1.0
+Summary: Sphinx Python Domain to DocFX YAML Generator
+Home-page: https://github.com/googleapis/sphinx-docfx-yaml
+Author: Google LLC
+Author-email: dandhlee@google.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
