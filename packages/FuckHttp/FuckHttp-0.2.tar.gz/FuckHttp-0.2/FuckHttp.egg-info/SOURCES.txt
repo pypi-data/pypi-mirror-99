@@ -1,0 +1,5 @@
+setup.py
+FuckHttp.egg-info/PKG-INFO
+FuckHttp.egg-info/SOURCES.txt
+FuckHttp.egg-info/dependency_links.txt
+FuckHttp.egg-info/top_level.txt
