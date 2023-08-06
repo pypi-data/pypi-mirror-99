@@ -1,0 +1,5 @@
+[pyimporters.plugins]
+csv=pyimporters_plugins.csv:CSVKnowledgeParser
+skos=pyimporters_plugins.skos:SKOSKnowledgeParser
+txt=pyimporters_plugins.csv:TXTKnowledgeParser
+
