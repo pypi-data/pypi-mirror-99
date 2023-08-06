@@ -1,0 +1,12 @@
+jhstest/__init__.py,sha256=74yWX6-41nBkZOQA7PH-BsekTVtDroV8WB4ISK58dTw,396
+jhstest/__jhstest.py,sha256=YqkrL6YwKhD6dcH4Pp-tD9QoRzKH5vzzyZ1fqdsPrPM,790
+jhstest/jhstest.py,sha256=cLYegOqdYQRAk2WfiPT9kpCN-8BvLSTdrQK_phGZH3E,3885
+jhstest/ts1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jhstest/ts1/ts1.py,sha256=o8dVTV_RKWFXUDU1sannxP4FcCdGpX5tozWxbB8E7rc,79
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test.py,sha256=rH4t__a6oG9OxEhlSUemCnufb6dv1zhoytR-FGf4XzI,282
+jhstest-0.1.5.dist-info/LICENSE,sha256=MHQLbADgJIYBQDZiCL9_4TvRyxrkt3e58srNpR20x3I,1638
+jhstest-0.1.5.dist-info/METADATA,sha256=Suezp-oDY62Z6YwIoyX5R5iON05AvQ5rVhflVNRupvA,584
+jhstest-0.1.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+jhstest-0.1.5.dist-info/top_level.txt,sha256=Afim36QQMfMI8hwT03YdBO4aAA3xLXXSCYEQAMORiH8,13
+jhstest-0.1.5.dist-info/RECORD,,
