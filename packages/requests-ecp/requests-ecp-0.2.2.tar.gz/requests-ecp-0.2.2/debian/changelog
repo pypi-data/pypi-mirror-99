@@ -1,0 +1,31 @@
+requests-ecp (0.2.2-1) unstable; urgency=low
+
+  * update for 0.2.2
+  * tests are now bundled with the package
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Fri, 19 Mar 2021 10:36:00 +0000
+
+requests-ecp (0.2.1-1) unstable; urgency=low
+
+  * update for 0.2.1
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Mon, 23 Mar 2020 10:00:00 +0000
+
+requests-ecp (0.2.0-1) unstable; urgency=low
+
+  * development release
+  * removed python2 support
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Mon, 09 Mar 2020 15:00:00 +0000
+
+requests-ecp (0.1.1-1) unstable; urgency=low
+
+  * bug-fix release
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Mon, 17 Feb 2020 16:44:00 +0000
+
+requests-ecp (0.1.0-1) unstable; urgency=low
+
+  * first release
+
+ -- Duncan Macleod <duncan.macleod@ligo.org>  Fri, 07 Feb 2020 10:29:00 +0000
