@@ -1,0 +1,11 @@
+jupyter-data-directory/__init__.py,sha256=cWhLBQx1B4fGmBCr-XYZPOSGMbr-Pt3S2KkzO2ICmpE,1286
+jupyter_data_directory-0.0.1.data/data/etc/jupyter/jupyter-data-directory.json,sha256=RCffzcp-AlmfBAGzMJhol25_qDNzT1TUGZHcL0sK5kM,57
+jupyter_data_directory-0.0.1.data/data/etc/jupyter/jupyter_notebook_config.d/jupyter-data-directory.json,sha256=FZH6yADBL-lBFrJV0nGPDLIIKayg-09sZAYgmizQ2qA,100
+jupyter_data_directory-0.0.1.data/data/etc/jupyter/jupyter_server_config.d/jupyter-data-directory.json,sha256=wJhBFGXsHfOziaOjEYW73K6OVeYkGydLU9spB1r9W28,98
+jupyter_data_directory-0.0.1.data/data/share/jupyter/data-directory/example.md,sha256=sRtjgzpjhFnF9obmzL5E4_oornMwFYwKyAq6zwOmXnM,309
+jupyter_data_directory-0.0.1.data/data/share/jupyter/data-directory/jupyter-logo.png,sha256=nFQEBJC-uaHxqquURHk4mc11onAe7UAgCtpwm6QJuaE,15429
+jupyter_data_directory-0.0.1.dist-info/LICENSE,sha256=pZWyjPMEIuAB3Roatt8iq285QyVM89z36KxI1jjLMLU,1528
+jupyter_data_directory-0.0.1.dist-info/METADATA,sha256=u4GGAhqka03jnQhZ3-71dIHSGly1TP1j8TDO_vqAYbw,450
+jupyter_data_directory-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jupyter_data_directory-0.0.1.dist-info/top_level.txt,sha256=1ejP9hPltGMdlmHfalLSJkkUI-NFwyX1Z8uMVPjnbWM,23
+jupyter_data_directory-0.0.1.dist-info/RECORD,,
