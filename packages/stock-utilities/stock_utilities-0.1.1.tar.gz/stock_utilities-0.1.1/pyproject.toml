@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "stock_utilities"
+version = "0.1.1"
+description = "This library is a wrapper around the finance libraries in order to give out a data model different from raw pandas and be usable in production services"
+authors = ["Josario Carioca <6355922-josariooo@users.noreply.gitlab.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+yfinance = "^0.1.55"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+mypy = "^0.812"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
