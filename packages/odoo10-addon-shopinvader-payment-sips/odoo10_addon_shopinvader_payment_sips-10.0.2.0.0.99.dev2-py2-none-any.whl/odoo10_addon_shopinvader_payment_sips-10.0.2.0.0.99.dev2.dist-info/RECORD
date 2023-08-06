@@ -1,0 +1,15 @@
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_payment_sips/README.rst,sha256=j84RLmwquFMGoCcHe4hrMF7LtPRpOYmewE9Fw_nyxv0,2066
+odoo/addons/shopinvader_payment_sips/__init__.py,sha256=7pWTMBB5UWaK4bc8xES6uM5O2B7mvdLQwbBcS0UpQWs,47
+odoo/addons/shopinvader_payment_sips/__manifest__.py,sha256=SzTAQTMNRFxhEoowSoXHjSVw6UAu76YpHSifLjeS6VE,554
+odoo/addons/shopinvader_payment_sips/i18n/shopinvader_payment_sips.pot,sha256=tYuE3-MLMMQJE5mpVzIg_IKWcTGkn4R0qtWo-2n_0q0,344
+odoo/addons/shopinvader_payment_sips/readme/CONTRIBUTORS.rst,sha256=_BreXMwn2WUrFc9PIYqzDU3cC8WEOFCEwRCc4RadLxY,45
+odoo/addons/shopinvader_payment_sips/readme/DESCRIPTION.rst,sha256=GcGVoOWcyhpjZOC3ICltvzqrBRk8kaTnO1NtB09pV9A,69
+odoo/addons/shopinvader_payment_sips/services/__init__.py,sha256=2BWWKbR0OxWvFS-BLDXUMKxbPQPfZzQD-sYf4TFZdyw,51
+odoo/addons/shopinvader_payment_sips/services/payment_sips.py,sha256=I0WWDeWBKhe32o3x6OOgzUjd3Ui_a4gFT-_zX0jKV2Y,481
+odoo/addons/shopinvader_payment_sips/static/description/index.html,sha256=Ppvy2vilmVoVof61crajBY5MXnKbk0FQ77XpbfGB_vs,10994
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2.dist-info/METADATA,sha256=kvzaBfng4sFjN4F__m3DwY39IfwfCzeQi2EEXjD91x4,2655
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_payment_sips-10.0.2.0.0.99.dev2.dist-info/RECORD,,
