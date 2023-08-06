@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/iiif_image_load/__init__.py
+src/iiif_image_load.egg-info/PKG-INFO
+src/iiif_image_load.egg-info/SOURCES.txt
+src/iiif_image_load.egg-info/dependency_links.txt
+src/iiif_image_load.egg-info/top_level.txt
