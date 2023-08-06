@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: d8s
+Version: 0.2.0
+Summary: Future home of democritus project.
+Home-page: UNKNOWN
+Author: Floyd Hightower
+Author-email: floyd.hightower27@gmail.com
+License: MIT License
+Project-URL: Documentation, https://github.com/democritus-project/
+Project-URL: Say Thanks!, https://saythanks.io/to/floyd.hightower27%40gmail.com
+Project-URL: Source, https://github.com/democritus-project/
+Project-URL: Tracker, https://github.com/democritus-project/roadmap/issues
+Project-URL: Changelog, https://github.com/democritus-project/roadmap/
+Description: # Democritus
+        
+        Future home the [Democritus Project](https://github.com/democritus-project/) library.
+        
+        ## Credits
+        
+        This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and Floyd Hightower's [Python project template](https://github.com/fhightower-templates/python-project-template).
+        
+Keywords: democritus,d8s,utility,utils
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
