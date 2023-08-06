@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+ardicsrtcollector/__init__.py
+ardicsrtcollector/youtube_srt_mp3.py
+ardicsrtcollector.egg-info/PKG-INFO
+ardicsrtcollector.egg-info/SOURCES.txt
+ardicsrtcollector.egg-info/dependency_links.txt
+ardicsrtcollector.egg-info/entry_points.txt
+ardicsrtcollector.egg-info/requires.txt
+ardicsrtcollector.egg-info/top_level.txt
