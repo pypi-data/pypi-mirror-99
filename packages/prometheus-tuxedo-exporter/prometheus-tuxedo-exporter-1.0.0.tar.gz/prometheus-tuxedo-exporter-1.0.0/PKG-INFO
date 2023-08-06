@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: prometheus-tuxedo-exporter
+Version: 1.0.0
+Summary: A Prometheus exporter of Tuxedo metrics
+Home-page: https://github.com/aivarsk/prometheus-tuxedo-exporter
+Author: Aivars Kalvans
+Author-email: aivars.kalvans@gmail.com
+License: MIT
+Description: ==========================
+        Prometheus-Tuxedo-Exporter
+        ==========================
+        
+        A Prometheus exporter of Tuxedo metrics. The code that was too long for the Chapter 6 of my book: 
+        
+        .. image:: https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=180107058X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=aivarsk-20
+            :target: https://amzn.to/3ljktiH
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
