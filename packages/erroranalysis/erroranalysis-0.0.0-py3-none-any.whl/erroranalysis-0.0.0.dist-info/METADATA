@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: erroranalysis
+Version: 0.0.0
+Summary: Microsoft Error Analysis SDK for Python
+Home-page: https://docs.microsoft.com/en-us/azure/machine-learning/service/
+Author: Microsoft Corp
+Author-email: ilmat@microsoft.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: interpret-community
+
+UNKNOWN
+
+
