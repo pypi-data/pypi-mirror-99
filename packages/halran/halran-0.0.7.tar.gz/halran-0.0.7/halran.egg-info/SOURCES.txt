@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+halran/__init__.py
+halran.egg-info/PKG-INFO
+halran.egg-info/SOURCES.txt
+halran.egg-info/dependency_links.txt
+halran.egg-info/top_level.txt
