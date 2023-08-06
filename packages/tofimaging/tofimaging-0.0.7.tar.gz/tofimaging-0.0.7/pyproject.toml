@@ -1,0 +1,13 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+	"astropy",
+	"lmfit",
+	"matplotlib",
+	"numpy",
+	"scikit-image",
+	"scipy",
+	"tqdm"
+]
+build-backend = "setuptools.build_meta"
