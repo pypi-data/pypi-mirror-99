@@ -1,0 +1,7 @@
+robota-core>=2.0.0
+tqdm
+jsonpickle
+jinja2
+pandas
+python-dateutil
+plotly
