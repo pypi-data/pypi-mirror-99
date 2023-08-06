@@ -1,0 +1,7 @@
+sympy
+numpy
+torch
+tensorflow
+poissongeometry
+permutation
+scipy
