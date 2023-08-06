@@ -1,0 +1,9 @@
+README.md
+setup.py
+minerl_navigate/__init__.py
+minerl_navigate/minerl_navigate.py
+minerl_navigate.egg-info/PKG-INFO
+minerl_navigate.egg-info/SOURCES.txt
+minerl_navigate.egg-info/dependency_links.txt
+minerl_navigate.egg-info/requires.txt
+minerl_navigate.egg-info/top_level.txt
