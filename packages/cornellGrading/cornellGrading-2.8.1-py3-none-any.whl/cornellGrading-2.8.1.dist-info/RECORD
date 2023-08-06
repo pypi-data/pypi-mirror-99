@@ -1,0 +1,12 @@
+cornellGrading/__init__.py,sha256=vUWS5pFQzJCX4bYQXtyzSk0VehvoOm93oyEAXts_TeQ,136
+cornellGrading/cornellGrading.py,sha256=JPnIgCFfb7Qo-YptXlTGLczjaNfegpCutbJ2lpXo3ww,65862
+cornellGrading/cornellQualtrics.py,sha256=zV9feU_SNDur1oeJJCBjLRu4u4AMctr8nUTU23PYFUs,24661
+cornellGrading-2.8.1.data/scripts/canvastex.py,sha256=JglpSHQyaBy1qP0HGVfFN2hj9lvFaGycztw7u5YuaPY,1236
+cornellGrading-2.8.1.data/scripts/matlabgrader.py,sha256=8pKv0pAzBHyGD0-oEmqWPw0qsC6-zLCuGlSOrBG1ZPc,1090
+cornellGrading-2.8.1.data/scripts/setupSelfGrading.py,sha256=YsgM0JVVfvzHiSRkeBRMk3ZVg3GT4XY1kHlxFqPhhbc,985
+cornellGrading-2.8.1.dist-info/LICENSE,sha256=euHkgaAYHv_3Ez4CSRXN_CJ9hbj_qDF3dATZoGyD7zs,1098
+cornellGrading-2.8.1.dist-info/METADATA,sha256=tr-2PNbmt81k3Ty3L5TH_pNJNn7Fppo6vCcx29vg2zI,3005
+cornellGrading-2.8.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cornellGrading-2.8.1.dist-info/entry_points.txt,sha256=D_OohH00PqScA4wbZCpxOC389G3BqPiSl6ePXkQDUew,112
+cornellGrading-2.8.1.dist-info/top_level.txt,sha256=B_LPnm-XGElx84wZ_yS7vVbNlH-3XG70UU4Q_XRc_yw,15
+cornellGrading-2.8.1.dist-info/RECORD,,
