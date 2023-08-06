@@ -1,0 +1,7 @@
+numpy
+hither>=0.5.2
+kachery-p2p>=0.8.2
+websockets
+pyyaml
+aiohttp
+aiohttp_cors
