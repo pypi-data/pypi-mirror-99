@@ -1,0 +1,8 @@
+README.md
+setup.py
+NotifierClient.egg-info/PKG-INFO
+NotifierClient.egg-info/SOURCES.txt
+NotifierClient.egg-info/dependency_links.txt
+NotifierClient.egg-info/requires.txt
+NotifierClient.egg-info/top_level.txt
+notifier_client/main.py
