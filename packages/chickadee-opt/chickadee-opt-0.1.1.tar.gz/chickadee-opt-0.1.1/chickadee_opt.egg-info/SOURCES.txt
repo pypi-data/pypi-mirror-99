@@ -1,0 +1,15 @@
+README.md
+setup.py
+chickadee/Component.py
+chickadee/Dispatcher.py
+chickadee/GekkoDispatch.py
+chickadee/MPC.py
+chickadee/PyOptSparseDispatch.py
+chickadee/Resource.py
+chickadee/Solution.py
+chickadee/TimeSeries.py
+chickadee/__init__.py
+chickadee_opt.egg-info/PKG-INFO
+chickadee_opt.egg-info/SOURCES.txt
+chickadee_opt.egg-info/dependency_links.txt
+chickadee_opt.egg-info/top_level.txt
