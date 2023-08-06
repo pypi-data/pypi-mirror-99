@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+streamlit_gchart/__init__.py
+streamlit_gchart.egg-info/PKG-INFO
+streamlit_gchart.egg-info/SOURCES.txt
+streamlit_gchart.egg-info/dependency_links.txt
+streamlit_gchart.egg-info/requires.txt
+streamlit_gchart.egg-info/top_level.txt
