@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: odoo11-addon-sm-collaborators
+Version: 11.0.0.0.3
+Summary: sm_collaborators
+Home-page: http://www.sommobilitat.coop
+Author: Som Mobilitat
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Requires-Dist: odoo11-addon-vertical-carsharing
+Requires-Dist: odoo (<11.1dev,>=11.0a)
+
+UNKNOWN
+
+

@@ -1,0 +1,5 @@
+<odoo>
+  <data>
+    <menuitem name="Collaborators" id="sm_collaborators.menu_root" parent="vertical_carsharing.menu_root"/>
+  </data>
+</odoo>
