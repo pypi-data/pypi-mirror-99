@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+src/terminalcolorpy/__init__.py
+src/terminalcolorpy.egg-info/PKG-INFO
+src/terminalcolorpy.egg-info/SOURCES.txt
+src/terminalcolorpy.egg-info/dependency_links.txt
+src/terminalcolorpy.egg-info/top_level.txt
