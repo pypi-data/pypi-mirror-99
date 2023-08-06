@@ -1,0 +1,6 @@
+include *.md
+include ForceSpectroscopyHelperMCM/*
+include ForceSpectroscopyHelperMCM/Utils/*
+include ForceSpectroscopyHelperMCM/examples/*
+include *.yml
+exclude data/*

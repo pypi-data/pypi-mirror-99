@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ForceSpectroscopyHelperMCM-mcm
+Version: 0.0.0
+Summary: NC-AFM experiment data IO, DF/F convert, 3D visualization tool.
+Home-page: UNKNOWN
+Author: ZHUO DIAO
+Author-email: enzian0515@gmail.com
+License: MIT
+Description: ForceSpectroscopyHelper-mcm
+        ===================================
+        
+        Introduction
+        -------
+        
+        Monte Carlo Method for NC-AFM force spectroscopy data analyzation. 
+        
+        It uses [pymc3](https://docs.pymc.io/) to sampling the result. The sampling result will be saved as an original format written in "bayesData.py".
+        
+        
+        Installation
+        -------
+        
+        this package is developed in the environment of python 3.6:
+        
+        The easiest way: download "conda_packages.yml", create a new conda environment and install the list up packages in "conda_packages.yml" by following command:
+        
+        * `conda env create python=3.6 -n [Your Environment Name] -f conda_packages.yml`
+        * `conda activate [Your Environment Name]`
+        * `pip install pymc3==3.8`
+        
+        (Not Recommended) Or your can try to install pymc3 (version 3.8) by [official instruction](https://github.com/pymc-devs/pymc3/wiki/Installation-Guide-(Windows)). 
+        
+        Then install the following package on pip:
+        
+        * `pip install ForceSpectroscopyHelper-mcm`
+        * `pip install errandpy`
+        
+        Example For Startup
+        -------------
+        
+        A Si force curve analysis demo is written in "examples/startup.py". 
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
