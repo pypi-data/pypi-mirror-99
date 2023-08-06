@@ -1,0 +1,8 @@
+text_hammer/__init__.py,sha256=JZBOXsjSYqw6BVN_bv30J-aJEsTnBoZr9fvvv8E7qz4,2868
+text_hammer/utils.py,sha256=HkCf9HByanD3CSh_Wob_toX3-V-SMaJAZJReIgKqQkg,4353
+text_hammer/data/abbreviations_wordlist.json,sha256=wOHXovXD6D8tgKtJbLdfk5om9Srph-ZSxvz7LMpnkIU,8912
+text_hammer-0.1.5.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+text_hammer-0.1.5.dist-info/METADATA,sha256=NYqKXpvZgEWXdOAkQZkYlWhbJ0XFujRqqXLjvZaMyxE,2191
+text_hammer-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+text_hammer-0.1.5.dist-info/top_level.txt,sha256=w20wj8ufGNV8DP5kFOATA10nCmDbGlMCUfc9Cendxq8,12
+text_hammer-0.1.5.dist-info/RECORD,,
