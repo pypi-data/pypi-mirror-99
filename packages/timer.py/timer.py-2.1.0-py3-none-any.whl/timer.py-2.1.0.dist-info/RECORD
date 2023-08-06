@@ -1,0 +1,15 @@
+timer_py/__init__.py,sha256=podCI2QGUplicshneSsa66INljRn0g259qkKGcsCfFI,34
+timer_py/example.py,sha256=n7edzG6jXB_eR-QhFBAO9H2GjuEs60t8C_TAX7PqOmA,796
+timer_py/printer.py,sha256=u7KizCl5KuLGA8gQoqXq19yTQJCvPu-9yo2IPo6JPOc,512
+timer_py/timer.py,sha256=lUWUbtTm2UifvwRhBzf_XoIxZJjLYDYh-0fz467QGbQ,2305
+timer_py/utils.py,sha256=q7b9ThhpHDltoZ_qlX2C_4nqWD5FihSbQz7K8E9NY24,203
+timerpy/__init__.py,sha256=b5bOwGKRfuERlWO94v9I1W1ilPMUpQvmEYhuB6RgbkM,31
+timerpy/example.py,sha256=nXenDEp0jk0WQMsnVQLKpnMZAZzIqNtMNjsqEypxZbc,810
+timerpy/printer.py,sha256=u7KizCl5KuLGA8gQoqXq19yTQJCvPu-9yo2IPo6JPOc,512
+timerpy/timer.py,sha256=9NV1rRD7axw6TioFgEIr1QNY3ZoOLIT21mXybMyZZOY,2284
+timerpy/utils.py,sha256=q7b9ThhpHDltoZ_qlX2C_4nqWD5FihSbQz7K8E9NY24,203
+timer.py-2.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+timer.py-2.1.0.dist-info/METADATA,sha256=VCSyEcWY-WDzQ67TxZY47UlSf7guxI7htZJ7sTeAby4,1346
+timer.py-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+timer.py-2.1.0.dist-info/top_level.txt,sha256=HHhEV0rc7SQrKgsLL3192tHTZmXPZJUjrjlvx3IZpnY,9
+timer.py-2.1.0.dist-info/RECORD,,
