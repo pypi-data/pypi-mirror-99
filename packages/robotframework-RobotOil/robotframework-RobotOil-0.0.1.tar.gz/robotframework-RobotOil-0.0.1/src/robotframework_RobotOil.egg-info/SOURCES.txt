@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+src/RobotOil/Persistent_Browser.py
+src/RobotOil/Smart_Keywords.py
+src/RobotOil/Utility_Webdriver_Setup.py
+src/RobotOil/Web_Utilities.py
+src/RobotOil/__init__.py
+src/robotframework_RobotOil.egg-info/PKG-INFO
+src/robotframework_RobotOil.egg-info/SOURCES.txt
+src/robotframework_RobotOil.egg-info/dependency_links.txt
+src/robotframework_RobotOil.egg-info/top_level.txt
