@@ -1,0 +1,15 @@
+setup.py
+fppy.egg-info/PKG-INFO
+fppy.egg-info/SOURCES.txt
+fppy.egg-info/dependency_links.txt
+fppy.egg-info/requires.txt
+fppy.egg-info/top_level.txt
+fpy/__init__.py
+fpy/tests/__init__.py
+fpy/tests/test_composable.py
+fpy/tests/test_cont.py
+fpy/tests/test_do.py
+fpy/tests/test_either.py
+fpy/tests/test_function.py
+fpy/tests/test_maybe.py
+fpy/tests/test_parsec.py
