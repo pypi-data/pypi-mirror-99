@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: arduscope
+Version: 0.1
+Summary: Un osciloscopio basado en Arduino + Python y orientado a laboratorios de enseñanza
+Home-page: https://github.com/alemazzeo/arduscope.git
+Author: Alejandro Ezequiel Mazzeo
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pyserial
+
+UNKNOWN
+
+
