@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "flamingo-cli"
+version = "1.0.1"
+description = "Flamingo Command Line Interface"
+authors = ["Joao Daher <joao@daher.dev>"]
+packages = [
+    { include = "flamingo.py" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.10"
+click = "*"
+tabulate = "*"
+requests = "*"
+pylint = { version = "*", optional = true}
+coverage = { version = "*", optional = true}
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+coverage = "*"
+
+[tool.poetry.scripts]
+flamingo = 'flamingo.console:run'
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
