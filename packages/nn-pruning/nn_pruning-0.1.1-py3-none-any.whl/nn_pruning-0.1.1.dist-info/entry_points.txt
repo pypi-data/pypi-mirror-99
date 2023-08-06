@@ -1,0 +1,3 @@
+[console_scripts]
+nn_pruning_run_example = examples.command_line:main
+
