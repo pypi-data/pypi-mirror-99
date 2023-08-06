@@ -1,0 +1,13 @@
+pytest_helpers_namespace/__init__.py,sha256=D7LywTuuKOLBckMpBTKjqwuIS6PABYTo1qDO2n02Vus,863
+pytest_helpers_namespace/plugin.py,sha256=tim5z8aISDBmKMoMj8cgZbDWomyMPKXuC14l0qqFKb8,2680
+pytest_helpers_namespace/version.py,sha256=cGjTiR_nxS4whFsm6SVUeyrCo6r6OOgm-3XBsHGwi-k,25
+pytest_helpers_namespace-2021.3.24.dist-info/AUTHORS.rst,sha256=AjcSqtYMiVsHWuY6B0OHwUJ-SOsdKpO_u2U01DFS4PE,501
+pytest_helpers_namespace-2021.3.24.dist-info/AUTHORS.rst~,sha256=niTgN6EfZlf1DQiFkFR_jcvPZqoPsLkYDNM_hu3jLKw,397
+pytest_helpers_namespace-2021.3.24.dist-info/AUTHORS~,sha256=-b3agnJIJOTQC-Yyy95cBY-6sJBEVferSvrW0e8qn-A,160
+pytest_helpers_namespace-2021.3.24.dist-info/LICENSE,sha256=ewHcsDG5i7eCQdgxFRD8KCYG8ZH1HkotVU-zQFtybGI,11311
+pytest_helpers_namespace-2021.3.24.dist-info/LICENSE~,sha256=bcDgaNzzpbyOBUIFuFt3IOHUkmW7xkv1FdLPeRl99po,11323
+pytest_helpers_namespace-2021.3.24.dist-info/METADATA,sha256=qiM5_bPPaO9LhP8tnRjUP_IrKegKqsqaycdc-H4nXX4,7318
+pytest_helpers_namespace-2021.3.24.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytest_helpers_namespace-2021.3.24.dist-info/entry_points.txt,sha256=R1upOvXzAcbSkcpYLmJktdqhttWu1purfrQI2GtfFkM,64
+pytest_helpers_namespace-2021.3.24.dist-info/top_level.txt,sha256=mJ9J-MwV_3HgqB55QAPxiXCz6t-6b4qRw-4Izxfr5wA,25
+pytest_helpers_namespace-2021.3.24.dist-info/RECORD,,
