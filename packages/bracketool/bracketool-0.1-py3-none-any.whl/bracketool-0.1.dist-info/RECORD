@@ -1,0 +1,13 @@
+bracketool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bracketool/brackets.py,sha256=nfv4Z1DNhcXzPUkwwAN-vdl0G8cBNK0967f9P8VKv2I,2336
+bracketool/domain.py,sha256=qdXZ2KJz6XYigeTcV4DRB36Ep9sms9pE5ipGnhRsAu8,2495
+bracketool/elorating.py,sha256=a0YNvRk9gy8q3KKS9svsGetEQD2VZ4ZD8E2HLV2ZP6w,1268
+bracketool/entities.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bracketool/pairings.py,sha256=M1G4ePNvD4fLlNJ100XfbGMuWAHIr4iVnEm21hB1rM0,6265
+bracketool/single_elimination.py,sha256=q1z_FcIiJeMkhfVvXvVeTg2V6ZbBGdv61vGysl2tSGs,2740
+bracketool/teambrackets.py,sha256=bSGCfqfME4ddSX7gw8hd39npkRreo-GI7nfVlibDst4,8411
+bracketool-0.1.dist-info/LICENSE,sha256=nu7fPyYJb9q1CWrKqUf7APztzy-mY2muKB-HnXHvKjs,1110
+bracketool-0.1.dist-info/METADATA,sha256=BuKvrYIJdLDPkrr1zEbuIgUceZ5RN5gWHAlt7wejW_Q,317
+bracketool-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bracketool-0.1.dist-info/top_level.txt,sha256=bw8xqVxh_LPDoUWFN9lCEcHVBf30lqrJ4BsJqr6I_Do,11
+bracketool-0.1.dist-info/RECORD,,
