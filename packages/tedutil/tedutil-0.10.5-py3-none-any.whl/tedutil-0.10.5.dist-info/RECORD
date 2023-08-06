@@ -1,0 +1,12 @@
+tedutil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tedutil/dec.py,sha256=N3epQB3mWRMEoWTAEoPOEmSt1EH7FCkasX_AzRki99w,4172
+tedutil/fixed_size_file.py,sha256=kREfCZoGRe9rfx0JgLRfXmbpOvvYFaReH25u_Qb8NHI,7903
+tedutil/grdate.py,sha256=Gf8D5LmhUSUn2o1Ssl1k92qz-MUwNmZamGbaLtqKmH4,3968
+tedutil/grtext.py,sha256=_0A3AOmMOa0ksBEp43rpUiioTyO-5rlIuOQFfPtTAT8,609
+tedutil/taxes.py,sha256=V2jEvJpI86irZFc1EqowJA78FTSB90o588-ImB_4pnE,6932
+tedutil/validators.py,sha256=Z-z3NUW6zfZQQYru7WD_1BG67GE9I8ejuB9trspkjlE,984
+tedutil-0.10.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tedutil-0.10.5.dist-info/METADATA,sha256=pGPNTJkHmDfO8ncL68K7adzO5tZe87aNRpbt5olo4HE,929
+tedutil-0.10.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tedutil-0.10.5.dist-info/top_level.txt,sha256=HcEwOl6Gj9XeG99eNcrXlWbCrGbcTVBa3OJnEp9DSFA,8
+tedutil-0.10.5.dist-info/RECORD,,
