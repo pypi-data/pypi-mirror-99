@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+setup.cfg
+setup.py
+gmpyinfr_amqp/__init__.py
+gmpyinfr_amqp.egg-info/PKG-INFO
+gmpyinfr_amqp.egg-info/SOURCES.txt
+gmpyinfr_amqp.egg-info/dependency_links.txt
+gmpyinfr_amqp.egg-info/not-zip-safe
+gmpyinfr_amqp.egg-info/requires.txt
+gmpyinfr_amqp.egg-info/top_level.txt
+gmpyinfr_amqp/amqp/__init__.py
+gmpyinfr_amqp/utils/__init__.py
