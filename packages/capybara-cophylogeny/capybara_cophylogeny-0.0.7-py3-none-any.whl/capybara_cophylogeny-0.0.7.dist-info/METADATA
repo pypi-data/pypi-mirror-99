@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: capybara-cophylogeny
+Version: 0.0.7
+Summary: Capybara Python package for phylogenetic tree reconciliation
+Home-page: https://github.com/Helio-Wang/Capybara-app
+Author: Hélio Wang
+Author-email: helioaimelesoleil@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CeCILL-C Free Software License Agreement (CECILL-C)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+Use Capybara's counter and enumerator as Python modules!
+
+## Documentation
+https://capybara-doc.readthedocs.io/en/latest
+
+
