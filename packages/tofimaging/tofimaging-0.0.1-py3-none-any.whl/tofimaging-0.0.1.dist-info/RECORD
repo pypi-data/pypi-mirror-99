@@ -1,0 +1,12 @@
+toflibrary/FOBI_analysis.py,sha256=P_LZoDzXazTKujy6JH3P-ZOz3GydYJZtzIMuFTMzcDI,11209
+toflibrary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toflibrary/edgefitting_1D.py,sha256=1UH21ZNN4Fa6m11WzT-JJYMrLezkUFrlpmlerFWGmyg,30888
+toflibrary/edgefitting_2D.py,sha256=hwBf8ZogEyhYOClcPEpfmPBM3z1VfE7BHFh5Gxm3LSE,21890
+toflibrary/phasefitting_1D.py,sha256=HHG7RQmxpNy3IEgHm4DRccIJYXG34qQs060OfTAGn2w,10378
+toflibrary/phasefitting_2D.py,sha256=wuweILBPqyJZWg-rTQRL0kueZiytAfdRHR1Ecvu19pE,16463
+toflibrary/reduction_tools.py,sha256=jKKotsBYsY2OptHn1CVq-wdVkZ7LMQGKfYbm451FHZ0,22818
+tofimaging-0.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+tofimaging-0.0.1.dist-info/METADATA,sha256=qr8psVw43YTEBn-oHAerG6j8Ss3vhnVMfJT-MGGy8L4,1914
+tofimaging-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tofimaging-0.0.1.dist-info/top_level.txt,sha256=F_unFQYfGL98C_zHobDsq_docx-IINQJk9f-ff3SP3c,11
+tofimaging-0.0.1.dist-info/RECORD,,
