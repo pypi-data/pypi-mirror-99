@@ -1,0 +1,11 @@
+README.md
+setup.py
+diterator/__init__.py
+diterator/__main__.py
+diterator/iterator.py
+diterator/wrappers.py
+diterator.egg-info/PKG-INFO
+diterator.egg-info/SOURCES.txt
+diterator.egg-info/dependency_links.txt
+diterator.egg-info/requires.txt
+diterator.egg-info/top_level.txt
