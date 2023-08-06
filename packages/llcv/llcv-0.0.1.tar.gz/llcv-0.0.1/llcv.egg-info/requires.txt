@@ -1,0 +1,6 @@
+python-dateutil
+py-cpuinfo
+numpy
+torchvision
+tensorboard
+linearlr
