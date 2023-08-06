@@ -1,0 +1,17 @@
+argparse
+imageio
+matplotlib
+mpmath
+numpy
+numba
+pyyaml
+scipy
+sympy
+tqdm
+h5py
+pycparser
+psutil
+pywigxjpf
+
+[cuda]
+PyCuda
