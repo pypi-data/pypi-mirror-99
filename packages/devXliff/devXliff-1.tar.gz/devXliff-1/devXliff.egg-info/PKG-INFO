@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: devXliff
+Version: 1
+Summary: A simple lightweight package to facilitate the programmatic creation of XLIFF files
+Home-page: https://github.com/vinayaksharmagh/devXliff
+Author: Vinayak Sharma
+Author-email: bplate3@gmail.com
+License: UNKNOWN
+Description: devXliff: It is a simple lightweight library to facilitate the programmatic creation of XLIFF files
+        
+        XLIFF: It is xml based standard that is commonly used in Computer Assisted Translation tools for data exchange.
+        
+        Installation: pip install devXliff
+        
+        Demo: You may refer to https://github.com/vinayaksharmagh/devXliff/blob/master/demo.py to look at basic usage of this library.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
