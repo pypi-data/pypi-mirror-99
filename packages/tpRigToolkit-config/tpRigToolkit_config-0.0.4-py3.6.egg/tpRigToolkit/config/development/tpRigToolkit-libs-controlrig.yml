@@ -1,0 +1,3 @@
+# List of default control shapes paths
+contols_shapes_paths:
+  - ${root + "/controls"}
