@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ftp-cli
+Version: 0.1.0
+Summary: 
+Author: Vlad Galatskiy
+Author-email: xfloydya@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Description-Content-Type: text/x-rst
+
+
