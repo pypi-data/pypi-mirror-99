@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: cute_ranking
+Version: 0.0.2
+Summary: A cute little python module for calculating different ranking metrics. Based entirely on the gist from https://gist.github.com/bwhite/3726239.
+Home-page: https://github.com/ncoop57/cute_ranking/tree/main/
+Author: Nathan Cooper
+Author-email: nathanallencooper@gmail.com
+License: Apache Software License 2.0
+Description: # Cute Ranking
+        > A cute little python module for calculating different ranking metrics. Based entirely on the gist from https://gist.github.com/bwhite/3726239.
+        
+        
+        [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cute-ranking)](https://pypi.org/project/cute-ranking/)
+        [![PyPI Status](https://badge.fury.io/py/cute-ranking.svg)](https://badge.fury.io/py/cute-ranking)
+        [![PyPI Status](https://pepy.tech/badge/cute-ranking)](https://pepy.tech/project/cute-ranking)
+        [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ncoop57/cute-ranking/blob/main/LICENSE)
+        
+        
+        ## Install
+        
+        Requires a minimum python installation of 3.6
+        
+        `pip install cute_ranking`
+        
+        ## How to use
+        
+        ```
+        from cute_ranking.core import mean_reciprocal_rank
+        
+        relevancies = [[0, 0, 1], [0, 1, 0], [1, 0, 0]]
+        mean_reciprocal_rank(relevancies)
+        ```
+        
+        
+        
+        
+            0.611111111111111
+        
+        
+        
+        The library current supports the following information retrieval ranking metrics:
+        1. Mean Reciprocal Rank - `mean_reciprocal_rank`
+        2. Relevancy Precision - `r_precision`
+        3. Precision at K - `precision_at_k`
+        4. Average Precision - `average_precision`
+        5. Mean Average Precision - `mean_average_precision`
+        6. Discounted Cumulative Gain at K - `dcg_at_k`
+        7. Normalized Discounted Cumulative Gain at K - `ndcg_at_k`
+        8. Mean Rank - `mean_rank`
+        9. Hit@k - `hit_rate_at_k`
+        
+        # Contributing
+        PRs and issues welcome! Please make sure to read through the `CONTRIBUTING.md` doc for how to contribute :).
+        
+Keywords: information retrieval rank ranking metrics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
