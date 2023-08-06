@@ -1,0 +1,3 @@
+[console_scripts]
+cargo-vcs = cargo_vcs:main
+
