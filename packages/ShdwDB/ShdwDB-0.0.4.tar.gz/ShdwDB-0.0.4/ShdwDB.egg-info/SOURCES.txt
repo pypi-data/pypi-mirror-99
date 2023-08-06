@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+ShdwDB/__init__.py
+ShdwDB.egg-info/PKG-INFO
+ShdwDB.egg-info/SOURCES.txt
+ShdwDB.egg-info/dependency_links.txt
+ShdwDB.egg-info/top_level.txt
