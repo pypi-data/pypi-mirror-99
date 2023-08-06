@@ -1,0 +1,14 @@
+LICENSE
+requirements.txt
+spoofbot/__init__.py
+spoofbot/browser.py
+spoofbot/operating_system.py
+spoofbot/tag.py
+spoofbot/adapter/__init__.py
+spoofbot/adapter/file.py
+spoofbot/adapter/har.py
+spoofbot/util/__init__.py
+spoofbot/util/common.py
+spoofbot/util/file.py
+spoofbot/util/har.py
+spoofbot/util/http.py
