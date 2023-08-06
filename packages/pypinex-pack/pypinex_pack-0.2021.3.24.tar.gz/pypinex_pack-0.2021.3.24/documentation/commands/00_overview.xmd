@@ -1,0 +1,11 @@
+
+`pypinex_pack` supports the following commands:
+
+* `gzip()`
+* `bzip2()`
+* `xz()`
+* `gunzip(newFileName:str = None)`
+* `bunzip2(newFileName:str = None)`
+* `unxz(newFileName:str = None)`
+* `tar(fileName:str, compression:str = None)`
+

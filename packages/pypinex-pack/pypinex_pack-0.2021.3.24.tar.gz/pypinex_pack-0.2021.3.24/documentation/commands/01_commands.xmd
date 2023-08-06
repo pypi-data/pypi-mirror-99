@@ -1,0 +1,39 @@
+gzip(), bzip2(), xz() - Compress a file
+----------------------------------------------------------------
+
+The commands `gzip()`, `bzip2()` and `xz()` will process file-like objects. Each file that is passed through such a processor will be compressed
+with *gzip*, *bzip2* or *xz*.
+
+The processors do not have any arguments on construction..
+
+The processors will generate a new file-like object that the framework will then pass on to the next processor in the pipeline.
+
+On compressing files the file names are modfied. Depending on the compression algorithm the following modifications to the file names will occur:
+
+* `.foo` => `.foo.gz`
+* `.foo` => `.foo.bz2`
+* `.foo` => `.foo.xz`
+
+gunzip(), bunzip2(), unxz() - Decompress a file
+----------------------------------------------------------------
+
+The commands `gunzip()`, `bunzip2()` and `unxz()` will process file-like objects. Each file that is passed through such a processor will be decompressed
+according to the standards of *gzip*, *bzip2* or *xz*.
+
+All these processors can understand the following argument(s):
+
+* `str newFileName` : (optional) If specified the resulting file name (not the directory path!) will be modified. (Default value: `None`)
+
+The processors will generate a new file-like object that the framework will then pass on to the next processor in the pipeline.
+
+tar - Create a TAR archive
+----------------------------------------------------------------
+
+The command `tar()` is the equivalent to the *NIX CLI command `tar`. It packs all file-like objects such a `tar` processor receives to a single archive according
+to the TAR standard. After all files have been received a single new file will be generated: The resulting data of the `tar` archiving operation.
+
+The `tar()` command can understand the following argument(s):
+
+* `str fileName` : The file name of the resulting TAR file.
+* `str compression` : The `tar()` command can automatically generate a compressed TAR archive. To use this feature either specify "gz", "bzip2" or "xz" here. (Default value: `None`)
+

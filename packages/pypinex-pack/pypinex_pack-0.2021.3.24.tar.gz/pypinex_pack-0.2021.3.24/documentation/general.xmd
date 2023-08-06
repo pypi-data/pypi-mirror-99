@@ -1,0 +1,21 @@
+Name modification
+----------------------------------------------------------------
+
+(Almost) all processors of this module have in common that they modify the name of the file-like objects passed through them. How names will be modified
+depends on the compression algorithm used.
+
+Here are examples of modifications that will occur during **compression**:
+
+* `.foo` => `.foo.gz`
+* `.foo` => `.foo.bz2`
+* `.foo` => `.foo.xz`
+
+Here are examples of modifications that will occur during **decompression**:
+
+* `.foo.gz` => `.foo`
+* `.foo.bz2` => `.foo`
+* `.foo.xz` => `.foo`
+* `.tgz` => `.tar`
+* `.tbz2` => `.tar`
+* `.txz` => `.tar`
+
