@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: faktory
+Version: 0.5.1
+Summary: Python worker for the Faktory project
+Home-page: http://github.com/cdrx/faktory_python_worker
+Author: Chris R
+License: BSD
+Description: UNKNOWN
+Keywords: faktory worker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Distributed Computing
+Provides-Extra: test
+Provides-Extra: all_extras
+Provides-Extra: dev
