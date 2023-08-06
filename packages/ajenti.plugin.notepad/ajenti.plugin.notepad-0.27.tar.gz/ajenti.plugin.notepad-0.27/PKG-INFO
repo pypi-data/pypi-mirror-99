@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.notepad
+Version: 0.27
+Summary: Notepad
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Notepad plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3

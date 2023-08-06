@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "", "Bookmarks": "", "New": "", "Open": "", "Save": "Spremi", "Save As...": "Spremi kao...", "Tab": "Kartica", "Notepad": "", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

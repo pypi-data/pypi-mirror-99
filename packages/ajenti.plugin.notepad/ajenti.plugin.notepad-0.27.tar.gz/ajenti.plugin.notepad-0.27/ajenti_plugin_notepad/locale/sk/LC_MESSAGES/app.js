@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Prida\u0165 do z\u00e1lo\u017eiek", "Bookmarks": "Z\u00e1lo\u017eky", "New": "", "Open": "", "Save": "", "Save As...": "", "Tab": "", "Notepad": "", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

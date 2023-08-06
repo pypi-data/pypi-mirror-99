@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "", "Bookmarks": "Bl\u00eadwizers", "New": "Nij", "Open": "Iepenje", "Save": "Bewarje", "Save As...": "Bewarje as...", "Tab": "", "Notepad": "", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

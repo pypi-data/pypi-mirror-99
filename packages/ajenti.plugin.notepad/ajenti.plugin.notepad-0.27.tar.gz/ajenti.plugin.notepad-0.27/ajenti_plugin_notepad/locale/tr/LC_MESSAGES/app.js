@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "S\u0131k\u00e7a kullan\u0131lanlara ekle", "Bookmarks": "S\u0131k\u00e7a kullan\u0131lanlar", "New": "Yeni", "Open": "A\u00e7", "Save": "Kaydet", "Save As...": "Farkl\u0131 kaydet...", "Tab": "Sekme", "Notepad": "Notepad", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

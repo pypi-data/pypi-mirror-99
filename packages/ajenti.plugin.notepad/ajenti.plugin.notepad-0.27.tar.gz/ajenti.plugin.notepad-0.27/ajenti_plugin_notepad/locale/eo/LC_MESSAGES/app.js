@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Aldoni legosignon", "Bookmarks": "Legosignoj", "New": "Nova", "Open": "Malfermi", "Save": "Konservi", "Save As...": "Konservi kiel...", "Tab": "Langeto", "Notepad": "", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

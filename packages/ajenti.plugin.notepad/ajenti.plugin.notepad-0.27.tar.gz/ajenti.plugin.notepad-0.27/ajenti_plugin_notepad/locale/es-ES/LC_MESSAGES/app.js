@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Agregar esto a favoritos", "Bookmarks": "Favoritos", "New": "Nuevo", "Open": "Abrir", "Save": "Guardar", "Save As...": "Guardar como...", "Tab": "Pesta\u00f1a", "Notepad": "Bloc de notas", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

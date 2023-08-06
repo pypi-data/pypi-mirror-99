@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "", "Bookmarks": "", "New": "", "Open": "", "Save": "Guardarh", "Save As...": "", "Tab": "", "Notepad": "", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

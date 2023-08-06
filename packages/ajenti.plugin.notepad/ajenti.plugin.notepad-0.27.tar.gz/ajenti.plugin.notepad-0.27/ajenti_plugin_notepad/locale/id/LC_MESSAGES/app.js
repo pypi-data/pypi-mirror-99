@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Tandai posting ini", "Bookmarks": "Tandai", "New": "Baru", "Open": "Buka", "Save": "Simpan", "Save As...": "Simpan Sebagai...", "Tab": "Tab", "Notepad": "Buku catatan", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

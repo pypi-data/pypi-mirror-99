@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Voeg toe aan favorieten", "Bookmarks": "Bladwijzers", "New": "Nieuw", "Open": "Open", "Save": "Opslaan", "Save As...": "Opslaan als...", "Tab": "Tabblad", "Notepad": "Kladblok", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

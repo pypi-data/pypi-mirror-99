@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Vytvo\u0159it z\u00e1lo\u017eku", "Bookmarks": "Z\u00e1lo\u017eky", "New": "Nov\u00fd", "Open": "Otev\u0159\u00edt", "Save": "Ulo\u017eit", "Save As...": "Ulo\u017eit jako...", "Tab": "Karta", "Notepad": "Pozn\u00e1mkov\u00fd blok", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

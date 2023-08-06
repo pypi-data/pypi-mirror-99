@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Dodaj med zaznamke", "Bookmarks": "Zaznamki", "New": "Novo", "Open": "Odpri", "Save": "Shrani", "Save As...": "Shrani kot...", "Tab": "Tab", "Notepad": "Bele\u017enica", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

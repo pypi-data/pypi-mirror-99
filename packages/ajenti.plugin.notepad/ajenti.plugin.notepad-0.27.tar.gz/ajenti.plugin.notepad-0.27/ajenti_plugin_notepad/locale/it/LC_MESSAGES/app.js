@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Inserisci nei segnalibri", "Bookmarks": "Segnalibri", "New": "Nuovo", "Open": "Apri", "Save": "Salva", "Save As...": "Salva con nome...", "Tab": "Scheda", "Notepad": "Blocco note", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}

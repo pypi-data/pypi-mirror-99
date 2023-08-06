@@ -1,0 +1,1 @@
+{"": "", "Bookmark this": "Ad\u0103uga\u021bi la marcaje", "Bookmarks": "Marcaje", "New": "Nou", "Open": "Deschide", "Save": "Salveaz\u0103", "Save As...": "Salveaz\u0103 ca...", "Tab": "Fil\u0103", "Notepad": "Notepad", "Current file will be closed. Continue?": "", "Could not open the file": "", "Could not save the file": ""}
