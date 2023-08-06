@@ -1,0 +1,14 @@
+coinbase/__init__.py,sha256=L0d7d2U74zA3LNP14OG-BmwCD7kzHMw7hxTizWjpiMA,61
+coinbase/auth.py,sha256=YAxGI9Z8Eh5PH3JgXhBGwH_UbexJcVPETGkmIiuIkc0,783
+coinbase/client.py,sha256=rrm2pC38qk5utUVvVvlENzuGgg3qULrCxEjUgbgGrJc,2811
+coinbase/response_types/__init__.py,sha256=kFPZ5LdsXdJXpnjIJzarO1X41vccai7A-XnAeravVJU,200
+coinbase/response_types/buy_price.py,sha256=N8HhiEHgYzXbphog4vhII94wwooApIMth1aKyicRR5A,139
+coinbase/response_types/currency_price.py,sha256=iWTKfsUwXdXvJVLkv_J-LcJQns0b80KXcPQ8mD2NWkQ,148
+coinbase/response_types/sell_price.py,sha256=zTEf9C0T22EtxGv6OT98McVAU8JlxPEg52B_s7bsHo4,140
+coinbase/response_types/server_time.py,sha256=c4_nyrZD9Ol83BgcMkT9jIM-3AZJ9aIy1q2UsqgUH48,128
+coinbase/response_types/spot_price.py,sha256=ArG9HImn1TW8uaH8DXqk2H6PyZcK6rTlR-XiY2FSIqY,140
+myb_coinbase_api-1.0.0.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+myb_coinbase_api-1.0.0.dist-info/METADATA,sha256=r_pTNITTY9I7iM7JLXYR3_RyUKtNrqs-MgZ3PHEhsrc,2814
+myb_coinbase_api-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+myb_coinbase_api-1.0.0.dist-info/top_level.txt,sha256=FqvpAFFmdtS4-fOxSmRS40U0UFmzzf6C3YI0Hfc3n80,9
+myb_coinbase_api-1.0.0.dist-info/RECORD,,
