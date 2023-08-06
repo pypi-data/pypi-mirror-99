@@ -1,0 +1,10 @@
+filefinder/__init__.py,sha256=rPVaTX36tEm-N_8zXHVl5KHPtBcYA9TDyV-UOiepIBs,79
+filefinder/finder.py,sha256=psXrmLewXz9waN_8FZHnGUhALpbyI2kHoZvxoJNs1_Y,18236
+filefinder/format.py,sha256=ym0I8iBdjBJdQ6taa5jEPz8iZ8oHBGYNaz3i86dgyCQ,7365
+filefinder/library.py,sha256=zIh7S-X_OU6YQ9AtZNg4glR-HwSHjO_tiWofqm9Cv4g,3681
+filefinder/matcher.py,sha256=56_thzfsEY-PbuM_3uVEoy1qcenPA2rewyQzOSUKxAo,8731
+filefinder-0.3.0.dist-info/LICENSE,sha256=P7xQ6OaUzYtP6pXL8fJfnEj5wGBrdUqmmi9IJzcwTa4,1072
+filefinder-0.3.0.dist-info/METADATA,sha256=hhuk0hYBhRrOyqY1a6cPnvXyz3J_vshM4Kt3wSuHYjA,2841
+filefinder-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+filefinder-0.3.0.dist-info/top_level.txt,sha256=tZWXmjHO2lgxz9glEmXG3Qg7pKbSLoUUeAVY0oqmN3c,11
+filefinder-0.3.0.dist-info/RECORD,,
