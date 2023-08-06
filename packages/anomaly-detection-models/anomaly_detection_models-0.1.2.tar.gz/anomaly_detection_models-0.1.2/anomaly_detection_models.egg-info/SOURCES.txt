@@ -1,0 +1,9 @@
+README.md
+anomaly_detection_models.py
+pyproject.toml
+setup.py
+anomaly_detection_models.egg-info/PKG-INFO
+anomaly_detection_models.egg-info/SOURCES.txt
+anomaly_detection_models.egg-info/dependency_links.txt
+anomaly_detection_models.egg-info/requires.txt
+anomaly_detection_models.egg-info/top_level.txt
