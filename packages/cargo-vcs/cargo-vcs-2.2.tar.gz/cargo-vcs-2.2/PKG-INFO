@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cargo-vcs
+Version: 2.2
+Summary: Print the content of `.cargo_vcs_info.json` in the downloaded `.crate` file.
+Home-page: https://github.com/weaming/cargo-vcs
+Author: weaming
+Author-email: garden.yuen@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/weaming/cargo-vcs
+Project-URL: Source, https://github.com/weaming/cargo-vcs
+Description: # cargo-vcs
+        
+        Print the content of `.cargo_vcs_info.json` in the downloaded `.crate` file.
+Keywords: cli,develop,cargo
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
