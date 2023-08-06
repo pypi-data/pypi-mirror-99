@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: crystal-bases
+Version: 0.1.0
+Summary: 
+Author: njuve
+Author-email: ale.nnn.r@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: dataclasses (>=0.7,<0.8); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: matplotlib (>=3.3.4,<4.0.0)
+Requires-Dist: networkx (>=2.5,<3.0)
+Requires-Dist: typing (>=3.7.4,<4.0.0)
