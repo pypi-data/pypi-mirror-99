@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ampel-photometry
+Version: 0.7.1a1
+Summary: Photometry add-on for the Ampel system
+License: BSD-3-Clause
+Author: Valery Brinnel
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=3.5.1,<4.0.0); extra == "docs"
+Requires-Dist: ampel-core (>=0.7.1-alpha.0,<0.8.0)
+Requires-Dist: ampel-interface (>=0.7.1-alpha.7,<0.8.0)
+Requires-Dist: sphinx-autodoc-typehints (>=1.11.1,<2.0.0); extra == "docs"
+Requires-Dist: tomlkit (>=0.7.0,<0.8.0); extra == "docs"
