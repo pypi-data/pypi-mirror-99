@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+comicmeteor/__init__.py
+comicmeteor/descramble.py
+comicmeteor/retrieve.py
+comicmeteor.egg-info/PKG-INFO
+comicmeteor.egg-info/SOURCES.txt
+comicmeteor.egg-info/dependency_links.txt
+comicmeteor.egg-info/top_level.txt
