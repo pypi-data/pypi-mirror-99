@@ -1,0 +1,9 @@
+README.md
+setup.py
+omninet_pytorch/__init__.py
+omninet_pytorch/omninet_pytorch.py
+omninet_pytorch.egg-info/PKG-INFO
+omninet_pytorch.egg-info/SOURCES.txt
+omninet_pytorch.egg-info/dependency_links.txt
+omninet_pytorch.egg-info/requires.txt
+omninet_pytorch.egg-info/top_level.txt
