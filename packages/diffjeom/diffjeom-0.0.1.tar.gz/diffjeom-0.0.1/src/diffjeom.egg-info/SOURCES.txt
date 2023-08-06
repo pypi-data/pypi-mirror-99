@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/diffjeom/__init__.py
+src/diffjeom.egg-info/PKG-INFO
+src/diffjeom.egg-info/SOURCES.txt
+src/diffjeom.egg-info/dependency_links.txt
+src/diffjeom.egg-info/requires.txt
+src/diffjeom.egg-info/top_level.txt
