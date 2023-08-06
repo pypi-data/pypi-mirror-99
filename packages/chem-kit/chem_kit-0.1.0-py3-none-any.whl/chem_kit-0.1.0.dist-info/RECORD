@@ -1,0 +1,9 @@
+chem_kit/__init__.py,sha256=JC0vVU49K2ymYYWRdSU9E0vKef0TqbudquAbWa4KpEM,220
+chem_kit/chem_doodle.py,sha256=0mSXsGg_ADKm_H29C3VTCDCTYC7vkCo4LNDQvZdXEDY,6459
+chem_kit/molecule.py,sha256=TSVNiOSVviT6KWNFNr45FqMqQKrTYs_SG2CX1JP3NYI,5704
+chem_kit/transformation.py,sha256=YYX7t0hX6_Tb0Gm8Nem8SDjybfYzmoq_zArCGX2FQKI,7189
+chem_kit/transformation_reductor.py,sha256=eLH7cAfwIFWDRhRrK0Gi-IdL4l_J3n4yXeif3CTDh2I,7592
+chem_kit-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+chem_kit-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+chem_kit-0.1.0.dist-info/METADATA,sha256=1zsFy4ZNaLwMmjU4Wj34FlQNOHDrlSTP9o7ozUqrCuA,449
+chem_kit-0.1.0.dist-info/RECORD,,
