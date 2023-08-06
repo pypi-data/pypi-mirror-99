@@ -1,0 +1,4 @@
+[console_scripts]
+cg-duedates = scripts.dueDatesFromCSV:main
+cg-multichoice = scripts.upload_MC_questions:main
+
