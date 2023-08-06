@@ -1,0 +1,3 @@
+[console_scripts]
+py_game_of_life = pygameoflife.__main__:main
+

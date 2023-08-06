@@ -1,0 +1,11 @@
+README.md
+setup.py
+py_game_of_life.egg-info/PKG-INFO
+py_game_of_life.egg-info/SOURCES.txt
+py_game_of_life.egg-info/dependency_links.txt
+py_game_of_life.egg-info/entry_points.txt
+py_game_of_life.egg-info/not-zip-safe
+py_game_of_life.egg-info/requires.txt
+py_game_of_life.egg-info/top_level.txt
+pygameoflife/__main__.py
+pygameoflife/py_game_of_life.py
