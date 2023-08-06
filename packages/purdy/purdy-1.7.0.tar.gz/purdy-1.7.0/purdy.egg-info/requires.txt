@@ -1,0 +1,4 @@
+asttokens>=2.0.4
+Pygments>=2.8.1
+urwid>=2.0.1
+colored>=1.4.2
