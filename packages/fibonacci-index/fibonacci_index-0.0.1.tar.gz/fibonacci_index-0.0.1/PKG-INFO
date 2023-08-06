@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: fibonacci_index
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/ifcassianasl/fibonacci-index
+Author: Cassiana Silveira
+Author-email: cassianasilveira64@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ifcassianasl/fibonacci-index/issues
+Description: # Fibonacci index
+        
+        ## Como usar
+        
+        ### Install
+        
+        ```
+            pip install fibonacci_index
+        ```
+        
+        ### Use
+        
+        ```
+            from fibonacci_index import fibonacci_index
+        
+            index = fibonacci_index.sum(<number>)
+        ```
+        
+        ### Example
+        ```
+            import fibonacci_index
+        
+            index = fibonacci_index.sum(5)
+        
+            print(index)
+            # 5
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

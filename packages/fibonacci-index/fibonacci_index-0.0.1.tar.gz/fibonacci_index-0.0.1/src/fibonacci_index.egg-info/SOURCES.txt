@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/fibonacci_index/__init__.py
+src/fibonacci_index/fibonacci_index.py
+src/fibonacci_index.egg-info/PKG-INFO
+src/fibonacci_index.egg-info/SOURCES.txt
+src/fibonacci_index.egg-info/dependency_links.txt
+src/fibonacci_index.egg-info/top_level.txt
