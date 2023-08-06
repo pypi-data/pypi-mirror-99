@@ -1,0 +1,10 @@
+README.md
+setup.py
+usim800_hamilkar/Communicate.py
+usim800_hamilkar/__init__.py
+usim800_hamilkar/usim800_hamilkar.py
+usim800_hamilkar.egg-info/PKG-INFO
+usim800_hamilkar.egg-info/SOURCES.txt
+usim800_hamilkar.egg-info/dependency_links.txt
+usim800_hamilkar.egg-info/requires.txt
+usim800_hamilkar.egg-info/top_level.txt
