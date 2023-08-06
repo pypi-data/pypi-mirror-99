@@ -1,0 +1,12 @@
+pybaselines/__init__.py,sha256=harjDoQ26xUFU84JqnvNrch93JzPZtNWA7eVOQnqkHs,1706
+pybaselines/baselines.py,sha256=BORrujQCAP5EWVkUXpb6kiYVBWgO8uAXE_TgRRWSVH8,9081
+pybaselines/morphological.py,sha256=22ktzBgI6r-Mboau0LZkllfzyp5dVq3RsNnpTlKn5ow,20053
+pybaselines/penalized_least_squares.py,sha256=8oag98Tshkbid0RIVpDph3gK6j5hTCNIWcAr5WmgBvE,16296
+pybaselines/polynomial.py,sha256=_iri69dRPq6qI86icbp00zwVHdJKRLUo32S5f5Q2cOA,11414
+pybaselines/utils.py,sha256=-anzRkOcnM6N6oGq9PeaWBC7i0kcRF81lbmEsXzXu_A,11422
+pybaselines/window.py,sha256=ALyk_ErEtCYQ_zFUIT5G91bFp1S2IcGi9dUKPvTVw0U,5609
+pybaselines-0.1.0.dist-info/LICENSE.txt,sha256=N4W6uUrhKmuG-A0W194-LibdBrbNAEpVHtzxAgCIezs,1547
+pybaselines-0.1.0.dist-info/METADATA,sha256=13-0bdWAsJrYCE3fBV5uYVgB6sEjmp2BdUWkrSwrWmE,5448
+pybaselines-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pybaselines-0.1.0.dist-info/top_level.txt,sha256=xQ1ELLFlPN2oLLFejtcxzT_V0BQsBN2uo2E0k46sHrc,12
+pybaselines-0.1.0.dist-info/RECORD,,
