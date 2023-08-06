@@ -1,0 +1,8 @@
+README.md
+setup.py
+gobbletgobblers/__init__.py
+gobbletgobblers/__main__.py
+gobbletgobblers.py.egg-info/PKG-INFO
+gobbletgobblers.py.egg-info/SOURCES.txt
+gobbletgobblers.py.egg-info/dependency_links.txt
+gobbletgobblers.py.egg-info/top_level.txt
