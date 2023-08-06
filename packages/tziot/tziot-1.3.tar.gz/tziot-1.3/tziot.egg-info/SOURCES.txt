@@ -1,0 +1,15 @@
+README.md
+setup.py
+tziot/__init__.py
+tziot/apply.py
+tziot/config.py
+tziot/conn.py
+tziot/fdcom.py
+tziot/fpipe.py
+tziot/parsecmp.py
+tziot/standardlayer.py
+tziot/tziot.py
+tziot.egg-info/PKG-INFO
+tziot.egg-info/SOURCES.txt
+tziot.egg-info/dependency_links.txt
+tziot.egg-info/top_level.txt
