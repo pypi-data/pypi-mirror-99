@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------------
+Eikon Data API Package Changes Log
+-------------------------------------------------------------------------------------
+
+Release Summary:
+
+Release 1.1.10, March 21, 2021
+    - restricted websocket-client version to be less than 0.58.0.
+    
+Release 1.1.9, March 10, 2021
+    - Fix bug with on_complete callback in StreamingPrices.
+    - Fix error when get_data return empty result.
+    - Remove limit on httpx and set minimal version on nest-asyncio to 1.5.1 because it contains a bug fix.
+
+Release 1.1.8, November 24, 2020
+    - Fix error on story decoding with webURL or viewURL (but not storyHML)
+    - Manage news query with embedded string with "" (need to be transformed with simple quote) 
+    - allow httpx to manage redirected urls
+    
+Release 1.1.7, October 16, 2020
+    - add with_updates argument for open/open_async methods.
+
+Release 1.1.6.post3, September 24, 2020
+    - fix issue caused by httpx change (Request class: prepare() was renamed _prepare())
+
+Release 1.1.6.post1 & 1.1.6.post2, September 13, 2020
+    - fix issue when detect empty timeseries
+    - fix AttributeError: 'Response object has no attribute 'reason'
+
+Release 1.1.6, September 11, 2020
+    - To fix frozen issues with Python 3.8+: replace http3 + requests-async with httpx
+    - allow call to set_log_level() before set_app_key() to log all from the beginning
+    - test empty DataFrame and Numpy array with empty property
+    - restore name in get_timeseries() result when request 1 instrument
+
+Release 1.1.5, August 20, 2020
+    - Protect from error in pandas.convert_dtypes() when result is empty.
+
+Release 1.1.4, August 16, 2020
+    - deprecate set_port_number : port number is retrieved from desktop.
+    - no more create default log file until user call set_log_level().
+    - change call to pandas.np for direct call to numpy.
+    - Update minimal version for dependencies.
+    - Fixed minor bugs.
+    - all returned DataFrames contain typed data (no more default object type).
+      Example:
+            df, err = get_data('GOOG.O', ["BID", "ASK", "VOLUME"]
+            print(df.dtypes)
+            Before :
+                Instrument  object
+                BID         float64
+                ASK         float64
+                VOLUME      float64
+            After:
+            Before :
+                Instrument  string
+                BID         float64
+                ASK         float64
+                VOLUME      Int64
+
+Release 1.1.2, Feb 7, 2020
+    - Added streaming API.
+    - Update minimal version for dependencies.
+    - Fix Exception when result is empty.
+    - Fix undefined lipperId type in get_symbology().
+    - Fix Error when get_timeseries() on different RICs.
