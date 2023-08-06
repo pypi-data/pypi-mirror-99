@@ -1,0 +1,5 @@
+numpy
+
+[full]
+pykeops[full]
+cmake>=3.18
