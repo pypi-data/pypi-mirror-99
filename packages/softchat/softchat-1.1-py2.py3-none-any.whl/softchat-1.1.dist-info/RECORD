@@ -1,0 +1,13 @@
+softchat/__init__.py,sha256=aIp5lRDEX_mBhkIwmn5ZO1Cnl-q1kcHjJsTjZCCZj4A,6
+softchat/__main__.py,sha256=ia-SpvEQtZSoB_tSt0p0r4cH-x0BQPkAQkdViYmTlf0,44443
+softchat/ass.py,sha256=6m9OYL_7RHNRhuaKjq6uWojFDguXVTvDIyyA03C4Mns,2038
+softchat/fff.py,sha256=CK2V4quWZtssY8pHOPckl1aa03VrUYpP9LzNAlQjJgo,2493
+softchat/mproc.py,sha256=P30eUESDEH4u6DabJxN7o_fMMXA2WmnKkddPrB8EcJQ,12138
+softchat/the_test.py,sha256=__zMj4T8C27jYX90VZlFc1o_bLdwNfaq9LUKPhhXNXg,909
+softchat/util.py,sha256=nA3zJGTat7wiSiJ3jhKMRvcpKQaVkKBbKKzrL7w5abs,7998
+softchat-1.1.dist-info/LICENSE,sha256=qhumo7pVH2VszMxXQrKPp2OXnDXiwYTU0SViSHxCs4M,1059
+softchat-1.1.dist-info/METADATA,sha256=CjBdCDRS0JQi-bOPFlc4e-BrdZyXl70boxiFM0q5M3k,6189
+softchat-1.1.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+softchat-1.1.dist-info/entry_points.txt,sha256=VdvaSBf1Jm0syNb-Yz5AQWlO71RLfUqCRCbwxqDSw48,53
+softchat-1.1.dist-info/top_level.txt,sha256=Ia33WqwLJOlIPLP_XRC1_k7ij168XW6UsjI8mFYcIyg,9
+softchat-1.1.dist-info/RECORD,,
