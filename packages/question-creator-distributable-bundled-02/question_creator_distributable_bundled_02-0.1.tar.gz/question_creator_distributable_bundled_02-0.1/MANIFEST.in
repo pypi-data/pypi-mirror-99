@@ -1,0 +1,14 @@
+include *.md
+recursive-include question_creator_distributable_bundled_02 *.png
+recursive-include question_creator_distributable_bundled_02 *.ico
+recursive-include question_creator_distributable_bundled_02 *.txt
+recursive-include question_creator_distributable_bundled_02 *.js
+recursive-include question_creator_distributable_bundled_02 *.html
+recursive-include question_creator_distributable_bundled_02 *.json
+recursive-include question_creator_distributable_bundled_02 *.css
+recursive-include question_creator_distributable_bundled_02 *.map
+recursive-include question_creator_distributable_bundled_02 *.woff
+recursive-include question_creator_distributable_bundled_02 *.woff2
+recursive-include question_creator_distributable_bundled_02 *.ttf
+recursive-include question_creator_distributable_bundled_02 *.ttf
+recursive-include question_creator_distributable_bundled_02 *.sqlite3
