@@ -1,0 +1,17 @@
+clouderizer_beta/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clouderizer_beta/README,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clouderizer_beta/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+clouderizer_beta/cldz_aws_lambda.py,sha256=e-UtnN4xL2_qrh_uYY2vGo5B8CvOT4ny4aqznn6AbIM,6331
+clouderizer_beta/cldz_cli.py,sha256=Cwv5eeSdm9t7K8r0P2kzFD94vvPWexXo3V5n6IYs8DM,57001
+clouderizer_beta/dockerfiles/AutomlDockerfile,sha256=MjR5ka6JW0X4I0lO5GhU4JRIZS-h3WNvPJ5C1AFwFtQ,117
+clouderizer_beta/operator_this.py,sha256=u9h4n62R3_kjxflgdBmNc9iLJ2vT13LTf5HXcxZn51A,25115
+clouderizer_beta/pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clouderizer_beta/project.toml,sha256=R4_Sys6WqRPCluVwm-TrEAQiD5B08atzO3YGKezGO90,105
+clouderizer_beta/setup.cfg,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clouderizer_beta/setup.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clouderizer_beta/template.yaml,sha256=9YMo2CvGiqy4gFxD72NQkkkXRAvC5NNcDYmWlEU7hq8,995
+clouderizer_beta/utils.py,sha256=mg16I-HOegy56LrVLKCTqpm5nmjlE0-iZHUcxaLH2gs,14788
+clouderizer_beta-0.0.3.dist-info/entry_points.txt,sha256=pFPGHguf8yR49jFMYYgC9-nT8Qxyp88-mjgNPvDvUWY,56
+clouderizer_beta-0.0.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+clouderizer_beta-0.0.3.dist-info/METADATA,sha256=g8X0sqTMar2eDxd6yrdbuOXdMYoiABdocuV3pSbgOvM,756
+clouderizer_beta-0.0.3.dist-info/RECORD,,
