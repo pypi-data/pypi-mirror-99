@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: testing-tool-theg
+Version: 0.0.3
+Summary: A simple testing tool for python Epita THEG class.
+Home-page: https://github.com/yxyfer/simple_testing_tool_python
+Author: yxyfer
+Author-email: riviermathieu@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/yxyfer/simple_testing_tool_python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Testing Tool THEG
+
+This is a simple package to test your THEG code
+[REPO](https://github.com/yxyfer/simple_testing_tool_python/issues).
+
+
+Usage:
+	- Check value : your_instance(exp, got)
+	- Get Results : your_instance(0,0,True)
+
+Example:
+```python
+from testing_tool_theg import *
+
+your_instance = checker()
+
+your_instance(1, 1)
+your_instance(1, 1)
+your_instance(1, 1)
+your_instance(1, 2) # Made a mistake
+your_instance(1, 1)
+
+
+
+your_instance(0, 0, True) # Give you an overview of your results
+```
+
+Output:
+```shhell
+Usage:
+	- Check value : your_instance(exp, got)
+	- Get Results : your_instance(0,0,True)
+Test     : 01
+
+Expected : 1
+got      : 1
+
+
+Test     : 02
+
+Expected : 1
+got      : 1
+
+Test     : 03
+
+Expected : 1
+got      : 1
+
+
+Test     : 04
+
+Expected : 1
+got      : 2
+
+
+Test     : 05
+
+Expected : 1
+got      : 1
+
+
+
+
+test 01: [PASS]
+test 02: [PASS]
+test 03: [PASS]
+test 04: [FAIL]
+test 05: [PASS]
+
+Some tests have failed
+Out[5]:
+[FAIL]
+```
+
