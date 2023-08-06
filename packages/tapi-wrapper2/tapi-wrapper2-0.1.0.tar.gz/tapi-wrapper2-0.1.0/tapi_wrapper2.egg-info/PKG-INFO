@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: tapi-wrapper2
+Version: 0.1.0
+Summary: Python API client generator
+Home-page: https://github.com/pavelmaksimov/tapi-wrapper
+Author: Filipe Ximenes
+Author-email: filipeximenes@gmail.com
+License: MIT
+Description: # Tapi-Wrapper
+        ![Supported Python Versions](https://img.shields.io/static/v1?label=python&message=>=3.5&color=red)
+        [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vintasoftware/tapioca-wrapper/master/LICENSE)
+        [![Downloads](https://pepy.tech/badge/tapi-wrapper)](https://pepy.tech/project/tapi-yandex-metrika)
+        <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+        
+        Tapioca helps you generating Python clients for APIs.
+        APIs wrapped by Tapioca are explorable and follow a simple interaction pattern that works uniformly so developers don't need to learn how to use a new coding interface/style for each service API.
+        
+        
+        ### Api examples
+        [Yandex Metrika API](https://github.com/pavelmaksimov/tapi-yandex-metrika)
+        
+        [Yandex Direct API](https://github.com/pavelmaksimov/tapi-yandex-direct)
+        
+        
+        ### Installed
+            pip install tapi-wrapper2==0.1.0
+        
+        
+        ### Help
+        [Телеграм](https://t.me/pavel_maksimow),
+        [Facebook](https://www.facebook.com/pavel.maksimow)
+        
+        ### Authors
+        The author of this modification Pavel Maksimov
+        ___
+        Powered by [Tapioca-Wrapper](https://github.com/vintasoftware/tapi-wrapper)
+        
+        Copyright (c) 2013-2015 Vinta Software
+Keywords: tapi,wrapper,api
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

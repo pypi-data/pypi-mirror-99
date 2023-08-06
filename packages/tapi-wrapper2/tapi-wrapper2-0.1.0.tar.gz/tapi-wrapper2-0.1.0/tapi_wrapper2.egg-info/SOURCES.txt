@@ -1,0 +1,13 @@
+README.md
+setup.py
+tapi2/__init__.py
+tapi2/adapters.py
+tapi2/exceptions.py
+tapi2/serializers.py
+tapi2/tapi.py
+tapi_wrapper2.egg-info/PKG-INFO
+tapi_wrapper2.egg-info/SOURCES.txt
+tapi_wrapper2.egg-info/dependency_links.txt
+tapi_wrapper2.egg-info/not-zip-safe
+tapi_wrapper2.egg-info/requires.txt
+tapi_wrapper2.egg-info/top_level.txt
