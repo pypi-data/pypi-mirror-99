@@ -1,0 +1,14 @@
+aflr/__init__.py,sha256=fBUkBZ8ZP4biaytKLBNThGfW0qN8KSThKo6gOZLLsUc,563
+aflr/api_request.py,sha256=UhZG0CShV6kywW2Vi4icB5Dh0vXWj_smOadxoZMr8dI,1839
+aflr/api_resources/__init__.py,sha256=05PTuJ10lk73UGXVC4MBge7RvHI4xjhREpVVNwUvmUM,227
+aflr/api_resources/file.py,sha256=U7s-k7TlQiNU3AQQzveyO3cmzUD3Z131VjsFuVckG3I,405
+aflr/api_resources/mastering.py,sha256=v3pAV218XyXX3aNuuCULM6jzvfd1iusGbNH30p9lxzU,999
+aflr/api_resources/script.py,sha256=SacD6jsj6Ya-kKWXYCn7mSxbZb1xrNXXplPGd8IzNTU,834
+aflr/api_resources/sound.py,sha256=mrM7AV4iUEWomM6eCH_CB3WhUvfzd42tv3VJQ0rcyug,1069
+aflr/api_resources/speech.py,sha256=P4rnnOabNCQwzhOM1WHZO2z5hgSdEL8R4LWALLhiiNc,1212
+aflr/api_resources/voice.py,sha256=HSzIjfe565bYjZeAkCtMhNXkOXRCY4XLfYNWOuJw4h8,291
+aflr-0.3.0.dist-info/LICENSE,sha256=9w-xuzBdanN7il0XxJZFXbzrIczpEdm6WmPYqxGHvJQ,1098
+aflr-0.3.0.dist-info/METADATA,sha256=UfCI_OdFisR-0pGIBNHqjUeBOu3wMRxOUS5h0IguVM4,12703
+aflr-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aflr-0.3.0.dist-info/top_level.txt,sha256=swykEftFhBngu1HrsPm29vhNW0rowxCySC2lKdOAaWs,5
+aflr-0.3.0.dist-info/RECORD,,
