@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: deepee
+Version: 0.1.8
+Summary: Fast (and cheeky) differentially private gradient-based optimisation in PyTorch
+Home-page: https://github.com/gkaissis/deepee
+License: Apache-2.0
+Author: Georgios Kaissis
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/gkaissis/deepee
+Description-Content-Type: text/markdown
+
+# deepee: Fast (and cheeky) differentially private gradient-based optimisation in PyTorch
+
+> From the creators of PriMIA
+
+
