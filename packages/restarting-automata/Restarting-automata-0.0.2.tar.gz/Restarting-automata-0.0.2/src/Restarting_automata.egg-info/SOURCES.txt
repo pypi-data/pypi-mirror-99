@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+src/Automata_lib/__init__.py
+src/Automata_lib/automata_class.py
+src/Automata_lib/text_automata_class.py
+src/Restarting_automata.egg-info/PKG-INFO
+src/Restarting_automata.egg-info/SOURCES.txt
+src/Restarting_automata.egg-info/dependency_links.txt
+src/Restarting_automata.egg-info/top_level.txt
