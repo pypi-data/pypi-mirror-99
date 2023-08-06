@@ -1,0 +1,3 @@
+[console_scripts]
+gh-action-docs=gh_action_docs.app:main
+
