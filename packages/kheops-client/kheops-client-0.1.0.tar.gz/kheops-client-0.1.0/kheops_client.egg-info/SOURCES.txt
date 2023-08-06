@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+kheops_client/__init__.py
+kheops_client/__main__.py
+kheops_client/_client.py
+kheops_client/_utils.py
+kheops_client.egg-info/PKG-INFO
+kheops_client.egg-info/SOURCES.txt
+kheops_client.egg-info/dependency_links.txt
+kheops_client.egg-info/entry_points.txt
+kheops_client.egg-info/requires.txt
+kheops_client.egg-info/top_level.txt
