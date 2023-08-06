@@ -1,0 +1,16 @@
+climateforcing/__init__.py,sha256=JOl41NviMN-qDV0Z8ZPmhNIxvgyauGGJHdB4A-8MhqM,93
+climateforcing/_version.py,sha256=dbyseboXIKtgUxZeEmIhCE-xiOzsmGsTp80ZrtNxb24,497
+climateforcing/constants.py,sha256=kH0iMRvhcck5zcqG1441F2e7JwC4sIoZrdie6fx8qlA,134
+climateforcing/aprp/__init__.py,sha256=X4o3MdmrfrFpeiwjDc3d-qPIhmy5vISypvIh0dN_o1I,113
+climateforcing/aprp/aprp.py,sha256=fWvNFXbLhFNCZ6fTLzxUSmw2U4HmyM-QRuBBsgphKGY,21827
+climateforcing/atmos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+climateforcing/atmos/humidity.py,sha256=hCJq90YPziPup0eQHi2h55DV37N3M3PKKGIsW5mVRFA,1656
+climateforcing/twolayermodel/__init__.py,sha256=CmoB64UAQqHkO96keSEoy2QLHlcL72HpJLR2QAorfBQ,15228
+climateforcing/utci/__init__.py,sha256=YwfwZ876r1pzvj9KrJ_4MsWGq6B3bLBMIQBO7lcbsrs,158
+climateforcing/utci/tmrt.py,sha256=qlXsVKchIavaZ9aJNltj-h8_0N9mgYmkGkHnBSQqAHk,2683
+climateforcing/utci/utci.py,sha256=1cyULqdhiQk99U2Q9mkUDJdU2q2QlnAUy5iZTvZ-Usg,17629
+climateforcing-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+climateforcing-0.1.0.dist-info/METADATA,sha256=tp664-BZmHMqkPcJyeKzAI06QsNhjfFeoytofcbq7iA,5474
+climateforcing-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+climateforcing-0.1.0.dist-info/top_level.txt,sha256=77617A-3BJtMiZnqwEli-d7tLKSbGypqcp6t142MGJ0,15
+climateforcing-0.1.0.dist-info/RECORD,,
