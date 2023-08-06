@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/typegenie/__init__.py
+src/typegenie/api.py
+src/typegenie/lib.py
+src/typegenie.egg-info/PKG-INFO
+src/typegenie.egg-info/SOURCES.txt
+src/typegenie.egg-info/dependency_links.txt
+src/typegenie.egg-info/requires.txt
+src/typegenie.egg-info/top_level.txt
