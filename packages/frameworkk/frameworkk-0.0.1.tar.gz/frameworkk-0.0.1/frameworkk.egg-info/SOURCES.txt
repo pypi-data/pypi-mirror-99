@@ -1,0 +1,10 @@
+setup.py
+frameworkk/__init__.py
+frameworkk/api.py
+frameworkk/middleware.py
+frameworkk/response.py
+frameworkk.egg-info/PKG-INFO
+frameworkk.egg-info/SOURCES.txt
+frameworkk.egg-info/dependency_links.txt
+frameworkk.egg-info/requires.txt
+frameworkk.egg-info/top_level.txt
