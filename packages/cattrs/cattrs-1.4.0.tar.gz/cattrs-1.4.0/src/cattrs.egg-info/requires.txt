@@ -1,0 +1,16 @@
+attrs>=20.1.0
+
+[dev]
+bumpversion
+wheel
+watchdog
+flake8
+tox
+coverage
+Sphinx
+pytest
+pytest-benchmark
+hypothesis
+pendulum
+isort
+black
