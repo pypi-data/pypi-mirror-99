@@ -1,0 +1,9 @@
+ftp_loader/__init__.py,sha256=rxAFH9hknkN8yiAnEm3eAyFLD9j85l6nArKZbydlw3E,52
+ftp_loader/loader.py,sha256=uWX18bylwZtSqaL4ERevYb71kxo7kplo1w4QNrmJ5O0,8987
+ftp_loader/main.py,sha256=HbK6BUHQhtDKbZawQQpKvik0UJ7BWqYF_Zf5JKXQ12I,3584
+ftp_loader-0.2.1.dist-info/LICENSE.txt,sha256=tRx2YBP8OVmcemfcQe-qZocVjx4PVnjdP7Sb6FZTlUU,1090
+ftp_loader-0.2.1.dist-info/METADATA,sha256=ng-MYqO9ow3HHk9eZVP0o5GdCfcnFduZkdawWxbjjrs,2384
+ftp_loader-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ftp_loader-0.2.1.dist-info/entry_points.txt,sha256=-mXmUk6PfxoRomupuXLPEUUZTA6M6AZr_6z9GEg5Kio,48
+ftp_loader-0.2.1.dist-info/top_level.txt,sha256=depDQeTbXeOCaRzB30z3-w89mj-ZAdCxfc7T7clCG4M,11
+ftp_loader-0.2.1.dist-info/RECORD,,
