@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+dewil/__init__.py
+dewil.egg-info/PKG-INFO
+dewil.egg-info/SOURCES.txt
+dewil.egg-info/dependency_links.txt
+dewil.egg-info/top_level.txt

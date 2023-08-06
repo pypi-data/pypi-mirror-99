@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dewil
+Version: 0.1.1a0
+Summary: UNKNOWN
+Home-page: http://example.com
+Author: nobody
+Author-email: nobody@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
