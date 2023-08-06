@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: xchainpy_client
+Version: 0.1
+Summary: A specification for a generalised interface for crypto wallets clients, to be used by XChainPY implementations
+Home-page: https://github.com/xchainjs/xchainpy-lib
+Author: THORChain
+Author-email: None
