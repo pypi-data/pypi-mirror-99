@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ARPkeras/__init__.py
+ARPkeras/autorotating_conv.py
+ARPkeras/autorotating_dense.py
+arpkeras.egg-info/PKG-INFO
+arpkeras.egg-info/SOURCES.txt
+arpkeras.egg-info/dependency_links.txt
+arpkeras.egg-info/top_level.txt
