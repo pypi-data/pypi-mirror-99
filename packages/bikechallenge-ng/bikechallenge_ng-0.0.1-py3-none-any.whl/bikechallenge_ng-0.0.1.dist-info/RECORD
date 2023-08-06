@@ -1,0 +1,10 @@
+prediction/__init__.py,sha256=EX5W3WV46oP2YbaRnFcgmsT5tGLbmr_z8QrvZxy_n3Q,107
+prediction/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prediction/io/load_data.py,sha256=dJORO8038y5C9VOAG5pDbsKaLZFF5KQt9LKAvXqDku0,308
+prediction/preprocess/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prediction/preprocess/bikeformat.py,sha256=kXUvBQWcPmpSO-ma8bW-SCxbawSjxum8xmo_qZq3STM,438
+prediction/vis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bikechallenge_ng-0.0.1.dist-info/METADATA,sha256=AiKwoZSgdFOnCIXtooyA1b06F4ybNBtBQlsHSVGXpQY,288
+bikechallenge_ng-0.0.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+bikechallenge_ng-0.0.1.dist-info/top_level.txt,sha256=C-I58G3Gd1ezEJ2Ub3xqEH9rQmOWqBZtnQoNwAVxfN8,11
+bikechallenge_ng-0.0.1.dist-info/RECORD,,
