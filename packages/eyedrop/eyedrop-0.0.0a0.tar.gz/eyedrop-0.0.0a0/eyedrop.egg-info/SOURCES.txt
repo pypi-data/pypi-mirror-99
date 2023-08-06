@@ -1,0 +1,12 @@
+README.md
+setup.py
+eyedrop/__init__.py
+eyedrop.egg-info/PKG-INFO
+eyedrop.egg-info/SOURCES.txt
+eyedrop.egg-info/dependency_links.txt
+eyedrop.egg-info/top_level.txt
+eyedrop/docs/__init__.py
+eyedrop/src/__init__.py
+eyedrop/test/__init__.py
+eyedrop/test/unit_test/__init__.py
+eyedrop/test/unit_test/test_everything.py
