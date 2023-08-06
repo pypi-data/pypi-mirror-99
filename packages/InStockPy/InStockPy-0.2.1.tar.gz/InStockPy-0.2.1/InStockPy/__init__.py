@@ -1,0 +1,1 @@
+from mainObjOriented import main
