@@ -1,0 +1,12 @@
+README.md
+setup.py
+archiver/__init__.py
+archiver/archive.py
+docker_volume_dump.egg-info/PKG-INFO
+docker_volume_dump.egg-info/SOURCES.txt
+docker_volume_dump.egg-info/dependency_links.txt
+docker_volume_dump.egg-info/entry_points.txt
+docker_volume_dump.egg-info/namespace_packages.txt
+docker_volume_dump.egg-info/not-zip-safe
+docker_volume_dump.egg-info/requires.txt
+docker_volume_dump.egg-info/top_level.txt
