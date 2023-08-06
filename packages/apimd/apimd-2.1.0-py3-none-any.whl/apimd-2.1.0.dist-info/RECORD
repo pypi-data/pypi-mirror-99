@@ -1,0 +1,13 @@
+apimd/__init__.py,sha256=lZAMvNIQYJIcA6-f3iK1TWvUBpu1g1SkHUf-PM2IK7Y,255
+apimd/__main__.py,sha256=-Or3ys1xPv7YTkKjiUY8wx7k5ZiSeppfa4ExqiOEQTY,1996
+apimd/loader.py,sha256=tVFzMquWoAU5ZsERJtkQUBoaMIhFLhArj2y4ilYP7dA,4485
+apimd/logger.py,sha256=g3HbPfw8wpo2KW11ck9Y-g-kUY8wHjl8oU0z2wnQR8c,445
+apimd/parser.py,sha256=0-j-6FkPk825Qkwrk22s4ePgilaZo0oORVtMXNpi9o8,21564
+apimd/pep585.py,sha256=yanncHrI2Mi0Wwew5lKHsQA-6aDPHuQ2jZRSk954sFk,2049
+apimd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apimd-2.1.0.dist-info/LICENSE,sha256=Nfcv5lyuuZb5F0ivbZuaNOj4douluwTxwdAy6ArQnTk,1066
+apimd-2.1.0.dist-info/METADATA,sha256=y8x9UF896Oe1f0P-ZC4_AJ0xBEp173HDS46_DzGsn3U,5789
+apimd-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apimd-2.1.0.dist-info/entry_points.txt,sha256=4OAMfxfPzAazV1-ljHF9zFvnA7w7a4j-9qEw5Z198CY,47
+apimd-2.1.0.dist-info/top_level.txt,sha256=gNrVDOfyz09yAAzyaXsLwovC7156qO2htS0hXUgJkDE,6
+apimd-2.1.0.dist-info/RECORD,,
