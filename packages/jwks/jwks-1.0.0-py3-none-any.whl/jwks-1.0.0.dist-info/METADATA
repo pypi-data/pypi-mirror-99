@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jwks
+Version: 1.0.0
+Summary: A lightweight Python library for using JSON Web Key Sets
+Home-page: https://github.com/marpaia/jwks
+Author: Mike Arpaia
+Author-email: mike@arpaia.co
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: jose
+Requires-Dist: pydantic
+Requires-Dist: requests
+
+# JWKS
+
+This repository contains a lightweight Python library for using JSON Web Key Sets in your application. See the [Auth0 docs](https://auth0.com/docs/tokens/json-web-tokens/json-web-key-sets) and [the spec](https://tools.ietf.org/html/rfc7517) for more information on JWKS.
+
+
