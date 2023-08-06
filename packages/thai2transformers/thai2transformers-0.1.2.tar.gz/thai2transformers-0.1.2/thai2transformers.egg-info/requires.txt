@@ -1,0 +1,14 @@
+torch>=1.5.0
+transformers==3.5.0
+sentencepiece==0.1.91
+emoji
+pythainlp>=2.2.4
+tqdm
+datasets>=1.2.1
+sefr_cut
+seqeval
+pytorch-lightning
+pydantic
+jsonlines
+tokenizers==0.9.3
+pandas
