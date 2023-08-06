@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pdf-gen
+Version: 0.0.1
+Summary: Pdf-file generator
+Home-page: https://github.com/vanya2535/pdf_gen
+Author: Desyatnikov I.S.
+Author-email: ncab_03@mail.ru
+License: UNKNOWN
+Platform: any
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: reportlab (>=3.5.65)
+
+It is a python package for pdf-file generation  
+Wrote by Desyatnikov Ivan Sergeevich IVT1-20
+
