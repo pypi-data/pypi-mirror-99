@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mauna-sdk
+Version: 0.1.0
+Summary: Mauna SDK
+License: ISC
+Author: Dmitry Paramonov
+Author-email: asmatic075@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cryptography (>=3.4.6,<4.0.0)
+Requires-Dist: gql[all] (==3.0.0a5)
+Requires-Dist: requests (>=2.25.1,<3.0.0)

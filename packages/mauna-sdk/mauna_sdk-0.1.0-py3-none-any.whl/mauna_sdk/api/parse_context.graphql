@@ -1,0 +1,10 @@
+query parseContext($turns: [ContextObject!]!) {
+  callParseContext(turns: $turns) {
+    context {
+      mentions {
+        evokes
+        phrase
+      }
+    }
+  }
+}

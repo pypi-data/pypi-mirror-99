@@ -1,0 +1,6 @@
+query paraphraseSentence($sentence: String!, $count: Int! = 3) {
+  callParaphraseSentence(input: $sentence, number_of_paraphrases: $count) {
+    paraphrases
+  }
+}
+
