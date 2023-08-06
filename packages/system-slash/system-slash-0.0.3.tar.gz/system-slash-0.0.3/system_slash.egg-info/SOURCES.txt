@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+SystemSlash/SystemSlash.py
+system_slash.egg-info/PKG-INFO
+system_slash.egg-info/SOURCES.txt
+system_slash.egg-info/dependency_links.txt
+system_slash.egg-info/top_level.txt
