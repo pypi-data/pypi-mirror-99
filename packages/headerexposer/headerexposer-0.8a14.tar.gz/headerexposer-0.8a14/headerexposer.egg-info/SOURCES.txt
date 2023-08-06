@@ -1,0 +1,10 @@
+README.md
+setup.py
+headerexposer/__init__.py
+headerexposer/__main__.py
+headerexposer.egg-info/PKG-INFO
+headerexposer.egg-info/SOURCES.txt
+headerexposer.egg-info/dependency_links.txt
+headerexposer.egg-info/entry_points.txt
+headerexposer.egg-info/requires.txt
+headerexposer.egg-info/top_level.txt
