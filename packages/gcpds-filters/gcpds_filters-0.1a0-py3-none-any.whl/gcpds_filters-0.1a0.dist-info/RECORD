@@ -1,0 +1,15 @@
+gcpds/filters/__init__.py,sha256=ajz1GSNU9xYVrFEDSz6Xwg7amWQ_yvW75tQa1ZvRIWc,3
+gcpds/filters/frequency.py,sha256=cwP8ID761GQpohGuawBl6TnKQkDteCRtslzRSbeG2Q0,11636
+gcpds/filters/spatial/CAR.py,sha256=JrjwKlyfleAEGJhuXrJY7WC1aBzR73yAC-pAWeeR1iE,642
+gcpds/filters/spatial/Ear_Reference.py,sha256=kv7-GpUekuAm20l8fxoEPAf5PRQI8iAVNvsMY40i_dE,24
+gcpds/filters/spatial/Large_laplacian.py,sha256=oMpNBikaC9E96RFZtrt1YLIZSJK92TwtzTZK6Zg0MDI,6849
+gcpds/filters/spatial/McFarland1997.pdf,sha256=6X8YuwNtisWij2q86mwCt4a4vfVtt_3Rg12gmuW-5AE,868118
+gcpds/filters/spatial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcpds/filters/spatial/laplacian.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcpds/filters/spatial/small_laplacian.py,sha256=PCsEejZK2JhS_aOTW_mM6fq56hy9XAt-3kon8UBuq7E,7236
+gcpds/filters/spectral/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcpds_filters-0.1a0.dist-info/LICENSE.txt,sha256=jbW5G3NLbKSccH02hDU_3TPWB2dyg6Onx0Awa9ggETM,1298
+gcpds_filters-0.1a0.dist-info/METADATA,sha256=3bC5ucmV3lj1G-LnW0uKr6-VfICmNxz2IEwKLuVQTjg,1438
+gcpds_filters-0.1a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gcpds_filters-0.1a0.dist-info/top_level.txt,sha256=c5Ju3Hjk6AePrcCLPGc8E9T1HqJzhC98qF1ItwDV89w,6
+gcpds_filters-0.1a0.dist-info/RECORD,,
