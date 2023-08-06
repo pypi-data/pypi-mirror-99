@@ -1,0 +1,2 @@
+include src/sqlparser/grammar/SqlBase.g4
+include LICENSE

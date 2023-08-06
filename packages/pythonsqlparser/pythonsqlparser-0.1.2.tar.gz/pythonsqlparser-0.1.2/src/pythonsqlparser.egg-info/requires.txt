@@ -1,0 +1,5 @@
+antlr4-python3-runtime==4.7.1
+
+[test]
+pylint~=2.5.0
+pytest
