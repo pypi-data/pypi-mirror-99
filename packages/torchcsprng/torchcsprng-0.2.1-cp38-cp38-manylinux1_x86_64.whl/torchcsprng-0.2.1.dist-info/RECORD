@@ -1,0 +1,8 @@
+torchcsprng/_C.cpython-38-x86_64-linux-gnu.so,sha256=K0Sm1mWQG7KzpYRFSjByzxljQVLRQ_AXg3_-5p7Dx4k,25831048
+torchcsprng/__init__.py,sha256=BFvLZutheDSNDYoCZRZQJfdoIuALwdyOysXx1Lvi6Vk,350
+torchcsprng/version.py,sha256=jS6AtYmxmvd36SRiyL3LY_iNgLtRA0tfk5RRwu4u0Kk,79
+torchcsprng-0.2.1.dist-info/LICENSE,sha256=GR7YbzaHJiN1XZrHxvcM7mtQW5bm9krOMJVzkTMXpbU,1515
+torchcsprng-0.2.1.dist-info/METADATA,sha256=M2fDLYOEL6Ll0Cn_mMa-HsrK3R0g96YtVMLzdrat7iM,19106
+torchcsprng-0.2.1.dist-info/WHEEL,sha256=TpFVeXF_cAlV118WSIPWtjqW7nPvzoOw-49FmS3fDKQ,103
+torchcsprng-0.2.1.dist-info/top_level.txt,sha256=jGmHF5edWEBOQVvx9m1S0Jy4CTPCQxYmdaFcNGwzJP0,12
+torchcsprng-0.2.1.dist-info/RECORD,,
