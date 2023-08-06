@@ -1,0 +1,3 @@
+[console_scripts]
+goto_http_redirect_server = goto_http_redirect_server.goto_http_redirect_server:main
+
