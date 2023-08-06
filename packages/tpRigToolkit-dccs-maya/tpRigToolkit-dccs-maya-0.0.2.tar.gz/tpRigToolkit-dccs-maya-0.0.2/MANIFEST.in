@@ -1,0 +1,4 @@
+include tpRigToolkit/dccs/maya/__logging__.ini
+recursive-include tpRigToolkit/dccs/maya/resources/* *.*
+include versioneer.py
+include tpRigToolkit/dccs/maya/_version.py
