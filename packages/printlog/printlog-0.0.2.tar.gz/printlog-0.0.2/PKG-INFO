@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: printlog
+Version: 0.0.2
+Summary: Colorize your logs to spot them at a glance.
+Home-page: UNKNOWN
+Author: Patho Ludovic
+Author-email: ludovic.patho@gmail.com
+Maintainer: Ludovic Patho
+Maintainer-email: ludovic.patho@gmail.com
+License: GPL V3
+Description: Colorize your logs to spot them at a glance.
+        
+Keywords: colour print log
+Platform: ALL
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Software Development :: Debuggers
