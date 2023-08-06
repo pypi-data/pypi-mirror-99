@@ -1,0 +1,7 @@
+README.md
+setup.py
+qtstrap/__init__.py
+qtstrap.egg-info/PKG-INFO
+qtstrap.egg-info/SOURCES.txt
+qtstrap.egg-info/dependency_links.txt
+qtstrap.egg-info/top_level.txt
