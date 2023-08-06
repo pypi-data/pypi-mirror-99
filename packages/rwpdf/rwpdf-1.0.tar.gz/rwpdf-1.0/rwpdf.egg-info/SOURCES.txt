@@ -1,0 +1,9 @@
+README.md
+setup.py
+rwpdf/__init__.py
+rwpdf/pdf2image.py
+rwpdf/pdf2text.py
+rwpdf.egg-info/PKG-INFO
+rwpdf.egg-info/SOURCES.txt
+rwpdf.egg-info/dependency_links.txt
+rwpdf.egg-info/top_level.txt
