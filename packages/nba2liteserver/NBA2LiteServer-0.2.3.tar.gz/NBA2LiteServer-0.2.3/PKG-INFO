@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: NBA2LiteServer
+Version: 0.2.3
+Summary: NBA2-lite-server
+Home-page: UNKNOWN
+Author: Test1
+Author-email: byhouse1@gmail.com
+License: UNKNOWN
+Description: Interface to the NBA2-lite to be replace with any other server handler
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
