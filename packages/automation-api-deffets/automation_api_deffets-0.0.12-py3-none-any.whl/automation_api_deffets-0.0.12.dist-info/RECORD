@@ -1,0 +1,10 @@
+automation_api/__init__.py,sha256=dUjOwcj4JWf95vuq2t3wsQrKdayRT8ILwiAaPJUgvKE,35
+automation_api/api.py,sha256=rX_aRv_Z0kJhmgmWQ1lVQXQSgrdCI0mTPo3XPIlTZgY,7894
+automation_api/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automation_api/utils/dcm.py,sha256=0V_hioYcMKt3g6ZVP7kWx6zminpvrudppIwLzcX9xmk,9232
+automation_api/utils/mongodb.py,sha256=Lku4QM6kHKM7GwYCuR8wKdZOjKXNZvUbB6BMktUgK58,4179
+automation_api_deffets-0.0.12.dist-info/LICENSE,sha256=bcJ6yfvmw0Ukhay4ENXMiPzwcAClAcOcCjLVoNZLV-s,9237
+automation_api_deffets-0.0.12.dist-info/METADATA,sha256=BazINhJVN1XFuHYAOuuFYAFoN-yD-MvqYKK4pdrf07E,695
+automation_api_deffets-0.0.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+automation_api_deffets-0.0.12.dist-info/top_level.txt,sha256=AW-fVAJkS9i7fpTPTwCWZxGnIHcx5v4XO3onREcVySI,15
+automation_api_deffets-0.0.12.dist-info/RECORD,,
