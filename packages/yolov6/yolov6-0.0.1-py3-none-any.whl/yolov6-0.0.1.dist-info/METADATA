@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: yolov6
+Version: 0.0.1
+Summary: Forthcoming Yolov6 wrapper
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.9
+Requires-Dist: tensorboard (>=2.2)
+
+UNKNOWN
+
+
