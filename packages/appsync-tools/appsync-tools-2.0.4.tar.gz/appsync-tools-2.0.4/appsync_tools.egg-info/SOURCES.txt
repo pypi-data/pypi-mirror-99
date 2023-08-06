@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+appsync_tools.egg-info/PKG-INFO
+appsync_tools.egg-info/SOURCES.txt
+appsync_tools.egg-info/dependency_links.txt
+appsync_tools.egg-info/requires.txt
+appsync_tools.egg-info/top_level.txt
+src/appsync_tools/__init__.py
