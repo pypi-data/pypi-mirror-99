@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.augeas
+Version: 0.18
+Summary: Augeas API
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Augeas API plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
