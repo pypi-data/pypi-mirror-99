@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: avrawheel
+Version: 0.1
+Summary: A test wheel package
+Home-page: https://github.com/nonexisitent/avrawheel
+Author: Avinash
+Author-email: avi8400@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# avrawheel project README
+
+
