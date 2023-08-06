@@ -1,0 +1,11 @@
+liapy/__init__.py,sha256=i4E7IZTqmezjx-7InE-AUcXnOegIa-jpgquc1Lu7Hzc,33
+liapy/conftest.py,sha256=G0yMHDAWYOhJ2_3QeNlClAbJ6KUKCj0C71KgNpa1Ajs,234
+liapy/examples/examples.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+liapy/source/LIA.py,sha256=fWvoEvftEaUqaVo8DDceC6ygG1b39pqSmQEwtYwXj4Y,4242
+liapy/test/test_numpy.py,sha256=cbzBUy10Mx5TcBlZd_n0WiTMISNnYvMv92etD2K3i14,2326
+liapy/test/test_pandas.py,sha256=hWmoHkGa8BdZqNSh0Mu2bXn2cXZzAp3nFAYNETWky60,2883
+liapy-0.1.4.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+liapy-0.1.4.dist-info/METADATA,sha256=u6T4rj5tUbHZ2pH0YZ4VQdzN4AmCkQ_VbCZUoqFRG7s,998
+liapy-0.1.4.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+liapy-0.1.4.dist-info/top_level.txt,sha256=Qgv1ICocs1mXV9-2XJl-IH17Fv23859uOsblwmPZbwc,6
+liapy-0.1.4.dist-info/RECORD,,
