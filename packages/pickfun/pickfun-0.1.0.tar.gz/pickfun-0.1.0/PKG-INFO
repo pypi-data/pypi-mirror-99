@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pickfun
+Version: 0.1.0
+Summary: 
+Author: Will Holtz
+Author-email: wholtz@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: humanize (>=3.3.0,<4.0.0)
