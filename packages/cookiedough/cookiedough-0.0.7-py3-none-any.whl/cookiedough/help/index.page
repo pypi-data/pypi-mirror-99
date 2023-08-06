@@ -1,0 +1,29 @@
+<page
+    xmlns="http://projectmallard.org/1.0/"
+    type="guide"
+    id="index">
+
+    <info>
+        <link type="guide" xref="index#nav"/>
+        
+        <desc></desc>
+    </info>
+
+    <title>cookiedough</title>
+
+<section>
+ <title>cookiedough</title>
+</section>
+
+<section>
+ <subtitle>cookiecutter browser GUI</subtitle>
+ <list>
+ <item><p>Available templates in the left pane</p></item>
+ <item><p>Meta information, file list, and readme preview in the main section</p></item>
+ <item><p>Installation button "Roll out" upper right hand</p></item>
+ </list>
+</section>
+
+
+</page>
+

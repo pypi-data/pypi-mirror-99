@@ -1,0 +1,171 @@
+Metadata-Version: 2.1
+Name: cookiedough
+Version: 0.0.7
+Summary: browser and install GUI for cookiecutter templates
+Home-page: https://fossil.include-once.org/cookiedough/
+License: proprietary
+Project-URL: Freshcode, https://freshcode.club/projects/cookiedough
+Keywords: viewer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Multimedia :: Graphics :: Viewers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Archiving :: Packaging
+Requires-Python: >= 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: PySimpleGUI (>=4.37)
+Requires-Dist: appdirs
+Requires-Dist: cookiecutter (>=1.7)
+Requires-Dist: pluginconf
+Requires-Dist: requests
+Requires-Dist: ttkthemes
+Provides-Extra: build
+Requires-Dist: pluginconf ; extra == 'build'
+Requires-Dist: setuptools ; extra == 'build'
+Provides-Extra: unused
+Requires-Dist: ttkthemes ; extra == 'unused'
+
+[**cookiedough**(1)](https://fossil.include-once.org/cookiedough/file/manpage/cookiedough.md)
+is a GUI browser for cookiecutter templates. It also allows for expanding them, of course.
+It comes with a database of around 2300 cookietemplates, grouped by category, and allows some
+rudimentary filtering. Very early alpha, but usable. 
+
+![screenshot main window](https://imgur.com/wn9mEny.png)
+
+
+# Installation / Use
+
+Just install it as normal pip package:
+
+    ~$   pip3 install -U cookiedough
+
+And start it from a terminal window:
+
+    ~/projects$   cookiedough
+
+Keep an eye on the terminal when rolling out a template.
+
+
+# Notes
+
+There's some usage information in the man page. (Yes, there is a man page.)
+And the application itself is somewhat self-explanatory.
+
+
+## Bugs / Caveats
+
+ * The search is still finicky. Right now it starts on any key press;
+   [.. might either filter this by ENTER, or add a button to that effect].
+ * Not all content fields expand to values. (PSG/Tk constrain the label
+   widths on their initial length.)
+ * The README colorization is fairly basic. (But more processsing would
+   slow it down too much.)
+ * It can crash when speed-scrolling through the templates. (Perhaps PSG
+   vs Tk threads issue.)
+ * Tkinter might also crash when encountering emojis. (Either install
+   Symbola font and get rid of Noto Color Emoji. Or upgrade to tcl/tk
+   8.6.10, or go back to Ubuntu 18.04 where it miraculously worked.)
+ * No real help pages yet. Still too early, UI could change a bit.
+   (ToDo: mkdocs2mallard)
+ * No .desktop file (not sure if pip does such magic).
+
+
+## Contributions
+
+This project hinges on an updated cookiecutters database. Unfortunately
+that's quite time-consuming. So new templates might not find their way
+in here, without feedback/submissions from authors. (The preferred option
+for now would be a full JSON blob as outlined below, per email).
+
+If anyone wants to contribute, automating the compilation (and expanding
+to BitBucket/GitLab, if a common GitHolm API / library ever emerges) would
+be useful. Else perhaps a submission API using the repository (it's SQLite);
+though that might still require moderation/approval/checks etc. (One could
+use the [dev/ scripts](https://fossil.include-once.org/cookiedough/wiki/dev)
+as basis; adding some application UI is easy.)
+
+If interested, register a repository accont, drop a mail for developer elevation;
+read up on [fossil usage](https://fossil-scm.org/home/doc/trunk/www/quickstart.wiki).
+It's significantly easier than git, and you can't easily break things.
+
+
+## uidata.json structure
+
+The included cookiecutter database is based upon an extraction from GitHub,
+filtered, and restructured for easier UI application. Entries typically
+contain:
+
+    "vnd/pkg": {
+        "name": "vnd/pkg",
+        "short": "pkg",
+        "description": "...",
+        "url": "https://github.com/vnd/pkg",
+        "repo": "https://github.com/vnd/pkg.git",
+        "homepage": null,
+        "created_at": "2011-11-11T11:11:11Z",
+        "updated_at": "2021-02-22T22:22:22Z",
+        "size": 222,
+        "stars": 2,
+        "api": "lang",
+        "has_wiki": true,
+        "forks": 1,
+        "license": "MIT",
+        "tickets": 0,
+        "default_branch": "trunk",
+        "_disabled": false,
+        "keywords": " from `_keywords` in cookiecutter.json ",
+        "dir": "└── lib\n",
+        "readme": "README.md contents",
+        "cookiecutterjson_url": "https://raw.ghusrcnt/vnd/pkg/trunk/cookiecutter.json",
+        "config": [
+            {
+                "type": "str",
+                "name": "project_name",
+                "value": "mypkg",
+                "class": "cookiecutter",
+                "description": " taken from README table, if any "
+            }
+        ]
+    }
+
+Most fields are literal copies. Whereas `dir` is a textual transformation
+of the /tree list. And `config` a converted cookiecutter.json list. The
+`api` field is either just GitHubs detected repository language (often
+fairly off), or an extract from the repository name, or whatever was
+specified as `_api` in cc.json.
+
+
+### config
+
+The config field list is an upmarket version of the cookiecutter.json dict.
+Roughly compatible with the pluginconf structure. Albeit CD is using a
+custom input window anyway.
+
+Notably the `description` field cannot be set other than from the README.
+It should contain a table listing each template variable:
+
+          | `cc_varname` | Explanation ... |
+
+(Seen some discussion on a cc.json 2.0 format. So this might be a temporary
+thing. Still useful to users, btw!)
+
+
+### Improve your cookiecutters.json
+
+There will be some scoring scheme to sort the templates in CD. For the time
+being, you can improve those by adding following properties:
+
+| Where | Name | Usage |
+------------------------
+| `cookiecutters.json` | `_api` | Override the category/language (could be an app name, e.g. `flask`) |
+| `cookiecutters.json` | `_keywords` | Add extra search keywords/tags |
+| `README.*` | markdown table | Describe template variables |
+
+(Why "scoring"? Because stars and forks are often just bandwagon votes, and
+don't fully qualify the quality. They sometimes just make more contemporary
+projects less visible. In pariticular when buried on Github.)
+
+
+
+
