@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+astatine/__init__.py
+astatine/py.typed
+astatine.egg-info/PKG-INFO
+astatine.egg-info/SOURCES.txt
+astatine.egg-info/dependency_links.txt
+astatine.egg-info/not-zip-safe
+astatine.egg-info/requires.txt
+astatine.egg-info/top_level.txt
