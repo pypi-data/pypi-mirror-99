@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: foxTemplateEngine
+Version: 0.0.1
+Summary: Template Engine for HTML
+Home-page: https://github.com/leroykiddd/ivt1_20_petrov
+Author: Petrov D.A.
+Author-email: leroykid02@mail.ru
+License: UNKNOWN
+Description: # Fox Template Engine Manual
+        ## Example
+        ### Before
+        ```html
+        html
+         head
+          title
+           Test MyTemplator
+          .title
+         .head
+         body
+          % repeat 2 %
+           div
+            div
+             cerverve
+            .div
+           .div style="test: test;" 
+          % end %	 
+         % repeat 2 %
+          h1
+           Something
+          .h1
+         % end %
+         div
+          div
+          % repeat 3 %
+           h3
+            Test 3 rep
+           .h3
+           % end %
+          .div
+          .div
+         .body
+        .html
+        ```
+        ### After
+        ```html
+        <html>
+         <head>
+          <title>
+           Test MyTemplator
+          </title>
+         </head>
+         <body>
+           <div>
+            <div>
+             cerverve
+            </div>
+           </div style="test: test;" >
+           <div>
+            <div>
+             cerverve
+            </div>
+           </div style="test: test;" >
+          <h1>
+           Something
+          </h1>
+          <h1>
+           Something
+          </h1>
+         <div>
+          <div>
+           <h3>
+            Test 3 rep
+           </h3>
+           <h3>
+            Test 3 rep
+           </h3>
+           <h3>
+            Test 3 rep
+           </h3>
+          </div>
+          </div>
+         </body>
+        </html>
+        ```
+        
+        ## Recommendation
+        ### Don't use a loop in a loop
+Platform: any
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
