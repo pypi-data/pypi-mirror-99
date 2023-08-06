@@ -1,0 +1,8 @@
+pyimporters_plugins/__init__.py,sha256=E0CDyG0Y1P_MpfRV8lODkx6HEiUrZHJCCRw4Wqvcwps,62
+pyimporters_plugins/base.py,sha256=Pu9_9GTJICOlwtKXvvut97o_hLmbxhA8jervBjokqyY,2314
+pyimporters_plugins/csv.py,sha256=oCxwVY-nJ7qJe5In3sM7ndtc7MpbGqK8fgeCC529h3I,1328
+pyimporters_plugins/rdf.py,sha256=wsVT_UGrMDiMqhNmrAVYoV1Gd9_37qbQh1U-J-qpwno,1723
+pyimporters_plugins-0.1.1.dist-info/entry_points.txt,sha256=-Cof7o818-Jrk2UE-lPJ-6NqDBmD8sUoX50eHetdQUA,117
+pyimporters_plugins-0.1.1.dist-info/WHEEL,sha256=rg7OlU52oY2dGF9P6-vT77byVLtCIN4joChV1HjAybU,81
+pyimporters_plugins-0.1.1.dist-info/METADATA,sha256=HSyBo0D6F1kLForBo140d170wR8-AXH0WFovJjHdEl4,2951
+pyimporters_plugins-0.1.1.dist-info/RECORD,,
