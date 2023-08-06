@@ -1,0 +1,4 @@
+grpcio>=1.32.0
+heptapod>=2.4.0dev0
+hg-loggingmod
+protobuf
