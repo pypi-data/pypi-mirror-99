@@ -1,0 +1,11 @@
+numpy
+imageio
+matplotlib
+scipy
+PySide2
+qtpy
+psutil
+numba
+pyzmq
+ninja2
+toml
