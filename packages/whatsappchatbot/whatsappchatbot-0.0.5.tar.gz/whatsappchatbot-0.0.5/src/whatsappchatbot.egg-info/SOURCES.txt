@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+src/whatsappchatbot/__init__.py
+src/whatsappchatbot/extract_chats.py
+src/whatsappchatbot/response.py
+src/whatsappchatbot/selenium_automation.py
+src/whatsappchatbot/whatsappChatbot.py
+src/whatsappchatbot.egg-info/PKG-INFO
+src/whatsappchatbot.egg-info/SOURCES.txt
+src/whatsappchatbot.egg-info/dependency_links.txt
+src/whatsappchatbot.egg-info/requires.txt
+src/whatsappchatbot.egg-info/top_level.txt
