@@ -1,0 +1,12 @@
+widlparser/__init__.py,sha256=nAWqv4_pYfhCDpn944POWtgxDuabGVMQ_O51q4INUDk,458
+widlparser/constructs.py,sha256=GnPXkxs4t-h926nkc5K4LVnsFnQsvm0-AnygP_3CUSM,74643
+widlparser/markup.py,sha256=R_-sDnl_HNq8k5mY_IlPjkYZu6h7gRHqpZJl8V_xbE4,11589
+widlparser/parser.py,sha256=phfzQV5gT9RYr5F0g_TcMt4lKwhgxmOkpf-m5inRlJI,11107
+widlparser/productions.py,sha256=zFf65OmDTcBHtYHf7ZyYa_UWx4BtebjipfyFT93wDR8,88724
+widlparser/protocols.py,sha256=WPIADCC3hCcGzNL_do24KiOhhtF-nBpb5dfcAw5yE1I,8708
+widlparser/py.typed,sha256=lWmdjOqQX5ezm0syDrJ9AwwCSd2MVOuL3hlOGn4QBv4,60
+widlparser/tokenizer.py,sha256=28-VjA92hIdYXq_aouzgjfwTWs2AQWJSCp6OdLIZG6A,11041
+widlparser-1.0.7.dist-info/METADATA,sha256=bwf0MU_3KWK_oxHGFIjZMZ5ySMLx13d4fmSC5X0TwCA,13474
+widlparser-1.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+widlparser-1.0.7.dist-info/top_level.txt,sha256=eR6T2QLG2Fu61sdZHYHJ_Tz16gtbWtwZ92CI1yusUQk,11
+widlparser-1.0.7.dist-info/RECORD,,
