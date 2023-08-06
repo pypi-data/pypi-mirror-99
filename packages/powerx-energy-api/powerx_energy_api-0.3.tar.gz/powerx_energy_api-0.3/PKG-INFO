@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: powerx_energy_api
+Version: 0.3
+Summary: Powerx Energy API Wrapper
+Home-page: https://github.com/user/reponame
+Author: powerx
+Author-email: admin@powerx.co
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: PowerX
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
