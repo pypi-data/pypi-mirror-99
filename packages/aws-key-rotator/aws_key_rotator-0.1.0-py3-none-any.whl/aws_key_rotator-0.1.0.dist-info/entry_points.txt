@@ -1,0 +1,3 @@
+[console_scripts]
+aws-key-rotator=aws_key_rotator.cli:main
+
