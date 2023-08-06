@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gspack
+Version: 0.2.7
+Summary: Assignment Packager for the Gradescope Autograder.
+Home-page: https://github.com/aksholokhov/gspack
+Author: Aleksei Sholokhov
+Author-email: aksh@uw.edu
+License: GNU GPLv3
+Description: This package is designed to simplify setting up programming assignments for Gradescope Autograder. See README.md for details and examples.
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: dev

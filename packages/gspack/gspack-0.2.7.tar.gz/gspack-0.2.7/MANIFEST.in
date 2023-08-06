@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include requirements.txt
+
+recursive-include docs *
+prune docs/_build
+
+include src/gspack/templates/*
+
+recursive-include src/gspack *.py
+recursive-include tests *.py
