@@ -1,0 +1,9 @@
+kivy
+kivymd
+lxml
+mako
+pyOpenSSL
+pynacl
+python-dateutil
+requests
+six
