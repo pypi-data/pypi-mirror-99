@@ -1,0 +1,4 @@
+pillow
+requests
+gbak
+w3lib
