@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.packages
+Version: 0.33
+Summary: Packages
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Packages plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
