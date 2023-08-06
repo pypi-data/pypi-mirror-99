@@ -1,0 +1,11 @@
+README.md
+setup.py
+vc2_quantisation_matrices/__init__.py
+vc2_quantisation_matrices/cli_tool.py
+vc2_quantisation_matrices/version.py
+vc2_quantisation_matrices.egg-info/PKG-INFO
+vc2_quantisation_matrices.egg-info/SOURCES.txt
+vc2_quantisation_matrices.egg-info/dependency_links.txt
+vc2_quantisation_matrices.egg-info/entry_points.txt
+vc2_quantisation_matrices.egg-info/requires.txt
+vc2_quantisation_matrices.egg-info/top_level.txt
