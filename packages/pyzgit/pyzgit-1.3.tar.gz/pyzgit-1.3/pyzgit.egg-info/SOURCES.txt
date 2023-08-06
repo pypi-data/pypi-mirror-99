@@ -1,0 +1,13 @@
+README.md
+setup.py
+git/__init__.py
+git/gitoptions.py
+git/helper.py
+git/main.py
+git/shared.py
+git/shell_complete.py
+pyzgit.egg-info/PKG-INFO
+pyzgit.egg-info/SOURCES.txt
+pyzgit.egg-info/dependency_links.txt
+pyzgit.egg-info/entry_points.txt
+pyzgit.egg-info/top_level.txt
