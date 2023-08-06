@@ -1,0 +1,10 @@
+dsinfluxlogger/__init__.py,sha256=Sd3DNUQGH6GVsQHV5d2ja0wyH2ERlimk748xYQJmZHE,119
+dsinfluxlogger/console.py,sha256=r5NDpMY-LPn8IjXL6-7Bzu-y_5jYrz6qDboebJYTiCg,1555
+dsinfluxlogger/defaultconfig.py,sha256=YZ9cXDhjyd_nLj_oSYhlxyxNoJRIs8e5Vc8y0xOgzIE,712
+dsinfluxlogger/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsinfluxlogger/service.py,sha256=8s46NBCm1hVWkHpdC8pIMi4Aw8m3T-23hte0aQoloKI,3301
+dsinfluxlogger-0.3.0.dist-info/entry_points.txt,sha256=26Hxv6tGCyMM0ZcFBRn0lmMg38jkynKoN7weAUh9ILs,74
+dsinfluxlogger-0.3.0.dist-info/LICENSE,sha256=QuAI2NmhykatoRKWM1V8ssD1qpWfaeI5ZuwJRjYCG9c,1072
+dsinfluxlogger-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+dsinfluxlogger-0.3.0.dist-info/METADATA,sha256=Jb4NktmDzOqNqMXeNW8jQzxvLcxfqDOg_D3Od5IZ04w,4547
+dsinfluxlogger-0.3.0.dist-info/RECORD,,

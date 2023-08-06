@@ -1,0 +1,3 @@
+[console_scripts]
+dsinfluxlogger=dsinfluxlogger.console:influxlogger_cli
+
