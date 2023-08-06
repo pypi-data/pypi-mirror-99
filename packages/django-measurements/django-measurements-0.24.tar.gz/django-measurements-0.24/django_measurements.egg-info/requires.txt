@@ -1,0 +1,10 @@
+requests
+pycryptodome
+django-postgres-extra
+django_pandas
+geojson
+colorbrewer
+django-basicauth
+lxml
+beautifulsoup4
+pint
