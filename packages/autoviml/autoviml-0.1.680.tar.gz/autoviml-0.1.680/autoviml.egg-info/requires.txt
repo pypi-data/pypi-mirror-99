@@ -1,0 +1,17 @@
+beautifulsoup4
+catboost
+emoji
+imbalanced-learn>=0.7
+ipython
+jupyter
+matplotlib
+nltk
+pandas
+regex
+scikit-learn>=0.23.1
+seaborn
+shap>=0.36.0
+textblob
+vaderSentiment
+xgboost>=1.1.1
+xlrd
