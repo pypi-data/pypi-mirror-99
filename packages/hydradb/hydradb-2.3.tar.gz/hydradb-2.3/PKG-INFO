@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: hydradb
+Version: 2.3
+Summary: An API for faster and easier SQLite/Python operations
+Home-page: https://github.com/rhmtazad/hydraDB
+Author: Rahmat Azad
+Author-email: rhmtazad@gmail.com
+License: MIT License
+Description: An API for faster and easier SQLite/Python operations.
+        
+        A proper PDF documentation will be realeased as soon
+        as I can find a way to fix the Sphinx bugs.
+        
+        Download and install from PyPI: pip install hydradb
+        PyPI Repo: https://pypi.org/project/hydradb/
+        GitHub Repo: https://github.com/rhmtazad/hydradb/
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
