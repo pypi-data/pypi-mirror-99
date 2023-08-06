@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: cityseer
+Version: 1.0.0
+Summary: Computational tools for urban analysis
+Home-page: https://github.com/benchmark-urbanism/cityseer-api
+Author: Gareth Simons
+Author-email: gareth@cityseer.io
+License: Apache 2.0 + "Commons Clause" License Condition v1.0
+Project-URL: Bug Tracker, https://github.com/benchmark-urbanism/cityseer-api/issues
+Project-URL: Documentation, https://cityseer.benchmarkurbanism.com/
+Project-URL: Source Code, https://github.com/benchmark-urbanism/cityseer-api
+Description: UNKNOWN
+Platform: UNKNOWN
