@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: CodeDrive
+Version: 1.1
+Summary: This package contains codes/functions that are useful in school level python programming
+Home-page: https://github.com/Stark-Corp/CodeDrive
+Author: Stark-Corp (Himangshu De)
+Author-email: dehimangshu2020@gmail.com
+License: UNKNOWN
+Description: You can use this module for executing the school level programming tasks like Palindrome tests, Armstrong number tests, etc. All the things are included in this python package and will be updated more in future.
+Keywords: python,school level programs
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.6
