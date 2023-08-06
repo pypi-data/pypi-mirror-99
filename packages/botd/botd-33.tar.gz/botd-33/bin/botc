@@ -1,0 +1,21 @@
+#!/usr/bin/env python3 
+# This file is placed in the Public Domain.
+
+__version__ = 33
+
+from botl import cfg, j
+from botl.csl import Shell, exec, os, sys
+from botl.itr import scandir
+from botd.tbl import tbl
+
+def ver(event):
+    event.reply("BOTC %s" % __version__)
+
+def main():
+    s = Shell()
+    s.tbl(tbl)
+    s.add("ver", ver)
+    s.scan(j(cfg.wd, "mod"))
+    s.once(" ".join(sys.argv[1:]))
+
+exec(main)

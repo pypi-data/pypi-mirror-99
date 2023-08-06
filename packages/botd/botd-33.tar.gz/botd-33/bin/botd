@@ -1,0 +1,33 @@
+#!/usr/bin/env python3 
+# This file is placed in the Public Domain.
+
+__version__ = 33
+
+import time
+
+from botl import cfg, cprint, format, j
+from botl.csl import Shell, exec, sys
+from botl.dbs import last
+from botl.utl import privileges
+
+from botd.tbl import tbl
+
+def ver(event):
+    event.reply("BOTD %s" % __version__)
+
+def main():
+    cprint("BOTD %s started at %s" % (__version__, time.ctime(time.time())))
+    last(cfg)
+    cprint(format(cfg))
+    privileges("botd")
+    s = Shell()
+    s.tbl(tbl)
+    s.add("ver", ver)
+    s.scan(j(cfg.wd, "mod"))
+    s.start()
+    s.init("irc,rss")
+    s.init(cfg.mods)
+    cprint("loaded %s" % ",".join(sorted(s.modnames)))
+    s.wait()
+
+exec(main)

@@ -1,0 +1,38 @@
+#!/usr/bin/env python3 
+# This file is placed in the Public Domain.
+
+__version__ = 33
+
+import os, sys ; sys.path.insert(0, os.getcwd())
+
+import time
+import botl.utl
+
+from botl import cfg, cprint, e, format, j, op, os
+from botl.csl import Console, exec, parse
+from botl.itr import scandir
+from botd.tbl import tbl
+
+cfg.wd = e("~/.bot")
+
+def ver(event):
+    event.reply("BOT %s" % __version__)
+
+def main():
+    parse()
+    s = Console()
+    s.tbl(tbl)
+    s.add("ver", ver)
+    s.scan(j(os.getcwd(), "mod"))
+    if cfg.txt:
+        s.once(cfg.old.txt)
+        return
+    cprint("BOT %s started at %s" % (__version__, time.ctime(time.time())))
+    cprint(format(cfg, skip=["old"]))
+    s.init("irc,rss")
+    s.init(cfg.mods)
+    cprint("loaded %s" % ",".join(sorted(s.modnames)))
+    s.start()
+    s.wait()
+
+exec(main)
