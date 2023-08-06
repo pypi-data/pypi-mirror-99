@@ -1,0 +1,5 @@
+Pillow>=7.0
+cython
+matplotlib>=2
+numpy>=1.15
+scipy>=1.4
