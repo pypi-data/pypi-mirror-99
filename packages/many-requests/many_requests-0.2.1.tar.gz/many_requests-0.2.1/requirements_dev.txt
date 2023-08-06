@@ -1,0 +1,12 @@
+pytest
+wheel
+setuptools
+twine
+sphinx>=3.2.1
+codecov
+recommonmark
+sphinx-rtd-theme
+bump2version
+aiohttp
+requests
+aiohttp-basicauth-middleware
