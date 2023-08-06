@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/FrequencyGenerator/FreqGenarator.py
+src/FrequencyGenerator/__init__.py
+src/FrequencyGenerator/about.py
+src/FrequencyGenerator.egg-info/PKG-INFO
+src/FrequencyGenerator.egg-info/SOURCES.txt
+src/FrequencyGenerator.egg-info/dependency_links.txt
+src/FrequencyGenerator.egg-info/top_level.txt
