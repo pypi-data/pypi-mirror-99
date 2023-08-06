@@ -1,0 +1,14 @@
+pytarallo/AuditEntry.py,sha256=04Ahg2FqoV9lv9OwDNlPEf3Wuo5uU94YZIwY56ynUUM,419
+pytarallo/Errors.py,sha256=hlIMqDIZWQZf8dOG1kSaY9bmFR9oz02fzHCgEWoecKI,1380
+pytarallo/Item.py,sha256=ps44Y4w0_9ult9Gsog42h6wQvjSGdID3NJXeB5EsvF4,2440
+pytarallo/ItemBase.py,sha256=PlMhg_GuaNP-jE_LlTXunwIrWNy3M58UaoTVnuhhmHA,873
+pytarallo/ItemToUpload.py,sha256=qLa41qFbLBDYctbMieT8mMlUYCywys9wsIs8TcJTckU,1303
+pytarallo/Product.py,sha256=F674x31E-wozVcxI3vtOwh9YQ-UNhhr8YVlPIhReJk4,747
+pytarallo/ProductToUpload.py,sha256=u8l3bMZOJjKDD43Y8Ee8H6ewoLfP4I1BQaKZnLCQqQo,400
+pytarallo/Tarallo.py,sha256=4B24cjqguy7I-VjQ6Y4T7sEiKo8B4_0S-2ybO1KkJlw,12079
+pytarallo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytarallo-2.0.dist-info/LICENSE,sha256=BIfQykKVgzhsPlvxbu4hfVjxL7T5PYEUrIsZ2kz8cG0,1066
+pytarallo-2.0.dist-info/METADATA,sha256=ztXdt2jcODqTWcUs0HDV5d3DGGcAz4I7YQ4f8n5mYSE,769
+pytarallo-2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytarallo-2.0.dist-info/top_level.txt,sha256=K58fdQdomkbb7GUaL6qlWjvxB93LzSjgxU05mzXmeZY,10
+pytarallo-2.0.dist-info/RECORD,,
