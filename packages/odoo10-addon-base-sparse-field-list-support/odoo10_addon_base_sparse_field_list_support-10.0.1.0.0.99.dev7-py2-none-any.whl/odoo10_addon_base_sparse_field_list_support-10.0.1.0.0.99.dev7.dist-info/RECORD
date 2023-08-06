@@ -1,0 +1,12 @@
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/base_sparse_field_list_support/README.rst,sha256=KDLu2FQ_j9V8jP_OQiwLHYRM0lydwaREXdQJ9flzUe0,466
+odoo/addons/base_sparse_field_list_support/__init__.py,sha256=hy5djaZeE76HRU_l5oE36CSZzalFxudWK7PL7P7hSC8,45
+odoo/addons/base_sparse_field_list_support/__manifest__.py,sha256=bfh3bA7CAlEn9JVMhtFbWHWTmLL8S6fzN0kxuEA8sAQ,384
+odoo/addons/base_sparse_field_list_support/i18n/base_sparse_field_list_support.pot,sha256=tYuE3-MLMMQJE5mpVzIg_IKWcTGkn4R0qtWo-2n_0q0,344
+odoo/addons/base_sparse_field_list_support/models/__init__.py,sha256=HcWP2zKZP5Wd0tegP3AVtdIfxLJbGgj4e6l2zuTGVYI,45
+odoo/addons/base_sparse_field_list_support/models/fields.py,sha256=DR-Qix_PBI3MqEVRP6Y44oVi5o5Rkfu5UasGQ95ArA4,412
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7.dist-info/METADATA,sha256=SPhLgfYj0CsSasyFSPXi4gL3Q97tyrWBtlSiI-c1q5Y,930
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_base_sparse_field_list_support-10.0.1.0.0.99.dev7.dist-info/RECORD,,
