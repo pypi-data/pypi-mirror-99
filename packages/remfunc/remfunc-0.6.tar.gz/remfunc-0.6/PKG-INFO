@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: remfunc
+Version: 0.6
+Summary: Ever needed a python module on a system where you can only install pure python libs, for example Pythonista for IOS? This is a workaround you can use if you have a webserver (or computer reachable over the internet). You run the remfunc server part on your computer and in Pythonista you create an instance of the client and use it to send code to the server which gets executed there and the result returned. Yeah! Now you can use pandas in Pythonista!
+Home-page: https://github.com/FreddyE1982/remfunc-python
+Author: Frederik Egger
+Author-email: frederik.egger@gmail.com
+License: GNU
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: python,pythonista,modules
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
