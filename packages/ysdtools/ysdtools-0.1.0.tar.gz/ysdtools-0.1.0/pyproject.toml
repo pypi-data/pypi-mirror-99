@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ysdtools"
+version = "0.1.0"
+description = "A collection of useful python tools"
+authors = ["ysd <helloysd@foxmail.com>"]
+packages = [
+    { include = "ysdtools" },
+]
+
+[tool.poetry.dependencies]
+python = ">3.7,<4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+black = "^20.8b1"
+isort = "^5.8.0"
+flake8 = "^3.9.0"
+bandit = "^1.7.0"
+safety = "^1.10.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_level = "DEBUG"
