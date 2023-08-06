@@ -1,0 +1,5 @@
+[console_scripts]
+bml2bss = bml.bml2bss:main
+bml2html = bml.bml2html:main
+bml2latex = bml.bml2latex:main
+
