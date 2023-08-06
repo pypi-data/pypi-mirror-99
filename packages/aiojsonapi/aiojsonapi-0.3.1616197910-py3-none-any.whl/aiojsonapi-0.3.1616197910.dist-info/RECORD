@@ -1,0 +1,17 @@
+aiojsonapi/__init__.py,sha256=3fAXcCaHSZ60D4CrQxBeyh0Qs6yybYAejJc_qjyXdCs,50
+aiojsonapi/client.py,sha256=PsYLvbBZujdL3g8DA727GhxQt47Xe1Fenvigg1XIv_Y,2744
+aiojsonapi/config.py,sha256=HHeUabZK_IY9T3Qn4iEQr38tJtDU-Yf75kHa4nvTPyg,195
+aiojsonapi/exception.py,sha256=XIhwf8VR1RDW6ll6GCZtw04fhoeRSw4_juMP8DriAXM,415
+aiojsonapi/middleware.py,sha256=HkDHQuOd_yNArv9kRaQGwHiSDxqmqJPazH2zxXPxiP8,816
+aiojsonapi/response.py,sha256=d1Hp-EIWM2IJZiuP3Z3qMVSYyWtcV2c7VKHesod7Ehw,720
+aiojsonapi/routes.py,sha256=s3jy879I9vnEND7XUEEEh6rzFZ4OHnJasEQsSPKbayE,1641
+aiojsonapi/template.py,sha256=4zOKN8wRGGECpF4lcp4PeAtpsDqN1yg5A2FF3DGZaYQ,4861
+tests/functional/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/pytest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/pytest/test_middleware.py,sha256=x_3i_aXhPM9TdYQ-oSo4ojIoUN1J6VcVfSOTzYdXM7k,407
+tests/pytest/test_responses.py,sha256=vz0MJpdwaXjxPZRXfEMtgz8PoWr6x6BTwKgReu51vnQ,1659
+tests/pytest/test_templates.py,sha256=0UETXD-M1-iFt8X6rkZci3SnC43jqoNWncd6hOVehMo,3613
+aiojsonapi-0.3.1616197910.dist-info/METADATA,sha256=GuIt8dw_Ys96q8ZXiXLkWVL_ooMzZRsBUtytg41UXj8,1073
+aiojsonapi-0.3.1616197910.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiojsonapi-0.3.1616197910.dist-info/top_level.txt,sha256=TdAW9RW20gg2T0eqxuiohjELALvS4r2Yurp1EQ0rp74,17
+aiojsonapi-0.3.1616197910.dist-info/RECORD,,
