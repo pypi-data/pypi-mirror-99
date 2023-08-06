@@ -1,0 +1,14 @@
+Appium-Python-Client
+pyswagger
+pydash
+easyprocess
+requests
+
+[dev]
+wheel
+coverage
+coveralls
+mock
+pylint
+nose
+pyinstaller
