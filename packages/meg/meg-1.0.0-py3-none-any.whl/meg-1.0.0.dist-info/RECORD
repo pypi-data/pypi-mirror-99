@@ -1,0 +1,10 @@
+meg/__init__.py,sha256=uiEhBAfaODdlImzgF4qqB4F0o5jl7LeRISBD5iqBsqs,1124
+meg/converters.py,sha256=iUdlZ-KSW_vSDjo4SPtph9Mk54HCE35yRoL1Knx96go,6884
+meg/engine.py,sha256=Z5aMH8TE8YX5JSW1WaC7oIuZ36_lHdOfCOBZXMIxLYc,1814
+meg/libengine.py,sha256=GmwCpK5ROQyRiK5ZW7j2FFvyywsII3QPn1PoNBdy48k,1457
+meg/libmatrix.py,sha256=iUJXldNFzaTCWFdNPY05P5MPvLt9_sDZhyBFqR-0SlU,14378
+meg/library.py,sha256=gTLII64R0q9tEgfBxYLGbG6Go-I4GHU8tWOJVA-YTSk,1870
+meg-1.0.0.dist-info/METADATA,sha256=KkaFTp568dfS9k58idiPUeIlJYaz9hzg6vOAYSIqHhE,4096
+meg-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+meg-1.0.0.dist-info/top_level.txt,sha256=3YyRqMEFtmyjZghEKmxRWu7hJM8FUEcIT4EwD3fACLY,4
+meg-1.0.0.dist-info/RECORD,,
