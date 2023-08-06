@@ -1,0 +1,16 @@
+README.md
+setup.py
+patta/__init__.py
+patta/__version__.py
+patta/aliases.py
+patta/base.py
+patta/dataloader.py
+patta/functional.py
+patta/load_model.py
+patta/transforms.py
+patta/wrappers.py
+patta.egg-info/PKG-INFO
+patta.egg-info/SOURCES.txt
+patta.egg-info/dependency_links.txt
+patta.egg-info/requires.txt
+patta.egg-info/top_level.txt
