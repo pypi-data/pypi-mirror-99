@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: testing_tool_theg
+Version: 0.0.1
+Summary: A simple testing tool for python Epita THEG class.
+Home-page: https://github.com/yxyfer/simple_testing_tool_python
+Author: yxyfer
+Author-email: riviermathieu@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/yxyfer/simple_testing_tool_python/issues
+Description: # Testing Tool THEG
+        
+        This is a simple package to test your THEG code
+        [REPO](https://github.com/yxyfer/simple_testing_tool_python/issues).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
