@@ -1,0 +1,6 @@
+setup.py
+setupgen/__main__.py
+setupgen.egg-info/PKG-INFO
+setupgen.egg-info/SOURCES.txt
+setupgen.egg-info/dependency_links.txt
+setupgen.egg-info/top_level.txt

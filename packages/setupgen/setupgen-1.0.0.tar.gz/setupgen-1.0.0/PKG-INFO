@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: setupgen
+Version: 1.0.0
+Summary: Generate setup.py files.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Install and then run python -m setupgen --help windows/linux
+Platform: UNKNOWN
