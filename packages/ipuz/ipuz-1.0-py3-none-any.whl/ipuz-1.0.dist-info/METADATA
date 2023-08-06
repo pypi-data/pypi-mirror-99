@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ipuz
+Version: 1.0
+Summary: Python library for reading and writing ipuz puzzle files
+Home-page: https://github.com/svisser/ipuz
+Author: Simeon Visser
+Author-email: simeonvisser@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Games/Entertainment :: Puzzle Games
+
+ipuz
+====
+
+Python library for reading and writing ipuz puzzle files. The specification
+for the ipuz file format can be found at: http://www.ipuz.org/. The ipuz file
+format supports representing various types of puzzles, including crossword,
+sudoku and word search. This Python library provides validation and wrapping
+around the puzzle data.
+
+As the puzzle is inherently JSON data it is the application's responsibility
+to ensure that the JSON satisfies the constraints of the PuzzleKind prior to
+writing the puzzle. This library provides validation and additional
+functionality that you might want to use.
+
+The library supports Python 3.6, 3.7, 3.8 and 3.9.
+
+ipuz is a trademark of Puzzazz, Inc., used with permission.
+
+Documentation
+=============
+
+Documentation can be found at http://ipuz.readthedocs.org/en/latest/.
+
+
