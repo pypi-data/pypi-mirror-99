@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: shell-jobrunner
+Version: 2.3.0
+Summary: Shell-based job runner with logging
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: chardet
+Requires-Dist: dateutils
+Requires-Dist: importlib-metadata
+Requires-Dist: requests (<2.26.0)
+Requires-Dist: simplejson (<3.18.0)
+Requires-Dist: six
+
+UNKNOWN
+
+
