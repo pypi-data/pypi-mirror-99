@@ -1,0 +1,179 @@
+Metadata-Version: 2.1
+Name: elevators
+Version: 0.0.1
+Summary: Software for operating elevators and running simulations
+Home-page: https://github.com/abaird1992/elevators
+Author: Alexis Baird
+Author-email: alexis.elevator.developer@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/abaird1992/elevators/issues
+Description: # Elevator Library
+        
+        This library provides developers with an `Elevator` class, that allows a physical elevator to
+        receive orders and fulfill them. It has to:
+        
+        1. Receive orders to pick up passengers (floor orders) and drop them off
+           (internal orders). Orders can come also from the administrator of the elevators that could be
+           received through a web server
+        2. Internally create and adapt a strategy to execute these orders
+        3. Communicate with the machinery to implement this strategy through motion
+           (go up, go down, open the doors...)
+        
+        It has to contend with those constraints:
+        
+        - Acceleration and deceleration will be instant time to go from one floor to the next will take 3
+          seconds. In future versions these problems will be handled more accurately.
+        - Doors stay open for 5 seconds and take 1 second to close
+        
+        ## Contexts
+        
+        This class is meant to be used in two contexts:
+        
+        - **Concrete elevator:** The embarked program that actually runs the physical elevator. The
+          program's `main()` function will:
+            1. Construct an Elevator instance based on configuration specifying the number of floors, the
+               space between each floor, maximum acceptable acceleration force
+            2. Start the instance's internal runtime by calling it's `start()` method in a background
+               process or thread
+            3. Transform signals observed from the different sensors buttons, elevator vertical position etc
+               into requests sent to the `Elevator` instance.
+        
+        ```python
+        from multiprocessing import Process
+        import multiprocessing as mp
+        import time
+        import random
+        
+        
+        def press_button(q, floors):
+            """
+            Simulates floor buttons being randomly pressed for illustration purposes
+            """
+            while True:
+                time.sleep(random.randint(1, 20))
+                q.put(random.randint(0, floors - 1))
+        
+        
+        def main():
+            # Elevator that serves 5 floors, labelled from 0 to 4 — often 0 is referred
+            # to as 'Ground Floor'
+            floors = 5
+            elevator = Elevator(floors)
+            call_queue = mp.Queue()
+        
+            elevator_runtime = Process(target=elevator.start)
+            exterior_control = Process(target=press_button, args=(call_queue, floors))
+        
+            while True:
+                elevator.pick_up(call_queue.get())
+        
+        
+        if __name__ == main():
+            main()
+        ```
+        
+        - **Simulated elevators:** To run a large scale simulations that scales up to many elevators, many
+          buildings, passengers, machinery events. Many instances can be created and launched where these
+          exterior elements will interact with them concurrently.
+        
+        ## Elevator state
+        
+        The elevator has several states:
+        
+        - Moving/Stationary
+        - Vertical position:
+            1. `1` for floor 1
+            2. `1.5` when it is between floors 1 and 2
+        - Doors opened or closed
+        - Cargo weight
+        
+        ## APIs
+        
+        ### Passenger APIs
+        
+        - `pick_up(floor_number)` the passenger calls this method (method call is interfaced by the floor
+          elevator button) to ask the elevator to pick him or her up. Future versions will allow waiting
+          passengers to select 'up' or 'down'.
+        - `drop_off(floor_number)` once the passenger is inside the elevator he selects uses this method (
+          through the internal control panel) to tell the elevator to take him to floor `floor_number`
+        - `panic()` when this method is called the elevator goes to the nearest floor below, sends a message
+          to security and or police forces and opens the doors
+        
+        ### Administrator APIs
+        
+        - `fire_alarm()` the administrator uses this method to engage the fire safety protocol
+        - `go_to_floor()` the administrator calls this method to tell the elevator to go to a certain floor
+          if it isn't busy. This can be useful for trying to optimize the elevator's waiting position
+          through heuristics or machine learning for instance
+        - `emergency_breaks()` the administrator calls this method to protect passengers from a catastrophic
+          free fall it calls gets called when the elevator is moving, and the weight cargo weight sensor
+          reads zero indicating that the elevator isn't supporting its' own weight anymore
+        
+        ## Parameters
+        
+        ### Floors
+        
+        The elevator has a number of floors. If the number of floors is 5, then the elevator goes from floor
+        0 (or ground floor) all the way to floor number 4
+        
+        ### Maximum Weight
+        
+        This has to be a required argument in the constructor: having a default could be tremendously
+        dangerous if it was implemented carelessly
+        
+        ### Minimum Weight
+        
+        Weight of the elevator when empty, if the scale/weight sensor reads below this number, the elevator
+        might be in free fall
+        
+        ## Safety
+        
+        ### Maximum Weight Check
+        
+        Before closing the doors, the elevator has to check that the weight of it's cargo does not exceed
+        it's safety limit. Specified during the instance's construction.
+        
+        ### Fire Safety
+        
+        If the fire alarm goes off:
+        
+        - Stationary elevators should open their doors and no longer take instructions
+        - Moving elevators should go to the closest floor below, stop and open their doors
+        
+        ### Panic Button
+        
+        Meant to be hit by one of the passengers if he is being assaulted by another passenger, or is in
+        danger for any other reason inside the elevator. It will:
+        
+        1. Go to the nearest floor below
+        2. Open the doors and send a message to building security or police forces
+        
+        These steps will be carried out silently so that the assailant isn't alerted
+        
+        ### Breaks
+        
+        #### Stationary State
+        
+        When the elevator is stationary the breaks should be on. Especially when the doors are open: if
+        passengers are getting in and out, and the cable snaps the result would be catastrophic
+        
+        #### Free Fall
+        
+        If the weight sensor goes below the minimum weight the elevator could be in free fall emergency
+        breaks have to be on
+        
+        ### Door Obstruction
+        
+        The elevator has an obstruction sensor, if this sensor is activated doors have to open
+        
+        ## Metrics
+        
+        Elevators will produce logs reporting on their activity. These messages can then be sent to a
+        monitoring service allowing for analytics and machine learning lower downstream
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
