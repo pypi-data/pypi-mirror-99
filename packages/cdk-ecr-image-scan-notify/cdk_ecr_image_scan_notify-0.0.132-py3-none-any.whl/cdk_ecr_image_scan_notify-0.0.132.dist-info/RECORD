@@ -1,0 +1,9 @@
+cdk_ecr_image_scan_notify/__init__.py,sha256=aBV5qs9OCuTOqOSEkuFOpaaNZFBeo4pu70Xb1DV8EHk,4600
+cdk_ecr_image_scan_notify/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_ecr_image_scan_notify/_jsii/__init__.py,sha256=JTRGPiTaCU4TquhvRRTKHd92GxvuqESuKBc3qozww8g,567
+cdk_ecr_image_scan_notify/_jsii/cdk-ecr-image-scan-notify@0.0.132.jsii.tgz,sha256=CVANtKv9bGSxatUjo_Xxsn-9uWYCwTgzEIPvUF_DOjY,54302
+cdk_ecr_image_scan_notify-0.0.132.dist-info/LICENSE,sha256=tnfQdGvbQhNs42O8t_cKmFGyRqusZYfMZO3PgKbQ5UQ,11337
+cdk_ecr_image_scan_notify-0.0.132.dist-info/METADATA,sha256=6FD3hxlj-3LLeFiVTNjrnNQUCwxOLRt6_MfucJXGA3U,3522
+cdk_ecr_image_scan_notify-0.0.132.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cdk_ecr_image_scan_notify-0.0.132.dist-info/top_level.txt,sha256=KT_y45Suq2hrg30mTAgrEnfqTNhS9WM5A_CjoMIQFPk,26
+cdk_ecr_image_scan_notify-0.0.132.dist-info/RECORD,,
