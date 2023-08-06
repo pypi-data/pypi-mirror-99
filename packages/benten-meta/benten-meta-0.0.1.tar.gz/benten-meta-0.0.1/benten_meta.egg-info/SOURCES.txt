@@ -1,0 +1,9 @@
+README.md
+setup.py
+benten_meta/__init__.py
+benten_meta.egg-info/PKG-INFO
+benten_meta.egg-info/SOURCES.txt
+benten_meta.egg-info/dependency_links.txt
+benten_meta.egg-info/requires.txt
+benten_meta.egg-info/top_level.txt
+scripts/benten-meta.py
