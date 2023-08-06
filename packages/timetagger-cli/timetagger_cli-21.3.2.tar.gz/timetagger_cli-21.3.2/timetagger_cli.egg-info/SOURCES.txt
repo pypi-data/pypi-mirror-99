@@ -1,0 +1,14 @@
+README.md
+setup.py
+timetagger_cli/__init__.py
+timetagger_cli/__main__.py
+timetagger_cli/config.py
+timetagger_cli/core.py
+timetagger_cli/utils.py
+timetagger_cli.egg-info/PKG-INFO
+timetagger_cli.egg-info/SOURCES.txt
+timetagger_cli.egg-info/dependency_links.txt
+timetagger_cli.egg-info/entry_points.txt
+timetagger_cli.egg-info/requires.txt
+timetagger_cli.egg-info/top_level.txt
+timetagger_cli.egg-info/zip-safe
