@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+src/Generic_Tree/generic_tree/__init__.py
+src/generic_tree.egg-info/PKG-INFO
+src/generic_tree.egg-info/SOURCES.txt
+src/generic_tree.egg-info/dependency_links.txt
+src/generic_tree.egg-info/entry_points.txt
+src/generic_tree.egg-info/requires.txt
+src/generic_tree.egg-info/top_level.txt
