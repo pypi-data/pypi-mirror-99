@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+cvsser/cvsser.egg-info/PKG-INFO
+cvsser/cvsser.egg-info/SOURCES.txt
+cvsser/cvsser.egg-info/dependency_links.txt
+cvsser/cvsser.egg-info/top_level.txt

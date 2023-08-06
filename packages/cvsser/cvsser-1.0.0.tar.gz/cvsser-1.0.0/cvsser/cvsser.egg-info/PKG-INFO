@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cvsser
+Version: 1.0.0
+Summary: A module for interpreting and manipulating CVSS vector strings.
+Home-page: https://github.com/vulnscape/vs_cvss
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/vulnscape/vs_cvss/issues
+Description: # cvss
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
