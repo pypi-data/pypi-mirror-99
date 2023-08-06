@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: convert2tif
+Version: 0.0.8
+Summary: Small package that converts image(s) to .tif file format.
+Home-page: https://github.com/dakotagporter/convert2tif
+Author: Dakota Porter
+Author-email: dakotap3045@gmail.com
+License: UNKNOWN
+Description: Convert to Tif
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/convert2tif/__init__.py
+src/convert2tif/convert2tif.py
+src/convert2tif.egg-info/PKG-INFO
+src/convert2tif.egg-info/SOURCES.txt
+src/convert2tif.egg-info/dependency_links.txt
+src/convert2tif.egg-info/requires.txt
+src/convert2tif.egg-info/top_level.txt
