@@ -1,0 +1,4 @@
+Click>=7.0
+colorama>=0.4
+watchdog>=2.0
+emoji>=1.2
