@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dcompy
+Version: 1.3
+Summary: dcom python package
+Home-page: https://github.com/jdhxyy/dcom-python
+Author: jdh99
+Author-email: jdh821@163.com
+License: UNKNOWN
+Description: # dcompy
+        
+        ## 介绍
+        dcompy:Device Communication Protocol(DCOM)：设备间通信协议。 DCOM协议可用于物联网设备之间RPC通信。
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
