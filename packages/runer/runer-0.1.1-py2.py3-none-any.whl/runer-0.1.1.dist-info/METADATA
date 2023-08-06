@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: runer
+Version: 0.1.1
+Summary: Python runer lib support shell, ssh ...
+Home-page: https://github.com/rinetd/python-runer
+Author: pytool
+Author-email: pytli@pytool.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: paramiko (!=0.0.1,>=2.7.0)
+
+# exec 0.1.1
+
+
+This is a execute Python library that enables the user to run shell command, ssh command. The library reads ssh config from json or yaml file .
+
+# Requirements
+
+1. Python 3.5 and above
+
+# Installation
+
+1. Unzip the package.
+2. Execute python setup.py build
+3. Execute python setup.py install
+
+or
+
+To install this module type the following (for PyPI):
+
+```bash
+pip install exec -i https://www.pypi.org/simple/
+```
+
+# Usage
+
+You can check the **sample.py** file to learn more about usage.
+
+
+# Support
+
+Email: support@pytool.com.  
+URL: [https://www.pytool.com](https://blog.pytool.com)
+
