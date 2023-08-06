@@ -1,0 +1,7 @@
+numpy
+scikit-learn
+scipy
+tqdm
+uravu>=1.2.4
+statsmodels
+pandas
