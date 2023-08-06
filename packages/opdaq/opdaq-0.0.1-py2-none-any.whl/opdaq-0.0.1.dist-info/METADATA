@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: opdaq
+Version: 0.0.1
+Summary: OpDAQ Systems Inc.
+Home-page: UNKNOWN
+Author: Martin Rioux
+Author-email: mrioux@opdaq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+
+OpDAQ Systems organization package.
+
+
