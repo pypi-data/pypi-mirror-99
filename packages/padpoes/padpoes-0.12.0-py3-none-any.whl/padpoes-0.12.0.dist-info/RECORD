@@ -1,0 +1,17 @@
+padpoes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+padpoes/__main__.py,sha256=PE-SttkmffXCLHcsBYric-r5uQZJawvn3v-Bp8VItTo,43
+padpoes/checkers/__init__.py,sha256=OKV0cTove2YLrnvtyq7v4SLwep5fUF-Z43zYd_UBH1k,333
+padpoes/checkers/baseclass.py,sha256=GdTOKQyEQwjzBtLzhh3FQubKl-n9frz7D1IQ3-U23f8,846
+padpoes/checkers/empty.py,sha256=isJkXzaK136hhg_pxshIW1JoRUjH6R56-wLJmDmZCl8,451
+padpoes/checkers/fuzzy.py,sha256=3YMNceh01zDM79jnNo6232WzamttA4NFQcgzy58HmLk,397
+padpoes/checkers/glossary.py,sha256=DYL2YEkXnnCf5xN-XM5uQfm2QuiodNWxFGD4qrFX7As,3628
+padpoes/checkers/linelength.py,sha256=_AF-r3rJTJVjEoatkUy_BpLjp-KdHv-vr5sACsaSmn4,604
+padpoes/checkers/nbsp.py,sha256=ioOr0hKYrZuCXCFzQpkY-c2_JYSwNCUAoBRbbIqWItQ,1864
+padpoes/github.py,sha256=rQ-UxhLFBIePlgsWKaFIVynC129gTBvTVZbBmIbQMo8,2036
+padpoes/padpo.py,sha256=Z5cTSACJpjfqR3D9CI-TBc8BTYoIruHszyN6e5uvocY,3842
+padpoes/pofile.py,sha256=4tBujINUhXxGkyM3GaTekmncofstdf_yxE9URJztWSc,7475
+padpoes-0.12.0.dist-info/entry_points.txt,sha256=5uwLEpJmn3rE74S47816oQBjTIH5VumZeuOyjt5Kwow,46
+padpoes-0.12.0.dist-info/LICENSE,sha256=juZiCY1JI0-9GY_eHo-4-n8GFLW5mwYAoCZE99xdv_s,1532
+padpoes-0.12.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+padpoes-0.12.0.dist-info/METADATA,sha256=hf3bBfVHo7d4pMAS4kxAagfjYieAfqWseQzUWnN-mRU,3393
+padpoes-0.12.0.dist-info/RECORD,,
