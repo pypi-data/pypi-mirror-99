@@ -1,0 +1,16 @@
+pyswEOS/H2O.py,sha256=ejXsyMad3iicF_Zju1dIufnM4XUYtMFzL_FDHTJMhEU,9630
+pyswEOS/H2ONaCl.py,sha256=m3Sl-E2Z92VpWgqK2-I3zyMmThpnt0bFN7ljW8ROSqY,43618
+pyswEOS/NaCl.py,sha256=8LsDub0GzkLBjpecL-O5z9uSYbeqR9T7jFQuLQd0shE,3992
+pyswEOS/PhaseDiagramSlice.py,sha256=jNj5StnRBsV-RYn90IsUVkil9jPcFTPOHbdbALhrJec,39511
+pyswEOS/_H2O.so,sha256=SpjezANAJod9E0XnYfvKy9G5g-EWB85su5MDXtUSjL4,150992
+pyswEOS/_H2ONaCl.so,sha256=gC2RC-hcmSDqcoljcJuNgw5S_HGnx4DrIkELmOJKqJY,1706824
+pyswEOS/_NaCl.so,sha256=ApXmLTm9bKv8GTP9PzylScSsiOgtV1jCGbkmancLtZU,68040
+pyswEOS/__init__.py,sha256=f_U44APEcDyvZI89CfzyvjYLHrCGfH48ogCX9W_aMuI,189
+pyswEOS/test_H2O.py,sha256=30_lThAENXkGyWBzJEBLyPXwkpsx498UoUKaLIycEPg,68
+pyswEOS/test_H2ONaCl.py,sha256=HHC9mI2PsxAoZyHIdUaFbJX--qLGFM2YMrjvROcWiEg,561
+pyswEOS/test_NaCl.py,sha256=roCBXuhz7m9VJrzyv6jhD_dzV-hRarFxHlTgHtFeHtc,113
+pyswEOS-0.2.4.dist-info/METADATA,sha256=32Ddl-_AD3VhQktEajhl32nK3yv5sJGU8Y8E61IHbH4,1512
+pyswEOS-0.2.4.dist-info/WHEEL,sha256=F649J_segTUhPlDAiLtzlPmkjmDPAmhaE57lck0XUpY,143
+pyswEOS-0.2.4.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+pyswEOS-0.2.4.dist-info/top_level.txt,sha256=cmgRGAg4KkswWLlweDXvPAi86Lc095FcjG5spMocfnY,8
+pyswEOS-0.2.4.dist-info/RECORD,,
