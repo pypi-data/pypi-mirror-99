@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+vis_sunburst_clock/VisSunburstClock.py
+vis_sunburst_clock/__init__.py
+vis_sunburst_clock/_imports_.py
+vis_sunburst_clock/metadata.json
+vis_sunburst_clock/package-info.json
+vis_sunburst_clock/vis_sunburst_clock.min.js
+vis_sunburst_clock/vis_sunburst_clock.min.js.map
+vis_sunburst_clock.egg-info/PKG-INFO
+vis_sunburst_clock.egg-info/SOURCES.txt
+vis_sunburst_clock.egg-info/dependency_links.txt
+vis_sunburst_clock.egg-info/top_level.txt

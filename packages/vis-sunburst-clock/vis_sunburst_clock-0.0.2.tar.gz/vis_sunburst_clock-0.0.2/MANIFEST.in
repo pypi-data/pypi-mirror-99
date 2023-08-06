@@ -1,0 +1,7 @@
+include vis_sunburst_clock/vis_sunburst_clock.min.js
+include vis_sunburst_clock/vis_sunburst_clock.min.js.map
+include vis_sunburst_clock/metadata.json
+include vis_sunburst_clock/package-info.json
+include README.md
+include LICENSE
+include package.json
