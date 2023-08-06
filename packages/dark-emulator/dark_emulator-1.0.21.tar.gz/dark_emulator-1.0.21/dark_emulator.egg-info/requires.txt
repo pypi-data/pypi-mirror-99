@@ -1,0 +1,4 @@
+numpy
+scipy
+george
+pyfftlog

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dark-emulator
+Version: 1.0.21
+Summary: dark emulator package
+Home-page: https://dark-emulator.readthedocs.io
+Author: Takahiro Nishimichi, Hironao Miyatake
+Author-email: takahiro.nishimichi@yukawa.kyoto-u.ac.jp, hironao.miyatake@iar.nagoya-u.ac.jp
+License: UNKNOWN
+Description: # Dark Emulator
+        A repository for emulators of our simulation suite.
+        ## Install
+        You may need to install `pyfftlog`, `george` (a software package for the Gaussian process) and colossus
+        ```
+        conda install -c conda-forge george
+        conda install -c conda-forge pyfftlog
+        pip install colossus
+        ```
+        
+        You can then check if Dark Emulator works by running a tutorial notebook at
+        ```
+        docs/tutorial.ipynb
+        docs/tutorial-hod.ipynb
+        ```
+        
+        
+Keywords: cosmology,large scale structure,halo,gaussian process,machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
