@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: OtoPy
+Version: 0.1.2
+Summary: Custom Lib Containing usefool Tools ins class construction
+Home-page: https://github.com/MathWintruff/OtoPy.git
+Author: Otoma Systems
+Author-email: otoma.system@gmail.com
+License: BSD 2-clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
