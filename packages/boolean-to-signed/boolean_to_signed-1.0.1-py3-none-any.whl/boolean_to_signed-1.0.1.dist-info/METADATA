@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: boolean-to-signed
+Version: 1.0.1
+Summary: Returns -1 if input is false, or 1 if input is true.
+Home-page: UNKNOWN
+Author: Najim Islam
+License: UNKNOWN
+Keywords: boolean,signed,convert,sign,conversion
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# boolean_to_signed
+
+Returns -1 if input is false, or 1  if input is true.
+
+## Install
+
+```sh
+$ pip install boolean_to_signed
+```
+
+## Usage
+
+```py
+from boolean_to_signed import to_signed
+
+print(to_signed(False));                  #=> -1
+print(to_signed(True));                   #=> 1
+
+
+# use cases
+x = y = value = 0
+
+#  using naive conditional assignment
+if x > 0:
+  y += value
+else:
+  y -= value;
+
+# using direct assignment
+y += to_signed(x > 0) * value;
+```
+
+## About
+
+### Author
+
+**Najim Islam**
+
+* [LinkedIn Profile](https://www.linkedin.com/in/najim-i/)
+
+### License
+
+Copyright © 2021, [Najim Islam](https://www.linkedin.com/in/najim-i/).
+Released under the [MIT License](https://opensource.org/licenses/MIT).
+
