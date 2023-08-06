@@ -1,0 +1,3 @@
+[console_scripts]
+tg-tool=tg_tool.main:app
+
