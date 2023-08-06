@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+HCMpostgresql = sqlalchemy_pg.psycopg2:PGDialect_psycopg2
+HCMpostgresql.psycopg2 = sqlalchemy_pg.psycopg2:PGDialect_psycopg2
+
