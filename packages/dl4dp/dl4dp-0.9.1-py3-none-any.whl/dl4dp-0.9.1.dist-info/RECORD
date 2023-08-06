@@ -1,0 +1,12 @@
+dl4dp/__init__.py,sha256=j__dY4Bi6RHZUz5_ns9Kp55SGhjPvt15iYllF0I0MqY,8969
+dl4dp/__main__.py,sha256=436SJy2yisj_xWp6ftDCMw3HrMhmxL9VFnmvdTXsvsU,57
+dl4dp/modules.py,sha256=LUOYbWRSkxrO_5XzCaW8TkiGzcrl2VLU75bel16o-ko,5776
+dl4dp/parser.py,sha256=qjKzOWf4chyZjfLaG0TX5mEtS9BdVUIsquUYCO8x3EY,6291
+dl4dp/tagger.py,sha256=QBRD5aDZ9umKruEntupJgc5wm6JE2xenU-hRija9t08,5747
+dl4dp/trainer.py,sha256=OVw69CnLGM8QvYrSwul94CFJXh_6lBjesuUibT_K00g,8158
+dl4dp/utils.py,sha256=zntlPzmCX_F7iGh3upbR-87Ayz_9lIarXC0xg6iAz0o,8205
+dl4dp-0.9.1.dist-info/LICENSE,sha256=_3E6JVK3JIxxync8wgfGHLThXT9UxwdfORfdLSlIMmY,1079
+dl4dp-0.9.1.dist-info/METADATA,sha256=uKvbPDE-OAy5bRDVsw9sLsxXWZTcKdyg_MVGa8eRw5E,2821
+dl4dp-0.9.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dl4dp-0.9.1.dist-info/top_level.txt,sha256=TlxsYsbSEAVgwSh4zW9n1uLPrStK29Ec1EovkAJKD3g,6
+dl4dp-0.9.1.dist-info/RECORD,,
