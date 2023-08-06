@@ -1,0 +1,10 @@
+kheops_client/__init__.py,sha256=A0B2rWAv-ZlAYxWflQI5bUeM73NbXNRw0Jgm_sZEhjI,87
+kheops_client/__main__.py,sha256=-TXSCJMrJLHegmWfUFCMSWg8EaDh-ADCG0NTs5CkQLE,10935
+kheops_client/_client.py,sha256=wGP5G6_nGTAWRawPb0QVuMWhZghZPMSHj6bCitxMDSE,23254
+kheops_client/_utils.py,sha256=3qmy2Z8okwmNo4cYm9zkRJBHZJ-5sQYnUjWGm1uzS7Y,2879
+kheops_client-0.1.0.dist-info/LICENSE,sha256=Us67PdksJB0Qh7dXzixSKLq1zVTjMeqGJRahFQtP9-A,1078
+kheops_client-0.1.0.dist-info/METADATA,sha256=KKpOOnEQdVPd9-t2nxCg3onxj-U5XW58sHJLAETHX2I,6036
+kheops_client-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kheops_client-0.1.0.dist-info/entry_points.txt,sha256=qQBVCUVbnx_udKGuG1sjrqx7U71k-mFg7THzVsKJ-_8,63
+kheops_client-0.1.0.dist-info/top_level.txt,sha256=Q8TwG9eMWfsRF_beE-a_7ICDcMV7yCdtYZ5Anfb7UcE,14
+kheops_client-0.1.0.dist-info/RECORD,,
