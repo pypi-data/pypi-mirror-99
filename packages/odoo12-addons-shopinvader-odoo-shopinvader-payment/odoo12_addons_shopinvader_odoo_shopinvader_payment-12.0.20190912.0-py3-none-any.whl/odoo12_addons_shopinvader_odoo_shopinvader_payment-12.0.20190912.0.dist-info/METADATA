@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-shopinvader-odoo-shopinvader-payment
+Version: 12.0.20190912.0
+Summary: Meta package for shopinvader-odoo-shopinvader-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-invader-payment
+Requires-Dist: odoo12-addon-invader-payment-manual
+Requires-Dist: odoo12-addon-invader-payment-sips
+Requires-Dist: odoo12-addon-invader-payment-stripe
+Requires-Dist: odoo12-addon-shopinvader-payment
+Requires-Dist: odoo12-addon-shopinvader-payment-manual
+Requires-Dist: odoo12-addon-shopinvader-payment-sips
+Requires-Dist: odoo12-addon-shopinvader-payment-stripe
+Requires-Dist: odoo12-addon-shopinvader-quotation-payment
+Requires-Dist: odoo12-addon-test-invader-payment
+Requires-Dist: odoo12-addon-test-shopinvader-payment
+
+UNKNOWN
+
+
