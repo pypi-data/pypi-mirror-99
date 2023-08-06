@@ -1,0 +1,9 @@
+bakura_pkg/__init__.py,sha256=QOPFJbPjmHCnwK7vfDZq9osnUIVzGfkgOfQbx5vVVHY,140
+bakura_pkg/audio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bakura_pkg/audio/wiring.py,sha256=BJAcAAF7xCknosYCIFT0pRnSi05fJqvoSMbRnAsjj9s,2643
+bakura_pkg/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bakura_pkg_topsyi-0.0.1.dist-info/LICENSE,sha256=jEnkq_V5QtXGmBVzK0LthY8_oxTu7R6YvmAikAwHLeQ,1048
+bakura_pkg_topsyi-0.0.1.dist-info/METADATA,sha256=Nws397HyPcQb_E2bUlHEe0XM2wyy3cRoH_KUZtF_XTI,989
+bakura_pkg_topsyi-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bakura_pkg_topsyi-0.0.1.dist-info/top_level.txt,sha256=okmv2JFbVEcm8exJ4gh37-AqlRWRZ7RoCzFRNJ8Fxf4,11
+bakura_pkg_topsyi-0.0.1.dist-info/RECORD,,
