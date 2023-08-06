@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.passwd
+Version: 0.24
+Summary: User DB API
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A User DB API plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
