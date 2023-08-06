@@ -1,0 +1,2 @@
+graft gaurabda/res
+global-exclude *.pyc
