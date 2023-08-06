@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+Pixelworlds.egg-info/PKG-INFO
+Pixelworlds.egg-info/SOURCES.txt
+Pixelworlds.egg-info/dependency_links.txt
+Pixelworlds.egg-info/not-zip-safe
+Pixelworlds.egg-info/requires.txt
+Pixelworlds.egg-info/top_level.txt
+pixelworlds/__init__.py
+pixelworlds/errors.py
+pixelworlds/events.py
+pixelworlds/fishes.py
+pixelworlds/image.py
+pixelworlds/items.py
+pixelworlds/wearables.py
