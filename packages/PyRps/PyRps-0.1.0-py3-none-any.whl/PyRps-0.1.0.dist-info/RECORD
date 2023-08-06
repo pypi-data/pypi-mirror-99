@@ -1,0 +1,11 @@
+Rps/Match.py,sha256=g0ibtr-AKquOFLsPe7QIk_r2s_KO_nrZOYPtI9Ssnic,5281
+Rps/RpsCore.py,sha256=9mnpGjvoc-VQ_hSfYJQhqiPuUT9bBi_y4SrUH-aqBwg,2048
+Rps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Rps/Types/Card.py,sha256=Q1IYxn73ORM25pvi-Nb2gD789UxERVb4DKiKkNkNLsA,3082
+Rps/Types/Player.py,sha256=_sdA1voK5VPiDWKgd1sTFG9_UKPO64bTI3q5yeA-a8o,151
+Rps/Types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyRps-0.1.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+PyRps-0.1.0.dist-info/METADATA,sha256=rwT0xKlbtuhmUJW18L5PCnfm3W-CXSlLGSHVcDrp4W0,621
+PyRps-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyRps-0.1.0.dist-info/top_level.txt,sha256=6YwIa9oWXoz9RnMeFb2jnx4lmBjhjue55KeAcrO7j9g,4
+PyRps-0.1.0.dist-info/RECORD,,
