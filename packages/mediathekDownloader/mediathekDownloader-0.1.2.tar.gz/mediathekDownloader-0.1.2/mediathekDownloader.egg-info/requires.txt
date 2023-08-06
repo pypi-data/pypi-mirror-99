@@ -1,0 +1,5 @@
+datetime>=4.3
+cli-logger>=1.0
+feedparser>=6.0
+vsmetaEncoder>=0.1
+wget>=3.2

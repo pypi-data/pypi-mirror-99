@@ -1,0 +1,12 @@
+README.md
+setup.py
+mediathekDownloader/__init__.py
+mediathekDownloader/__main__.py
+mediathekDownloader/downloadQueueItem.py
+mediathekDownloader/vsMetaInfoGenerator.py
+mediathekDownloader.egg-info/PKG-INFO
+mediathekDownloader.egg-info/SOURCES.txt
+mediathekDownloader.egg-info/dependency_links.txt
+mediathekDownloader.egg-info/not-zip-safe
+mediathekDownloader.egg-info/requires.txt
+mediathekDownloader.egg-info/top_level.txt
