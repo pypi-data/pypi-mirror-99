@@ -1,0 +1,3 @@
+[console_scripts]
+my_example = aioemonitor.bin.my_example:main
+
