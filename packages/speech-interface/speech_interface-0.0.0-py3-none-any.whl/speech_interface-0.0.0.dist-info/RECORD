@@ -1,0 +1,12 @@
+speech_interface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speech_interface/encoders.py,sha256=W39Jw12osWmG3q1Kgybzi4b-3Ryys8nagnOOLzFaUIk,2741
+speech_interface/utils.py,sha256=HDSkD7W9CB37ATqhmeFp5b1QBsRRxxucQMJPrirkatg,1964
+speech_interface/interfaces/__init__.py,sha256=yA4QPaiS3wW_gfSzj8qSil-7ryXqJdx7tTneNO48laI,642
+speech_interface/interfaces/hifi_gan.py,sha256=c7j0AogTFA4JbZfTQKqeoIyQlql4TBb4L_9WUqet_Ko,4512
+speech_interface/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speech_interface/models/hifi_gan.py,sha256=vT4IS5qgUAa1Z1LPLbk-7mypYDduer-9urO19VZCAZ0,6646
+speech_interface-0.0.0.dist-info/LICENSE,sha256=JrYQQa0CGJdl_HwcDRRNwar0iUfYQyEVkiwFnC9yElM,1066
+speech_interface-0.0.0.dist-info/METADATA,sha256=nb49w9BfU03iVyOaSmvwX3BrY8KWhC5bcm7YH4LqFy8,2371
+speech_interface-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+speech_interface-0.0.0.dist-info/top_level.txt,sha256=YKPGJ3AVOMFIvCma37vPLZCm7nzwUogdLi_AbdMevpE,17
+speech_interface-0.0.0.dist-info/RECORD,,
