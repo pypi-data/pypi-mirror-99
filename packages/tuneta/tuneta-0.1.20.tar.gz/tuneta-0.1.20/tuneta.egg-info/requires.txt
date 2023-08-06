@@ -1,0 +1,9 @@
+pandas-ta
+finta
+ta-lib
+optuna
+pathos
+tabulate
+scikit-learn
+pareto
+joblib
