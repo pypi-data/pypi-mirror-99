@@ -1,0 +1,8 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/resize_image.py,sha256=nhs_CxgWXNvttomUjr6us9g2vSgJV72OzKX1-bnuSbY,2406
+torch_resize_images-0.1.7.data/scripts/torch-resize,sha256=b48ARsGTr214jKUygieetIAgWqaqsP9ODtb3FrDszYU,1539
+torch_resize_images-0.1.7.dist-info/LICENSE,sha256=3fh4osrHFexpfMdq63nbMD-sOfEtcJ71og7gqbLwzzs,1067
+torch_resize_images-0.1.7.dist-info/METADATA,sha256=ew0-uAzguJtndVX8TnthELCOu_-kYH1n_SkmS0eNPHI,1217
+torch_resize_images-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torch_resize_images-0.1.7.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+torch_resize_images-0.1.7.dist-info/RECORD,,
