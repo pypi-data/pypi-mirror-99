@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/en_audio2text/__init__.py
+src/en_audio2text/aud2text.py
+src/en_audio2text/text_rules.py
+src/en_audio2text_soumyade.egg-info/PKG-INFO
+src/en_audio2text_soumyade.egg-info/SOURCES.txt
+src/en_audio2text_soumyade.egg-info/dependency_links.txt
+src/en_audio2text_soumyade.egg-info/top_level.txt
