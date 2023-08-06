@@ -1,0 +1,18 @@
+STACK: [FrameInfo(frame=<frame at 0x10123d400, file '/usr/local/lib/python3.9/site-packages/bapy/core.py', line 6632, code <module>>, filename='/usr/local/lib/python3.9/site-packages/bapy/core.py', lineno=924, function='<module>', code_context=['STACK = inspect.stack()
+       '], index=0),
+        FrameInfo(frame=<frame at 0x101472ac0, file '<frozen importlib._bootstrap>', line 228, code _call_with_frames_removed>, filename='<frozen importlib._bootstrap>', lineno=228, function='_call_with_frames_removed', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x101472200, file '<frozen importlib._bootstrap_external>', line 790, code exec_module>, filename='<frozen importlib._bootstrap_external>', lineno=790, function='exec_module', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x101447040, file '<frozen importlib._bootstrap>', line 680, code _load_unlocked>, filename='<frozen importlib._bootstrap>', lineno=680, function='_load_unlocked', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x7fec9e610850, file '<frozen importlib._bootstrap>', line 986, code _find_and_load_unlocked>, filename='<frozen importlib._bootstrap>', lineno=986, function='_find_and_load_unlocked', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x1014579a0, file '<frozen importlib._bootstrap>', line 1007, code _find_and_load>, filename='<frozen importlib._bootstrap>', lineno=1007, function='_find_and_load', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x1011e3dd0, file '/usr/local/lib/python3.9/site-packages/bapy/__init__.py', line 6, code <module>>, filename='/usr/local/lib/python3.9/site-packages/bapy/__init__.py', lineno=6, function='<module>', code_context=['from .core import *
+       '], index=0),
+        FrameInfo(frame=<frame at 0x101348e40, file '<frozen importlib._bootstrap>', line 228, code _call_with_frames_removed>, filename='<frozen importlib._bootstrap>', lineno=228, function='_call_with_frames_removed', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x101348ac0, file '<frozen importlib._bootstrap_external>', line 790, code exec_module>, filename='<frozen importlib._bootstrap_external>', lineno=790, function='exec_module', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x1013ae040, file '<frozen importlib._bootstrap>', line 680, code _load_unlocked>, filename='<frozen importlib._bootstrap>', lineno=680, function='_load_unlocked', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x7fec9f81ee30, file '<frozen importlib._bootstrap>', line 986, code _find_and_load_unlocked>, filename='<frozen importlib._bootstrap>', lineno=986, function='_find_and_load_unlocked', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x1013ad220, file '<frozen importlib._bootstrap>', line 1007, code _find_and_load>, filename='<frozen importlib._bootstrap>', lineno=1007, function='_find_and_load', code_context=None, index=None),
+        FrameInfo(frame=<frame at 0x7fec9f9090a0, file '/usr/local/bin/bapy', line 5, code <module>>, filename='/usr/local/bin/bapy', lineno=5, function='<module>', code_context=['from bapy import app
+       '], index=0)]
+self.file: Path('/usr/local/lib/python3.9/site-packages/bapy/core.py')
+repo: bapy, path: /Users/jose/bapy
