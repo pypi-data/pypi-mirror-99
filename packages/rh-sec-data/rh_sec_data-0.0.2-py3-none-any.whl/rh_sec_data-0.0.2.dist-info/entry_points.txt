@@ -1,0 +1,3 @@
+[console_scripts]
+rh-sec-data = rh_sec_data.cli:main
+
