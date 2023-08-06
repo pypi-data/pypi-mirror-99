@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: xchainpy_util
+Version: 0.1.3
+Summary: Utitity helpers for XChain clients
+Home-page: https://github.com/xchainjs/xchainpy-lib
+License: UNKNOWN
+Author: THORchain
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+
+# `xchainpy/xchainpy_util`
+
+Utitity helpers for XChain clients
+
+## Modules (in alphabetical order)
+
+- `asset` - Utilities for handling assets
+- `chain` - Utilities for multi-chain
+
+## Usage
+
+**Asset Helpers**
+
+```
+from xchainpy.xchainpy_util.asset import Asset
+```
+
