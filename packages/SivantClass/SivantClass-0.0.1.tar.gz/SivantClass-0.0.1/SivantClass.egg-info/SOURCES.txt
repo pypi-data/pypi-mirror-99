@@ -1,0 +1,8 @@
+README.md
+setup.py
+SivantClass/__init__.py
+SivantClass/sivant.py
+SivantClass.egg-info/PKG-INFO
+SivantClass.egg-info/SOURCES.txt
+SivantClass.egg-info/dependency_links.txt
+SivantClass.egg-info/top_level.txt
