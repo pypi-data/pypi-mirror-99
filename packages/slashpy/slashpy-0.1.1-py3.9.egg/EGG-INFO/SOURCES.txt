@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+slashpy/__init__.py
+slashpy/client.py
+slashpy/command.py
+slashpy/endpoints.py
+slashpy/objects.py
+slashpy.egg-info/PKG-INFO
+slashpy.egg-info/SOURCES.txt
+slashpy.egg-info/dependency_links.txt
+slashpy.egg-info/requires.txt
+slashpy.egg-info/top_level.txt
