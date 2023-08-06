@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/argcat/__init__.py
+src/argcat/argcat.py
+src/argcat.egg-info/PKG-INFO
+src/argcat.egg-info/SOURCES.txt
+src/argcat.egg-info/dependency_links.txt
+src/argcat.egg-info/top_level.txt
