@@ -1,0 +1,9 @@
+mediathekDownloader/__init__.py,sha256=_inyx_RTreR0VbRKsUKtl6yf1PnC4QFnsl03LHFrLO8,102
+mediathekDownloader/__main__.py,sha256=p64u2vnRIZSr-7Zbb53AIADSsk_5WGWIuhg7C-E4qew,9111
+mediathekDownloader/downloadQueueItem.py,sha256=CbPzLEHCLCYEPQNZPu6z1sKNZ2jMQR-3E7q3moKOhzo,700
+mediathekDownloader/vsMetaInfoGenerator.py,sha256=uqNguYQ2inHrD2ba83bvuBGZdI2yXN2sBozTjGXhNDc,2108
+mediathekDownloader-0.1.2.dist-info/LICENSE,sha256=K9LZWovp0INP9SYBb7_qrJtiMdtwGBZSa0ZsrSmh9o8,1090
+mediathekDownloader-0.1.2.dist-info/METADATA,sha256=iDgXiX0EC1k4NvzzumKiUCXO2fLjxeAYKygMxfUbbzQ,3839
+mediathekDownloader-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mediathekDownloader-0.1.2.dist-info/top_level.txt,sha256=7tSeec_YjTKZNEoU53oebAiX6qB1MG0cJ6M62HxImOc,20
+mediathekDownloader-0.1.2.dist-info/RECORD,,
