@@ -1,0 +1,3 @@
+[console_scripts]
+clibf = clibf.__main__:main
+
