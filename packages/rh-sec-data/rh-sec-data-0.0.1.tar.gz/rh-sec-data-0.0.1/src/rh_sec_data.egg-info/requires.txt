@@ -1,0 +1,11 @@
+click
+requests
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+
+[test]
+pytest
+pytest-cov

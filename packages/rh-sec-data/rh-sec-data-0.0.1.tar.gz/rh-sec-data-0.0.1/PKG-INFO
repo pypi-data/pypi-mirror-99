@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: rh-sec-data
+Version: 0.0.1
+Summary: Red Hat Security Data API
+Home-page: https://github.com/digitronik/rh-sec-data
+Author: Nikhil Dhandre
+Author-email: ndhandre@redhat.com
+License: UNKNOWN
+Description: <h1 align="center"> rh-sec-data </h1>
+        <h3 align="center"> Python wrapper Red Hat Security Data API</h3>
+        
+        It simply provides Python wrapper API for [Red Hat Security Data API](https://access.redhat.com/documentation/en-us/red_hat_security_data_api/1.0/)
+        
+        ### Installation
+        
+        ```
+        pip install rh-sec-data
+        ```
+        
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
