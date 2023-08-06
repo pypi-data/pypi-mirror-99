@@ -1,0 +1,11 @@
+servicex_for_trexfitter/__init__.py,sha256=gHPWNw0lHjo75wu42PzB7muoCUDp1qwbuzL0Ta-kVqo,137
+servicex_for_trexfitter/communicate_servicex.py,sha256=lwlQ0w6VyuHB_HsACo4RplBHEq_he31eX79kT5_vA94,1822
+servicex_for_trexfitter/load_servicex_requests.py,sha256=Zpae8g1XH070u-0p6wj5HijZu-2j-vVUaloo5n7yk0w,9060
+servicex_for_trexfitter/make_ntuples.py,sha256=7KdeJpN7cTbnFtUbVDxWNXaqAkaMDzj1kancu1D2xkc,1501
+servicex_for_trexfitter/read_trex_config.py,sha256=6VZldndSxkWXQSDTV8peo--wnWp7H014UkxBDj0MF38,4363
+servicex_for_trexfitter/servicex_for_trexfitter.py,sha256=-WYEAVgzjd42p_ygXEpf8kgfnNSMkyyOEns_jBpBPqs,2220
+servicex_for_trexfitter-0.6.5.dist-info/LICENSE,sha256=bmj_Ia_j4iCJEdAd7aNNUhAW77Pnjwf7f6-jL7JUFJY,1512
+servicex_for_trexfitter-0.6.5.dist-info/METADATA,sha256=WYKw092xmQlQzE1I3bzbRalZ7i0yAh84g8aqXCqUtD0,4901
+servicex_for_trexfitter-0.6.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+servicex_for_trexfitter-0.6.5.dist-info/top_level.txt,sha256=Lw3wTM3rlPkM8-5n0kcP01JklZhH4GVW1BGIPsgERRs,24
+servicex_for_trexfitter-0.6.5.dist-info/RECORD,,
