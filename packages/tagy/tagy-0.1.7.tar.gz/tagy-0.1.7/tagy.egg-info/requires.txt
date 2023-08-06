@@ -1,0 +1,4 @@
+Jinja2==2.11.3
+PyYAML
+mistune==0.8.1
+Pillow
