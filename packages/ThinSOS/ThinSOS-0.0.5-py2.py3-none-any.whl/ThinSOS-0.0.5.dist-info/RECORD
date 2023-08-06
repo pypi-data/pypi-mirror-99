@@ -1,0 +1,10 @@
+thinsos/__init__.py,sha256=Rkj5z18KFmq7ya5uUPIMG9z6qYRoHJFIJCvyLz_PfJs,29
+thinsos/core.py,sha256=bYEEV6jnhw7jglCBKzpmBF8rCvvcKrLMjl7Hkq_O_CY,12331
+thinsos/util.py,sha256=IGN7u42MogzsAQ6pI7SR9i-XwOqMBJbgAtzq0blIvU0,786
+thinsos/tests/__init__.py,sha256=38pdDhEZk2RiT5kga2DPbhTYeDHdsCXNaEr7HH1-k20,208
+thinsos/tests/test_sos.py,sha256=yOQh1BuPL2X0DhdJgZDlWZim9x2_A7dmZVx6zmv8dUg,2013
+ThinSOS-0.0.5.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ThinSOS-0.0.5.dist-info/METADATA,sha256=cqkd8MgaLnVwv78RN3yZAallOG_FAM3yAs3hPGRLXm8,822
+ThinSOS-0.0.5.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+ThinSOS-0.0.5.dist-info/top_level.txt,sha256=jBnaLgH5NKwc4laMSQcZhCZy7CMcujW5nsnFQyVhSDY,8
+ThinSOS-0.0.5.dist-info/RECORD,,
