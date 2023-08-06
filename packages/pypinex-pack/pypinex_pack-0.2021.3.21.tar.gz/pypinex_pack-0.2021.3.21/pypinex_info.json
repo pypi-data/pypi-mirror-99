@@ -1,0 +1,26 @@
+{
+	"magic": {
+		"magic": "pypinex-info",
+		"version": 1
+	},
+	"meta": {
+		"description": "PyPine extension that supports various forms of compressing/uncompressing of files: gzip, bzip2, xz, tar and uploadpack.",
+		"version": "0.2021.3.20",
+		"author": {
+			"name": "Jürgen Knauth",
+			"email": "pubsrc@binary-overflow.de"
+		},
+		"license": "Apache2",
+		"srcURL": null,
+		"documentationURL": null
+	},
+	"compatibility": {
+		"exformat": 1
+	},
+	"documentation": {
+		"installation": {
+			"pip": null
+		},
+		"python_import": "import pypinex_pack as pack"
+	}
+}

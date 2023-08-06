@@ -1,0 +1,18 @@
+include README.md
+include LICENSE.txt
+
+include pypinex_info.json
+include documentation/introduction.md
+include documentation/introduction.md
+include documentation/commands/00 overview.md
+include documentation/commands/01 commands.md
+include examples/demo_bz2.py
+include examples/demo_gz.py
+include examples/demo_tar.py
+include examples/demo_uploadpack1.py
+include examples/demo_uploadpack2.py
+include examples/demo_xz.py
+include examples/foo_bar.txt
+include examples/hello_world.txt
+include examples/the_quick.txt
+
