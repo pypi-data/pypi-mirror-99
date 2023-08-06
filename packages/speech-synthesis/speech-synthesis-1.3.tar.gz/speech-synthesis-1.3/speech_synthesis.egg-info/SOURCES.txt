@@ -1,0 +1,7 @@
+setup.py
+speechSynthesis.py
+speech_synthesis.egg-info/PKG-INFO
+speech_synthesis.egg-info/SOURCES.txt
+speech_synthesis.egg-info/dependency_links.txt
+speech_synthesis.egg-info/requires.txt
+speech_synthesis.egg-info/top_level.txt
