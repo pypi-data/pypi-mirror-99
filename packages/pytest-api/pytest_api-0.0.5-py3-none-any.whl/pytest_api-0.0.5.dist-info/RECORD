@@ -1,0 +1,12 @@
+pytest-api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest-api/api.py,sha256=FXUbuD7zd08AxkxPAili4swUBhk9ksetCi1ceJH5DDU,3750
+pytest-api/middleware.py,sha256=8Q8rb7h0IslHr1KaqPvTK6qtngQvB-0YxEIByoL8AeM,701
+pytest-api/response.py,sha256=gKMR_xkLTnT06rYW8k9kXuc3RhebuQQDZqZ9tcLKAOw,977
+pytest_api/__init__.py,sha256=TwnhpJ1SddidV8W_L-rGnKlaEwjd_wAQuYF04minE3U,86
+pytest_api/api.py,sha256=K98g6rIizfjYSWGng4_qYcqdYH4LH_Ry1mEJ36dR950,3883
+pytest_api/middleware.py,sha256=8Q8rb7h0IslHr1KaqPvTK6qtngQvB-0YxEIByoL8AeM,701
+pytest_api/response.py,sha256=gKMR_xkLTnT06rYW8k9kXuc3RhebuQQDZqZ9tcLKAOw,977
+pytest_api-0.0.5.dist-info/METADATA,sha256=rdzVScm9VJd50jTs1Y2kiPnpSxvsuG9kErWu_H_Nu5w,4073
+pytest_api-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_api-0.0.5.dist-info/top_level.txt,sha256=1zqqm1wwKc53cRA2OA0gr-Cn0xEBcbzuRgwyRldk6dA,11
+pytest_api-0.0.5.dist-info/RECORD,,
