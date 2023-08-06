@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aws-key-rotator
+Version: 0.1.1
+Summary: 
+Author: davido-nw
+Author-email: david@nebulaworks.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.17.32,<2.0.0)
+Requires-Dist: coloredlogs (>=15.0,<16.0)
+Project-URL: repository, https://github.com/davidjoliver86/aws-key-rotator
