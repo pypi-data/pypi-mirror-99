@@ -1,0 +1,5 @@
+pyramid<2.0,>=1.7
+pyramid_services<2.0,>=1.1
+
+[dev]
+pytest
