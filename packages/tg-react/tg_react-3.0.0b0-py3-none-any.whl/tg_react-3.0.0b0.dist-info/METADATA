@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: tg-react
+Version: 3.0.0b0
+Summary: Helpers for react based applications running on django.
+Home-page: https://github.com/thorgate/tg-react
+License: BSD
+Keywords: tg-react,thorgate,rest,drf
+Author: Thorgate
+Author-email: jyrno@thorgate.eu
+Requires-Python: >=3.6,<4
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: django
+Requires-Dist: djangorestframework (>=3.6.4)
+Project-URL: Repository, https://github.com/thorgate/tg-react
+Description-Content-Type: text/markdown
+
+# tg-react
+
+![https://badge.fury.io/py/tg-react](https://badge.fury.io/py/tg-react.png)
+![Workflow status](https://github.com/thorgate/tg-react/actions/workflows/python-package.yml/badge.svg?branch=master)
+
+Helpers for react based applications running on django.
+
+## Documentation
+
+The full documentation is at https://tg-react.readthedocs.org.
+
+## Quickstart
+
+Install tg-react:
+
+```
+pip install tg-react
+```
+
+Then use it in a project:
+
+```
+import tg_react
+```
+
+## Features
+
+* TODO
+
+.. TODO: List features and link to documentation for more information
+
+## Changelog
+
+Changes are documented under `Github Releases <https://github.com/thorgate/tg-react/releases>`_.
+
