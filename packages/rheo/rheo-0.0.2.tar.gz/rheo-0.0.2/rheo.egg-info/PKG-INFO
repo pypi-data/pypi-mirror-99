@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: rheo
+Version: 0.0.2
+Summary: Rheo library
+Home-page: https://github.com/sbg/rheo
+Maintainer: Seven Bridges Genomics Inc.
+Maintainer-email: support@sbgenomics.com
+License: Apache Software License 2.0
+Description: Copyright
+        ---------
+        
+        Copyright (c) 2016-2018 Seven Bridges Genomics, Inc. All rights
+        reserved.
+        
+        This project is open-source via the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
+        
+Keywords: rheo,sevenbridges,automations,sbg,cgc,cancer,genomics,cloud
+Platform: Windows
+Platform: POSIX
+Platform: MacOS
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown

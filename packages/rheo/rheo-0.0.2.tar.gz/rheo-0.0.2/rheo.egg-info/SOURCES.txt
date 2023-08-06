@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rheo/__init__.py
+rheo/version.py
+rheo.egg-info/PKG-INFO
+rheo.egg-info/SOURCES.txt
+rheo.egg-info/dependency_links.txt
+rheo.egg-info/requires.txt
+rheo.egg-info/top_level.txt
