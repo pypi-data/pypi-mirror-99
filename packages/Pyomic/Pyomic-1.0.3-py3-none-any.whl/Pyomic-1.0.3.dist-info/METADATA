@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Pyomic
+Version: 1.0.3
+Summary: A python framework library for omics analysis
+Home-page: https://github.com/Starlitnightly/Pyomic
+Author: ZehuaZeng
+Author-email: Starlitnightly@163.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: ERgene
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: sklearn
+Requires-Dist: scipy
+Requires-Dist: networkx
+Requires-Dist: seaborn
+Requires-Dist: datetime
+
+UNKNOWN
+
+
