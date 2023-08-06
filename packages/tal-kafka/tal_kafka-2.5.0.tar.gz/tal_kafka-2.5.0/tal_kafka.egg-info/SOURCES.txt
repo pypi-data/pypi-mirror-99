@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+tal_kafka.egg-info/PKG-INFO
+tal_kafka.egg-info/SOURCES.txt
+tal_kafka.egg-info/dependency_links.txt
+tal_kafka.egg-info/top_level.txt
