@@ -1,0 +1,4 @@
+six
+Flask
+SQLAlchemy==1.2
+Flask-SQLAlchemy
