@@ -1,0 +1,12 @@
+xcli/__init__.py,sha256=DVRcRrrGaVq8apCN8Z5oW0tATc2Fh38dHaZ2N0Ytx54,207
+xcli/_autocomplete.py,sha256=eyYe7hdml8K_zW9OOiEdDgmnrJUcCn-TqhBzNorNVdw,11562
+xcli/_exception.py,sha256=Stlhon0LNVUS_fPhpSnJLLcZbTlT_bIPlMCXAdg4UY4,37
+xcli/_input.py,sha256=WIAJAqULbC0LX83yyGnjCC-iGktOR7Fl1Hc_T6A-4VY,2534
+xcli/_output.py,sha256=Qc0Ve55A2_XhxJhpxwP9WuSuklTHWEKEZ5XNZV6kp0M,4860
+xcli/_parser.py,sha256=AZXbLngAK6XbX_JW_tk1qWPPCokwKTTYY_kQI0fBjls,17167
+xcli/colors.py,sha256=80p5jQ6cR4eIlrI7keOavdkonq0f__s7be3_OlXb2RA,2414
+xcli-0.2.dist-info/LICENSE,sha256=vQAvy02kXG4ayXETGovVAmOCDVtQkmpD1J-dZubsErU,1067
+xcli-0.2.dist-info/METADATA,sha256=RzEQOwkXIOYUu7igjY_Q0NRUhYPQ4MfOZkA4MffSdgY,611
+xcli-0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+xcli-0.2.dist-info/top_level.txt,sha256=DVD9VJHMHRz2qUEnisbZ_LnqTZeM2ExN5eAusKjAn2c,5
+xcli-0.2.dist-info/RECORD,,
