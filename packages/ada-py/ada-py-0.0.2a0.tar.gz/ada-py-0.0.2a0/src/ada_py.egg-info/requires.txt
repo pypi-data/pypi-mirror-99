@@ -1,0 +1,12 @@
+gmsh
+meshio[all]
+pandas
+toolz
+pyquaternion
+lmfit
+ccx2paraview
+jupyterlab
+pythreejs
+pyparsing
+plotly
+kaleido
