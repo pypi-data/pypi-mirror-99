@@ -1,0 +1,35 @@
+# Defines tpRigToolkit Nomenclature Tools toolset
+
+sortOrder: -400
+type: nomenclature
+name: Nomenclature
+color: [31, 175, 200]
+hue_shift: 0
+toolsets:
+  - tpDcc-tools-nameit
+  - tpDcc-tools-renamer
+
+menu:
+  - label: "Nomenclature"
+    type: "menu"
+    children:
+      - id: "tpDcc-tools-nameit"
+        type: "command"
+        language: "python"
+        tags:
+          - names
+          - nameit
+        command: "from tpDcc.managers import tools; tools.ToolsManager().launch_tool_by_id('tpDcc-tools-nameit')"
+        ui:
+          label: "NameIt"
+          icon: "tpDcc"
+      - id: "tpDcc-tools-renamer"
+        type: "command"
+        language: "python"
+        tags:
+          - names
+          - renamer
+        command: "from tpDcc.managers import configs, tools; names_config = configs.get_config(config_name='tpRigToolkit-names'); naming_config = configs.get_config(config_name='tpRigToolkit-naming'); tools.ToolsManager().launch_tool_by_id('tpDcc-tools-renamer', names_config=names_config, naming_config=naming_config)"
+        ui:
+          label: "Renamer"
+          icon: "tpDcc"
