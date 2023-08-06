@@ -1,0 +1,10 @@
+thread_regulator/__init__.py,sha256=m87RNnJkhoVJR0eXBnRMxK2RnDXY9-Fv6Q9yxKVw5Dg,27295
+thread_regulator/graphs/__init__.py,sha256=yk7FZ9P1rixd08xzZu-zGTS0VqtlOnGByID40bJtvqI,518
+thread_regulator/graphs/drag_drop_dashboard.py,sha256=PCm8KvzgyR5rUqQ4cGntiAIr6iqXVszvBjQg_mTdipk,2076
+thread_regulator/graphs/performance_graphs.py,sha256=wjZfO-34wmpr2dxxmpc8PFlMKI9S2R7bX4YCIaZRWyo,19707
+thread_regulator/graphs/tabbed_dashboard.py,sha256=j7fsfs9CpmUIcckHAcs-r4zd4pVxjoLaFBC7yBKHiTk,3682
+thread_regulator_pjn2work-0.2.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+thread_regulator_pjn2work-0.2.0.dist-info/METADATA,sha256=pRomtQndPwlryBND-XxtQpPkP0xbYwlGcwaiIlph684,2812
+thread_regulator_pjn2work-0.2.0.dist-info/WHEEL,sha256=gm79cMopkncyn0iSnI0vQNiDJ8t9on0H4_iz-CrpXMk,92
+thread_regulator_pjn2work-0.2.0.dist-info/top_level.txt,sha256=qz4vX-4xAACUeTethVeJZkjcxH0Z2HoySnGCUG3sIbk,17
+thread_regulator_pjn2work-0.2.0.dist-info/RECORD,,
