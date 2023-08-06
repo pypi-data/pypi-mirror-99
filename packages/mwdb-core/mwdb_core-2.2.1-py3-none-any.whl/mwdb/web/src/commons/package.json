@@ -1,0 +1,16 @@
+{
+    "name": "@mwdb-web/commons",
+    "main": "index.js",
+    "private": true,
+    "version": "2.2.1",
+    "peerDependencies": {
+        "@fortawesome/react-fontawesome": "*",
+        "lodash": "*",
+        "react": "*",
+        "react-ace": "*",
+        "react-autocomplete": "*",
+        "react-js-pagination": "*",
+        "react-router": "*",
+        "react-router-dom": "*"
+    }
+}
