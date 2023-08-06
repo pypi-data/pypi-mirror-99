@@ -1,0 +1,10 @@
+deepee/__init__.py,sha256=AIGTNSwCS1zt-CzprCAdBy9kxHHi0EAHVWacvijI8_E,317
+deepee/dataloader.py,sha256=AbX8HVOoBLZoiNR3-f74a0V0vgw1ky4U3mxaKIbEs5U,2171
+deepee/mixins.py,sha256=kMjPD6G0geWnZ7PvtQ25fUFAJhecJZ8HBhsH84nXUk8,92
+deepee/privacy_accounting.py,sha256=qaaIlZi4VM9ajBehFJikOy3BgfQIvYPRVGvKSG6cUxY,3065
+deepee/snooper.py,sha256=Y4KCBrJFszg8TOwd3O8u2K_ius3k0u1kSAmxDh1SGr4,3301
+deepee/surgery.py,sha256=SByL0sDoC6793GERZiIKSwpFU9AwsLyPCkLLWlCNmJs,4627
+deepee/wrapper.py,sha256=93lilLC_zPXPKuy5Y0Ou2iV0vOQuvWUGNsxfAZh1WcQ,5351
+deepee-0.1.3.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+deepee-0.1.3.dist-info/METADATA,sha256=IFfzTTeJF09_jgcjElxNP8VZ1yvcGBgt3ck0CTnW_D0,717
+deepee-0.1.3.dist-info/RECORD,,
