@@ -1,0 +1,12 @@
+beautifulsoup4
+gym
+lxml
+msgpack
+numpy
+pytest
+pytest-cov
+pandas
+requests
+scipy
+simplejson
+tushare
