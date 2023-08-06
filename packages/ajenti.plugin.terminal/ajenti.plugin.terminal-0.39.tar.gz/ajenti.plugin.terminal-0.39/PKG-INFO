@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.terminal
+Version: 0.39
+Summary: Terminal
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Terminal plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3

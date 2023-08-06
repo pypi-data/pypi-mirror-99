@@ -1,0 +1,5 @@
+pyte==0.8.0 # Use dicts instead of lists 
+Pillow
+aj
+ajenti.plugin.core
+ajenti.plugin.ace
