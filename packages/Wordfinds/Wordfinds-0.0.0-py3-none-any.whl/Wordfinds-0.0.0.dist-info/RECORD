@@ -1,0 +1,10 @@
+wordfinds/__init__.py,sha256=K-XEuZjdcKN2ZKdomQwiJsv8ybgLV3KCOLHt4p3GAn8,57
+wordfinds/array.py,sha256=ZG-TLDm4nexIoHFYVWyME2G7kJ1eeK2LvpD1qfyzmVA,3680
+wordfinds/main.py,sha256=Ex_VybDocBGb7H_t9tTf4i3mRxByYwBn61jh6bae5MQ,68
+wordfinds/raw.py,sha256=DUhDCnYIeq9XAH4FkMa2rZY07cy9R1aS-rFqtYtQKrw,1927
+wordfinds/utils.py,sha256=nTFWqqb-IpjQSu2YBvUUMnNf2vwO7if6NQtouj30Esc,648
+wordfinds/wordbank.py,sha256=o670TaH6VToYkrnvGGCacekekdvMMLe0QmB8ffRwIXU,446
+Wordfinds-0.0.0.dist-info/METADATA,sha256=cbLKRxZ4iC9wE-vewEIOa5mjjnK-CPMpAi-gDoxOZL0,376
+Wordfinds-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Wordfinds-0.0.0.dist-info/top_level.txt,sha256=BXKbSquWgWGaP8FWRWLKttUkM52rXdtCdq-pGhHHVUc,10
+Wordfinds-0.0.0.dist-info/RECORD,,
