@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+autoanno/__init__.py
+autoanno.egg-info/PKG-INFO
+autoanno.egg-info/SOURCES.txt
+autoanno.egg-info/dependency_links.txt
+autoanno.egg-info/requires.txt
+autoanno.egg-info/top_level.txt
