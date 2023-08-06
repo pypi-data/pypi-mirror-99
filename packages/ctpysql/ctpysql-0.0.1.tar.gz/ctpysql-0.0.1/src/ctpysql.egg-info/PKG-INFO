@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ctpysql
+Version: 0.0.1
+Summary: This library is for run MYSQL queries as fast as possible 🚄🔥!
+Home-page: https://github.com/MahyarNV/cautious-pysql
+Author: Mahyar Behzadi
+Author-email: mahyarbhz@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
