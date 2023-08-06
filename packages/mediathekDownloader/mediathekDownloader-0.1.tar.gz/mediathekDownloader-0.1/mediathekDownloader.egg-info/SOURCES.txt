@@ -1,0 +1,8 @@
+README.md
+setup.py
+mediathekDownloader.egg-info/PKG-INFO
+mediathekDownloader.egg-info/SOURCES.txt
+mediathekDownloader.egg-info/dependency_links.txt
+mediathekDownloader.egg-info/not-zip-safe
+mediathekDownloader.egg-info/requires.txt
+mediathekDownloader.egg-info/top_level.txt
