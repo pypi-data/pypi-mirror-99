@@ -1,0 +1,14 @@
+CHANGES
+=======
+
+v0.0.1
+------
+
+* better exception handling, more informative error messages
+* scp-compatible error messages for scp put, exec commands over ssh at once even when separated by semicolon
+* do not print default port 22 for --dry-run
+* add support for scp
+* add --dry-run option to print sshpass command
+* add readme
+* add timeout to ssh connect and exec\_command
+* initial commit
