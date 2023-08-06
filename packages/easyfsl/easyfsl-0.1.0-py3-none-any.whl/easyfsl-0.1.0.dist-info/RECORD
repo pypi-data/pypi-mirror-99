@@ -1,0 +1,13 @@
+easyfsl/__init__.py,sha256=YdfArfZ2U_76clstkxtyyXRr_a5b9UF99DxE5vSnsqU,169
+easyfsl/utils.py,sha256=Gn-aSsnVo4LONW2Q_BblsHsaTtseAJZdBMR3c-9PAQk,1001
+easyfsl/data_tools/__init__.py,sha256=ZkbD29KK5BVA_0cXUnd6jzE7i8TCcDE0rdTb52iwybA,68
+easyfsl/data_tools/easy_set.py,sha256=g1wBtT-95-vhe9aZbXNbdO1kXq688tqdnwX83zyYOWE,3093
+easyfsl/data_tools/task_sampler.py,sha256=5RBCIVjsfad3-6vKMR9BtI74WDKNjqqZ388YMIHdqYQ,3838
+easyfsl/methods/__init__.py,sha256=4G-74fMXzu9VAdz_d6iIvZUB2BhaYgXq_sYKQNqTYcI,111
+easyfsl/methods/abstract_meta_learner.py,sha256=xFMwlVsNiUqSeUqp9TCKnXcSeBPAtX69MV_ATW55Y4k,5242
+easyfsl/methods/prototypical_networks.py,sha256=EB45x39jfWBZnjkuEihE5Ux34eZZq0DwsujnxEqvBmA,1617
+easyfsl-0.1.0.dist-info/LICENSE,sha256=ULJAVSyoY3XfgyBO0psqPm-TXT_isACWasdxrHLRyFc,1063
+easyfsl-0.1.0.dist-info/METADATA,sha256=zD0L9PgiS5hxIaRBtvKdxDzgW2h4FO-cLktVm0yLBYY,6634
+easyfsl-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+easyfsl-0.1.0.dist-info/top_level.txt,sha256=Ga5nwQKzZd4m54waCsvig_LLj9cm00fYKB6FPbGjlnk,8
+easyfsl-0.1.0.dist-info/RECORD,,
