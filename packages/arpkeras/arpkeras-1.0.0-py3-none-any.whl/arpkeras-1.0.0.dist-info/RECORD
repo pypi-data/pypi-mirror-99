@@ -1,0 +1,8 @@
+ARPkeras/__init__.py,sha256=5t3mtE8kHjQDdr2iQDZQC1cCnHxcQc8xEHh0ONUPtFo,67
+ARPkeras/autorotating_conv.py,sha256=iMkoZa9bH7IcOQx3V0DJbEAByUZvIimKQkvWhuT0bXM,11183
+ARPkeras/autorotating_dense.py,sha256=p0_ChdSrl8KIq5KqCQU06kTlJufVq1JSN_br0egxJyw,4210
+arpkeras-1.0.0.dist-info/LICENSE,sha256=F96EzotgWhhpnQTW2TcdoqrMDir1jyEo6H915tGQ-QE,11524
+arpkeras-1.0.0.dist-info/METADATA,sha256=f3tkkIxYzAfD2mrhNF9vu56LaZc2fr5aOP391oMkcLM,9305
+arpkeras-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+arpkeras-1.0.0.dist-info/top_level.txt,sha256=uQH8IA3Iv6QdkyGOEHriWj14WAu_sl0eAcBKEUz7WiM,9
+arpkeras-1.0.0.dist-info/RECORD,,
