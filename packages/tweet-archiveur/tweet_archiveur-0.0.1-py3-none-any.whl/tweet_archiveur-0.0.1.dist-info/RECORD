@@ -1,0 +1,10 @@
+tweet_archiveur/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+tweet_archiveur/_nbdev.py,sha256=StFiNKmL18yWGhGAi3iimRX8g06JMV_Ki4NQDkr-uGg,470
+tweet_archiveur/database.py,sha256=_lT8QFaxe351s3S5-QzcGZ_tz5pkNK0mVw1jRTS4HjY,9689
+tweet_archiveur/scrapper.py,sha256=HICjS5uTQcNwDm6AqlQ39Xr7TcCsd7N5oW25PS5eFg4,6470
+tweet_archiveur-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tweet_archiveur-0.0.1.dist-info/METADATA,sha256=eTSBOfBQEFqEk0zA-maYJxhX2V3bsjNRY0CAXhjLVQA,4069
+tweet_archiveur-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tweet_archiveur-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+tweet_archiveur-0.0.1.dist-info/top_level.txt,sha256=MOQBM74_DY9mxWCYBdIzQk4FvSg1-uA1-bTl3SWoL3A,16
+tweet_archiveur-0.0.1.dist-info/RECORD,,
