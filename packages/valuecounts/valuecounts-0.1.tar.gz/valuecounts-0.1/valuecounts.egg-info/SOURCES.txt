@@ -1,0 +1,7 @@
+setup.py
+valuecounts/__init__.py
+valuecounts.egg-info/PKG-INFO
+valuecounts.egg-info/SOURCES.txt
+valuecounts.egg-info/dependency_links.txt
+valuecounts.egg-info/not-zip-safe
+valuecounts.egg-info/top_level.txt
