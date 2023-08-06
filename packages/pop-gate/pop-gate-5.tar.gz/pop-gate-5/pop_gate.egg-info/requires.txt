@@ -1,0 +1,4 @@
+pop>=16.3
+pop-tree
+starlette
+uvicorn
