@@ -1,0 +1,9 @@
+README.md
+setup.py
+pywebkit/__init__.py
+pywebkit/css_class_maker.py
+pywebkit.egg-info/PKG-INFO
+pywebkit.egg-info/SOURCES.txt
+pywebkit.egg-info/dependency_links.txt
+pywebkit.egg-info/requires.txt
+pywebkit.egg-info/top_level.txt
