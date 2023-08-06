@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pyva
+Version: 0.3
+Summary: Simple and flexible python data validation library
+Home-page: https://github.com/holoyan/python-data-validation
+Author: Artak
+Author-email: artaksafaryanc@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: data,validation,validator,data validator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
