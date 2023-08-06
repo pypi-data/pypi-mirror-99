@@ -1,0 +1,7 @@
+sparksrepeater/__init__.py
+sparksrepeater/setup.py
+sparksrepeater/sparksrepeater.py
+sparksrepeater.egg-info/PKG-INFO
+sparksrepeater.egg-info/SOURCES.txt
+sparksrepeater.egg-info/dependency_links.txt
+sparksrepeater.egg-info/top_level.txt
