@@ -1,0 +1,6 @@
+biosimulators_utils[logging] >= 0.1.43
+cbmpy <= 0.7.25
+lxml
+numpy
+python_libsbml
+glpk
