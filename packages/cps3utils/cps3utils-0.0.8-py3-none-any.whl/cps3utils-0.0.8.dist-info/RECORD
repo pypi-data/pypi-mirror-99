@@ -1,0 +1,10 @@
+cps3utils/__init__.py,sha256=Beo6H4I46BEERLyn_2_R_WNNrTeoV6pYh3YAXkGQr8M,2541
+cps3utils/__main__.py,sha256=hJKbdllT5CTU1yBtaN6Cy18r1gmkNxbWqqVEXTE7j1s,770
+cps3utils/convert.py,sha256=tzX8M875VQvM8zzMzOOG6G9HCCV7BtSBPO5c4W40O6I,4659
+cps3utils/crypt.py,sha256=T_mjUzT41x50RQ-bKnUy4v1_kmxfEDrbSkXH1sC8o3k,5938
+cps3utils/games/__init__.py,sha256=048obQwjrnknJqZOVXyBqOfy8WMkMJwNUVQS644oBRQ,1454
+cps3utils/games/jojoban.py,sha256=sZTg877h2idS86TAawMymqkUJ4PPJV-u0hT_P7N7AGE,1238
+cps3utils-0.0.8.dist-info/METADATA,sha256=6dV0atgWKeDp8qdwVWbun2vr59PhFMd-AUoUlh9mhuw,680
+cps3utils-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cps3utils-0.0.8.dist-info/top_level.txt,sha256=QYPDZYCdgZOTFxjf1vME-adE47a3sl1y3G6mZqSiM-8,10
+cps3utils-0.0.8.dist-info/RECORD,,
