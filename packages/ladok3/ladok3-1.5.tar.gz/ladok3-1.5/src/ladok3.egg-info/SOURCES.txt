@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+src/ladok3/__init__.py
+src/ladok3/cli.py
+src/ladok3/data.py
+src/ladok3/ladok.bash
+src/ladok3/report.py
+src/ladok3.egg-info/PKG-INFO
+src/ladok3.egg-info/SOURCES.txt
+src/ladok3.egg-info/dependency_links.txt
+src/ladok3.egg-info/entry_points.txt
+src/ladok3.egg-info/requires.txt
+src/ladok3.egg-info/top_level.txt
