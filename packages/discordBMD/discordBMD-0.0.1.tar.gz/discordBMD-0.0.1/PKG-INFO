@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: discordBMD
+Version: 0.0.1
+Summary: A simple bot discord creator
+Home-page: UNKNOWN
+Author: Liamgen
+Author-email: alteatelecom@gmail.com
+License: MIT
+Description: Voici un package qui va révolutionner les bots discord ! Il permet de créer un bot complet en une seule ligne de code ! 
+        
+        Change Log 
+        
+        ==========
+        
+        0.0.1 (24/03/2021)
+        
+        ==========
+        
+        - First Release 
+        - Added help panel 
+Keywords: discord
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

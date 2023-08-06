@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+pyproject.toml
+setup.py
+discordBMD.egg-info/PKG-INFO
+discordBMD.egg-info/SOURCES.txt
+discordBMD.egg-info/dependency_links.txt
+discordBMD.egg-info/top_level.txt
