@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: base-kivy-app
+Version: 0.1.1
+Summary: A base for kivy apps with flat layout and providing user configuration.
+Home-page: https://github.com/matham/base_kivy_app
+Author: Matthew Einhorn
+Author-email: moiein2000@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/matham/base_kivy_app/issues
+Project-URL: Source, https://github.com/matham/base_kivy_app
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ruamel.yaml
+Requires-Dist: kivy
+Requires-Dist: plyer
+Requires-Dist: tree-config
+Requires-Dist: more-kivy-app (~=0.1.1)
+Requires-Dist: pyobjus ; sys_platform == "darwin"
+Requires-Dist: pywin32 ; sys_platform == "win32"
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.6) ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: coveralls ; extra == 'dev'
+
+# base_kivy_app
+A base for kivy apps with flat layout and providing user configuration
+
+For more information: https://matham.github.io/base_kivy_app/index.html
+
+To install https://matham.github.io/base_kivy_app/installation.html
+
+
