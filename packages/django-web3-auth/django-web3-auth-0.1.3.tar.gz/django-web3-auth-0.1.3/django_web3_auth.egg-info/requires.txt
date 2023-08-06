@@ -1,0 +1,4 @@
+ethereum==2.3.2
+rlp==2.0.1
+eth_utils>=1.0.3
+Django>=2.0
