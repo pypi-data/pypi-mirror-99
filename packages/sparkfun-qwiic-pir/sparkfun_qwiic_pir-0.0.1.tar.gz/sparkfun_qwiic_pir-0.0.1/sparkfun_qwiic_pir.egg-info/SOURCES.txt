@@ -1,0 +1,9 @@
+README.md
+qwiic_pir.py
+setup.cfg
+setup.py
+sparkfun_qwiic_pir.egg-info/PKG-INFO
+sparkfun_qwiic_pir.egg-info/SOURCES.txt
+sparkfun_qwiic_pir.egg-info/dependency_links.txt
+sparkfun_qwiic_pir.egg-info/requires.txt
+sparkfun_qwiic_pir.egg-info/top_level.txt
