@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: wSerializer
+Version: 0.7
+Summary: Library for saving data to text files which can then be retrieved afterwards
+Home-page: https://github.com/31ayush05/wSerializer
+Author: Ayush Yadav
+Author-email: ayush3105yadav@gmail.com
+License: MIT
+Download-URL: https://github.com/31ayush05/wSerializer/archive/refs/tags/v0.7.tar.gz
+Description: UNKNOWN
+Keywords: wSerializer,save,load,Serialize,Deserialize
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
