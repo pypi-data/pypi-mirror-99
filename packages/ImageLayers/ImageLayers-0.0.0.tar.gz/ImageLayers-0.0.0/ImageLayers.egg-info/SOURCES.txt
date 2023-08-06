@@ -1,0 +1,10 @@
+README.md
+setup.py
+ImageLayers.egg-info/PKG-INFO
+ImageLayers.egg-info/SOURCES.txt
+ImageLayers.egg-info/dependency_links.txt
+ImageLayers.egg-info/requires.txt
+ImageLayers.egg-info/top_level.txt
+imagelayers/__init__.py
+imagelayers/main.py
+imagelayers/util.py
