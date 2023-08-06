@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyraid
+Version: 0.0.1
+Summary: General purpose helper functions and classes for Python3 projects
+Home-page: https://github.com/nwithan8/pyraid
+Author: Nate Harris
+Author-email: n8gr8gbln@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/nwithan8/pyraid/archive/0.0.1.tar.gz
+Description: # unraidAPI-python
+        An Unraid API client written in Python
+        
+Keywords: Python,Python3,requests,Unraid,API,Docker,VM,virtual machine,control,server
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
