@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: testgear
+Version: 0.0.1
+Summary: Package to control test gear
+Home-page: https://github.com/PhilippCo/testgear
+Author: Philipp Cochems
+Author-email: philipp.cochems@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.11.1)
+Requires-Dist: pyvisa
+Requires-Dist: pyvisa-py
+
+UNKNOWN
+
+
