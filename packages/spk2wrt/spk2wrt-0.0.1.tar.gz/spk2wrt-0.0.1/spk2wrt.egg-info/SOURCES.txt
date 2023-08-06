@@ -1,0 +1,9 @@
+README.md
+setup.py
+conv2eng/__init__.py
+conv2eng/conv2eng.py
+conv2eng/test.py
+spk2wrt.egg-info/PKG-INFO
+spk2wrt.egg-info/SOURCES.txt
+spk2wrt.egg-info/dependency_links.txt
+spk2wrt.egg-info/top_level.txt
