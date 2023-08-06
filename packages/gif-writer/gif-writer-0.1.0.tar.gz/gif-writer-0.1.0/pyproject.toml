@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gif-writer"
+version = "0.1.0"
+description = "Record loop iterations of an image/several images and output to gif"
+authors = ["Andy Jackson <amjack100@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+imageio = "^2.9.0"
+numpy = "^1.20.1"
+tqdm = "^4.59.0"
+Pillow = "^8.1.2"
+scikit-image = "^0.18.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

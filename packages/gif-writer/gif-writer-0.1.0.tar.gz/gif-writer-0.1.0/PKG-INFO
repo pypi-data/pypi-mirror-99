@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gif-writer
+Version: 0.1.0
+Summary: Record loop iterations of an image/several images and output to gif
+License: MIT
+Author: Andy Jackson
+Author-email: amjack100@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=8.1.2,<9.0.0)
+Requires-Dist: imageio (>=2.9.0,<3.0.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Requires-Dist: scikit-image (>=0.18.1,<0.19.0)
+Requires-Dist: tqdm (>=4.59.0,<5.0.0)
