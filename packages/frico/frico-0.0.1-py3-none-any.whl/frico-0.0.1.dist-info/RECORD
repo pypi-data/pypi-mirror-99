@@ -1,0 +1,11 @@
+frico/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frico/bitstring.py,sha256=ATOjUp__uWRgk69pvlUT1CiBl-Rb5oXybHVo-AZMXVc,6689
+frico/blocks.py,sha256=vrvAl2tvQy3vUND078gDTp8YENOaG0w2iUbIEi8JfiY,8999
+frico/devices.py,sha256=h-uqZQVj3XJSEdxCR7mC86BLXcIbEV9GCievQYYtZnU,2061
+frico/parsers.py,sha256=rmZ8iaAAo8DqXys16Lxkw_GXDQyICDbr6q5DSQs0XUM,5000
+frico/typing.py,sha256=SKq6FcObG5YSrO_bvexNG5JKNn03jjfj29rdjRm_c6M,92
+frico-0.0.1.dist-info/LICENSE,sha256=PJSGx_96NwhVVxZJgHUByzxs3HgaU5A7w52n9E5jolg,1064
+frico-0.0.1.dist-info/METADATA,sha256=hDx_lfHmgtibBO2XUJr-Tu9kpEBZiNRE8MjqvKgM7FA,4403
+frico-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+frico-0.0.1.dist-info/top_level.txt,sha256=Y8-xHXaXGFDtLFsMZ3GlPH_n2mUJsPfgKYcWpxZasEo,6
+frico-0.0.1.dist-info/RECORD,,
