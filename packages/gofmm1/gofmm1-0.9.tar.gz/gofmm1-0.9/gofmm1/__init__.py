@@ -1,0 +1,2 @@
+import gofmm1.errorAnalysis_gofmm
+import gofmm1.generate_SPD_from_KDE

@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: gofmm1
+Version: 0.9
+Summary: TYPE YOUR DESCRIPTION HERE
+Home-page: https://github.com/doernermannT/gofmm
+Author: Tianyi Ge
+Author-email: tianyi.ge@tum.de
+License: TUM
+Download-URL: https://github.com/doernermannT/gofmm/archive/master.zip
+Description: UNKNOWN
+Keywords: gofmm,swig,KDE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
