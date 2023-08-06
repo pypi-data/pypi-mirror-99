@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "irpf-cei"
+version = "3.2.0"
+description = "Programa auxiliar gratuito para calcular custos de ações, ETFs e fundos imobiliários."
+authors = ["Thiago Carvalho D'Ávila <thiagocavila@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+repository = "https://github.com/staticdev/irpf-cei"
+homepage = "https://github.com/staticdev/irpf-cei"
+documentation = "https://irpf-cei.readthedocs.io"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/staticdev/irpf-cei/releases"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.0.3"
+click = "^7.1.1"
+xlrd = ">=1.2,<3.0"
+inquirer = "^2.6.3"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+flake8-bandit = "^2.1.2"
+flake8-bugbear = "^21.3.2"
+safety = "^1.10.0"
+pytest = "^6.2.2"
+mypy = "^0.812"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-mock = "^3.4.0"
+pyfakefs = "^4.4.0"
+typeguard = "^2.11.1"
+reorder-python-imports = "^2.4.0"
+pre-commit = "^2.11.1"
+pygments = "^2.8.1"
+xdoctest = "^0.15.4"
+sphinx = "^3.5.3"
+sphinx-autobuild = "^2021.3.14"
+darglint = "^1.7.0"
+flake8-docstrings = "^1.6.0"
+flake8-rst-docstrings = "^0.0.14"
+pep8-naming = "^0.11.1"
+pre-commit-hooks = "^3.4.0"
+nox-poetry = "0.8.4"
+sphinx-rtd-theme = "^0.5.0"
+
+[tool.poetry.scripts]
+irpf-cei = "irpf_cei.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["irpf_cei"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
