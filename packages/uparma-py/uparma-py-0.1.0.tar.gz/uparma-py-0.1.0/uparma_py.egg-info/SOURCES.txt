@@ -1,0 +1,9 @@
+README.rst
+setup.py
+uparma/__init__.py
+uparma/uparma.py
+uparma/version.txt
+uparma_py.egg-info/PKG-INFO
+uparma_py.egg-info/SOURCES.txt
+uparma_py.egg-info/dependency_links.txt
+uparma_py.egg-info/top_level.txt
