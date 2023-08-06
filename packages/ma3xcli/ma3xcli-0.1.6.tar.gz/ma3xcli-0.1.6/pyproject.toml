@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ma3xcli"
+version = "0.1.6"
+description = ""
+authors = ["1v1a3x"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+	
+one = 'ma3xcli.one:main'
+two = 'ma3xcli.two:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
