@@ -1,0 +1,1 @@
+dwriteshapepy/dwriteshape.cp37-win_amd64.pyd
