@@ -1,0 +1,11 @@
+jithub/__init__.py,sha256=sL-xLjDZrbm_cdx4AniTLpNu8PNsQcuwmiN_Mib0mis,250
+jithub/backends/__init__.py,sha256=3q0avuJFOyaOUM3Z-_Nme7PgjCvX4Qjcf-0lZrBK0v4,72
+jithub/backends/adexp.py,sha256=N1i1KajcWbc5-jRPJWZtzf72EDxfFxt5sC5FTos0UHU,5966
+jithub/backends/izhikevich.py,sha256=SgBSgsYxfooQ9y4Uaj3sho9bSYMjiBco5G-ImhTYlx4,11746
+jithub/backends/mat_nu.py,sha256=BEuIIjMDayDsNEbwlzzeX7Q1Kf2pVXEo773iW393W7Q,14480
+jithub/backends/numba_adexp.py,sha256=DPhwaxI5B6ckO2y10r5znjH3A7x6f8L05DPQ3Oklm4A,6572
+jithub-0.1.0.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+jithub-0.1.0.dist-info/METADATA,sha256=EtmSH4XBjLzK8ngYaH-_UTjS0hSUh_XnoVAYM_JCd8k,249
+jithub-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jithub-0.1.0.dist-info/top_level.txt,sha256=meM4tkpj9uoRpnPIXvp_GSjl3JTcs1QtFSe9003unSA,7
+jithub-0.1.0.dist-info/RECORD,,
