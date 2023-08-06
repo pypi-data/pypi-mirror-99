@@ -1,0 +1,182 @@
+Metadata-Version: 2.1
+Name: sap-instance-manager
+Version: 0.4.1
+Summary: SAP Python instance manager client
+Home-page: https://www.sap.com/
+Author: SAP SE
+License: SAP DEVELOPER LICENSE AGREEMENT
+Keywords: SAP instancemanager
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: jsonschema (==3.2.0)
+
+sap\_instance\_manager
+================
+
+Python package for creating and deleting service instances per tenant
+within an application at runtime.
+
+Overview
+--------
+
+This package provides a client for the *Instance Manager* - a component
+that creates and deletes service instances (via REST API) for a
+specified key. *Instance Manager* can be used in the context of
+multitenant applications where the tenant id is the key an instance is
+associated with.
+
+*Multitenancy* is a concept for sharing resources between several
+different and unrelated to each other groups of users called *tenants*.
+Example: subscriptions to a commercial cloud application can be sold to
+two different companies each of which should use the application in
+isolation from the other one. Customizations are also applied
+(e.g. different branding, identity providers, database schemas etc.).
+
+A typical application has access to external resources (e.g. a database
+or messaging) via *services*. If an application is used by different
+tenants, then using a separate service instance for each one will
+improve isolation since service binding provides access to a particular
+resource.
+
+With this package a Python application can dynamically create and delete
+service instances per tenant at runtime. An instance of a *managed
+service* of the desired type is created first and is then bound to the
+application. For a HANA database the *managed service* is called
+*‘managed-hana’*. This service binding only provides parameters (HTTP
+endpoints and credentials) which can later be used by the application
+for creating and deleting service instances of the desired type for each
+tenant.
+
+API
+---
+
+
+
+.. code:: python
+
+    from sap import instance_manager
+
+    # create instance manager client
+    client = instance_manager.create(options)
+
+    # create instance
+    instance = client.create('my-tenant')
+    print(instance)
+    # ...
+
+    # get already created instance
+    instance = client.get('my-tenant')
+    print(instance)
+    # ...
+
+    # delete instance
+    client.delete('my-tenant')
+
+
+Options
+~~~~~~~
+
+The *managed service* bound to the application (for example
+*managed-hana*) provides credentials as well as REST endpoints of the
+*Instance Manager* - the component that handles creation and deletion of
+services. These credentials and endpoints are mandatory.
+
+The create and delete operations are executed asynchronously on server
+side. To provide an easier interface, this library also implements
+polling until an operation is finished. Developers can tune polling via
+some optional properties.
+
+Since operations involve network activity (thus, can be considered
+relatively slower) the package also caches the created instances. Cache
+options can also be provided by developers.
+
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| Property                      | Mandatory | Type    | Details                                                                                                                       |
++===============================+===========+=========+===============================================================================================================================+
+| user                          | x         | string  | User for authentication.                                                                                                      |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| password                      | x         | string  | Password for the user.                                                                                                        |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| post_managed_instance_url     | x         | string  | REST endpoint used for creating a new service instance for a tenant.                                                          |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| get_managed_instance_url      | x         | string  | REST endpoint                                                                                                                 |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| get_all_managed_instances_url | x         | string  | REST endpoint used for getting details about all instances (for all tenants).                                                 |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| delete_managed_instance_url   | x         | string  | REST endpoint used for deletion of a service instance.                                                                        |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| polling_interval_millis       |           | integer | States how many milliseconds to wait between requests in the polling phase. Defaults to 300 milliseconds. Minimum value is 0. |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| polling_timeout_seconds       |           | integer | Sets a limit for the amount of time (in seconds) that can be spent in polling. Defaults to 120 seconds. Minimum value is 1.   |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| cache_max_items               |           | integer | States the capacity of the cache. Default value is 500. Minimum value is 1.                                                   |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+| cache_item_expire_seconds     |           | integer | Number of seconds after which a cache entry expires. Defaults to 600 seconds. Minimum value is 1.                             |
++-------------------------------+-----------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
+**Note**:
+
+- A *managed service* binding contains all of the mandatory properties mentioned above.
+
+- It is recommended to have a single instance manager client Python object per *managed service* bound to the application.
+
+
+Methods
+~~~~~~~
+-  ``create(tenant, optional_parameters)`` - creates a service instance
+   for the provided tenant. The method polls until the instance is
+   successfully created. Reports error if an instance for this tenant
+   already exists. The second argument is optional. It is a ``dict``
+   with parameters for provisioning or binding, as would be done with
+   the -c options of the CLI commands ``create-service`` and
+   ``bind-service`` for unmanaged services. E.g.
+
+   .. code:: python
+
+       {
+         "provisioning_parameters": { "database_id" : "<HANA Tenant DB Guid or Name>" },
+         "binding_parameters": {"<key>" : "<value>"}
+       }
+
+-  ``get(tenant)`` - gets the corresponding instance for the provided
+   tenant either from cache or from server. Value of ``None`` means that
+   a service instance for this tenant does not exist. **Note**: this
+   method only polls if the instance is in status
+   ``CREATION_IN_PROGRESS``. In all other cases it returns the service
+   instance as it is on server. Thus, having the ``credentials``
+   property on the ``instance`` object is not guaranteed.
+-  ``get_all()`` - gets the instances for all tenants as array of
+   objects. Filtering of the instances according to their status (e.g.
+   ``CREATION_SUCCEEDED``, ``CREATION_IN_PROGRESS``) does not take
+   place. Thus, having the ``credentials`` property on each of the
+   instances provided is not guaranteed. This method updates the cache.
+-  ``delete(tenant)`` - deletes service instance for the provided
+   tenant. The method polls until the instance is successfully deleted.
+   Reports error if an instance for this tenant does not exists.
+
+When a method raises an error and this error is caused by an unexpected
+HTTP response code received from the server, then this error object will
+have a ``statusCode`` property with the status code of the received HTTP
+response.
+
+SSL Certificates
+----------------
+
+When the Instance Manager is running on a host with a self-signed
+certificate, you can use the ``REQUESTS_CA_BUNDLE`` environment variable
+to specify the path to the certificate.
+
+
