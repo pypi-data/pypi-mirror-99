@@ -1,0 +1,3 @@
+[console_scripts]
+crypto-bot = crypto_bot.app
+
