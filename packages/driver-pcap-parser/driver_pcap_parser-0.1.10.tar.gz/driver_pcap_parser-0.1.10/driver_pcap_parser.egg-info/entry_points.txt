@@ -1,0 +1,3 @@
+[console_scripts]
+driver_pcap_parser = driver_pcap_parser.cli:main
+
