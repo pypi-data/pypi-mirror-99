@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: aiqi
+Version: 0.0.0a0
+Summary: Placeholder package to shadow internal names.
+Home-page: https://github.com/paulmcmillan/placeholders
+Author: Paul McMillan
+Author-email: paul@mcmillan.ws
+License: MIT
+Description: This placeholder package exists to publicly claim an internal name, so that it cannot be used as part of a dependency confusion attack.
