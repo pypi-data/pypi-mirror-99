@@ -1,0 +1,9 @@
+README.md
+cargo_vcs.py
+setup.py
+cargo_vcs.egg-info/PKG-INFO
+cargo_vcs.egg-info/SOURCES.txt
+cargo_vcs.egg-info/dependency_links.txt
+cargo_vcs.egg-info/entry_points.txt
+cargo_vcs.egg-info/requires.txt
+cargo_vcs.egg-info/top_level.txt
