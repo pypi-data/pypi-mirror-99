@@ -1,0 +1,9 @@
+certbot_dns_scaleway/__init__.py,sha256=nU2n-LGoFjeW22EMe0hvDfPYwn9qaFhTNZKm4Ey_8ZQ,3334
+certbot_dns_scaleway/dns_scaleway.py,sha256=mHfwRwJ5z8y48TZC5OOloZ-QfCE7Nb5SCA1KUTEd2Dw,7923
+certbot_dns_scaleway/dns_scaleway_test.py,sha256=g6ISlCb2L_jM3rkGPXHPu1Eba8nPEOpIfIqXQDLI_7I,1222
+certbot_dns_scaleway-0.0.6.dist-info/LICENSE.txt,sha256=LMXecVrlqXbwhvukkwiAyeQhkUFz_IURG_9RTUdXEj8,10786
+certbot_dns_scaleway-0.0.6.dist-info/METADATA,sha256=cb3hoCbwzyUitB-GSW22rA9jS4RMquQxIju6HUcez80,5380
+certbot_dns_scaleway-0.0.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+certbot_dns_scaleway-0.0.6.dist-info/entry_points.txt,sha256=GEEzIzJ8z3fRrfHzbDeeYxO82upmDGf4iy5_TFVgJCQ,82
+certbot_dns_scaleway-0.0.6.dist-info/top_level.txt,sha256=u0h5GfNbTfzf79Js-FCSwgyzF0CLCSDujes54TDL_UM,21
+certbot_dns_scaleway-0.0.6.dist-info/RECORD,,

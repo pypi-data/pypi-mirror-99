@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-scaleway = certbot_dns_scaleway.dns_scaleway:Authenticator
+
