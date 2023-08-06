@@ -1,0 +1,17 @@
+.gitignore
+CHANGELOG.md
+LICENSE.txt
+Pipfile
+Pipfile.lock
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+.github/workflows/semver.yml
+.github/workflows/superlinter.yml
+pelican/plugins/webassets_babeljsx/__init__.py
+pelican_webassets_babeljsx.egg-info/PKG-INFO
+pelican_webassets_babeljsx.egg-info/SOURCES.txt
+pelican_webassets_babeljsx.egg-info/dependency_links.txt
+pelican_webassets_babeljsx.egg-info/requires.txt
+pelican_webassets_babeljsx.egg-info/top_level.txt
