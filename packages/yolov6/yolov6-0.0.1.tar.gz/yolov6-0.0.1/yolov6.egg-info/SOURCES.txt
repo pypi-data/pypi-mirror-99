@@ -1,0 +1,8 @@
+setup.py
+yolov6/__init__.py
+yolov6/main.py
+yolov6.egg-info/PKG-INFO
+yolov6.egg-info/SOURCES.txt
+yolov6.egg-info/dependency_links.txt
+yolov6.egg-info/requires.txt
+yolov6.egg-info/top_level.txt
