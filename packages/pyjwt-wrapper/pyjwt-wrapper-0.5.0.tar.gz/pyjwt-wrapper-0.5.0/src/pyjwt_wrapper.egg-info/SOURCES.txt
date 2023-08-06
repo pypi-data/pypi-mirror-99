@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pyjwt_wrapper/__init__.py
+src/pyjwt_wrapper/authentication.py
+src/pyjwt_wrapper/authorization.py
+src/pyjwt_wrapper.egg-info/PKG-INFO
+src/pyjwt_wrapper.egg-info/SOURCES.txt
+src/pyjwt_wrapper.egg-info/dependency_links.txt
+src/pyjwt_wrapper.egg-info/requires.txt
+src/pyjwt_wrapper.egg-info/top_level.txt
