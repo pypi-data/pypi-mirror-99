@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+sftpgo_client/__init__.py
+sftpgo_client.egg-info/PKG-INFO
+sftpgo_client.egg-info/SOURCES.txt
+sftpgo_client.egg-info/dependency_links.txt
+sftpgo_client.egg-info/requires.txt
+sftpgo_client.egg-info/top_level.txt
