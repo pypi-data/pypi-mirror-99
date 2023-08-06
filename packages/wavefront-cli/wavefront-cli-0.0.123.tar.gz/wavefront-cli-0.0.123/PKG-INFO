@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: wavefront-cli
+Version: 0.0.123
+Summary: Wavefront client CLI utility.
+Home-page: https://github.com/wavefrontHQ/wavefront-cli
+Author: Evan Pease
+Author-email: evan@wavefront.com
+License: UNLICENSE
+Description: wavefront-cli
+        =========================
+        .. image:: https://travis-ci.com/wavefrontHQ/wavefront-cli.svg?branch=master
+            :target: https://travis-ci.com/wavefrontHQ/wavefront-cli
+        
+        The Wavefront Integration Command Line Interface (CLI) is a utility for installing and configuring the Wavefront proxy, Telegraf collector agent, and integrations.
+        
+        
+Keywords: lib,cli
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: test
