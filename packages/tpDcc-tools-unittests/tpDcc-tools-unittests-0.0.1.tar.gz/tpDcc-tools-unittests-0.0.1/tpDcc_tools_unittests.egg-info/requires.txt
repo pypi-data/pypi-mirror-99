@@ -1,0 +1,10 @@
+tpDcc-libs-python
+tpDcc-core
+tpDcc-libs-qt
+tpDcc-libs-unittests
+
+[dev]
+wheel
+
+[test]
+pytest
