@@ -1,0 +1,3 @@
+[console_scripts]
+sema = sema.sema_cl_nav:main
+
