@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mkwikidata
+Version: 0.6
+Summary: Utility functions for working with Wikidata
+Home-page: https://github.com/maxim75/mkwikidata
+License: UNKNOWN
+Author: Maksym Kozlenko
+Author-email: max@kozlenko.info
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests >=2.25.1
