@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+synchronicity/__init__.py
+synchronicity/synchronizer.py
+synchronicity.egg-info/PKG-INFO
+synchronicity.egg-info/SOURCES.txt
+synchronicity.egg-info/dependency_links.txt
+synchronicity.egg-info/top_level.txt
