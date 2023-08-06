@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+README.txt
+pyproject.toml
+requirements.txt
+setup.py
+ru_word2number/w2n.py
+ru_word2number.egg-info/PKG-INFO
+ru_word2number.egg-info/SOURCES.txt
+ru_word2number.egg-info/dependency_links.txt
+ru_word2number.egg-info/top_level.txt
