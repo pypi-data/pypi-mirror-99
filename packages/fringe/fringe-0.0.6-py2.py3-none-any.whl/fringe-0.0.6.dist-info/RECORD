@@ -1,0 +1,16 @@
+fringe/__init__.py,sha256=-VvI1l7-l8xP2aagW9uUFIdBHVf6gyjnWLpW3phs1-Q,39
+fringe/modules/__init__.py,sha256=-VvI1l7-l8xP2aagW9uUFIdBHVf6gyjnWLpW3phs1-Q,39
+fringe/modules/scanner.py,sha256=-9zoovP0MYggGpJWM6M43udwLaFtYKweooeZckWOQMo,1416
+fringe/modules/simulator.py,sha256=EYJsHLykBnUhBNwcOXAuXB9M2krmsUwiJwNMmmqyG5E,2708
+fringe/process/__init__.py,sha256=-VvI1l7-l8xP2aagW9uUFIdBHVf6gyjnWLpW3phs1-Q,39
+fringe/process/cpu.py,sha256=S755hTxwkEKG413MvJxAQG0qQsyaEldgjhJpaupPDJQ,1840
+fringe/process/gpu.py,sha256=LAR3j1ewHEGwZdLaaU2ZMGYBFyQOQfJZhfj4tHye_ZU,2232
+fringe/utils/__init__.py,sha256=-VvI1l7-l8xP2aagW9uUFIdBHVf6gyjnWLpW3phs1-Q,39
+fringe/utils/io.py,sha256=vDbO6BCudrYPSosrTELc-qi9sE_SzveWHrull8JNk2g,1438
+fringe/utils/modifiers.py,sha256=OMX95_3xu5CrIYJ8CD2GHAVGTImeA5B-St5E5LV0FMs,3414
+fringe-0.0.6.dist-info/AUTHORS.rst,sha256=5FPTD8wNSJlH3zLnSK9AZ3p_KrOA53H2cBnDJ11RgK0,178
+fringe-0.0.6.dist-info/LICENSE,sha256=Eyo-9xiyyGg1087mJc406MGxPcumXHtTQzLbH341nX8,1094
+fringe-0.0.6.dist-info/METADATA,sha256=VtnLtJwogKzNCYZroJ9y6M0sANIMyLYXAMT06KuOy5M,3951
+fringe-0.0.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+fringe-0.0.6.dist-info/top_level.txt,sha256=Y2ggzRGV42cHPYzDXnsCMk-6lrwznD2_lOxAIITwpfY,7
+fringe-0.0.6.dist-info/RECORD,,
