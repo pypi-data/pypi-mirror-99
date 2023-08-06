@@ -1,0 +1,3 @@
+recursive-include fileshare_webui/templates *
+recursive-include fileshare_webui/static *
+include fileshare/VERSION
