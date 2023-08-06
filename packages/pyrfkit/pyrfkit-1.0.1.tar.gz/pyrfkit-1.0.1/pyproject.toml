@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pyrfkit"
+version = "1.0.1"
+description = "Python RF Kit built on scikit-rf."
+authors = ["Adam Page <adam.page@samtec.com>"]
+homepage = "https://bitbucket.org/samteccmd/pyrfkit"
+repository = "https://bitbucket.org/samteccmd/pyrfkit"
+packages = [ { include = "rfkit" }]
+
+[tool.taskipy.tasks]
+lint =  "pylint --rcfile .pylintrc rfkit"
+test = "pytest tests/"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+scikit-rf = "^0.16.0"
+numpy = "^1.20.1"
+scipy = "^1.6.1"
+pandas = "^1.2.3"
+h5py = "^3.2.1"
+matplotlib = "^3.3.4"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.19.0"
+pytest = "^6.2.1"
+pep8 = "^1.7.1"
+pylint = "^2.6.0"
+autopep8 = "^1.5.4"
+taskipy = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
