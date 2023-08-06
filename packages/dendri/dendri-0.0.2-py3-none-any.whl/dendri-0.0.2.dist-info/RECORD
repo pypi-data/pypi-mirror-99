@@ -1,0 +1,11 @@
+dendri/__init__.py,sha256=gEsCCuWQahLOUYEkR0rQ7Mrs6PcL3A749oRTQntHHbQ,147
+dendri/_version.py,sha256=DLOurZt-KeyIULP-eu3BG9TBsmLNx_MxZ0eD2V2-04Q,497
+dendri/conftest.py,sha256=2O7GrjZhXfcFuuCOptC3LI8xxaVVvEe-cot_NgFm00c,1642
+dendri/dataframe.py,sha256=AVZD2FQ22pbpF3Eq0qs-WK4pMKUnmCsaXVoCOhRtP4s,16470
+dendri/dates.py,sha256=ZVrmOAeArJ5GNIlMlVljBVTFYfKZl7ZHjyNdHOvXdQE,16532
+dendri/utils.py,sha256=r3oCmk_2xBr3v2ArldrxL5XzJaLR8JGkr9hy5AT5xpk,2501
+dendri-0.0.2.dist-info/LICENSE,sha256=gmnohvWg93RFWt1sjEo3cdKLb0BP3AV_ZJmesdhrad0,1066
+dendri-0.0.2.dist-info/METADATA,sha256=vssYe8oxlzeEL-KPhLEApeQV2zSQdoD-kx0501rSSIU,1611
+dendri-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dendri-0.0.2.dist-info/top_level.txt,sha256=eHjFQ9POY07AzXE4EGjeqNO5PBEgJn0XmbSma1-ZbsI,7
+dendri-0.0.2.dist-info/RECORD,,
