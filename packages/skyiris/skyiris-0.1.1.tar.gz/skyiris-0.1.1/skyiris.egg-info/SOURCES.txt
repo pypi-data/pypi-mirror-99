@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+skyiris/__init__.py
+skyiris.egg-info/PKG-INFO
+skyiris.egg-info/SOURCES.txt
+skyiris.egg-info/dependency_links.txt
+skyiris.egg-info/top_level.txt
+skyiris/.ipynb_checkpoints/__init__-checkpoint.py
