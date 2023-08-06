@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+ujson = "*"
+cmd2 = "*"
+pynndb2 = "*"
+termcolor = "*"
+ascii-graph = "*"
+pygments = "*"
+
+[requires]
+python_version = "3"
+
+[dev-packages]
+twine = "*"
+pipenv = "*"
+setuptools-scm = "*"
