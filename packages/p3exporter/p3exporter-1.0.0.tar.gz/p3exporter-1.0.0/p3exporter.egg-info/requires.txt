@@ -1,0 +1,4 @@
+inflection
+prometheus-client
+PyYAML
+flask
