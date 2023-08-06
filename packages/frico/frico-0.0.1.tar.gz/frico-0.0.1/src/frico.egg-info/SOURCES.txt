@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+src/frico/__init__.py
+src/frico/bitstring.py
+src/frico/blocks.py
+src/frico/devices.py
+src/frico/parsers.py
+src/frico/typing.py
+src/frico.egg-info/PKG-INFO
+src/frico.egg-info/SOURCES.txt
+src/frico.egg-info/dependency_links.txt
+src/frico.egg-info/requires.txt
+src/frico.egg-info/top_level.txt
