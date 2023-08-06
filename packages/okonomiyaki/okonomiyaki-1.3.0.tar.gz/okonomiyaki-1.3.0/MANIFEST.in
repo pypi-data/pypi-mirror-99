@@ -1,0 +1,2 @@
+include okonomiyaki/models/tests/data/*egg
+include LICENSE.txt
