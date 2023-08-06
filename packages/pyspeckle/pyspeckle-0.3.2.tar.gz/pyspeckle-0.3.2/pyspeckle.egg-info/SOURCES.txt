@@ -1,0 +1,15 @@
+CHANGELOG.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+pyspeckle/__init__.py
+pyspeckle/pyspeckle.py
+pyspeckle.egg-info/PKG-INFO
+pyspeckle.egg-info/SOURCES.txt
+pyspeckle.egg-info/dependency_links.txt
+pyspeckle.egg-info/requires.txt
+pyspeckle.egg-info/top_level.txt
+pyspeckle.egg-info/zip-safe
