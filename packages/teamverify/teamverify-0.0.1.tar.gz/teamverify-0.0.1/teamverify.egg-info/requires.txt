@@ -1,0 +1,4 @@
+owlready2>=0.23
+selenium
+pandas
+beautifulsoup4
