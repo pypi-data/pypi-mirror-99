@@ -1,0 +1,11 @@
+README.md
+setup.py
+./torch_resize
+src/__init__.py
+src/resize_image.py
+src/util.py
+torch_resize_images.egg-info/PKG-INFO
+torch_resize_images.egg-info/SOURCES.txt
+torch_resize_images.egg-info/dependency_links.txt
+torch_resize_images.egg-info/requires.txt
+torch_resize_images.egg-info/top_level.txt
