@@ -1,0 +1,3 @@
+[console_scripts]
+prestoweb-manage=prestoweb.manage:main
+
