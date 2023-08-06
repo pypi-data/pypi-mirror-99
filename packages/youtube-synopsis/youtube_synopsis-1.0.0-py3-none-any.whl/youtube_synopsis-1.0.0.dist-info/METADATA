@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: youtube-synopsis
+Version: 1.0.0
+Summary: Generate a colored, striped "summary" of a Youtube video.
+Home-page: https://pypi.org/project/youtube-synopsis/
+Author: Tony Feng
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: h11 (==0.12.0)
+Requires-Dist: httpcore (==0.12.3)
+Requires-Dist: httpx (==0.17.1)
+Requires-Dist: idna (==3.1)
+Requires-Dist: joblib (==1.0.1)
+Requires-Dist: numpy (==1.20.1)
+Requires-Dist: opencv-python (==4.5.1.48)
+Requires-Dist: progress (==1.5)
+Requires-Dist: rfc3986 (==1.4.0)
+Requires-Dist: scikit-learn (==0.24.1)
+Requires-Dist: scipy (==1.6.1)
+Requires-Dist: sniffio (==1.2.0)
+Requires-Dist: threadpoolctl (==2.1.0)
+Requires-Dist: youtube-dl (==2021.3.14)
+Requires-Dist: youtube-search-python (==1.4.2)
+
+# youtube_synopsis
+
+Youtube Synopsis downloads and generates a colored "summary" of a Youtube video.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install youtube_synopsis.
+
+```bash
+pip install youtube-synopsis
+```
+
+## Usage
+
+```python
+import youtube_synopsis as yts
+
+# yts takes in a search phrase, the number of stripes, and the format
+args = []
+args.append( 'bbibbi iu' ) # search phrase
+args.append( 100 )         # Number of stripes
+args.append( 'rec' )       # Format, takes "square", "sqr", "rectangle", or "rec"
+
+yts.youtube_synopsis.main( args ) # Returns path to the synopsis
+```
+
