@@ -1,0 +1,5 @@
+setup.py
+NoobHttp.egg-info/PKG-INFO
+NoobHttp.egg-info/SOURCES.txt
+NoobHttp.egg-info/dependency_links.txt
+NoobHttp.egg-info/top_level.txt

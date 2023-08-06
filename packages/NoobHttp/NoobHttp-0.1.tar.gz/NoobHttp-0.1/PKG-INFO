@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: NoobHttp
+Version: 0.1
+Summary: HTTP request for armatures
+Home-page: https://www.youtube.com/c/FunnyBunny-YT
+Author: dedshit
+Author-email: zrpco#@yopmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
