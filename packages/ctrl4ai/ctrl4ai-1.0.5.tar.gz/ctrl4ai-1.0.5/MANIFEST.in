@@ -1,0 +1,9 @@
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE
+global-include *likert_scales.txt
+
+# Exclude data files
+global-exclude *.csv.gz
