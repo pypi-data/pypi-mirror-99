@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        iam-to-sqlite=iam_to_sqlite.cli:cli
+    

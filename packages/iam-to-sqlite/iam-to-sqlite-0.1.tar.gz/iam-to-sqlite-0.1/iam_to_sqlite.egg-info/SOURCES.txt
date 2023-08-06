@@ -1,0 +1,10 @@
+README.md
+setup.py
+iam_to_sqlite/__init__.py
+iam_to_sqlite/cli.py
+iam_to_sqlite.egg-info/PKG-INFO
+iam_to_sqlite.egg-info/SOURCES.txt
+iam_to_sqlite.egg-info/dependency_links.txt
+iam_to_sqlite.egg-info/entry_points.txt
+iam_to_sqlite.egg-info/requires.txt
+iam_to_sqlite.egg-info/top_level.txt
