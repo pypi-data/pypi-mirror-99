@@ -1,0 +1,8 @@
+potato_communicate/__init__.py,sha256=hAo70YgBWfL223hKV1ivwOh9qvcSrOq6s4lUa1ZyOgM,114
+potato_communicate/client.py,sha256=0eu1i5IqJsAH994kZVNeghDK21gQewjpu2yWNFduTMc,1201
+potato_communicate/converter.py,sha256=mYoji04JhI4U66Odg3PBNwyl8fNd0ixFe8CeBC0nNI4,104
+potato_communicate/server.py,sha256=kmFkhJAMCuelFQhG7iN4QL4luaYgHUEmR1rBmktddTQ,551
+potato_communicate-1.0.0.dist-info/METADATA,sha256=v-_Ugw-zadoXF7OmkUhN3TcBFzu5Kd5H-b99Wezfk_Y,225
+potato_communicate-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+potato_communicate-1.0.0.dist-info/top_level.txt,sha256=tTG3LlKaGdBTH7_PX8VWYGJuVKp3uGmB6ifdky49Yto,19
+potato_communicate-1.0.0.dist-info/RECORD,,
