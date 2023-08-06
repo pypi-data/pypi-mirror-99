@@ -1,0 +1,10 @@
+jenkins/__init__.py,sha256=cKCimZRfA0mq-yPz1o5I2dJ6gOtcpLxm12py7FWaiZw,93521
+jenkins/plugins.py,sha256=hOQpxez_KIn0v_IrdyFUwv1Hssvw1-AcwdTY1Xv5P8Q,3819
+jenkins/version.py,sha256=tqrF8moeDrE-JsYA-OVvJRBvPOwXJxvmiyPylhuJsBs,786
+python_jenkins-1.8.0.0a0.dist-info/AUTHORS,sha256=36DqMmY0DhXDwpSgdbnkGTBwiYAsSbpWz_7Bs31WTHU,2950
+python_jenkins-1.8.0.0a0.dist-info/COPYING,sha256=uC9aKP47mEwD5DVgB9do3mBiEdp_jZQfTtRJWQtTTts,1547
+python_jenkins-1.8.0.0a0.dist-info/METADATA,sha256=6kifbNJqry4cQUbC94PkGvBuzLHEBY8BjvA1k7aw0_4,3727
+python_jenkins-1.8.0.0a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_jenkins-1.8.0.0a0.dist-info/pbr.json,sha256=OMq3x99-wtb9Exz_HBPcpeR7hY4SCfPpwSqfeogtI0Y,46
+python_jenkins-1.8.0.0a0.dist-info/top_level.txt,sha256=g7vYG6AsySvzyXYCrZ-Ufyqeh9KmMed9WcuELfLZCp4,8
+python_jenkins-1.8.0.0a0.dist-info/RECORD,,
