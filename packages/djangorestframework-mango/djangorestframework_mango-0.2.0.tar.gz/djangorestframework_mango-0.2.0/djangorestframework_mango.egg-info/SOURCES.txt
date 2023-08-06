@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+django_rest_framework_mango/__init__.py
+django_rest_framework_mango/middlewares.py
+django_rest_framework_mango/mixins.py
+djangorestframework_mango.egg-info/PKG-INFO
+djangorestframework_mango.egg-info/SOURCES.txt
+djangorestframework_mango.egg-info/dependency_links.txt
+djangorestframework_mango.egg-info/requires.txt
+djangorestframework_mango.egg-info/top_level.txt
