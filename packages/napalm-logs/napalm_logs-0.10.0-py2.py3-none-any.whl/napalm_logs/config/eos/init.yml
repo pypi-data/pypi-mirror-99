@@ -1,0 +1,22 @@
+# You should not use special characters in the value keys
+#
+# A single whitespace in `line` will match any number of whitespaces. You should be explicit when
+# Matching white space in `values`
+#
+prefixes:
+  - time_format: "%b %d %H:%M:%S"
+    values:
+      date: (\w+ +\d+)
+      time: (\d\d:\d\d:\d\d)
+      host: ([^ ]+)
+      processName: (\w+)
+      tag: ([\w-]+)
+    line: '{date} {time} {host} {processName}: %{tag}'
+  # ISO8601 date-time format
+  - values:
+      date: (\d{4}-\d{2}-\d{2})
+      time: (\d{2}:\d{2}:\d{2}[\.\d{3}]?[\+|-]\d{2}:\d{2})
+      host: ([^ ]+)
+      processName: (\w+)
+      tag: ([\w-]+)
+    line: '{date}T{time} {host} {processName}: %{tag}'
