@@ -1,0 +1,16 @@
+torch_snippets/__init__.py,sha256=tXnz5kEpoR7-yYE6kuhAeRUWBhMhiwPq8KJKSw8qaYI,373
+torch_snippets/_nbdev.py,sha256=8ULAotpw4GUOHugVpg3SqU5e8LgALAxr4zNiYWvju9s,1251
+torch_snippets/charts.py,sha256=Myq14mYWvsG5WdyLGZnpZqBhYpNlSGRHyNXBWhk1-OU,1637
+torch_snippets/fastcores.py,sha256=pVUMl-1ftKl4cvcSferXB2aED8d4nDJkQ0N4EnsA7UU,30
+torch_snippets/loader.py,sha256=jBmMqcB_40luR0ZOZ8-bJu6gJKkcbf5d9z2mq-8R1Nw,24871
+torch_snippets/logger.py,sha256=JCNdBlRl9YCbyhlBlPYOSMIHzAqDQrHGM7gNrJHy6DQ,1888
+torch_snippets/misc.py,sha256=Ie20Hkd0qmuQlbT_k1K6AUhAfwpA7GPUdDylVGLGHHQ,894
+torch_snippets/sklegos.py,sha256=qvub5Rgqyo1hF2fVmItcxZYsvWEcCCn5Skler5EOFH4,5925
+torch_snippets/torch_loader.py,sha256=zzZMzKVli-mRkpmIRGrOkup8-SEP1wluQe8PYhgRvo0,9759
+torch_snippets-0.413.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+torch_snippets-0.413.dist-info/LICENSE.txt,sha256=QSCzSt0IOxClwLuxXo8eEt9zeE0Z2MZK70K2HjWSkAU,1061
+torch_snippets-0.413.dist-info/METADATA,sha256=fTMPIq8o0NNO2gOKj1jAf95dufgDoKG5E7VOcYZf5i0,5965
+torch_snippets-0.413.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torch_snippets-0.413.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+torch_snippets-0.413.dist-info/top_level.txt,sha256=kuiecjws7IHCfUn9ZhCiSH1yJlb82nx82eqJdjyPu-k,15
+torch_snippets-0.413.dist-info/RECORD,,
