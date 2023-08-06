@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ElasticEnsemble &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ElasticEnsemble</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="elasticensemble">
+<h1>ElasticEnsemble<a class="headerlink" href="#elasticensemble" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.classification.distance_based.ElasticEnsemble">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.distance_based.</code><code class="sig-name descname">ElasticEnsemble</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance_measures</span><span class="o">=</span><span class="default_value">'all'</span></em>, <em class="sig-param"><span class="n">proportion_of_param_options</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">proportion_train_in_param_finding</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">proportion_train_for_test</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/distance_based/_elastic_ensemble.py#L39-L548"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.distance_based.ElasticEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Elastic Ensemble (EE) as described in Jason Lines and Anthony Bagnall,
+“Time Series Classification with Ensembles of Elastic Distance Measures”,
+Data Mining and Knowledge Discovery, 29(3), 2015.</p>
+<p><a class="reference external" href="https://link.springer.com/article/10.1007/s10618-014-0361-2">https://link.springer.com/article/10.1007/s10618-014-0361-2</a></p>
+<p>Overview:</p>
+<ul class="simple">
+<li><p>Input n series length m</p></li>
+<li><p>EE is an ensemble of elastic nearest neighbor classifiers</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the original Java version, see <a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/classifiers/distance_based/ElasticEnsemble.java">ElasticEnsemble</a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance_measures</strong> (<em>list of strings</em><em>, </em><em>optional</em><em> (</em><em>default=&quot;all&quot;</em><em>)</em>) – A list of strings identifying which distance measures to include.</p></li>
+<li><p><strong>proportion_of_param_option</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – The proportion of the parameter grid space to search optional.</p></li>
+<li><p><strong>proportion_train_in_param_finding</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – The proportion of the train set to use in the parameter search optional.</p></li>
+<li><p><strong>proportion_train_for_test</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – The proportion of the train set to use in classifying new cases optional.</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of jobs to run in parallel for both <cite>fit</cite> and <cite>predict</cite>.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.</p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default=0</em>) – The random seed.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default=0</em>) – If <code class="docutils literal notranslate"><span class="pre">&gt;0</span></code>, then prints out debug information.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.distance_based.ElasticEnsemble.estimators_">
+<code class="sig-name descname">estimators_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/distance_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.distance_based.ElasticEnsemble.estimators_" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list storing all classifiers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.distance_based.ElasticEnsemble.train_accs_by_classifier">
+<code class="sig-name descname">train_accs_by_classifier</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/distance_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.distance_based.ElasticEnsemble.train_accs_by_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store the train accuracies of the classifiers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.distance_based.ElasticEnsemble.train_preds_by_classifier">
+<code class="sig-name descname">train_preds_by_classifier</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/distance_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.distance_based.ElasticEnsemble.train_preds_by_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store the train predictions of each classifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.distance_based.ElasticEnsemble.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance_measures</span><span class="o">=</span><span class="default_value">'all'</span></em>, <em class="sig-param"><span class="n">proportion_of_param_options</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">proportion_train_in_param_finding</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">proportion_train_for_test</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/distance_based/_elastic_ensemble.py#L94-L128"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.distance_based.ElasticEnsemble.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

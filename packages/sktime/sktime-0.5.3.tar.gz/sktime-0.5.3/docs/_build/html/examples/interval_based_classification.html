@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interval based time series classification in sktime &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Canonical Time-series Characteristics (catch22) transform" href="catch22.html" />
+    <link rel="prev" title="Shapelets and the Shapelet Transform with sktime" href="shapelet_transform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_forecasting.html">Forecasting with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_classification_univariate.html">Univariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_classification_multivariate.html">Multivariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_benchmarking.html">Benchmarking with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature_extraction_with_tsfresh.html">Feature extraction with tsfresh transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shapelet_transform.html">Shapelets and the Shapelet Transform with sktime</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interval based time series classification in sktime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#References:">References:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#1.-Imports">1. Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.-Load-data">2. Load data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3.-Time-Series-Forest-(TSF)">3. Time Series Forest (TSF)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4.-Random-Interval-Spectral-Ensemble-(RISE)">4. Random Interval Spectral Ensemble (RISE)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#5.-Supervised-Time-Series-Forest-(STSF)">5. Supervised Time Series Forest (STSF)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.-Canonical-Interval-Forest-(CIF)">6. Canonical Interval Forest (CIF)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.-Diverse-Representation-Canonical-Interval-Forest-(DrCIF)">6. Diverse Representation Canonical Interval Forest (DrCIF)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="catch22.html">The Canonical Time-series Characteristics (catch22) transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mrseql.html">Time series classification with Mr-SEQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocket.html">Demo of ROCKET transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plateau_finder.html">Demo of the PlateauFinder transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_data.html">Loading and working with data in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forecasting_with_hcrystalball.html">Forecasting with HCrystalBall forecaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary_based_classification.html">Dictionary based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html">Time series interpolating with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#Now-the-interpolator-enters">Now the interpolator enters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Interval based time series classification in sktime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/alan-turing-institute/sktime/v0.5.3?filepath=examples/interval_based_classification.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="Interval-based-time-series-classification-in-sktime">
+<h1>Interval based time series classification in sktime<a class="headerlink" href="#Interval-based-time-series-classification-in-sktime" title="Permalink to this headline">¶</a></h1>
+<p>Interval based approaches look at phase dependant intervals of the full series, calculating summary statistics from selected subseries to be used in classification.</p>
+<p>Currently 5 univariate interval based approaches are implemented in sktime. Time Series Forest (TSF) [1], the Random Interval Spectral Ensemble (RISE) [2], Supervised Time Series Forest (STSF) [3], the Canonical Interval Forest (CIF) [4] and the Diverse Representation Canonical Interval Forest (DrCIF). Both CIF and DrCIF have multivariate capabilities.</p>
+<p>In this notebook, we will demonstrate how to use these classifiers on the ItalyPowerDemand and JapaneseVowels datasets.</p>
+<div class="section" id="References:">
+<h2>References:<a class="headerlink" href="#References:" title="Permalink to this headline">¶</a></h2>
+<p>[1] Deng, H., Runger, G., Tuv, E., &amp; Vladimir, M. (2013). A time series forest for classification and feature extraction. Information Sciences, 239, 142-153.</p>
+<p>[2] Flynn, M., Large, J., &amp; Bagnall, T. (2019). The contract random interval spectral ensemble (c-RISE): the effect of contracting a classifier on accuracy. In International Conference on Hybrid Artificial Intelligence Systems (pp. 381-392). Springer, Cham.</p>
+<p>[3] Cabello, N., Naghizade, E., Qi, J., &amp; Kulik, L. (2020). Fast and Accurate Time Series Classification Through Supervised Interval Search. In IEEE International Conference on Data Mining.</p>
+<p>[4] Middlehurst, M., Large, J., &amp; Bagnall, A. (2020). The Canonical Interval Forest (CIF) Classifier for Time Series Classification. arXiv preprint arXiv:2008.09172.</p>
+<p>[5] Lubba, C. H., Sethi, S. S., Knaute, P., Schultz, S. R., Fulcher, B. D., &amp; Jones, N. S. (2019). catch22: CAnonical Time-series CHaracteristics. Data Mining and Knowledge Discovery, 33(6), 1821-1852.</p>
+<div class="section" id="1.-Imports">
+<h3>1. Imports<a class="headerlink" href="#1.-Imports" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="kn">from</span> <span class="nn">sktime.classification.interval_based</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CanonicalIntervalForest</span><span class="p">,</span>
+    <span class="n">DrCIF</span><span class="p">,</span>
+    <span class="n">RandomIntervalSpectralForest</span><span class="p">,</span>
+    <span class="n">SupervisedTimeSeriesForest</span><span class="p">,</span>
+    <span class="n">TimeSeriesForest</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sktime.datasets</span> <span class="kn">import</span> <span class="n">load_italy_power_demand</span>
+<span class="kn">from</span> <span class="nn">sktime.datasets.base</span> <span class="kn">import</span> <span class="n">load_japanese_vowels</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="2.-Load-data">
+<h3>2. Load data<a class="headerlink" href="#2.-Load-data" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">load_italy_power_demand</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">load_italy_power_demand</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">y_test</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">X_train_mv</span><span class="p">,</span> <span class="n">y_train_mv</span> <span class="o">=</span> <span class="n">load_japanese_vowels</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_test_mv</span><span class="p">,</span> <span class="n">y_test_mv</span> <span class="o">=</span> <span class="n">load_japanese_vowels</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">X_train_mv</span> <span class="o">=</span> <span class="n">X_train_mv</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">y_train_mv</span> <span class="o">=</span> <span class="n">y_train_mv</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">X_test_mv</span> <span class="o">=</span> <span class="n">X_test_mv</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">y_test_mv</span> <span class="o">=</span> <span class="n">y_test_mv</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train_mv</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train_mv</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test_mv</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test_mv</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(67, 1) (67,) (50, 1) (50,)
+(50, 12) (50,) (50, 12) (50,)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="3.-Time-Series-Forest-(TSF)">
+<h3>3. Time Series Forest (TSF)<a class="headerlink" href="#3.-Time-Series-Forest-(TSF)" title="Permalink to this headline">¶</a></h3>
+<p>TSF is an ensemble of tree classifiers built on the summary statistics of randomly selected intervals. For each tree sqrt(series_length) intervals are randomly selected. From each of these intervals the mean, standard deviation and slope is extracted from each time series and concatenated into a feature vector. These new features are then used to build a tree, which is added to the ensemble.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">tsf</span> <span class="o">=</span> <span class="n">TimeSeriesForest</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">tsf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">tsf_preds</span> <span class="o">=</span> <span class="n">tsf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TSF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">tsf_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+TSF Accuracy: 0.98
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="4.-Random-Interval-Spectral-Ensemble-(RISE)">
+<h3>4. Random Interval Spectral Ensemble (RISE)<a class="headerlink" href="#4.-Random-Interval-Spectral-Ensemble-(RISE)" title="Permalink to this headline">¶</a></h3>
+<p>RISE is a tree based interval ensemble aimed at classifying audio data. Unlike TSF, it uses a single interval for each tree, and it uses spectral features rather than summary statistics.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">rise</span> <span class="o">=</span> <span class="n">RandomIntervalSpectralForest</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">rise</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">rise_preds</span> <span class="o">=</span> <span class="n">rise</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RISE Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">rise_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+RISE Accuracy: 0.98
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="5.-Supervised-Time-Series-Forest-(STSF)">
+<h3>5. Supervised Time Series Forest (STSF)<a class="headerlink" href="#5.-Supervised-Time-Series-Forest-(STSF)" title="Permalink to this headline">¶</a></h3>
+<p>STSF makes a number of adjustments from the original TSF algorithm. A supervised method of selecting intervals replaces random selection. Features are extracted from intervals generated from additional representations in periodogram and 1st order differences. Median, min, max and interquartile range are included in the summary statistics extracted.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">stsf</span> <span class="o">=</span> <span class="n">SupervisedTimeSeriesForest</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">stsf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">stsf_preds</span> <span class="o">=</span> <span class="n">stsf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;STSF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">stsf_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+STSF Accuracy: 0.98
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="6.-Canonical-Interval-Forest-(CIF)">
+<h3>6. Canonical Interval Forest (CIF)<a class="headerlink" href="#6.-Canonical-Interval-Forest-(CIF)" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Univariate">
+<h4>Univariate<a class="headerlink" href="#Univariate" title="Permalink to this headline">¶</a></h4>
+<p>CIF extends from the TSF algorithm. In addition to the 3 summary statistics used by TSF, CIF makes use of the features from the <code class="docutils literal notranslate"><span class="pre">Catch22</span></code> [5] transform. To increase the diversity of the ensemble, the number of TSF and catch22 attributes is randomly subsampled per tree.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cif</span> <span class="o">=</span> <span class="n">CanonicalIntervalForest</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">att_subsample_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">cif</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">cif_preds</span> <span class="o">=</span> <span class="n">cif</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CIF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">cif_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+CIF Accuracy: 1.0
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Multivariate">
+<h4>Multivariate<a class="headerlink" href="#Multivariate" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cif_m</span> <span class="o">=</span> <span class="n">CanonicalIntervalForest</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">att_subsample_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">cif_m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">cif_m_preds</span> <span class="o">=</span> <span class="n">cif_m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CIF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">cif_m_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+CIF Accuracy: 1.0
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="6.-Diverse-Representation-Canonical-Interval-Forest-(DrCIF)">
+<h3>6. Diverse Representation Canonical Interval Forest (DrCIF)<a class="headerlink" href="#6.-Diverse-Representation-Canonical-Interval-Forest-(DrCIF)" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Univariate<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>DrCIF makes use of the periodogram and differences representations used by STSF as well as the addition summary statistics in CIF.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">drcif</span> <span class="o">=</span> <span class="n">DrCIF</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">att_subsample_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">drcif</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">drcif_preds</span> <span class="o">=</span> <span class="n">drcif</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DrCIF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">drcif_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+DrCIF Accuracy: 1.0
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>Multivariate<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">drcif_m</span> <span class="o">=</span> <span class="n">DrCIF</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">att_subsample_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">47</span><span class="p">)</span>
+<span class="n">drcif_m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">drcif_m_preds</span> <span class="o">=</span> <span class="n">drcif_m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DrCIF Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">drcif_m_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+DrCIF Accuracy: 1.0
+</pre></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>. The Jupyter notebook can be found <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/v0.5.3/examples/interval_based_classification.ipynb">here</a>.</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

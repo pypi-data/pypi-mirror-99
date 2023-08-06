@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Canonical Time-series Characteristics (catch22) transform &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Time series classification with Mr-SEQL" href="mrseql.html" />
+    <link rel="prev" title="Interval based time series classification in sktime" href="interval_based_classification.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_forecasting.html">Forecasting with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_classification_univariate.html">Univariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_classification_multivariate.html">Multivariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_benchmarking.html">Benchmarking with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature_extraction_with_tsfresh.html">Feature extraction with tsfresh transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shapelet_transform.html">Shapelets and the Shapelet Transform with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interval_based_classification.html">Interval based time series classification in sktime</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The Canonical Time-series Characteristics (catch22) transform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#References:">References:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#1.-Imports">1. Imports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.-Load-data">2. Load data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3.-catch22-transform">3. catch22 transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#4.-catch22-Forest-Classifier">4. catch22 Forest Classifier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mrseql.html">Time series classification with Mr-SEQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocket.html">Demo of ROCKET transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plateau_finder.html">Demo of the PlateauFinder transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_data.html">Loading and working with data in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forecasting_with_hcrystalball.html">Forecasting with HCrystalBall forecaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary_based_classification.html">Dictionary based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html">Time series interpolating with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#Now-the-interpolator-enters">Now the interpolator enters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>The Canonical Time-series Characteristics (catch22) transform</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/alan-turing-institute/sktime/v0.5.3?filepath=examples/catch22.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="The-Canonical-Time-series-Characteristics-(catch22)-transform">
+<h1>The Canonical Time-series Characteristics (catch22) transform<a class="headerlink" href="#The-Canonical-Time-series-Characteristics-(catch22)-transform" title="Permalink to this headline">¶</a></h1>
+<p>catch22[1] is a collection of 22 time series features extracted from the 7000+ present in the <em>hctsa</em>[2][3] toolbox. A hierarchical clustering was performed on the correlation matrix of features that performed better than random chance to remove redundancy. These clusters were sorted by balanced accuracy using a decision tree classifier and a single feature was selected from the 22 clusters formed, taking into account balanced accuracy results, computational efficiency and interpretability.</p>
+<p>In this notebook, we will demonstrate how to use the catch22 transformer on the ItalyPowerDemand univariate and BasicMotions multivariate datasets. We also show catch22 used for classication with a random forest classifier.</p>
+<p>Both make use of the features implemented in the catch22 package (<a class="reference external" href="https://github.com/chlubba/catch22">https://github.com/chlubba/catch22</a>), where versions of catch22 for C and MATLAB are also available.</p>
+<div class="section" id="References:">
+<h2>References:<a class="headerlink" href="#References:" title="Permalink to this headline">¶</a></h2>
+<p>[1] Lubba, C. H., Sethi, S. S., Knaute, P., Schultz, S. R., Fulcher, B. D., &amp; Jones, N. S. (2019). catch22: CAnonical Time-series CHaracteristics. Data Mining and Knowledge Discovery, 33(6), 1821-1852.</p>
+<p>[2] Fulcher, B. D., &amp; Jones, N. S. (2017). hctsa: A computational framework for automated time-series phenotyping using massive feature extraction. Cell systems, 5(5), 527-531.</p>
+<p>[3] Fulcher, B. D., Little, M. A., &amp; Jones, N. S. (2013). Highly comparative time-series analysis: the empirical structure of time series and their methods. Journal of the Royal Society Interface, 10(83), 20130048.</p>
+<div class="section" id="1.-Imports">
+<h3>1. Imports<a class="headerlink" href="#1.-Imports" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="kn">from</span> <span class="nn">sktime.classification.hybrid</span> <span class="kn">import</span> <span class="n">Catch22ForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sktime.datasets</span> <span class="kn">import</span> <span class="n">load_basic_motions</span><span class="p">,</span> <span class="n">load_italy_power_demand</span>
+<span class="kn">from</span> <span class="nn">sktime.transformations.panel.catch22_features</span> <span class="kn">import</span> <span class="n">Catch22</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="2.-Load-data">
+<h3>2. Load data<a class="headerlink" href="#2.-Load-data" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">IPD_X_train</span><span class="p">,</span> <span class="n">IPD_y_train</span> <span class="o">=</span> <span class="n">load_italy_power_demand</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">IPD_X_test</span><span class="p">,</span> <span class="n">IPD_y_test</span> <span class="o">=</span> <span class="n">load_italy_power_demand</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">IPD_X_test</span> <span class="o">=</span> <span class="n">IPD_X_test</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<span class="n">IPD_y_test</span> <span class="o">=</span> <span class="n">IPD_y_test</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">IPD_X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">IPD_y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">IPD_X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">IPD_y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">BM_X_train</span><span class="p">,</span> <span class="n">BM_y_train</span> <span class="o">=</span> <span class="n">load_basic_motions</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">BM_X_test</span><span class="p">,</span> <span class="n">BM_y_test</span> <span class="o">=</span> <span class="n">load_basic_motions</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">BM_X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">BM_y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">BM_X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">BM_y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(67, 1) (67,) (50, 1) (50,)
+(40, 6) (40,) (40, 6) (40,)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="3.-catch22-transform">
+<h3>3. catch22 transform<a class="headerlink" href="#3.-catch22-transform" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Univariate">
+<h4>Univariate<a class="headerlink" href="#Univariate" title="Permalink to this headline">¶</a></h4>
+<p>The catch22 features are provided in the form of a transformer, <code class="docutils literal notranslate"><span class="pre">Catch22</span></code>. From this the transformed data can be used for a variety of time series analysis tasks.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">c22_uv</span> <span class="o">=</span> <span class="n">Catch22</span><span class="p">()</span>
+<span class="n">c22_uv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">IPD_X_train</span><span class="p">,</span> <span class="n">IPD_y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Catch22()
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">transformed_data_uv</span> <span class="o">=</span> <span class="n">c22_uv</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">IPD_X_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transformed_data_uv</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+         0         1   2   3         4         5         6     7         8   \
+0  1.158650 -0.217228   3   6  0.485847  0.095361  1.000000   8.0  0.040000
+1  0.918174 -0.214746   4   8  0.548270  0.071349  0.869565  15.0  0.111111
+2 -0.273186 -0.085866   2   5  0.464109  0.216576  0.913043   3.0  0.034014
+3  0.048404 -0.450092   4  10  0.609319  0.124926  0.869565  13.0  0.111111
+4  0.426386 -0.450726   4   7  0.559022  0.054549  0.913043  16.0  0.111111
+
+   9   ...        12        13        14        15   16        17   18   19  \
+0   0  ...  0.750000  0.291667 -0.625000  0.468050  5.0  1.787502  0.0  0.0
+1   0  ...  0.500000  0.208333 -0.666667  0.702777  5.0  1.730238  0.0  0.0
+2   0  ...  0.666667  0.875000  0.250000  0.310570  5.0  1.730238  0.0  0.0
+3   0  ...  0.666667  0.166667 -0.625000  0.804046  6.0  1.605420  0.0  0.0
+4   0  ...  0.500000  0.291667 -0.666667  0.675482  6.0  1.730238  0.0  0.0
+
+         20        21
+0  0.589049  0.857423
+1  0.196350  0.682608
+2  0.589049  0.886426
+3  0.196350  0.664320
+4  0.196350  0.674197
+
+[5 rows x 22 columns]
+</pre></div></div>
+</div>
+<p>The transform <code class="docutils literal notranslate"><span class="pre">Catch22</span></code> method will process all 22 features. For individual features, the transform_single_feature method can be used when provided with a numeric feature ID or the feature name.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">transformed_feature_uv</span> <span class="o">=</span> <span class="n">c22_uv</span><span class="o">.</span><span class="n">_transform_single_feature</span><span class="p">(</span><span class="n">IPD_X_train</span><span class="p">,</span> <span class="s2">&quot;CO_f1ecac&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transformed_feature_uv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[3 4 2 4 4 3 3 4 4 4 4 4 4 4 4 3 4 4 4 4 4 4 4 4 4 3 4 4 4 4 4 3 4 4 3 4 4
+ 3 4 4 3 4 4 3 4 4 3 4 3 3 4 3 4 3 3 4 4 4 3 2 4 4 4 4 4 4 2]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Multivariate">
+<h4>Multivariate<a class="headerlink" href="#Multivariate" title="Permalink to this headline">¶</a></h4>
+<p>Transformation of multivariate data is supported by <code class="docutils literal notranslate"><span class="pre">Catch22</span></code>. The default procedure will concatenate each column prior to transformation.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">c22_mv</span> <span class="o">=</span> <span class="n">Catch22</span><span class="p">()</span>
+<span class="n">c22_mv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">BM_X_train</span><span class="p">,</span> <span class="n">BM_y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Catch22()
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">transformed_data_mv</span> <span class="o">=</span> <span class="n">c22_mv</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">BM_X_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transformed_data_mv</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+         0         1   2   3         4         5         6     7         8   \
+0 -0.417887  0.187460   2   5  0.105551 -0.649750  0.794658   9.0  0.002256
+1  1.061005  0.294088   2   6  0.043438 -1.968673  0.626043  79.0  0.012387
+2 -0.065333  0.297270   3   6  0.111391 -0.015163  0.808013  25.0  0.000808
+3  0.274125 -0.130168   2   5  0.062411 -0.103788  0.841402  17.0  0.005236
+4 -0.310012  0.068879   3   5  0.086561  0.321862  0.813022  26.0  0.012837
+
+   9   ...        12        13        14        15   16        17        18  \
+0   9  ...  0.666667 -0.576667 -0.421667  0.479256  7.0  1.952422  0.127660
+1  10  ...  0.250000 -0.501667 -0.318333  0.603359  7.0  1.858507  0.170213
+2  11  ...  1.000000 -0.446667 -0.470000  0.812749  8.0  1.927062  0.127660
+3   8  ...  0.666667 -0.366667 -0.351667  0.486981  7.0  2.009502  0.127660
+4  10  ...  0.750000 -0.501667 -0.695833  0.767016  7.0  1.869634  0.787234
+
+         19        20        21
+0  0.659574  0.632000  1.095149
+1  0.872340  0.570641  0.987787
+2  0.659574  0.533825  0.994098
+3  0.638298  0.625864  1.038027
+4  0.617021  0.570641  0.955538
+
+[5 rows x 22 columns]
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="4.-catch22-Forest-Classifier">
+<h3>4. catch22 Forest Classifier<a class="headerlink" href="#4.-catch22-Forest-Classifier" title="Permalink to this headline">¶</a></h3>
+<p>For classification tasks the default classifier to use with the catch22 features is random forest classifier. An implementation making use of the <code class="docutils literal notranslate"><span class="pre">RandomForestClassifier</span></code> from sklearn built on catch22 features is provided in the form on the <code class="docutils literal notranslate"><span class="pre">Catch22ForestClassifier</span></code> for ease of use.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">c22f</span> <span class="o">=</span> <span class="n">Catch22ForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">c22f</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">IPD_X_train</span><span class="p">,</span> <span class="n">IPD_y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Catch22ForestClassifier(random_state=0)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">c22f_preds</span> <span class="o">=</span> <span class="n">c22f</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">IPD_X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C22F Accuracy: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">IPD_y_test</span><span class="p">,</span> <span class="n">c22f_preds</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+C22F Accuracy: 0.84
+</pre></div></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>. The Jupyter notebook can be found <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/v0.5.3/examples/catch22.ipynb">here</a>.</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

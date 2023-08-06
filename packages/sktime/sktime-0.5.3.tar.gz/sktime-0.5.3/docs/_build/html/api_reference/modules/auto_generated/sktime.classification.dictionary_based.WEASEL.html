@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WEASEL &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>WEASEL</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="weasel">
+<h1>WEASEL<a class="headerlink" href="#weasel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.WEASEL">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">WEASEL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">anova</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">binning_strategy</span><span class="o">=</span><span class="default_value">'information-gain'</span></em>, <em class="sig-param"><span class="n">window_inc</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">p_threshold</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L30-L334"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Word ExtrAction for time SEries cLassification (WEASEL) from [1].</p>
+<p># Overview: Input n series length m
+# WEASEL is a dictionary classifier that builds a bag-of-patterns using SFA
+# for different window lengths and learns a logistic regression classifier
+# on this bag.
+#
+# There are these primary parameters:
+#         alphabet_size: alphabet size
+#         chi2-threshold: used for feature selection to select best words
+#         anova: select best l/2 fourier coefficients other than first ones
+#         bigrams: using bigrams of SFA words
+#         binning_strategy: the binning strategy used to discretise into
+#                           SFA words.
+#
+# WEASEL slides a window length w along the series. The w length window
+# is shortened to an l length word through taking a Fourier transform and
+# keeping the best l/2 complex coefficients using an anova one-sided
+# test. These l coefficients are then discretised into alpha possible
+# symbols, to form a word of length l. A histogram of words for each
+# series is formed and stored.
+# For each window-length a bag is created and all words are joint into
+# one bag-of-patterns. Words from different window-lengths are
+# discriminated by different prefixes.
+#
+# fit involves training a logistic regression classifier on the single
+# bag-of-patterns.
+#
+# predict uses the logistic regression classifier</p>
+<p># For the Java version, see
+# <a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java</a>
+# /tsml/classifiers/dictionary_based/WEASEL.java</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>anova</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – If True, the Fourier coefficient selection is done via a one-way
+ANOVA test. If False, the first Fourier coefficients are selected.
+Only applicable if labels are given</p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – whether to create bigrams of SFA words</p></li>
+<li><p><strong>binning_strategy</strong> (<em>{&quot;equi-depth&quot;</em><em>, </em><em>&quot;equi-width&quot;</em><em>, </em><em>&quot;information-gain&quot;}</em><em>,</em>) – default=”information-gain”
+The binning method used to derive the breakpoints.</p></li>
+<li><p><strong>window_inc</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 4</em>) – WEASEL create a BoP model for each window sizes. This is the
+increment used to determine the next window size.</p></li>
+<li><p><strong>p_threshold</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 0.05</em><em> (</em><em>disabled by default</em><em>)</em>) – Feature selection is applied based on the chi-squared test.
+This is the p-value threshold to use for chi-squared test on bag-of-words
+(lower means more strict). 1 indicates that the test
+should not be performed.</p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>,</em>) – Seed for random, integer</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.WEASEL.classes_">
+<code class="sig-name descname">classes_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.classes_" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List of classes for a given problem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>..[1]  Patrick Schäfer and Ulf Leser,    :
+&#64;inproceedings{schafer2017fast,</p>
+<blockquote>
+<div><p>title={Fast and Accurate Time Series Classification with WEASEL},
+author={Sch{“a}fer, Patrick and Leser, Ulf},
+booktitle={Proceedings of the 2017 ACM on Conference on Information and</p>
+<blockquote>
+<div><p>Knowledge Management},</p>
+</div></blockquote>
+<p>pages={637–646},
+year={2017}</p>
+</div></blockquote>
+<p>}
+<a class="reference external" href="https://dl.acm.org/doi/10.1145/3132847.3132980">https://dl.acm.org/doi/10.1145/3132847.3132980</a></p>
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">anova</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">binning_strategy</span><span class="o">=</span><span class="default_value">'information-gain'</span></em>, <em class="sig-param"><span class="n">window_inc</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">p_threshold</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L122-L163"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

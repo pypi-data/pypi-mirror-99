@@ -1,0 +1,1036 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Window Splitters in Sktime &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Window Splitters in Sktime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/alan-turing-institute/sktime/v0.5.3?filepath=examples/window_splitters.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="Window-Splitters-in-Sktime">
+<h1>Window Splitters in Sktime<a class="headerlink" href="#Window-Splitters-in-Sktime" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook we describe the window splitters included in the <code class="docutils literal notranslate"><span class="pre">`sktime.forecasting.model_selection</span></code> &lt;<a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/sktime/forecasting/model_selection/_split.py">https://github.com/alan-turing-institute/sktime/blob/master/sktime/forecasting/model_selection/_split.py</a>&gt;`__ module. These splitters can be combined with <code class="docutils literal notranslate"><span class="pre">ForecastingGridSearchCV</span></code> for model selection (see <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/examples/01_forecasting.ipynb">forecasting notebook</a>).</p>
+<p><strong>Remark:</strong> It is important to emphasize that for cross-validation in time series we can not randomly shuffle the data as we would be leaking information.</p>
+<p><strong>References:</strong> - <a class="reference external" href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">Cross-validation: evaluating estimator performance</a> - <a class="reference external" href="https://robjhyndman.com/hyndsight/tscv/">Cross-validation for time series</a></p>
+<div class="section" id="Preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#Preliminaries" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
+
+<span class="kn">from</span> <span class="nn">sktime.datasets</span> <span class="kn">import</span> <span class="n">load_airline</span>
+<span class="kn">from</span> <span class="nn">sktime.forecasting.base</span> <span class="kn">import</span> <span class="n">ForecastingHorizon</span>
+<span class="kn">from</span> <span class="nn">sktime.forecasting.model_selection</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CutoffSplitter</span><span class="p">,</span>
+    <span class="n">ExpandingWindowSplitter</span><span class="p">,</span>
+    <span class="n">SingleWindowSplitter</span><span class="p">,</span>
+    <span class="n">SlidingWindowSplitter</span><span class="p">,</span>
+    <span class="n">temporal_train_test_split</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sktime.utils.plotting</span> <span class="kn">import</span> <span class="n">plot_series</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Data">
+<h2>Data<a class="headerlink" href="#Data" title="Permalink to this headline">¶</a></h2>
+<p>We use a fraction of the Box-Jenkins univariate airline data set, which shows the number of international airline passengers per month from 1949 - 1960.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># We are interested on a portion of the total data set.</span>
+<span class="c1"># (for visualisatiion purposes)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">load_airline</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">30</span><span class="p">]</span>
+<span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Period
+1949-01    112.0
+1949-02    118.0
+1949-03    132.0
+1949-04    129.0
+1949-05    121.0
+Freq: M, Name: Number of airline passengers, dtype: float64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_series</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_5_0.png" src="../_images/examples_window_splitters_5_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Window-Splitters">
+<h2>Window Splitters<a class="headerlink" href="#Window-Splitters" title="Permalink to this headline">¶</a></h2>
+<p>Now we describe each of the splitters.</p>
+<div class="section" id="A-single-train-test-split-using-temporal_train_test_split">
+<h3>A single train-test split using <code class="docutils literal notranslate"><span class="pre">temporal_train_test_split</span></code><a class="headerlink" href="#A-single-train-test-split-using-temporal_train_test_split" title="Permalink to this headline">¶</a></h3>
+<p>This one splits the data into a traininig and test sets. You can either (i) set the size of the training or test set or (ii) use a forecasting horizon.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># setting test set size</span>
+<span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">temporal_train_test_split</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_series</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y_train&quot;</span><span class="p">,</span> <span class="s2">&quot;y_test&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_8_0.png" src="../_images/examples_window_splitters_8_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># using forecasting horizon</span>
+<span class="n">fh</span> <span class="o">=</span> <span class="n">ForecastingHorizon</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">temporal_train_test_split</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">fh</span><span class="o">=</span><span class="n">fh</span><span class="p">)</span>
+<span class="n">plot_series</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y_train&quot;</span><span class="p">,</span> <span class="s2">&quot;y_test&quot;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_9_0.png" src="../_images/examples_window_splitters_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Single-split-using-SingleWindowSplitter">
+<h3>Single split using <code class="docutils literal notranslate"><span class="pre">SingleWindowSplitter</span></code><a class="headerlink" href="#Single-split-using-SingleWindowSplitter" title="Permalink to this headline">¶</a></h3>
+<p>This class splits the time series once into a training and test window. Note that this is very similar to <code class="docutils literal notranslate"><span class="pre">temporal_train_test_split</span></code>.</p>
+<p>Let us define the parameters of our fold:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># set splitter parameters</span>
+<span class="n">window_length</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">fh</span> <span class="o">=</span> <span class="n">ForecastingHorizon</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">fh_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">SingleWindowSplitter</span><span class="p">(</span><span class="n">window_length</span><span class="o">=</span><span class="n">window_length</span><span class="p">,</span> <span class="n">fh</span><span class="o">=</span><span class="n">fh</span><span class="p">)</span>
+
+<span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Folds = </span><span class="si">{</span><span class="n">n_splits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Number of Folds = 1
+</pre></div></div>
+</div>
+<p>Let us plot the unique fold generated. First we define some helper functions:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">get_folds_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Store folds as arrays.&quot;&quot;&quot;</span>
+    <span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">windows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_splits</span><span class="p">,</span> <span class="n">window_length</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+    <span class="n">fhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_splits</span><span class="p">,</span> <span class="n">fh_length</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="n">windows</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+    <span class="k">return</span> <span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span>
+
+
+<span class="k">def</span> <span class="nf">get_y</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">split</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a constant level vector based on the split.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">*</span> <span class="n">split</span>
+</pre></div>
+</div>
+</div>
+<p>Now we generate the plot:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span> <span class="o">=</span> <span class="n">get_folds_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+
+<span class="n">window_color</span><span class="p">,</span> <span class="n">fh_color</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;colorblind&quot;</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figaspect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">get_y</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">windows</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">window_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">window_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Window&quot;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">fh_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">fh_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forecasting horizon&quot;</span>
+    <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;SingleWindowSplitter Fold&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Window number&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+    <span class="n">xticklabels</span><span class="o">=</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="c1"># remove duplicate labels/handles</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[(</span><span class="n">leg</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">leg</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/Users/mloning/.conda/envs/sktime-dev/lib/python3.7/site-packages/ipykernel_launcher.py:21: UserWarning: FixedFormatter should only be used together with FixedLocator
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_16_1.png" src="../_images/examples_window_splitters_16_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fhs</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[27, 28, 29]])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[17, 18, 19, 20, 21, 22, 23, 24, 25, 26]])
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Sliding-windows-using-SlidingWindowSplitter">
+<h3>Sliding windows using <code class="docutils literal notranslate"><span class="pre">SlidingWindowSplitter</span></code><a class="headerlink" href="#Sliding-windows-using-SlidingWindowSplitter" title="Permalink to this headline">¶</a></h3>
+<p>This splitter generates folds which move with time. The length of the training and test sets for each fold remains constant.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">SlidingWindowSplitter</span><span class="p">(</span><span class="n">window_length</span><span class="o">=</span><span class="n">window_length</span><span class="p">,</span> <span class="n">fh</span><span class="o">=</span><span class="n">fh</span><span class="p">,</span> <span class="n">start_with_window</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Folds = </span><span class="si">{</span><span class="n">n_splits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Number of Folds = 18
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span> <span class="o">=</span> <span class="n">get_folds_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figaspect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">get_y</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">windows</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">window_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">window_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Window&quot;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">fh_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">fh_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forecasting horizon&quot;</span>
+    <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;SlidingWindowSplitter Folds&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Window number&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+    <span class="n">xticklabels</span><span class="o">=</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># remove duplicate labels/handles</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[(</span><span class="n">leg</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">leg</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/Users/mloning/.conda/envs/sktime-dev/lib/python3.7/site-packages/ipykernel_launcher.py:18: UserWarning: FixedFormatter should only be used together with FixedLocator
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_21_1.png" src="../_images/examples_window_splitters_21_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Expanding-windows-using-ExpandingWindowSplitter">
+<h3>Expanding windows using <code class="docutils literal notranslate"><span class="pre">ExpandingWindowSplitter</span></code><a class="headerlink" href="#Expanding-windows-using-ExpandingWindowSplitter" title="Permalink to this headline">¶</a></h3>
+<p>This splitter generates folds which move with time. The length of the training set each fold grows while test sets for each fold remains constant.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">ExpandingWindowSplitter</span><span class="p">(</span><span class="n">window_length</span><span class="o">=</span><span class="n">window_length</span><span class="p">,</span> <span class="n">fh</span><span class="o">=</span><span class="n">fh</span><span class="p">,</span> <span class="n">start_with_window</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Folds = </span><span class="si">{</span><span class="n">n_splits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Number of Folds = 18
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">get_expanding_window_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Store folds as arrays.&quot;&quot;&quot;</span>
+    <span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">windows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">fhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_splits</span><span class="p">,</span> <span class="n">fh_length</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="n">windows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+    <span class="k">return</span> <span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span> <span class="o">=</span> <span class="n">get_expanding_window_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figaspect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">get_y</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">windows</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+        <span class="n">get_y</span><span class="p">(</span><span class="n">window_length</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">window_color</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Window&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">fh_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">fh_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forecasting horizon&quot;</span>
+    <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ExpandingWindowSplitter Folds&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Window number&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+    <span class="n">xticklabels</span><span class="o">=</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># remove duplicate labels/handles</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[(</span><span class="n">leg</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">leg</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/Users/mloning/.conda/envs/sktime-dev/lib/python3.7/site-packages/ipykernel_launcher.py:22: UserWarning: FixedFormatter should only be used together with FixedLocator
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_25_1.png" src="../_images/examples_window_splitters_25_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Multiple-splits-at-specific-cutoff-values---CutoffSplitter">
+<h3>Multiple splits at specific cutoff values - <code class="docutils literal notranslate"><span class="pre">CutoffSplitter</span></code><a class="headerlink" href="#Multiple-splits-at-specific-cutoff-values---CutoffSplitter" title="Permalink to this headline">¶</a></h3>
+<p>With this splitter we can manually select the cutoff points.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Specify cutoff points (by array index).</span>
+<span class="n">cutoffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
+
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CutoffSplitter</span><span class="p">(</span><span class="n">cutoffs</span><span class="o">=</span><span class="n">cutoffs</span><span class="p">,</span> <span class="n">window_length</span><span class="o">=</span><span class="n">window_length</span><span class="p">,</span> <span class="n">fh</span><span class="o">=</span><span class="n">fh</span><span class="p">)</span>
+
+<span class="n">n_splits</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Folds = </span><span class="si">{</span><span class="n">n_splits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Number of Folds = 4
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span> <span class="o">=</span> <span class="n">get_folds_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span><span class="p">,</span> <span class="n">fhs</span> <span class="o">=</span> <span class="n">get_folds_arrays</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figaspect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">get_y</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">windows</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">window_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">window_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Window&quot;</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">fhs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">get_y</span><span class="p">(</span><span class="n">fh_length</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">fh_color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Forecasting horizon&quot;</span>
+    <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;CutoffSplitter Folds&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Window number&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span>
+    <span class="n">xticklabels</span><span class="o">=</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># remove duplicate labels/handles</span>
+<span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[(</span><span class="n">leg</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">leg</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/Users/mloning/.conda/envs/sktime-dev/lib/python3.7/site-packages/ipykernel_launcher.py:18: UserWarning: FixedFormatter should only be used together with FixedLocator
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_window_splitters_29_1.png" src="../_images/examples_window_splitters_29_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">windows</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10],
+       [ 2,  3,  4,  5,  6,  7,  8,  9, 10, 11],
+       [ 8,  9, 10, 11, 12, 13, 14, 15, 16, 17],
+       [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fhs</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[11, 12, 13],
+       [12, 13, 14],
+       [18, 19, 20],
+       [24, 25, 26]])
+</pre></div></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>. The Jupyter notebook can be found <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/v0.5.3/examples/window_splitters.ipynb">here</a>.</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

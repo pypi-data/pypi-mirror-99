@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Contribute &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer Guide" href="developer_guide.html" />
+    <link rel="prev" title="Changelog" href="changelog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contents">Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">How to get started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Where to contribute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Areas of contribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Roadmap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Acknowledging contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Reporting bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Git and GitHub workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">Continuous integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Code quality checks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Unit testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Test coverage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">API design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">Release instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>How to Contribute</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="how-to-contribute">
+<span id="contributing"></span><h1>How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to our contributing guidelines!</p>
+<p>sktime is a community-driven project and your help is extremely welcome. If you get stuck, please don’t hesitate to <a class="reference external" href="https://gitter.im/sktime/community">chat with us</a> or <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues/new/choose">raise an issue</a>.</p>
+<p>To find out more about how to take part in sktime’s community, check out our <a class="reference external" href="https://www.sktime.org/en/latest/governance.html">governance document</a>.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#how-to-get-started">How to get started</a></p></li>
+<li><p><a class="reference external" href="#where-to-contribute">Where to contribute</a></p>
+<ul>
+<li><p><a class="reference external" href="#areas-of-contribution">Areas of contribution</a></p></li>
+<li><p><a class="reference external" href="#roadmap">Roadmap</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#acknowledging-contributions">Acknowledging contributions</a></p></li>
+<li><p><a class="reference external" href="#reporting-bugs">Reporting bugs</a></p></li>
+<li><p><a class="reference external" href="#installation">Installation</a></p></li>
+<li><p><a class="reference external" href="#git-and-github-workflow">Git and GitHub workflow</a></p></li>
+<li><p><a class="reference external" href="#continuous-integration">Continuous integration</a></p>
+<ul>
+<li><p><a class="reference external" href="#code-quality-checks">Code quality checks</a></p></li>
+<li><p><a class="reference external" href="#unit-testing">Unit testing</a></p></li>
+<li><p><a class="reference external" href="#test-coverage">Test coverage</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#API-design">API design</a></p></li>
+<li><p><a class="reference external" href="#documentation">Documentation</a></p></li>
+<li><p><a class="reference external" href="#dependencies">Dependencies</a></p></li>
+<li><p><a class="reference external" href="#coding-style">Coding style</a></p></li>
+<li><p><a class="reference external" href="#infrastructure">Infrastructure</a></p></li>
+<li><p><a class="reference external" href="#release-instructions">Release instructions</a></p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>How to get started<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We are particularly motivated to support new and/or anxious contributors and people who are looking to learn and develop their skills.</p>
+<ul class="simple">
+<li><p><strong>The Turing Way</strong>. A great <a class="reference external" href="https://the-turing-way.netlify.app/welcome">handbook</a> and <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way">community</a> for open science to find lots of useful resources. Check out their <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html">Guide for Reproducible Research</a> to get started and learn more about open-source collaboration.</p></li>
+<li><p><strong>GitHub’s Open Source Guides.</strong> Take a look at their <a class="reference external" href="https://opensource.guide/how-to-contribute/">How to Contribute Guide</a> to find out more about what it means to contribute.</p></li>
+<li><p><strong>scikit-learn’s developer guide.</strong> sktime follows <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a>‘s API whenever possible. We assume basic familiarity with scikit-learn. If you’re new to scikit-learn, take a look at their <a class="reference external" href="https://scikit-learn.org/stable/getting_started.html">getting-started guide</a>. If you’re already familiar with scikit-learn, you may still learn something new from their <a class="reference external" href="https://scikit-learn.org/stable/developers/index.html">developers’ guide</a>.</p></li>
+<li><p><strong>Good-first issues.</strong> A good place for starting to contribute to sktime is our list of <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good-first issues</a>. If you are interested in one of them, please comment on the issue or <a class="reference external" href="https://gitter.im/sktime/community">chat to us</a>.</p></li>
+<li><p><strong>Mentorship programme.</strong> We have also launched sktime’s own mentorship programme. You can find out more and apply on our <a class="reference external" href="https://www.sktime.org/en/latest/mentoring.html">website</a>!</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>Where to contribute<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Areas of contribution<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>We value all kinds of contributions - not just code. The following table gives an overview of key contribution areas.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Area</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Documentation</p></td>
+<td><p>Improve or add docstrings, glossary terms, the user guide, and the example notebooks</p></td>
+</tr>
+<tr class="row-odd"><td><p>Testing</p></td>
+<td><p>Report bugs, improve or add unit tests, conduct field testing on real-world data sets</p></td>
+</tr>
+<tr class="row-even"><td><p>Code</p></td>
+<td><p>Improve or add functionality, fix bugs</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mentoring</p></td>
+<td><p>Onboarding and mentoring of new contributors</p></td>
+</tr>
+<tr class="row-even"><td><p>Outreach</p></td>
+<td><p>Organize talks, tutorials or workshops, write blog posts</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maintenance</p></td>
+<td><p>Improve development operations (continuous integration pipeline, GitHub bots), manage and review issues/pull requests</p></td>
+</tr>
+<tr class="row-even"><td><p>API design</p></td>
+<td><p>Design interfaces for estimators and other functionality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Project management</p></td>
+<td><p>Finding funding, organising meetings, initiating new collaborations</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h3>Roadmap<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>For a more detailed overview of current and future work, check out our <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues/228">development roadmap</a>.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Acknowledging contributions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>We follow the <a class="reference external" href="https://allcontributors.org">all-contributors specification</a> and recognise various types of contributions. Take a look at our past and current <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CONTRIBUTORS.md">contributors</a>!</p>
+<p>If you are a new contributor, please make sure we add you to our list of contributors. All contributions are recorded in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.all-contributorsrc">.all-contributorsrc</a>.</p>
+<p>If we have missed anything, please <a class="reference external" href="https://gitter.im/sktime/community">chat with us</a>, <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues/new/choose">raise an issue</a> or create a PR!</p>
+</div>
+<div class="section" id="id8">
+<h2>Reporting bugs<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>We use GitHub issues to track all bugs and feature requests; feel free to open an issue if you have found a bug or wish to see a feature implemented.</p>
+<p>It is recommended to check that your issue complies with the following rules before submitting:</p>
+<ul class="simple">
+<li><p>Verify that your issue is not being currently addressed by other <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues">issues</a> or <a class="reference external" href="https://github.com/alan-turing-institute/sktime/pulls">pull requests</a>.</p></li>
+<li><p>Please ensure all code snippets and error messages are formatted in appropriate code blocks. See <a class="reference external" href="https://help.github.com/articles/creating-and-highlighting-code-blocks">Creating and highlighting code blocks</a>.</p></li>
+<li><p>Please be specific about what estimators and/or functions are involved and the shape of the data, as appropriate; please include a <a class="reference external" href="https://stackoverflow.com/help/mcve">reproducible</a> code snippet or link to a <a class="reference external" href="https://gist.github.com">gist</a>. If an exception is raised, please provide the traceback.</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>Installation<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Please visit our detailed <a class="reference external" href="https://www.sktime.org/en/latest/installation.html">installation instructions</a> to resolve any package issues and dependency errors before they occur in the following steps. OS specific instruction is available at the prior link.</p>
+</div>
+<div class="section" id="id10">
+<h2>Git and GitHub workflow<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>The preferred workflow for contributing to sktime’s repository is to fork the <a class="reference external" href="https://github.com/alan-turing-institute/sktime/">main repository</a> on GitHub, clone, and develop on a new branch.</p>
+<ol class="arabic">
+<li><p>Fork the <a class="reference external" href="https://github.com/alan-turing-institute/sktime">project repository</a> by clicking on the 'Fork' button near the top right of the page. This creates a copy of the code under your GitHub user account. For more details on how to fork a repository see <a class="reference external" href="https://help.github.com/articles/fork-a-repo/">this guide</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Clone</a> your fork of the sktime repo from your GitHub account to your local disk:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:USERNAME/sktime.git
+<span class="nb">cd</span> sktime
+</pre></div>
+</div>
+</li>
+<li><p>Configure and link the remote for your fork to the upstream repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+git remote add upstream https://github.com/alan-turing-institute/sktime.git
+</pre></div>
+</div>
+</li>
+<li><p>Verify the new upstream repository you've specified for your fork:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+&gt; origin    https://github.com/USERNAME/YOUR_FORK.git <span class="o">(</span>fetch<span class="o">)</span>
+&gt; origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git <span class="o">(</span>push<span class="o">)</span>
+&gt; upstream  https://github.com/alan-turing-institute/sktime.git <span class="o">(</span>fetch<span class="o">)</span>
+&gt; upstream  https://github.com/alan-turing-institute/sktime.git <span class="o">(</span>push<span class="o">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork">Sync</a> the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch of your fork with the upstream repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch upstream
+git checkout master --track origin/master
+git merge upstream/master
+</pre></div>
+</div>
+</li>
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch from the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch to hold your changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout master
+git checkout -b &lt;my-feature-branch&gt;
+</pre></div>
+</div>
+<p>Always use a <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch. It's good practice to never work on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch! Name the <code class="docutils literal notranslate"><span class="pre">feature</span></code> branch after your contribution.</p>
+</li>
+<li><p>Develop your contribution on your feature branch. Add changed files using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and then <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> files to record your changes in Git:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add &lt;modified_files&gt;
+git commit
+</pre></div>
+</div>
+</li>
+<li><p>When finished, push the changes to your GitHub account with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push --set-upstream origin my-feature-branch
+</pre></div>
+</div>
+</li>
+<li><p>Follow <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request-from-a-fork">these instructions</a> to create a pull request from your fork. If your work is still work in progress, you can open a draft pull request. We recommend to open a pull request early, so that other contributors become aware of your work and can give you feedback early on.</p></li>
+<li><p>To add more changes, simply repeat steps 7 - 8. Pull requests are
+updated automatically if you push new changes to the same branch.</p></li>
+</ol>
+<p>If any of the above seems like magic to you, please look up the <a class="reference external" href="https://git-scm.com/documentation">Git documentation</a> on the web. If you get stuck, feel free to <a class="reference external" href="https://gitter.im/sktime/community">chat with us</a> or <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues/new/choose">raise an issue</a>.</p>
+</div>
+<div class="section" id="id13">
+<h2>Continuous integration<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>We use continuous integration services on GitHub to automatically check if new pull requests do not break anything and meet code quality standards such as a common <a class="reference external" href="#Coding-style">coding style</a>.</p>
+<div class="section" id="id15">
+<h3>Code quality checks<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>To check if your code meets our code quality standards, you can automatically run these checks before you make a new commit using the <a class="reference external" href="https://pre-commit.com">pre-commit</a> workflow:</p>
+<ol class="arabic">
+<li><p>Install pre-commit:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pre-commit
+</pre></div>
+</div>
+</li>
+<li><p>Set up pre-commit:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit install
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Once installed, pre-commit will automatically run our code quality checks on the files you changed whenenver you make a new commit.</p>
+<p>You can find our pre-commit configuration in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.pre-commit-config.yaml">.pre-commit-config.yaml</a>. Our flake8 configuration can be found in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/setup.cfg">setup.cfg</a>.</p>
+<p>If you want to exclude some line of code from being checked, you can add a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">noqa</span></code> (no quality assurance) comment at the end of that line.</p>
+</div>
+<div class="section" id="id16">
+<h3>Unit testing<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a> for unit testing. To check if your code passes all tests locally, you need to install the development version of sktime and all extra dependencies.</p>
+<ol class="arabic">
+<li><p>Install all extra requirements from the root directory of sktime:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r build_tools/requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>Install the development version of sktime:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>   pip install -e .
+
+This installs an editable <span class="sb">`</span>development version &lt;https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs&gt;<span class="sb">`</span>_ of sktime which will include the changes you make. For trouble shooting on different operating systems, please see our detailed <span class="sb">`</span>installation instructions &lt;https://www.sktime.org/en/latest/installation.html&gt;<span class="sb">`</span>_.
+</pre></div>
+</div>
+</li>
+<li><p>To run all unit tests, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest sktime/
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id17">
+<h3>Test coverage<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference external" href="https://coverage.readthedocs.io/en/coverage-5.3/">coverage</a> via the <a class="reference external" href="https://github.com/pytest-dev/pytest-cov">pytest-cov</a> plugin and <a class="reference external" href="https://codecov.io">codecov</a> to measure and compare test coverage of our code.</p>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>API design<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>The general design approach we follow in sktime is described in the paper <a class="reference external" href="https://arxiv.org/abs/2101.04938">“Designing Machine Learning Toolboxes: Concepts, Principles and Patterns”</a>. This is a first draft of the paper, feedback and improvement suggestions are very welcome!</p>
+</div>
+<div class="section" id="id19">
+<h2>Documentation<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<p>We use <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> and <a class="reference external" href="https://readthedocs.org/projects/sktime/">readthedocs</a> to build and deploy our online documention. You can find our online documentation <a class="reference external" href="https://www.sktime.org/en/latest/">here</a>.</p>
+<p>The source files used to generate the online documentation can be found in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/master/docs/source">docs/source/</a>. For example, the main configuration file for sphinx is <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/docs/source/conf.py">conf.py</a> and the main page is <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/docs/source/index.rst">index.rst</a>. To add new pages, you need to add a new <code class="docutils literal notranslate"><span class="pre">.rst</span></code> file and include it in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p>
+<p>To build the documentation locally, you need to install a few extra dependencies listed in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/docs/requirements.txt">docs/requirements.txt</a>.</p>
+<ol class="arabic">
+<li><p>Install extra requirements from the root directory, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r docs/requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>To build the website locally, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make docs
+</pre></div>
+</div>
+</li>
+</ol>
+<p>You can find the generated files in the <code class="docutils literal notranslate"><span class="pre">sktime/docs/_build/</span></code> folder. To view the website, open <code class="docutils literal notranslate"><span class="pre">sktime/docs/_build/html/index.html</span></code> with your preferred web browser.</p>
+</div>
+<div class="section" id="id20">
+<h2>Dependencies<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<p>We try to keep the number of core dependencies to a minimum and rely on other packages as soft dependencies when feasible.</p>
+<blockquote>
+<div><p>A soft dependency is a dependency that is only required to import certain modules, but not necessary to use most functionality. A soft dependency is not installed automatically when the package is installed. Instead, users need to install it manually if they want to use a module that requires a soft dependency.</p>
+</div></blockquote>
+<p>If you add a new dependency or change the version of an existing one, you need to update the following files:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/setup.py">sktime/setup.py</a> for package installation and minimum version requirements,</p></li>
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/build_tools/requirements.txt">build_tools/requirements.txt</a> for continuous integration and distribution,</p></li>
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/docs/requirements.txt">docs/requirements.txt</a> for building the documentation,</p></li>
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.binder/requirements.txt">.binder/requirements.txt</a> for launching notebooks on Binder.</p></li>
+</ul>
+<p>If a user is missing a soft dependency, we want to raise a more user-friendly error message than just a <code class="docutils literal notranslate"><span class="pre">ModuleNotFound</span></code> exception. This is handled through our <code class="docutils literal notranslate"><span class="pre">_check_soft_dependencies</span></code> defined <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/sktime/utils/check_imports.py">here</a>.</p>
+<p>We also use contiunous integration tests to check if all soft dependencies are properly isolated to specific modules. So, if you add a soft dependency, please make sure to add it <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/build_tools/azure/check_soft_dependencies.py">here</a> together with the module that depends on it.</p>
+</div>
+<div class="section" id="id24">
+<h2>Coding style<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<p>We follow the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> coding guidelines. A good example can be found <a class="reference external" href="https://gist.github.com/nateGeorge/5455d2c57fb33c1ae04706f2dc4fee01">here</a>.</p>
+<p>We use the <a class="reference external" href="#Code-quality-checks">pre-commit</a> workflow together with <a class="reference external" href="https://black.readthedocs.io/en/stable/">black</a> and <a class="reference external" href="https://flake8.pycqa.org/en/latest/">flake8</a> to automatically apply consistent formatting and check whether your contribution complies with the PEP8 style.</p>
+<p>For docstrings, we use the <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">numpy docstring standard</a>.</p>
+<p>In addition, we add the following guidelines:</p>
+<ul class="simple">
+<li><p>Please check out our <a class="reference external" href="https://github.com/alan-turing-institute/sktime/wiki/Glossary">glossary of terms</a>.</p></li>
+<li><p>Use underscores to separate words in non-class names: <code class="docutils literal notranslate"><span class="pre">n_instances</span></code> rather than <code class="docutils literal notranslate"><span class="pre">ninstances</span></code>.</p></li>
+<li><p>Avoid multiple statements on one line. Prefer a line return after a control flow statement (<code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">for</span></code>).</p></li>
+<li><p>Use absolute imports for references inside sktime.</p></li>
+<li><p>Please don’t use <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> in the source code. It is considered harmful by the official Python recommendations. It makes the code harder to read as the origin of symbols is no longer explicitly referenced, but most important, it prevents using a static analysis tool like pyflakes to automatically find bugs.</p></li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h2>Infrastructure<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<p>This section gives an overview of the infrastructure and continuous integration services we use.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Platform</p></th>
+<th class="head"><p>Operation</p></th>
+<th class="head"><p>Configuration</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://ci.appveyor.com/project/mloning/sktime">Appveyor</a></p></td>
+<td><p>Build/test/distribute on Windows</p></td>
+<td><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.appveyor.yml">.appveyor.yml</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://dev.azure.com/mloning/sktime">Azure Pipelines</a></p></td>
+<td><p>Build/test/distribute on Linux (<a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a>)</p></td>
+<td><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/azure-pipelines.yml">azure-pipelines.yml</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.github.com/en/free-pro-team&#64;latest/actions">GitHub Actions</a></p></td>
+<td><p>Build/test/distribute on MacOS; Code quality checks</p></td>
+<td><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.github/workflows/">.github/workflows/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://readthedocs.org">Read the Docs</a></p></td>
+<td><p>Build/deploy documentation</p></td>
+<td><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.github/workflows/code-quality.yml">.readthedocs.yml</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://codecov.io">Codecov</a></p></td>
+<td><p>Test coverage</p></td>
+<td><p><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.codecov.yml">.codecov.yml</a>, <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.coveragerc">.coveragerc</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Additional scripts used for building, unit testing and distribution can be found in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/master/build_tools">build_tools/</a>.</p>
+</div>
+<div class="section" id="id29">
+<h2>Release instructions<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<p>This section is for core developers. To make a new release, you need push-to-write access on our master branch.</p>
+<p>sktime is not a pure Python package and depends on some non-Python code including Cython and C. We distribute compiled files, called wheels, for different operating systems and Python versions. More details can be found here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://packaging.python.org/guides/">Python guide for packaging</a>,</p></li>
+<li><p><a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html">Cython guide on compilation/distribution</a>.</p></li>
+</ul>
+<p>We use continuous integration services to automatically build and distribute wheels across platforms and version. The release process is triggered on our continuous integration services by pushing a <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">tagged commit</a> using <a class="reference external" href="https://semver.org">semantic versioning</a>. Pushing a new tag will trigger a new build on the continuous integration services which will provide the wheels for different platforms and automatically upload them to PyPI. You can see all uploaded wheels <a class="reference external" href="https://pypi.org/simple/sktime/">here</a>.</p>
+<p>To make the release process easier, we have an interactive script that you can follow. Simply run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make release
+</pre></div>
+</div>
+<p>This calls <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/build_tools/make_release.py">build_tools/make_release.py</a> and will guide you through the release process.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

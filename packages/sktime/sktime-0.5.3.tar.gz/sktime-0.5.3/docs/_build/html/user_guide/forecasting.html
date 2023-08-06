@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Forecasting &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extra Resources" href="resources.html" />
+    <link rel="prev" title="Time Series Regression" href="regression.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning_tasks.html">Overview of Learning Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transformations.html">Time Series Transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classification.html">Time Series Classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regression.html">Time Series Regression</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Forecasting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithms-included-in-sktime">Algorithms included in sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reductions-included-in-sktime">Reductions included in sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variations-in-generative-setting">Variations in generative setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-and-model-selection">Evaluation and model selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithms-not-included-in-sktime">Algorithms not included in sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html">Extra Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../user_guide.html">User Guide</a> &raquo;</li>
+        
+      <li>Forecasting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="forecasting">
+<span id="user-guide-forecasting"></span><h1>Forecasting<a class="headerlink" href="#forecasting" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The user guide is under development. We have created a basic
+structure and are looking for contributions to develop the user guide
+further. For more details, please go to issue <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues/361">#361</a> on GitHub.</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Forecasating is making forward temporal predictions based on past data. The simplest case is the univariate case.</p>
+<p>Inputs.</p>
+<ul class="simple">
+<li><p>Univariate time series, <span class="math notranslate nohighlight">\(y = y(0), y(1), y(2), ..., y(N)\)</span></p></li>
+<li><p>Forecasting horizon, <span class="math notranslate nohighlight">\(fh = N+1, N+2, ..., N+h\)</span></p></li>
+</ul>
+<p>Output.</p>
+<ul class="simple">
+<li><p>Predictions of <span class="math notranslate nohighlight">\(y\)</span> at the times in <span class="math notranslate nohighlight">\(fh\)</span>, <span class="math notranslate nohighlight">\(\hat{y} = \hat{y}(N+1), \hat{y}(N+2), ..., \hat{y}(N+h)\)</span></p></li>
+</ul>
+<p>Examples.</p>
+<ul class="simple">
+<li><p>Forecasting the global population</p></li>
+<li><p>Forecasting the price of a stock</p></li>
+<li><p>Forecasting the daily maximum temperature in a given location</p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Predicting flights. See the <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/examples/01_forecasting.ipynb">Tutorial on Forecasting</a>.</p>
+</div>
+<div class="section" id="algorithms-included-in-sktime">
+<h2>Algorithms included in sktime<a class="headerlink" href="#algorithms-included-in-sktime" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference external" href="https://www.sktime.org/en/latest/api_reference.html#sktime-forecasting-time-series-forecasting">API Reference</a>.</p>
+</div>
+<div class="section" id="reductions-included-in-sktime">
+<h2>Reductions included in sktime<a class="headerlink" href="#reductions-included-in-sktime" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="variations-in-generative-setting">
+<h2>Variations in generative setting<a class="headerlink" href="#variations-in-generative-setting" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="evaluation-and-model-selection">
+<h2>Evaluation and model selection<a class="headerlink" href="#evaluation-and-model-selection" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="algorithms-not-included-in-sktime">
+<h2>Algorithms not included in sktime<a class="headerlink" href="#algorithms-not-included-in-sktime" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

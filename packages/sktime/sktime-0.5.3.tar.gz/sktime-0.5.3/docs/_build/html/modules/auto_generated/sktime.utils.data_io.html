@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.utils.data_io &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.utils.data_io</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime.utils.data_io">
+<span id="sktime-utils-data-io"></span><h1>sktime.utils.data_io<a class="headerlink" href="#module-sktime.utils.data_io" title="Permalink to this headline">¶</a></h1>
+<dl class="py exception">
+<dt id="sktime.utils.data_io.LongFormatDataParseException">
+<em class="property">exception </em><code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">LongFormatDataParseException</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L20-L26"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.LongFormatDataParseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>Should be raised when parsing a .csv file
+with long-formatted date and the format is incorrect</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="sktime.utils.data_io.TsFileParseException">
+<em class="property">exception </em><code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">TsFileParseException</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L12-L17"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.TsFileParseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>Should be raised when parsing a .ts file and the format is incorrect.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.generate_example_long_table">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">generate_example_long_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_cases</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">series_len</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">num_dims</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L937-L973"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.generate_example_long_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates example from long table format file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_cases</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of cases.</p></li>
+<li><p><strong>series_len</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Length of the series.</p></li>
+<li><p><strong>num_dims</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of dimensions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.load_from_arff_to_dataframe">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">load_from_arff_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_file_path_and_name</span></em>, <em class="sig-param"><span class="n">has_class_labels</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">return_separate_X_and_y</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">replace_missing_vals_with</span><span class="o">=</span><span class="default_value">'NaN'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L743-L860"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.load_from_arff_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads data from a .ts file into a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_file_path_and_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The full pathname of the .ts file to read.</p></li>
+<li><p><strong>has_class_labels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – true then line contains separated strings and class value contains
+list of separated strings, check for ‘return_separate_X_and_y’
+false otherwise.</p></li>
+<li><p><strong>return_separate_X_and_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – true then X and Y values should be returned as separate Data Frames (
+X) and a numpy array (y), false otherwise.
+This is only relevant for data.</p></li>
+<li><p><strong>replace_missing_vals_with</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The value that missing values in the text file should be replaced
+with prior to parsing.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame, ndarray</em> – If return_separate_X_and_y then a tuple containing a DataFrame and a
+numpy array containing the relevant time-series and corresponding
+class values.</p></li>
+<li><p><em>DataFrame</em> – If not return_separate_X_and_y then a single DataFrame containing
+all time-series and (if relevant) a column “class_vals” the
+associated class values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.load_from_long_to_dataframe">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">load_from_long_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_file_path_and_name</span></em>, <em class="sig-param"><span class="n">separator</span><span class="o">=</span><span class="default_value">','</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L900-L933"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.load_from_long_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads data from a long format file into a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_file_path_and_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The full pathname of the .csv file to read.</p></li>
+<li><p><strong>separator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The character that the csv uses as a delimiter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dataframe with sktime-formatted data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.load_from_tsfile_to_dataframe">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">load_from_tsfile_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_file_path_and_name</span></em>, <em class="sig-param"><span class="n">return_separate_X_and_y</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">replace_missing_vals_with</span><span class="o">=</span><span class="default_value">'NaN'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L29-L740"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.load_from_tsfile_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads data from a .ts file into a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_file_path_and_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The full pathname of the .ts file to read.</p></li>
+<li><p><strong>return_separate_X_and_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – true if X and Y values should be returned as separate Data Frames (
+X) and a numpy array (y), false otherwise.
+This is only relevant for data that</p></li>
+<li><p><strong>replace_missing_vals_with</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The value that missing values in the text file should be replaced
+with prior to parsing.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame, ndarray</em> – If return_separate_X_and_y then a tuple containing a DataFrame and a
+numpy array containing the relevant time-series and corresponding
+class values.</p></li>
+<li><p><em>DataFrame</em> – If not return_separate_X_and_y then a single DataFrame containing
+all time-series and (if relevant) a column “class_vals” the
+associated class values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.load_from_ucr_tsv_to_dataframe">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">load_from_ucr_tsv_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_file_path_and_name</span></em>, <em class="sig-param"><span class="n">return_separate_X_and_y</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L863-L897"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.load_from_ucr_tsv_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads data from a .tsv file into a Pandas DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_file_path_and_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The full pathname of the .tsv file to read.</p></li>
+<li><p><strong>return_separate_X_and_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – true then X and Y values should be returned as separate Data Frames (
+X) and a numpy array (y), false otherwise.
+This is only relevant for data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame, ndarray</em> – If return_separate_X_and_y then a tuple containing a DataFrame and a
+numpy array containing the relevant time-series and corresponding
+class values.</p></li>
+<li><p><em>DataFrame</em> – If not return_separate_X_and_y then a single DataFrame containing
+all time-series and (if relevant) a column “class_vals” the
+associated class values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.make_multi_index_dataframe">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">make_multi_index_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_instances</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">n_columns</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">n_timepoints</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L976-L1005"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.make_multi_index_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates example multi-index DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_instances</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of instances.</p></li>
+<li><p><strong>n_columns</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of columns (series) in multi-indexed DataFrame.</p></li>
+<li><p><strong>n_timepoints</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of timepoints per instance-column pair.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mi_df</strong> – The multi-indexed DataFrame with
+shape (n_instances*n_timepoints, n_column).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.write_dataframe_to_tsfile">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">write_dataframe_to_tsfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">problem_name</span><span class="o">=</span><span class="default_value">'sample_data'</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">univariate</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">class_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">class_value_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">equal_length</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">series_length</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">missing_values</span><span class="o">=</span><span class="default_value">'NaN'</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L1108-L1243"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.write_dataframe_to_tsfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output a dataset in dataframe format to .ts file
+:param data: the dataset in a dataframe to be written as a ts file</p>
+<blockquote>
+<div><p>which must be of the structure specified in the documentation
+<a class="reference external" href="https://github.com/whackteachers/sktime/blob/master/examples/loading_data.ipynb">https://github.com/whackteachers/sktime/blob/master/examples/loading_data.ipynb</a>
+index |   dim_0   |   dim_1   |    …    |  dim_c-1</p>
+<blockquote>
+<div><blockquote>
+<div><p>0  | pd.Series | pd.Series | pd.Series | pd.Series
+1  | pd.Series | pd.Series | pd.Series | pd.Series</p>
+</div></blockquote>
+<dl class="simple">
+<dt>… |    …    |    …    |    …    |    …</dt><dd><p>n  | pd.Series | pd.Series | pd.Series | pd.Series</p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The full path to output the ts file</p></li>
+<li><p><strong>problem_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The problemName to print in the header of the ts file
+and also the name of the file.</p></li>
+<li><p><strong>timestamp</strong> (<em>{False</em><em>, </em><em>bool}</em><em>, </em><em>optional</em>) – Indicate whether the data contains timestamps in the header.</p></li>
+<li><p><strong>univariate</strong> (<em>{True</em><em>, </em><em>bool}</em><em>, </em><em>optional</em>) – Indicate whether the data is univariate or multivariate in the header.
+If univariate, only the first dimension will be written to file</p></li>
+<li><p><strong>class_label</strong> (<em>{list</em><em>, </em><em>None}</em><em>, </em><em>optional</em>) – Provide class label to show the possible class values
+for classification problems in the header.</p></li>
+<li><p><strong>class_value_list</strong> (<em>{list/ndarray</em><em>, </em><em>[</em><em>]</em><em>}</em><em>, </em><em>optional</em>) – ndarray containing the class values for each case in classification problems</p></li>
+<li><p><strong>equal_length</strong> (<em>{False</em><em>, </em><em>bool}</em><em>, </em><em>optional</em>) – Indicate whether each series has equal length. It only write to file if true.</p></li>
+<li><p><strong>series_length</strong> (<em>{-1</em><em>, </em><em>int}</em><em>, </em><em>optional</em>) – Indicate each series length if they are of equal length.
+It only write to file if true.</p></li>
+<li><p><strong>missing_values</strong> (<em>{NaN</em><em>, </em><em>str}</em><em>, </em><em>optional</em>) – Representation for missing value, default is NaN.</p></li>
+<li><p><strong>comment</strong> (<em>{None</em><em>, </em><em>str}</em><em>, </em><em>optional</em>) – Comment text to be inserted before the header in a block.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)">None</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This version currently does not support writing timestamp data.</p>
+<p class="rubric">References</p>
+<p>The code for writing series data into file is adopted from
+<a class="reference external" href="https://stackoverflow.com/questions/37877708/">https://stackoverflow.com/questions/37877708/</a>
+how-to-turn-a-pandas-dataframe-row-into-a-comma-separated-string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.utils.data_io.write_results_to_uea_format">
+<code class="sig-prename descclassname">sktime.utils.data_io.</code><code class="sig-name descname">write_results_to_uea_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">strategy_name</span></em>, <em class="sig-param"><span class="n">dataset_name</span></em>, <em class="sig-param"><span class="n">y_true</span></em>, <em class="sig-param"><span class="n">y_pred</span></em>, <em class="sig-param"><span class="n">split</span><span class="o">=</span><span class="default_value">'TEST'</span></em>, <em class="sig-param"><span class="n">resample_seed</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">y_proba</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">second_line</span><span class="o">=</span><span class="default_value">'N/A'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/data_io.py#L1008-L1105"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.utils.data_io.write_results_to_uea_format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.classification.dictionary_based &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.classification.dictionary_based</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime.classification.dictionary_based">
+<span id="sktime-classification-dictionary-based"></span><h1>sktime.classification.dictionary_based<a class="headerlink" href="#module-sktime.classification.dictionary_based" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">BOSSEnsemble</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">0.92</span></em>, <em class="sig-param"><span class="n">max_ensemble_size</span><span class="o">=</span><span class="default_value">500</span></em>, <em class="sig-param"><span class="n">max_win_len_prop</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_window</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L27-L325"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Bag of SFA Symbols (BOSS)</p>
+<p>Bag of SFA Symbols Ensemble: implementation of BOSS from [1]</p>
+<p>Overview: Input n series length m
+BOSS performs a gird search over a set of parameter values, evaluating
+each with a LOOCV. It then retains
+all ensemble members within 92% of the best. There are three primary
+:param alpha: alphabet size
+:param w: window length
+:param l: word length.</p>
+<p>for any combination, a single BOSS slides a window length w along the
+series. The w length window is shortened to
+an l length word through taking a Fourier transform and keeping the
+first l/2 complex coefficients. These l
+coefficients are then discretised into alpha possible values, to form a
+word length l. A histogram of words for each
+series is formed and stored. fit involves finding n histograms.</p>
+<p>predict uses 1 nearest neighbour with a bespoke distance function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>double</em><em> [</em><em>0</em><em>,</em><em>1</em><em>]</em><em> retain all classifiers within</em>) – </p></li>
+<li><p><strong>of the best one</strong> (<em>threshold%</em>) – </p></li>
+<li><p><strong>(</strong><strong>default = 0.92</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+<li><p><strong>max_ensemble_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>retain a maximum number of</em>) – </p></li>
+<li><p><strong>classifiers</strong> – </p></li>
+<li><p><strong>if within threshold</strong> (<em>even</em>) – </p></li>
+<li><p><strong>(</strong><strong>default = 500</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+<li><p><strong>max_win_len_prop</strong> (<em>maximum window length as a proportion of</em>) – </p></li>
+<li><p><strong>length</strong><strong> (</strong><strong>default = 1</strong><strong>)</strong> (<em>series</em>) – </p></li>
+<li><p><strong>min_window</strong> (<em>minimum window size</em><em>, </em><em>(</em><em>default = 10</em><em>)</em>) – </p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – </p></li>
+<li><p><strong>number of jobs to run in parallel for both fit and predict.</strong> (<em>The</em>) – </p></li>
+<li><p><strong>means using all processors.</strong> (<em>-1</em>) – </p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>seed for random</em><em>, </em><em>integer</em><em>,</em>) – </p></li>
+<li><p><strong>(</strong><strong>default to no seed</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.n_classes">
+<code class="sig-name descname">n_classes</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.n_classes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.n_instances">
+<code class="sig-name descname">n_instances</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.n_instances" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.n_estimators">
+<code class="sig-name descname">n_estimators</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.n_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The final number of classifiers used (</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">&lt;= max_ensemble_size)</code></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.series_length">
+<code class="sig-name descname">series_length</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.series_length" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>length of all series (assumed equal)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.classifiers">
+<code class="sig-name descname">classifiers</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.classifiers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of DecisionTree classifiers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>..[1] Patrick Schäfer, “The BOSS is concerned with time series classification</dt><dd><p>in the presence of noise”, Data Mining and Knowledge Discovery, 29(6): 2015
+<a class="reference external" href="https://link.springer.com/article/10.1007/s10618-014-0377-7">https://link.springer.com/article/10.1007/s10618-014-0377-7</a></p>
+</dd>
+</dl>
+<p>For the Java version, see
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/</a>
+classifiers/dictionary_based/BOSS.java</p>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': False, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L123-L231"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an ensemble of BOSS classifiers from the training set (X,
+y), through  creating a variable size ensemble of those within a
+threshold of the best.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pd.DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>] </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L233-L240"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.BOSSEnsemble.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L242-L254"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.BOSSEnsemble.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">ContractableBOSS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_parameter_samples</span><span class="o">=</span><span class="default_value">250</span></em>, <em class="sig-param"><span class="n">max_ensemble_size</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">max_win_len_prop</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">time_limit</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">min_window</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_cboss.py#L23-L344"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Contractable Bag of SFA Symbols (cBOSS)
+implementation of BOSS from [1] with refinements described in [2]</p>
+<p>Overview: Input n series length m
+cBOSS randomly samples n_parameter_samples parameter sets, evaluating
+each with a LOOCV. It then retains max_ensemble_size classifiers with the
+highest accuracy.
+There are three primary parameters:</p>
+<blockquote>
+<div><p>alpha: alphabet size
+w: window length
+l: word length.</p>
+</div></blockquote>
+<p>for any combination, a single BOSS slides a window length w along the
+series. The w length window is shortened to
+an l length word through taking a Fourier transform and keeping the
+first l/2 complex coefficients. These l
+coefficients are then discretised into alpha possible values, to form a
+word length l. A histogram of words for each
+series is formed and stored. fit involves finding n histograms.</p>
+<p>predict uses 1 nearest neighbour with a bespoke distance function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_parameter_samples</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>if search is randomised</em><em>, </em><em>number of</em>) – </p></li>
+<li><p><strong>combos to try</strong><strong> (</strong><strong>default = 250</strong><strong>)</strong> (<em>parameter</em>) – </p></li>
+<li><p><strong>max_ensemble_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>retain a maximum number of</em>) – </p></li>
+<li><p><strong>classifiers</strong> – </p></li>
+<li><p><strong>if within threshold</strong> (<em>even</em>) – </p></li>
+<li><p><strong>(</strong><strong>default = 50</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+<li><p><strong>max_win_len_prop</strong> (<em>maximum window length as a proportion of</em>) – </p></li>
+<li><p><strong>length</strong><strong> (</strong><strong>default = 1</strong><strong>)</strong> (<em>series</em>) – </p></li>
+<li><p><strong>time_limit</strong> (<em>time contract to limit build time in minutes</em>) – </p></li>
+<li><p><strong>= 0</strong> (<em>(</em><em>default</em>) – </p></li>
+<li><p><strong>limit</strong><strong>)</strong> (<em>no</em>) – </p></li>
+<li><p><strong>min_window</strong> (<em>minimum window size</em><em>, </em><em>(</em><em>default = 10</em><em>)</em>) – </p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – </p></li>
+<li><p><strong>number of jobs to run in parallel for both fit and predict.</strong> (<em>The</em>) – </p></li>
+<li><p><strong>means using all processors.</strong> (<em>-1</em>) – </p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>seed for random</em><em>, </em><em>integer</em><em>,</em>) – </p></li>
+<li><p><strong>(</strong><strong>default to no seed</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.n_classes">
+<code class="sig-name descname">n_classes</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.n_classes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.n_instances">
+<code class="sig-name descname">n_instances</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.n_instances" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.n_estimators">
+<code class="sig-name descname">n_estimators</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.n_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The final number of classifiers used (</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">&lt;= max_ensemble_size)</code></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.series_length">
+<code class="sig-name descname">series_length</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.series_length" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>length of all series (assumed equal)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.classifiers">
+<code class="sig-name descname">classifiers</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.classifiers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of DecisionTree classifiers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.weights">
+<code class="sig-name descname">weights</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.weights" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>weight of each classifier in the ensemble</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#sktime.classification.dictionary_based.BOSSEnsemble" title="sktime.classification.dictionary_based.BOSSEnsemble"><code class="xref py py-class docutils literal notranslate"><span class="pre">BOSSEnsemble</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>..[1] Patrick Schäfer, “The BOSS is concerned with time series
+classification in the presence of noise”,
+Data Mining and Knowledge Discovery, 29(6): 2015</p>
+<blockquote>
+<div><p><a class="reference external" href="https://link.springer.com/article/10.1007/s10618-014-0377-7">https://link.springer.com/article/10.1007/s10618-014-0377-7</a></p>
+</div></blockquote>
+<p>..[2] Matthew Middlehurst, William Vickers and Anthony Bagnall
+“Scalable Dictionary Classifiers for Time Series Classification”,
+in proc 20th International Conference on Intelligent Data Engineering
+and Automated Learning,LNCS, volume 11871</p>
+<blockquote>
+<div><p><a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-030-33607-3_2">https://link.springer.com/chapter/10.1007/978-3-030-33607-3_2</a></p>
+</div></blockquote>
+<p>For the Java version, see
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/">https://github.com/uea-machine-learning/tsml/blob/master/src/</a>
+main/java/tsml/classifiers/dictionary_based/cBOSS.java</p>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': False, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_cboss.py#L137-L238"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an ensemble of BOSS classifiers from the training set (X,
+y), through randomising over the para space to make a fixed size
+ensemble of the best.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>] </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_cboss.py#L240-L247"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.ContractableBOSS.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_cboss.py#L249-L262"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.ContractableBOSS.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.IndividualBOSS">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">IndividualBOSS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">word_length</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">norm</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">alphabet_size</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">save_words</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L328-L473"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualBOSS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Single Bag of SFA Symbols (BOSS) classifier</p>
+<p>Bag of SFA Symbols Ensemble: implementation of BOSS from Schaffer :
+&#64;article</p>
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualBOSS.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L374-L387"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualBOSS.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualBOSS.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L389-L403"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualBOSS.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualBOSS.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_boss.py#L405-L412"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualBOSS.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.IndividualTDE">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">IndividualTDE</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">word_length</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">norm</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">igb</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">alphabet_size</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">dim_threshold</span><span class="o">=</span><span class="default_value">0.85</span></em>, <em class="sig-param"><span class="n">max_dims</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L404-L633"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualTDE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Single TDE classifier, based off the Bag of SFA Symbols (BOSS) model</p>
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualTDE.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L452-L497"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualTDE.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualTDE.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L499-L528"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualTDE.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.IndividualTDE.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L530-L537"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.IndividualTDE.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.MUSE">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">MUSE</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">anova</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">window_inc</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">p_threshold</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">use_first_order_differences</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L29-L331"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>WEASEL+MUSE (MUltivariate Symbolic Extension)
+MUSE: implementation of multivariate version of WEASEL, referred to as
+just MUSE from [1]</p>
+<dl>
+<dt>Overview: Input n series length m</dt><dd><p>WEASEL+MUSE is a multivariate  dictionary classifier that builds a
+bag-of-patterns using SFA for different window lengths and learns a
+logistic regression classifier on this bag.</p>
+<dl>
+<dt>There are these primary parameters:</dt><dd><p>alphabet_size: alphabet size
+chi2-threshold: used for feature selection to select best words
+anova: select best l/2 fourier coefficients other than first ones
+bigrams: using bigrams of SFA words
+binning_strategy: the binning strategy used to disctrtize into</p>
+<blockquote>
+<div><p>SFA words.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>anova</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – If True, the Fourier coefficient selection is done via a one-way
+ANOVA test. If False, the first Fourier coefficients are selected.
+Only applicable if labels are given</p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – whether to create bigrams of SFA words</p></li>
+<li><p><strong>window_inc</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 4</em>) – <dl class="simple">
+<dt>WEASEL create a BoP model for each window sizes. This is the</dt><dd><p>increment used to determine the next window size.</p>
+</dd>
+<dt>p_threshold:      int, default = 0.05 (disabled by default)</dt><dd><p>Feature selection is applied based on the chi-squared test.
+This is the p-value threshold to use for chi-squared test on bag-of-words
+(lower means more strict). 1 indicates that the test
+should not be performed.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>use_first_order_differences</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – If set to True will add the first order differences of each dimension
+to the data.</p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>,</em>) – Seed for random, integer</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#sktime.classification.dictionary_based.WEASEL" title="sktime.classification.dictionary_based.WEASEL"><code class="xref py py-class docutils literal notranslate"><span class="pre">WEASEL</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>..[1] Patrick Schäfer and Ulf Leser, “Multivariate time series classification
+with WEASEL+MUSE”,    in proc 3rd ECML/PKDD Workshop on AALTD}, 2018
+<a class="reference external" href="https://arxiv.org/abs/1711.11343">https://arxiv.org/abs/1711.11343</a>
+Java version
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/</a>
+classifiers/multivariate/WEASEL_MUSE.java</p>
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.add_first_order_differences">
+<code class="sig-name descname">add_first_order_differences</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L313-L320"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.add_first_order_differences" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.MUSE.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': True, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.compute_window_inc">
+<code class="sig-name descname">compute_window_inc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">series_length</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L322-L326"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.compute_window_inc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L143-L268"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a WEASEL+MUSE classifiers from the training set (X, y),</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>] </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L270-L272"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_muse.py#L274-L276"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.MUSE.shift_left">
+<em class="property">static </em><code class="sig-name descname">shift_left</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">highest</span></em>, <em class="sig-param"><span class="n">ind</span></em>, <em class="sig-param"><span class="n">highest_dim_bit</span></em>, <em class="sig-param"><span class="n">window_size</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.MUSE.shift_left" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">TemporalDictionaryEnsemble</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_parameter_samples</span><span class="o">=</span><span class="default_value">250</span></em>, <em class="sig-param"><span class="n">max_ensemble_size</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">time_limit</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">max_win_len_prop</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_window</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">randomly_selected_params</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dim_threshold</span><span class="o">=</span><span class="default_value">0.85</span></em>, <em class="sig-param"><span class="n">max_dims</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L26-L401"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Temporal Dictionary Ensemble (TDE) as described in [1].</p>
+<p>Overview: Input n series length m with d dimensions
+TDE searches k parameter values selected using a Gaussian processes
+regressor, evaluating each with a LOOCV. It then retains s
+ensemble members.
+There are six primary parameters for individual classifiers:</p>
+<blockquote>
+<div><p>alpha: alphabet size
+w: window length
+l: word length
+p: normalise/no normalise
+h: levels
+b: MCB/IGB</p>
+</div></blockquote>
+<p>for any combination, an individual TDE classifier slides a window of
+length w along the series. The w length window is shortened to
+an l length word through taking a Fourier transform and keeping the
+first l/2 complex coefficients. These lcoefficients are then discretised
+into alpha possible values, to form a word length l using breakpoints
+found using b. A histogram of words for each series is formed and stored,
+using a spatial pyramid of h levels. For multivariate series, accuracy
+from a reduced histogram is used to select dimensions.</p>
+<p>fit involves finding n histograms.
+predict uses 1 nearest neighbour with a the histogram intersection
+distance function.</p>
+<p>For the original Java version, see
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/</a>
+tsml/classifiers/dictionary_based/TDE.java</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_parameter_samples</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>number of parameter combos to try</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=250</strong><strong>)</strong> – </p></li>
+<li><p><strong>max_ensemble_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>maximum number of classifiers</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=50</strong><strong>)</strong> – </p></li>
+<li><p><strong>time_limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>time contract to limit build time in</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=0</strong> (<em>minutes</em>) – </p></li>
+<li><p><strong>limit</strong><strong>)</strong> (<em>no</em>) – </p></li>
+<li><p><strong>max_win_len_prop</strong> (<em>float between 0 and 1</em><em>, </em><em>maximum window length</em>) – </p></li>
+<li><p><strong>a proportion of series length</strong><strong> (</strong><strong>default=1</strong><strong>)</strong> (<em>as</em>) – </p></li>
+<li><p><strong>min_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>minimum window size</em><em> (</em><em>default=10</em><em>)</em>) – </p></li>
+<li><p><strong>randomly_selected_params</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>number of parameters randomly selected</em>) – </p></li>
+<li><p><strong>GP is used</strong><strong> (</strong><strong>default=50</strong><strong>)</strong> (<em>before</em>) – </p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>whether to use bigrams</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=None</strong> – </p></li>
+<li><p><strong>for univariate</strong> (<em>true</em>) – </p></li>
+<li><p><strong>for multivariate</strong><strong>)</strong> (<em>false</em>) – </p></li>
+<li><p><strong>dim_threshold</strong> (<em>float between 0 and 1</em><em>, </em><em>dimension accuracy</em>) – </p></li>
+<li><p><strong>for multivariate</strong><strong> (</strong><strong>default=0.85</strong><strong>)</strong> (<em>threshold</em>) – </p></li>
+<li><p><strong>max_dims</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>max number of dimensions for multivariate</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=20</strong><strong>)</strong> – </p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – </p></li>
+<li><p><strong>number of jobs to run in parallel for both fit and predict.</strong> (<em>The</em>) – </p></li>
+<li><p><strong>means using all processors.</strong> (<em>-1</em>) – </p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>seed for random</em><em>, </em><em>integer</em><em>,</em>) – </p></li>
+<li><p><strong>(</strong><strong>default to no seed</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_classes">
+<code class="sig-name descname">n_classes</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_classes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_instances">
+<code class="sig-name descname">n_instances</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_instances" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_dims">
+<code class="sig-name descname">n_dims</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_dims" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_estimators">
+<code class="sig-name descname">n_estimators</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The final number of classifiers used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">(&lt;=max_ensemble_size)</code></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.series_length">
+<code class="sig-name descname">series_length</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.series_length" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>length of all series (assumed equal)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.classifiers">
+<code class="sig-name descname">classifiers</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.classifiers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of IndividualTDE classifiers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weights">
+<code class="sig-name descname">weights</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weights" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>weight of each classifier in the ensemble</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weight_sum">
+<code class="sig-name descname">weight_sum</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weight_sum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>sum of all weights</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_x">
+<code class="sig-name descname">prev_parameters_x</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_x" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>parameter value of previous classifiers for GP</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_y">
+<code class="sig-name descname">prev_parameters_y</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_y" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>accuracy of previous classifiers for GP</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<dl>
+<dt>..[1] Matthew Middlehurst, James Large, Gavin Cawley and Anthony Bagnall</dt><dd><p>“The Temporal Dictionary Ensemble (TDE) Classifier for Time Series
+Classification”,</p>
+<blockquote>
+<div><p>in proceedings of the European Conference on Machine Learning and
+Principles and Practice of Knowledge Discovery in Databases, 2020</p>
+</div></blockquote>
+<p><a class="reference external" href="https://ueaeprints.uea.ac.uk/id/eprint/75490/">https://ueaeprints.uea.ac.uk/id/eprint/75490/</a></p>
+</dd>
+</dl>
+<p>Java version
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/</a>
+tsml/classifiers/dictionary_based/TDE.java</p>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': True, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L169-L293"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an ensemble of individual TDE classifiers from the training
+set (X,y), through randomising over the parameter space to a set
+number of times then selecting new parameters using Gaussian
+processes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>] </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L295-L302"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L304-L317"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.WEASEL">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">WEASEL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">anova</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">binning_strategy</span><span class="o">=</span><span class="default_value">'information-gain'</span></em>, <em class="sig-param"><span class="n">window_inc</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">p_threshold</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L30-L334"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Word ExtrAction for time SEries cLassification (WEASEL) from [1].</p>
+<p># Overview: Input n series length m
+# WEASEL is a dictionary classifier that builds a bag-of-patterns using SFA
+# for different window lengths and learns a logistic regression classifier
+# on this bag.
+#
+# There are these primary parameters:
+#         alphabet_size: alphabet size
+#         chi2-threshold: used for feature selection to select best words
+#         anova: select best l/2 fourier coefficients other than first ones
+#         bigrams: using bigrams of SFA words
+#         binning_strategy: the binning strategy used to discretise into
+#                           SFA words.
+#
+# WEASEL slides a window length w along the series. The w length window
+# is shortened to an l length word through taking a Fourier transform and
+# keeping the best l/2 complex coefficients using an anova one-sided
+# test. These l coefficients are then discretised into alpha possible
+# symbols, to form a word of length l. A histogram of words for each
+# series is formed and stored.
+# For each window-length a bag is created and all words are joint into
+# one bag-of-patterns. Words from different window-lengths are
+# discriminated by different prefixes.
+#
+# fit involves training a logistic regression classifier on the single
+# bag-of-patterns.
+#
+# predict uses the logistic regression classifier</p>
+<p># For the Java version, see
+# <a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java</a>
+# /tsml/classifiers/dictionary_based/WEASEL.java</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>anova</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – If True, the Fourier coefficient selection is done via a one-way
+ANOVA test. If False, the first Fourier coefficients are selected.
+Only applicable if labels are given</p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – whether to create bigrams of SFA words</p></li>
+<li><p><strong>binning_strategy</strong> (<em>{&quot;equi-depth&quot;</em><em>, </em><em>&quot;equi-width&quot;</em><em>, </em><em>&quot;information-gain&quot;}</em><em>,</em>) – default=”information-gain”
+The binning method used to derive the breakpoints.</p></li>
+<li><p><strong>window_inc</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 4</em>) – WEASEL create a BoP model for each window sizes. This is the
+increment used to determine the next window size.</p></li>
+<li><p><strong>p_threshold</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 0.05</em><em> (</em><em>disabled by default</em><em>)</em>) – Feature selection is applied based on the chi-squared test.
+This is the p-value threshold to use for chi-squared test on bag-of-words
+(lower means more strict). 1 indicates that the test
+should not be performed.</p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>,</em>) – Seed for random, integer</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.WEASEL.classes_">
+<code class="sig-name descname">classes_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.classes_" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List of classes for a given problem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>..[1]  Patrick Schäfer and Ulf Leser,    :
+&#64;inproceedings{schafer2017fast,</p>
+<blockquote>
+<div><p>title={Fast and Accurate Time Series Classification with WEASEL},
+author={Sch{“a}fer, Patrick and Leser, Ulf},
+booktitle={Proceedings of the 2017 ACM on Conference on Information and</p>
+<blockquote>
+<div><p>Knowledge Management},</p>
+</div></blockquote>
+<p>pages={637–646},
+year={2017}</p>
+</div></blockquote>
+<p>}
+<a class="reference external" href="https://dl.acm.org/doi/10.1145/3132847.3132980">https://dl.acm.org/doi/10.1145/3132847.3132980</a></p>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.WEASEL.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': False, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.compute_window_inc">
+<code class="sig-name descname">compute_window_inc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L325-L329"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.compute_window_inc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L165-L285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a WEASEL classifiers from the training set (X, y),</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>] </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L287-L292"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>panda dataframe</em>) – instances of the dataset</p></li>
+<li><p><strong>----</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>predictions</strong> – array of predictions of each instance (class value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>1d numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_weasel.py#L294-L299"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.WEASEL.shift_left">
+<em class="property">static </em><code class="sig-name descname">shift_left</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">highest_bit</span></em>, <em class="sig-param"><span class="n">window_size</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.WEASEL.shift_left" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

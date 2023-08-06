@@ -1,0 +1,2372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Loading and working with data in sktime &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Forecasting with HCrystalBall forecaster" href="forecasting_with_hcrystalball.html" />
+    <link rel="prev" title="Demo of the PlateauFinder transformer" href="plateau_finder.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_forecasting.html">Forecasting with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_classification_univariate.html">Univariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_classification_multivariate.html">Multivariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_benchmarking.html">Benchmarking with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature_extraction_with_tsfresh.html">Feature extraction with tsfresh transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shapelet_transform.html">Shapelets and the Shapelet Transform with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interval_based_classification.html">Interval based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="catch22.html">The Canonical Time-series Characteristics (catch22) transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mrseql.html">Time series classification with Mr-SEQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocket.html">Demo of ROCKET transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plateau_finder.html">Demo of the PlateauFinder transformer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Loading and working with data in sktime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Representing-data-with-.ts-files">Representing data with .ts files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Loading-from-.ts-file-to-pandas-DataFrame">Loading from .ts file to pandas DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Loading-from-Weka-ARFF-files">Loading from Weka ARFF files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Loading-from-UCR-.tsv-Format-Files">Loading from UCR .tsv Format Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Using-tabular-data-with-sktime">Using tabular data with sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Using-long-format-data-with-sktime">Using long-format data with sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Using-multi-indexed-pandas-DataFrames">Using multi-indexed pandas DataFrames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Using-NumPy-3d-arrays-with-sktime">Using NumPy 3d-arrays with sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Converting-between-NumPy-3d-arrays-and-pandas-multi-indexed-DataFrame">Converting between NumPy 3d-arrays and pandas multi-indexed DataFrame</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="forecasting_with_hcrystalball.html">Forecasting with HCrystalBall forecaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary_based_classification.html">Dictionary based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html">Time series interpolating with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#Now-the-interpolator-enters">Now the interpolator enters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Loading and working with data in sktime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/alan-turing-institute/sktime/v0.5.3?filepath=examples/loading_data.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="Loading-and-working-with-data-in-sktime">
+<h1>Loading and working with data in sktime<a class="headerlink" href="#Loading-and-working-with-data-in-sktime" title="Permalink to this headline">¶</a></h1>
+<p>Python provides a variety of useful ways to represent data, but NumPy arrays and pandas DataFrames are commonly used for data analysis. When using NumPy 2d-arrays or pandas DataFrames to analyze tabular data the rows are commony used to represent each instance (e.g. case or observation) of the data, while the columns are used to represent a given feature (e.g. variable or dimension) for an observation. Since timeseries data also has a time dimension for a given instance and feature, several
+alternative data formats could be used to represent this data, including nested pandas DataFrame structures, NumPy 3d-arrays, or multi-indexed pandas DataFrames.</p>
+<p>Sktime is designed to work with timeseries data stored as nested pandas DataFrame objects. Similar to working with pandas DataFrames with tabular data, this allows instances to be represented by rows and the feature data for each dimension of a problem (e.g. variables or features) to be stored in the DataFrame columns. To accomplish this the timepoints for each instance-feature combination are stored in a single cell in the input Pandas DataFrame (<a class="reference external" href="#sktime_df_format">see Sktime pandas DataFrame
+format</a> for more details).</p>
+<p>Users can load or convert data into sktime’s format in a variety of ways. Data can be loaded directly from a bespoke sktime file format (.ts) (<a class="reference external" href="#ts_files">see Representing data with .ts files</a>) or supported file formats provided by <a class="reference external" href="#other_file_types">other existing data sources</a> (such as Weka ARFF and .tsv). Sktime also provides functions to convert data to and from sktime’s nested pandas DataFrame format and several other common ways for representing timeseries data using NumPy arrays or
+pandas DataFrames. <a class="reference external" href="#convert">see Converting between sktime and alternative timeseries formats</a>.</p>
+<p>The rest of this sktime tutorial will provide a more detailed description of the sktime pandas DataFrame format, a brief description of the .ts file format, how to load data from other supported formats, and how to convert between other common ways of representing timeseries data in NumPy arrays or pandas DataFrames.</p>
+<p>## Sktime pandas DataFrame format</p>
+<p>The core data structure for storing datasets in sktime is a <em>nested</em> pandas DataFrame, where rows of the dataframe correspond to instances (cases or observations), and columns correspond to dimensions of the problem (features or variables). The multiple timepoints and their corresponding values for each instance-feature pair are stored as pandas Series object <em>nested</em> within the applicable DataFrame cell.</p>
+<p>For example, for a problem with n cases that each have data across c timeseries dimensions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="n">index</span> <span class="o">|</span>   <span class="n">dim_0</span>   <span class="o">|</span>   <span class="n">dim_1</span>   <span class="o">|</span>    <span class="o">...</span>    <span class="o">|</span>  <span class="n">dim_c</span><span class="o">-</span><span class="mi">1</span>
+   <span class="mi">0</span>  <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+   <span class="mi">1</span>  <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+  <span class="o">...</span> <span class="o">|</span>    <span class="o">...</span>    <span class="o">|</span>    <span class="o">...</span>    <span class="o">|</span>    <span class="o">...</span>    <span class="o">|</span>    <span class="o">...</span>
+   <span class="n">n</span>  <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+</pre></div>
+</div>
+<p>Representing timeseries data in this way makes it easy to align the timeseries features for a given instance with non-timeseries information. For example, in a classification problem, it is easy to align the timeseries features for an observation with its (index-aligned) target class label:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="o">|</span> <span class="n">class_val</span>
+  <span class="mi">0</span>   <span class="o">|</span>   <span class="nb">int</span>
+  <span class="mi">1</span>   <span class="o">|</span>   <span class="nb">int</span>
+ <span class="o">...</span>  <span class="o">|</span>   <span class="o">...</span>
+  <span class="n">n</span>   <span class="o">|</span>   <span class="nb">int</span>
+</pre></div>
+</div>
+<p>While sktime’s format uses pandas Series objects in its nested DataFrame structure, other data structures like NumPy arrays could be used to hold the timeseries values in each cell. However, the use of pandas Series objects helps to facilitate simple storage of sparse data and make it easy to accomodate series with non-integer timestamps (such as dates).</p>
+<p>## The .ts file format One common use case is to load locally stored data. To make this easy, the .ts file format has been created for representing problems in a standard format for use with sktime.</p>
+<div class="section" id="Representing-data-with-.ts-files">
+<h2>Representing data with .ts files<a class="headerlink" href="#Representing-data-with-.ts-files" title="Permalink to this headline">¶</a></h2>
+<p>A .ts file include two main parts: * header information * data</p>
+<p>The header information is used to facilitate simple representation of the data through including metadata about the structure of the problem. The header contains the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@problemName</span> <span class="o">&lt;</span><span class="n">problem</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="nd">@timeStamps</span> <span class="o">&lt;</span><span class="n">true</span><span class="o">/</span><span class="n">false</span><span class="o">&gt;</span>
+<span class="nd">@univariate</span> <span class="o">&lt;</span><span class="n">true</span><span class="o">/</span><span class="n">false</span><span class="o">&gt;</span>
+<span class="nd">@classLabel</span> <span class="o">&lt;</span><span class="n">true</span><span class="o">/</span><span class="n">false</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">space</span> <span class="n">delimited</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">possible</span> <span class="k">class</span> <span class="nc">values</span><span class="o">&gt;</span>
+<span class="nd">@data</span>
+</pre></div>
+</div>
+<p>The data for the problem should begin after the &#64;data tag. In the simplest case where &#64;timestamps is false, values for a series are expressed in a comma-separated list and the index of each value is relative to its position in the list (0, 1, …, m). An <em>instance</em> may contain 1 to many dimensions, where instances are line-delimited and dimensions within an instance are colon (:) delimited. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span>
+<span class="mi">13</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">32</span>
+<span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>This example data has 3 <em>instances</em>, corresponding to the three lines shown above. Each instance has 2 <em>dimensions</em> with 4 observations per dimension. For example, the intitial instance’s first dimension has the timepoint values of 2, 3, 2, 4 and the second dimension has the values 4, 3, 2, 2.</p>
+<p>Missing readings can be specified using ?. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2,?,2,4:4,3,2,2
+13,12,32,12:22,23,12,32
+4,4,5,4:3,2,3,2
+</pre></div>
+</div>
+<p>would indicate the second timepoint value of the initial instance’s first dimension is missing.</p>
+<p>Alternatively, for sparse datasets, readings can be specified by setting &#64;timestamps to true in the header and representing the data with tuples in the form of (timestamp, value) just for the obser. For example, the first instance in the example above could be specified in this representation as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">):(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Equivalently, the sparser example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2,5,?,?,?,?,?,5,?,?,?,?,4
+</pre></div>
+</div>
+<p>could be represented with just the non-missing timestamps as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When using the .ts file format to store data for timeseries classification problems, the class label for an instance should be specified in the last dimension and &#64;classLabel should be set to true in the header information and be followed by the set of possible class values. For example, if a case consists of a single dimension and has a class value of 1 it would be specified as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">34</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Loading-from-.ts-file-to-pandas-DataFrame">
+<h2>Loading from .ts file to pandas DataFrame<a class="headerlink" href="#Loading-from-.ts-file-to-pandas-DataFrame" title="Permalink to this headline">¶</a></h2>
+<p>A dataset can be loaded from a .ts file using the following method in sktime.utils.data_io.py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">load_from_tsfile_to_dataframe</span><span class="p">(</span><span class="n">full_file_path_and_name</span><span class="p">,</span> <span class="n">replace_missing_vals_with</span><span class="o">=</span><span class="s1">&#39;NaN&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This can be demonstrated using the Arrow Head problem that is included in sktime under sktime/datasets/data</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">sktime</span>
+<span class="kn">from</span> <span class="nn">sktime.utils.data_io</span> <span class="kn">import</span> <span class="n">load_from_tsfile_to_dataframe</span>
+
+<span class="n">DATA_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sktime</span><span class="o">.</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;datasets/data&quot;</span><span class="p">)</span>
+
+<span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">load_from_tsfile_to_dataframe</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">,</span> <span class="s2">&quot;ArrowHead/ArrowHead_TRAIN.ts&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">test_x</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">load_from_tsfile_to_dataframe</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">,</span> <span class="s2">&quot;ArrowHead/ArrowHead_TEST.ts&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Train and test partitions of the ArrowHead problem have been loaded into nested dataframes with an associated array of class values. As an example, below are the first 5 rows from the train_x and train_y:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">train_x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     -1.9630
+1     -1.9578
+2     -1.9561
+3   ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     -1.7746
+1     -1.7740
+2     -1.7766
+3   ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     -1.8660
+1     -1.8420
+2     -1.8350
+3   ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     -2.0738
+1     -2.0733
+2     -2.0446
+3   ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     -1.7463
+1     -1.7413
+2     -1.7227
+3   ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">train_y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;0&#39;, &#39;1&#39;], dtype=&#39;&lt;U1&#39;)
+</pre></div></div>
+</div>
+<p>## Loading other file formats Researchers who have made timeseries data available have used two other common formats, including:</p>
+<ul class="simple">
+<li><p>Weka ARFF files</p></li>
+<li><p>UCR .tsv files</p></li>
+</ul>
+</div>
+<div class="section" id="Loading-from-Weka-ARFF-files">
+<h2>Loading from Weka ARFF files<a class="headerlink" href="#Loading-from-Weka-ARFF-files" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to load data from Weka’s attribute-relation file format (ARFF) files. Data for timeseries problems are made available in this format by researchers at the University of East Anglia (among others) at www.timeseriesclassification.com. The <code class="docutils literal notranslate"><span class="pre">load_from_arff_to_dataframe</span></code> method in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_io</span></code> supports reading data for both univariate and multivariate timeseries problems.</p>
+<p>The univariate functionality is demonstrated below using data on the ArrowHead problem again (this time loading from ARFF file).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_io</span> <span class="kn">import</span> <span class="n">load_from_arff_to_dataframe</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_from_arff_to_dataframe</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">,</span> <span class="s2">&quot;ArrowHead/ArrowHead_TRAIN.arff&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     -1.963009
+1     -1.957825
+2     -1.95614...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     -1.774571
+1     -1.774036
+2     -1.77658...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     -1.866021
+1     -1.841991
+2     -1.83502...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     -2.073758
+1     -2.073301
+2     -2.04460...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     -1.746255
+1     -1.741263
+2     -1.72274...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>The multivariate BasicMotions problem is used below to illustrate the ability to read multivariate timeseries data from ARFF files into the sktime format.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_from_arff_to_dataframe</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">,</span> <span class="s2">&quot;BasicMotions/BasicMotions_TRAIN.arff&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_0</th>
+      <th>dim_1</th>
+      <th>dim_2</th>
+      <th>dim_3</th>
+      <th>dim_4</th>
+      <th>dim_5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     0.079106
+1     0.079106
+2    -0.903497
+3...</td>
+      <td>0     0.394032
+1     0.394032
+2    -3.666397
+3...</td>
+      <td>0     0.551444
+1     0.551444
+2    -0.282844
+3...</td>
+      <td>0     0.351565
+1     0.351565
+2    -0.095881
+3...</td>
+      <td>0     0.023970
+1     0.023970
+2    -0.319605
+3...</td>
+      <td>0     0.633883
+1     0.633883
+2     0.972131
+3...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     0.377751
+1     0.377751
+2     2.952965
+3...</td>
+      <td>0    -0.610850
+1    -0.610850
+2     0.970717
+3...</td>
+      <td>0    -0.147376
+1    -0.147376
+2    -5.962515
+3...</td>
+      <td>0    -0.103872
+1    -0.103872
+2    -7.593275
+3...</td>
+      <td>0    -0.109198
+1    -0.109198
+2    -0.697804
+3...</td>
+      <td>0    -0.037287
+1    -0.037287
+2    -2.865789
+3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0    -0.813905
+1    -0.813905
+2    -0.424628
+3...</td>
+      <td>0     0.825666
+1     0.825666
+2    -1.305033
+3...</td>
+      <td>0     0.032712
+1     0.032712
+2     0.826170
+3...</td>
+      <td>0     0.021307
+1     0.021307
+2    -0.372872
+3...</td>
+      <td>0     0.122515
+1     0.122515
+2    -0.045277
+3...</td>
+      <td>0     0.775041
+1     0.775041
+2     0.383526
+3...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     0.289855
+1     0.289855
+2    -0.669185
+3...</td>
+      <td>0     0.284130
+1     0.284130
+2    -0.210466
+3...</td>
+      <td>0     0.213680
+1     0.213680
+2     0.252267
+3...</td>
+      <td>0    -0.314278
+1    -0.314278
+2     0.018644
+3...</td>
+      <td>0     0.074574
+1     0.074574
+2     0.007990
+3...</td>
+      <td>0    -0.079901
+1    -0.079901
+2     0.237040
+3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0    -0.123238
+1    -0.123238
+2    -0.249547
+3...</td>
+      <td>0     0.379341
+1     0.379341
+2     0.541501
+3...</td>
+      <td>0    -0.286006
+1    -0.286006
+2     0.208420
+3...</td>
+      <td>0    -0.098545
+1    -0.098545
+2    -0.023970
+3...</td>
+      <td>0     0.058594
+1     0.058594
+2     0.175783
+3...</td>
+      <td>0    -0.074574
+1    -0.074574
+2     0.114525
+3...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="Loading-from-UCR-.tsv-Format-Files">
+<h2>Loading from UCR .tsv Format Files<a class="headerlink" href="#Loading-from-UCR-.tsv-Format-Files" title="Permalink to this headline">¶</a></h2>
+<p>A further option is to load data into sktime from tab separated value (.tsv) files. Researchers at the University of Riverside, California make a variety of timeseries data available in this format at <a class="reference external" href="https://www.cs.ucr.edu/~eamonn/time_series_data_2018">https://www.cs.ucr.edu/~eamonn/time_series_data_2018</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">load_from_ucr_tsv_to_dataframe</span></code> method in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_io</span></code> supports reading univariate problems. An example with ArrowHead is given below to demonstrate equivalence with loading from the .ts and ARFF file formats.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_io</span> <span class="kn">import</span> <span class="n">load_from_ucr_tsv_to_dataframe</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_from_ucr_tsv_to_dataframe</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">,</span> <span class="s2">&quot;ArrowHead/ArrowHead_TRAIN.tsv&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dim_0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     -1.963009
+1     -1.957825
+2     -1.95614...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     -1.774571
+1     -1.774036
+2     -1.77658...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     -1.866021
+1     -1.841991
+2     -1.83502...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     -2.073758
+1     -2.073301
+2     -2.04460...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     -1.746255
+1     -1.741263
+2     -1.72274...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>## Converting between other NumPy and pandas formats</p>
+<p>It is also possible to use data from sources other than .ts and .arff files by manually shaping the data into the format described above.</p>
+<p>Functions to convert from and to these types to sktime’s nested DataFrame format are provided in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_processing</span></code></p>
+</div>
+<div class="section" id="Using-tabular-data-with-sktime">
+<h2>Using tabular data with sktime<a class="headerlink" href="#Using-tabular-data-with-sktime" title="Permalink to this headline">¶</a></h2>
+<p>One approach to representing timeseries data is a tabular DataFrame. As usual, each row represents an instance. In the tabular setting each timepoint of the univariate timeseries being measured for each instance are treated as feature and stored as a primitive data type in the DataFrame’s cells.</p>
+<p>In a univariate setting, where there are <code class="docutils literal notranslate"><span class="pre">n</span></code> instances of the series and each univariate timeseries has <code class="docutils literal notranslate"><span class="pre">t</span></code> timepoints, this would yield a pandas DataFrame with shape (n, t). In practice, this could be used to represent sensors measuring the same signal over time (features) on different machines (instances) or the same economic variable over time (features) for different countries (instances).</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">from_2d_array_to_nested</span></code> converts a (n, t) tabular DataFrame to nested DataFrame with shape (n, 1). To convert from a nested DataFrame to a tabular array the function <code class="docutils literal notranslate"><span class="pre">from_nested_to_2d_array</span></code> can be used.</p>
+<p>The example below uses 50 instances with 20 timepoints each.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+
+<span class="kn">from</span> <span class="nn">sktime.utils.data_processing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">from_2d_array_to_nested</span><span class="p">,</span>
+    <span class="n">from_nested_to_2d_array</span><span class="p">,</span>
+    <span class="n">is_nested_dataframe</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">()</span>
+<span class="n">X_2d</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The tabular data has the shape </span><span class="si">{</span><span class="n">X_2d</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The tabular data has the shape (50, 20)
+</pre></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">from_2d_array_to_nested</span></code> function makes it easy to convert this to a nested DataFrame.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_nested</span> <span class="o">=</span> <span class="n">from_2d_array_to_nested</span><span class="p">(</span><span class="n">X_2d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_nested is a nested DataFrame: </span><span class="si">{</span><span class="n">is_nested_dataframe</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The cell contains a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">X_nested</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The nested DataFrame has shape </span><span class="si">{</span><span class="n">X_nested</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">X_nested</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+X_nested is a nested DataFrame: True
+The cell contains a &lt;class &#39;pandas.core.series.Series&#39;&gt;.
+The nested DataFrame has shape (50, 1)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     2.079005
+1     1.139698
+2     2.401339
+3...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0    -1.221541
+1     0.319184
+2    -2.096536
+3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0    -2.136296
+1    -2.129254
+2     0.867093
+3...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     0.866488
+1    -0.690724
+2     0.962626
+3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0    -0.991407
+1     1.694927
+2    -0.855941
+3...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>This nested DataFrame can also be converted back to a tabular DataFrame using easily.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_2d</span> <span class="o">=</span> <span class="n">from_nested_to_2d_array</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The tabular data has the shape </span><span class="si">{</span><span class="n">X_2d</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The tabular data has the shape (50, 20)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Using-long-format-data-with-sktime">
+<h2>Using long-format data with sktime<a class="headerlink" href="#Using-long-format-data-with-sktime" title="Permalink to this headline">¶</a></h2>
+<p>Timeseries data can also be represented in <em>long</em> format where each row identifies the value for a single timepoint for a given dimension for a given instance.</p>
+<p>This format may be encountered in a database where each row stores a single value measurement identified by several identification columns. For example, where <code class="docutils literal notranslate"><span class="pre">case_id</span></code> is an id to identify a specific instance in the data, <code class="docutils literal notranslate"><span class="pre">dimension_id</span></code> is an integer between 0 and d-1 for d dimensions in the data, <code class="docutils literal notranslate"><span class="pre">reading_id</span></code> is the index of timepoints for the associated <code class="docutils literal notranslate"><span class="pre">case_id</span></code> and <code class="docutils literal notranslate"><span class="pre">dimension_id</span></code>, and <code class="docutils literal notranslate"><span class="pre">value</span></code> is the actual value of the observation. E.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">|</span> <span class="n">case_id</span> <span class="o">|</span> <span class="n">dim_id</span> <span class="o">|</span> <span class="n">reading_id</span> <span class="o">|</span> <span class="n">value</span>
+<span class="o">------------------------------------------------</span>
+  <span class="mi">0</span>  <span class="o">|</span>   <span class="nb">int</span>   <span class="o">|</span>  <span class="nb">int</span>   <span class="o">|</span>    <span class="nb">int</span>     <span class="o">|</span> <span class="n">double</span>
+  <span class="mi">1</span>  <span class="o">|</span>   <span class="nb">int</span>   <span class="o">|</span>  <span class="nb">int</span>   <span class="o">|</span>    <span class="nb">int</span>     <span class="o">|</span> <span class="n">double</span>
+  <span class="mi">2</span>  <span class="o">|</span>   <span class="nb">int</span>   <span class="o">|</span>  <span class="nb">int</span>   <span class="o">|</span>    <span class="nb">int</span>     <span class="o">|</span> <span class="n">double</span>
+  <span class="mi">3</span>  <span class="o">|</span>   <span class="nb">int</span>   <span class="o">|</span>  <span class="nb">int</span>   <span class="o">|</span>    <span class="nb">int</span>     <span class="o">|</span> <span class="n">double</span>
+</pre></div>
+</div>
+<p>Sktime provides functions to convert to and from the long data format in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_processing</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">from_long_to_nested</span></code> function converts from a long format DataFrame to sktime’s nested format (with assumptions made on how the data is initially formatted). Conversely, <code class="docutils literal notranslate"><span class="pre">from_nested_to_long</span></code> converts from a sktime nested DataFrame into a long format DataFrame.</p>
+<p>To demonstrate this functionality the method below creates a dataset with a 50 instances (cases), 5 dimensions and 20 timepoints per dimension.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_io</span> <span class="kn">import</span> <span class="n">generate_example_long_table</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">generate_example_long_table</span><span class="p">(</span><span class="n">num_cases</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">series_len</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">num_dims</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>case_id</th>
+      <th>dim_id</th>
+      <th>reading_id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.465112</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0.807199</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0.214023</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0.195609</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0.487599</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>case_id</th>
+      <th>dim_id</th>
+      <th>reading_id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4995</th>
+      <td>49</td>
+      <td>4</td>
+      <td>15</td>
+      <td>0.093895</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>49</td>
+      <td>4</td>
+      <td>16</td>
+      <td>0.616636</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>49</td>
+      <td>4</td>
+      <td>17</td>
+      <td>0.785366</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>49</td>
+      <td>4</td>
+      <td>18</td>
+      <td>0.237264</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>49</td>
+      <td>4</td>
+      <td>19</td>
+      <td>0.567829</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>As shown below, applying the <code class="docutils literal notranslate"><span class="pre">from_long_to_nested</span></code> method returns a sktime-formatted dataset with individual dimensions represented by columns of the output dataframe.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_processing</span> <span class="kn">import</span> <span class="n">from_long_to_nested</span><span class="p">,</span> <span class="n">from_nested_to_long</span>
+
+<span class="n">X_nested</span> <span class="o">=</span> <span class="n">from_long_to_nested</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_nested</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>var_0</th>
+      <th>var_1</th>
+      <th>var_2</th>
+      <th>var_3</th>
+      <th>var_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     0.465112
+1     0.807199
+2     0.214023
+3...</td>
+      <td>0     0.255154
+1     0.243236
+2     0.745549
+3...</td>
+      <td>0     0.080859
+1     0.785212
+2     0.051891
+3...</td>
+      <td>0     0.441622
+1     0.711556
+2     0.541743
+3...</td>
+      <td>0     0.710037
+1     0.466908
+2     0.508830
+3...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     0.955744
+1     0.683644
+2     0.665061
+3...</td>
+      <td>0     0.927143
+1     0.811811
+2     0.896187
+3...</td>
+      <td>0     0.403733
+1     0.086684
+2     0.029619
+3...</td>
+      <td>0     0.820763
+1     0.980972
+2     0.298770
+3...</td>
+      <td>0     0.073021
+1     0.709833
+2     0.139826
+3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     0.428306
+1     0.513439
+2     0.418690
+3...</td>
+      <td>0     0.657844
+1     0.307936
+2     0.072595
+3...</td>
+      <td>0     0.764560
+1     0.583594
+2     0.397959
+3...</td>
+      <td>0     0.197125
+1     0.186410
+2     0.380118
+3...</td>
+      <td>0     0.278130
+1     0.638953
+2     0.389453
+3...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     0.384345
+1     0.010171
+2     0.590353
+3...</td>
+      <td>0     0.249394
+1     0.428338
+2     0.377216
+3...</td>
+      <td>0     0.595839
+1     0.319225
+2     0.275726
+3...</td>
+      <td>0     0.476314
+1     0.590130
+2     0.980705
+3...</td>
+      <td>0     0.225630
+1     0.393970
+2     0.690442
+3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     0.440827
+1     0.179104
+2     0.804322
+3...</td>
+      <td>0     0.461627
+1     0.200149
+2     0.122143
+3...</td>
+      <td>0     0.963287
+1     0.414079
+2     0.054978
+3...</td>
+      <td>0     0.532135
+1     0.310266
+2     0.670113
+3...</td>
+      <td>0     0.047700
+1     0.410984
+2     0.151532
+3...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>As expected the result is a nested DataFrame and the cells include nested pandas Series objects.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_nested is a nested DataFrame: </span><span class="si">{</span><span class="n">is_nested_dataframe</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The cell contains a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">X_nested</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The nested DataFrame has shape </span><span class="si">{</span><span class="n">X_nested</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">X_nested</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+X_nested is a nested DataFrame: True
+The cell contains a &lt;class &#39;pandas.core.series.Series&#39;&gt;.
+The nested DataFrame has shape (50, 5)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0    0.465112
+1    0.807199
+2    0.214023
+3    0.195609
+4    0.487599
+Name: 0, dtype: float64
+</pre></div></div>
+</div>
+<p>As shown below, the <code class="docutils literal notranslate"><span class="pre">from_nested_to_long</span></code> function can be used to convert the resulting nested DataFrame (or any nested DataFrame) to a long format DataFrame.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_long</span> <span class="o">=</span> <span class="n">from_nested_to_long</span><span class="p">(</span>
+    <span class="n">X_nested</span><span class="p">,</span>
+    <span class="n">instance_column_name</span><span class="o">=</span><span class="s2">&quot;case_id&quot;</span><span class="p">,</span>
+    <span class="n">time_column_name</span><span class="o">=</span><span class="s2">&quot;reading_id&quot;</span><span class="p">,</span>
+    <span class="n">dimension_column_name</span><span class="o">=</span><span class="s2">&quot;dim_id&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">X_long</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>case_id</th>
+      <th>reading_id</th>
+      <th>dim_id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>var_0</td>
+      <td>0.465112</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>var_0</td>
+      <td>0.807199</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>2</td>
+      <td>var_0</td>
+      <td>0.214023</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>3</td>
+      <td>var_0</td>
+      <td>0.195609</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>4</td>
+      <td>var_0</td>
+      <td>0.487599</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_long</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>case_id</th>
+      <th>reading_id</th>
+      <th>dim_id</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4995</th>
+      <td>49</td>
+      <td>15</td>
+      <td>var_4</td>
+      <td>0.093895</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>49</td>
+      <td>16</td>
+      <td>var_4</td>
+      <td>0.616636</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>49</td>
+      <td>17</td>
+      <td>var_4</td>
+      <td>0.785366</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>49</td>
+      <td>18</td>
+      <td>var_4</td>
+      <td>0.237264</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>49</td>
+      <td>19</td>
+      <td>var_4</td>
+      <td>0.567829</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="Using-multi-indexed-pandas-DataFrames">
+<h2>Using multi-indexed pandas DataFrames<a class="headerlink" href="#Using-multi-indexed-pandas-DataFrames" title="Permalink to this headline">¶</a></h2>
+<p>Pandas deprecated its Panel object in version 0.20.1. Since that time pandas has recommended representing 3-dimensional data using a multi-indexed DataFrame.</p>
+<p>Storing timeseries data in a Pandas multi-indexed DataFrame is a natural option since many timeseries problems include data over the instance, feature and time dimensions.</p>
+<p>Sktime provides the functions <code class="docutils literal notranslate"><span class="pre">from_multi_index_to_nested</span></code> and <code class="docutils literal notranslate"><span class="pre">from_nested_to_multi_index</span></code> in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_processing</span></code> to easily convert between pandas multi-indexed DataFrames and sktime’s nested DataFrame structure.</p>
+<p>The example below illustrates how these functions can be used to convert to and from the nested structure given data with 50 instances, 5 features (columns) and 20 timepoints per feature. In the multi-indexed DataFrame a row represents a unique combination of the instance and timepoint indices. Therefore, the resulting multi-indexed DataFrame should have the shape (1000, 5).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_io</span> <span class="kn">import</span> <span class="n">make_multi_index_dataframe</span>
+<span class="kn">from</span> <span class="nn">sktime.utils.data_processing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">from_multi_index_to_nested</span><span class="p">,</span>
+    <span class="n">from_nested_to_multi_index</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">X_mi</span> <span class="o">=</span> <span class="n">make_multi_index_dataframe</span><span class="p">(</span><span class="n">n_instances</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">n_columns</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_timepoints</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The multi-indexed DataFrame has shape </span><span class="si">{</span><span class="n">X_mi</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The multi-index names are </span><span class="si">{</span><span class="n">X_mi</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">X_mi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The multi-indexed DataFrame has shape (1000, 5)
+The multi-index names are [&#39;case_id&#39;, &#39;reading_id&#39;]
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>var_0</th>
+      <th>var_1</th>
+      <th>var_2</th>
+      <th>var_3</th>
+      <th>var_4</th>
+    </tr>
+    <tr>
+      <th>case_id</th>
+      <th>reading_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">0</th>
+      <th>0</th>
+      <td>0.190750</td>
+      <td>0.783922</td>
+      <td>0.720836</td>
+      <td>0.409951</td>
+      <td>0.265496</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.778653</td>
+      <td>0.094755</td>
+      <td>0.616626</td>
+      <td>0.454311</td>
+      <td>0.594953</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.271877</td>
+      <td>0.171994</td>
+      <td>0.807786</td>
+      <td>0.008497</td>
+      <td>0.074649</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.437475</td>
+      <td>0.725512</td>
+      <td>0.104991</td>
+      <td>0.128412</td>
+      <td>0.909077</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.560182</td>
+      <td>0.373475</td>
+      <td>0.375314</td>
+      <td>0.181087</td>
+      <td>0.001008</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>The multi-indexed DataFrame can be easily converted to a nested DataFrame with shape (50, 5). Note that the conversion to the nested DataFrame has preserved the column names (it has also preserved the values of the instance index and the pandas Series objects nested in each cell have preserved the time index).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_nested</span> <span class="o">=</span> <span class="n">from_multi_index_to_nested</span><span class="p">(</span><span class="n">X_mi</span><span class="p">,</span> <span class="n">instance_index</span><span class="o">=</span><span class="s2">&quot;case_id&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_nested is a nested DataFrame: </span><span class="si">{</span><span class="n">is_nested_dataframe</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The cell contains a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">X_nested</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The nested DataFrame has shape </span><span class="si">{</span><span class="n">X_nested</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">X_nested</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+X_nested is a nested DataFrame: True
+The cell contains a &lt;class &#39;pandas.core.series.Series&#39;&gt;.
+The nested DataFrame has shape (50, 5)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>var_0</th>
+      <th>var_1</th>
+      <th>var_2</th>
+      <th>var_3</th>
+      <th>var_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     0.190750
+1     0.778653
+2     0.271877
+3...</td>
+      <td>0     0.783922
+1     0.094755
+2     0.171994
+3...</td>
+      <td>0     0.720836
+1     0.616626
+2     0.807786
+3...</td>
+      <td>0     0.409951
+1     0.454311
+2     0.008497
+3...</td>
+      <td>0     0.265496
+1     0.594953
+2     0.074649
+3...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     0.164165
+1     0.243284
+2     0.518704
+3...</td>
+      <td>0     0.579280
+1     0.303707
+2     0.105113
+3...</td>
+      <td>0     0.301193
+1     0.736239
+2     0.064917
+3...</td>
+      <td>0     0.854033
+1     0.648855
+2     0.816810
+3...</td>
+      <td>0     0.099076
+1     0.882771
+2     0.470318
+3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     0.673390
+1     0.942796
+2     0.217408
+3...</td>
+      <td>0     0.165936
+1     0.213876
+2     0.693246
+3...</td>
+      <td>0     0.218683
+1     0.669671
+2     0.417209
+3...</td>
+      <td>0     0.540144
+1     0.973955
+2     0.940980
+3...</td>
+      <td>0     0.327064
+1     0.715518
+2     0.034418
+3...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     0.285121
+1     0.949818
+2     0.337634
+3...</td>
+      <td>0     0.521327
+1     0.403082
+2     0.648529
+3...</td>
+      <td>0     0.284312
+1     0.361265
+2     0.162676
+3...</td>
+      <td>0     0.317464
+1     0.593125
+2     0.921290
+3...</td>
+      <td>0     0.513320
+1     0.028841
+2     0.697777
+3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     0.741211
+1     0.029021
+2     0.988874
+3...</td>
+      <td>0     0.424564
+1     0.750290
+2     0.954112
+3...</td>
+      <td>0     0.050796
+1     0.471665
+2     0.923734
+3...</td>
+      <td>0     0.378101
+1     0.174072
+2     0.130620
+3...</td>
+      <td>0     0.357425
+1     0.651974
+2     0.812803
+3...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Nested DataFrames can also be converted to a multi-indexed Pandas DataFrame</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_mi</span> <span class="o">=</span> <span class="n">from_nested_to_multi_index</span><span class="p">(</span>
+    <span class="n">X_nested</span><span class="p">,</span> <span class="n">instance_index</span><span class="o">=</span><span class="s2">&quot;case_id&quot;</span><span class="p">,</span> <span class="n">time_index</span><span class="o">=</span><span class="s2">&quot;reading_id&quot;</span>
+<span class="p">)</span>
+<span class="n">X_mi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>var_0</th>
+      <th>var_1</th>
+      <th>var_2</th>
+      <th>var_3</th>
+      <th>var_4</th>
+    </tr>
+    <tr>
+      <th>case_id</th>
+      <th>reading_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">0</th>
+      <th>0</th>
+      <td>0.190750</td>
+      <td>0.783922</td>
+      <td>0.720836</td>
+      <td>0.409951</td>
+      <td>0.265496</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.778653</td>
+      <td>0.094755</td>
+      <td>0.616626</td>
+      <td>0.454311</td>
+      <td>0.594953</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.271877</td>
+      <td>0.171994</td>
+      <td>0.807786</td>
+      <td>0.008497</td>
+      <td>0.074649</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.437475</td>
+      <td>0.725512</td>
+      <td>0.104991</td>
+      <td>0.128412</td>
+      <td>0.909077</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.560182</td>
+      <td>0.373475</td>
+      <td>0.375314</td>
+      <td>0.181087</td>
+      <td>0.001008</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="Using-NumPy-3d-arrays-with-sktime">
+<h2>Using NumPy 3d-arrays with sktime<a class="headerlink" href="#Using-NumPy-3d-arrays-with-sktime" title="Permalink to this headline">¶</a></h2>
+<p>Another common approach for representing timeseries data is to use a 3-dimensional NumPy array with shape (n_instances, n_columns, n_timepoints).</p>
+<p>Sktime provides the functions <code class="docutils literal notranslate"><span class="pre">from_3d_numpy_to_nested</span></code> <code class="docutils literal notranslate"><span class="pre">from_nested_to_3d_numpy</span></code> in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_processing</span></code> to let users easily convert between NumPy 3d-arrays and nested pandas DataFrames.</p>
+<p>This is demonstrated using a 3d-array with 50 instances, 5 features (columns) and 20 timepoints, resulting in a 3d-array with shape (50, 5, 20).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.utils.data_processing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">from_3d_numpy_to_nested</span><span class="p">,</span>
+    <span class="n">from_multi_index_to_3d_numpy</span><span class="p">,</span>
+    <span class="n">from_nested_to_3d_numpy</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">X_mi</span> <span class="o">=</span> <span class="n">make_multi_index_dataframe</span><span class="p">(</span><span class="n">n_instances</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">n_columns</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_timepoints</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">X_3d</span> <span class="o">=</span> <span class="n">from_multi_index_to_3d_numpy</span><span class="p">(</span>
+    <span class="n">X_mi</span><span class="p">,</span> <span class="n">instance_index</span><span class="o">=</span><span class="s2">&quot;case_id&quot;</span><span class="p">,</span> <span class="n">time_index</span><span class="o">=</span><span class="s2">&quot;reading_id&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The 3d-array has shape </span><span class="si">{</span><span class="n">X_3d</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The 3d-array has shape (50, 5, 20)
+</pre></div></div>
+</div>
+<p>The 3d-array can be easily converted to a nested DataFrame with shape (50, 5). Note that since NumPy array doesn’t have indices, the instance index is the numerical range over the number of instances and the columns are automatically assigned. Users can optionally supply their own columns names via the columns_names parameter.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_nested</span> <span class="o">=</span> <span class="n">from_3d_numpy_to_nested</span><span class="p">(</span><span class="n">X_3d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;X_nested is a nested DataFrame: </span><span class="si">{</span><span class="n">is_nested_dataframe</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The cell contains a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">X_nested</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The nested DataFrame has shape </span><span class="si">{</span><span class="n">X_nested</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">X_nested</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+X_nested is a nested DataFrame: True
+The cell contains a &lt;class &#39;pandas.core.series.Series&#39;&gt;.
+The nested DataFrame has shape (50, 5)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>var_0</th>
+      <th>var_1</th>
+      <th>var_2</th>
+      <th>var_3</th>
+      <th>var_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0     0.121508
+1     0.231054
+2     0.380812
+3...</td>
+      <td>0     0.172563
+1     0.843319
+2     0.867677
+3...</td>
+      <td>0     0.501176
+1     0.800671
+2     0.001438
+3...</td>
+      <td>0     0.680257
+1     0.189607
+2     0.238900
+3...</td>
+      <td>0     0.941062
+1     0.376775
+2     0.814203
+3...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0     0.504065
+1     0.266924
+2     0.839628
+3...</td>
+      <td>0     0.931253
+1     0.947567
+2     0.743263
+3...</td>
+      <td>0     0.949248
+1     0.705591
+2     0.028871
+3...</td>
+      <td>0     0.901362
+1     0.759232
+2     0.580433
+3...</td>
+      <td>0     0.846453
+1     0.778602
+2     0.695229
+3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0     0.658493
+1     0.230315
+2     0.274096
+3...</td>
+      <td>0     0.727638
+1     0.099374
+2     0.170330
+3...</td>
+      <td>0     0.327489
+1     0.923184
+2     0.232839
+3...</td>
+      <td>0     0.641788
+1     0.498409
+2     0.028307
+3...</td>
+      <td>0     0.751264
+1     0.365060
+2     0.603343
+3...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0     0.485202
+1     0.688087
+2     0.058469
+3...</td>
+      <td>0     0.941756
+1     0.511861
+2     0.269905
+3...</td>
+      <td>0     0.977654
+1     0.595739
+2     0.166681
+3...</td>
+      <td>0     0.600651
+1     0.469100
+2     0.917114
+3...</td>
+      <td>0     0.461481
+1     0.509542
+2     0.085183
+3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0     0.867503
+1     0.832123
+2     0.273478
+3...</td>
+      <td>0     0.817830
+1     0.983938
+2     0.327779
+3...</td>
+      <td>0     0.336237
+1     0.715929
+2     0.489844
+3...</td>
+      <td>0     0.128253
+1     0.146269
+2     0.093848
+3...</td>
+      <td>0     0.097085
+1     0.348389
+2     0.560473
+3...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Nested DataFrames can also be converted to NumPy 3d-arrays.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">X_3d</span> <span class="o">=</span> <span class="n">from_nested_to_3d_numpy</span><span class="p">(</span><span class="n">X_nested</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The resulting object is a </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">X_3d</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The shape of the 3d-array is </span><span class="si">{</span><span class="n">X_3d</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The resulting object is a &lt;class &#39;numpy.ndarray&#39;&gt;
+The shape of the 3d-array is (50, 5, 20)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Converting-between-NumPy-3d-arrays-and-pandas-multi-indexed-DataFrame">
+<h2>Converting between NumPy 3d-arrays and pandas multi-indexed DataFrame<a class="headerlink" href="#Converting-between-NumPy-3d-arrays-and-pandas-multi-indexed-DataFrame" title="Permalink to this headline">¶</a></h2>
+<p>Although an example is not provided here, sktime lets users convert data between NumPy 3d-arrays and a multi-indexed pandas DataFrame formats using the functions <code class="docutils literal notranslate"><span class="pre">from_3d_numpy_to_multi_index</span></code> and <code class="docutils literal notranslate"><span class="pre">from_multi_index_to_3d_numpy</span></code> in <code class="docutils literal notranslate"><span class="pre">sktime.utils.data_processing</span></code>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>. The Jupyter notebook can be found <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/v0.5.3/examples/loading_data.ipynb">here</a>.</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

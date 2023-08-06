@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.datasets.base.load_arrow_head &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">sktime.datasets.base</span></code>.load_arrow_head</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="sktime-datasets-base-load-arrow-head">
+<h1><a class="reference internal" href="../../../modules/auto_generated/sktime.datasets.base.html#module-sktime.datasets.base" title="sktime.datasets.base"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sktime.datasets.base</span></code></a>.load_arrow_head<a class="headerlink" href="#sktime-datasets-base-load-arrow-head" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sktime.datasets.base.load_arrow_head">
+<code class="sig-prename descclassname">sktime.datasets.base.</code><code class="sig-name descname">load_arrow_head</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">split</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">return_X_y</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/datasets/base.py#L391-L437"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.datasets.base.load_arrow_head" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the ArrowHead time series classification problem and returns X and y.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>split</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em> or </em><em>str{&quot;train&quot;</em><em>, </em><em>&quot;test&quot;}</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Whether to load the train or test partition of the problem. By
+default it loads both.</p></li>
+<li><p><strong>return_X_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – If True, returns (features, target) separately instead of a single
+dataframe with columns for
+features and the target.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas DataFrame with m rows and c columns</em>) – The time series data for the problem with m cases and c dimensions</p></li>
+<li><p><strong>y</strong> (<em>numpy array</em>) – The class labels for each case in X</p></li>
+<li><p><em>Details</em></p></li>
+<li><p><em>——-</em></p></li>
+<li><p><strong>Dimensionality</strong> (<em>univariate</em>)</p></li>
+<li><p><strong>Series length</strong> (<em>251</em>)</p></li>
+<li><p><strong>Train cases</strong> (<em>36</em>)</p></li>
+<li><p><strong>Test cases</strong> (<em>175</em>)</p></li>
+<li><p><strong>Number of classes</strong> (<em>3</em>)</p></li>
+<li><p><em>The arrowhead data consists of outlines of the images of arrowheads. The</em></p></li>
+<li><p><em>shapes of the</em></p></li>
+<li><p><em>projectile points are converted into a time series using the angle-based</em></p></li>
+<li><p><em>method. The</em></p></li>
+<li><p><em>classification of projectile points is an important topic in</em></p></li>
+<li><p><em>anthropology. The classes</em></p></li>
+<li><p><em>are based on shape distinctions such as the presence and location of a</em></p></li>
+<li><p><em>notch in the</em></p></li>
+<li><p><em>arrow. The problem in the repository is a length normalised version of</em></p></li>
+<li><p><em>that used in</em></p></li>
+<li><p><em>Ye09shapelets. The three classes are called “Avonlea”, “Clovis” and “Mix”.”</em></p></li>
+<li><p><strong>Dataset details</strong> (<em>http://timeseriesclassification.com/description.php</em>)</p></li>
+<li><p><em>?Dataset=ArrowHead</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

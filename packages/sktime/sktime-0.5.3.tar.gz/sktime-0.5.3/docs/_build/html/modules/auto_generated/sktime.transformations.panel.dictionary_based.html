@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.transformations.panel.dictionary_based &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.transformations.panel.dictionary_based</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime.transformations.panel.dictionary_based">
+<span id="sktime-transformations-panel-dictionary-based"></span><h1>sktime.transformations.panel.dictionary_based<a class="headerlink" href="#module-sktime.transformations.panel.dictionary_based" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.transformations.panel.dictionary_based.PAA">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.transformations.panel.dictionary_based.</code><code class="sig-name descname">PAA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_intervals</span><span class="o">=</span><span class="default_value">8</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_paa.py#L10-L143"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.PAA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.transformations.base._PanelToPanelTransformer</span></code></p>
+<p>(PAA) Piecewise Aggregate Approximation Transformer, as described in
+Eamonn Keogh, Kaushik Chakrabarti, Michael Pazzani, and Sharad Mehrotra.
+Dimensionality reduction for fast similarity search in large time series
+databases.
+Knowledge and information Systems, 3(3), 263-286, 2001.
+For each series reduce the dimensionality to num_intervals, where each
+value is the mean of values in
+the interval.</p>
+<dl class="simple">
+<dt>TO DO: pythonise it to make it more efficient. Maybe check vs this version</dt><dd><p><a class="reference external" href="http://vigne.sh/posts/piecewise-aggregate-approx/">http://vigne.sh/posts/piecewise-aggregate-approx/</a></p>
+</dd>
+</dl>
+<p>Could have: Tune the interval size in fit somehow?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_intervals</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>dimension of the transformed data</em><em> (</em><em>default 8</em><em>)</em>) – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.PAA.set_num_intervals">
+<code class="sig-name descname">set_num_intervals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_paa.py#L35-L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.PAA.set_num_intervals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.PAA.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_paa.py#L38-L71"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.PAA.transform" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>n_dims</em><em>]</em>) – Nested dataframe with multivariate time-series in cells.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dims</strong> – second in column one etc.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas data frame with first dimension in column zero,</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.transformations.panel.dictionary_based.SAX">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.transformations.panel.dictionary_based.</code><code class="sig-name descname">SAX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word_length</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">alphabet_size</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">12</span></em>, <em class="sig-param"><span class="n">remove_repeat_words</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">save_words</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">return_pandas_data_series</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sax.py#L21-L186"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SAX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.transformations.base._PanelToPanelTransformer</span></code></p>
+<p>SAX (Symbolic Aggregate approXimation) Transformer, as described in
+Jessica Lin, Eamonn Keogh, Li Wei and Stefano Lonardi,
+“Experiencing SAX: a novel symbolic representation of time series”
+Data Mining and Knowledge Discovery, 15(2):107-144
+Overview: for each series:</p>
+<blockquote>
+<div><p>run a sliding window across the series
+for each window</p>
+<blockquote>
+<div><p>shorten the series with PAA (Piecewise Approximate Aggregation)
+discretise the shortened series into fixed bins
+form a word from these discrete values</p>
+</div></blockquote>
+</div></blockquote>
+<p>by default SAX produces a single word per series (window_size=0).
+SAX returns a pandas data frame where column 0 is the histogram (sparse
+pd.series)
+of each series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>length of word to shorten window to</em><em> (</em><em>using</em>) – </p></li>
+<li><p><strong>(</strong><strong>default 8</strong><strong>)</strong> (<a class="reference internal" href="#sktime.transformations.panel.dictionary_based.PAA" title="sktime.transformations.panel.dictionary_based.PAA"><em>PAA</em></a><em>)</em>) – </p></li>
+<li><p><strong>alphabet_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>number of values to discretise each value</em>) – </p></li>
+<li><p><strong>(</strong><strong>default to 4</strong><strong>)</strong> (<em>to</em>) – </p></li>
+<li><p><strong>window_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>size of window for sliding. Input series</em>) – </p></li>
+<li><p><strong>for whole series transform</strong><strong> (</strong><strong>default to 12</strong><strong>)</strong> (<em>length</em>) – </p></li>
+<li><p><strong>remove_repeat_words</strong> (<em>boolean</em><em>, </em><em>whether to use numerosity reduction</em><em> (</em>) – </p></li>
+<li><p><strong>False</strong><strong>)</strong> (<em>default</em>) – </p></li>
+<li><p><strong>save_words</strong> (<em>boolean</em><em>, </em><em>whether to use numerosity reduction</em><em> (</em>) – </p></li>
+<li><p><strong>False</strong><strong>)</strong> – </p></li>
+<li><p><strong>return_pandas_data_series</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – set to true to return Pandas Series as a result of transform.
+setting to true reduces speed significantly but is required for
+automatic test.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.transformations.panel.dictionary_based.SAX.words">
+<code class="sig-name descname">words</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SAX.words" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>history = []</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SAX.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sax.py#L82-L145"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SAX.transform" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dims</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas data frame with first dimension in column zero</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.transformations.panel.dictionary_based.SFA">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.transformations.panel.dictionary_based.</code><code class="sig-name descname">SFA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word_length</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">alphabet_size</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">12</span></em>, <em class="sig-param"><span class="n">norm</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">binning_method</span><span class="o">=</span><span class="default_value">'equi-depth'</span></em>, <em class="sig-param"><span class="n">anova</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">skip_grams</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">remove_repeat_words</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">levels</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">lower_bounding</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">save_words</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">save_binning_dft</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">return_pandas_data_series</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sfa.py#L29-L721"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.transformations.base._PanelToPanelTransformer</span></code></p>
+<p>SFA (Symbolic Fourier Approximation) Transformer, as described in</p>
+<dl class="simple">
+<dt>&#64;inproceedings{schafer2012sfa,</dt><dd><p>title={SFA: a symbolic fourier approximation and index for similarity
+search in high dimensional datasets},
+author={Sch{“a}fer, Patrick and H{“o}gqvist, Mikael},
+booktitle={Proceedings of the 15th International Conference on
+Extending Database Technology},
+pages={516–527},
+year={2012},
+organization={ACM}</p>
+</dd>
+</dl>
+<p>}</p>
+<dl>
+<dt>Overview: for each series:</dt><dd><p>run a sliding window across the series
+for each window</p>
+<blockquote>
+<div><p>shorten the series with DFT
+discretise the shortened series into bins set by MFC
+form a word from these discrete values</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>by default SFA produces a single word per series (window_size=0)
+if a window is used, it forms a histogram of counts of words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 8</em>) – length of word to shorten window to (using PAA)</p></li>
+<li><p><strong>alphabet_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 4</em>) – number of values to discretise each value to</p></li>
+<li><p><strong>window_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 12</em>) – size of window for sliding. Input series
+length for whole series transform</p></li>
+<li><p><strong>norm</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – mean normalise words by dropping first fourier coefficient</p></li>
+<li><p><strong>binning_method</strong> (<em>{&quot;equi-depth&quot;</em><em>, </em><em>&quot;equi-width&quot;</em><em>, </em><em>&quot;information-gain&quot;</em><em>, </em><em>&quot;kmeans&quot;}</em><em>,</em>) – default=”equi-depth”
+the binning method used to derive the breakpoints.</p></li>
+<li><p><strong>anova</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – If True, the Fourier coefficient selection is done via a one-way
+ANOVA test. If False, the first Fourier coefficients are selected.
+Only applicable if labels are given</p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – whether to create bigrams of SFA words</p></li>
+<li><p><strong>skip_grams</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – whether to create skip-grams of SFA words</p></li>
+<li><p><strong>remove_repeat_words</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – whether to use numerosity reduction (default False)</p></li>
+<li><p><strong>levels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default = 1</em>) – Number of spatial pyramid levels</p></li>
+<li><p><strong>save_words</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – whether to save the words generated for each series (default False)</p></li>
+<li><p><strong>return_pandas_data_series</strong> (<em>boolean</em><em>, </em><em>default = False</em>) – set to true to return Pandas Series as a result of transform.
+setting to true reduces speed significantly but is required for
+automatic test.</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em>, </em><em>default = 1</em>) – The number of jobs to run in parallel for both <cite>transform</cite>.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.words">
+<code class="sig-name descname">words</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.words" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.breakpoints">
+<code class="sig-name descname">breakpoints</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.breakpoints" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>= []</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">num_insts = 0</code></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">num_atts = 0</code></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.create_bigram_word">
+<em class="property">static </em><code class="sig-name descname">create_bigram_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em>, <em class="sig-param"><span class="n">other_word</span></em>, <em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.create_bigram_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sfa.py#L176-L212"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate word breakpoints using _mcb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>nested pandas DataFrame of shape</em><em> [</em><em>n_instances</em><em>, </em><em>1</em><em>]</em>) – Nested dataframe with univariate time-series in cells.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_samples</em><em>] or </em><em>[</em><em>n_samples</em><em>, </em><em>n_outputs</em><em>]</em>) – The class labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.right_shift">
+<em class="property">static </em><code class="sig-name descname">right_shift</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">left</span></em>, <em class="sig-param"><span class="n">right</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.right_shift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.shorten_word">
+<em class="property">classmethod </em><code class="sig-name descname">shorten_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em>, <em class="sig-param"><span class="n">amount</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sfa.py#L701-L704"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.shorten_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supplied_dft</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sfa.py#L214-L234"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform data. Returns a transformed version of X.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.transformations.panel.dictionary_based.SFA.word_list">
+<em class="property">classmethod </em><code class="sig-name descname">word_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em>, <em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/transformations/panel/dictionary_based/_sfa.py#L706-L716"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.transformations.panel.dictionary_based.SFA.word_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
