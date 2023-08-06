@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: datascience-airflow-playground
+  namespace: playground
+spec:
+  accessModes:
+  - ReadOnlyMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: efs-datascience-test
+  volumeName: pvc-3bbc8158-4512-11eb-a1e8-0addf6f5b85b
