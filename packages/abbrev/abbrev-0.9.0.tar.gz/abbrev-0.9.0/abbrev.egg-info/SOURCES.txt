@@ -1,0 +1,9 @@
+README.rst
+abbrev.py
+pyproject.toml
+setup.cfg
+setup.py
+abbrev.egg-info/PKG-INFO
+abbrev.egg-info/SOURCES.txt
+abbrev.egg-info/dependency_links.txt
+abbrev.egg-info/top_level.txt
