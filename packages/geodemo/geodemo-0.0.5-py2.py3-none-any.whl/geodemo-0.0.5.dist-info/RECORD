@@ -1,0 +1,10 @@
+geodemo/__init__.py,sha256=1GHvWjyfwg6BLZZS-XSUks21sgGCqqRRKUjUzA3LLrg,167
+geodemo/common.py,sha256=cee5RAjC6qVwDkP6qVARyi6_IqU-7Pi96-l8Y9eFPsQ,81
+geodemo/geodemo.py,sha256=LvRW2zNHdiPvvIXN_BuWJeuD8OtxY1nQ-1qV7npJ9vQ,4995
+geodemo/utils.py,sha256=nRo3zcWkmqmhs5BinNCJwMGV2fbbfiXxE3yaWfy1UZ8,419
+geodemo-0.0.5.dist-info/LICENSE,sha256=7KdyO22YPdkOG2wBvxUsERBQLqZgNEZbMUMmj0ihKeo,1070
+geodemo-0.0.5.dist-info/METADATA,sha256=rYjd5yaKsT_bYC3-g6_oHHtfgtYoUwNlxmEdMdn4xOQ,3417
+geodemo-0.0.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+geodemo-0.0.5.dist-info/dependency_links.txt,sha256=TWSsy6u8ep_7iMXI1WWCAdkMywUevQNnh1wSAffyOj0,40
+geodemo-0.0.5.dist-info/top_level.txt,sha256=9XIMAtKlPWnfnAVJzSkipOWbofLoqDHv6KwpGFXbxvY,8
+geodemo-0.0.5.dist-info/RECORD,,
