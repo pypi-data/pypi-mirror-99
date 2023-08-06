@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+clicktypes/__init__.py
+clicktypes/__version__.py
+clicktypes.egg-info/PKG-INFO
+clicktypes.egg-info/SOURCES.txt
+clicktypes.egg-info/dependency_links.txt
+clicktypes.egg-info/requires.txt
+clicktypes.egg-info/top_level.txt
+clicktypes/network/__init__.py
+clicktypes/network/network.py
