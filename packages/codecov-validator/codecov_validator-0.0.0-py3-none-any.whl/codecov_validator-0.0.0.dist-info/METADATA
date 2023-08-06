@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: codecov-validator
+Version: 0.0.0
+Summary: Validates the codecov.yml configuration file.
+Home-page: https://github.com/mashi/codecov-validator
+Author: mashi
+Author-email: 59000162+mashi@users.noreply.github.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/mashi/codecov-validator/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=42)
+Requires-Dist: wheel
+Requires-Dist: requests (~=2.25.1)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://app.circleci.com/pipelines/github/mashi/codecov-validator?branch=main)
+
+
+# Description
+Validates the codecov.yml configuration file.
+
+This code is simply the curl command described in the (codecov documentation)[https://docs.codecov.io/docs/codecov-yaml]
+converted in python.
+
+
+## Instructions (Development)
+Create a virtual environment and install the required packages with
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install wheel
+pip install -r requirements.txt
+pre-commit install
+```
+
+
