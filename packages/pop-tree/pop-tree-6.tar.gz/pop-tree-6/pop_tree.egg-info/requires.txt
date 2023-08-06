@@ -1,0 +1,15 @@
+pop
+
+[full]
+networkx
+rend
+scipy
+matplotlib
+
+[nx]
+networkx
+scipy
+matplotlib
+
+[rend]
+rend
