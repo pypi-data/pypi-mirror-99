@@ -1,0 +1,31 @@
+#!/usr/bin/env python3 
+# This file is placed in the Public Domain.
+
+__version__ = 32
+
+import botl.utl
+
+from botl import cfg, e, j, op, os
+from botl.csl import Console, exec, parse
+from botl.itr import scandir
+from botl.thr import launch
+from botd.tbl import tbl
+
+def ver(event):
+    event.reply("BOT %s" % __version__)
+
+def main():
+    cfg.wd = e("~/.bot")
+    parse()
+    s = Console()
+    s.tbl(tbl)
+    s.add("ver", ver)
+    s.scan(j(os.getcwd(), "mod"))
+    if cfg.txt:
+        s.once(cfg.old.txt)
+        return
+    s.start()
+    s.init(cfg.mods)
+    s.wait()
+
+exec(main)
