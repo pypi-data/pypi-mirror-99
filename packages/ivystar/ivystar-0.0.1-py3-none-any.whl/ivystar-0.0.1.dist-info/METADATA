@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ivystar
+Version: 0.0.1
+Summary: python tools package of ivystar
+Home-page: UNKNOWN
+Author: qinhaining
+Author-email: qhn614@126.com
+License: UNKNOWN
+Keywords: command,line,tool
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: requests
+
+UNKNOWN
+
+
