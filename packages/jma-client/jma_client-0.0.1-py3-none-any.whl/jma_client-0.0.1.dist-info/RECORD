@@ -1,0 +1,12 @@
+jma/__init__.py,sha256=axnXYu0EKx6clP336_WX9LFLk8oakoQgNubxLaPPK_8,90
+jma/client.py,sha256=RYHOadzl68WoQlRmVEj7pnXS1c-Dvq94QqkBqtaj8ZE,7110
+jma/exceptions.py,sha256=QdDB8VlqsdNvonGpMThA5MLuH4hKlEp8YzM5kJnfK_I,141
+jma/jmastation.py,sha256=ys8hQO0IxG8TO57i_KawFg01E7Aho8G4upBR_xI3Law,1893
+jma/response.py,sha256=7mMfLaWwoAMM1aHQAN6raA98Tj7KnzRWSnuI1cpC5tY,4693
+jma/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jma/tests/test_response.py,sha256=hbyuLxdPxi3lkDdQx3k_bYhGjwrWk-24SIgJ4fh6G5Y,6418
+jma_client-0.0.1.dist-info/LICENSE,sha256=-m-LRPG32bjsUp54bneGq3wbxC6LNGtsUUTsoViNmpo,1071
+jma_client-0.0.1.dist-info/METADATA,sha256=eQOIhGTuFMiaPJ4pjS9WaTnUkZBajZTri2tWQIZGPkk,3584
+jma_client-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jma_client-0.0.1.dist-info/top_level.txt,sha256=n9hD0qz2v0GDBTWZBRoDHsPj40FNNI9cQnYOScbFys4,4
+jma_client-0.0.1.dist-info/RECORD,,
