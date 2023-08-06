@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cbase
+Version: 0.0.1
+Summary: Collective Knowledge DataBase
+Home-page: https://github.com/gfursin/cbase
+Author: Grigori Fursin
+Author-email: gfursin@gmail.com
+License: Apache 2.0
+Description: # Collective Knowledge DataBase (CB, cBase or CK DB)
+        
+        Prototyping CB
+        
+        
+        
+        ## License
+        CB is licensed under the Apache License 2.0. 
+        
+        See [LICENSE](https://github.com/gfursin/cbase/blob/master/LICENSE) for more information.
+        
+        ## Support
+        
+        [Create a GitHub issue](https://github.com/gfursin/cbase/issues/new/choose)
+        
+Keywords: ck,database,code,data,reuse,common api
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown

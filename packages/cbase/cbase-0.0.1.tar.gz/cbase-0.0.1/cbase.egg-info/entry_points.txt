@@ -1,0 +1,4 @@
+[console_scripts]
+cb = cbase.cli:run
+cbase = cbase.cli:run
+
