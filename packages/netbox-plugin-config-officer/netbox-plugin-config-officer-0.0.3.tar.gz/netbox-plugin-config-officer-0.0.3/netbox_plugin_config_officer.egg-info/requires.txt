@@ -1,0 +1,5 @@
+GitPython
+PyDriller==1.15.3
+diffios
+scrapli
+xlsxwriter
