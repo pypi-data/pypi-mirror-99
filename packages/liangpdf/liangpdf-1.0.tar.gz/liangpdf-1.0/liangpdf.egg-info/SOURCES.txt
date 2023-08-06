@@ -1,0 +1,6 @@
+README.md
+setup.py
+liangpdf.egg-info/PKG-INFO
+liangpdf.egg-info/SOURCES.txt
+liangpdf.egg-info/dependency_links.txt
+liangpdf.egg-info/top_level.txt
