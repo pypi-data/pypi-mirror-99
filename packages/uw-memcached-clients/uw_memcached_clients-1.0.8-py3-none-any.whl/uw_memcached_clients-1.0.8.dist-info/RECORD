@@ -1,0 +1,16 @@
+memcached_clients/VERSION,sha256=Mm3V2GQfOZmQ3kLe9QrCnrTJIiYBwKCj_DyUfdO-xl0,6
+memcached_clients/__init__.py,sha256=ruJaeSNhooU5Vbuik7uOAZjJt1v8ELeJuD5mP4wOBtY,223
+memcached_clients/base.py,sha256=7Bcc-x4iUfMd9rrJGTXj8nJcOi_nC4Qpi8d5yae-cpg,1659
+memcached_clients/django_backend.py,sha256=AlLdven0K1GwN50nA4VN7GwdJADiK2sO1KmXfeMznnM,1135
+memcached_clients/restclient.py,sha256=aE7zZ80cTkc-5PRx6YtQgFg1T7K3oOUkzYvvhpu6nG4,2858
+memcached_clients/test.py,sha256=YDQYZjEXhB2yMNv1-rIwn4rydqoE175FlVsiTvoV4Jk,426
+memcached_clients/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+memcached_clients/tests/django_settings.py,sha256=s0rZpfcsAA7te6Y2xWgWGX9fKhzcOyTPUaL1M3YNZVU,567
+memcached_clients/tests/test_base.py,sha256=Mkxm6EhseEdgriMTYSWM-FRTIGCI4WQK2cRFyD5e7cs,1940
+memcached_clients/tests/test_django_backend.py,sha256=3cJgUWQImS7PC87zyKn43dVvdnP9tFFf7q9oCvxV7Ng,1298
+memcached_clients/tests/test_restclient.py,sha256=SCBzIFo_ZMG61JYuOwC0KAdulLohhaudKyA5EoHK8bo,5523
+uw_memcached_clients-1.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+uw_memcached_clients-1.0.8.dist-info/METADATA,sha256=Mxcyw9qLePfUg3dgZV4Nl6j7YZiBVGPkd5AeWsA29TA,676
+uw_memcached_clients-1.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+uw_memcached_clients-1.0.8.dist-info/top_level.txt,sha256=aIwljLGi9hPwQr2qAt3PRW4wtDnem7Nw203gT3nql80,18
+uw_memcached_clients-1.0.8.dist-info/RECORD,,
