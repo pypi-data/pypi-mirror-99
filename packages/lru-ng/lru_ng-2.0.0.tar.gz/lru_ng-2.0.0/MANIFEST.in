@@ -1,0 +1,7 @@
+include CONTRIBUTORS COPYING README.md
+graft src
+prune dev
+global-exclude *.py[cod]
+global-exclude *.s?o
+global-exclude *.dll
+global-exclude *.dylib

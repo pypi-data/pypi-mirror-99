@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lru_ng
+Version: 2.0.0
+Summary: Fixed-size dict with least-recently used (LRU) replacement policy and optional callback.
+Home-page: https://github.com/congma/lru_ng
+Author: Cong Ma
+Author-email: m.cong@protonmail.ch
+License: GNU GPL 3
+Description: The C-extension module lru_ng provides a class LRUDict that is compatible with a large subset of methods in Python's dict. It maintains recent-access order and enforces a fixed size, discarding the least-recently used items when the capacity is filled.
+        This extension class is largely compatible with the lru.LRU type.
+        For more information, please visit the project homepage: https://github.com/congma/lru_ng
+Keywords: mapping,container,dict,cache,lru
+Platform: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/plain
