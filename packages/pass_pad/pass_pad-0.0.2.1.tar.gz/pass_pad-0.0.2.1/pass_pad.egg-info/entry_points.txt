@@ -1,0 +1,3 @@
+[console_scripts]
+pass_pad = pass_pad:main
+
