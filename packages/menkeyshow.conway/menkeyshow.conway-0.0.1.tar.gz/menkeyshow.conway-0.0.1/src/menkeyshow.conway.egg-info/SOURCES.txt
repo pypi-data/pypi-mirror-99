@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/game_of_life/__init__.py
+src/game_of_life/__main__.py
+src/game_of_life/game_logic/__init__.py
+src/game_of_life/game_logic/board_logic.py
+src/game_of_life/gui/__init__.py
+src/game_of_life/gui/gui.py
+src/menkeyshow.conway.egg-info/PKG-INFO
+src/menkeyshow.conway.egg-info/SOURCES.txt
+src/menkeyshow.conway.egg-info/dependency_links.txt
+src/menkeyshow.conway.egg-info/entry_points.txt
+src/menkeyshow.conway.egg-info/top_level.txt
