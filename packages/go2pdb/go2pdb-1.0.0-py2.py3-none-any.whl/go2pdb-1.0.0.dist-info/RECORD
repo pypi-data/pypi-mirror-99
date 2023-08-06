@@ -1,0 +1,13 @@
+go2pdb/__init__.py,sha256=wCIzp-09Y-uxUa_9cgknAGsbtd7IxQpvqlovvvOMxSc,256
+go2pdb/__main__.py,sha256=88GQaBCrGDrEunb6M3EyTLpWgDlTfuLS5cqVJT6s-Lk,14221
+go2pdb/blast.py,sha256=zFK_mJ-zcSb8Snut_Hfcbqktqz4_2hDgRUut9Rjog4g,7978
+go2pdb/cluster.py,sha256=62S1V1Wx6iJV-99pkI3-aeIeQDAplaYtiKBo3JnaGxM,3631
+go2pdb/pdb.py,sha256=KM__EFcX_1eBZU7VoUrW20XVQwZnE3_5WSR1tTyf23w,5874
+go2pdb/go/__init__.py,sha256=NHoSZxAmUVpggOI7YupCRayvvgpYJiEzd53iDU5jgpE,1003
+go2pdb/go/goa.py,sha256=4FQMc9fw9CRvQS6TuY3uXClrBo8JL2nEP10n4wjzhHM,5828
+go2pdb/go/uniprot.py,sha256=BJpusbKRWfkAsjF5Eg5jONvvm_MSTIRfV7w2RZbNYJM,2725
+go2pdb-1.0.0.dist-info/METADATA,sha256=0lsZdnR_SJVaVDjQEaXZPnI-ElIslDtPGeT2yHicgxc,7419
+go2pdb-1.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+go2pdb-1.0.0.dist-info/entry_points.txt,sha256=yQonyvtfNEb2R8ZSVo6II5PY_dLFs_xv1MIkyk86b3U,49
+go2pdb-1.0.0.dist-info/top_level.txt,sha256=sH2W6l3vOPbokntWEDB_bp1fNx4e64ZtQqRmqCgM1RI,7
+go2pdb-1.0.0.dist-info/RECORD,,

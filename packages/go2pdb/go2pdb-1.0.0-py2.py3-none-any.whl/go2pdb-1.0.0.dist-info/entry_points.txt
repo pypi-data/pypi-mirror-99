@@ -1,0 +1,3 @@
+[console_scripts]
+go2pdb = go2pdb.__main__:main
+
