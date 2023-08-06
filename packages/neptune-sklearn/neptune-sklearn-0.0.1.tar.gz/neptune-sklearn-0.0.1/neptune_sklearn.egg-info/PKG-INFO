@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: neptune-sklearn
+Version: 0.0.1
+Summary: Neptune.ai scikit-learn integration library
+Home-page: https://github.com/neptune-ai/neptune-client
+Author: neptune.ai
+Author-email: contact@neptune.ai
+License: MIT License
+Description: # Neptune - sklearn integration
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: all

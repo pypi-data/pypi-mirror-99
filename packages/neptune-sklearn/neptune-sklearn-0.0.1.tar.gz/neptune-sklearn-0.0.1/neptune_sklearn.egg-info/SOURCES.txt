@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+neptune_sklearn/__init__.py
+neptune_sklearn/_version.py
+neptune_sklearn.egg-info/PKG-INFO
+neptune_sklearn.egg-info/SOURCES.txt
+neptune_sklearn.egg-info/dependency_links.txt
+neptune_sklearn.egg-info/not-zip-safe
+neptune_sklearn.egg-info/requires.txt
+neptune_sklearn.egg-info/top_level.txt
