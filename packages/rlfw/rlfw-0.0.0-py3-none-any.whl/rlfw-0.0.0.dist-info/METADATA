@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rlfw
+Version: 0.0.0
+Summary: Reinforcement Learning Framework
+Home-page: UNKNOWN
+Author: Yamada, Hiroyuki
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: tensorflow (>=2)
+Requires-Dist: cpprb
+
+UNKNOWN
+
+
