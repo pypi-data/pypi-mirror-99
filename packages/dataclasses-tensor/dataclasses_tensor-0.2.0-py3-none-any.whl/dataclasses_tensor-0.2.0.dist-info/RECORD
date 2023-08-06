@@ -1,0 +1,10 @@
+dataclasses_tensor/__init__.py,sha256=0Kt4J5AYzXu55jvWUFkW0d8qvvtVqNCDQprbFg62_2w,43
+dataclasses_tensor/adapters.py,sha256=cPK0qfqb0AuNQEspmRgzlMInNi3VzrV31_xiRYuWM1w,2537
+dataclasses_tensor/core.py,sha256=dsU98bTNwbTP4eheIIbiTcslvvK4_CuX0GTA3i2siMI,3133
+dataclasses_tensor/layout.py,sha256=GVZDDNqpoAO-3ZOIcGtIAyvfxoZDIeEJU9gwKHxyJZQ,6021
+dataclasses_tensor/utils.py,sha256=gbXYSkcq3QG2kEjVuEAN0CNLYBKn1fTwkJ8pQteOJ74,2168
+dataclasses_tensor-0.2.0.dist-info/LICENSE,sha256=P-I4E1LR44L77teHRowQiFehZhnwD4zbdb7ZcFUQFps,1105
+dataclasses_tensor-0.2.0.dist-info/METADATA,sha256=AJCTXeJ_4N10fWlXFAupEFzFRQQ22TACvQZsg_3yUj4,10147
+dataclasses_tensor-0.2.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+dataclasses_tensor-0.2.0.dist-info/top_level.txt,sha256=103LVcNYhoNalviIS0jh1GcEl_ER36kknwYT_jbxXN8,19
+dataclasses_tensor-0.2.0.dist-info/RECORD,,
