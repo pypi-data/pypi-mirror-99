@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: neo-python-sdk
+Version: 0.3.5
+Summary: Neo SDK for Python with some additional libraries to support the development of Neo Sentinels (NSX).
+Home-page: https://github.com/neohelden/neo-python-sdk
+Author: Jan-Eric Gaidusch <Neohelden GmbH>
+License: apache-2.0
+Keywords: neohelden,neo,neo-sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Requires-Dist: python (>=3.5)
+Requires-Dist: asyncio-nats-client (==0.10.0)
+Requires-Dist: asyncio (==3.4.3)
+Requires-Dist: sentry-sdk (==1.0.0)
+
+UNKNOWN
+
+
