@@ -1,0 +1,13 @@
+trading_ig/__init__.py,sha256=IE3rcY8t4FtpUeD8plAHYnFxqs6E_1dVHdYWc_J1Sc8,743
+trading_ig/config.py,sha256=Db1IwSFLAPUcJf1kfYJGbN-wIXGKbuL_h4RPiI82lL0,1350
+trading_ig/lightstreamer.py,sha256=xOb8UxAhrsKeQx3AHGmQkuLFrKzngzXIifvz6Lu0qnQ,16450
+trading_ig/rest.py,sha256=7VwF4d3BeHGJEYxkmyLKtxSvgXbiDG8_Dw2Jk05xkko,48322
+trading_ig/stream.py,sha256=-4YbfNsKb-hB7Qr2AJC4X2f8wMITvPaxpt38sRv1CoM,1953
+trading_ig/utils.py,sha256=2T9_6P9Fn79XujKN211ATLWa6LUjgBp2mB44IAdlSB4,2704
+trading_ig/version.py,sha256=R0YcSHgFET1OumuywZXbAQRRMvDFN0v7QTf9UFPaXNs,299
+trading_ig-0.0.9.dist-info/LICENSE,sha256=T4zYDtyi5UlKVDFBLMR-fvDRuKWT_VwIWThyvg5ksys,1505
+trading_ig-0.0.9.dist-info/METADATA,sha256=wmHoI1mn9IiqYX3tKHI0dMYtBaXg2NUMY-zqgn8yX5U,4372
+trading_ig-0.0.9.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+trading_ig-0.0.9.dist-info/entry_points.txt,sha256=lexK7RzT1xMyCvalZCkEXUV_pXjWKxyNU2NGRfSYmuo,40
+trading_ig-0.0.9.dist-info/top_level.txt,sha256=vq3JhiQ8LyUldSGSHg6o3UNKcc2Lyjo09RU9o2RbCkM,11
+trading_ig-0.0.9.dist-info/RECORD,,
