@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pangu-task
+Version: 0.6.2
+Summary: Asynchronously run function with callback
+Home-page: https://github.com/camellibby/pangu-task
+Author: camellibby
+Author-email: camelxinliang@sina.com
+License: MIT Licence
+Description: Asynchronously run function with callback
+Keywords: pip,python,pangu,job,task
+Platform: any
