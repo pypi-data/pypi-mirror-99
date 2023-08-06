@@ -1,0 +1,20 @@
+{
+	"magic": {
+		"magic": "pypinex-info",
+		"version": 1
+	},
+	"meta": {
+		"description": "Support for 'less' files in PyPine.",
+		"version": "0.2021.3.16",
+		"author": {
+			"name": "Jürgen Knauth",
+			"email": "pubsrc@binary-overflow.de"
+		},
+		"license": "Apache2",
+		"srcURL": null,
+		"documentationURL": null
+	},
+	"compatibility": {
+		"exformat": 1
+	}
+}
