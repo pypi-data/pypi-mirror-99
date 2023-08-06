@@ -1,0 +1,50 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+
+
+[tool.poetry]
+name = "typed-linter"
+description = "Linter and code quality tool that uses real type information to find bugs and problems"
+version = "0.0.0"
+
+authors = []
+
+readme = "README.md"
+
+repository = "https://github.com/wemake.services/typed-linter"
+
+keywords = []
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.812"
+
+wemake-python-styleguide = "^0.15"
+flake8-pytest-style = "^1.4"
+nitpick = "^0.26"
+
+safety = "^1.10"
+
+pytest = "^6.2"
+pytest-cov = "^2.11"
+pytest-randomly = "^3.5"
+
+sphinx = "^3.5"
+sphinx-autodoc-typehints = "^1.11"
+doc8 = "^0.8"
+m2r2 = "^0.2"
+tomlkit = "^0.7"
