@@ -1,0 +1,7 @@
+README.md
+setup.py
+ip2l.egg-info/PKG-INFO
+ip2l.egg-info/SOURCES.txt
+ip2l.egg-info/dependency_links.txt
+ip2l.egg-info/requires.txt
+ip2l.egg-info/top_level.txt
