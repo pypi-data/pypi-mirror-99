@@ -1,0 +1,11 @@
+selfies/__init__.py,sha256=Tmn-WXOzJ-wsk8KqU2TZnKzAheu1wB_0HGA0bbepdXk,1980
+selfies/decoder.py,sha256=WdmEQLyCwFURTVCl8mgHBjJ9JH-hVwY_91g72uS1oRI,14408
+selfies/encoder.py,sha256=XO0jz__YkB66drnyDc1Z2hw4S9jJV7jG0N3vqTfPMTk,10058
+selfies/grammar_rules.py,sha256=LEWyWFIpza7ebbeeICzO0d8xqY5hmZU3poDCNbG7PYw,14349
+selfies/kekulize.py,sha256=hCTZc5BI4rYZafzYyrNJL9aLtUFKZZrx9vQmIcxwesI,18768
+selfies/utils.py,sha256=u2IQuHixP8tfltyz1mTXhPmjrUVVvz3gt6uqoECTnvc,9810
+selfies-1.0.4.dist-info/LICENSE,sha256=KrVJ7dYFr_3cLts0CJv8kVlfd_6tUgVzGgBaCY3ZhhY,11542
+selfies-1.0.4.dist-info/METADATA,sha256=82Tr9-X9y5uxfLmAn_A8KZ5Jj7UatPy6irwdOMPQmSM,10721
+selfies-1.0.4.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+selfies-1.0.4.dist-info/top_level.txt,sha256=IWjVFzVvQ8ENnWtFEjgoHfYVRAx5reU558w08oAmHrI,8
+selfies-1.0.4.dist-info/RECORD,,
