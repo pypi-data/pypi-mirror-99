@@ -1,0 +1,10 @@
+setup.py
+skysset/Binomialdistribution.py
+skysset/Gaussiandistribution.py
+skysset/Generaldistribution.py
+skysset/__init__.py
+skysset.egg-info/PKG-INFO
+skysset.egg-info/SOURCES.txt
+skysset.egg-info/dependency_links.txt
+skysset.egg-info/not-zip-safe
+skysset.egg-info/top_level.txt
