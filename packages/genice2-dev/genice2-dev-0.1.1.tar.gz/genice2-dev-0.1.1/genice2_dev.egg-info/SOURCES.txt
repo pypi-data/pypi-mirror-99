@@ -1,0 +1,8 @@
+README.md
+genice2_dev.py
+setup.py
+genice2_dev.egg-info/PKG-INFO
+genice2_dev.egg-info/SOURCES.txt
+genice2_dev.egg-info/dependency_links.txt
+genice2_dev.egg-info/requires.txt
+genice2_dev.egg-info/top_level.txt
