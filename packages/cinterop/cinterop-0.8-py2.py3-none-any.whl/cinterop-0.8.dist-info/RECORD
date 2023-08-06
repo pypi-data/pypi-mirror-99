@@ -1,0 +1,9 @@
+cinterop/__init__.py,sha256=k75UwajhpFUgcSLg6rCcXqF8yEigDPYbPwgezjyAw5c,24
+cinterop/_version.py,sha256=qSdQ-_nbULVai6vIPVV7SEbZADnfqEgaEJjGXsE64R4,155
+cinterop/timeseries.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cinterop/cffi/marshal.py,sha256=K1ZzhclLO1xSnB6Ya7OCqH5vRkbz6arNKDQDaNj9HMw,31776
+cinterop-0.8.dist-info/LICENSE.txt,sha256=Xp2e18gZKTqvqFtBI-_tv8mHe6rLXNjiYbaVZjk0ZQ8,3374
+cinterop-0.8.dist-info/METADATA,sha256=FmIw4_VUI9sZG3YrFGfchUdWKmWfmzh6jw699NF1Uac,3844
+cinterop-0.8.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+cinterop-0.8.dist-info/top_level.txt,sha256=WBNPifAL2Vsre70szbHHj6iQzMl2kU0bALauyFAigNQ,9
+cinterop-0.8.dist-info/RECORD,,
