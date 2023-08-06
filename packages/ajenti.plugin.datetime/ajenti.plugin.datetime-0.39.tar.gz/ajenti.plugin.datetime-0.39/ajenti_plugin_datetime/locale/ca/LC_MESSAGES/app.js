@@ -1,0 +1,1 @@
+{"": "", "Date &amp; time": "", "Set time": "Establir hora", "Set timezone": "", "Sync time from the Internet": "", "Time zone": "Zona hor\u00e0ria", "ntpdate utility is not installed": "", "Date & time": "Data i Hora", "Change date and time": "", "Date & Time": "", "Timezone set": "", "Failed": "", "Time set": "", "Synchronizing...": "", "Time synchronized": ""}

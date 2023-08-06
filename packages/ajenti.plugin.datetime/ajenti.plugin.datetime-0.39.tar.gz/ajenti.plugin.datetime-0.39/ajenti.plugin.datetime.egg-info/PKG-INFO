@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.datetime
+Version: 0.39
+Summary: Date & time
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Date & time plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
