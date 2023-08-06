@@ -1,0 +1,6 @@
+SFLvault-common~=0.9
+keyring~=1.6
+pycrypto
+decorator
+urwid>=0.9.8.1
+pexpect>=2.5
