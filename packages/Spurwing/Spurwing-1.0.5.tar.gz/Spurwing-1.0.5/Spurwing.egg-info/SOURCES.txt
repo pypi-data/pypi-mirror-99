@@ -1,0 +1,11 @@
+README.md
+setup.py
+Spurwing.egg-info/PKG-INFO
+Spurwing.egg-info/SOURCES.txt
+Spurwing.egg-info/dependency_links.txt
+Spurwing.egg-info/requires.txt
+Spurwing.egg-info/top_level.txt
+spurwing/Client.py
+spurwing/__init__.py
+spurwing/config.sample.py
+spurwing/test_api.py
