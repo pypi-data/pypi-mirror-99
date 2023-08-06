@@ -1,0 +1,13 @@
+iniparser2/__init__.py,sha256=5p1wpSKdDjM9cFw9wlKzBeOKfNHQuZjJ2hJ0BAyPlE0,100
+iniparser2/api.py,sha256=NNK9pKMas6CCR19jQ3KNvU5X1ug9eP1uQ_cS1Q06epI,18857
+iniparser2/err.py,sha256=jTQZ_j70vQg02d7Vj9zdL632ylJCks29X3ZkcjgWNhE,92
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_import.py,sha256=wrDXaTMsYv-aWsV_tlCatyChObrPcYwDQG8R9ZoYPZk,71
+tests/test_parse.py,sha256=oan3vK4Tha4OPto3AG0qcg2ZUekUTJZKfgwHEVwH4h8,356
+tests/test_property.py,sha256=MuXJExGmavZ5vpmVOo6EPvn-jjdQPAAkAofJKHis8sg,44
+tests/test_temp.py,sha256=kWQfC5oV96t4hMavur5C6uSH3koeEkNZb8HqMvcMurA,133
+iniparser2-1.4.1.dist-info/LICENSE,sha256=KrgVX52IM5ltB1CjGioF3n5S_u9kprire03eRqMkaFg,1089
+iniparser2-1.4.1.dist-info/METADATA,sha256=Md21hc_xqgCyKLbSyTnV35aZKlvYdkbX4uEkQXiIhTA,2840
+iniparser2-1.4.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+iniparser2-1.4.1.dist-info/top_level.txt,sha256=-GEQfOYZHMjxsDa56QNZZ0ueWyThAVGuzFRffGOhCyE,11
+iniparser2-1.4.1.dist-info/RECORD,,
