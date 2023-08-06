@@ -1,0 +1,15 @@
+NFSyndication/__init__.py,sha256=ouUkitIEL_K7E65liC9m_9YIfo8FLt5rf6lpTbXaXz0,424
+NFSyndication/config.py,sha256=uuvlqxN76YvCoV505ZSR0JRJlXbQe7bVyyfHEC9CFYA,466
+NFSyndication/extras.py,sha256=9y_GUe381fO3E7wXiOQ5gZX86Qw1H6ZZaJOM4ExSlqc,3128
+NFSyndication/nfs_main.py,sha256=PMFWj48WydLAQGMhuHfC3xc6Bn9VdnsVxkPYRZ-zMXM,2800
+NFSyndication/styles.py,sha256=EtDu73yKcBnz0byRMAzDGIhDOzXRRy0dvEgFscJcDTs,5600
+NFSyndication/templates/template.html,sha256=_lKnBIgv82H3MN9_CtYXNl-XgJXUBt8_JYLl3kG9-uo,1823
+tests/__init__.py,sha256=57734g7ImsKpAsY-BlIQnNZqlLfrgQQ8mMMXayuMf-A,1067
+tests/conftest.py,sha256=SZV81yyPMBjTVZRtelZN2LoWLqoPSF1O06hGT-RnwYg,578
+tests/test_main.py,sha256=bI3tFr3FDbg7xk9Nhz81l4EVmgqzF8dyCXwYhOMH260,101
+NFSyndication-0.2.22.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+NFSyndication-0.2.22.dist-info/METADATA,sha256=t3zuaI0jTODJXjUY55S-ZncWjeCACPiwlsIFatMAS_M,2484
+NFSyndication-0.2.22.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+NFSyndication-0.2.22.dist-info/entry_points.txt,sha256=1isf1D-eUcL-YtHtvJgAzJkiSNVHQcpqhl9muztukqM,58
+NFSyndication-0.2.22.dist-info/top_level.txt,sha256=3mclVbXvxT6ZWkltka4fYGL5UH1sVh1EEMKJdJSV-mc,20
+NFSyndication-0.2.22.dist-info/RECORD,,
