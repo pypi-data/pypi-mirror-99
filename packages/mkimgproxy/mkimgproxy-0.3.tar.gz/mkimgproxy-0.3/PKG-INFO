@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mkimgproxy
+Version: 0.3
+Summary: Generates URL for imgproxy image processing server
+Home-page: https://github.com/maxim75/mkimgproxy
+Author: Maksym Kozlenko
+Author-email: max@kozlenko.info
