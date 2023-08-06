@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mte
+Version: 0.0.2
+Summary: MTE Instruments Inc.
+Home-page: UNKNOWN
+Author: Martin Rioux
+Author-email: mrioux@mteinstruments.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+
+MTE Instruments organization package.
+
+
