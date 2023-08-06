@@ -1,0 +1,8 @@
+datacataloglib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datacataloglib/data_catalog_interfaces.py,sha256=uoPfuVZ4FSJBLmmlPGPiGk0mXWej4BbUHSA0qF1AtBo,6347
+datacataloglib/request_helper.py,sha256=1VxXprl2I2NpJhHrv9CNAlBjCxElKAPOV9AvrPWcEIg,1021
+datacataloglib/utils.py,sha256=cr_KG8JffO1i7N3k9u0ROJO9hqf0sQrvpQHWhNkg04Y,3034
+datacataloglib-0.0.25.dist-info/METADATA,sha256=RGwOpF1BsDs1WmRF6oPPbrOa--N6vWjCMEqEFzj5ZgU,379
+datacataloglib-0.0.25.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+datacataloglib-0.0.25.dist-info/top_level.txt,sha256=5BOrrnAHhvOTWFV2Lf40BHPR6rtPB2whCgQqXJUtITY,15
+datacataloglib-0.0.25.dist-info/RECORD,,
