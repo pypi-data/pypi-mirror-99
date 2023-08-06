@@ -1,0 +1,11 @@
+logicplum/__init__.py,sha256=D1Froxc96544c8NkFqjAdmz1lQ3CGax5Bex4M3BuSvg,131
+logicplum/config.py,sha256=58D3dxGBak7cJsaITaGwHsAr8zAiorhQ0l8P5rLvM1k,695
+logicplum/credential.py,sha256=JP0xJ8VLttt_saBiX5UAkLFQEeX6bClW0_Vty2VsX2Q,1798
+logicplum/logicplum.py,sha256=lQu7aJV6vefGE6fjEUVtsqW1DXJezWKyoKjLguYB-o4,4406
+logicplum/project.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logicplum-1.0.1.dist-info/LICENCE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+logicplum-1.0.1.dist-info/METADATA,sha256=trLsdCjOil7fMvTGvu0Bg5em9o7OmAhSYLyEHt6YXck,1864
+logicplum-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+logicplum-1.0.1.dist-info/entry_points.txt,sha256=UtGjUnUF_FDMzRFOjDmV8nxRIoVcDubbQiWF3K5y4wA,56
+logicplum-1.0.1.dist-info/top_level.txt,sha256=NrmX6ann6giYWYWOguA8D_wq8KltqQjGGbebGGcCgtk,10
+logicplum-1.0.1.dist-info/RECORD,,
