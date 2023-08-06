@@ -1,0 +1,3 @@
+[console_scripts]
+ndu-gateway = ndu_gateway.tb_gateway:daemon
+
