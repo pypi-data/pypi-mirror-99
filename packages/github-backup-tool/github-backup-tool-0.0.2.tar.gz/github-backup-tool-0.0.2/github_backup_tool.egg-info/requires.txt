@@ -1,0 +1,5 @@
+GitPython
+humanize
+PyGithub
+PyYAML
+SQLAlchemy

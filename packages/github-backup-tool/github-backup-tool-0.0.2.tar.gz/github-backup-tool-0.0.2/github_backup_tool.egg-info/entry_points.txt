@@ -1,0 +1,3 @@
+[console_scripts]
+gbt = github_backup.cli:main
+
