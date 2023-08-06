@@ -1,0 +1,7 @@
+logger/LDMLogger.py,sha256=SGpY2Hpnlcd7PHbiRPBKu1wHZJal2mmAGiCFg-5dsj0,13624
+logger/__init__.py,sha256=xt7XadGm3-fI1819MLin0pW3jAwCd_4iHEJYCROgmJI,32
+ldm_python_client_lib-0.0.7.dist-info/LICENSE.txt,sha256=EIQk7YqhslqP5qjC2wy1Is7hmn4pp5Tl_uhUpSgbnPw,1060
+ldm_python_client_lib-0.0.7.dist-info/METADATA,sha256=mrA-60a0IoJRPSsWyv_bthI0l0qQtUI6ASZA5l1y914,2834
+ldm_python_client_lib-0.0.7.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+ldm_python_client_lib-0.0.7.dist-info/top_level.txt,sha256=4a72cfKcY8dIFCuJ02V62KKPPO_91UXAjcL0R5qkrHs,7
+ldm_python_client_lib-0.0.7.dist-info/RECORD,,
