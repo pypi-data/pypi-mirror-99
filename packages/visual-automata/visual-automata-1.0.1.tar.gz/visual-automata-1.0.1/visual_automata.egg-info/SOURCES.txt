@@ -1,0 +1,10 @@
+README.md
+setup.py
+visual_automata/__init__.py
+visual_automata/colors.py
+visual_automata.egg-info/PKG-INFO
+visual_automata.egg-info/SOURCES.txt
+visual_automata.egg-info/dependency_links.txt
+visual_automata.egg-info/requires.txt
+visual_automata.egg-info/top_level.txt
+visual_automata/fa/dfa.py
