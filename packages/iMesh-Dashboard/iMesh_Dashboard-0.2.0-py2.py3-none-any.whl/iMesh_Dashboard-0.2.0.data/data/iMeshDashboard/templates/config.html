@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-6">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            Send Message
+          </div>
+          <div class="card-body">
+            <form action="/sendMessage" method="post">
+              <label for="fTargetSelect">ID:</label>
+              <select name="fTargetSelect" id="fTargetSelect">
+                <option value="^All">ALL</option>
+                {% for node in nodes %}
+                <option value="{{ node[1].user.id }}"">{{ node[1].user.longName }}</option>
+                {% endfor %}
+              </select>
+              <input type="text" id="fTarget" name="fTarget" style="min-width:50px" value="^All"/><br />
+              <label for="fmsg">Message:</label>
+                <input type="text" id="fmsg" name="fmsg" style="min-width:50px" />
+                <input type="submit" value="Send" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <span>Write GPIO </span><b><span id="fid"></span></b>
+          </div>
+          <div class="card-body">
+            <form action="/setGpio" method="post">
+              <select name="fTarget" id="fTarget">
+                {% for node in nodes %}
+                <option value="{{ node[1].user.id }}"">{{ node[1].user.longName }}</option>
+                {% endfor %}
+              </select>
+              <select name="fGpio" id="fGpio">
+                <option value="2">GPIO 2</option>
+                <option value="15">GPIO 15</option>
+                <option value="35">GPIO 35</option>
+              </select>
+              <select name="fValue" id="fValue">
+                <option value="1">ON</option>
+                <option value="0">OFF</option>
+              </select>
+              <input type="submit" value="WRITE">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">
+        <span>Set Node </span><b><span id="fid"></span></b>
+      </div>
+      <div class="card-body">
+        <form action="/setNode" method="post">
+          <label for="fRegion">Region</label>
+          <select name="fRegion" id="fValue">
+            <option value="0" {% if prefs.region == 0 %} selected {% endif %}>Unset</option>
+            <option value="1" {% if prefs.region == 1 %} selected {% endif %}>US</option>
+            <option value="2" {% if prefs.region == 2 %} selected {% endif %}>EU433</option>
+            <option value="3" {% if prefs.region == 3 %} selected {% endif %}>EU865</option>
+            <option value="4" {% if prefs.region == 4 %} selected {% endif %}>CN</option>
+            <option value="5" {% if prefs.region == 5 %} selected {% endif %}>JP</option>
+            <option value="6" {% if prefs.region == 6 %} selected {% endif %}>ANZ</option>
+            <option value="7" {% if prefs.region == 7 %} selected {% endif %}>KR</option>
+            <option value="8" {% if prefs.region == 8 %} selected {% endif %}>TW</option>
+            <option value="9" {% if prefs.region == 9 %} selected {% endif %}>RU</option>
+          </select><br/>
+          <label for="flongName">Long Name</label>
+          <input type="text" id="flongName" name="flongName" value="{{ nodeInfo['user']['longName'] }}"><br>
+          <label for="fshortName">Short Name</label>
+          <input type="text" id="fshortName" name="fshortName" value="{{ nodeInfo['user']['shortName'] }}"><br>
+          <label for="flatitude">Latitude</label>
+          <input type="text" id="flatitude" name="flatitude" value="{{ nodeInfo['position']['latitude'] }}"><br>
+          <label for="flongitude">Longitude</label>
+          <input type="text" id="flongitude" name="flongitude" value="{{ nodeInfo['position']['longitude'] }}"><br>
+          <label for="faltitude">Altitude</label>
+          <input type="text" id="faltitude" name="faltitude" value="{{ nodeInfo['position']['altitude'] }}"><br>
+          <input type="submit" value="SET">
+        </form>
+        Position and Altitude can be set if device doesn't have GPS and no fixed position is set in config file
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-12">
+
+  </div>
+</div>
+{% endblock %}
+
+{% block footer_script %}
+<script>
+  $("#fTargetSelect").change(function () {
+    $("#fTarget").val($("#fTargetSelect").val());
+  });
+</script>
+
+{% endblock %}
