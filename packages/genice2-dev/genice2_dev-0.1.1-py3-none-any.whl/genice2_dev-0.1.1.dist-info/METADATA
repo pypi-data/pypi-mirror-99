@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: genice2-dev
+Version: 0.1.1
+Summary: Library to develop GenIce2 plugins.
+Home-page: https://github.com/vitroid/genice-dev/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Keywords: genice,CIF
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+
+genice-dev
+
+A library to develop the GenIce2 plugins.
+
+
