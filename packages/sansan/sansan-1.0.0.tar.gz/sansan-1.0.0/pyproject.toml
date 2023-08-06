@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "sansan"
+version = "1.0.0"
+description = "a = San() print(a.san1(123))"
+authors = ["Fazilbek"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
