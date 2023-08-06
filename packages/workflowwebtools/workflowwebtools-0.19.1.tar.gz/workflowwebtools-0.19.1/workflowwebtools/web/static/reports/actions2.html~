@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type='text/javascript'>
+      google.charts.load('current', {'packages':['annotationchart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var jsonData = $.ajax({
+          url: "/actionssummary",
+          dataType: "json",
+          async: false
+          });
+        var allUsers = jsonData.responseJSON["AllUsers"] ;
+        var theData = new google.visualization.DataTable();
+        theData.addColumn('date' , 'Date' );
+        for(var u in allUsers){
+          theData.addColumn( "number" , allUsers[u]);
+        }
+        for(var row in jsonData.responseJSON){
+          if(row == "AllUsers")
+            continue;
+          var totalActions = 0;
+          dt = new Date( parseInt(row) );
+          if( dt > Date.now() )
+            continue;
+          newRow = [ dt ];
+          
+          for(var u in allUsers)
+            newRow.push( 0 );
+          for (var u = allUsers.length - 1; u >= 0; u--) {
+            if( Object.keys( jsonData.responseJSON[row] ).includes( allUsers[u] ) ){
+              totalActions += jsonData.responseJSON[row][ allUsers[u] ];
+              newRow[u+1] = totalActions ;
+            }
+          }
+          theData.addRow( newRow );
+        }
+        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+
+        var options = {
+          displayAnnotations: false,
+          fill : 50,
+          isStacked : true
+        };
+
+        chart.draw(theData, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='chart_div' style='width: 900px; height: 600px;'></div>
+  </body>
+</html>
