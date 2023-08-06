@@ -1,0 +1,17 @@
+blag/__init__.py,sha256=DSDnnQo_OhN4rM3tbRfffoy0pFLnfvP4h18DG56NIsc,45
+blag/blag.py,sha256=-zp-icoG5RH3ozq88Ivy07WlIQUlAzwpwrJeZGWFGH4,12546
+blag/devserver.py,sha256=Jl52V58MBN3uqMZerTBfrjg2aZeANj7GZLtaKhTgy1E,2086
+blag/markdown.py,sha256=-vQ5e1hUHwWpGIyQAAtdYXHrnhIyJ-no6lzaS3_ooKY,3014
+blag/version.py,sha256=Z5W02LHyL2KWedlLhP36jQ7luRMuTG18G85VjhrK4NI,22
+blag/templates/archive.html,sha256=x0QlcmrHir-lvB0Wvz9P74wp9Tus_WRVRsF3jql2MQg,291
+blag/templates/article.html,sha256=PaS89-5WG59GOyvmKoCJAVVorAn-QSziOfeeXLqFDFA,120
+blag/templates/base.html,sha256=Qa2X3wUn_2R-15PH5mxxideGqR1Ir4gv_1ZqBSo41kU,650
+blag/templates/page.html,sha256=PaS89-5WG59GOyvmKoCJAVVorAn-QSziOfeeXLqFDFA,120
+blag/templates/tag.html,sha256=QM4XJ7Fc0EmWUkPHZVnQHJ2DZ_YTi3NZF20USOPvTj8,289
+blag/templates/tags.html,sha256=NRvpbcWeS7Q1yFi6D0FHRTCzYUi-olShK6qf-QzbRL8,245
+blag-0.0.5.dist-info/LICENSE,sha256=AJbfjScq_wYhU5spsW7LrjWrGu3XPJlbIRFebcZdHMo,1072
+blag-0.0.5.dist-info/METADATA,sha256=wOlbiQ9pW-PDoQi8PajXZhE1nWFpCGiWV6t1a8B6vKg,1598
+blag-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+blag-0.0.5.dist-info/entry_points.txt,sha256=J3PHaFyy5YaLft-P-74mRYxK0u_hsGezKEiRezyRu5U,41
+blag-0.0.5.dist-info/top_level.txt,sha256=9IR7ftpCFV6XNJy_gynBeWxhyAVx4RnLkSOFIzWGlZI,5
+blag-0.0.5.dist-info/RECORD,,
