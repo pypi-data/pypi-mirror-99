@@ -1,0 +1,11 @@
+.wy-side-nav-search, .wy-nav-top {
+    background: #ffffff;
+}
+
+.wy-side-nav-search>div.version{
+    color: #000000;
+}
+
+.fa-bars{
+    color: #000000;
+}
