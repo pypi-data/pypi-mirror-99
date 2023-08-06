@@ -1,0 +1,4 @@
+[console_scripts]
+rotate-scamper = rotate.rotate_scamper:main
+rotate-targets = rotate.rotate_targets:main
+
