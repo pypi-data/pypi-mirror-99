@@ -1,0 +1,3 @@
+[console_scripts]
+soc-excel-convert = soc_excel_convert._internal:main
+
