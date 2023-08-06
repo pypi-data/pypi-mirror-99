@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+geoplots/FigParams.py
+geoplots/__init__.py
+geoplots/__version__.py
+geoplots.egg-info/PKG-INFO
+geoplots.egg-info/SOURCES.txt
+geoplots.egg-info/dependency_links.txt
+geoplots.egg-info/top_level.txt
