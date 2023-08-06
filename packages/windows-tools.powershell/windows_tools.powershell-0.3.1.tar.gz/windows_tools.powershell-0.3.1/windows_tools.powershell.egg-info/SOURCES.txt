@@ -1,0 +1,10 @@
+README.md
+setup.py
+windows_tools.powershell.egg-info/PKG-INFO
+windows_tools.powershell.egg-info/SOURCES.txt
+windows_tools.powershell.egg-info/dependency_links.txt
+windows_tools.powershell.egg-info/namespace_packages.txt
+windows_tools.powershell.egg-info/not-zip-safe
+windows_tools.powershell.egg-info/requires.txt
+windows_tools.powershell.egg-info/top_level.txt
+windows_tools/powershell/__init__.py
