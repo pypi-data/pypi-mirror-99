@@ -1,0 +1,14 @@
+patta/__init__.py,sha256=A_X4Lj-ZYbvWYyC3TpGQHfuafFVF70Pm1i5js9EB1_o,345
+patta/__version__.py,sha256=K-ZQjZ_ebgH914e5GH_QxF3xIiXBeCrl0odfNpTbAgs,63
+patta/aliases.py,sha256=9X9ijNNgxKxXa-VFAGQSigQSdV32TWDmyi-ec1bBNlY,809
+patta/base.py,sha256=5Z6pcSGHJRbpKbuRGGn0VG4OT6-5BqoiV4miLWVDLcE,4814
+patta/dataloader.py,sha256=HDQ9KvviuIKpc0MhGXoRmLQOAzHu6-g0mHNUknZgWdg,1405
+patta/functional.py,sha256=QiHNIsFQvWOGMDPRM2u81uZnhuyRGHkeGtwH-LeDuUE,3281
+patta/load_model.py,sha256=xxERA7Ilea9Nli41v06gZjvfzSJc1iIi-qJTfYKgHC4,223
+patta/transforms.py,sha256=tRWXMXEg4IQV07WTXCPX6M4IO-oGp97-HWfDh67_vA0,7981
+patta/wrappers.py,sha256=GsqN4lPqaADJ2zAKR0onyy1qhtOYdXLqgPxIrx2XMMw,5618
+patta-0.0.2.dist-info/LICENSE,sha256=N3rw7ahorqvGbbhpWhZu_7j4RYIQHn-diQVPB8r6XjU,1067
+patta-0.0.2.dist-info/METADATA,sha256=11Z2W3FIM17sePcPP5xw-WLuZUZK23hIbDbO40q93QQ,6427
+patta-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+patta-0.0.2.dist-info/top_level.txt,sha256=F0ry9Y2JR1PvCk8FfmkYoLxoyCnEQroDdrofhxWaRA4,6
+patta-0.0.2.dist-info/RECORD,,
