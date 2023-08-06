@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_memes_es = simplebot_memes_es
+
