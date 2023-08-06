@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+example.py
+requirements.txt
+setup.py
+.github/workflows/python.yml
+webthing_ws/__init__.py
+webthing_ws/exceptions.py
+webthing_ws.egg-info/PKG-INFO
+webthing_ws.egg-info/SOURCES.txt
+webthing_ws.egg-info/dependency_links.txt
+webthing_ws.egg-info/requires.txt
+webthing_ws.egg-info/top_level.txt
+webthing_ws.egg-info/zip-safe
