@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: phi-accrual-failure-detector
+Version: 0.3
+Summary: A port of the Akka's (φ) Accrual failure detector implementation
+Home-page: https://github.com/samueleresca/phi-accrual-failure-detector
+Author: samuele.resca
+Author-email: samuele.resca@gmail.com
+License: MIT
+Download-URL: https://github.com/samuele.resca/phi-accrual-failure-detector/archive/v_01.tar.gz
+Keywords: distributed-systems,fault-tolerance,fault-tolerant,fault-detection
+Platform: UNKNOWN
+Requires-Dist: atomos
+
+UNKNOWN
+
+
