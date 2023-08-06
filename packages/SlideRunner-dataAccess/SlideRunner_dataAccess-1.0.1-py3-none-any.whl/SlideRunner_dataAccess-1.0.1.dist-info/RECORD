@@ -1,0 +1,12 @@
+SlideRunner_dataAccess/__init__.py,sha256=CFA3R8fZt7H4Na50JVvlj9NdZFrT-n4173ogqHBUntU,801
+SlideRunner_dataAccess/annotations.py,sha256=EsndUvXkHQbdu2EwKPXBUcrnZutHc-a3ny1ukz0wPW4,23299
+SlideRunner_dataAccess/cellvizio.py,sha256=y4oIWgT9bffe4N5ZikcJ3Y2CLxpCkgUVx3CD3RoTOJw,6092
+SlideRunner_dataAccess/database.py,sha256=Aqkxo2SXwalj5Vj9RjzMouNrR2veay2bBunmr5-apjE,52020
+SlideRunner_dataAccess/dicomimage.py,sha256=ZfElyMn2y5OKUF2Nlxhd5dP6jqXg16Z9YMl-It8Tc8c,10207
+SlideRunner_dataAccess/nifty.py,sha256=XjotZ25LH4IXHrFxj9yYpA_vbG2exCOy8yxTD5MPVHg,3501
+SlideRunner_dataAccess/slide.py,sha256=ihepKEuIxIHGhwLQEG4Uuzm9bkyxqCrus1gTm6-R2F0,7661
+SlideRunner_dataAccess-1.0.1.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+SlideRunner_dataAccess-1.0.1.dist-info/METADATA,sha256=5EGBzvoh3lkSAhaDwCkW7sVRErhpOFdIqAacR0HdpfY,1178
+SlideRunner_dataAccess-1.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+SlideRunner_dataAccess-1.0.1.dist-info/top_level.txt,sha256=f1X2JCwynkr7JWtkRfVJXVcbmQyG7cjR37o5vWK8Q6Q,23
+SlideRunner_dataAccess-1.0.1.dist-info/RECORD,,
