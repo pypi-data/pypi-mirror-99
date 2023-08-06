@@ -1,0 +1,17 @@
+*.pyc
+.idea*
+docs/build
+dist*
+build*
+*.egg-info
+*.eggs
+venv*
+.venv*
+.vscode*
+.pytest_cache*
+.cache*
+.python-version
+.tox*
+.vagrant*
+tests/sandbox*
+*.log
