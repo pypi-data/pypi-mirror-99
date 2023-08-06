@@ -1,0 +1,3 @@
+[console_scripts]
+pymin_reqs = pymin_reqs.pymin_reqs:main
+

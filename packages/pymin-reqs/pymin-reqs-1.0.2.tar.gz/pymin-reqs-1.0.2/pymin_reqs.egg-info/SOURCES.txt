@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+pymin_reqs/__init__.py
+pymin_reqs/pymin_reqs.py
+pymin_reqs.egg-info/PKG-INFO
+pymin_reqs.egg-info/SOURCES.txt
+pymin_reqs.egg-info/dependency_links.txt
+pymin_reqs.egg-info/entry_points.txt
+pymin_reqs.egg-info/requires.txt
+pymin_reqs.egg-info/top_level.txt
