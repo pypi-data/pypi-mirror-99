@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: qtorch
+Version: 0.3.0
+Summary: Low-Precision Arithmetic Simulation in Pytorch
+Home-page: UNKNOWN
+Author: Tianyi Zhang, Zhiqiu Lin, Guandao Yang, Christopher De Sa
+Author-email: tz58@cornell.edu
+License: MIT
+Project-URL: Documentation, https://qpytorch.readthedocs.io
+Project-URL: Source, https://github.com/Tiiiger/QPyTorch/graphs/contributors
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
