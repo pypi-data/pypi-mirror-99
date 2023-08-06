@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+mtpkg/__init__.py
+mtpkg/cli.py
+mtpkg/local.py
+mtpkg/remote.py
+mtpkg.egg-info/PKG-INFO
+mtpkg.egg-info/SOURCES.txt
+mtpkg.egg-info/dependency_links.txt
+mtpkg.egg-info/entry_points.txt
+mtpkg.egg-info/requires.txt
+mtpkg.egg-info/top_level.txt
