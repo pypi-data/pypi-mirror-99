@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyintel471/__init__.py
+pyintel471/api.py
+pyintel471.egg-info/PKG-INFO
+pyintel471.egg-info/SOURCES.txt
+pyintel471.egg-info/dependency_links.txt
+pyintel471.egg-info/top_level.txt
