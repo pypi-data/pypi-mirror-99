@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyroved
+Version: 0.0.2
+Summary: Variational encoder-decoder models
+Home-page: https://github.com/ziatdinovmax/pyroVED/
+Author: Maxim Ziatdinov
+Author-email: maxim.ziatdinov@ai4microcopy.com
+License: MIT license
+Description: ## pyroVED
+        
+        [![build](https://github.com/ziatdinovmax/pyroVED/actions/workflows/actions.yml/badge.svg)](https://github.com/ziatdinovmax/pyroVED/actions/workflows/actions.yml)
+        [![PyPI version](https://badge.fury.io/py/pyroved.svg)](https://badge.fury.io/py/pyroved)
+        
+        Variational encoder-decoder models in Pyro probabilistic programming language for applications in spectral and image analysis. The currently available models include variational autoencoders with translational and/or rotational invariance for unsupervised, class-conditioned and semi-supervised learning. More models to come!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
