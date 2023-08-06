@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: skyiris
+Version: 0.1.2
+Summary: machine leanring with iris_dataset
+Home-page: UNKNOWN
+Author: SkyKang
+Author-email: godsky@naver.com
+License: MIT
+Description: Learn Machine Learning with Iris datasets.
+        You can use all by korean packages. 
+        The Module name : skyiris
+        
+        Version Notice
+        ===============
+        0.0.7 (2021. 3. 20)
+        ---------------------
+        - First version
+Keywords: skyiris
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
