@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: xchainpy_crypto
+Version: 0.1
+Summary: The XCHAIN CRYPTO package is a crypto package used by all XCHAIN clients
+Home-page: https://github.com/xchainjs/xchainpy-lib
+Author: THORChain
+Author-email: None
