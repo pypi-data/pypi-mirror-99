@@ -1,0 +1,7 @@
+README.md
+setup.py
+motionbotlist.egg-info/PKG-INFO
+motionbotlist.egg-info/SOURCES.txt
+motionbotlist.egg-info/dependency_links.txt
+motionbotlist.egg-info/requires.txt
+motionbotlist.egg-info/top_level.txt
