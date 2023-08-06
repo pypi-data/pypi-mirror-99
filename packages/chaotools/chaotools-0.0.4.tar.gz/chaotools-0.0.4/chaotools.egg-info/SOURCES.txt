@@ -1,0 +1,8 @@
+README.md
+setup.py
+chaotools/Crawler.py
+chaotools/__init__.py
+chaotools.egg-info/PKG-INFO
+chaotools.egg-info/SOURCES.txt
+chaotools.egg-info/dependency_links.txt
+chaotools.egg-info/top_level.txt
