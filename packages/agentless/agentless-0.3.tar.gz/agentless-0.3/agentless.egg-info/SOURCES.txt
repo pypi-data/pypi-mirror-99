@@ -1,0 +1,7 @@
+setup.py
+agentless.egg-info/PKG-INFO
+agentless.egg-info/SOURCES.txt
+agentless.egg-info/dependency_links.txt
+agentless.egg-info/requires.txt
+agentless.egg-info/top_level.txt
+agentless.egg-info/zip-safe
