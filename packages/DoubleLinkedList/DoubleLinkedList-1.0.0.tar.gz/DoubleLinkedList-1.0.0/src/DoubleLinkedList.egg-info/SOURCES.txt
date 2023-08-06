@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/DoubleLinkedList/DLinked.py
+src/DoubleLinkedList/__init__.py
+src/DoubleLinkedList.egg-info/PKG-INFO
+src/DoubleLinkedList.egg-info/SOURCES.txt
+src/DoubleLinkedList.egg-info/dependency_links.txt
+src/DoubleLinkedList.egg-info/top_level.txt
