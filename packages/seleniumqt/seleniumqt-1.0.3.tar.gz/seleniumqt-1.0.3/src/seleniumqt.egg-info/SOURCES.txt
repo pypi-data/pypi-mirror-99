@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+src/seleniumqt/__init__.py
+src/seleniumqt/del_ele.py
+src/seleniumqt/down_right.py
+src/seleniumqt/get_ele.py
+src/seleniumqt/get_path.py
+src/seleniumqt/return_ele.py
+src/seleniumqt/screen_change.py
+src/seleniumqt/table_down.py
+src/seleniumqt/ui_mask.py
+src/seleniumqt.egg-info/PKG-INFO
+src/seleniumqt.egg-info/SOURCES.txt
+src/seleniumqt.egg-info/dependency_links.txt
+src/seleniumqt.egg-info/top_level.txt
