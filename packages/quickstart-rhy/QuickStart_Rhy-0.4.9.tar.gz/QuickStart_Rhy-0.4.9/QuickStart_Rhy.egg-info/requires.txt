@@ -1,0 +1,16 @@
+PyInquirer
+bpytop
+colorama
+diagram
+langdetect
+prettytable
+psutil
+py7zr
+pyperclip
+pywifi
+qrcode_terminal
+rarfile
+requests
+rich
+urllib3
+youtube_dl
