@@ -1,0 +1,28 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Module that contains consts definitions for Script Editor
+"""
+
+from __future__ import print_function, division, absolute_import
+
+from Qt.QtCore import Qt
+from Qt.QtGui import QFont
+
+TOOL_ID = 'tpDcc-tools-scripteditor'
+
+
+DEFAULT_SESSION_NAME = 'session.json'
+DEFAULT_SCRIPTS_TAB_NAME = 'New Script'
+TEMP_SCRIPT_PREFIX = 'SCRIPTEDITOR_TEMP_'
+INDENT_LENGTH = 4
+TAB_STOP = 4
+MIN_FONT_SIZE = 8
+DEFAULT_FONT_SIZE = MIN_FONT_SIZE
+FONT_NAME = 'Courier'
+FONT_STYLE = QFont.Monospace
+ESCAPE_BUTTONS = [
+    Qt.Key_Return, Qt.Key_Enter, Qt.Key_Left, Qt.Key_Right, Qt.Key_Home, Qt.Key_End,
+    Qt.Key_PageUp, Qt.Key_PageDown, Qt.Key_Delete, Qt.Key_Insert, Qt.Key_Escape
+]
