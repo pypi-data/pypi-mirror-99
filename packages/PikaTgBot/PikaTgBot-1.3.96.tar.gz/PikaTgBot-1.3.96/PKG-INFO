@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: PikaTgBot
+Version: 1.3.96
+Summary: A Secure and Optimized Python-Telethon Based Library For Pikachu UserBot aka Pikabot.
+Home-page: https://github.com/ItzSjDude/PikachuUserbot
+Author: ItzSjDude
+Author-email: Support@ItzSjDude.in
+License: GNU AFFERO GENERAL PUBLIC LICENSE (v3)
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
