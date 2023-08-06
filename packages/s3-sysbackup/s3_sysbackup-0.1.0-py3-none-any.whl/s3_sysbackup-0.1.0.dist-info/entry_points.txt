@@ -1,0 +1,3 @@
+[console_scripts]
+s3-sysbackup = s3_sysbackup.program:main
+
