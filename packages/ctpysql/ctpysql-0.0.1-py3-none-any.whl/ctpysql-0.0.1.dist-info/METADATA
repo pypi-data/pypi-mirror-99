@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ctpysql
+Version: 0.0.1
+Summary: This library is for run MYSQL queries as fast as possible 🚄🔥!
+Home-page: https://github.com/MahyarNV/cautious-pysql
+Author: Mahyar Behzadi
+Author-email: mahyarbhz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: mysql-connector (~=2.2.9)
+Requires-Dist: mysql-connector-python (~=8.0.23)
+
+UNKNOWN
+
+
