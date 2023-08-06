@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyswEOS
+Version: 0.1.8
+Summary: A Python interface for swEOS - Salt-Water (H2O-NaCl) Equation of State
+Home-page: https://www.sweos.info
+Author: Zhikui Guo
+Author-email: zguo@geomar.de
+Maintainer: Zhikui Guo
+Maintainer-email: zguo@geomar.de
+License: GPL License
+Keywords: NaCl H2O IAPWS Hydrothermal seawater
+Platform: Any
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: argparse
+Requires-Dist: colored
+
+pyswEOS
+============
+
+    A Python interface for swEOS - Salt-Water (H2O-NaCl) Equation of State.
+
+`Documentation (development version) <https://www.sweos.info/doxygen>`__ |
+`Contact <https://www.sweos.info>`__ |
+`Try Online <https://www.sweos.info>`__
+
+
+.. placeholder-for-doc-index
+
+
+
