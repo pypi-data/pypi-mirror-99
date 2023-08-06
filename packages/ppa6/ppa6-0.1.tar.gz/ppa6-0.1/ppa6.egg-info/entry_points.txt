@@ -1,0 +1,3 @@
+[console_scripts]
+ppa6 = ppa6.__main__:main
+
