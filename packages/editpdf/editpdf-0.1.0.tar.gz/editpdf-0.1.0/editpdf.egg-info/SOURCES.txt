@@ -1,0 +1,9 @@
+README.md
+metachange.py
+setup.py
+editpdf.egg-info/PKG-INFO
+editpdf.egg-info/SOURCES.txt
+editpdf.egg-info/dependency_links.txt
+editpdf.egg-info/entry_points.txt
+editpdf.egg-info/requires.txt
+editpdf.egg-info/top_level.txt
