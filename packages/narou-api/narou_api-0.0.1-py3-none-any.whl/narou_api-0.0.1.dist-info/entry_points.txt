@@ -1,0 +1,3 @@
+[console_scripts]
+narou_api = narou_api:main
+

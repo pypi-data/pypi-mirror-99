@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: narou-api
+Version: 0.0.1
+Summary: unofficial syosetu.com api library
+Home-page: https://github.com/wyokobe/narou_api
+Author: wyokobe
+Author-email: wyokobe@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# narou_api
+unofficial syosetu.com api library
+
+
