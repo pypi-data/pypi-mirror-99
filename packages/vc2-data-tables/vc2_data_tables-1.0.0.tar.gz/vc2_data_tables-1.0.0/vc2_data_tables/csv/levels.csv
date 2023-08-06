@@ -1,0 +1,16 @@
+# VC-2 Levels,,
+,# Used as enum names,# Used in error messages
+index,name,standard
+# Generalized levels,,
+0,unconstrained,SMPTE ST 2042-2:2017
+1,sub_sd,“
+2,sd,“
+3,hd,“
+4,d_cinema_2k,“
+5,d_cinema_4k,“
+6,uhdtv_4k,“
+7,uhdtv_8k,“
+# Specialized levels,,
+64,progressive_hd_over_sdi,SMPTE RP 2047-1:2009
+65,hd_over_sd_sdi,SMPTE RP 2047-3:2016
+66,uhd_over_hd_sdi,SMPTE RP 2047-5:2017
