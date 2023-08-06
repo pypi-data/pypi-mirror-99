@@ -1,0 +1,8 @@
+kt_pullback/__init__.py,sha256=0D6srYi9ejPUnwpjVmDoJB-oMuBqPSiP50LPRoM8G0I,23
+kt_pullback/cli.py,sha256=T9HSnxo5qvhy-s6RBPJhuLAGnHiD4XhEL5xm3BadJVg,1047
+kt_pullback/kt_pullback.py,sha256=z3v7MknB7iNBtVVVBe-qWNpeEeQQaVxyJCu08UcJqco,500
+kt_pullback-0.2.0.dist-info/entry_points.txt,sha256=pFw-ZDmSYHmE3iVqNhXWEMtsSJTn_VXWf4dDmwfglhs,42
+kt_pullback-0.2.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+kt_pullback-0.2.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+kt_pullback-0.2.0.dist-info/METADATA,sha256=j8N9hIW9xyzkFLwrwzEn3q0DEK9cwbEayZiAX0cfxmU,1018
+kt_pullback-0.2.0.dist-info/RECORD,,
