@@ -1,0 +1,9 @@
+README.md
+setup.py
+spectralpy/__init__.py
+spectralpy/conftest.py
+spectralpy.egg-info/PKG-INFO
+spectralpy.egg-info/SOURCES.txt
+spectralpy.egg-info/dependency_links.txt
+spectralpy.egg-info/requires.txt
+spectralpy.egg-info/top_level.txt

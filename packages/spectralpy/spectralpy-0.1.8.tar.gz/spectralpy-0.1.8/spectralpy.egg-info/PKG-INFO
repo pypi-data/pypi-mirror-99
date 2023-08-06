@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: spectralpy
+Version: 0.1.8
+Summary: Spectral processing functionality for python, built on pandas and numpy
+Home-page: https://github.com/edmundsj/spectralpy
+Author: Jordan Edmunds
+Author-email: edmundsj@uci.edu
+License: MIT
+Description: spectralpy 
+        ================================
+        [![Build](https://github.com/edmundsj/spectralpy/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/edmundsj/spectralpy/actions/workflows/python-package-conda.yml) [![docs](https://github.com/edmundsj/spectralpy/actions/workflows/build-docs.yml/badge.svg)](https://github.com/edmundsj/spectralpy/actions/workflows/build-docs.yml) [![codecov](https://codecov.io/gh/edmundsj/spectralpy/branch/main/graph/badge.svg?token=SmwvOS3MfV)](https://codecov.io/gh/edmundsj/spectralpy)
+        
+        This module is for computing spectral properties of interest for EE
+        applications (i.e. single-sided power spectral density)
+        
+        Documentation can be found
+        [here](https://edmundsj.github.io/spectralProcessing/)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
