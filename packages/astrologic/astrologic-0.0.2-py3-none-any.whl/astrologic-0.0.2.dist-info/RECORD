@@ -1,0 +1,13 @@
+astrologic/__init__.py,sha256=ckWj-8B5jVyAxJn0_sJGXRVGtkRJXdHtJRGN-qPWqT8,178
+astrologic/function_text.py,sha256=hBvlk-OaQfanNqztpJ3YDSTD3WNIWKMegPO2-N7Liug,2218
+astrologic/decorators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astrologic/decorators/always_true.py,sha256=6zTyxQGMlG54uIPsnCfpTDQf3VBH0MKNnIEFD0qumRU,106
+astrologic/decorators/base.py,sha256=CkykNCBN1cGzUSR1EX7IGyo8twLPAWYd1g8xc8FV8LQ,2386
+astrologic/decorators/if_switcher.py,sha256=s4WNGIvv1ZjKcA_R02zoyhy8amV-bMc2zKO7oIaFKpE,766
+astrologic/decorators/inline.py,sha256=AVfyIe189opZzyWYKtUUinwkg7WU-wEe-_GwLCH68s0,3856
+astrologic/decorators/tail_recursion_optimization.py,sha256=tiu8An8a_U8yMnx0_jMAPjQEB2loccfu2pdEguCTY68,2842
+astrologic-0.0.2.dist-info/LICENSE,sha256=gg1H4QQWUEgrjJdU3KCEbUny3w6njUUSr15OMJM8qog,1067
+astrologic-0.0.2.dist-info/METADATA,sha256=gXDO2ejarYxUoRto16g85SvYMlTIcWwdCcqRO1WBezI,20737
+astrologic-0.0.2.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+astrologic-0.0.2.dist-info/top_level.txt,sha256=FIKSEiBPvWeDSIaWNM9nrzRZQh4Yf9iTAh24RsHjpys,11
+astrologic-0.0.2.dist-info/RECORD,,
