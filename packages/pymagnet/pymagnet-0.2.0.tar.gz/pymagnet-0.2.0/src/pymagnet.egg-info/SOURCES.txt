@@ -1,0 +1,37 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+examples/.DS_Store
+examples/1D Examples.ipynb
+examples/2D Examples.ipynb
+examples/3D Examples Matloblib.ipynb
+examples/3D_Renders.ipynb
+examples/Misc Examples.ipynb
+examples/Readme Examples.ipynb
+src/pymagnet/__init__.py
+src/pymagnet/__main__.py
+src/pymagnet/fit.py
+src/pymagnet.egg-info/PKG-INFO
+src/pymagnet.egg-info/SOURCES.txt
+src/pymagnet.egg-info/dependency_links.txt
+src/pymagnet.egg-info/requires.txt
+src/pymagnet.egg-info/top_level.txt
+src/pymagnet/magnets/__init__.py
+src/pymagnet/magnets/_assembly2.py
+src/pymagnet/magnets/_fields.py
+src/pymagnet/magnets/_magnet.py
+src/pymagnet/magnets/_magnet1.py
+src/pymagnet/magnets/_magnet2.py
+src/pymagnet/magnets/_magnet3.py
+src/pymagnet/magnets/_quaternion.py
+src/pymagnet/magnets/_routines.py
+src/pymagnet/magnets/_routines2.py
+src/pymagnet/magnets/_routines3.py
+src/pymagnet/plots/__init__.py
+src/pymagnet/plots/_plot1.py
+src/pymagnet/plots/_plot2.py
+src/pymagnet/plots/_plot3.py
