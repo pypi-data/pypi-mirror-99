@@ -1,0 +1,20 @@
+CMD_LIST = {}
+PikaAsst = {}
+CMD_HELP = {}
+Pika_Cmd = {}
+INT_PLUG = ""
+LOAD_PLUG = {}
+COUNT_MSG = 0
+USERS = {}
+COUNT_PM = {}
+LASTMSG = {}
+const = {}
+ISAFK = False
+AFKREASON = None
+pikalog = getLogger(__name__)
+CHROME_DRIVER = "/usr/bin/chromedriver"
+GOOGLE_CHROME_BIN = "/usr/bin/google-chrome"
+BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
+BF_BOT = os.environ.get("TG_BOT_TOKEN_BF_HER")
+BF_BOTNAME = os.environ.get("TG_BOT_USER_NAME_BF_HER")
+# Db initialisation
