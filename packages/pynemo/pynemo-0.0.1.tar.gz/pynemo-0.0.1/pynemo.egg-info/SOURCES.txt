@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pynemo/__init__.py
+pynemo.egg-info/PKG-INFO
+pynemo.egg-info/SOURCES.txt
+pynemo.egg-info/dependency_links.txt
+pynemo.egg-info/requires.txt
+pynemo.egg-info/top_level.txt
