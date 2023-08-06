@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ulula
+Version: 0.1.0
+Summary: A lightweight 2D hydro solver
+Home-page: https://bitbucket.org/bdiemer/ulula
+Author: Benedikt Diemer
+Author-email: diemer@umd.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires: numpy
+Requires: scipy
+Requires: six
+
+Ulula
+=====
+
+Ulula is an ultra-lightweight 2D hydro code for teaching purposes. The code is designed to be as
+short as possible and easy to understand, while not compromising on performance. 
+
+You can find the code in the `Public BitBucket Repository <https://bitbucket.org/bdiemer/ulula/src/master/>`_;
+Ulula is in the testing phase and comes with absolutely zero warranty! Please see the 
+`Documentation <https://bdiemer.bitbucket.io/ulula/>`_ for more information.
+
+Main Developer: Benedikt Diemer (diemer@umd.edu)
+
+License:        MIT. Copyright (c) 2020-2021
+
+
