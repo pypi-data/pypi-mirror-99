@@ -1,0 +1,12 @@
+PyQt5>=5.12
+docker[tls]~=4.3.1
+
+[cli]
+r2g>=1.0.5
+requests~=2.24.0
+selenium~=3.141.0
+
+[test]
+pytest
+pytest-cov
+codecov
