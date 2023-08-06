@@ -1,0 +1,12 @@
+mph/__init__.py,sha256=WLacR9L7-dw6HeUIOmiMa3FBGgg6v6P9VG0NlIk4icw,447
+mph/client.py,sha256=pcc_LpZeDHSxgXzXZ60RC-rCcGna-hRW2HPVobOBSsw,11743
+mph/config.py,sha256=xOUCcwXdP4Z-OnqoU_t1Uxix8Ee_He3IoAaLKJKwGsY,791
+mph/discovery.py,sha256=YbBKh4tYWQRd5JSwydSmV6SbL27boh9m2hbiRJpFzCw,15188
+mph/model.py,sha256=2zOzMjt9yU0GGrTk6fl_tTGyILCUF5jtwkvfQRN0Mv8,25433
+mph/server.py,sha256=pfiDzs9JG3_Q6-DQ9gpnhlx5LHY3vX4hN_oa_uWSg9E,6300
+mph/session.py,sha256=mbiJSnYaB0GvrCFVjYaM8p94BYMSODmJSiC_SC2JUvQ,6734
+mph/tools.py,sha256=ffBggzucy7j3DPPNb1ypQsXrakmX0nZ4sEFMOvAkrxU,4858
+MPh-0.9.1.dist-info/license.txt,sha256=NTbuW4CPu2i6gti7skvKgVdMUILszoUp7hILXUvwEUs,1093
+MPh-0.9.1.dist-info/WHEEL,sha256=rg7OlU52oY2dGF9P6-vT77byVLtCIN4joChV1HjAybU,81
+MPh-0.9.1.dist-info/METADATA,sha256=LUjZY2-MVjyi-AZMTVZtZTjOA3lN2Ln_YwhCFEiv2sg,2858
+MPh-0.9.1.dist-info/RECORD,,
