@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: pitchtools
+Version: 1.0.0
+Summary: Utilities to convert between midinotes, frequency and notenames
+Home-page: https://github.com/gesellkammer/pitchtools
+Author: Eduardo Moguillansky
+Author-email: eduardo.moguillansky@gmail.com
+License: UNKNOWN
+Description: 
+        This module provides a set of functions to work with musical pitch. It enables
+        to convert between frequenies, midinotes and notenames
+        
+Platform: UNKNOWN
