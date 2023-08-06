@@ -1,0 +1,15 @@
+README.md
+setup.py
+semeval/__init__.py
+semeval/common.py
+semeval/download.py
+semeval/embeddings.py
+semeval/server.py
+semeval.egg-info/PKG-INFO
+semeval.egg-info/SOURCES.txt
+semeval.egg-info/dependency_links.txt
+semeval.egg-info/not-zip-safe
+semeval.egg-info/requires.txt
+semeval.egg-info/top_level.txt
+semeval/serviecs/__init__.py
+semeval/serviecs/embeddings.py

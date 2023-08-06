@@ -1,0 +1,8 @@
+mikatools
+argparse
+numpy
+gensim
+fastapi
+uvicorn
+ujson
+requests
