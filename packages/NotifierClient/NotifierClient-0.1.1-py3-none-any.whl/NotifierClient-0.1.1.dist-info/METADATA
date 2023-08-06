@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: NotifierClient
+Version: 0.1.1
+Summary: Python client for QwhaleNotifier
+Home-page: https://notifier.qwhale.ml
+Author: Yehoyada.s
+Author-email: hvuhsg6@gmail.com
+License: MIT
+Keywords: API,Client,Qwhale,qWhale,client,notification,application
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# NotifierClient
+
+### install
+```shell script
+$> pip install NotifierClient
+```
+
+### Use example
+```python
+from notifier_client import NotifierClient
+
+app_token = "<Token>"
+client = NotifierClient(app_token)
+res = client.send_notification(
+    user_token="<USER_TOKEN>",
+    title="My first notification",
+    body="message body",
+    url="https://qwhale.com", # optional
+    data={"Extra": "data"} # optional {string: string}
+)
+print(res) # -> {"message": "ok"} or {"message": "Invalid Token."}
+```
+
+
