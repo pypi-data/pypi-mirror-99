@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: TouchPortal-API
+Version: 1.1.2
+Summary: Touch Portal API for Python
+Home-page: https://github.com/KillerBOSS2019/TouchPortal-API
+Author: Damien
+Author-email: DamienWeiFen@gmail.com
+License: MIT
+Description: This is TouchPortal API made it easily to create TouchPortal Plugins. Here is some examples
+        
+        ```python
+        import TouchPortalAPI # Import the api
+        
+        TPClient = TouchPortalAPI.Client('YourPluginID') # Initiate the client (replace YourPluginID with your ID)
+        
+        @TPClient.on('info')  # This Will run once You've connected to TouchPortal
+        def OnStart(client, data):
+            # You must provide 2 parm in the function or else it will give error 
+            print('I am Connected!', data)
+            
+            
+            TPClient.stateUpdate("(Your State ID)", "State Value") # This if you want to update a dymic states in TouchPortal
+            
+            updateStates = [
+                {
+                    "id": "(Your State ID)",
+                    "value": "(The Value You wanted)"
+                },
+                {
+                    "id": "(Your 2nd State ID)",
+                    "value": "(The Value You wanted)"
+                }
+            ]
+            TPClient.stateUpdateMany(updateStates) # Or You can create an list with however many state you want and use this function to send them all
+            
+        @TPClient.on('action')  # This manages when you press a button in TouchPortal it will send here in json format
+        def Actions(client, data):
+            print(data)
+        
+        @TPClient.on('settingUpdate') # This Function will get called Everytime when someone changes something in your plugin settings
+        def Settings(client, data):
+            print('received data from settings!')
+            
+        @TPClient.on('closePlugin') # When TouchPortal sends close Plugin message it will run this function
+        def shutDown(client, data):
+            print('Received shutdown message!')
+            TPClient.disconnect() # This is how you disconnect once you received the closePlugin message
+            
+            
+        TPClient.connect() # Connect to Touch Portal
+        ```
+        
+        Change Log
+        ==========
+        
+        1.1.2 (3/24/2021)
+        -------------------
+        - Fix: typo for setup.py
+        
+        1.1.1 (3/24/2021)
+        -------------------
+        Fixes
+        
+        - Fix: fixed the readme for typo's
+        - Fix: keywords
+        - Fix: updateStates now only updates when value changed
+        - Fix: createState now update the state if it already exists
+        - Fix: updateSetting now only updates when value has changed
+        
+        1.1.0 (3/23/2021)
+        -------------------
+        - Fixed some typos
+        
+        1.0 (3/23/2021)
+        -------------------
+        # Feautres
+        - Easy to use
+        - createState
+        - removeState
+        - choice Update
+        - choice Update Specific
+        - setting Update
+        - state Update
+        - State Update Many
+        - Converting image to base64
+        - Update check
+        
+Keywords: TouchPortal,API,Plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
