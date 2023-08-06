@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: brook
+Version: 0.0.7
+Summary: Custom python library
+Home-page: https://gitlab.com/sh0416/brook
+Author: Seonghyeon Lee
+Author-email: seonghyeon.drew@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/sh0416/brook/issues
+Project-URL: Source, https://github.com/sh0416/brook/
+Keywords: sample,setuptools,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# brook
+
+Document: [https://sh0416.gitlab.io/brook/index.html](https://sh0416.gitlab.io/brook/index.html)
+
+## 패키징 - gitlab에서 직접 배포 (wheel로 배포)
+
+```
+python setup.py test
+python setup.py bdist_wheel
+```
+
+* package: [https://packaging.python.org/tutorials/packaging-projects/](https://packaging.python.org/tutorials/packaging-projects/)
+* setup.cfg: [https://packaging.python.org/guides/distributing-packages-using-setuptools/](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
+* sample: [https://github.com/pypa/sampleproject](https://github.com/pypa/sampleproject)
+
+## 문서화 - read the docs
+
+* [https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html)
+
+## 타입 검사 - mypy
+
+* mypy: [https://mypy.readthedocs.io/en/stable/config_file.html#](https://mypy.readthedocs.io/en/stable/config_file.html#)
+
+## 테스트 - pytest
+
+## 포맷팅 - black, isort
+
+
+
