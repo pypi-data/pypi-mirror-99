@@ -1,0 +1,9 @@
+README.md
+setup.py
+gpu4u/__init__.py
+gpu4u/__main__.py
+gpu4u.egg-info/PKG-INFO
+gpu4u.egg-info/SOURCES.txt
+gpu4u.egg-info/dependency_links.txt
+gpu4u.egg-info/requires.txt
+gpu4u.egg-info/top_level.txt
