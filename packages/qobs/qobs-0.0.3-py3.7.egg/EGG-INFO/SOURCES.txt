@@ -1,0 +1,8 @@
+setup.py
+src/qobs/__init__.py
+src/qobs/qobs.py
+src/qobs.egg-info/PKG-INFO
+src/qobs.egg-info/SOURCES.txt
+src/qobs.egg-info/dependency_links.txt
+src/qobs.egg-info/requires.txt
+src/qobs.egg-info/top_level.txt
