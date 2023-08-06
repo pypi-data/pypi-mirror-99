@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: Altair-Smartworks-SDK
+Version: 0.0.1
+Summary: Digital Model API (WIP)
+Home-page: UNKNOWN
+Author: Smartworks SDK TF
+Author-email: 
+License: UNKNOWN
+Description:     Digital Model API documentation  # noqa: E501
+            
+Keywords: OpenAPI,OpenAPI-Generator,Digital Model API (WIP)
+Platform: UNKNOWN
+Requires-Python: >=3.6
