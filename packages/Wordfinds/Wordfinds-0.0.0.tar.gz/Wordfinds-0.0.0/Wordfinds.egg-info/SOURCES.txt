@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+Wordfinds.egg-info/PKG-INFO
+Wordfinds.egg-info/SOURCES.txt
+Wordfinds.egg-info/dependency_links.txt
+Wordfinds.egg-info/requires.txt
+Wordfinds.egg-info/top_level.txt
+wordfinds/__init__.py
+wordfinds/array.py
+wordfinds/main.py
+wordfinds/raw.py
+wordfinds/utils.py
+wordfinds/wordbank.py
