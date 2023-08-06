@@ -1,0 +1,8 @@
+README.md
+setup.py
+PDPParser/__init__.py
+PDPParser/pdpparser.py
+PDPParser.egg-info/PKG-INFO
+PDPParser.egg-info/SOURCES.txt
+PDPParser.egg-info/dependency_links.txt
+PDPParser.egg-info/top_level.txt
