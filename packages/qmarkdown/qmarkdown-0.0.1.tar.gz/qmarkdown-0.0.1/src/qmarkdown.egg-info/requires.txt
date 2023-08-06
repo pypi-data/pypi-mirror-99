@@ -1,0 +1,6 @@
+seaborn
+matplotlib
+markdown
+alioss
+pandas
+numpy
