@@ -1,0 +1,16 @@
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_contact_company/README.rst,sha256=YbVYzOEv7iZ-vevPVHiNAnefJp9JRsp-GZcsT_4piUs,2112
+odoo/addons/shopinvader_contact_company/__init__.py,sha256=8hvjIKC_N5LAHJOBsvQncVgcsrNOzqlsHYyRG9VbdZQ,48
+odoo/addons/shopinvader_contact_company/__manifest__.py,sha256=LI4P2Ss_Nh7xoeLH3Lg9nFHqBOCJR6tbZiu-g2bizh0,728
+odoo/addons/shopinvader_contact_company/readme/CONTRIBUTORS.rst,sha256=6qpKjTpgBW91tbknF5-HavHWlYAnxjCxNUmjf8FUJqk,47
+odoo/addons/shopinvader_contact_company/readme/DESCRIPTION.rst,sha256=YCVqeDqRxVo1-fZGB9AQ7R_JUm-du1Z_nBNr8IKJHTU,207
+odoo/addons/shopinvader_contact_company/services/__init__.py,sha256=wdJZXeVzqVKiaOtufRrFJrdO-xOjYGvBo60di2J9TNQ,47
+odoo/addons/shopinvader_contact_company/services/address.py,sha256=An8Fshl4wVJQogzMAzpc8Lh5HjNxmk0--wIRdj88oqA,882
+odoo/addons/shopinvader_contact_company/static/description/index.html,sha256=vrbwHF1fbzJ3PVb4zrmWk1I9iUB_nFnei6ERcdfLqdE,11093
+odoo/addons/shopinvader_contact_company/tests/__init__.py,sha256=AzfjXJKTui5lmjsMAZUJ39g2SCcbi3LK_86kdSjAHmA,52
+odoo/addons/shopinvader_contact_company/tests/test_address.py,sha256=H2CTlqnmFsaXCnaC8Nbinyt0BKBmVSMM4UkeG9WIFVM,777
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7.dist-info/METADATA,sha256=KTpgCxZAR2Jgaha6n7S5KIIhBekZJUNZP_blwF7ctl0,2686
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_contact_company-10.0.1.0.0.99.dev7.dist-info/RECORD,,
