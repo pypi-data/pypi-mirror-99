@@ -1,0 +1,6 @@
+click
+TableauScraper==0.1.2
+
+[test]
+pytest
+vcrpy
