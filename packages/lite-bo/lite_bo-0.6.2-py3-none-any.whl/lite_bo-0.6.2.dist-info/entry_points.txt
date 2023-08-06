@@ -1,0 +1,3 @@
+[console_scripts]
+litebo = litebo.__main__:main
+
