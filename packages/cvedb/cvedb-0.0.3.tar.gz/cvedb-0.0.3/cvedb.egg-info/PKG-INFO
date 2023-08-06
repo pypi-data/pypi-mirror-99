@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cvedb
+Version: 0.0.3
+Summary: Yet another CVE database
+Home-page: https://github.com/trailofbits/cvedb
+Author: Trail of Bits
+License: LGPL-3.0-or-later
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Provides-Extra: dev
