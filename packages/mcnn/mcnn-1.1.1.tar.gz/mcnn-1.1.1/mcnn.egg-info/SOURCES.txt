@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mcnn/__init__.py
+mcnn/make.py
+mcnn.egg-info/PKG-INFO
+mcnn.egg-info/SOURCES.txt
+mcnn.egg-info/dependency_links.txt
+mcnn.egg-info/requires.txt
+mcnn.egg-info/top_level.txt
