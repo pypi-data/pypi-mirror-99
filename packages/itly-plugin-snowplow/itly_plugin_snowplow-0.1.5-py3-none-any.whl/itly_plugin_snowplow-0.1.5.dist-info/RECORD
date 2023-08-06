@@ -1,0 +1,5 @@
+itly_plugin_snowplow/__init__.py,sha256=aW_3DxT_91P13w5c2VkWuXX_1SOog3VxrkAzwpBl0DE,62
+itly_plugin_snowplow/_snowplow_plugin.py,sha256=BprS4wiNtoBW2O0gouRHAkzuZjnNEvxi7o5_ih-BOeI,3729
+itly_plugin_snowplow-0.1.5.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+itly_plugin_snowplow-0.1.5.dist-info/METADATA,sha256=HbRzZo7lk8nsy_WA1HH1o3uVVJpa9WAlI1Isl_T0QCw,568
+itly_plugin_snowplow-0.1.5.dist-info/RECORD,,
