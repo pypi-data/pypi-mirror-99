@@ -1,0 +1,15 @@
+ossapi/__init__.py,sha256=it8X8lS9HhajIUDDCxod-B8GwoZagVXeIwI1F1Jffpo,527
+ossapi/endpoints.py,sha256=uiSb4hahGVxTkDgO7-9izcJlILukQ06YL41NSvcTdOk,1125
+ossapi/enums.py,sha256=yKdGcWDLjv2La22o4KCWr3MrEbmBs30AZsMwe5-P08U,8696
+ossapi/exceptions.py,sha256=pvjZYBnhKOJJGG14B_IU1yMuwUkHbiA-Yg2r762IwH0,227
+ossapi/mod.py,sha256=ZH-dlR9dFmDFLSuisFILRLaTasA9Ia0N74ngQtBABsE,11943
+ossapi/models.py,sha256=vmVqbCoEEGEuEjK0YtYDgueX7bs4fjD4IQT2IO16OmM,13721
+ossapi/ossapi.py,sha256=RetVNIy39XYd3STED5_via9ThR-vzfHWTimsmmAse1w,4391
+ossapi/ossapiv2.py,sha256=7_wlKtNuzwZ_t9Wn35EC7Tpsx3Py-c7t9ZIP91lHT20,22221
+ossapi/utils.py,sha256=5ZFFIGYt_mQeccdg2tApNNjEPZNMbBsIjyb7jNhRBU8,2741
+ossapi/version.py,sha256=Z5rZc62ATnH6MM9yYEsdmO0_6n4bjY9JvT_sAUdiEIU,27
+ossapi-2.0.0b1.dist-info/LICENSE,sha256=Vyh5wPqf1Lg4iEB9m-sJjsrwwiuF6nc8fFTQtGKY8ak,1068
+ossapi-2.0.0b1.dist-info/METADATA,sha256=z0tP90RAoZfTmg1GI-FDs7ENmRPTb3X7t4wsXA-pQi4,3027
+ossapi-2.0.0b1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ossapi-2.0.0b1.dist-info/top_level.txt,sha256=MinEY_eqP9LUjXO5S415JGYpaLCBEQHAOt4gfiSyVos,7
+ossapi-2.0.0b1.dist-info/RECORD,,
