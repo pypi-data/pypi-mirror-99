@@ -1,0 +1,15 @@
+community_detection/GN.py,sha256=4yuNZC_bZ_SnBrM9VUDoqXrfmtfqh4goy5A_HfIBGA0,1195
+community_detection/LPA.py,sha256=a9rEx4wIXGAIQQkCSfPR-HtoGPiyBVQsw-MoEseHVE8,1768
+community_detection/__init__.py,sha256=U08d_UV96ybM3hHsUUckbb9dPE6yRGIoeOwA65JadoA,957
+community_detection/community_utility.py,sha256=_EBCsgYb36IkEMzA6hYvPXX7u7TVKBKPjKk2sZSgJJg,5854
+community_detection/em.py,sha256=Uw2h1882OlcJYIAHO3notSuWx0XIoNxJvqcpMj9RR0w,2946
+community_detection/fast_unfolding.py,sha256=Wg40sTFeB9BsKkdHENSvYpr38vr3vxsKHj2N1zv51eE,1850
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_em.py,sha256=-zDWj52zn_4HnoRMtQttVygfNJjPSDycouhG3iBmRq0,812
+tests/test_fast_unfolding.py,sha256=3bF2ZAUrfO-jaJxJIUjRkCBPdyP66yDLLrRuj9dLP_w,2098
+tests/test_gn.py,sha256=75IPlx5MavrbCLGUCAKI5mqLGnhJiepGaI_NJD8TA9c,1030
+tests/test_lpa.py,sha256=N1wSu_VyNo-93EehWl63MbnYChPcYrMPY1gIYo9CU3s,965
+community_detection-0.0.12.dist-info/METADATA,sha256=k58NRooXfSOGsnUWXscT_KkLB0sXhdLRFMcPa8ys0_I,1379
+community_detection-0.0.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+community_detection-0.0.12.dist-info/top_level.txt,sha256=Zbxi5ozyl5ciH-2ZXiGYPDYMXbIGvxpWoQ024LaSpgU,26
+community_detection-0.0.12.dist-info/RECORD,,
