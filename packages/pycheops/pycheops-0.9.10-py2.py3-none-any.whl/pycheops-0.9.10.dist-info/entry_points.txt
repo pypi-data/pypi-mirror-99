@@ -1,0 +1,4 @@
+[console_scripts]
+combine = pycheops.combine:main
+make_xml_files = pycheops.make_xml_files:main
+
