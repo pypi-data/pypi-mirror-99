@@ -1,0 +1,10 @@
+beautifulsoup4
+bottle
+chardet
+google-api-python-client
+lxml
+ply
+pytest
+python-dateutil
+python-magic
+requests
