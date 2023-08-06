@@ -1,0 +1,10 @@
+planck_2020_hillipop/__init__.py,sha256=EGHtkh2V51Rnarno3JPu_6nMXRN7by6FpyDAJvHTMHg,140
+planck_2020_hillipop/_version.py,sha256=S7Zn1ocuTfkHgIrhmWPQ193gn-v5P9N6aj-GtrwjTaY,497
+planck_2020_hillipop/foregrounds.py,sha256=rd-b2pJcW5sv6rTUerRYmk9FSJTk8iREycOKuHQdPPc,8582
+planck_2020_hillipop/hillipop.py,sha256=TErSNUu2o-20FZ8cBG-_6tkGu6zZ44gEYg_g4MA4Qvk,17102
+planck_2020_hillipop/tools.py,sha256=W1yaDLBVWYTtlk0UwBgN4gOLi7ejg1msXwyUU0u3T_4,5801
+planck_2020_hillipop-0.1.2.dist-info/LICENSE,sha256=cVtHF6g3P3THdVzbNpxu757sagIpJUhFPW1dsF2s6VA,35081
+planck_2020_hillipop-0.1.2.dist-info/METADATA,sha256=I6Qw6ZhtImwAnmccpU5fXLVZtYUae9uR5HP-7vkYU90,4782
+planck_2020_hillipop-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+planck_2020_hillipop-0.1.2.dist-info/top_level.txt,sha256=OoQh_7qyxdzIaNu-PQnTdi_-9p0k6K68zpl_FhANHNo,21
+planck_2020_hillipop-0.1.2.dist-info/RECORD,,
