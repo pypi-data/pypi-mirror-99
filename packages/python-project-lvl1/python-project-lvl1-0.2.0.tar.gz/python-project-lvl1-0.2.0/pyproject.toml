@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "python-project-lvl1"
+version = "0.2.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [
+  { include = "brain_games" },
+]
+
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+
+[tool.poetry.dependencies]
+python = "^3.8.5"
+prompt = "^0.4.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
