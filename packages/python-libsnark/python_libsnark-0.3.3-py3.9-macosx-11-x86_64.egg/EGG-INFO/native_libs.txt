@@ -1,0 +1,1 @@
+libsnark/_alt_bn128.cpython-39-darwin.so
