@@ -1,0 +1,80 @@
+{%- extends "basic/layout.html" %}
+
+{# Adjust around the version skew #}
+{%- if sphinx_version >= "4.0" %}
+{% set _root = root_doc %}
+{%- else %}
+{% set _root = master_doc %}
+{%- endif %}
+
+{# Remove the relational side bars like alabaster #}
+{%- block relbar1 %}{%- endblock %}
+{%- block relbar2 %}{%- endblock %}
+
+{%- block header %}
+<div class="wrapper-masthead">
+  <div class="kpruss-container">
+    <header class="masthead clearfix">
+      {%- if theme_avatar %}
+        <a href="{{ pathto(_root) }}" class="site-avatar"><img src="{{ theme_avatar }}" /></a>
+      {%- endif %}
+
+      <div class="site-info">
+        {%- if theme_author %}
+          <h1 class="site-name">
+            <a href="{{ pathto(_root) }}">{{ theme_author }}</a>
+          </h1>
+          <p class="site-description">{{ project }}</p>
+        {%- else %}
+          <h1 class="site-name">
+            <a href="{{ pathto(_root) }}">{{ project }}</a>
+          </h1>
+        {%- endif %}
+      </div>
+
+      {# A location for additional top navigation #}
+      {%- block headernav %} {%- endblock %}
+    </header>
+  </div>
+</div>
+{% endblock %}
+
+{# Place the sidebar before the document container #}
+{%- block sidebar1 %}{{ sidebar() }}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
+
+{# Place the main document inside a container #}
+{%- block document %}
+<div class="kpruss-container">
+  {{ super() }}
+</div>
+{%- endblock %}
+
+{%- block footer %}
+  <div class="wrapper-footer">
+    <div class="kpruss-container">
+      <footer class="footer">
+        {%- if theme_email %}
+          <a href="mailto: {{ theme_email }}">
+              <img src="{{ pathto('_static/email.svg', 1) }}" alt="email">
+          </a>
+        {%- endif %}{% if theme_github %}
+          <a href="https://github.com/{{ theme_github }}">
+              <img src="{{ pathto('_static/github.svg', 1) }}" alt="GitHub">
+          </a>
+        {%- endif %}
+        {%- if theme_linkedin %}
+          <a href="https://linkedin.com/in/{{ theme_linkedin }}">
+              <img src="{{ pathto('_static/linkedin.png', 1) }}" alt="LinkedIn" width="40px" height="40px">
+          </a>
+        {%- endif %}
+        {%- if theme_stackoverflow %}
+          <a href="https://stackoverflow.com/users/{{ theme_stackoverflow }}">
+              <img src="{{ pathto('_static/stackoverflow.svg', 1) }}" alt="Stack Overflow">
+          </a>
+        {%- endif %}
+        {{ super() }}
+      </footer>
+    </div>
+  </div>
+{%- endblock %}
