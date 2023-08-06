@@ -1,0 +1,3 @@
+[console_scripts]
+lwh=lwh.cli.cli:app
+
