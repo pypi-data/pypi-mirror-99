@@ -1,0 +1,3 @@
+PyOpenSSL
+Pycrypto
+setuptools
