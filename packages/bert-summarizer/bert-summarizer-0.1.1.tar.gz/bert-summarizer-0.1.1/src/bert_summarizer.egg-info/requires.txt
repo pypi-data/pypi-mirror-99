@@ -1,0 +1,2 @@
+ginza>=4.0.5
+transformers[ja,torch]>=4.0.0
