@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: mkrunner
+Version: 0.0.1
+Summary: mkrunner package
+Home-page: https://github.com/lzjun567/zhihu-api
+Author: zhushiwei
+Author-email: 1396516176@qq.com
+License: MIT License
+Description: #基于httprunner封装
+Platform: UNKNOWN
