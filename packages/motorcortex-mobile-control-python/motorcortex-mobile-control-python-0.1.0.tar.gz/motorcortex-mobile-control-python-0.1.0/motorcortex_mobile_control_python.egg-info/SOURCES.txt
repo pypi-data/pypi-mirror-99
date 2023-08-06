@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mobile_control/__init__.py
+mobile_control/mobile_platform.py
+mobile_control/pose.py
+mobile_control/position_mode.py
+mobile_control/system_defs.py
+mobile_control/velocity_mode.py
+motorcortex_mobile_control_python.egg-info/PKG-INFO
+motorcortex_mobile_control_python.egg-info/SOURCES.txt
+motorcortex_mobile_control_python.egg-info/dependency_links.txt
+motorcortex_mobile_control_python.egg-info/requires.txt
+motorcortex_mobile_control_python.egg-info/top_level.txt
