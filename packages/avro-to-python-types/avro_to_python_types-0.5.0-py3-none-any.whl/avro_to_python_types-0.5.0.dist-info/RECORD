@@ -1,0 +1,11 @@
+avro_to_python_types/__init__.py,sha256=_emP3dt1v0-nwntkPdcx0ZDkSfDRI6n8WHfd_SceOe0,130
+avro_to_python_types/constants.py,sha256=4RIyoC0o4bxvV8HyImxditvbn9d4kuL509wQf0nMikM,22
+avro_to_python_types/generate_typed_dict.py,sha256=9LnpgqAxPi9Org8kChgP5hN_jOEfBRAcn0B4l_nLc0E,1420
+avro_to_python_types/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+avro_to_python_types/schema_mapping.py,sha256=POVAtwBUC1NO1nE-SZ4T7L-kXxZBMPJJKSEodGMe3Gk,411
+avro_to_python_types/typed_dict_from_schema.py,sha256=7kjUDf4pEe9wdmE82iRd5axq6LjzebxzCMq-cUEdfIA,5349
+avro_to_python_types-0.5.0.dist-info/entry_points.txt,sha256=e_Wlqzh4XGPTleMNaMHlg7zw36Zc1C2tvfAWrJVCJiA,69
+avro_to_python_types-0.5.0.dist-info/LICENSE.txt,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+avro_to_python_types-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+avro_to_python_types-0.5.0.dist-info/METADATA,sha256=vk_9sZ5vlv4C8OFEuuuaPrs9Glinr2x3-dNAWhygZ9s,3739
+avro_to_python_types-0.5.0.dist-info/RECORD,,
