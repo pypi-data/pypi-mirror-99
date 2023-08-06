@@ -1,0 +1,3 @@
+[console_scripts]
+devshell=py_rcon_shell.rcon_shell:rcon_shell_cmdloop
+
