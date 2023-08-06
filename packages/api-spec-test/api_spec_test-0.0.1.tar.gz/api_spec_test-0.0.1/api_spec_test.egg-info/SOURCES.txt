@@ -1,0 +1,8 @@
+README.md
+setup.py
+api_spec_test/__init__.py
+api_spec_test/drf.py
+api_spec_test.egg-info/PKG-INFO
+api_spec_test.egg-info/SOURCES.txt
+api_spec_test.egg-info/dependency_links.txt
+api_spec_test.egg-info/top_level.txt
