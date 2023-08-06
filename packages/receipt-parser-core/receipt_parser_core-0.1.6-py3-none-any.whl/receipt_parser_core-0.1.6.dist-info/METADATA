@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: receipt-parser-core
+Version: 0.1.6
+Summary: A supermarket receipt parser written in Python using tesseract OCR
+License: Apache-2.0
+Author: Matthias Endler
+Author-email: matthias-endler@gmx.net
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=8.0.1,<9.0.0)
+Requires-Dist: numpy (>=1.19.4,<2.0.0)
+Requires-Dist: opencv-python (>=4.4.0,<5.0.0)
+Requires-Dist: pytesseract (>=0.3.6,<0.4.0)
+Requires-Dist: python-dateutil (>=2.8.1,<3.0.0)
+Requires-Dist: pyyaml (>=5.3,<6.0)
+Requires-Dist: terminaltables (>=3.1.0,<4.0.0)
+Requires-Dist: wand (>=0.6.3,<0.7.0)
