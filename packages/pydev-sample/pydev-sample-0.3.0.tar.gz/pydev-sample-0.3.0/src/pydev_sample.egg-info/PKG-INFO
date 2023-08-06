@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pydev-sample
+Version: 0.3.0
+Summary: Sample package to illustrate Python development
+Home-page: https://github.com/mortonne/pydev_sample
+Author: Neal Morton
+Author-email: mortonne@gmail.com
+License: UNKNOWN
+Description: # pydev-sample
+        [![PyPI version](https://badge.fury.io/py/pydev-sample.svg)](https://badge.fury.io/py/pydev-sample)
+        
+        Sample project to illustrate Python development.
+        
+        This project downloads information about cities from Wikipedia and uses machine learning to analyze their similarity.
+        
+        ## Installation
+        
+        To install the latest stable version from PyPI:
+        
+        ```bash
+        pip install pydev-sample
+        ```
+        
+        To install the development version from GitHub:
+        
+        ```bash
+        pip install git+git://github.com/mortonne/pydev_sample
+        ```
+        
+        ## Todo
+        
+        * Add documentation example.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
