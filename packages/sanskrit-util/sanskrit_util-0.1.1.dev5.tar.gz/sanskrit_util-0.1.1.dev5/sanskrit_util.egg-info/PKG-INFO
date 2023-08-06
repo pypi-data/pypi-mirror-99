@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: sanskrit-util
+Version: 0.1.1.dev5
+Summary: Sanskrit utilities
+Home-page: https://github.com/avinashvarna/sanskrit_util
+Author: Sanskrit Programmers
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/avinashvarna/sanskrit_util/issues
+Description: Sanskrit
+        ========
+        
+        For usage of this library, and for other tasks such as `sandhi` joining/splitting,
+        sentence parsing, etc., please see the
+        [sanskrit_parser](https://github.com/kmadathil/sanskrit_parser/) library.
+        
+        The `sandhi` and `sounds` modules are not fully featured currently,
+        and are unlikely to be developed due to the availability of better maintained packages.
+        
+        ## Original description:
+        
+        This is a general-purpose package for dealing with Sanskrit data of any kind.
+        It currently operates at and below the word level and below, with modules like:
+        
+        - `query`, for accessing linguistic data
+        - `sandhi`, for applying and undoing sandhi changes
+        - `sounds`, for testing sounds and getting the meter of a phrase
+        
+        Soon the package will move up to the word and sentence levels. Once there, it
+        will provide tools for inflecting, analyzing, tagging, and parsing Sanskrit.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
