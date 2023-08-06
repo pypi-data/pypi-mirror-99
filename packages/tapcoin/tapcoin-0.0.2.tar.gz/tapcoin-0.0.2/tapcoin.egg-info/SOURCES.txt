@@ -1,0 +1,7 @@
+README.md
+setup.py
+tapcoin.egg-info/PKG-INFO
+tapcoin.egg-info/SOURCES.txt
+tapcoin.egg-info/dependency_links.txt
+tapcoin.egg-info/requires.txt
+tapcoin.egg-info/top_level.txt
