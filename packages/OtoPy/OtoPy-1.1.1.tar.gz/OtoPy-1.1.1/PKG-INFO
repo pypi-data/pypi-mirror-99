@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: OtoPy
+Version: 1.1.1
+Summary: A Otoma Systems developed Lib, Containing useful Tools
+Home-page: https://github.com/Otoma-Systems/OtoPy.git
+Author: Otoma Systems
+Author-email: otoma.system@gmail.com
+License: BSD 2-clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
