@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tangle-node-editor
+Version: 1.0.9a0
+Summary: A Python based node editor
+Home-page: https://www.github.com/nielsvaes/tangle
+Author: Niels Vaes
+Author-email: nielsvaes@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: ez-qt
+Requires-Dist: ez-settings
+Requires-Dist: ez-utils
+Requires-Dist: PySide2
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: pyqtgraph
+
+# 🌴 Tangle
+
+Tangle is a Python node editor. It's still very much WIP and should not be used to do anything, really :)
+
+## Installation
+
+You can grab the pip package like this:
+
+`pip install tangle-node-editor`
+
+Type `tangle` to start the editor
+
+
