@@ -1,0 +1,11 @@
+certifi
+charset
+cssselect
+idna
+lxml
+parsel
+pymysql
+requests
+six
+urllib3
+w3lib
