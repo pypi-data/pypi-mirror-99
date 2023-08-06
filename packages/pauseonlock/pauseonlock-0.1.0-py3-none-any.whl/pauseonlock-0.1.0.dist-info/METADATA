@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: pauseonlock
+Version: 0.1.0
+Summary: Pause/Resume your media players on screen locking/unlocking
+Home-page: https://github.com/folixg/python-pauseonlock
+Author: Thomas Goldbrunner
+Author-email: thomas.goldbrunner@posteo.de
+License: MIT
+Project-URL: Bug Tracker, https://github.com/folixg/python-pauseonlock/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Desktop Environment :: Gnome
+Classifier: Topic :: Desktop Environment :: K Desktop Environment (KDE)
+Classifier: Topic :: Desktop Environment :: Screen Savers
+Classifier: Topic :: Desktop Environment :: Window Managers :: XFCE
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Requires-Dist: dbus-next (>=0.2.2)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-bugbear ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+
+#############
+Pause on lock
+#############
+
+Automatically pause your music player when the screen gets
+locked and resume plaback, once the screen is unlocked again.
+
+This is basically `the bash script with the same name`_ rewritten in Python.
+The benefit of the Python version is that it *should* detect the screensaver
+you use and running player(s) automatically, as long, as they are visible on
+the D-Bus. So, no need for ever growing arrays of supported applications in
+the code and no configuration necessary.
+
+Installation
+============
+Pause on Lock is available on pypi, so all you have to do is run ``pip install pauseonlock``.
+
+Usage
+=====
+After installing, simply run ``pauseonlock``. There will be no output, since the
+program is intended to be run in the background. For maximum convenience configure
+your desktop environment to start ``pauseonlock`` every time you log in.
+
+Dependencies
+============
+The only dependency is `python-dbus-next`_ which itself has no further dependencies.
+
+.. _the bash script with the same name: https://github.com/folixg/pause-on-lock
+.. _python-dbus-next: https://github.com/altdesktop/python-dbus-next
+
+
