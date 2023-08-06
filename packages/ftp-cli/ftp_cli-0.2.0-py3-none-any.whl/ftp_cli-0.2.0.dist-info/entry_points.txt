@@ -1,0 +1,3 @@
+[console_scripts]
+ftp-cli=ftp_cli.main:app
+
