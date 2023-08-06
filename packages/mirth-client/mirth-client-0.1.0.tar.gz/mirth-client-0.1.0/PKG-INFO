@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: mirth-client
+Version: 0.1.0
+Summary: Basic Python interface for Mirth Connect
+Author: Joel Collins
+Author-email: joel.collins@renalregistry.nhs.uk
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: httpx (>=0.17.1,<0.18.0)
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Requires-Dist: sphinx (>=3,<4); extra == "docs"
+Requires-Dist: xmltodict (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+# python-mirth-client
+
+A basic async Python interface for Mirth Connect
+
+## Usage example
+
+Assuming running within IPython or as part of an async application with an event-loop set up.
+
+```python
+from mirth_client import MirthAPI
+from pprint import pprint
+
+async with MirthAPI("https://mirth.ukrdc.nhs.uk/api") as api:
+    await api.login("****", "****")
+
+    # Check out list of channels
+    for channel in await api.get_channels():
+        print(f"ID: {channel.id}")
+        print(f"Name: {channel.name}")
+        print("")
+
+    # Get stats for a channel
+    s = await channels["3cdefad2-bf10-49ee-81c9-8ac6fd2fed67"].get_statistics()
+    pprint(s)
+
+    # Check channel for failed messages
+    e = await channels["3cdefad2-bf10-49ee-81c9-8ac6fd2fed67"].get_messages(status="error")
+    pprint(e)
+
+    # Get 10 most recent events
+    e = await api.get_events(10)
+    pprint(e)
+```
+
