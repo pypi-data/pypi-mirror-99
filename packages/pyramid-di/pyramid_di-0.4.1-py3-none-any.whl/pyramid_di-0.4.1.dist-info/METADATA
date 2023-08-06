@@ -1,0 +1,169 @@
+Metadata-Version: 2.1
+Name: pyramid-di
+Version: 0.4.1
+Summary: Dependency injection stuff for Pyramid
+Home-page: http://github.com/tetframework/pyramid_di
+Author: Antti Haapala
+Author-email: antti.haapala@anttipatterns.com
+License: UNKNOWN
+Keywords: web wsgi bfg pylons pyramid
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Description-Content-Type: text/markdown
+Requires-Dist: pyramid (<2.0,>=1.7)
+Requires-Dist: pyramid-services (<2.0,>=1.1)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
+pyramid_di
+==========
+
+Easier service location and dependency injection for Pyramid.
+
+Usage
+-----
+
+Define services:
+
+```python
+# app/services/__init__.py
+
+from .my import MyService
+from .another import AnotherService
+```
+
+```python
+# app/services/my.py
+from pyramid_di import service, RequestScopedBaseService, autowired
+
+@service()
+class MyService(RequestScopedBaseService):
+    def my_method(self):
+        return 'foobar'
+```
+
+```python
+# app/services/another.py
+from pyramid_di import service, RequestScopedBaseService, autowired
+from .my import MyService
+
+@service()
+class AnotherService(RequestScopedBaseService):
+    dependency = autowired(MyService)
+
+    def another_method(self):
+        return self.dependency.my_method()
+```
+
+Setup when creating the Pyramid app:
+
+```python
+# Pyramid setup code:
+from pyramid.config import Configurator
+
+with Configurator() as config:
+    config.include('pyramid_di')
+    config.scan_services('app.services')
+```
+
+
+Use in views:
+
+```python
+from pyramid_di import autowired
+from pyramid.view import view_config
+from my.services import AnotherService
+
+class MyViews:
+    service = autowired(AnotherService)
+
+    def __init__(self, request):
+        # self.request is required for autowired to work
+        self.request = request
+
+    @view_config(route_name='some_view', renderer='json')
+    def some_view(self):
+        return self.service.another_method()  # 'foobar'
+
+# alternatively, without class-based views:
+
+@view_config(route_name='some_view')
+def some_view(request):
+    service = request.find_service(AnotherService)
+    service.another_method()  # 'foobar'
+```
+
+Mocking services for testing
+----------------------------
+
+```python3
+class MockService:
+    def another_method(self):
+        return 'mocked'
+
+def test_views():
+    request = DummyRequest()
+    my_views = MyViews(request)
+    my_views.service = MockService()
+    assert my_views.some_view() == 'mocked'
+```
+
+Development
+-----------
+
+Dev setup:
+```
+$ python3 -m venv venv
+$ pip install -e '.[dev]'
+```
+
+Tests are run with pytest:
+```
+$ pytest
+```
+
+
+Changes
+=======
+
+0.4.1
+=====
+
+* 2021-03-19 The request-scoped services were not quite correct as they could have been instantiated twice
+  - once in the traversal-time and the other time after context was set. Now the context is forced to None
+  for the request-scoped services.
+
+0.4.0
+=====
+
+* 2020-11-25 Python 3.6+ only; better test coverage, fixes for scoped services, deprecations and so forth.
+
+0.3.dev0
+========
+
+* 2020-11 Unreleased development version
+
+
+0.2.dev0
+========
+
+* 2020-11-04 Require Python 3 for cleaner code
+
+0.1
+===
+
+* 2018-03-26 Initial release
+
+
