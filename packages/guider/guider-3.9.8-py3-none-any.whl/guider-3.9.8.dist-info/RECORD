@@ -1,0 +1,10 @@
+guider/__init__.py,sha256=knFLODMX0EG5CXIGkk8buFaVHYLbaBoV2Em-sJTZZ0k,43
+guider/__main__.py,sha256=vo2krM6FB5khgNYBwl7ua_5iC8Ba7S9JSAgphlV-U20,109
+guider/guider.py,sha256=suXfdLuCG-IPzZyi_q-t8fWxdp0X0zOAj3xYIN2OgXo,2670069
+guider/test.py,sha256=Pa60LAZZuPluuY_XQMbCLAvKMKrRuz4Xb6BLwYJwN7E,1442
+guider-3.9.8.data/scripts/guider,sha256=xBdcWdGRHxatUwh3gGifGPPpSgnS04BX9gFqCRqac-c,905
+guider-3.9.8.dist-info/LICENSE,sha256=wDzqAntLQORAL6vQhVdzZyfsPVvFStZKtkct5DIZjK0,18047
+guider-3.9.8.dist-info/METADATA,sha256=9YdUJ3ojvvsx8yaV4PxsHUaOzy0nS2yoByBiGNtThlY,961
+guider-3.9.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+guider-3.9.8.dist-info/top_level.txt,sha256=sgdGUO_6dEIhPi2szbOM45P7aAfhNqLmDV1K5acLTfg,7
+guider-3.9.8.dist-info/RECORD,,
