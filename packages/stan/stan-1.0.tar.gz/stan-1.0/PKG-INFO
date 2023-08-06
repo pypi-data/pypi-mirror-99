@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: stan
+Version: 1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Allen Riddell
+Author-email: riddella@indiana.edu
+License: UNKNOWN
+Description: You tried to install "stan". The package for PyStan is named "pystan".
+Platform: UNKNOWN
