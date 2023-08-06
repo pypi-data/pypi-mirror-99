@@ -1,0 +1,3 @@
+[console_scripts]
+poker = game_theory_optimal_poker:__main__.play
+

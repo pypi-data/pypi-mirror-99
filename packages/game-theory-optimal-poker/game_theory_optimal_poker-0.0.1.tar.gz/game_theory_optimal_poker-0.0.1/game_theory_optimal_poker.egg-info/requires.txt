@@ -1,0 +1,9 @@
+flask
+flask_socketio
+eventlet
+
+[:platform_system != "Windows"]
+gunicorn
+
+[:platform_system == "Windows"]
+waitress
