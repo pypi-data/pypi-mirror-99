@@ -1,0 +1,10 @@
+README.md
+setup.py
+nerdo/__init__.py
+nerdo/main.py
+nerdo.egg-info/PKG-INFO
+nerdo.egg-info/SOURCES.txt
+nerdo.egg-info/dependency_links.txt
+nerdo.egg-info/entry_points.txt
+nerdo.egg-info/requires.txt
+nerdo.egg-info/top_level.txt
