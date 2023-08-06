@@ -1,0 +1,14 @@
+include *.md
+recursive-include question_creation_app_realpython *.png
+recursive-include question_creation_app_realpython *.ico
+recursive-include question_creation_app_realpython *.txt
+recursive-include question_creation_app_realpython *.js
+recursive-include question_creation_app_realpython *.html
+recursive-include question_creation_app_realpython *.json
+recursive-include question_creation_app_realpython *.css
+recursive-include question_creation_app_realpython *.map
+recursive-include question_creation_app_realpython *.woff
+recursive-include question_creation_app_realpython *.woff2
+recursive-include question_creation_app_realpython *.ttf
+recursive-include question_creation_app_realpython *.ttf
+recursive-include question_creation_app_realpython *.sqlite3
