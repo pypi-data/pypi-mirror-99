@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+src/barracuda/__init__.py
+src/barracuda/activations.py
+src/barracuda/factory.py
+src/barracuda/functions.py
+src/barracuda/losses.py
+src/barracuda/models.py
+src/barracuda/network.py
+src/barracuda/neurons.py
+src/barracuda/neurontype.py
+src/pybarracuda.egg-info/PKG-INFO
+src/pybarracuda.egg-info/SOURCES.txt
+src/pybarracuda.egg-info/dependency_links.txt
+src/pybarracuda.egg-info/requires.txt
+src/pybarracuda.egg-info/top_level.txt
