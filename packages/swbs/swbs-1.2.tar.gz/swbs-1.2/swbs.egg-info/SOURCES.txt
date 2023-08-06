@@ -1,0 +1,7 @@
+setup.py
+swbs/__init__.py
+swbs.egg-info/PKG-INFO
+swbs.egg-info/SOURCES.txt
+swbs.egg-info/dependency_links.txt
+swbs.egg-info/requires.txt
+swbs.egg-info/top_level.txt
