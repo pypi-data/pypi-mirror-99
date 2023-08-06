@@ -1,0 +1,13 @@
+README.md
+setup.py
+server_data_server/__init__.py
+server_data_server/__main__.py
+server_data_server.egg-info/PKG-INFO
+server_data_server.egg-info/SOURCES.txt
+server_data_server.egg-info/dependency_links.txt
+server_data_server.egg-info/entry_points.txt
+server_data_server.egg-info/requires.txt
+server_data_server.egg-info/top_level.txt
+server_data_server/template/app.py
+server_data_server/template/config.json
+server_data_server/template/requirements.txt

@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {
+      "route_url": "/server-info",
+      "title": "Server Info",
+      "commands": [
+        {
+          "title": "RAM Information (free -m)",
+          "command": ["free", "-m"]
+        },
+        {
+          "title": "Storage Information (df)",
+          "command": ["df"]
+        }
+      ]
+    }
+  ]
+}
