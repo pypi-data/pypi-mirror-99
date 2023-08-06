@@ -1,0 +1,8 @@
+pyksolve-0.0.11.dist-info/RECORD,,
+pyksolve-0.0.11.dist-info/WHEEL,sha256=IwQrWLNiLCjPP8vG6_XLMNFzMgovxBNWbRQhme5U9CE,112
+pyksolve-0.0.11.dist-info/top_level.txt,sha256=5A7TwEXx-8hVb7fDG8yW_iqY5dBjRG-N12Ikuh8vMJY,9
+pyksolve-0.0.11.dist-info/LICENSE,sha256=MiioRGtCU5zrdrRWkU2ryNSfuIpytKok5rLqaxWHRws,1070
+pyksolve-0.0.11.dist-info/METADATA,sha256=DAPe__uLTRbp9_k2-QKoikOkxMeF7bpX9THl1msGAUA,1047
+pyksolve/deferred.py,sha256=onZxhMhmP3LDLvrCotiixVESg16aJAUF6yNk_ibM8Fo,7481
+pyksolve/__init__.py,sha256=WW3R78ObzOPCtB2ODiagwShOzAY5VyxGKBYjSNIUFlQ,1200
+pyksolve/solver.cpython-38-aarch64-linux-gnu.so,sha256=ONSutOO2dipp_5euksYWPgQboyNCimu3iFyNBWk8S3Q,1368464
