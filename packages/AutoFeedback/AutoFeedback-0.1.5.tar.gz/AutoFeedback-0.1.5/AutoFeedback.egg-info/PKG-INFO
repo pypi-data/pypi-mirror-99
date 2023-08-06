@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: AutoFeedback
+Version: 0.1.5
+Summary: check basic python exercises with pretty feedback
+Home-page: https://github.com/abrown41/AutoFeedback
+Author: Andrew Brown
+Author-email: andrew.brown@qub.ac.uk
+License: MIT
+Description: # AutoFeedback: Assignment Checker
+        
+        Suite of python utilities for testing and providing usable feedback introductory
+        python assignments, specifically relevant to mathematics and the use of numpy
+        and matplotlib.
+        
+        # How to use AutoFeedback
+        
+        AutoFeedback can be installed via pip
+        
+            pip install AutoFeedback
+        
+        The suite provides three basic checkers: one each for checking variables,
+        functions and matplotlib.pyplot figures. These are invoked 
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
