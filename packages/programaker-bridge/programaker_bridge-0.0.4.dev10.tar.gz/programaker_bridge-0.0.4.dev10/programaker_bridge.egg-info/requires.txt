@@ -1,0 +1,8 @@
+websocket_client
+xdg
+
+[full]
+sqlalchemy
+
+[storage]
+sqlalchemy
