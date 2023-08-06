@@ -1,0 +1,14 @@
+build
+dist
+*.egg*
+*.pyc
+*.pyo
+*.swp
+*.pdf
+_build
+html-output
+htmldoc
+_tweet-real.py
+html-docs
+doc/topics.rst
+.tox
