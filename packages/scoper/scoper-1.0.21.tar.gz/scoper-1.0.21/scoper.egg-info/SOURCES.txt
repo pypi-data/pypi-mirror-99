@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+scoper.py
+setup.cfg
+setup.py
+scoper.egg-info/PKG-INFO
+scoper.egg-info/SOURCES.txt
+scoper.egg-info/dependency_links.txt
+scoper.egg-info/top_level.txt
