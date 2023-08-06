@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: juntagrico_assignment_request
+Version: 1.3.0
+Summary: juntagrico_assignment_request
+Home-page: https://github.com/juntagrico/juntagrico-assignment-request
+Author: juntagrico
+Author-email: info@juntagrico.org
+License: LPGLv3
+Description: # juntagrico_assignment_request
+        
+        [![juntagrico-ci](https://github.com/juntagrico/juntagrico-assignment-request/actions/workflows/juntagrico-ci.yml/badge.svg?branch=main&event=push)](https://github.com/juntagrico/juntagrico-assignment-request/actions/workflows/juntagrico-ci.yml)
+        [![Maintainability](https://api.codeclimate.com/v1/badges/6c1a453b157b9395a858/maintainability)](https://codeclimate.com/github/juntagrico/juntagrico-assignment-request/maintainability)
+        [![Test Coverage](https://api.codeclimate.com/v1/badges/6c1a453b157b9395a858/test_coverage)](https://codeclimate.com/github/juntagrico/juntagrico-assignment-request/test_coverage)
+        [![image](https://img.shields.io/pypi/v/juntagrico_assignment_request.svg)](https://pypi.python.org/pypi/juntagrico_assignment_request)
+        [![image](https://img.shields.io/pypi/l/juntagrico_assignment_request.svg)](https://pypi.python.org/pypi/juntagrico_assignment_request)
+        [![image](https://img.shields.io/pypi/pyversions/juntagrico_assignment_request.svg)](https://pypi.python.org/pypi/juntagrico_assignment_request)
+        [![image](https://img.shields.io/pypi/status/juntagrico_assignment_request.svg)](https://pypi.python.org/pypi/juntagrico_assignment_request)
+        [![image](https://img.shields.io/pypi/dm/juntagrico_assignment_request.svg)](https://pypi.python.org/pypi/juntagrico_assignment_request/)
+        [![image](https://img.shields.io/github/last-commit/juntagrico/juntagrico_assignment_request.svg)](https://github.com/juntagrico/juntagrico_assignment_request)
+        [![image](https://img.shields.io/github/commit-activity/y/juntagrico/juntagrico_assignment_request)](https://github.com/juntagrico/juntagrico_assignment_request)
+        [![Requirements Status](https://requires.io/github/juntagrico/juntagrico-assignment-request/requirements.svg?branch=main)](https://requires.io/github/juntagrico/juntagrico-assignment-request/requirements/?branch=main)
+        
+        This is an extension for juntagrico. You can find more information about juntagrico here
+        (https://github.com/juntagrico/juntagrico)
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8 
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
