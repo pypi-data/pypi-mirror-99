@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/clld_ipachart_plugin/__init__.py
+src/clld_ipachart_plugin/models.py
+src/clld_ipachart_plugin/util.py
+src/clld_ipachart_plugin.egg-info/PKG-INFO
+src/clld_ipachart_plugin.egg-info/SOURCES.txt
+src/clld_ipachart_plugin.egg-info/dependency_links.txt
+src/clld_ipachart_plugin.egg-info/not-zip-safe
+src/clld_ipachart_plugin.egg-info/requires.txt
+src/clld_ipachart_plugin.egg-info/top_level.txt
