@@ -1,0 +1,9 @@
+ai/backend/accelerator/cuda/__init__.py,sha256=HVx0XJJ9OYFWBBPBCUFYb8Nm43ChPg9GZLh_dkxh9qI,22
+ai/backend/accelerator/cuda/nvidia.py,sha256=sTBidorfLZBGCnBZ9dNiAMhtkqQfPK10fZyTWTTynW0,19015
+ai/backend/accelerator/cuda/plugin.py,sha256=r6n-cxDJqMK-56nrHcXJfnK7Ll4SM_PpdVbtI-6B1uI,16038
+backend.ai_accelerator_cuda-2.0.1.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+backend.ai_accelerator_cuda-2.0.1.dist-info/METADATA,sha256=p7TBci4ymRatGb4QZUqud4i99wO6uofOswNwnn1C-c0,2754
+backend.ai_accelerator_cuda-2.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+backend.ai_accelerator_cuda-2.0.1.dist-info/entry_points.txt,sha256=Y4FckB9bIdnWexX3cu29sFF9lnqVuqED_t15ospBBwM,82
+backend.ai_accelerator_cuda-2.0.1.dist-info/top_level.txt,sha256=TJAp5TUfTUztZSUatbygths7CWRrFfnOMCtZ-DIcw6c,3
+backend.ai_accelerator_cuda-2.0.1.dist-info/RECORD,,
