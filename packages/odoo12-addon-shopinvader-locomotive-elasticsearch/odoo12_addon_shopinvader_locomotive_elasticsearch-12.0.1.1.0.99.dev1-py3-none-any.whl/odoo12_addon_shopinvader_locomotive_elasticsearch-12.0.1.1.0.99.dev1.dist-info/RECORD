@@ -1,0 +1,10 @@
+odoo/addons/shopinvader_locomotive_elasticsearch/__init__.py,sha256=36_fT8TwPLJFxSf_FSD5f5M9ci3O2lr6whnhdmeS0fk,24
+odoo/addons/shopinvader_locomotive_elasticsearch/__manifest__.py,sha256=AOlH9QI_nP3f_cY1HJWIvIiej-ceAzZzaMFOm5xx_6c,509
+odoo/addons/shopinvader_locomotive_elasticsearch/component/__init__.py,sha256=vlePasnxZ1qeZZyqt4VA-JTyXeByxaH0gF-Hsgtdm3I,45
+odoo/addons/shopinvader_locomotive_elasticsearch/component/shopinvader_site_export_mapper.py,sha256=ajVyXQRz9s79cANIxI1NCAzO3dVNxFEJu8WHglAH0G4,524
+odoo/addons/shopinvader_locomotive_elasticsearch/tests/__init__.py,sha256=jLmo4BLdEg7hJwzheorudSOgaqml-9_1Ih4rD2UQsyw,45
+odoo/addons/shopinvader_locomotive_elasticsearch/tests/test_search_engine_site_export.py,sha256=bpO2p-iEnByKLOVDy0VMoVoJV_clBr1WF1VXil6u6v0,2919
+odoo12_addon_shopinvader_locomotive_elasticsearch-12.0.1.1.0.99.dev1.dist-info/METADATA,sha256=_LeAS1lPdTGNvx_YPTGUkbnMJOw8yyIyb27u0kzdqKU,647
+odoo12_addon_shopinvader_locomotive_elasticsearch-12.0.1.1.0.99.dev1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo12_addon_shopinvader_locomotive_elasticsearch-12.0.1.1.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_shopinvader_locomotive_elasticsearch-12.0.1.1.0.99.dev1.dist-info/RECORD,,
