@@ -1,0 +1,5 @@
+numpy>=1.9
+pylab
+matplotlib
+scipy
+scikit-image
