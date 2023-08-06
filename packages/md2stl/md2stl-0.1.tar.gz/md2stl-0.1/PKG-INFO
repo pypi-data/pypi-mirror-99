@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: md2stl
+Version: 0.1
+Summary: Python tools to convert a MD simulation file into a .stl file ready to be 3d printed.
+Home-page: https://github.com/vivien-walter/md2stl
+Author: Vivien WALTER
+Author-email: walter.vivien@gmail.com
+License: GPL3.0
+Download-URL: https://github.com/vivien-walter/md2stl/archive/v0.1.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN

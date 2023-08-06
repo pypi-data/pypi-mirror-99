@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+md2stl/__init__.py
+md2stl/build_structure.py
+md2stl/extract_molecules.py
+md2stl/make_objects.py
+md2stl/system_class.py
+md2stl.egg-info/PKG-INFO
+md2stl.egg-info/SOURCES.txt
+md2stl.egg-info/dependency_links.txt
+md2stl.egg-info/requires.txt
+md2stl.egg-info/top_level.txt
