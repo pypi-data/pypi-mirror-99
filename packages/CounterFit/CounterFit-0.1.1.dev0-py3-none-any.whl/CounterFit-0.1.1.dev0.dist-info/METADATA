@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: CounterFit
+Version: 0.1.1.dev0
+Summary: A virtual IoT hardware simulator.
+Home-page: https://github.com/jimbobbennett/CounterFit
+Author: Jim Bennett
+Maintainer: Jim Bennett
+License: MIT
+Project-URL: Documentation, https://github.com/jimbobbennett/CounterFit
+Project-URL: Source Code, https://github.com/jimbobbennett/CounterFit
+Project-URL: Issue Tracker, https://github.com/jimbobbennett/CounterFit/issues
+Project-URL: Twitter, https://twitter.com/JimBobBennett
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==1.1.2)
+Requires-Dist: Flask-SocketIO (==5.0.1)
+Requires-Dist: eventlet (==0.30.2)
+
+UNKNOWN
+
+
