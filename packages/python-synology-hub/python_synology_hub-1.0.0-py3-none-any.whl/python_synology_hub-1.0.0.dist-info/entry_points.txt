@@ -1,0 +1,3 @@
+[console_scripts]
+python-synology=synology_dsm.__main__:main
+
