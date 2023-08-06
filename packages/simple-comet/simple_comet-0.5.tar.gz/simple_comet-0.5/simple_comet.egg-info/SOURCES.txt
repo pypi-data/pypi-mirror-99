@@ -1,0 +1,16 @@
+setup.py
+bin/simple_comet
+simple_comet/__init__.py
+simple_comet/channel.py
+simple_comet/client.py
+simple_comet/client_channel.py
+simple_comet/comet_server.py
+simple_comet/config.py
+simple_comet/connection.py
+simple_comet/held_connection_channel.py
+simple_comet/simple_comet.py
+simple_comet.egg-info/PKG-INFO
+simple_comet.egg-info/SOURCES.txt
+simple_comet.egg-info/dependency_links.txt
+simple_comet.egg-info/requires.txt
+simple_comet.egg-info/top_level.txt
