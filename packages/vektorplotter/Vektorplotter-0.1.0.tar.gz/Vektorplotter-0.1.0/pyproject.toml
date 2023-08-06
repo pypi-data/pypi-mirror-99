@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "Vektorplotter"
+version = "0.1.0"
+description = "A simple program for basic features of analytical geometry."
+authors = ["Benjamin Brumm", "Finn Brunke", "Julian Kagermann"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+plotly = "^4.14.3"
+numpy = "^1.20.1"
+PyQt5 = "^5.15.4"
+PyQtWebEngine = "^5.15.4"
+pandas = "^1.2.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
