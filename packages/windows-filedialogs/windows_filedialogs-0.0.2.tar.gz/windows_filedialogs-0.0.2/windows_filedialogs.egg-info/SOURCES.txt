@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+filedialogs/__init__.py
+filedialogs/filedialogs.py
+windows_filedialogs.egg-info/PKG-INFO
+windows_filedialogs.egg-info/SOURCES.txt
+windows_filedialogs.egg-info/dependency_links.txt
+windows_filedialogs.egg-info/top_level.txt
