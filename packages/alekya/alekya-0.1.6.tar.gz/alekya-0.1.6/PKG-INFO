@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: alekya
+Version: 0.1.6
+Summary: Build tree structure on number of classes and functions in a file or folder, bugs fixes
+Home-page: UNKNOWN
+Author: upendra kumar
+Author-email: melbkumar@gmail.com
+License: MIT
+Description: Alekya Tree visualization
+        
+        change log
+        ==========================
+        
+        
+        0.0.1 (31/10/2020)
+        -------------------
+        -First Release
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
