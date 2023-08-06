@@ -1,0 +1,13 @@
+bigfix_prefetch/__init__.py,sha256=-uIxBkSZNZKUOQH51zUUdOKvz2rWBTapHbDun_l28d4,500
+bigfix_prefetch/prefetch.py,sha256=YF-6aMD-rkE3kdxn6iwiEJvyw2VCeJBQncIgrDneqe0,2812
+bigfix_prefetch/prefetch_from_dictionary.py,sha256=ojW5RrvxQVvEK55q9sKUx41Kxt2_pZNpK4XdFvmHlwE,2786
+bigfix_prefetch/prefetch_from_file.py,sha256=Qx-LkiTB_t5LHoT-LS0DwUJwXq5NxE2PI38l9JjTq-4,1982
+bigfix_prefetch/prefetch_from_url.py,sha256=YMPs8ef2ZtTWJBsPsvn8HWlcur4kkN7C3Z94SLMaJes,3887
+bigfix_prefetch/prefetch_parse.py,sha256=R24_f3yzHucBn2jjKC57Ruzuh1jQ-bfj4gy63Vsjps4,3287
+bigfix_prefetch/prefetch_validate.py,sha256=tMbB64-BLv7GUkxPdaOoczJ5mrEzcHXHD9UzXqOBbp0,6023
+bigfix_prefetch/prefetches_have_matching_hashes.py,sha256=a0TPLz9pXe7lb4Go58M4bkh8fZcwRhWNz0avU8960bw,4354
+bigfix_prefetch-0.0.6.dist-info/LICENSE,sha256=9cen4yLsOsulBFvMq6bvcEF5woeDcCZLBFkBErtAH7o,1063
+bigfix_prefetch-0.0.6.dist-info/METADATA,sha256=flP5lmEScg_1fGcfpymVYgf0YnHc57wULrI8-JXH7EQ,957
+bigfix_prefetch-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bigfix_prefetch-0.0.6.dist-info/top_level.txt,sha256=WgRg4lkYCPHSi-0jzQHME2OyFKdV6ZPlWSMTmOdPCgI,16
+bigfix_prefetch-0.0.6.dist-info/RECORD,,
