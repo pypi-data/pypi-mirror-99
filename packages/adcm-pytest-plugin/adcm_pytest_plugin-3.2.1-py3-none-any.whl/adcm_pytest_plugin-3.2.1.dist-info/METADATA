@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: adcm-pytest-plugin
+Version: 3.2.1
+Summary: pytest adcm launch arguments and fixtures library
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Requires-Dist: pytest
+Requires-Dist: docker
+Requires-Dist: adcm-client (>=2020.02.11.12)
+Requires-Dist: allure-pytest
+Requires-Dist: requests
+Requires-Dist: version-utils
+Requires-Dist: ifaddr
+Requires-Dist: retry
+Requires-Dist: deprecated
+
+UNKNOWN
+
+
