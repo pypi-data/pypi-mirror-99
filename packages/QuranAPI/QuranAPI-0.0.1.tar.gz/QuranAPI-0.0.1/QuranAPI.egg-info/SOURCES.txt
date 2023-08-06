@@ -1,0 +1,8 @@
+README.md
+setup.py
+QuranAPI/__init__.py
+QuranAPI.egg-info/PKG-INFO
+QuranAPI.egg-info/SOURCES.txt
+QuranAPI.egg-info/dependency_links.txt
+QuranAPI.egg-info/requires.txt
+QuranAPI.egg-info/top_level.txt
