@@ -1,0 +1,3 @@
+[console_scripts]
+watchstat = watchstat.__main__:main
+

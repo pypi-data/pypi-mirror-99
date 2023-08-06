@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/watchstat/__init__.py
+src/watchstat/__main__.py
+src/watchstat.egg-info/PKG-INFO
+src/watchstat.egg-info/SOURCES.txt
+src/watchstat.egg-info/dependency_links.txt
+src/watchstat.egg-info/entry_points.txt
+src/watchstat.egg-info/top_level.txt
