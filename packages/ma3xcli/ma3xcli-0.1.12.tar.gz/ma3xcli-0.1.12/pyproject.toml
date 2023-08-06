@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "ma3xcli"
+version = "0.1.12"
+description = ""
+authors = ["1v1a3x"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+bleach = "3.3.0"
+certifi = "2020.12.5"
+chardet = "4.0.0"
+click = "7.1.2"
+colorama = "0.4.4"
+docutils = "0.16"
+idna = "2.10"
+importlib-metadata = "3.7.3"
+keyring = "23.0.0"
+packaging = "20.9"
+pkginfo = "1.7.0"
+Pygments = "2.8.1"
+pyparsing = "2.4.7"
+readme-renderer = "29.0"
+requests = "2.25.1"
+requests-toolbelt = "0.9.1"
+rfc3986 = "1.4.0"
+six = "1.15.0"
+tqdm = "4.59.0"
+twine = "3.4.0"
+typer = "0.3.2"
+typing-extensions = "3.7.4.3"
+urllib3 = "1.26.4"
+webencodings = "0.5.1"
+zipp = "3.4.1"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]	
+init-pyenv = 'ma3xcli.init_pyenv:main'
+two = 'ma3xcli.two:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
