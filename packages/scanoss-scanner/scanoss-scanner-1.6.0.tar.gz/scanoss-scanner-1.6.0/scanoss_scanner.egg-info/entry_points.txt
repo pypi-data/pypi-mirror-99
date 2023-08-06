@@ -1,0 +1,3 @@
+[console_scripts]
+scanner.py = scanoss.scanner:main
+
