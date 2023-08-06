@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+anysell/__init__.py
+anysell/config.py
+anysell/main.py
+anysell.egg-info/PKG-INFO
+anysell.egg-info/SOURCES.txt
+anysell.egg-info/dependency_links.txt
+anysell.egg-info/entry_points.txt
+anysell.egg-info/requires.txt
+anysell.egg-info/top_level.txt
+anysell/sellers/__init__.py
+anysell/sellers/base.py
+anysell/sellers/bazos.py
+anysell/sellers/item.py
