@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ftw
+Version: 1.2.4
+Summary: Framework for Testing WAFs
+Home-page: https://www.github.com/coreruleset/ftw
+Author: Chaim Sanders, Zack Allen
+Author-email: zma4580@gmail.com, chaim.sanders@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: waf
+Platform: UNKNOWN
