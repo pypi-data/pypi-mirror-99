@@ -1,0 +1,11 @@
+LICENSE,sha256=FOj8QiBRDTxhLE__ivQwYY9j3KtimYWEqQ_NYtLI4IA,1123
+certbot_dns_corenetworks/__init__.py,sha256=fRXmlW3kMQYdJf1bHJuqrXVBud2WXxstdITIkMq8wBw,70
+certbot_dns_corenetworks/dns_corenetworks.py,sha256=rWmEqSxKDE6_32FDJGJAi9Pgc6W8lzpE_MWmRDcr2CA,8726
+certbot_dns_corenetworks/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_corenetworks/test/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_corenetworks/test/unit/test_dns_corenetwork.py,sha256=jjaCDCG0ahOtgVRbxY3eU74mp5x6LDRH_rmo1udGP-c,2936
+certbot_dns_corenetworks-0.2.1.dist-info/entry_points.txt,sha256=d5lGOY-Z_FyjmO8GoJejqfMgzXTbhLKqTZqcdIzKzt4,92
+certbot_dns_corenetworks-0.2.1.dist-info/LICENSE,sha256=FOj8QiBRDTxhLE__ivQwYY9j3KtimYWEqQ_NYtLI4IA,1123
+certbot_dns_corenetworks-0.2.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+certbot_dns_corenetworks-0.2.1.dist-info/METADATA,sha256=j58u1I7Y-B4mt6AgiTdPs1j4fHQrB7KF55yXnTOKMxk,4373
+certbot_dns_corenetworks-0.2.1.dist-info/RECORD,,
