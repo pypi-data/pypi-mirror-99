@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: HC-SR04
+Version: 0.0.1
+Summary: HC-SR04 Python module via Serial protocol
+Home-page: https://github.com/KKimj/HC-SR04_Python-library
+Author: KKimj
+Author-email: kkimj@hanyang.ac.kr
+License: GPL-3.0 License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Terminals :: Serial
+Classifier: Natural Language :: Korean
