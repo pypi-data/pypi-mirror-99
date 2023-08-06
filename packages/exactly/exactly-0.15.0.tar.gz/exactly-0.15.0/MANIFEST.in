@@ -1,0 +1,6 @@
+include src/default-main-program-runner.py
+include LICENSE
+include COPYRIGHT
+include CHANGELOG.md
+include HOWTO-UPGRADE.md
+recursive-include examples *

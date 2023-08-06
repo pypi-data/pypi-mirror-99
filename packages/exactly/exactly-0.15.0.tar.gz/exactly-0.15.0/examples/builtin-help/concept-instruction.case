@@ -1,0 +1,13 @@
+[setup]
+
+timeout = 10
+
+stdin   = "contents of stdin"
+
+file my-file.txt = "contents of my file"
+
+run % python3 -c :> import sys; sys.stdout.write("Hello world")
+
+[assert]
+
+stdout is-empty

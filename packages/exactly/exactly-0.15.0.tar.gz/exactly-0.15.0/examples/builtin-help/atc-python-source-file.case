@@ -1,0 +1,7 @@
+[conf]
+
+actor = file % python3
+
+[act]
+
+my-python-program.py argument1 "second argument"

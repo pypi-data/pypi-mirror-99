@@ -1,0 +1,31 @@
+[setup]
+
+dir output/good
+dir output/bad
+
+dir input =
+{
+    file a.txt = 'GOOD contents'
+    file b.txt = 'bad contents'
+    dir  sub   = { file c.txt = 'more bad contents' }
+}
+
+[act]
+
+classify-files-by-moving-to-appropriate-dir GOOD input/ output/
+
+[assert]
+
+dir-contents input       : is-empty
+
+dir-contents output/good : matches -full { a.txt : type file }
+
+dir-contents output/bad  : matches -full
+    {
+        b.txt : type file
+        sub   : type dir &&
+                dir-contents matches -full
+                {
+                    c.txt : type file
+                }
+    }
