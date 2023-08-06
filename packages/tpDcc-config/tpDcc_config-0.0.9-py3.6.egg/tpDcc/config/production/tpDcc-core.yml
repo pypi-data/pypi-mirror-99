@@ -1,0 +1,19 @@
+#  Configuration file for tpDcc-core
+
+libs:
+  - resources
+  - unittests
+  - options
+  - curves
+  - datalibrary
+  - nodegraph
+
+tools:
+  - frameless_toggle
+  - hub
+  - renamer
+  - nameit
+  - scripteditor
+  - unittests
+  - datalibrary
+  - nodepipe

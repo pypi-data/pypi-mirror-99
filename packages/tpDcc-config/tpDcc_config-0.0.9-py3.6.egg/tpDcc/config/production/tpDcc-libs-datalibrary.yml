@@ -1,0 +1,24 @@
+# Default database path
+database_path: '{root}/data.db'
+
+# Default metadata path used to store data for each time (tags, colors, etc)
+metadata_path: '{root}/metadata.db'
+
+# Defines where data library settings user data are stored
+settings_path: '{local}/tpDcc-libs-datalibrary/datalibrary.json'
+
+# Defines temporal location used for saving temporal data (such as item or thumbnails)
+temp_path: '{temp}/tpDcc-libs-datalibrary/{user}'
+
+# Maximum walking depth from the root directory where files will be search
+recursive_search_depth: 8
+
+# List of paths to ignore when walking through root directory
+ignore_paths:
+  - '/.'
+
+# Indicates whether or not the DPI functionality is enabled. Useful when working with 4k monitors.
+dpi_enabled: True
+
+# List of custom classes to register
+extra_item_classes: []
