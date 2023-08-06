@@ -1,0 +1,7 @@
+astropy
+lmfit
+matplotlib
+numpy
+scikit-image
+scipy
+tqdm
