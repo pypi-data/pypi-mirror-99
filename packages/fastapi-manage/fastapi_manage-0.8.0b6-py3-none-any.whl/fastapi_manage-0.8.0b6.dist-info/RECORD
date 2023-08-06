@@ -1,0 +1,8 @@
+fastapi_manage/__init__.py,sha256=M9VofTAJJ-gYl8swIlG0SPQVqKefVGJYWhbPPOyAlrQ,25
+fastapi_manage/main.py,sha256=7RROjfeK9wczdm70cLs-uaVDNSG0OoCUlzkPBg0dZjA,43523
+fastapi_manage/redis.py,sha256=7KxgXwqvEVRRcW9R5DWQN7YUBXw5WbKVEV6Cek90eCA,16890
+fastapi_manage-0.8.0b6.dist-info/entry_points.txt,sha256=f2qc_eCEiTr8_s5PXcX7fPV0dNakbg2ln7yz_MKvVNw,58
+fastapi_manage-0.8.0b6.dist-info/LICENSE,sha256=ZkmQsz5yjtDs3vmxhRVMFDcMrIm2nHSxfmwUfN7TLLY,1063
+fastapi_manage-0.8.0b6.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+fastapi_manage-0.8.0b6.dist-info/METADATA,sha256=q_MznWWLFy9pbd3Fz6PwF9O9arIHixfzAjM8Pweblzk,14592
+fastapi_manage-0.8.0b6.dist-info/RECORD,,
