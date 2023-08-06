@@ -1,0 +1,10 @@
+dom_toml/__init__.py,sha256=FU2t4C7agzMpDT7Mu27l-u2KZorSXGu3R7ZtwVTuNUI,5593
+dom_toml/decoder.py,sha256=Y05WNOPUKaoaVLk9azCcw1SoUJcOqTRzaHPdAUE-b8k,1774
+dom_toml/encoder.py,sha256=-oDE9bx0A6ZyPJ5HlPiOBplTPMmlzkUaj5JG4t9bIAA,4820
+dom_toml/parser.py,sha256=GMqtqUzCBF14H_xcPNtf6FgZ9PoMOG8zXv-jWdFfWc4,5325
+dom_toml/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dom_toml-0.2.0.dist-info/LICENSE,sha256=TXanB-tJYmHhByFsynyh-UGwh2VdTVVjbZeFz1utSWc,1064
+dom_toml-0.2.0.dist-info/METADATA,sha256=VXtdTc4L2Ur2npv86ENsdGaau5eMNJl5ldd_LgDjoBI,6726
+dom_toml-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dom_toml-0.2.0.dist-info/top_level.txt,sha256=DNCu-IOZopdCW0dmDxXOJs2zSd4TzTirZjfvy9D8zso,9
+dom_toml-0.2.0.dist-info/RECORD,,
