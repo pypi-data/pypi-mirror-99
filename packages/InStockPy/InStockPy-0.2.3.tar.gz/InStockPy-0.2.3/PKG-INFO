@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: InStockPy
+Version: 0.2.3
+Summary: Checks if an item is in stock at any link based off of specified keywords using selenium and proxys.
+Home-page: https://github.com/Syazvinski/InStockPy
+Author: Stephan Yazvinski
+Author-email: syazivnski@gmail.com
+License: MIT
+Download-URL: https://github.com/Syazvinski/InStockPy/archive/refs/tags/0.2.3tar.gz
+Description: UNKNOWN
+Keywords: In,Stock,Checker,Proxy,Selenium,In Stock,nvidia,bot,scalper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
