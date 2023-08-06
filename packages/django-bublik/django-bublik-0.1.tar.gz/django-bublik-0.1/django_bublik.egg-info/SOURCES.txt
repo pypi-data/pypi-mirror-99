@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bublik/__init__.py
+bublik/model_mixin.py
+bublik/tabl.py
+django_bublik.egg-info/PKG-INFO
+django_bublik.egg-info/SOURCES.txt
+django_bublik.egg-info/dependency_links.txt
+django_bublik.egg-info/top_level.txt
