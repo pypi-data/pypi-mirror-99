@@ -1,0 +1,3574 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* shopinvader
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: shopinvader
+#: model:product.product,description:shopinvader.product_product_39
+#: model:product.product,description:shopinvader.product_product_41
+#: model:product.product,description:shopinvader.product_product_42
+#: model:product.product,description:shopinvader.product_product_44
+#: model:product.product,description:shopinvader.product_product_45
+#: model:product.product,description:shopinvader.product_product_46
+#: model:product.product,description:shopinvader.product_product_47
+#: model:product.product,description:shopinvader.product_product_48
+#: model:product.product,description:shopinvader.product_product_49
+#: model:product.product,description:shopinvader.product_product_50
+#: model:product.product,description:shopinvader.product_product_51
+#: model:product.product,description:shopinvader.product_product_52
+#: model:product.product,description:shopinvader.product_product_53
+#: model:product.product,description:shopinvader.product_product_54
+#: model:product.product,description:shopinvader.product_product_55
+#: model:product.product,description:shopinvader.product_product_56
+#: model:product.product,description:shopinvader.product_product_57
+#: model:product.product,description:shopinvader.product_product_58
+#: model:product.product,description:shopinvader.product_product_69
+#: model:product.product,description:shopinvader.product_product_70
+#: model:product.product,description:shopinvader.product_product_71
+#: model:product.product,description:shopinvader.product_product_94
+#: model:product.product,description:shopinvader.product_product_95
+#: model:product.product,description:shopinvader.product_product_96
+#: model:product.template,description:shopinvader.product_product_39_product_template
+#: model:product.template,description:shopinvader.product_product_41_product_template
+#: model:product.template,description:shopinvader.product_product_42_product_template
+#: model:product.template,description:shopinvader.product_product_44_product_template
+#: model:product.template,description:shopinvader.product_product_45_product_template
+#: model:product.template,description:shopinvader.product_product_46_product_template
+#: model:product.template,description:shopinvader.product_product_47_product_template
+#: model:product.template,description:shopinvader.product_product_48_product_template
+#: model:product.template,description:shopinvader.product_product_49_product_template
+#: model:product.template,description:shopinvader.product_product_50_product_template
+#: model:product.template,description:shopinvader.product_product_51_product_template
+#: model:product.template,description:shopinvader.product_product_52_product_template
+#: model:product.template,description:shopinvader.product_product_53_product_template
+#: model:product.template,description:shopinvader.product_product_54_product_template
+#: model:product.template,description:shopinvader.product_product_55_product_template
+#: model:product.template,description:shopinvader.product_product_56_product_template
+#: model:product.template,description:shopinvader.product_product_57_product_template
+#: model:product.template,description:shopinvader.product_product_58_product_template
+#: model:product.template,description:shopinvader.product_product_69_product_template
+#: model:product.template,description:shopinvader.product_product_70_product_template
+#: model:product.template,description:shopinvader.product_product_71_product_template
+#: model:product.template,description:shopinvader.product_product_94_product_template
+#: model:product.template,description:shopinvader.product_product_95_product_template
+#: model:product.template,description:shopinvader.product_product_96_product_template
+msgid "\n"
+"<h2>Fusce ac ligula ante</h2>\n"
+"<p>\n"
+"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales\n"
+"  lacus quam, eget laoreet mauris ultrices ut. Sed ante lectus, vulputate\n"
+"  in nunc sit amet, interdum pellentesque est. <br>\n"
+"  <strong>\n"
+"    Vivamus varius justo justo, eu ultricies orci ullamcorper eget\n"
+"  </strong>\n"
+"  <ul>\n"
+"    <li>Praesent sodales tempor nibh quis vehicula.</li>\n"
+"    <li>Varius faucibus velit pulvinar.</li>\n"
+"    <li> Proin iaculis dapibus vestibulum. Sed feugiat augue sagittis, ullamcorper nunc sit amet, egestas eros.</li>\n"
+"    <li>Vivamus varius justo justo, eu ultricies orci ullamcorper eget.</li>\n"
+"  </ul>\n"
+"</p>\n"
+"<h2>Furabitur sodales nisi odio, sed egestas velit placerat faucibus</h2>\n"
+"<h3>Phasellus congue nibh nunc, vel euismod justo lacinia ut</h3>\n"
+"<p>\n"
+"  Vivamus varius justo justo, eu ultricies orci ullamcorper eget. Integer\n"
+"  et ante sit amet erat placerat viverra a in nisl. Phasellus ac nulla\n"
+"  blandit, sodales nunc non, blandit sapien. Donec libero nisl, fermentum\n"
+"  aliquam velit sit amet, luctus luctus ex. Etiam rutrum ullamcorper\n"
+"  dapibus. Vestibulum cursus iaculis elit et <strong>ultricies</strong>. Ut est sapien,\n"
+"  vestibulum quis libero eu, mattis iaculis risus. Ut ante magna, congue\n"
+"  eget diam a, volutpat lobortis arcu. Orci varius natoque penatibus et\n"
+"  magnis dis parturient montes, nascetur ridiculus mus. <strong>Ut tempus urna at\n"
+"  malesuada fermentum.&nbsp;</strong>\n"
+"</p>\n"
+"<h3>In finibus nulla pulvinar dolor feugiat, varius faucibus velit pulvinar</h3>\n"
+"<p>\n"
+"  Donec at hendrerit orci. Mauris velit lorem, pretium eu tellus eu,\n"
+"  laoreet faucibus ligula. Vivamus nibh nisl, vestibulum nec<strong> metus sit\n"
+"  amet, viverra sollicitudin sem</strong>. Sed a finibus sem. Curabitur fermentum\n"
+"  metus purus, ut bibendum augue consequat nec. Morbi ex tellus, rutrum\n"
+"  quis diam in, aliquet vestibulum mi. Donec id pulvinar lacus. Nunc\n"
+"  scelerisque porta nisi in pharetra.\n"
+"</p>\n"
+"<h2>Pellentesque vitae erat imperdiet, pulvinar tortor nec</h2>\n"
+"<h3>In finibus nulla pulvinar dolor feugiat, varius faucibus velit pulvinar</h3>\n"
+"<p>\n"
+"  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere\n"
+"  cubilia Curae.\n"
+"</p>\n"
+"<p>\n"
+"  Cras non feugiat ipsum, ac ultricies ipsum. Sed porttitor sit amet lacus ut vehicula.\n"
+"  Fusce placerat, nisi vitae ullamcorper fermentum, lectus odio sodales elit, quis rhoncus nisl\n"
+"  tortor vel ipsum. Vestibulum ante ipsum primis in faucibus orci luctus\n"
+"  et ultrices posuere cubilia Curae; Proin et justo mauris. Nunc sit amet\n"
+"  posuere justo. Donec at fermentum augue. Orci varius natoque penatibus\n"
+"  et magnis dis parturient montes, nascetur ridiculus mus.\n"
+"</p>\n"
+"<p>\n"
+"  Aenean eget\n"
+"  nunc dictum ipsum elementum pharetra. Integer mattis nisi eget dignissim\n"
+"   dapibus. Sed et justo erat. Aenean dapibus arcu vitae eros sagittis,\n"
+"  vel tincidunt est tincidunt. Maecenas nec sodales mi.\n"
+"</p>\n"
+"<blockquote>\n"
+"  <i>\n"
+"    Estibulum ante ipsum primis in faucibus orci luctus et ultrices posuere\n"
+"    cubilia Curae; Cras non feugiat ipsum, ac ultricies ipsum. Sed porttitor\n"
+"    sit amet lacus ut vehicula. Fusce placerat, nisi vitae ullamcorper\n"
+"    fermentum\n"
+"  </i>\n"
+"</blockquote>\n"
+"<p>\n"
+"  Pellentesque iaculis auctor ornare. Nulla posuere nisi leo, ut dapibus\n"
+"  ipsum pretium in. Donec pharetra est sed nunc lobortis tincidunt. Fusce\n"
+"  convallis suscipit sem, sed elementum orci tempor vel. Donec pretium\n"
+"  felis nec nisi auctor, sed dignissim enim dictum. Etiam a lectus\n"
+"  molestie, tincidunt urna quis, sodales augue. Curabitur venenatis justo\n"
+"  quam, sit amet dictum ex cursus a. Nunc nulla dolor, molestie sit amet\n"
+"  tempor a, maximus eu erat. Morbi vel tempor nulla. Maecenas eu dictum\n"
+"  enim, et rutrum dui. Vivamus non efficitur urna. Morbi blandit massa vel\n"
+"   metus fringilla tristique. Praesent malesuada ante nec magna\n"
+"   <strong> elementum dapibus eget a elit.</strong>\n"
+"</p>\n"
+"<h3>Pellentesque iaculis auctor ornare</h3>\n"
+"<p>\n"
+"  Nulla posuere nisi leo, ut dapibus\n"
+"  ipsum pretium in. Donec pharetra est sed nunc lobortis tincidunt.\n"
+"</p>\n"
+"<p>\n"
+"  Fusce convallis suscipit sem, sed elementum orci tempor vel. Donec pretium\n"
+"  felis nec nisi auctor, sed dignissim enim dictum. Etiam a lectus\n"
+"  molestie, tincidunt urna quis, sodales augue. Curabitur venenatis justo\n"
+"  quam, sit amet dictum ex cursus a. Nunc nulla dolor, molestie sit amet\n"
+"  tempor a, maximus eu erat. Morbi vel tempor nulla. Maecenas eu dictum\n"
+"  enim, et rutrum dui. <br></p><p>Vivamus non efficitur urna. Morbi blandit massa vel\n"
+"   metus fringilla tristique. Praesent malesuada ante nec magna elementum\n"
+"  dapibus eget a elit.\n"
+"</p>\n"
+"        "
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,body_html:shopinvader.email_cart_notification
+msgid " Thanks for your card "
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,body_html:shopinvader.email_sale_notification
+msgid " We are processing your sale "
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,body_html:shopinvader.email_new_customer_welcome_notification
+msgid " Welcome "
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,body_html:shopinvader.email_invoice_notification
+msgid " Your invoice have been generated "
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_meeting_count
+msgid "# Meetings"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_variant_count
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_variant_count
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_count
+msgid "# Product Variants"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_product_count
+msgid "# Products"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sales_count
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sales_count
+msgid "# Sales"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_sale_order_count
+msgid "# of Sales Order"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "<span class=\"o_stat_text\">Categories</span>"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "<span class=\"o_stat_text\">Products</span>"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "<span>Allowed countries in delivery addresses</span>"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "<span>Available languages in the website.</span>"
+msgstr ""
+
+#. module: shopinvader
+#: sql_constraint:shopinvader.category:0
+msgid "A category can only have one binding by backend."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_type
+msgid "A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_description_sale
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_description_sale
+msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sale Order, Delivery Order and Customer Invoice/Refund"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_description_purchase
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_description_purchase
+msgid "A description of the Product that you want to communicate to your vendors. This description will be copied to every Purchase Order, Receipt and Vendor Bill/Refund."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_associate_member
+msgid "A member with whom you want to associate your membership. It will consider the membership state of the associated member."
+msgstr ""
+
+#. module: shopinvader
+#: sql_constraint:shopinvader.partner:0
+msgid "A partner can only have one binding by backend."
+msgstr ""
+
+#. module: shopinvader
+#: sql_constraint:shopinvader.product:0
+msgid "A product can only have one binding by backend and lang."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_type
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_type
+msgid "A stockable product is a product for which you manage stock. The \"Inventory\" app has to be installed.\n"
+"A consumable product, on the other hand, is a product for which stock is not managed.\n"
+"A service is a non-material product you provide.\n"
+"A digital content is a non-material product you sell online. The files attached to the products are the one that are sold on the e-commerce such as e-books, music, pictures,... The \"Digital Product\" module has to be installed."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_account_payable_id
+msgid "Account Payable"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_account_receivable_id
+msgid "Account Receivable"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_needaction
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_needaction
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_clear_cart_options
+msgid "Action to execute on the cart when the front want to clear the current cart:\n"
+"- Delete: delete the cart (and items);\n"
+"- Clear: keep the cart but remove items;\n"
+"- Cancel: The cart is canceled but kept into the database.\n"
+"It could be useful if you want to keep cart for statistics reasons. A new cart is created automatically when the customer will add a new item."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_category_active
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_active
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_active
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_active
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_active
+msgid "Active"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_activities_count
+msgid "Activities"
+msgstr ""
+
+#. module: shopinvader
+#: selection:res.partner,address_type:0
+msgid "Address"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_res_partner_address_type
+#: model:ir.model.fields,field_description:shopinvader.field_res_users_address_type
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_address_type
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_type
+msgid "Address Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_allowed_country_ids
+msgid "Allowed Country"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_51
+#: model:product.template,name:shopinvader.product_product_51_product_template
+msgid "Ameriwood Home 1783213COM - Meuble TV"
+msgstr ""
+
+#. module: shopinvader
+#: sql_constraint:shopinvader.backend:0
+msgid "An authentication API Key can be used by only one backend."
+msgstr ""
+
+#. module: shopinvader
+#: sql_constraint:shopinvader.partner:0
+msgid "An email must be uniq per backend."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_account_analytic_id
+msgid "Analytic account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_anonymous_partner_id
+msgid "Anonymous Partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_31
+msgid "Appliances"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_config_settings_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_binding_form_view
+msgid "Apply"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_associate_member
+msgid "Associate Member"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_variant_attribute_id
+msgid "Attribute"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_attribute_set_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_attribute_set_id
+msgid "Attribute Set"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_attribute_value_ids
+msgid "Attributes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_auth_api_key_name
+msgid "Auth api key name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_authorize_not_bound_products
+msgid "Authorize not bound products"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_automatic_url_key
+msgid "Automatic url key"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_shopinvader_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_backend_id
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_search
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_search
+msgid "Backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_bank_account_count
+msgid "Bank"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_bank_ids
+msgid "Banks"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_barcode
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_barcode
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_list_price
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_lst_price
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_list_price
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_lst_price
+msgid "Base price to compute the customer price. Sometimes called the catalog price."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_based_on
+msgid "Based on"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_bind
+msgid "Bind"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_binding_wizard_form_view
+msgid "Bind Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Bind Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_binding_wizard_form_view
+msgid "Bind Products"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Bind all category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Bind all product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.partner_binding_action
+msgid "Bind to a website"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_bounce
+msgid "Bounce"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_brand_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.pricelist,name:shopinvader.pricelist_1
+msgid "Business Pricelist"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_purchase_ok
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_purchase_ok
+msgid "Can be Purchased"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_rental
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_rental
+msgid "Can be Rent"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sale_ok
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sale_ok
+msgid "Can be Sold"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/address.py:55
+#, python-format
+msgid "Can not delete the partner account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_binding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_config_settings_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_binding_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_binding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_unbinding_wizard_form_view
+#: selection:sale.order,shopinvader_state:0
+#: selection:shopinvader.backend,clear_cart_options:0
+msgid "Cancel"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_membership_cancel
+msgid "Cancel Membership Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.action_cart
+#: model:ir.ui.menu,name:shopinvader.menu_sale_order
+#: selection:sale.order,typology:0
+msgid "Cart"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:19
+#, python-format
+msgid "Cart Confirmation"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_cart_step
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_cart_step_view_search
+msgid "Cart Step"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:23
+#, python-format
+msgid "Cart ask by email"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Cart configuration"
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,subject:shopinvader.email_cart_notification
+msgid "Cart notification ${object.name}"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_product_category_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_shopinvader_category_ids
+msgid "Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_category
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_route_from_categ_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_route_from_categ_ids
+msgid "Category Routes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_type
+msgid "Category Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_category_binding_level
+msgid "Category binding level"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_27
+msgid "Chaise"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_24
+msgid "Chambre"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_channel_ids
+msgid "Channels"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_membership
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_membership
+msgid "Check if the product is eligible for membership."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_customer
+msgid "Check this box if this contact is a customer."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_employee
+msgid "Check this box if this contact is an Employee."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_authorize_not_bound_products
+msgid "Check this if you want to authorize cart to display productsthat are not bound to this backend. This can be useful ifyou want to modify existing carts from backend."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_child_id
+msgid "Child Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_child_autobinding
+msgid "Child autobinding"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_city
+msgid "City"
+msgstr ""
+
+#. module: shopinvader
+#: selection:shopinvader.backend,clear_cart_options:0
+msgid "Clear"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_clear_cart_options
+msgid "Clear cart"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_tree_view
+msgid "Click to publish"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_tree_view
+msgid "Click to unpublish"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_code
+msgid "Code"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.filter,name:shopinvader.product_filter_2
+msgid "Color"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_color
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_color
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_color
+msgid "Color Index"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.filter,help:shopinvader.product_filter_2
+msgid "Color of the product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_commercial_partner_id
+msgid "Commercial Entity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_company_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_company
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_company_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_company_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_company_id
+msgid "Company"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_company_name
+msgid "Company Name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_commercial_company_name
+msgid "Company Name Entity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_company_type
+msgid "Company Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_contact_address
+msgid "Complete Address"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_config
+msgid "Configuration"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_config_settings_act_window
+msgid "Configure Shopinvader"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_config_settings_form_view
+msgid "Configure Warehouse"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_contact_name
+msgid "Contact name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_child_ids
+msgid "Contacts"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_contract_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_contracts_count
+msgid "Contracts"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_49
+#: model:product.template,name:shopinvader.product_product_49_product_template
+msgid "Convenience Concepts Designs2Go Oslo - meuble TV"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_standard_price
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_standard_price
+msgid "Cost"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_cost_method
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_cost_method
+msgid "Cost method"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_standard_price
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_standard_price
+msgid "Cost of the product, in the default unit of measure of the product."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_cost_method
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_cost_method
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_cost_method
+msgid "Costing Method"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_payment_token_count
+msgid "Count Payment Token"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Countries"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_country_id
+msgid "Country"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_create_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_create_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Credentials"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_credit_limit
+msgid "Credit Limit"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_30
+msgid "Cuisine"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_currency_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_currency_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_current_step_id
+msgid "Current Cart Step"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_membership_state
+msgid "Current Membership Status"
+msgstr ""
+
+#. module: shopinvader
+#: selection:product.filter,based_on:0
+msgid "Custom Attribute"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sale_delay
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sale_delay
+msgid "Customer Lead Time"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_partner_ref
+msgid "Customer Ref"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_taxes_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_taxes_id
+msgid "Customer Taxes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_date
+msgid "Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_membership_start
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_membership_date_from
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_membership_date_from
+msgid "Date from which membership becomes active."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_last_post
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_message_last_post
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_membership_cancel
+msgid "Date on which membership has been cancelled"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_membership_stop
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_membership_date_to
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_membership_date_to
+msgid "Date until which membership remains active."
+msgstr ""
+
+#. module: shopinvader
+#: model:res.company,overdue_msg:shopinvader.res_company_liege
+msgid "Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_attribute_set_id
+msgid "Default Attribute Set"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_uom_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_uom_id
+msgid "Default Unit of Measure used for all stock operation."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_uom_po_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_uom_po_id
+msgid "Default Unit of Measure used for purchase orders. It must be in the same category than the default unit of measure."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_category_binding_level
+msgid "Define if the product binding should also bind related categories and how many related parents.\n"
+"Set 0 (or less) to disable the category auto-binding.\n"
+"Set 1 to auto-bind the direct category.\n"
+"Set 2 to auto-bind the direct category and his parent.\n"
+"etc."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_trust
+msgid "Degree of trust you have in this debtor"
+msgstr ""
+
+#. module: shopinvader
+#: selection:shopinvader.backend,clear_cart_options:0
+msgid "Delete"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_delivery_count
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Delivery"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_delivery_carrier_id
+msgid "Delivery Method"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_route_ids
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_route_ids
+msgid "Depending on the modules installed, this will allow you to define the route of the product: whether it will be bought, manufactured, MTO/MTS,..."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_description
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_form
+msgid "Description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+msgid "Description and Seo"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_description_picking
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_description_picking
+msgid "Description on Picking"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_notification_queue_job_priority
+msgid "Determine the priority to execute the job who trigger the notification.\n"
+"0 being the higher priority. Default is 10 (cfr queue job).\n"
+"You can set a negative value to have live notification"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Developper"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_seo_title_mixin_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_track_external_mixin_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
+msgid "Do you really want to unbind these categories ?"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_unbinding_wizard_form_view
+msgid "Do you really want to unbind these products ?"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_done_step_ids
+msgid "Done Cart Step"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_226
+msgid "Electronique et informatique"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_email
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_email
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_partner_email
+msgid "Email"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_notify_email
+msgid "Email Messages and Notifications"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/res_partner.py:56
+#, python-format
+msgid "Email must be unique: The following mails are not unique: %s"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_employee
+msgid "Employee"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,shopinvader_state:0
+msgid "Estimated Quotation"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,shopinvader_state:0
+msgid "Estimating Quotation"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_account_expense_categ_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_account_expense_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_account_expense_id
+msgid "Expense Account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding_external_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_external_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_external_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_external_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_external_id
+msgid "External ID"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_42
+#: model:product.product,name:shopinvader.product_product_69
+#: model:product.product,name:shopinvader.product_product_70
+#: model:product.product,name:shopinvader.product_product_71
+#: model:product.template,name:shopinvader.product_product_42_product_template
+#: model:product.template,name:shopinvader.product_product_69_product_template
+#: model:product.template,name:shopinvader.product_product_70_product_template
+#: model:product.template,name:shopinvader.product_product_71_product_template
+msgid "Fauteuil Style Mid-Century avec assise tapissée"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_fax
+msgid "Fax"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_field_id
+#: selection:product.filter,based_on:0
+msgid "Field"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_category_filter_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_filter_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_filter_ids
+#: model:ir.ui.view,arch_db:shopinvader.product_category_view_form
+#: model:ir.ui.view,arch_db:shopinvader.product_filter_view_form
+#: model:ir.ui.view,arch_db:shopinvader.product_filter_view_tree
+msgid "Filter"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_account_position_id
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_follower_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_follower_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_channel_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_channel_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_partner_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_partner_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_removal_strategy_id
+msgid "Force Removal Strategy"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_virtual_available
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_virtual_available
+msgid "Forecasted Quantity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_email_formatted
+msgid "Formatted Email"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_free_member
+msgid "Free Member"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_full_name
+msgid "Full name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_config_settings_form_view
+msgid "General"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_packaging_ids
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_packaging_ids
+msgid "Gives the different ways to package the same product. This has no impact on the picking order and is mainly used if you use the EDI module."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_sequence
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_sequence
+msgid "Gives the sequence order when displaying a product list"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_12
+msgid "Grey"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_search
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_search
+msgid "Group By"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_attribute_group_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_attribute_group_ids
+msgid "Groups"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_hs_code
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_hs_code
+msgid "HS Code"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_help
+#: model:ir.ui.view,arch_db:shopinvader.product_filter_view_form
+msgid "Help"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_id
+#: model:ir.model.fields,field_description:shopinvader.field_seo_title_mixin_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_id
+#: model:ir.model.fields,field_description:shopinvader.field_track_external_mixin_id
+msgid "ID"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_im_status
+msgid "IM Status"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_unread
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_message_unread
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_needaction
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_message_needaction
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_use_shopinvader_product_name
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_use_shopinvader_product_name
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_use_shopinvader_product_name
+msgid "If checked, use the specific shopinvader display name for products instead of the original product name."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_config_settings_no_partner_duplicate
+msgid "If checked, when a binding is created for a backend, we first try to find a partner with the same email and if found we link the new binding to the first partner found. Otherwise we always create a new partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_valuation
+msgid "If perpetual valuation is enabled for a product, the system will automatically create journal entries corresponding to stock moves, with product price as specified by the 'Costing Method'. The inventory variation account set on the product category will represent the current inventory value, and the stock input and stock output account will hold the counterpart moves for incoming and outgoing products."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_valuation
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_valuation
+msgid "If perpetual valuation is enabled for a product, the system will automatically create journal entries corresponding to stock moves, with product price as specified by the 'Costing Method'The inventory variation account set on the product category will represent the current inventory value, and the stock input and stock output account will hold the counterpart moves for incoming and outgoing products."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_team_id
+msgid "If set, sale team used notably for sales and assignations related to this partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_binding_wizard_child_autobinding
+msgid "If this option is check, the childs of selected categories will be automatically binded"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_simple_cart_service
+msgid "If this option is checked, the add item action on frontend will either add a new line either increase qty but promotion, taxes, subtotal computations will be delegated to an asynchronous job. It the customer wants to see his cart before its execution, the computation will be done on the fly to ensure data integrity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_seo_title_mixin_seo_title
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_seo_title
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_seo_title
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_seo_title
+msgid "If you specify a custom value and you want to rollback to the default value, just let the field blank."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_image
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image
+msgid "Image"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_image_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_ids
+msgid "Image ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image_medium_url
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_medium_url
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_image_medium_url
+msgid "Image medium url"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image_small_url
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_small_url
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_image_small_url
+msgid "Image small url"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_account_income_categ_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_account_income_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_account_income_id
+msgid "Income Account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_incoming_qty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_incoming_qty
+msgid "Incoming"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_ref
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_default_code
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_code
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_default_code
+msgid "Internal Reference"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_barcode
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_barcode
+msgid "International Article Number used for product identification."
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/service.py:66
+#, python-format
+msgid "Invalid scope %s, error : %s"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/cart.py:429
+#, python-format
+msgid "Invalid step code %s"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_stock_inventory
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_stock_inventory
+msgid "Inventory Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_valuation
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_valuation
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_valuation
+msgid "Inventory Valuation"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_account_invoice
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_invoice_warn
+msgid "Invoice"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:35
+#, python-format
+msgid "Invoice Validated"
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,subject:shopinvader.email_invoice_notification
+msgid "Invoice notification ${object.number}"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:39
+#, python-format
+msgid "Invoice send email"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_invoice_policy
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_invoice_policy
+msgid "Invoicing Policy"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_is_follower
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_is_follower
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_customer
+msgid "Is a Customer"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_supplier
+msgid "Is a Vendor"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_is_urls_sync_required
+msgid "Is urls sync required"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_membership_state
+msgid "It indicates the membership state.\n"
+"-Non Member: A partner who has not applied for any membership.\n"
+"-Cancelled Member: A member who has cancelled his membership.\n"
+"-Old Member: A member whose membership date has expired.\n"
+"-Waiting Member: A member who has applied for the membership and whose invoice is going to be created.\n"
+"-Invoiced Member: A member whose invoice has been created.\n"
+"-Paying member: A member who has paid the membership fee."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_function
+msgid "Job Position"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_issued_total
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_journal_item_count
+msgid "Journal Items"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_lang_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_lang_id
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+msgid "Lang"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_lang
+msgid "Language"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Languages"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_last_post
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_last_post
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_seo_title_mixin___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard___last_update
+#: model:ir.model.fields,field_description:shopinvader.field_track_external_mixin___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_write_uid
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_unbinding_wizard_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_write_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_last_external_update_date
+#: model:ir.model.fields,field_description:shopinvader.field_track_external_mixin_last_external_update_date
+msgid "Last external update date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_binding_sync_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_sync_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_sync_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sync_date
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sync_date
+msgid "Last synchronization date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_parent_left
+msgid "Left Parent"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_level
+msgid "Level"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_binding_lines
+msgid "Lines"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Localization"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_location
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_location_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_location_id
+msgid "Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_backend
+msgid "Locomotive CMS Backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_packaging_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_packaging_ids
+msgid "Logistical Units"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_template_id
+msgid "Mail Template"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_main
+msgid "Main"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_manual_url_key
+msgid "Manual url key"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_track_service
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_track_service
+msgid "Manually set quantities on order: Invoice based on the manually entered quantity, without creating an analytic account.\n"
+"Timesheets on contract: Invoice based on the tracked hours on the related timesheet.\n"
+"Create a task and track hours: Create a task on the sale order validation and track the work hours."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_media_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_media_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_media_ids
+msgid "Media ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_image_medium
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image_medium
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_medium
+msgid "Medium-sized image"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_image_medium
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_image_medium
+msgid "Medium-sized image of the product. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_meeting_ids
+msgid "Meetings"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_member_lines
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_membership
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_membership
+msgid "Membership"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_membership_amount
+msgid "Membership Amount"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_membership_stop
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_membership_date_to
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_membership_date_to
+msgid "Membership End Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_membership_start
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_membership_date_from
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_membership_date_from
+msgid "Membership Start Date"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.filter,name:shopinvader.product_filter_1
+msgid "Memory"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.filter,help:shopinvader.product_filter_1
+msgid "Memory of the product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_sale_warn_msg
+msgid "Message for Sales Order"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sale_line_warn_msg
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sale_line_warn_msg
+msgid "Message for Sales Order Line"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_meta_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_meta_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_meta_description
+msgid "Meta description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_meta_keywords
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_meta_keywords
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_meta_keywords
+msgid "Meta keywords"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_21
+msgid "Meuble"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_29
+msgid "Meuble TV"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_54
+#: model:product.template,name:shopinvader.product_product_54_product_template
+msgid "Meuble TV 40 cmHARPER"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_55
+#: model:product.product,name:shopinvader.product_product_56
+#: model:product.template,name:shopinvader.product_product_55_product_template
+#: model:product.template,name:shopinvader.product_product_56_product_template
+msgid "Meuble TV Warm Shaker bois massif 183cm"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_45
+#: model:product.product,name:shopinvader.product_product_46
+#: model:product.product,name:shopinvader.product_product_47
+#: model:product.product,name:shopinvader.product_product_48
+#: model:product.template,name:shopinvader.product_product_45_product_template
+#: model:product.template,name:shopinvader.product_product_46_product_template
+#: model:product.template,name:shopinvader.product_product_47_product_template
+#: model:product.template,name:shopinvader.product_product_48_product_template
+msgid "Mid Century Modern Eames Chair with Molded Arms and Wood Legs"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_orderpoint_ids
+msgid "Minimum Stock Rules"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/cart.py:309
+#, python-format
+msgid "Missing feature to clear the cart!"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_model_id
+msgid "Model"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_cart_step_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_name
+msgid "Name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_shopinvader_name
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_shopinvader_name
+msgid "Name for shopinvader, if not set the product name will be used."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_sequence_id
+msgid "Naming policy for orders and carts"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_nbr_category
+msgid "Nbr category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_nbr_product
+msgid "Nbr product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_nbr_variant
+msgid "Nbr variant"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_x_need
+msgid "Need"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:43
+#, python-format
+msgid "New customer Welcome"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/abstract_download.py:63
+#, python-format
+msgid "No content found for %s"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_config_settings_no_partner_duplicate
+msgid "No partner duplicate"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_comment
+msgid "Notes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_notification_ids
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Notification"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_notification_type
+msgid "Notification Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Notifications"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_backend.py:294
+#, python-format
+msgid "Notify %s for %s,%s"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_needaction_counter
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_needaction_counter
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_needaction_counter
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_message_needaction_counter
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_message_unread_counter
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_message_unread_counter
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_object_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_object_id
+msgid "Object id"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_categ_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_categ_ids
+msgid "Online Shop Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_opportunity_ids
+msgid "Opportunities"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_opportunity_count
+msgid "Opportunity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_res_partner_opt_in
+#: model:ir.model.fields,field_description:shopinvader.field_res_users_opt_in
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_opt_in
+msgid "Opt in"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_opt_out
+msgid "Opt-Out"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_invoice_policy
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_invoice_policy
+msgid "Ordered Quantity: Invoice based on the quantity the customer ordered.\n"
+"Delivered Quantity: Invoiced based on the quantity the vendor delivered (time or deliveries)."
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_227
+msgid "Ordinateur, Tablettes & Accessoires"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_outgoing_qty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_outgoing_qty
+msgid "Outgoing"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_228
+msgid "PC Portable"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_parent_id
+msgid "Parent Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_parent_name
+msgid "Parent name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_res_partner
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_partner_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_record_id
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_partner
+msgid "Partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_debit_limit
+msgid "Payable Limit"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_payment_token_ids
+msgid "Payment Tokens"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,shopinvader_state:0
+msgid "Pending"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_phone
+msgid "Phone"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_notify_email
+msgid "Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_price
+msgid "Price"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_pricelist_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_pricelist_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_item_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_item_ids
+msgid "Pricelist Items"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_pricelist_item_ids
+msgid "Pricelist item ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_categ_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_categ_id
+msgid "Pricing/Primary Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_notification_queue_job_priority
+msgid "Priority"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,shopinvader_state:0
+msgid "Processing"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_stock_procurement
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_stock_procurement
+msgid "Procurement Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_product_product
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_variant_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_variant_id
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_tree_view
+msgid "Product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_attribute_line_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_attribute_line_ids
+msgid "Product Attributes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_product_filter
+msgid "Product Filter"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_template_link_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_template_link_ids
+msgid "Product Links"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_template_link_qty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_template_link_qty
+msgid "Product Links Quantity"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_product_template
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_type
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_type
+msgid "Product Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.product_filter_action
+#: model:ir.ui.menu,name:shopinvader.menu_product_filter_action
+msgid "Product filter"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_stock_production
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_stock_production
+msgid "Production Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_product_variant_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_product_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_product_variant_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_unbinding_wizard_shopinvader_variant_ids
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+msgid "Products"
+msgstr ""
+
+#. module: shopinvader
+#: selection:res.partner,address_type:0
+msgid "Profile"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_anonymous_partner_id
+msgid "Provide partner settings for unlogged users (i.e. fiscal position)"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_lst_price
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_lst_price
+msgid "Public Price"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_website_public_name
+msgid "Public name of your backend/website."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_description_purchase
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_description_purchase
+msgid "Purchase Description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_uom_po_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_uom_po_id
+msgid "Purchase Unit of Measure"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_qty_available
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_qty_available
+msgid "Quantity On Hand"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,typology:0
+msgid "Quotation"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_26
+msgid "Rangement"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_expense_policy
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_expense_policy
+msgid "Re-Invoice Expenses"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_reception_count
+msgid "Receipt"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.sale_order_view_form
+msgid "Recompute"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_record_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_record_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_record_id
+msgid "Record id"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_form
+msgid "Redirect Url"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_redirect_url_key
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_redirect_url_key
+msgid "Redirect Url Keys"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_redirect_url_url_ids
+msgid "Redirect url url ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_parent_id
+msgid "Related Company"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_nbr_reordering_rules
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_nbr_reordering_rules
+msgid "Reordering Rules"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_reordering_max_qty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_reordering_max_qty
+msgid "Reordering max qty"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_reordering_min_qty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_reordering_min_qty
+msgid "Reordering min qty"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_parent_right
+msgid "Right Parent"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_route_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_route_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_route_ids
+msgid "Routes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_form
+msgid "SEO"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_seo_title_mixin_manual_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_seo_title_mixin_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_manual_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_manual_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_manual_seo_title
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_seo_title
+msgid "SEO Title"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_seo_title_mixin
+msgid "SEO Title Mixin"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_52
+#: model:product.template,name:shopinvader.product_product_52_product_template
+msgid "ST-160B Wood and Glass TV Stand with Hidden Wheels for Sizes up to 70\""
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+#: selection:sale.order,typology:0
+msgid "Sale"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:31
+#, python-format
+msgid "Sale Confirmation"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_description_sale
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_description_sale
+msgid "Sale Description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_list_price
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_list_price
+msgid "Sale Price"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_notification.py:27
+#, python-format
+msgid "Sale ask by email"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Sale configuration"
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,subject:shopinvader.email_sale_notification
+msgid "Sale notification ${object.name}"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_sale_order
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_sale_order_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_sale_warn
+msgid "Sales Order"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_sale_order_line
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sale_line_warn
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sale_line_warn
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_team_id
+msgid "Sales Team"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_user_id
+msgid "Salesperson"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_25
+msgid "Salle de bain"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_23
+msgid "Salle à manger"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_22
+msgid "Salon"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_50
+#: model:product.template,name:shopinvader.product_product_50_product_template
+msgid "Sauder 420011 Coffee Table, Furniture, Craftsman Oak"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_53
+#: model:product.template,name:shopinvader.product_product_53_product_template
+msgid "Sauder Harvey Park Entertainment Credenza, chêne clair"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Search engine"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_product_brand_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_product_brand_id
+msgid "Select a brand for this product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_categ_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_categ_id
+msgid "Select category for the current product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_free_member
+msgid "Select if you want to give free membership."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_binding_form_view
+msgid "Select which partners should belong to the Shopinvader backend in the list below.\n"
+"                    The email address of each selected contact must be valid and unique.\n"
+"                    Partners already binded are ignored."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_invoice_warn
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_picking_warn
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_sale_warn
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_sale_line_warn
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_sale_line_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_self
+msgid "Self"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter_sequence
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_sequence_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_sequence
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_sequence
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Service"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_removal_strategy_id
+msgid "Set a specific removal strategy that will be used regardless of the source location for this product category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_partner_share
+msgid "Share Partner"
+msgstr ""
+
+#. module: shopinvader
+#: selection:sale.order,shopinvader_state:0
+msgid "Shipped"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.view_product_template_form
+msgid "ShopInvader"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_binding_wizard_backend_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard_backend_id
+msgid "ShopInvader Backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_delivery_carrier_shopinvader_backend_ids
+#: model:ir.model.fields,field_description:shopinvader.field_product_product_shopinvader_backend_ids
+#: model:ir.model.fields,field_description:shopinvader.field_product_template_shopinvader_backend_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_backend_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_backend_ids
+msgid "ShopInvader Backends"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.module.category,name:shopinvader.module_category_shopinvader
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_root
+#: model:ir.ui.view,arch_db:shopinvader.product_category_view_form
+#: model:ir.ui.view,arch_db:shopinvader.res_partner_view_form
+#: model:ir.ui.view,arch_db:shopinvader.view_product_template_form
+msgid "Shopinvader"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_attributes
+msgid "Shopinvader Attributes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_account_invoice_shopinvader_backend_id
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_search_view
+msgid "Shopinvader Backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_delivery_carrier_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_product_category_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_product_product_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_product_template_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_res_partner_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_res_users_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_bind_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_bind_ids
+msgid "Shopinvader Binding"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.act_open_shopinvader_cart_step_view
+#: model:ir.model,name:shopinvader.model_shopinvader_cart_step
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_cart_step_view_tree
+msgid "Shopinvader Cart Step"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_categ_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_categ_ids
+msgid "Shopinvader Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.act_open_shopinvader_category_view
+#: model:ir.model,name:shopinvader.model_shopinvader_category
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_tree
+msgid "Shopinvader Category"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_category_binding_wizard_act_window
+msgid "Shopinvader Category Binding Wizard"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_category_unbinding_wizard_act_window
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
+msgid "Shopinvader Category Unbinding Wizard"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.shopinvader_config_settings_menu
+msgid "Shopinvader Config Settings"
+msgstr ""
+
+#. module: shopinvader
+#: model:res.groups,name:shopinvader.group_shopinvader_manager
+msgid "Shopinvader Manager"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_notification
+msgid "Shopinvader Notification"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_shopinvader_parent_id
+msgid "Shopinvader Parent"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.act_open_shopinvader_partner_view
+#: model:ir.model,name:shopinvader.model_shopinvader_partner
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_form
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_search
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_tree
+msgid "Shopinvader Partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_price
+msgid "Shopinvader Price"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_product
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_search
+msgid "Shopinvader Product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_variant_act_window
+#: model:ir.model,name:shopinvader.model_shopinvader_variant
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_line_shopinvader_variant_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_variant_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_variant_ids
+msgid "Shopinvader Variant"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_variant_binding_wizard_act_window
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_binding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_binding_wizard_form_view
+msgid "Shopinvader Variant Binding Wizard"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.shopinvader_variant_unbinding_wizard_act_window
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_unbinding_wizard_form_view
+msgid "Shopinvader Variant Unbinding Wizard"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.actions.act_window,name:shopinvader.action_shopinvader_backend
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "Shopinvader Website"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_shopinvader_backend_id
+msgid "Shopinvader backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_delivery_carrier_is_shopinvader_binded
+#: model:ir.model.fields,field_description:shopinvader.field_product_product_is_shopinvader_binded
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_is_shopinvader_binded
+msgid "Shopinvader binded"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_shopinvader_child_ids
+msgid "Shopinvader child ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_shopinvader_display_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_display_name
+msgid "Shopinvader display name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_partner_binding
+msgid "Shopinvader partner binding"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_partner_binding_line
+msgid "Shopinvader partner binding line"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_shopinvader_product_id
+msgid "Shopinvader product id"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_shopinvader_state
+msgid "Shopinvader state"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_shopinvader_to_be_recomputed
+msgid "Shopinvader to be recomputed"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+#: model:ir.ui.view,arch_db:shopinvader.view_shopinvader_category_form
+msgid "Short Description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_short_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_short_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_short_description
+msgid "Short description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_short_name
+msgid "Short name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_signup_type
+msgid "Signup Token Type"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_signup_valid
+msgid "Signup Token is Valid"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_signup_url
+msgid "Signup URL"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_signup_expiration
+msgid "Signup expiration"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_signup_token
+msgid "Signup token"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_simple_cart_service
+msgid "Simple cart service"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_image_small
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_image_small
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_small
+msgid "Small-sized image"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_image_small
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_image_small
+msgid "Small-sized image of the product. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_sale_ok
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_sale_ok
+msgid "Specify if the product can be selected in a sales order line."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_cost_method
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_cost_method
+msgid "Standard Price: The cost price is manually updated at the end of a specific period (usually once a year).\n"
+"                Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.\n"
+"                Real Price: The cost price displayed is the price of the last outgoing product (will be use in case of inventory loss for example)."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_cost_method
+msgid "Standard Price: The cost price is manually updated at the end of a specific period (usually once a year).\n"
+"Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.\n"
+"Real Price: The cost price displayed is the price of the last outgoing product (will be used in case of inventory loss for example)."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_hs_code
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_hs_code
+msgid "Standardized code for international shipping and goods declaration"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_state_id
+msgid "State"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_stock_account_input_categ_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_stock_account_input
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_stock_account_input
+msgid "Stock Input Account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_stock_journal
+msgid "Stock Journal"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_stock_account_output_categ_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_property_stock_account_output
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_property_stock_account_output
+msgid "Stock Output Account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_picking_warn
+msgid "Stock Picking"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_property_stock_valuation_account_id
+msgid "Stock Valuation Account"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_stock_move_ids
+msgid "Stock move ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_stock_quant_ids
+msgid "Stock quant ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_street
+msgid "Street"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_street2
+msgid "Street2"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_subtitle
+msgid "Subtitle"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_vat
+msgid "TIN"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_58
+#: model:product.template,name:shopinvader.product_product_58_product_template
+msgid "Table ronde style mid-century plateau laqué"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_57
+#: model:product.template,name:shopinvader.product_product_57_product_template
+msgid "Table style Mid-Century Modern Chêne"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.category,name:shopinvader.product_category_28
+msgid "Tables"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_category_id
+msgid "Tags"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr ""
+
+#. module: shopinvader
+#: model:account.tax,name:shopinvader.tax_2
+msgid "Tax exc"
+msgstr ""
+
+#. module: shopinvader
+#: model:account.tax,name:shopinvader.tax_3
+msgid "Tax exempt"
+msgstr ""
+
+#. module: shopinvader
+#: model:account.tax,name:shopinvader.tax_1
+msgid "Tax inc"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_sale_order_shopinvader_to_be_recomputed
+msgid "Technical field that will intend to check if the sale order hasto be recomputed due to a modification (asynchronous)"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_delivery_carrier_is_shopinvader_binded
+#: model:ir.model.fields,help:shopinvader.field_product_product_is_shopinvader_binded
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_is_shopinvader_binded
+msgid "Technical field to know if this product is related by a(at least one) shopinvader backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_pricelist_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_pricelist_id
+msgid "Technical field. Used for searching on pricelists, not stored in database."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_stock_move_ids
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_stock_quant_ids
+msgid "Technical: used to compute quantities."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_sale_delay
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_sale_delay
+msgid "The average delay in days between the confirmation of the customer order and the delivery of the finished products. It's the time you promise to your customers."
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/cart.py:153
+#, python-format
+msgid "The cart does not exists or does not belong to you!"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/controllers/main.py:53
+#, python-format
+msgid "The given partner is not found!"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_auth_api_key_name
+msgid "The name of the api_key section used for the authentication ofcalls to services dedicated to this backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_product_count
+msgid "The number of products under this category (Does not consider the children categories)"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_membership_amount
+msgid "The price negotiated by the partner"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/services/service.py:121
+#, python-format
+msgid "The record %s %s does not exist"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_user_id
+msgid "The technical user used to process calls to the services provided by the backend"
+msgstr ""
+
+#. module: shopinvader
+#: code:addons/shopinvader/wizards/shopinvader_partner_binding_line.py:43
+#, python-format
+msgid "The unbind is not implemented.\n"
+"If you want to continue, please delete lines where the bind field is not ticked."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_volume
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_volume
+msgid "The volume in m3."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_weight
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_weight
+msgid "The weight of the contents in Kg, not including any packaging, etc."
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_94
+#: model:product.product,name:shopinvader.product_product_95
+#: model:product.product,name:shopinvader.product_product_96
+#: model:product.template,name:shopinvader.product_product_94_product_template
+#: model:product.template,name:shopinvader.product_product_95_product_template
+#: model:product.template,name:shopinvader.product_product_96_product_template
+msgid "Thelma"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_account_expense_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_account_expense_id
+msgid "This account will be used for invoices instead of the default one to value expenses for the current product."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_account_income_id
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_account_income_id
+msgid "This account will be used for invoices instead of the default one to value sales for the current product."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_account_expense_categ_id
+msgid "This account will be used for invoices to value expenses."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_account_income_categ_id
+msgid "This account will be used for invoices to value sales."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_backend_account_analytic_id
+msgid "This analytic account will be used to fill the field on the sale order created."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_delivery_carrier_id
+msgid "This delivery method will be used when invoicing from picking."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_image_variant
+msgid "This field holds the image used as image for the product variant, limited to 1024x1024px."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_image
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_image
+msgid "This field holds the image used as image for the product, limited to 1024x1024px."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_price_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_stock_customer
+msgid "This stock location will be used, instead of the default one, as the destination location for goods you send to this partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_property_stock_supplier
+msgid "This stock location will be used, instead of the default one, as the source location for goods you receive from the current partner"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_stock_production
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_stock_production
+msgid "This stock location will be used, instead of the default one, as the source location for stock moves generated by manufacturing orders."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_stock_procurement
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_stock_procurement
+msgid "This stock location will be used, instead of the default one, as the source location for stock moves generated by procurements."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_stock_inventory
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_stock_inventory
+msgid "This stock location will be used, instead of the default one, as the source location for stock moves generated when you do an inventory."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_binding_line_bind
+msgid "Tick to bind the partner to the backend. Untick to unbind it."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_tz
+msgid "Timezone"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_tz_offset
+msgid "Timezone offset"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_title
+msgid "Title"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_total_invoiced
+msgid "Total Invoiced"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_debit
+msgid "Total Payable"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_credit
+msgid "Total Receivable"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_credit
+msgid "Total amount this customer owes you."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_category_total_route_ids
+msgid "Total routes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_track_service
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_track_service
+msgid "Track Service"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_track_external_mixin
+msgid "Track external update"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_tracking
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_tracking
+msgid "Tracking"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_sale_order_typology
+msgid "Typology"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_unbinding_wizard_form_view
+msgid "UnBind Products"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
+msgid "Unbind Categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_uom_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_unread
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_unread
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_message_unread_counter
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_message_unread_counter
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+msgid "Url"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_url_builder
+msgid "Url builder"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_url_key
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_url_key
+msgid "Url key"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_url_url_ids
+msgid "Url url ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_use_shopinvader_product_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_use_shopinvader_product_name
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_use_shopinvader_product_name
+msgid "Use Shopinvader product display name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_user_id
+msgid "User id"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_user_ids
+msgid "Users"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_currency_id
+msgid "Utility field to express amount currency"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_valuation
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_valuation
+msgid "Valuation"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.shopinvader_variant_menu
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_product_form_view
+msgid "Variant"
+msgstr ""
+
+#. module: shopinvader
+#: selection:product.filter,based_on:0
+msgid "Variant Attribute"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_image_variant
+msgid "Variant Image"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_price_extra
+msgid "Variant Price Extra"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_image_ids
+msgid "Variant image ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_variant_media_ids
+msgid "Variant media ids"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_supplier_taxes_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_seller_ids
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_seller_ids
+msgid "Vendors"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_volume
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_volume
+msgid "Volume"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_39
+#: model:product.product,name:shopinvader.product_product_41
+#: model:product.template,name:shopinvader.product_product_39_product_template
+#: model:product.template,name:shopinvader.product_product_41_product_template
+msgid "Vortex Side Chair"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.product,name:shopinvader.product_product_44
+#: model:product.template,name:shopinvader.product_product_44_product_template
+msgid "Walnut Side End Table Nightstand with Storage Drawer Solid Wood Legs Living Room Furniture\n"
+"        "
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_warehouse_id
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_warranty
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_warranty
+msgid "Warranty"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_website
+msgid "Website"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_partner_website
+msgid "Website of Partner or Company"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_backend_website_public_name
+msgid "Website public name"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.menu,name:shopinvader.menu_shopinvader_backend
+msgid "Websites"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_weight
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_weight
+msgid "Weight"
+msgstr ""
+
+#. module: shopinvader
+#: model:mail.template,subject:shopinvader.email_new_customer_welcome_notification
+msgid "Welcome notification ${object.name}"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_stock_account_input_categ_id
+msgid "When doing real-time inventory valuation, counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. This is the default value for all products in this category. It can also directly be set on each product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_stock_account_input
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_stock_account_input
+msgid "When doing real-time inventory valuation, counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. When not set on the product, the one from the product category is used."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_stock_account_output_categ_id
+msgid "When doing real-time inventory valuation, counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. This is the default value for all products in this category. It can also directly be set on each product"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_product_property_stock_account_output
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_property_stock_account_output
+msgid "When doing real-time inventory valuation, counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. When not set on the product, the one from the product category is used."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_stock_journal
+msgid "When doing real-time inventory valuation, this is the Accounting Journal in which entries will be automatically posted when stock moves are processed."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_category_property_stock_valuation_account_id
+msgid "When real-time inventory valuation is enabled on a product, this account will hold the current value of the products."
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_binding_line_shopinvader_partner_binding_id
+msgid "Wizard"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_category_binding_wizard
+msgid "Wizard to bind categories to a shopinvader categories"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_variant_binding_wizard
+msgid "Wizard to bind products to a shopinvader catalogue"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_category_unbinding_wizard
+msgid "Wizard to unbind categories from a shopinvader backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_variant_unbinding_wizard
+msgid "Wizard to unbind products from a shopinvader backend"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_x_linux_compatible
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_x_linux_compatible
+msgid "X linux compatible"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_x_processor
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_x_processor
+msgid "X processor"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product_x_technical_description
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_x_technical_description
+msgid "X technical description"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner_zip
+msgid "Zip"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_6
+msgid "blue"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_7
+msgid "brown"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_backend_view_form
+msgid "e.g. https://ecommerce.shopinvader.com"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_binding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_binding_wizard_form_view
+#: model:ir.ui.view,arch_db:shopinvader.shopinvader_variant_unbinding_wizard_form_view
+msgid "or"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_14
+msgid "red"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_binding
+msgid "shopinvader.binding"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_shopinvader_config_settings
+msgid "shopinvader.config.settings"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model,name:shopinvader.model_url_url
+msgid "url.url"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_11
+msgid "white"
+msgstr ""
+
+#. module: shopinvader
+#: model:product.attribute.value,name:shopinvader.product_attribute_value_13
+msgid "yellow"
+msgstr ""
+
