@@ -1,0 +1,10 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+long/long.egg-info/PKG-INFO
+long/long.egg-info/SOURCES.txt
+long/long.egg-info/dependency_links.txt
+long/long.egg-info/not-zip-safe
+long/long.egg-info/requires.txt
+long/long.egg-info/top_level.txt
