@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+arduscope/__init__.py
+arduscope/arduscope.ino
+arduscope/arduscope.py
+arduscope.egg-info/PKG-INFO
+arduscope.egg-info/SOURCES.txt
+arduscope.egg-info/dependency_links.txt
+arduscope.egg-info/requires.txt
+arduscope.egg-info/top_level.txt
+arduscope.egg-info/zip-safe
+scripts/uso_basico.py
