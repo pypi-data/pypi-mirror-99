@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: data2tree
+Version: 1.0.2
+Summary: Python Generate the data tree recursively
+Home-page: https://github.com/zerone40
+Author: 01
+Author-email: zerone40@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Tree Builder
+
+> Input
+
+``` python
+ lst = [
+     {"id": 1, "pid": 0, "name": "Tree - 1"},
+     {"id": 2, "pid": 1, "name": "Tree - 1 - 1"},
+     {"id": 3, "pid": 1, "name": "Tree - 1 - 2"},
+     {"id": 4, "pid": 2, "name": "Tree - 1 - 1- 1"},
+     {"id": 5, "pid": 0, "name": "Tree - 2"}
+ ]
+```
+
+> Usage
+
+```bash
+pip install data2tree -i  https://pypi.org/simple/
+```
+
+``` python
+from TreeBuilder.builder import BuildTree
+tree = BuildTree(record_key="id", parent_record_key="pid").build_tree(lst)
+print(tree)
+```
+
+> Notes
+
+| Parameter         | Type   | required | Description      |
+| ----------------- | ------ | -------- | ---------------- |
+| record_key        | String | True     | record id        |
+| parent_record_key | String | True     | parent_record id |
+
+> Output
+>
+
+```python
+[
+    {
+        "id": 1,
+        "pid": 0,
+        "name": "Tree - 1",
+        "child": [
+            {
+                "id": 2,
+                "pid": 1,
+                "name": "Tree - 1 - 1",
+                "child": [
+                    {
+                        "id": 4,
+                        "pid": 2,
+                        "name": "Tree - 1 - 1- 1"
+                    }]
+            },
+            {
+                "id": 3,
+                "pid": 1,
+                "name": "Tree - 1 - 2"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "pid": 0,
+        "name": "Tree - 2"
+    }
+]
+```
+
+
+
+
