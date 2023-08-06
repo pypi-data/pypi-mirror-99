@@ -1,0 +1,10 @@
+README.md
+setup.py
+wtool_utils/__init__.py
+wtool_utils/__main__.py
+wtool_utils.egg-info/PKG-INFO
+wtool_utils.egg-info/SOURCES.txt
+wtool_utils.egg-info/dependency_links.txt
+wtool_utils.egg-info/entry_points.txt
+wtool_utils.egg-info/requires.txt
+wtool_utils.egg-info/top_level.txt
