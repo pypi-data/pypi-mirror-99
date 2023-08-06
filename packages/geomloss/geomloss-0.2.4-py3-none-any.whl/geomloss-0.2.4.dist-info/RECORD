@@ -1,0 +1,11 @@
+geomloss/__init__.py,sha256=msqJq2JKEXDT9hZWrnvluL0Icq3CP4-B88VJ2KEsiTA,117
+geomloss/kernel_samples.py,sha256=zOCIA1e0Ub_7vsCsQDl2NEXz3Om7Iip8zIX55h-nPAY,8732
+geomloss/samples_loss.py,sha256=YIyxYNnhXId5K7QTetmeMxmTlO04A7gSeJYU1bGPxGU,19926
+geomloss/sinkhorn_divergence.py,sha256=s_hVK96Q22_RvCgr3gl0t_LZuDvBthiDVD4b5a4t_JI,9881
+geomloss/sinkhorn_samples.py,sha256=sptx_D77TMIsmfOVri9WPSB5CQ8V8RMb6dpjlvq0zVg,11649
+geomloss/utils.py,sha256=F9Ib9sRWMD8ayVPB93odwxL6RhZtN_hl_RVisWxKIlI,1327
+geomloss-0.2.4.dist-info/LICENSE.txt,sha256=kwv1BO9Iz-q2ePTDlCsZ5oKYI7Yi0Qtp_dy52j95P9c,1067
+geomloss-0.2.4.dist-info/METADATA,sha256=yU0KbneaDWb_HVnqjCbC4kW1mfdpBN0fxrvKyLFNEh0,1026
+geomloss-0.2.4.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+geomloss-0.2.4.dist-info/top_level.txt,sha256=WZzE5k59gArP6ev5q4ntcptddGkmPseENGfnYR9lX30,9
+geomloss-0.2.4.dist-info/RECORD,,
