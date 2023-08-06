@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: django-private-chat2
+Version: 0.1.2
+Summary: Chat app for Django, powered by Django Channels, Websockets & Asyncio
+Home-page: https://github.com/Bearle/django_private_chat2
+Author: Bearle
+Author-email: tech@bearle.ru
+License: MIT
+Description: 
+        
+        History
+        -------
+        
+        0.1.2 (2021-03-23)
+        ++++++++++++++++++
+        
+        * Fix errors found with tests №2
+        
+        0.1.1 (2021-03-23)
+        ++++++++++++++++++
+        
+        * Fix errors found with tests
+        
+        
+        0.1.0 (2021-03-21)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: django_private_chat2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
