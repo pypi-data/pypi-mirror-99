@@ -1,0 +1,10 @@
+LICENSE,sha256=tRU_7Lpb5IT0ChOLh8dPTpGX9eLuJevA167Hr5Uq77o,1165
+cfddns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfddns/__main__.py,sha256=xexSsU_5EMEGlr4DMGZA0BYZulVQzfRUqMbzZSSWB8Y,127
+cfddns/cli.py,sha256=OnA4Vslz3fTHU_nZ-OdKTn07ETJvMyKOrzQurwSi0LA,6470
+cfddns/notification.py,sha256=xk3JGrFlm6IYFxFcOlMB3XiE_ODHSDc0IdWRT296WO8,332
+cfddns-1.5.0.dist-info/entry_points.txt,sha256=yi2eu36UYpB5tjf5UhdE1LCZvJ7sUONMGj8YHdapJ2w,42
+cfddns-1.5.0.dist-info/LICENSE,sha256=tRU_7Lpb5IT0ChOLh8dPTpGX9eLuJevA167Hr5Uq77o,1165
+cfddns-1.5.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+cfddns-1.5.0.dist-info/METADATA,sha256=sFGuMKiS-2_HnnwNxzlQtSKE_3gEjqxxw3zK4PSn-Eg,1780
+cfddns-1.5.0.dist-info/RECORD,,

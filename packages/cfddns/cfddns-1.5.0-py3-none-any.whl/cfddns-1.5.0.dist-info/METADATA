@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: cfddns
+Version: 1.5.0
+Summary: DDNS client for Cloudflare DNS
+Home-page: https://github.com/uetchy/cfddns
+License: MIT
+Keywords: cloudflare,ddns
+Author: Yasuaki Uechi
+Author-email: y@uechi.io
+Requires-Python: >=3.4
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: Name Service (DNS)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: cloudflare (>=2.8.13,<3.0.0)
+Project-URL: Repository, https://github.com/uetchy/cfddns
+Description-Content-Type: text/markdown
+
+# cfddns
+
+Dynamic DNS client for Cloudflare DNS.
+
+## Usage
+
+```bash
+cat << EOD > domains
+example.com
+mail.example.com
+example.org
+EOD
+
+cat <<EOD > cfddns.yml
+token: "<CloudFlare API token>"
+interval: 900 # in seconds (optional)
+endpoint: "https://api.ipify.org" # (optional)
+EOD
+
+cfddns -c cfddns.yml domains
+```
+
+## Install
+
+### Arch Linux
+
+Install `cfddns` via [AUR](https://aur.archlinux.org/packages/cfddns/).
+
+```bash
+git clone https://aur.archlinux.org/cfddns.git && cd cfddns
+makepkg -si
+
+cat << EOD > /etc/cfddns/domains
+example.com
+mail.example.com
+example.org
+EOD
+
+vim /etc/cfddns/cfddns.yml # assign `token`
+
+systemctl enable --now cfddns
+```
+
+### Build from source
+
+```bash
+git clone https://github.com/uetchy/cfddns.git && cd cfddns
+poetry install --build
+```
+
