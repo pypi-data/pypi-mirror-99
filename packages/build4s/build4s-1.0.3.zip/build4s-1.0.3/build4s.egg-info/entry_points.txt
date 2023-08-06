@@ -1,0 +1,3 @@
+[console_scripts]
+buildcli = build4s.cli:main
+

@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+build4s/__init__.py
+build4s/build.py
+build4s/cli.py
+build4s.egg-info/PKG-INFO
+build4s.egg-info/SOURCES.txt
+build4s.egg-info/dependency_links.txt
+build4s.egg-info/entry_points.txt
+build4s.egg-info/not-zip-safe
+build4s.egg-info/requires.txt
+build4s.egg-info/top_level.txt
