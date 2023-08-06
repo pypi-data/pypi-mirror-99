@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/Zaraciccio/__init__.py
+src/Zaraciccio/flask.py
+src/Zaraciccio/input.py
+src/Zaraciccio/locales.py
+src/Zaraciccio/printer.py
+src/Zaraciccio/sql.py
+src/Zaraciccio.egg-info/PKG-INFO
+src/Zaraciccio.egg-info/SOURCES.txt
+src/Zaraciccio.egg-info/dependency_links.txt
+src/Zaraciccio.egg-info/requires.txt
+src/Zaraciccio.egg-info/top_level.txt

@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: Zaraciccio
+Version: 0.1
+Summary: Zaraciccio's Library for Python
+Home-page: UNKNOWN
+Author: Zaraciccio De Zaracicci
+Author-email: zaradevelopment@outlook.com
+License: UNKNOWN
+Description: # Zaraciccio's Library for Python
+        ## Installation
+        
+        ```bash
+        pip install Zaraciccio
+        ```
+        
+        ## Components
+        ### The `SQL` Module helps you to connect to a SQLite, MySQL or PostgreSQL database.
+        To initialize it:
+        ```python
+        from Zaraciccio import SQL
+        # SQLite
+        db = SQL("sqlite:///database.db")
+        
+        # MySQL
+        db = SQL("mysql://mysql@localhost/database")
+        
+        # PostgreSQL
+        db = SQL("postgresql://postgresql@localhost/database")
+        ```
+        
+        ### The `import` module contains three functions:
+        
+        - `input_int(prompt)`, via wich you can prompt the user for an integer. If the user doesn't input an integer, is prompted to retry.
+        - `input_float(prompt)`, via wich you can prompt the user for a floating point value. If the user doesn't input a floating point value, is prompted to retry
+        - `input_string(prompt)`, via wich you can prompt the user for a string.
+        
+        ### The `printer` module prints emphatised text.
+        An automatic `\n` is added at the end of every row. Is possible to pass many arguments, wich will be printed separaed by a space.
+        To initialize it:
+        ```python
+        from Zaraciccio import printer
+        p = printer(text="black", style="italic", background="white")
+        p.print("Foo", "Bar", "Baz")
+        ```
+        
+        ## Development
+        ### Set up a Python virtual environment.
+        
+        On Linux/MacOS:
+        ```bash
+        python -m venv venv
+        source ./venv/bin/activate
+        ```
+        
+        On Windows:
+        ```powershell
+        py -3 -m venv venv
+        .\venv\Scripts\activate
+        ```
+        
+        ### Install required packages
+        
+        ```bash
+        pip install logging termcolor functools flask sqlalchemy sqlparse datetime
+        ```
+        
+        **Please read the LICENSE file before using this software.**
+Keywords: Zaraciccio
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
