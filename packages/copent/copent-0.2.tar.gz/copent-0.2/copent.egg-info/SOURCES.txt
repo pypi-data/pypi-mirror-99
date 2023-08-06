@@ -1,0 +1,9 @@
+README.md
+setup.py
+copent/__init__.py
+copent/copent.py
+copent.egg-info/PKG-INFO
+copent.egg-info/SOURCES.txt
+copent.egg-info/dependency_links.txt
+copent.egg-info/requires.txt
+copent.egg-info/top_level.txt
