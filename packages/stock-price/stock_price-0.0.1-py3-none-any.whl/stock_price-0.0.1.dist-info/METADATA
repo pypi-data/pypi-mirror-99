@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: stock-price
+Version: 0.0.1
+Summary: Get stock prices.
+Home-page: https://github.com/JesseAldridge/stock_price
+Author: Jesse Aldridge
+Author-email: JesseAldridge@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
