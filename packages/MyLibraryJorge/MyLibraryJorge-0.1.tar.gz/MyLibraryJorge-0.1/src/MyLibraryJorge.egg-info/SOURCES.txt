@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/Example/__init__.py
+src/MyLibraryJorge.egg-info/PKG-INFO
+src/MyLibraryJorge.egg-info/SOURCES.txt
+src/MyLibraryJorge.egg-info/dependency_links.txt
+src/MyLibraryJorge.egg-info/top_level.txt
