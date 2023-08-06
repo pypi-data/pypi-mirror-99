@@ -1,0 +1,7 @@
+setup.py
+OtoPy/OtomaTools.py
+OtoPy/__init__.py
+OtoPy.egg-info/PKG-INFO
+OtoPy.egg-info/SOURCES.txt
+OtoPy.egg-info/dependency_links.txt
+OtoPy.egg-info/top_level.txt
