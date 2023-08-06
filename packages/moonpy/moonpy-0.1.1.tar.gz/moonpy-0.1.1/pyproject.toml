@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "moonpy"
+version = "0.1.1"
+description = "Personal utils"
+authors = ["Garrett Mooney <4910020+GarrettMooney@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "^1.20.1"
+scipy = "^1.6.1"
+google-auth = "^1.28.0"
+google-cloud = "^0.34.0"
+google-api-python-client = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

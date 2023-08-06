@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: moonpy
+Version: 0.1.1
+Summary: Personal utils
+Author: Garrett Mooney
+Author-email: 4910020+GarrettMooney@users.noreply.github.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: google-api-python-client (>=2.0.2,<3.0.0)
+Requires-Dist: google-auth (>=1.28.0,<2.0.0)
+Requires-Dist: google-cloud (>=0.34.0,<0.35.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Requires-Dist: scipy (>=1.6.1,<2.0.0)
