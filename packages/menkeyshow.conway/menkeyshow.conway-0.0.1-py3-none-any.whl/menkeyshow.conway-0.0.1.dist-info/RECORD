@@ -1,0 +1,11 @@
+game_of_life/__init__.py,sha256=wwRFNchrEGOT8b2TDlV-BWmK7YBmYO0g598aazPB8Us,969
+game_of_life/__main__.py,sha256=AEWcMXu70bWyB3UbZx49f8TUgf8jVryla5knHFVXaIE,110
+game_of_life/game_logic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game_of_life/game_logic/board_logic.py,sha256=ZcYHXq-vojeqadK71XgW-5_5GHh4CUrcE4gytWVR9H4,5330
+game_of_life/gui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game_of_life/gui/gui.py,sha256=Zzdz3VZgN1483rukCrJBlYtsFxDHcEBi-xeGHxwagUk,4628
+menkeyshow.conway-0.0.1.dist-info/METADATA,sha256=_Xt4AlQ1HkYLFjBLbgO3o8LArQwHn5vMwDc7hLEmrjo,1202
+menkeyshow.conway-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+menkeyshow.conway-0.0.1.dist-info/entry_points.txt,sha256=b1YCXWXaIjrrOPHGBL8I2AqNV60ryr61xwUFuhPNIyY,55
+menkeyshow.conway-0.0.1.dist-info/top_level.txt,sha256=dH05u5RceeuDJ6AyRTgN_oc8tziO5VCxF6nLhZUOTis,13
+menkeyshow.conway-0.0.1.dist-info/RECORD,,

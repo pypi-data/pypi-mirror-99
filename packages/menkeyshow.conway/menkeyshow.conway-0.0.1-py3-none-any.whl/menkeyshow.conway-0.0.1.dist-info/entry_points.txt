@@ -1,0 +1,3 @@
+[console_scripts]
+conway = game_of_life.__main__:main
+
