@@ -1,0 +1,48 @@
+[tool]
+[tool.poetry]
+name = "toolcraft"
+version = "0.1.3-alpha.1"
+homepage = "https://github.com/SpikingNeurons/toolcraft"
+description = "Top-level package for toolcraft."
+authors = ["Praveen Kulkarni <praveenneuron@gmail.com>"]
+readme = "README.rst"
+license =  "BSD-3-Clause"
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+]
+packages = [
+    { include = "toolcraft" },
+    { include = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6.0"
+typer = "*"
+tqdm = "^4.59.0"
+PyYAML = "^5.4.1"
+dearpygui = "^0.6.281"
+yaspin = "^1.4.1"
+
+[tool.poetry.dev-dependencies]
+coverage = "*"
+flake8 = "*"
+invoke = "*"
+isort = "*"
+pylint = "*"
+pytest = "*"
+sphinx = "*"
+tox = "*"
+yapf = "*"
+
+[tool.poetry.scripts]
+toolcraft = 'toolcraft.cli:main'
+
+[build-system]
+requires = ["poetry>=1.1.5"]
+build-backend = "poetry.masonry.api"
