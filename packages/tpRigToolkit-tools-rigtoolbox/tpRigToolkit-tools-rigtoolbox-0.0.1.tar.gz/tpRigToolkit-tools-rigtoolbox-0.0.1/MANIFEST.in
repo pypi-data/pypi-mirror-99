@@ -1,0 +1,4 @@
+include tpRigToolkit/tools/rigtoolbox/__logging__.ini
+recursive-include tpRigToolkit/tools/rigtoolbox/resources/* *.*
+include versioneer.py
+include tpRigToolkit/tools/rigtoolbox/_version.py
