@@ -1,0 +1,7 @@
+pip>=20
+sip>=5.3
+PyQt5-sip
+PyQt5
+fbs<0.9
+MJOLNIR
+ufit>=1.4.0
