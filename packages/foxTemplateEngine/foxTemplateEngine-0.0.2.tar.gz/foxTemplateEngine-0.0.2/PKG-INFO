@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: foxTemplateEngine
+Version: 0.0.2
+Summary: Template Engine for HTML
+Home-page: https://github.com/leroykiddd/ivt1_20_petrov
+Author: Petrov D.A.
+Author-email: leroykid02@mail.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
