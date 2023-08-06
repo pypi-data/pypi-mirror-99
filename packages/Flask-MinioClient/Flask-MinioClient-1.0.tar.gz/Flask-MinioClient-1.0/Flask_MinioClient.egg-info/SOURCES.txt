@@ -1,0 +1,10 @@
+README.md
+flask_minioclient.py
+setup.cfg
+setup.py
+Flask_MinioClient.egg-info/PKG-INFO
+Flask_MinioClient.egg-info/SOURCES.txt
+Flask_MinioClient.egg-info/dependency_links.txt
+Flask_MinioClient.egg-info/not-zip-safe
+Flask_MinioClient.egg-info/requires.txt
+Flask_MinioClient.egg-info/top_level.txt
