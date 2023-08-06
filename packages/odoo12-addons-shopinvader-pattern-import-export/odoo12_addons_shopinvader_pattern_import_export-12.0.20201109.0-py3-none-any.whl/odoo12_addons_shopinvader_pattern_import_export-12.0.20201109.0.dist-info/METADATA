@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-shopinvader-pattern-import-export
+Version: 12.0.20201109.0
+Summary: Meta package for shopinvader-pattern-import-export Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-pattern-import-export
+Requires-Dist: odoo12-addon-pattern-import-export-csv
+Requires-Dist: odoo12-addon-pattern-import-export-synchronize
+Requires-Dist: odoo12-addon-pattern-import-export-xlsx
+
+UNKNOWN
+
+
