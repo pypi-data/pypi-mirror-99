@@ -1,0 +1,8 @@
+README.md
+setup.py
+CopaData/__init__.py
+CopaData/pyZAN.py
+CopaData.egg-info/PKG-INFO
+CopaData.egg-info/SOURCES.txt
+CopaData.egg-info/dependency_links.txt
+CopaData.egg-info/top_level.txt
