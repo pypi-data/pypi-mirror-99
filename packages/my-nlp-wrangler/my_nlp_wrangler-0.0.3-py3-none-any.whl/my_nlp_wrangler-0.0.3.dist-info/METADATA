@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: my-nlp-wrangler
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: https://github.com/jjudy60334/my-nlp-wrangler
+Author: Claire.Wu
+Author-email: jjudy708618@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: flake8 (==3.8.4)
+Requires-Dist: jieba (==0.42.1)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: numpy (==1.20.1)
+Requires-Dist: pandas (==1.2.3)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pyflakes (==2.2.0)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: six (==1.15.0)
+
+# my-nlp-wrangler
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-brightgreen.svg)](https://pypi.org/project/my-nlp-wrangler/)
+## Description
+This is a framwork for nlp clean data wrangler
+
+這是一個很簡單的nlp清理文字並斷詞的架構。Cleaner主要作為去除標點符號和網址，而Tokenizer會先使用jeiba斷詞，並且移除以定義的stop word(須自行輸入stop word的位置)。
+
+## Flow
+### Cleaner
+- remove puncuation
+- remove rul
+
+### Tokenizer
+- default by jeiba tokenizer 
+- remove stop words 
+
+## Quick Start
+Installation command: `pip install my-nlp-wrangler`
+
+``` py3
+from mynlpwrangler.cleaner import ArticleCleaner
+from mynlpwrangler.tokenizer import Tokenizer
+
+df = pd.DataFrame(
+    {
+    "id": ["10001", "11375", "23423"],
+    "text": ["Hello, https://www.google.com/", "Hello,world", 'How do you do? http://www.google.com']
+    })
+
+# To clean the sentence by removing the puncuation and url
+ac = ArticleCleaner(col='content',cleaned_col='clean_sentence')
+clean_data = ac.clean_data(df=article_df)
+
+# Tokentize the sentence and generate the segmented word
+tokenized_column = 'tokenize_word'
+tk=Tokenizer(stop_word_path = f'{os.getcwd()}/stop_word.txt')
+tk.tokenize_dataframe(clean_data,sentences_column = 'content',new_generate_column = tokenized_column)
+```
+
