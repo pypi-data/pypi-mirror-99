@@ -1,0 +1,36 @@
+[tool.pytest.ini_options]
+testpaths =[
+    "tests",
+    "fractopo",
+    ]
+addopts = "--doctest-modules --pdbcls=IPython.terminal.debugger:Pdb"
+doctest_optionflags =[
+    "NUMBER",
+    "NORMALIZE_WHITESPACE",
+    ]
+
+filterwarnings =[
+    "ignore:invalid value encountered in true_divide:RuntimeWarning",
+    "ignore:The Shapely GEOS version :UserWarning",
+    "ignore:invalid value encountered in double_scalars:RuntimeWarning",
+    "ignore:Mean of empty slice:RuntimeWarning",
+    "ignore:Degrees of freedom :RuntimeWarning",
+    "ignore:divide by zero encountered in double_scalars:RuntimeWarning",
+    "ignore:This method will be removed in future versions:DeprecationWarning",
+    "ignore:The default dtype for empty Series will be:DeprecationWarning",
+    "ignore:All-NaN slice encountered:RuntimeWarning",
+    ]
+
+[tool.black]
+exclude = "fractopo/_version.py"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["fractopo", "tests"]
+skip = "fractopo/_version.py"
+
+[tool.coverage.run]
+omit =[
+    "fractopo/_version.py",
+    ]
