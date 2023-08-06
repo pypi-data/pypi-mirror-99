@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: rwc
+Version: 0.1.0
+Summary: A reStructuredText and Markdown wordcounter
+Home-page: https://git.sr.ht/~ren/rwc
+Author: attr: rwc.__author__
+Author-email: lauren@kat.net.nz
+License: MIT
+Description: # rwc
+        
+        A reStructuredText and Markdown wordcounter,
+        designed for long-form writing.
+        
+        rwc looks for reStructuredText and Markdown files
+        in the directory (or directories) passed on the command line,
+        renders them to HTML,
+        strips away everything but the text from that rendered HTML,
+        and does per-file word counts on that text,
+        outputting the count per file
+        as well as a total for the directory.
+        
+        ## Usage
+        
+        ```shell
+        $ ls
+        test-one.md test-two.rst test-three.rst
+        
+        $ rwc .
+        test-one.md: 10 words
+        test-two.rst: 10 words
+        test-three.rst: 23 words
+        -----
+        total: 43 words
+        ```
+        
+        ## License
+        
+        rwc is licensed under the MIT License.
+        See [the LICENSE file](./LICENSE).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: build
