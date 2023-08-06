@@ -1,0 +1,4 @@
+DingtalkChatbot>=1.5.2
+requests>=2.23
+tqdm>=4.45
+yagmail>=0.11.224
