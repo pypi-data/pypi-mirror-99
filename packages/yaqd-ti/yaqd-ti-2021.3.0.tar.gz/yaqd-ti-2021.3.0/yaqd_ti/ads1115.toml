@@ -1,0 +1,54 @@
+protocol = "ads1115"
+doc = """
+Daemon to interface with ADS1115 four-channel ADC.
+"""
+traits = ["uses-i2c", "has-measure-trigger", "is-sensor", "is-daemon"]
+hardware = ["ti:ads1115"]
+
+[links]
+source = "https://gitlab.com/yaq/yaqd-ti/"
+bugtracker = "https://gitlab.com/yaq/yaqd-ti/-/issues/"
+manufacturer = "https://www.ti.com/product/ADS1115"
+
+[installation]
+PyPI = "https://pypi.org/project/yaqd-ti/"
+conda-forge = "https://anaconda.org/conda-forge/yaqd-ti"
+
+[config.channels]
+type = "enum"
+name = "channels"
+symbols = ["01",
+           "03",
+	   "13",
+	   "23",
+	   "0",
+	   "1",
+	   "2",
+	   "3"
+	   ]
+
+[config.fsr]
+type = "enum"
+name = "fsr"
+symbols = ["6.144",
+           "4.096",
+	   "2.048",
+	   "1.024",
+	   "0.512"
+	   ]
+
+[config.i2c_addr]
+default = 72
+
+[config.rate]
+type = "enum"
+name = "rate"
+symbols = ["8",
+           "16",
+	   "32",
+	   "64",
+	   "128",
+	   "250",
+	   "475",
+	   "860"
+	   ]
