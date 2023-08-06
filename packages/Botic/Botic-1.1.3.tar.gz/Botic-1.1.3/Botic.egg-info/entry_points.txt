@@ -1,0 +1,6 @@
+[console_scripts]
+botic = botic.cli:main
+boticdump = botic.dumpdata:main
+boticp = botic.cli:main_persist
+botictop = botic.top:main
+
