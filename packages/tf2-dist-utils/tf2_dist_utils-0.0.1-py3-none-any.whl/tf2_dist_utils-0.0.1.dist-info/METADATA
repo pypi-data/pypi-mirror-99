@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tf2-dist-utils
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/RoetGer/tf2-dist-utils
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# tf2-dist-utils
+Package that makes it easier to incorporate distributions into tensorflow 2.x models.
+
+
