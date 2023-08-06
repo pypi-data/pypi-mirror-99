@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+symbolism/__init__.py
+symbolism/symbolism.py
+symbolism.egg-info/PKG-INFO
+symbolism.egg-info/SOURCES.txt
+symbolism.egg-info/dependency_links.txt
+symbolism.egg-info/top_level.txt
