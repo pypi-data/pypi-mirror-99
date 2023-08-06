@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+import click
+import logging
+import requests
+import os
+import tempfile
+from hashlib import sha256
+import gnupg
+
+# Inputs: package name, version, trusted key fingerprint for that package
+# Output: Valid signattre, no signature available, or untrusted signatrue
+
+def loadPackage(url: str, path: str):
+    logging.debug("Loading package")
+    res = requests.get(url)
+    res.raise_for_status()
+    with open(path, "wb") as f:
+        f.write(res.content)
+
+def verifySignature(file: str, signature: str, requiredFingerprint: str, gpghome: str):
+    logging.debug("Verifying signature")
+    gpg = gnupg.GPG(gnupghome=os.path.expanduser(gpghome))
+    with open(signature, "rb") as fpSignature:
+        status = gpg.verify_file(fpSignature, file)
+    if status.valid == True and status.trust_level != status.TRUST_NEVER:
+        singedByFingerprints = []
+        for sigId in status.sig_info:
+            singedByFingerprints.append(status.sig_info[sigId]["fingerprint"].strip().upper())
+        requiredFingerprintSanitized = requiredFingerprint.strip().upper()
+        if requiredFingerprintSanitized in singedByFingerprints:
+            print("Good signature with valid fingerprint for this package.")
+        else:
+            raise Exception(f"Package wasnt signed with expected fingerprint. Expected: {requiredFingerprintSanitized} but got {singedByFingerprints}")
+    else:
+        raise Exception(f"Verification failed. {status.trust_text}")
+
+def hashFile(file_path):
+    # source: https://stackoverflow.com/questions/22058048/hashing-a-file-in-python
+    h = sha256()
+    with open(file_path, 'rb') as file:
+        while True:
+            # Reading is buffered, so we can read smaller chunks.
+            chunk = file.read(h.block_size)
+            if not chunk:
+                break
+            h.update(chunk)
+    return h.hexdigest()
+
+@click.command()
+@click.option("-p", "--package-url", "package", help="PIP package url")
+@click.option("-f", "--trusted-key-fingerprint", "fingerprint", help="The fingerprint of the GPG you trust to sign this package")
+@click.option("--gpghome", default="~/.gnupg", help="Your GPG home dir")
+def main(package: str, fingerprint: str, gpghome: str):
+    logging.debug("Loading ASC file")
+    res = requests.get(f"{package}.asc")
+    if res.status_code == requests.codes.not_found:
+        raise Exception("Package does not provide a GPG signature")
+    elif res.status_code == requests.codes.ok:
+        with tempfile.TemporaryDirectory() as tmpDir:
+            tmpPackagePath = f"{tmpDir}/pkg"
+            tmpSigPath = f"{tmpPackagePath}.sig"
+            with open(tmpSigPath, "w") as f:
+                f.write(res.text)
+            loadPackage(package, tmpPackagePath)
+            verifySignature(tmpPackagePath, tmpSigPath, fingerprint, gpghome)
+            packageHash = hashFile(tmpPackagePath)
+            print(f"Package sha256 hash: {packageHash}")
+    else:
+        res.raise_for_status()
+
+if __name__ == "__main__":
+    main()

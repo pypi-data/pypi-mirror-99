@@ -1,0 +1,86 @@
+**THE COMMAND LINE INTERFACE IS SUBJECT TO CHANGE**
+
+---
+
+# About
+Verify GPG signatures for packages supporting it on PIP using trust on first use.
+
+**Warning:** this is not a silver bullet to securing PIP. Use it only if you know what you are doing otherwise this _may_ create a false sence of security.
+
+# Goals
+
+Ensure a package was not modified by someone else then the original publisher without relying on hash checksums.
+By not relying on hash checksums we eliminate the need to vet each update and calculate a hash from it.
+
+# Installing
+
+### Using pip
+Using `pip` is discouraged because by default pip itself does nothing to verify you arent getting hacked. But to test it out its prbably ok.
+`pip install pipverify`
+
+### Using pipenv
+Since `pipverify` at least generates hashes its slightly better then `pip`. If you also verify the hash of this package by hand then pipverify is almoast perfect.
+`pipenv install pipverify`
+
+# Usage
+
+### How to use:
+- Import the GPG public key of the package author
+- Pass the download URL of the PIP package and the expected fingerprint of the GPG key signing the package
+
+### Example
+
+If you dont have `pipenv` installed yet do that in a secure way https://github.com/pypa/pipenv
+
+Intall dependencies
+```
+pipenv install
+```
+
+Run this script
+```
+pipenv run python3 main.py -p https://files.pythonhosted.org/packages/71/bd/ab05ffcbfe74dca704e860312e00c53ef690b1ddcb23be7a4d9ea4f40260/stem-1.8.0.tar.gz -f 2AE224F5C424990AE5206C85888404C187F30690
+```
+
+the output should be something like
+```
+Good signature with valid fingerprint for this package.
+Package sha256 hash: a0b48ea6224e95f22aa34c0bc3415f0eb4667ddeae3dfb5e32a6920c185568c2
+```
+
+This is the hash you _must_ use to lock the package version either in your `requirements.txt` or better yet in your `Pipfile.lock`. If you dont do this the whole GPG verification with this tool ise useless.
+
+### Help output
+```
+Usage: main.py [OPTIONS]
+
+Options:
+  -p, --package-url TEXT          PIP package url
+  -f, --trusted-key-fingerprint TEXT
+                                  The fingerprint of the GPG you trust to sign
+                                  this package
+
+  --gpghome TEXT                  Your GPG home dir
+  --help                          Show this message and exit.
+```
+
+# Future
+
+Wouldnt it be cool to have a file defining which key fingerprint you trust to sign what package (`Pipfile.sig.lock` or something similar) then just let this script run over a project and check if the packages were singed by GPG keys you trust. The packages that dont support GPG signatures would need to be logged.
+This would make it possible to upgrade packages locked in `Pipfile.lock` without having to manually vet each and every package.
+
+# Releasing
+
+_Note: The minor verion will be bumped up for test releases so the test PIP server wont get messed up with versions and thus wont cause wired hard to find errors._
+
+```
+rm -rf dist
+rm -rf pipverify.egg-info
+pipenv shell
+python setup.py sdist
+# test package on the PIP test server
+twine upload -r testpypi dist/* --sign --identity 5BDDF268
+
+# if everything looked good on the test PIP server upload to the actual PIP server
+twine upload dist/* --sign --identity 5BDDF268
+```

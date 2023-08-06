@@ -1,0 +1,8 @@
+README.md
+pipverify
+setup.py
+pipverify.egg-info/PKG-INFO
+pipverify.egg-info/SOURCES.txt
+pipverify.egg-info/dependency_links.txt
+pipverify.egg-info/requires.txt
+pipverify.egg-info/top_level.txt
