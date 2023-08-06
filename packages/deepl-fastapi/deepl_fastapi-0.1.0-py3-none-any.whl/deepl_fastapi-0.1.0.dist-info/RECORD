@@ -1,0 +1,8 @@
+deepl_fastapi/__init__.py,sha256=fduHCu4YhPs-7o2FRN6K7ujNQY4rpGRXrWYi_9A14kY,209
+deepl_fastapi/deepl_server.py,sha256=T2w_uDuCh6PpHaUMtwZonJ7gA1a8ADButY7wBVK2b4s,5617
+deepl_fastapi/deepl_server.py.portalocker.lock,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepl_fastapi/run_uvicorn.py,sha256=Z8zSvKc3RN3QwiG7X4UorQiUBSWrStHCTs0FZC38i4M,1456
+deepl_fastapi-0.1.0.dist-info/entry_points.txt,sha256=TABdKyaHUeK3DfsC0CKME9KvDAiU2vqan0GZvIJHCOQ,64
+deepl_fastapi-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+deepl_fastapi-0.1.0.dist-info/METADATA,sha256=FtuqiK3OliLFJbrJ0K0zvxkTToglbGG0kRLeGitvtzw,3627
+deepl_fastapi-0.1.0.dist-info/RECORD,,
