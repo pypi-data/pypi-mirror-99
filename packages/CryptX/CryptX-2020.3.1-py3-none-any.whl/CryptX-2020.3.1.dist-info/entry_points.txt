@@ -1,0 +1,3 @@
+[console_scripts]
+crx = CryptX.__init__:main
+

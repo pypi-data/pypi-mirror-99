@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: CryptX
+Version: 2020.3.1
+Summary: A Open-Source & Safe Message Encrypter & Decrypter
+Home-page: https://github.com/TG-iDev/CryptX
+Author: TechGeeks
+Author-email: CryptX@tgeeks.cf
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# A OpenSource & Safe Message Encryption & Decryption System
+
+## Installation
+
+### Windows
+```shell
+pip install CryptX
+```
+### Linux/macOS
+```shell
+python3 -m pip install CryptX
+```
+
+## Usage
+
+# Terminal/CMD
+
+```shell
+crx
+```
+# Python Scipt
+CryptX is a safer way to validate password than MD5 as decrypting also requires a Password (Super-Secret-Key)
+```python
+from CryptX import Encrypter, Decrypter
+password = input("Please Enter the Password: ")
+password = str(password)
+password = Encrypter(password, 'Super-Secret-Key')
+
+pass_login = input("Please Enter The Login Password: ")
+pass_login = str(pass_login)
+pass_login = Encrypter(pass_login, 'Super-Secret-Key')
+if pass_login == password:
+    print("You have been Logged in!")
+else:
+    print("Incorrect Password")
+```
+
