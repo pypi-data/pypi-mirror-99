@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: napari-split-dataset
+Version: 0.2.0
+Summary: hdf5/split-dataset file reader for napari
+Home-page: https://github.com/portugueslab/napari_split_dataset
+Author: You Wu @portugueslab
+Author-email: youkwu@neuro.mpg.de
+License: MIT
+Keywords: napari_split_dataset
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: napari-plugin-engine
+Requires-Dist: numpy
+Requires-Dist: flammkuchen
+Requires-Dist: split-dataset
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: pydoc-markdown ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: gitpython ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+
+[![Python Version](https://img.shields.io/pypi/pyversions/napari-split-dataset.svg)](https://pypi.org/project/napari-split-dataset)
+[![PyPI](https://img.shields.io/pypi/v/napari-split-dataset.svg)](
+    https://pypi.python.org/pypi/napari-split-dataset)
+[![Tests](https://img.shields.io/github/workflow/status/portugueslab/napari-split-dataset/tests)](
+    https://github.com/portugueslab/napari-split-dataset/actions)
+[![Coverage Status](https://coveralls.io/repos/github/portugueslab/napari-split-dataset/badge.svg?branch=master)](https://coveralls.io/github/portugueslab/napari-split-dataset?branch=master)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
+
+
+# hdf5/split-dataset file reader for napari
+
+A `napari` plugin for visualising [`SplitDataset`](https://github.com/portugueslab/split_dataset) objects. This package has been developed in the [Portugues lab](http://www.portugueslab.com).
+
+
+
