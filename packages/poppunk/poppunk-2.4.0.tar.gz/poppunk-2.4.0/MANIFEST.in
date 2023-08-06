@@ -1,0 +1,2 @@
+recursive-include scripts *.py
+recursive-include PopPUNK/data *.gz
