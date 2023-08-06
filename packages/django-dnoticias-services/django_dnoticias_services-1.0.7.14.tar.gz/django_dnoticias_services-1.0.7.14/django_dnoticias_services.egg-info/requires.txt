@@ -1,0 +1,4 @@
+django
+mozilla-django-oidc
+python-keycloak
+requests
