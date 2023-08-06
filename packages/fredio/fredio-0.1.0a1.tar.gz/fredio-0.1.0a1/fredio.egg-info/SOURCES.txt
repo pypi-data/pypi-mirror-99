@@ -1,0 +1,14 @@
+README.md
+setup.py
+fredio/__init__.py
+fredio/client.py
+fredio/const.py
+fredio/events.py
+fredio/locks.py
+fredio/session.py
+fredio/utils.py
+fredio.egg-info/PKG-INFO
+fredio.egg-info/SOURCES.txt
+fredio.egg-info/dependency_links.txt
+fredio.egg-info/requires.txt
+fredio.egg-info/top_level.txt
