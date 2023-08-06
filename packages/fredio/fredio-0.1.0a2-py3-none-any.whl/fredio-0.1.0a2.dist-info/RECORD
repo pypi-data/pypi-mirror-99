@@ -1,0 +1,12 @@
+fredio/__init__.py,sha256=iWHsOIAFadAHIkGxKHLcqhyH49A_VfHPO6aSMSOlDT0,1797
+fredio/client.py,sha256=36nJvP8EFRmR9bTnUdT6Rrrl_6bY9643F_x0E26FFgo,5960
+fredio/const.py,sha256=lGKEkJNau1qvuXSOdJvtTIfJLFzixse1NbI4e_djAyM,974
+fredio/events.py,sha256=ecm8ppvc6TEDrX9Xz1-JlmMA469S4FHa0rgsqTpUOps,4555
+fredio/locks.py,sha256=5O_GsQ8RKBuW4HA0QHbxHekMFto0QtVlI1U7YxfuDyM,4155
+fredio/session.py,sha256=Gkgd59VzyvYMNpkMqvx-aHbdKZnEXHhoFbr9Ihq4G3A,4489
+fredio/utils.py,sha256=bey2heKICl00y-5t3uMKzdMS8P8mlrvHJgtv3eWGRyY,1270
+fredio-0.1.0a2.dist-info/LICENSE,sha256=jXVaqLg1rqpvSs2aPxRoM9qLXGP1dQb_VApy66ZGqmg,1069
+fredio-0.1.0a2.dist-info/METADATA,sha256=tetkga6949YyeiTaNuAgIeuI1TVPyAfZTewhDxwT-eg,5227
+fredio-0.1.0a2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fredio-0.1.0a2.dist-info/top_level.txt,sha256=iM24qnTxBhUEKebiudW8td2qZAWOhicomIGGBfxTilA,7
+fredio-0.1.0a2.dist-info/RECORD,,
