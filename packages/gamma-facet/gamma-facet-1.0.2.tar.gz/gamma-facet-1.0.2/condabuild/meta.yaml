@@ -1,0 +1,56 @@
+package:
+  name: gamma-facet
+  version: {{ environ.get('FACET_BUILD_FACET_VERSION') }}
+
+source:
+  git_url: {{FACET_PATH}}/facet
+
+build:
+  noarch: python
+  script: "flit install --deps none"
+
+requirements:
+  host:
+    - pip>=20.*
+    - python {{ environ.get('FACET_V_PYTHON', '=3.8.*') }}
+    - numpy {{ environ.get('FACET_V_NUMPY', '>=1.11.*') }}
+    - flit>=3.0.*
+  run:
+    - gamma-pytools{{ environ.get('FACET_V_GAMMA_PYTOOLS') }}
+    - matplotlib{{ environ.get('FACET_V_MATPLOTLIB') }}
+    - numpy{{ environ.get('FACET_V_NUMPY') }}
+    - packaging{{ environ.get('FACET_V_PACKAGING') }}
+    - pandas{{ environ.get('FACET_V_PANDAS') }}
+    - python{{ environ.get('FACET_V_PYTHON') }}
+    - scipy{{ environ.get('FACET_V_SCIPY') }}
+    - shap{{ environ.get('FACET_V_SHAP') }}
+    - sklearndf{{ environ.get('FACET_V_SKLEARNDF') }}
+
+test:
+  imports:
+    - facet
+    - facet.crossfit
+    - facet.inspection
+    - facet.selection
+    - facet.validation
+    - facet.simulation
+  requires:
+    - pytest=5.2.*
+  commands:
+    - conda list
+    - python -c 'import facet;
+                 import os;
+                 assert facet.__version__ == os.environ["PKG_VERSION"]'
+    - pytest -vs ${FACET_PATH}/facet/test
+
+about:
+  home: https://github.com/BCG-Gamma/facet
+  license: Apache Software License v2.0
+  license_file: LICENSE
+  description: |
+    FACET is an open source library for human-explainable AI. It combines sophisticated
+    model inspection and model-based simulation to enable better explanations of
+    your supervised machine learning models.
+  dev_url: https://github.com/BCG-Gamma/facet
+  doc_url: https://bcg-gamma.github.io/facet/
+  doc_source_url: https://github.com/BCG-Gamma/facet/blob/develop/README.rst
