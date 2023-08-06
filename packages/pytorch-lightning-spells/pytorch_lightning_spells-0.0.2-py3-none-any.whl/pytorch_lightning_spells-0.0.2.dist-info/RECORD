@@ -1,0 +1,17 @@
+pytorch_lightning_spells/__init__.py,sha256=f9DpW-a9Hp6AMApQ3dhcB9omEWBHANPfzRLkRk3T8Qc,2302
+pytorch_lightning_spells/callbacks.py,sha256=vf9XDM142qY9sf0d0yi2F9OWsHUlVC-b-lnevwYJHp8,12896
+pytorch_lightning_spells/cutmix_utils.py,sha256=lQZCFw3xAehP1dVVJGpuvQw4QGxAQGlnO4IFD4BBxoA,2562
+pytorch_lightning_spells/loggers.py,sha256=5TB2mGP7EzRp-NUQoSjN8wsvGq2cNFRlzwofzO056l8,1004
+pytorch_lightning_spells/losses.py,sha256=8UIWopoDfdbNV0Ar1fCqt-_alRMxEExeB6GxJTlxoew,2608
+pytorch_lightning_spells/lr_schedulers.py,sha256=ByyjobpJzpCrnlynAZuN2o5nLdeKyEbyN8mk7-1sbto,4664
+pytorch_lightning_spells/metrics.py,sha256=wpTp19MMtdgjkMsfRXWQRd7Dxo_m8mYoR-1KBZq6OpU,4293
+pytorch_lightning_spells/optimizers.py,sha256=wWXLRSzvRaX3fuw5BWMsbOzaWYR6qrhv1WzmG5Ff3f0,8936
+pytorch_lightning_spells/samplers.py,sha256=AS2WLB5LD5aqY7I1NNJbSQVOo5Lh2iEj8JxQ-_CC-_o,4069
+pytorch_lightning_spells/snapmix_utils.py,sha256=EXva_6Ly1shOZed9T4xhZgIayHD6mk22x3aqKPS2e1E,1296
+pytorch_lightning_spells/utils.py,sha256=Gyh1SDPE8luSQ10rzan6Q3H7yugQsVMIJTh3LoxNpyg,3014
+pytorch_lightning_spells/version.py,sha256=ZBd-_LVWmIarDBttFyMRtGm41GwRayQHaZHCZYr-m10,174
+pytorch_lightning_spells-0.0.2.dist-info/LICENSE,sha256=HaDjOuDIhuGON4FrjeYpws26_SVPL3Aa3NDqbXzQS-s,11349
+pytorch_lightning_spells-0.0.2.dist-info/METADATA,sha256=q9WWXV_kiHhiPCnYMv2-codGjJhJQg4BDt0fPlohUtA,1781
+pytorch_lightning_spells-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytorch_lightning_spells-0.0.2.dist-info/top_level.txt,sha256=D7kZ4uhJX_P4sFvDFKc2BnRB7POJX7_oB-5TiqOmd1E,25
+pytorch_lightning_spells-0.0.2.dist-info/RECORD,,
