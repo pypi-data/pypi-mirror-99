@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Плагин</strong>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-4 text-center">
+            <!-- This links to all Virtual Circuits instead of ones filtered by tenant since tenant is not yet a member of Virtual Circuit model. -->
+            <h2><a href="{% url 'plugins:netbox_supervisor_plugin:supervisor_list' %}" class="btn {% if count %}btn-primary{% else %}btn-default{% endif %} btn-lg">{{ count }}</a></h2>
+            <p>Ответственные</p>
+        </div>
+    </div>
+</div>
