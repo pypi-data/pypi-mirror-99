@@ -1,0 +1,5 @@
+dpt-file>=1,<2
+dpt-json>=1,<2
+dpt-logging>=1.1.0,<2
+dpt-runtime>=2.1.0,<3
+dpt-threading>=2,<3
