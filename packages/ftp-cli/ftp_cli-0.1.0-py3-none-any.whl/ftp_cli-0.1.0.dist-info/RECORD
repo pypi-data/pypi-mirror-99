@@ -1,0 +1,15 @@
+ftp_cli/.DS_Store,sha256=BHh_JZFJ7jUuUdiMzbU-9VVykkhYHyg0rbuO_WQz0V0,6148
+ftp_cli/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+ftp_cli/main.py,sha256=FCPYz2vzra6XTt1wFVERZA0SbWlqX0rwpceCftIgPHA,265
+ftp_cli/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ftp_cli/src/config/__init__.py,sha256=aJRY-0ZMHFWwE2c0WHEfJ2hR8bEHtzldVOPESgt8ROk,3501
+ftp_cli/src/config/controllers.py,sha256=Et-CYDQYOEcLhM2J_cVAb-cGoO0me3MFSO2S70AvuTg,1495
+ftp_cli/src/config/schema.py,sha256=MZ8sz66vOOwep70DE4rdKfn_0_LcCF8nk1lTiq0vqfA,986
+ftp_cli/src/config/utils.py,sha256=j6c7dohJm5XazqsbtOib-2Qv7Z6CrTpYxM-jHTED_DU,50
+ftp_cli/src/ftp.py,sha256=Ly1PRv-_fcq-pLoziHsxKeVGoolNre9P3QxfBdyikhI,3282
+ftp_cli/src/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ftp_cli/src/utils.py,sha256=QqdVhuSit4f2HpSYW5X2FjJ4IjfYofpeQG7T3rdl4_0,235
+ftp_cli-0.1.0.dist-info/entry_points.txt,sha256=-TKedNwKYFqbxuBiWDYIJ2oYqovKtVrQbjo60k678As,44
+ftp_cli-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+ftp_cli-0.1.0.dist-info/METADATA,sha256=rHJRL2iVNXmtIuhxF1LCE3ZDLEr2csejV9AeJyrffBk,366
+ftp_cli-0.1.0.dist-info/RECORD,,
