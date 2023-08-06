@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/usbserial.py
+src/USBSerial.egg-info/PKG-INFO
+src/USBSerial.egg-info/SOURCES.txt
+src/USBSerial.egg-info/dependency_links.txt
+src/USBSerial.egg-info/requires.txt
+src/USBSerial.egg-info/top_level.txt
