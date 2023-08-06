@@ -1,0 +1,1 @@
+from mysignalweb.hello import contact
