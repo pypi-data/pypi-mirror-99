@@ -1,0 +1,7 @@
+setuptools
+
+[test]
+cython
+pytest
+pytest-cov
+mypy
