@@ -1,0 +1,3 @@
+[console_scripts]
+trivver = trivver.__main__:main
+
