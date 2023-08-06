@@ -1,0 +1,16 @@
+include *.txt
+include *.md
+include *.cfg
+include *.pkl
+include *.h5
+
+recursive-include ./insight_extractor/*
+
+include ./insight_extractor/models/*.h5
+include ./insight_extractor/models/*.json
+include VERSION
+include requirements.txt
+exclude *.log
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
