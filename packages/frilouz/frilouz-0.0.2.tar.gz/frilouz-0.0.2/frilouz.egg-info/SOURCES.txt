@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README
+frilouz.py
+setup.py
+frilouz.egg-info/PKG-INFO
+frilouz.egg-info/SOURCES.txt
+frilouz.egg-info/dependency_links.txt
+frilouz.egg-info/top_level.txt
+test/test_errors.py
