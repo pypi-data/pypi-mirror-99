@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: manim-fonts
+Version: 0.1.0
+Summary: Use Google Fonts With Manim.
+Home-page: https://github.com/naveen521kk/manim-fonts
+Author: Naveen M K
+Author-email: naveen@syrusdark.website
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: appdirs (>=1)
+Requires-Dist: manim (>=0.3.0)
+Requires-Dist: requests (>=2.0.0)
+Project-URL: Repository, https://github.com/naveen521kk/manim-fonts
