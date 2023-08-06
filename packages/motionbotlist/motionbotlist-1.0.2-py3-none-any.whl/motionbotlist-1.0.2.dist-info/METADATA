@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: motionbotlist
+Version: 1.0.2
+Summary: Motion bot list status api tool
+Home-page: UNKNOWN
+Author: TechnicPepijn
+Author-email: <tech@motiondevelopment.top>
+License: UNKNOWN
+Keywords: python,discord,disocrd-botlist,discord-bots,bots,botlist,motion,motiondev,motiondevelopment,motionbotlist
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# MotionBotList
+Interact with motion botlist with python scripts.
+
+# Examples on host to use
+Here is a quick example on how you can update your bots status.
+```py
+import MotionBotList
+
+bot_list = MotionBotList.connect("your_api_key")
+
+bot_list.update(bot_id, server_count) # Add your bots data here
+```
+Run the script and your bots status should be updated. If there was a error there will be a exception. To handle excaption you could do the following:
+```py
+import MotionBotList
+from MotionBotList import Exceptions
+
+bot_list = MotionBotList.connect("your_api_key")
+
+try:
+  bot_list.update(bot_id, server_count)
+except Exceptions.Forbidden:
+  print("You don't have access to update your status, invailid token or wrong bot")
+except Exceptions.BotNotFound:
+  print("The bot ID was invailed")
+except Exception as error:
+  print(error)
+```
+## Get a bots info
+With this function you can get all data from a bot
+```py
+import MotionBotList
+
+bot_list = MotionBotList.connect("your_api_key")
+
+bot = bot_list.get_bot(bot_id)
+print(bot.name)
+print(bot.owner_id)
+```
+This function will return a bot object, or None if you don't have a API key. This function will raise the `BotNotFound` exception if not bot was found
+## Get bot votes
+Get all users who voted for the bot
+```py
+import MotionBotList
+
+bot_list = MotionBotList.connect("your_api_key")
+
+votes = bot_list.get_votes(bot_id)
+
+for user in votes:
+    print(user.user_name)
+    print(user.vote_time)
+```
+Will return a list with a `voteuser` object.
+
+
+# Objects
+* botobj - Return when you get a bot
+
+    - id
+        * Returns the bot_id as str
+    - name
+        * Returns the bot name
+    - avatar
+        * Bots avatar code (not the url just the code)
+    - avatar_url
+        * Bots avatar url (Raw image link to discord cdn)
+    - status
+        * The last bots status report to our site (Might be inacruate)
+    - co_owners
+        * Returns a list with co-owners
+    - discord
+        * Returns the invite code to the support server
+    - invite
+        * Returns the invite url for the bot
+    - lib
+        * Returns the bots lib selected on the site
+    - list_date
+        * Returns the date since when the bot is listed on the site (YYYY-MM-DD format)
+    - owner_id
+        * The bots onwer ID
+    - owner_name
+        * The bots owner name (User#0000)
+    - prefix
+        * The bots preffix
+    - servers
+        * The number of server posted to our site (None if no server count was posted)
+    - website
+        * The bots website (None if no website was provided
+    - tops
+        * List of top features selected
+    - vanity_url  
+        * The vanity url of the bot (None if bot doesn't have a vanity url)
+
+* voteobj - The object return when getting bot votes
+    - vote_time
+        * The time the user has voted (YYYY-DD-MM HH:MM:SS)
+    - is_user
+        * If it is a user, or just a vote holder (See more info in our vote docs about this)
+    - user_id
+        * The users id
+    - user_name
+        * The users name (user#0000)
+
+
+## Voting system
+A short description on how our voting system works.
+
+Every beginning of a month we reset all votes, if user vote on that day their vote will stay on the bots page until the beggining of the next month. A user can vote once every 12 hours, their vote will be removed from the list and will be replaced with a place holder. This is when we set the `is_user` to `false`.
+
+# Creadits
+This package has been fully developed by [TechnicePepijn#0995](https://github.com/technicpepijn) for more support visit our [discord server](https://discord.com/invite/6vuGsPM) 
+
+
