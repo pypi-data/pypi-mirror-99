@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pyhdfs_client
+Version: 0.1.1
+Summary: A py4j based hdfs client for python for native hdfs CLI performance.
+Home-page: https://github.com/gupta-paras/pyhdfs_client
+Author: Paras Gupta
+Author-email: paras_gupta@outlook.com
+License: MIT license
+Description: # pyhdfs-client
+        
+        [![https://pypi.python.org/pypi/pyhdfs_client](https://img.shields.io/pypi/v/pyhdfs_client.svg)](https://pypi.org/project/pyhdfs-client)
+        ### A py4j based hdfs client for python providing native hdfs CLI performance.
+        <br>
+        
+        ## Features<hr>
+        - Easy to integrate with python applications
+        - No extra overhead to start HDFS client on every call
+        - Native HDFS client performance
+        
+        ## Sample Usage<hr>
+        ```
+        >>> from pyhdfs_client.pyhdfs_client import HDFSClient
+        >>> hdfs_client = HDFSClient()
+        >>> ret, out, err = hdfs_client.run(['-ls', '/'])
+        >>> print(out)
+        Found 1 items
+        drwxr-xr-x   - gp supergroup          0 2021-03-21 01:10 /f1
+        >>> hdfs_client.stop() # to terminate hdfs client
+        ```
+        
+        ## Credits<hr>
+        This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
+        
+        =======
+        History
+        =======
+        0.1.1 (2021-03-22)
+        0.1.0 (2021-03-22)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: pyhdfs_client
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

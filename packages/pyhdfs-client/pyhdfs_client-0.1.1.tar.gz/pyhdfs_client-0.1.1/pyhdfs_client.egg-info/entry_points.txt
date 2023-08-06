@@ -1,0 +1,3 @@
+[console_scripts]
+pyhdfs_client = pyhdfs_client.cli:main
+
