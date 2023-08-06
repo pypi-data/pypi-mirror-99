@@ -1,0 +1,17 @@
+scipy
+dataclasses
+numpy
+matplotlib
+numexpr
+pandas
+scikit_learn
+typing
+pygam
+tqdm
+networkx
+joblib
+ipdb
+frozendict
+conditional_independence
+graphical_models
+graphical_model_learning
