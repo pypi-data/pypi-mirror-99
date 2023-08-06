@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: matialvarezs-django-celery-beat-handler
+Version: 0.1.2
+Summary: Easy handler django celery beat models: create, filter, get_or_none, get_or_create, update operations
+Home-page: UNKNOWN
+Author: Matias Alvarez Sabate
+Author-email: matialvarezs@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
