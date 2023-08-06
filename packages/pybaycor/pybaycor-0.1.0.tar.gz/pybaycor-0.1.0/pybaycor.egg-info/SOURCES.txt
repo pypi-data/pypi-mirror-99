@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pybaycor/__init__.py
+pybaycor/pybaycor.py
+pybaycor.egg-info/PKG-INFO
+pybaycor.egg-info/SOURCES.txt
+pybaycor.egg-info/dependency_links.txt
+pybaycor.egg-info/requires.txt
+pybaycor.egg-info/top_level.txt
