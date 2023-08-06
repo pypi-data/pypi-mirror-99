@@ -1,0 +1,11 @@
+numpy==1.19.1
+ebcdic
+ibm2ieee
+tqdm
+notebook
+matplotlib==3.3.3
+numcodecs
+s3fs==0.5.1
+scipy==1.5.4
+zarr
+aiohttp==3.7.2
