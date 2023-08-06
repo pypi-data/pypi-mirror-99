@@ -1,0 +1,10 @@
+README.md
+setup.py
+windows_tools.product_key.egg-info/PKG-INFO
+windows_tools.product_key.egg-info/SOURCES.txt
+windows_tools.product_key.egg-info/dependency_links.txt
+windows_tools.product_key.egg-info/namespace_packages.txt
+windows_tools.product_key.egg-info/not-zip-safe
+windows_tools.product_key.egg-info/requires.txt
+windows_tools.product_key.egg-info/top_level.txt
+windows_tools/product_key/__init__.py
