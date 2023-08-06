@@ -1,0 +1,16 @@
+autopytic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autopytic/__main__.py,sha256=48HwOlpEzyEnoGJXWTRpUy6s1lbj-bPbpjsuDUZWGb8,1868
+autopytic/main.py,sha256=F8U26juH9J5xWFifWFTW7hWhief0wKunYvhyWY2qB6Q,45
+autopytic/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autopytic/tools/wrapper.py,sha256=hQjvGl5CGvtEVKnONwwBwlQ_ILMa2AgXa6hziX4d7Do,11046
+autopytic/wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autopytic/wrapper/wrapper.py,sha256=8xWxKZTJPw5hHlTft7xSVMOi71JWTqMvu_DL1Ww2dZ4,50
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/main.py,sha256=B0VCkUn3qNWBC5uToG9C2bkRco3qDbehXinCtiP1QNY,38
+src/wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/wrapper/wrapper.py,sha256=8xWxKZTJPw5hHlTft7xSVMOi71JWTqMvu_DL1Ww2dZ4,50
+autopytic-1.0.dist-info/LICENSE,sha256=BOfpHtGF-6QMqnqdHG2QWfHMRNbQbr8oEbfJArt27UM,1071
+autopytic-1.0.dist-info/METADATA,sha256=vsiwRrrhrrr18Yl16MA5J0iubvVzmQftetIPtyhyyQc,7525
+autopytic-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+autopytic-1.0.dist-info/top_level.txt,sha256=5B0J6KVTX8D9SPYBDzJGRdASVsD1Ms-3sMJzGeesE9c,10
+autopytic-1.0.dist-info/RECORD,,
