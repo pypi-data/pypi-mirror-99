@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "datalayers"
+version = "0.1.1"
+description = "A library to read and manipulate values within JSON files, including multiple files layered on a first-found basis"
+authors = ["Nick Thurmes <nthurmes@gmail.com>"]
+license = "GPL-2.0+"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+jsonpointer = "^2.0"
+
+[tool.poetry.dev-dependencies]
+nose2 = "^0.9.1"
+beautifulsoup4 = "^4.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
