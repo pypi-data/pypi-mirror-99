@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services version="1.0">
+    <container id="{{ application_name }}_container" version="1.0">
+        <search></search>
+        <document-api></document-api>
+    </container>
+    <content id="{{ application_name }}_content" version="1.0">
+        <redundancy reply-after="1">1</redundancy>
+        <documents>
+        {% for schema in schemas %}
+            <document type="{{ schema.name }}" mode="index"></document>
+        {% endfor %}
+        </documents>
+        <nodes>
+            <node distribution-key="0" hostalias="node1"></node>
+        </nodes>
+    </content>
+</services>
