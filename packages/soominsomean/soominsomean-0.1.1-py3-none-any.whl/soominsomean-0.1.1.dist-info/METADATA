@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: soominsomean
+Version: 0.1.1
+Summary: soomin's simple linear regression package
+Home-page: https://gitlab.com/soomin.kim3000/soomins_first_python_package
+Author: Soomin Kim
+Author-email: soomin.kim3000@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/soomin.kim3000/soomins_first_python_package
+Keywords: soomin
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: scikit-learn (==0.24.1)
+
+UNKNOWN
+
+
