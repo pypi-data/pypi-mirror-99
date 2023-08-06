@@ -1,0 +1,7 @@
+setup.py
+lpb_hello/__init__.py
+lpb_hello/hello.py
+lpb_hello.egg-info/PKG-INFO
+lpb_hello.egg-info/SOURCES.txt
+lpb_hello.egg-info/dependency_links.txt
+lpb_hello.egg-info/top_level.txt
