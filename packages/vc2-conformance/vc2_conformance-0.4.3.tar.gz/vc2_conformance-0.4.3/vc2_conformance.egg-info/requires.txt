@@ -1,0 +1,21 @@
+bitarray-hardbyte
+sentinels
+vc2_data_tables<2.0,>=0.1.1
+vc2_bit_widths<2.0,>=0.1.1
+vc2_conformance_data<2.0,>=0.1.1
+
+[:python_version < "3.0"]
+pillow<7
+numpy<1.17
+
+[:python_version < "3.4"]
+enum34
+
+[:python_version >= "3.0"]
+pillow
+
+[:python_version >= "3.0" and python_version < "3.7"]
+numpy<1.20
+
+[:python_version >= "3.7"]
+numpy
