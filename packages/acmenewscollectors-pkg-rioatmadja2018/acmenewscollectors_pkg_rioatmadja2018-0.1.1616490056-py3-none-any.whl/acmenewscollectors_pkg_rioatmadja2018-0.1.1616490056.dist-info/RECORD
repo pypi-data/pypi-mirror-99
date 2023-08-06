@@ -1,0 +1,16 @@
+acme_news/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acme_news/browser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acme_news/browser/acme_browser.py,sha256=jqdNpFKGvuddW59OxYFLKa_bY6Y0UKDIl5gUQUbY_M0,962
+acme_news/engines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acme_news/engines/cnn.py,sha256=Ab_maVYCBzJkaB-ODAKSw8wlcyhoopXZ-qfIYGw1lZw,3779
+scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/test_browser.py,sha256=qigizkEVrS1psXmtnr6MgMHjj_btxzCWNcdls7NfII0,1971
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acmenewscollectors_pkg_rioatmadja2018-0.1.1616490056.dist-info/METADATA,sha256=UFt9t5nxEwi6n0RVrgpn0y1X-OxgoXdjfFuF0NtgZeM,2417
+acmenewscollectors_pkg_rioatmadja2018-0.1.1616490056.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+acmenewscollectors_pkg_rioatmadja2018-0.1.1616490056.dist-info/top_level.txt,sha256=kHVEdt7R2i8IwrcEVH5TRhfrlI7Fk_AfittAAXb8G1k,30
+acmenewscollectors_pkg_rioatmadja2018-0.1.1616490056.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+acmenewscollectors_pkg_rioatmadja2018-0.1.1616490056.dist-info/RECORD,,
