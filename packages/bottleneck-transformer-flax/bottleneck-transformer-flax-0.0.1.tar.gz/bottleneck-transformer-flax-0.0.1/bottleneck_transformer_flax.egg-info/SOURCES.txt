@@ -1,0 +1,9 @@
+README.md
+setup.py
+bottleneck_transformer_flax/__init__.py
+bottleneck_transformer_flax/botnet.py
+bottleneck_transformer_flax.egg-info/PKG-INFO
+bottleneck_transformer_flax.egg-info/SOURCES.txt
+bottleneck_transformer_flax.egg-info/dependency_links.txt
+bottleneck_transformer_flax.egg-info/requires.txt
+bottleneck_transformer_flax.egg-info/top_level.txt
