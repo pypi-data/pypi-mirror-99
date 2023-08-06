@@ -1,0 +1,11 @@
+# @package runner
+_target_: maze.train.trainers.imitation.bc_runners.BCLocalRunner
+
+# Number of concurrent evaluation envs
+eval_concurrency: 4
+
+# Specify the Dataset class used to load the trajectory data for training
+dataset:
+  _target_: maze.core.trajectory_recording.datasets.parallel_load_dataset.ParallelLoadDataset
+  dir_or_file: trajectory_data
+  n_workers: 5
