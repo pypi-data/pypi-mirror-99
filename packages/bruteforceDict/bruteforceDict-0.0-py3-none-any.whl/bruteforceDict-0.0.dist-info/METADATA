@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bruteforceDict
+Version: 0.0
+Summary: Bruteforce to file, to array
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: yura@anisimoff.tel
+License: UNKNOWN
+Platform: UNKNOWN
+
+>>> from bruteforceDict import bruteforceDict
+>>> a = bruteforceDict(count=4, fileName='res.txt', chars='asd')
+>>> a.toFile() # Запись в файл res.txt
+>>> arr = []
+>>> for i in a.bruteforce():
+>>>     arr.append(i) # Заполнение массива
+>>> print(*arr)
+
