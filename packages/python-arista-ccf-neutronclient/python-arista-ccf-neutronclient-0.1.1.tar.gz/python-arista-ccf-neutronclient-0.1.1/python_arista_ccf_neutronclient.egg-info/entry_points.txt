@@ -1,0 +1,9 @@
+[neutronclient.extension]
+arista_ccf_extensions = python_arista_ccf_neutronclient.neutron.arista_ccf_plugin_client
+
+[openstack.arista_ccf_neutronclient.v2]
+force-ccf-sync = python_arista_ccf_neutronclient.osc.v2.topology.topology_sync:ForceCcfSync
+
+[openstack.cli.extension]
+arista_ccf_neutronclient = python_arista_ccf_neutronclient.osc.plugin
+
