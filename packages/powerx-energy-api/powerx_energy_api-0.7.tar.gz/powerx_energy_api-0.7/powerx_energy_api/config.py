@@ -1,0 +1,1 @@
+BASE_USER_API_URL='https://portal-backend.powerx.co/api'
