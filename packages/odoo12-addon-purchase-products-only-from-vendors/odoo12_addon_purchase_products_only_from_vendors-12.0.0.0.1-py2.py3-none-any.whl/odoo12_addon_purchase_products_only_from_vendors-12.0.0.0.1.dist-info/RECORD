@@ -1,0 +1,9 @@
+odoo/addons/purchase_products_only_from_vendors/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/purchase_products_only_from_vendors/__manifest__.py,sha256=_1a3sJXUa7dWoVhzBYM8BhWQ9JkwNq1bvIqRRXYIjLc,489
+odoo/addons/purchase_products_only_from_vendors/models/__init__.py,sha256=j3te_AKiQvOTco_aYbC6ZjrfCYASXsbu4lw_hD9pK_c,29
+odoo/addons/purchase_products_only_from_vendors/models/purchase_order.py,sha256=OCkM3BSymhJG4qSkoqD5X48-NwkTvk7wW1tN1erCrOk,937
+odoo/addons/purchase_products_only_from_vendors/views/purchase_order_view.xml,sha256=DUxUHRPlEmp4Tl0dh40xGuOFdgHdz6BDCSJ6-HWFXRI,810
+odoo12_addon_purchase_products_only_from_vendors-12.0.0.0.1.dist-info/METADATA,sha256=TpVv5SPQ1HuZNoGzjz9EnaSN_aj57l2RmDvdxwtgaLE,546
+odoo12_addon_purchase_products_only_from_vendors-12.0.0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+odoo12_addon_purchase_products_only_from_vendors-12.0.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_purchase_products_only_from_vendors-12.0.0.0.1.dist-info/RECORD,,
