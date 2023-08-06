@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+text_hammer/__init__.py
+text_hammer/utils.py
+text_hammer.egg-info/PKG-INFO
+text_hammer.egg-info/SOURCES.txt
+text_hammer.egg-info/dependency_links.txt
+text_hammer.egg-info/requires.txt
+text_hammer.egg-info/top_level.txt
+text_hammer/data/abbreviations_wordlist.json
