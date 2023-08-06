@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: biosamples-client
+Version: 1.2.0
+Summary: A lib to interact with BioSamples-v4 API
+Home-page: https://github.com/Kerruba/python_biosamples-v4_lib
+Author: Luca Cherubin
+Author-email: cherubin@ebi.ac.uk
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Kerruba/python_biosamples-v4_lib/issues
+Project-URL: Source, https://github.com/Kerruba/python_biosamples-v4_lib
+Description: A library with functions to wrap the BioSamples API - https://wwwdev.ebi.ac.uk/biosamples/docs/guides/submit
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
