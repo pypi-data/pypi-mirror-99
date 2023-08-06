@@ -1,0 +1,6 @@
+requests
+pandas
+numpy
+netCDF4
+lxml
+matplotlib
