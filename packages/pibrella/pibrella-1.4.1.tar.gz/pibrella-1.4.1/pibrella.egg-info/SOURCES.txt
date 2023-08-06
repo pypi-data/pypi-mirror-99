@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pibrella/__init__.py
+pibrella/pins.py
+pibrella.egg-info/PKG-INFO
+pibrella.egg-info/SOURCES.txt
+pibrella.egg-info/dependency_links.txt
+pibrella.egg-info/requires.txt
+pibrella.egg-info/top_level.txt
