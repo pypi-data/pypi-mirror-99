@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: bigfix-prefetch
+Version: 0.0.6
+Summary: A python module for working with BigFix prefetches
+Home-page: https://github.com/jgstew/bigfix_prefetch
+Author: JGStew
+Author-email: noreply@jgstew.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jgstew/bigfix_prefetch/issues
+Description: # bigfix-prefetch
+        Python scripts for working with BigFix prefetches
+        
+        [Tested](https://github.com/jgstew/bigfix_prefetch/actions/workflows/tests.yaml) on Mac, Windows, Linux on Python 2 and Python 3
+        
+        ## Install through pip
+        
+        `pip install bigfix-prefetch`
+        
+        - https://pypi.org/project/bigfix-prefetch/
+        
+        
+        ## Related:
+        - https://github.com/jgstew/generate_bes_from_template
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
