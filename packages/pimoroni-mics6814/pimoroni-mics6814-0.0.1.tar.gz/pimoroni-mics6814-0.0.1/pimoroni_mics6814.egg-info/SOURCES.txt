@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mics6814/__init__.py
+pimoroni_mics6814.egg-info/PKG-INFO
+pimoroni_mics6814.egg-info/SOURCES.txt
+pimoroni_mics6814.egg-info/dependency_links.txt
+pimoroni_mics6814.egg-info/requires.txt
+pimoroni_mics6814.egg-info/top_level.txt
