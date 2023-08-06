@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: quicktrash
+Version: 1.0.4
+Summary: EzPz Recycling
+Home-page: UNKNOWN
+Author: Perzan
+Author-email: PerzanDevelopment@gmail.com
+License: UNKNOWN
+Description: 
+        Example
+        ---------------
+        Command:
+        `python3 -m quicktrash file0.txt file1.pdf folder`
+        
+        Output:
+        ```
+        /home/user/.quicktrash/0x2/home/user/Documents/file0.txt
+        /home/user/.quicktrash/0x2/home/user/Documents/file1.pdf
+        /home/user/.quicktrash/0x2/home/user/Documents/folder
+        ```
+        
+        Python Examples
+        ---------------
+        Using context:
+        ```python
+        import quicktrash
+        
+        with quicktrash.Trash("example-trashdir") as trash:
+            trash.recycle("example-file.txt")
+        ```
+        Using next()
+        ```python
+        import quicktrash
+        
+        tr = quicktrash.Trash("example-trashdir")
+        trlet:quicktrash.Trashlet = next(tr)
+        trlet.recycle("example-file.txt")
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
