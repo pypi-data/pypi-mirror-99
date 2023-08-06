@@ -1,0 +1,11 @@
+nested_form_field/__init__.py,sha256=EsYcx9A5BWn_UPu4Dh9oItGrZNjPET6WaVe94n-CIbE,42
+nested_form_field/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+nested_form_field/apps.py,sha256=Dss9TQGbsWQ1K7dHSsxeKQLO3BgCwJTLuM3Lm-tPv4w,107
+nested_form_field/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+nested_form_field/tests.py,sha256=qIa32cQv0ZAMzAtVqe831G04hUQ9GufqfLP4rXQBa3w,541
+nested_form_field/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_nested_form_field-0.0.1.dist-info/LICENSE,sha256=qBWQHaGiHVeUgRd87nci0pDwq-f7-AMoT-sIBEP9ir4,1078
+django_nested_form_field-0.0.1.dist-info/METADATA,sha256=yMLcIURe2QPG6lpwFf5oW4E-JsW30oU8kvsPtBdeqeA,1074
+django_nested_form_field-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_nested_form_field-0.0.1.dist-info/top_level.txt,sha256=dQ44Xp40LEgF-9Yly_c4dwaIsmoDOH4YwGcBOatVpD4,18
+django_nested_form_field-0.0.1.dist-info/RECORD,,
