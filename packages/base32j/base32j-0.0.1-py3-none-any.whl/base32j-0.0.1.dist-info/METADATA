@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: base32j
+Version: 0.0.1
+Summary: Base32 exclude letter i j l o, without padding.
+Home-page: https://github.com/guyskk/base32j
+Author: guyskk
+Author-email: guyskk@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
