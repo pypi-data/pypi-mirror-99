@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-shopinvader-odoo-shopinvader
+Version: 14.0.20210311.0
+Summary: Meta package for shopinvader-odoo-shopinvader Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-base-url
+Requires-Dist: odoo14-addon-shopinvader
+Requires-Dist: odoo14-addon-shopinvader-multi-category
+
+UNKNOWN
+
+
