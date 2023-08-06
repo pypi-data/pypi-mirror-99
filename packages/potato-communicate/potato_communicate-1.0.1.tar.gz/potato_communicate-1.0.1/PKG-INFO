@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: potato_communicate
+Version: 1.0.1
+Summary: 跨平台通讯框架PotatoCommunicate的python端
+Home-page: UNKNOWN
+Author: thtTNT
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8

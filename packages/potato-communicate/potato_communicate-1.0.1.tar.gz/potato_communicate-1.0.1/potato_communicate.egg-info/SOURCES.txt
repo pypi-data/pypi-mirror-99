@@ -1,0 +1,9 @@
+setup.py
+potato_communicate/__init__.py
+potato_communicate/client.py
+potato_communicate/converter.py
+potato_communicate/server.py
+potato_communicate.egg-info/PKG-INFO
+potato_communicate.egg-info/SOURCES.txt
+potato_communicate.egg-info/dependency_links.txt
+potato_communicate.egg-info/top_level.txt
