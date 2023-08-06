@@ -1,0 +1,10 @@
+README.md
+setup.py
+windows_tools.office.egg-info/PKG-INFO
+windows_tools.office.egg-info/SOURCES.txt
+windows_tools.office.egg-info/dependency_links.txt
+windows_tools.office.egg-info/namespace_packages.txt
+windows_tools.office.egg-info/not-zip-safe
+windows_tools.office.egg-info/requires.txt
+windows_tools.office.egg-info/top_level.txt
+windows_tools/office/__init__.py
