@@ -1,0 +1,12 @@
+cnspy_numpy_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cnspy_numpy_utils/accumulated_distance.py,sha256=TvPRkmxaidnJaCW_0DrkCYmh0KMeH3-dXiuDaBx3yfY,2186
+cnspy_numpy_utils/matrix_conversions.py,sha256=iPOvqgYrG9XR5CFvEvqusbHgtZq7RN615jWKS5xOYGk,2143
+cnspy_numpy_utils/numpy_statistics.py,sha256=xto1Fsgx8eZWI76nR3EX5YEsKZgCwML4OKiHiPsh_L4,2337
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_MatrixConversion.py,sha256=N329_p596NhfsHg4QcUAnwJHKepQ7IpV8luLrN-8emA,1638
+test/test_accumulated_distance.py,sha256=pO-eLzSNVOwg_4bdxGk-YwZbivmzi1Ph3eXb1kvnfJQ,2122
+cnspy_numpy_utils-0.1.1.dist-info/LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cnspy_numpy_utils-0.1.1.dist-info/METADATA,sha256=c6B1geJQdg_iD5O0Vdzf0khm7SY397qfhI-UL0_UIGw,1875
+cnspy_numpy_utils-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cnspy_numpy_utils-0.1.1.dist-info/top_level.txt,sha256=MM0N53Ad8gvi-kfSYqlJX8_nJoAkiWH6VyebBUftTFo,23
+cnspy_numpy_utils-0.1.1.dist-info/RECORD,,
