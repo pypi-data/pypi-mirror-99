@@ -1,0 +1,9 @@
+README.rst
+setup.py
+burp/__init__.py
+burp/burpy.py
+burp/java_interfaces.py
+burp.egg-info/PKG-INFO
+burp.egg-info/SOURCES.txt
+burp.egg-info/dependency_links.txt
+burp.egg-info/top_level.txt
