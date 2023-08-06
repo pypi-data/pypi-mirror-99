@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: mbf-genomes
+Version: 0.4
+Summary: wrappers for external algorithms
+Home-page: https://github.com/TyberiusPrime/mbf_genomes
+Author: Florian Finkernagel
+Author-email: finkernagel@imt.uni-marburg.de
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: attrs
+Requires-Dist: feather-format
+Requires-Dist: mbf-externals
+Requires-Dist: mbf-fileformats
+Requires-Dist: mbf-nested-intervals
+Requires-Dist: mbf-pandas-msgpack
+Requires-Dist: mbf-gtf
+Requires-Dist: pandas
+Requires-Dist: plotnine
+Requires-Dist: pypipegraph
+Requires-Dist: pysam
+Provides-Extra: doc
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-bootstrap-theme ; extra == 'doc'
+Provides-Extra: testing
+Requires-Dist: mbf-sampledata ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-icdiff ; extra == 'testing'
+Requires-Dist: requests-mock ; extra == 'testing'
+
+# mbf_genomes
+
+Support for auto-downloaded EnsemblGenomes
+and FileBasedGenomes
+
+Part of the mbf_* suite from https://github.com/IMTMarburg
+
+
+
