@@ -1,0 +1,3 @@
+[console_scripts]
+treasure-guarder = treasureguarder.__main__:main
+
