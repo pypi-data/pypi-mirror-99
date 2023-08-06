@@ -1,0 +1,17 @@
+examples/__init__.py,sha256=OD5VPyrnqiMZyCBkqs4x23fbT3BJaZlTSnsy_Jj3C18,735
+examples/notify.py,sha256=TkUaaaLEJLi5Jgy9JiVXTDGmH1jqyYchLhJqvdXsMlc,8289
+examples/sync.py,sha256=WLCEefxwInCg8evju83dObbHNyZF2E-7ENXSXW6f2ls,9903
+ricsdl/__init__.py,sha256=wstogwhC8d89QpLHbyOFZVkOnSw8UkolQxdFABhq4yk,1127
+ricsdl/configuration.py,sha256=2SrE92DCkrOcjF0scfzJxyzIUQS7_v_1SexJ_QG4uqQ,2807
+ricsdl/exceptions.py,sha256=LAX5geeMKbzl8_3egDJ6o7vQ4ZQ8YTzfTy8w3Fq_1G0,2240
+ricsdl/syncstorage.py,sha256=sqiOLAjcl37F9yoXdEWXaCHbI8YkCIOUXxSdmbGUs6k,15633
+ricsdl/syncstorage_abc.py,sha256=gaaGXEJj10-sEmF6SDdc4ITbDZoau-nMbRHh2fLfqks,42082
+ricsdl/backend/__init__.py,sha256=IJNEFxq0UJ2tTg0-v-uiExCvfLi163Q1SGQ1p2nCA2g,2184
+ricsdl/backend/dbbackend_abc.py,sha256=Go-EriKEmwhKh9S62H3Lbx0oZ1qa1PVstVErWhCdEL0,7732
+ricsdl/backend/fake_dict_db.py,sha256=9jTpZ-H1IeFyzWlJKsvyMhKPgL7tvafze-tNZPapCg0,10604
+ricsdl/backend/redis.py,sha256=FanA-aiMdENGI1ZQ8jBs6trWdFaVm9zqfb-tcvi0NuA,21387
+ricsdl-2.1.1.dist-info/LICENSES.txt,sha256=Be51OYL6mYcG-1HHV6WnbFNxLxLPDpxrTtSBBLkz0gE,1349
+ricsdl-2.1.1.dist-info/METADATA,sha256=-s3lRZPWgIh4TiC-JsgstoNx2atGEFa-gJcQkaDPErw,3136
+ricsdl-2.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ricsdl-2.1.1.dist-info/top_level.txt,sha256=N3zDclpK5sUN0HDu8ZiW1xcv9TuSeLY0mGP7bg_dbX8,16
+ricsdl-2.1.1.dist-info/RECORD,,
