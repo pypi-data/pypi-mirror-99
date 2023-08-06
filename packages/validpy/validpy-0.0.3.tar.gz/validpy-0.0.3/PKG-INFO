@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: validpy
+Version: 0.0.3
+Summary: A simple validation library
+Home-page: https://github.com/TeganHakim/validpy
+Author: Tegan Hakim
+Author-email: tegan.hakim@gmail.com
+License: MIT
+Description: # validpy
+        It is a library that makes validation checks in python
+        
+        # Installation
+        ```python
+        > pip install validpy
+        ```
+        # Usage
+        ```python
+        import validpy
+        validator = validpy.Validator()
+        # Checking user input
+        user_input = input("Choose an option (1, 2, 3, 4): ")
+        valid_choices = ["1", "2", "3", "4"];
+        if validator.isInput(user_input, valid_choices):
+                print("Correct")
+        # Checking numbers or strings
+        number = 3
+        if validator.isInt(number):
+            if validator.isEven(number):
+                print("Even number)
+            print("Odd number")
+        else:
+            print("Thats not a number")
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
