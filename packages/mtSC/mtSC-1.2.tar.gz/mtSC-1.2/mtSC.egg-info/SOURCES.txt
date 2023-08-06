@@ -1,0 +1,10 @@
+setup.py
+mtSC/__init__.py
+mtSC/mtSC.py
+mtSC.egg-info/PKG-INFO
+mtSC.egg-info/SOURCES.txt
+mtSC.egg-info/dependency_links.txt
+mtSC.egg-info/requires.txt
+mtSC.egg-info/top_level.txt
+mtSC_copy/__init__.py
+mtSC_copy/mtSC.py
