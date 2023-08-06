@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pywhatBapi.egg-info/PKG-INFO
+pywhatBapi.egg-info/SOURCES.txt
+pywhatBapi.egg-info/dependency_links.txt
+pywhatBapi.egg-info/requires.txt
+pywhatBapi.egg-info/top_level.txt
