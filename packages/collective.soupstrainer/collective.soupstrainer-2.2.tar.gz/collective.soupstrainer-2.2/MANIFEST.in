@@ -1,0 +1,5 @@
+include .coveragerc
+include tox.ini
+recursive-include docs *.GPL
+recursive-include docs *.rst
+recursive-include docs *.txt

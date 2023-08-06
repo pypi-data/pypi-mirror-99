@@ -1,0 +1,5 @@
+[run]
+source = collective.soupstrainer
+
+[report]
+precision = 2
