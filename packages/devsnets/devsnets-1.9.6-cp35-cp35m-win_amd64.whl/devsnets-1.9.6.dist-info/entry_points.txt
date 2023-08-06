@@ -1,0 +1,3 @@
+[console_scripts]
+devsnets = devsnets.__internal.cli:main
+
