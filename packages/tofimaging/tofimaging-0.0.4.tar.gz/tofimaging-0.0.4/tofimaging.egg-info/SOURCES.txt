@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tofimaging.egg-info/PKG-INFO
+tofimaging.egg-info/SOURCES.txt
+tofimaging.egg-info/dependency_links.txt
+tofimaging.egg-info/requires.txt
+tofimaging.egg-info/top_level.txt

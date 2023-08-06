@@ -1,0 +1,9 @@
+numpy
+pyfits
+pillow
+lmfit
+tqdm
+scipy
+scikit-image
+matplotlib
+astropy
