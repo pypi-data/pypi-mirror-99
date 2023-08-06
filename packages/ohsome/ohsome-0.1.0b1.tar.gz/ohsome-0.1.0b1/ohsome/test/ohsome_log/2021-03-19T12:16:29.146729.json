@@ -1,0 +1,11 @@
+{
+    "timestamp": "2021-03-19T12:16:29.146729",
+    "status": "413",
+    "message": "The given query is too large in respect to the given timeout. Please use a smaller region and/or coarser time period.",
+    "requestUrl": "http://localhost:8080/elements/geometry",
+    "parameters": {
+        "bboxes": "8.67555,49.39885,8.69637,49.41122",
+        "filter": "building=* and type:way",
+        "timeout": 0.001
+    }
+}
