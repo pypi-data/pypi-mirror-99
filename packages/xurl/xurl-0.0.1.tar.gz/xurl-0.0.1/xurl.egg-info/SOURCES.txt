@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+xurl.py
+xurl.egg-info/PKG-INFO
+xurl.egg-info/SOURCES.txt
+xurl.egg-info/dependency_links.txt
+xurl.egg-info/entry_points.txt
+xurl.egg-info/requires.txt
+xurl.egg-info/top_level.txt
