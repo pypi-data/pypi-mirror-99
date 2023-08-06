@@ -1,0 +1,15 @@
+taxoniq/__init__.py,sha256=ZDUWggoQclv8yFG70qZI31WHhyAJXUIZJ9KXKR3V31Q,11106
+taxoniq/build.py,sha256=8W3Ou8WTlPIQBpZsgxIRc9SlbaIE0eyNRLLGbf4uQDM,20589
+taxoniq/cli.py,sha256=O7x1xouZsDI8wQse_vJN2SAXlmDA5OXPPl4S_skUPtM,1681
+taxoniq/tax_dump_readers.py,sha256=JntV2SL-JKElgw3CfVyS5PxMz8ieqB6D5yisKI3k3KE,7337
+taxoniq/util.py,sha256=odBiR8jRpMyl_np74FB-DdHFgXQvLcp9KJdH-oguvTs,844
+taxoniq/vendored/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxoniq/vendored/marisa_trie.cpython-35m-darwin.so,sha256=vLl9Izz6YgO-mHPE2CbPw3EKEj4E0tyxJ_UpDHaaUIk,520448
+taxoniq-0.1.6.dist-info/LICENSE,sha256=7DX3rtEeyFqOh9e5zyGveq1qsGvQz9navFCNJQyo14o,1083
+taxoniq-0.1.6.dist-info/LICENSE.NCBI,sha256=WoYwfyS2PWaNpPvdztXIvTSCZJvnQyYDo9HN9_54Sgg,1054
+taxoniq-0.1.6.dist-info/LICENSE.WIKIPEDIA,sha256=P5QbO4nPe4Nwzrg8x20hINRxtYc12MpgI4p1GkjX9y8,22240
+taxoniq-0.1.6.dist-info/METADATA,sha256=IWx2kWJKYvvAf9E5Xbf0zJPpsMnpDXAH5iLoUvXXmUY,10585
+taxoniq-0.1.6.dist-info/WHEEL,sha256=LPdCYLVMmnoD6O62A00mYcXxfAH_DM8OE7fXeBw04Ek,110
+taxoniq-0.1.6.dist-info/entry_points.txt,sha256=EmCYSTI5IWf5kVrfq_MuMWyma0OA0QoJUmVQqxpntwY,45
+taxoniq-0.1.6.dist-info/top_level.txt,sha256=Qy0n0RnHocrwsIV_IdWPLxszKj3uBcS52hvHzQgY7nI,8
+taxoniq-0.1.6.dist-info/RECORD,,
