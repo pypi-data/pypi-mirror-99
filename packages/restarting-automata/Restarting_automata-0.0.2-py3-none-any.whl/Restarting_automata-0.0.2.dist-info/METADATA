@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Restarting-automata
+Version: 0.0.2
+Summary: A small package for Restarting automata
+Home-page: https://github.com/listonoh/automata_lib
+Author: Jan Urban
+Author-email: LeeStackCZ@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/listonoh/automata_lib/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+
