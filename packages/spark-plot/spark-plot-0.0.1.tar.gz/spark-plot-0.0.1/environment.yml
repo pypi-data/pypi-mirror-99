@@ -1,0 +1,37 @@
+name: spark-plot
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+
+  # Development conda deps
+  - setuptools
+  - setuptools_scm
+  - pylint
+  - flake8
+  - black
+  - isort
+  - twine
+  - wheel
+  - pytest
+  - pytest-cov
+
+  # Other development conda deps
+  - jupyterlab
+
+  - pip:
+    # This project deps
+    - pyspark
+    - pyarrow
+    - matplotlib
+
+    # Other development deps
+    - nycflights13
+
+    # Development docs deps
+    - mkdocs
+    - mkdocs-material
+    - mkdocs-minify-plugin
+    - pygments
+    - pymdown-extensions

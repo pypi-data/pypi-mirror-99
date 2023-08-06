@@ -1,0 +1,28 @@
+# Used for CI - It should match environment.yml
+pyspark
+matplotlib
+
+# This project pip deps
+
+# Development conda deps
+setuptools
+setuptools-scm
+pylint
+black
+flake8
+isort
+twine
+wheel
+pytest
+pytest-cov
+
+# Other development deps
+
+# Base pip deps: Docs
+mkdocs
+mkdocs-material
+mkdocs-minify-plugin
+pygments
+pymdown-extensions
+
+# Development docs deps
