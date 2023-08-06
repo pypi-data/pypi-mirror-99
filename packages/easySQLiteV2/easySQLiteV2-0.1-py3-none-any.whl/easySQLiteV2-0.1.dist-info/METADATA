@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: easySQLiteV2
+Version: 0.1
+Summary: This module to used to manage sqlite database with ease.
+Home-page: https://github.com/harshnative/easySQLite
+Author: Harsh Native
+Author-email: Harshnative@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate
+Requires-Dist: cryptography
+Requires-Dist: onetimepad
+
+# Easy SQLite Module
+
+This module is to handle the database related operations with ease.
+
+Available with in built military class encryption.
+
+# Website
+
+visit website for documentation and install guidelines
+
+https://www.letscodeofficial.com/pySqliteDocs
+
