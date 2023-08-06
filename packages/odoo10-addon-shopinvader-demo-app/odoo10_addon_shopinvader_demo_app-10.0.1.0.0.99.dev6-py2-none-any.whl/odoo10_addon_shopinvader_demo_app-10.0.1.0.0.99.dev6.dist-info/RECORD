@@ -1,0 +1,15 @@
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_demo_app/README.rst,sha256=GFdPL600BkCq8Z4S1nk7EvXSmuORa1SuZjqp8wG7rK4,1998
+odoo/addons/shopinvader_demo_app/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+odoo/addons/shopinvader_demo_app/__manifest__.py,sha256=rzqhfpws6Hy4gngfx7YBDv49mDF1ykZoLsuzLfY_pJ0,816
+odoo/addons/shopinvader_demo_app/data/ir_export_product.xml,sha256=UBlICVRznveSNAU8uwRZTocl2Ex82GoCIOoEAEJF_0A,725
+odoo/addons/shopinvader_demo_app/demo/product_brand_demo.xml,sha256=QkkrQpBj6Th0e5hMoHnmaYdQTC3gmKia7DbynLePQyE,1465
+odoo/addons/shopinvader_demo_app/demo/product_product_demo.xml,sha256=uGSAsG56CjZWozFxZ8l-Oe6RUZc7MsoNPbQEXUk-16U,3636
+odoo/addons/shopinvader_demo_app/readme/CONTRIBUTORS.rst,sha256=6qpKjTpgBW91tbknF5-HavHWlYAnxjCxNUmjf8FUJqk,47
+odoo/addons/shopinvader_demo_app/readme/DESCRIPTION.rst,sha256=E4k9DHvsazrfIFnjNPa7O2tQSpUKgS2EXlt-tSO36CU,135
+odoo/addons/shopinvader_demo_app/static/description/index.html,sha256=IrFKjJlMF8GU9abTzJt7w0w1UFjKslO59J1jLwFVIzg,10957
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6.dist-info/METADATA,sha256=dqVYQaat69Tuk3OZzX2p2MsiVWZREhEELRZboAo1fP8,2531
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_demo_app-10.0.1.0.0.99.dev6.dist-info/RECORD,,
