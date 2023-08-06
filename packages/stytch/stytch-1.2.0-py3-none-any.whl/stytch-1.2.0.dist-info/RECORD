@@ -1,0 +1,16 @@
+stytch/__init__.py,sha256=L0OZ71t39zIIfUtmC3KzyQkYk_WMHVRXAV7ycNZA4Ns,49
+stytch/client.py,sha256=KKoAigQDMvekCQdTB-J69M3DX32KYTqnc-kXHJbiB5I,1058
+stytch/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stytch/api/base.py,sha256=AP_i_51-gZ09cawy1J0qDU8fYI_ANQ7kPZd0IjuibxI,1264
+stytch/api/decorator.py,sha256=eVUL5dGlV9gAj0RAqeGe8YNKM6JlUOqb06-HIezHTMY,450
+stytch/api/error.py,sha256=nQCmBnLQbo-f9YQu9cQ6H8Qpa4bi06SCGKJUh1kN_yU,448
+stytch/api/magic_links.py,sha256=Va5-FRiEN1ddkN1eUrp-mJN1rWsNGDlaB4ki092-tKE,4577
+stytch/api/users.py,sha256=xeZXouQXAbLVL_EDMaR0LMQwBoOGmAj8q6MlgmsA77A,2586
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=5UtPMweeEMhge2aN2zWavpWSB_cMjbrwD1l78kL4p7E,595
+tests/test_client.py,sha256=ndxi7NOgjUns-BMlc-sn-aowFaJYgjTuDUXumh7gixg,1236
+stytch-1.2.0.dist-info/LICENSE.txt,sha256=eaJpsmRO4MeDQW5XIW86b91gQf01K1tiUAezvUBk7ME,1059
+stytch-1.2.0.dist-info/METADATA,sha256=XptQxXvkCbsyf-h59iJlXVXoLxAotcu1oq9YLsYMqGY,2054
+stytch-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+stytch-1.2.0.dist-info/top_level.txt,sha256=zjeiFuQ6Gk7TQ7DGp8TmXzf4ExNQ1tnV3v0NKOYcpaE,13
+stytch-1.2.0.dist-info/RECORD,,
