@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ivy-robot
+Version: 1.1.3
+Summary: Functions and classes for gradient-based robot motion planning, written in Ivy.
+Requires-Dist: ivy-core
+Requires-Dist: ivy-mech
+
+Tested with Ivy 1.1.3
+Home-page: UNKNOWN
+Author: Ivy Team
+Author-email: ivydl.team@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
