@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+Flask_RestCountries.egg-info/PKG-INFO
+Flask_RestCountries.egg-info/SOURCES.txt
+Flask_RestCountries.egg-info/dependency_links.txt
+Flask_RestCountries.egg-info/not-zip-safe
+Flask_RestCountries.egg-info/requires.txt
+Flask_RestCountries.egg-info/top_level.txt
+flask_restcountries/__init__.py
