@@ -1,0 +1,9 @@
+certbot_dns_nextlayer/__init__.py,sha256=Us4MYMOAF_0p2KZl91eSvqKwJeb6iCHUxei2g5Y8ZLs,35
+certbot_dns_nextlayer/dns_nextlayer.py,sha256=EQWS7mN6cYXBH2SLbmMNSC407YFAg0IJAGkpNhWEyCQ,3569
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/certbot_dns_nextlayer_test.py,sha256=54jU9kAQya5lLN_FLogUCOS9F4bdc_7U62R1iwKv_Y4,1601
+certbot_dns_nextlayer-1.1.2.dist-info/METADATA,sha256=OwtAq63IYAjRdDJ7rZxxmSVQHgaTYHtNbBLG3NogwSc,4094
+certbot_dns_nextlayer-1.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+certbot_dns_nextlayer-1.1.2.dist-info/entry_points.txt,sha256=KC7RFsKLkDlZEDuj-aUML1i1Z1U1wOlPA-LNx8eWQW4,85
+certbot_dns_nextlayer-1.1.2.dist-info/top_level.txt,sha256=lPOGObM2aj1UuvPv_9N5cIarowWpEm2aMx2YaF-Oyro,28
+certbot_dns_nextlayer-1.1.2.dist-info/RECORD,,
