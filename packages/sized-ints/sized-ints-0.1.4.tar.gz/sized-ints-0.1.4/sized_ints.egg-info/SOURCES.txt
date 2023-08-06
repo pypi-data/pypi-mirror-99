@@ -1,0 +1,7 @@
+README.md
+setup.py
+sized_ints/__init__.py
+sized_ints.egg-info/PKG-INFO
+sized_ints.egg-info/SOURCES.txt
+sized_ints.egg-info/dependency_links.txt
+sized_ints.egg-info/top_level.txt
