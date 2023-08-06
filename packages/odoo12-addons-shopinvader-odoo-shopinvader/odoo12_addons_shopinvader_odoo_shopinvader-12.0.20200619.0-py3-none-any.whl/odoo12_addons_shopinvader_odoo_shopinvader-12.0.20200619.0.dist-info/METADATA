@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-shopinvader-odoo-shopinvader
+Version: 12.0.20200619.0
+Summary: Meta package for shopinvader-odoo-shopinvader Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-base-url
+Requires-Dist: odoo12-addon-shopinvader
+Requires-Dist: odoo12-addon-shopinvader-algolia
+Requires-Dist: odoo12-addon-shopinvader-assortment
+Requires-Dist: odoo12-addon-shopinvader-backend-image-proxy
+Requires-Dist: odoo12-addon-shopinvader-cart-expiry
+Requires-Dist: odoo12-addon-shopinvader-category-image-for-product
+Requires-Dist: odoo12-addon-shopinvader-delivery-carrier
+Requires-Dist: odoo12-addon-shopinvader-demo-app
+Requires-Dist: odoo12-addon-shopinvader-elasticsearch
+Requires-Dist: odoo12-addon-shopinvader-guest-mode
+Requires-Dist: odoo12-addon-shopinvader-image
+Requires-Dist: odoo12-addon-shopinvader-invoice
+Requires-Dist: odoo12-addon-shopinvader-lead
+Requires-Dist: odoo12-addon-shopinvader-locomotive
+Requires-Dist: odoo12-addon-shopinvader-locomotive-algolia
+Requires-Dist: odoo12-addon-shopinvader-locomotive-elasticsearch
+Requires-Dist: odoo12-addon-shopinvader-locomotive-guest-mode
+Requires-Dist: odoo12-addon-shopinvader-multi-category
+Requires-Dist: odoo12-addon-shopinvader-partner-firstname
+Requires-Dist: odoo12-addon-shopinvader-partner-vat
+Requires-Dist: odoo12-addon-shopinvader-pending-cart-reminder
+Requires-Dist: odoo12-addon-shopinvader-product-stock
+Requires-Dist: odoo12-addon-shopinvader-product-stock-state
+Requires-Dist: odoo12-addon-shopinvader-product-variant-selector
+Requires-Dist: odoo12-addon-shopinvader-quotation
+Requires-Dist: odoo12-addon-shopinvader-sale-profile
+Requires-Dist: odoo12-addon-shopinvader-search-engine
+Requires-Dist: odoo12-addon-shopinvader-wishlist
+
+UNKNOWN
+
+
