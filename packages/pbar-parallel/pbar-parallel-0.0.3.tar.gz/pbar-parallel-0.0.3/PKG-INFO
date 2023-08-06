@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pbar-parallel
+Version: 0.0.3
+Summary: Provides a Wrapper arround joblibs Parallel object for displaying a progress bar
+Home-page: UNKNOWN
+Author: Mats L. Richter
+Author-email: matrichter@uos.de
+License: UNKNOWN
+Description: # pbar-parallel
+        PBar parallel is a simple wrapper around joblib, that shows you how many jobs 
+        have been processed in a simple progress by.
+        
+        ## Install
+        ```pip install pbar-parallel```
+        
+        ## Usage
+        
+        ````python
+        from pbar_parallel import PBarParallel, delayed
+        
+        def func(x):
+            return x**2
+        
+        prl = PBarParallel(n_jobs=48)
+        result = prl(total=1000)(delayed(func)(i) for i in range(1000))
+        ````
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/__init__.py
+src/_star_attr.py
+src/pbar_parallel.py
+src/pbar_parallel.egg-info/PKG-INFO
+src/pbar_parallel.egg-info/SOURCES.txt
+src/pbar_parallel.egg-info/dependency_links.txt
+src/pbar_parallel.egg-info/requires.txt
+src/pbar_parallel.egg-info/top_level.txt
+test/test_pbar_parallel.py
+test/test_star_attr.py
