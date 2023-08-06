@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/my_pack/__init__.py
+src/my_pack/gcd.py
+src/my_pack/read_file.py
+src/my_pack/traffic_lights.py
+src/my_pack/xor.py
+src/my_pack_Ilya_Kryukov.egg-info/PKG-INFO
+src/my_pack_Ilya_Kryukov.egg-info/SOURCES.txt
+src/my_pack_Ilya_Kryukov.egg-info/dependency_links.txt
+src/my_pack_Ilya_Kryukov.egg-info/top_level.txt
