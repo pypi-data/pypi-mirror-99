@@ -1,0 +1,93 @@
+#!python
+
+import os
+import argparse
+import time
+import sys
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file", help="The name of the file you want to use this script on.")
+    parser.add_argument("-c", help="List files in a .deb archive.", action="store_true")
+    parser.add_argument("--unpack", help="Unpack a .deb archive.", action="store_true")
+    parser.add_argument("-v", help="Run verbosely.", action="store_true")
+    args = parser.parse_args()
+    file = args.file
+
+    def verboseLog(phrase, printf=True):
+        if (args.v == False): return
+        if (printf == False):
+            return str(f"echo {phrase};")
+        else:
+            return print(phrase)
+
+    def get_filepaths(directory):
+        file_paths = []
+
+        for root, directories, files in os.walk(directory):
+            for filename in files:
+                filepath = os.path.join(root + "/" + filename)
+                file_paths.append(filepath)
+
+        return file_paths
+
+    def listArchive(file):
+        if (file.endswith(".deb")):
+            os.system("rm -rf ./tmp;")
+            os.mkdir("./tmp")
+            os.mkdir("./tmp/info")
+            os.system(f"ar x {file};")
+            if os.path.exists("./data.tar.lzma"):
+                os.system(f"rm -rf ./data.tar.gz; cd ./tmp; tar xf ../control.tar.gz; mv ./* ./info > /dev/null 2>&1; mkdir -p ./data; unlzma ../data.tar.lzma; tar xf ../data.tar; mv ./* ./data > /dev/null 2>&1; mv ./data/info ./; rm -rf ../data.tar ../data.tar.lzma ../control.tar.gz ../debian-binary")
+            elif os.path.exists("./data.tar.xz"):
+                os.system(f"rm -rf ./data.tar.gz; cd ./tmp; tar xf ../control.tar.xz; mv ./* ./info > /dev/null 2>&1; mkdir -p ./data; tar xf ../data.tar.xz; mv ./* ./data > /dev/null 2>&1; mv ./data/info ./; rm -rf ../data.tar.xz ../control.tar.xz ../debian-binary")
+            else:
+                os.system(f"rm -rf ./data.tar.lzma; cd ./tmp; tar xf ../control.tar.gz; mv ./* ./info > /dev/null 2>&1; mkdir -p ./data; tar xf ../data.tar.gz; mv ./* ./data > /dev/null 2>&1; mv ./data/info ./; rm -rf ../data.tar.gz ../control.tar.gz ../debian-binary")
+            controlInfo = ""
+            files = ""
+            controlContents = ""
+            verboseLog("Pulling info...")
+            for dir in get_filepaths("./tmp/data"):
+                dir1 = dir.replace("./tmp/data", "")
+                files += str(f"   - {dir1}\n")
+            for dir in get_filepaths("./tmp/info"):
+                dir1 = dir.replace("./tmp/info", "")
+                if args.v:
+                    info = ""
+                    for line in open(dir, "r").read().split("\n"):
+                        if (line != ""): info += "      - " + line + "\n"
+                    controlInfo += str(f"   - {dir1}\n{info}")
+                else: controlInfo += str(f"   - {dir1}\n")
+            print(f"pypkg List for {file}:\nInstalled Files:\n{files}Control Files:\n{controlInfo}Total Archive Size: {os.stat(file).st_size}")
+            os.system("rm -rf ./tmp")
+        else:
+            print(f"File \"{file}\" is not a Debian archive. Exiting.")
+            sys.exit(1)
+
+    def unpack(file):
+        if (file.endswith(".deb")):
+            fileName = file.replace(".deb", "")
+            os.system("rm -rf ./tmp;")
+            os.mkdir("./tmp")
+            os.system(f"ar x {file}; rm -rf {fileName}; mkdir -p {fileName};")
+            if os.path.exists("./data.tar.lzma"):
+                os.system(f"cd ./tmp; unlzma ../data.tar.lzma; tar xf ../data.tar; tar xf ../control.tar.gz; mv ./* ../{fileName}; rm -rf ../data.tar ../data.tar.lzma ../data.tar.gz ../control.tar.gz ../debian-binary")
+            elif os.path.exists("./data.tar.xz"):
+                os.system(f"cd ./tmp; tar xf ../data.tar.xz; tar xf ../control.tar.xz; mv ./* ../{fileName}; rm -rf ../data.tar.xz ../data.tar.gz ../control.tar.xz ../debian-binary")
+            else:
+                os.system(f"rm -rf ./control.tar.gz; cd ./tmp; tar xf ../data.tar.gz; tar xf ../control.tar.gz; mv ./* ../{fileName}; rm -rf ../data.tar.gz ../control.tar.gz ../debian-binary")
+            print(f"Successfully unpacked \"{file}\".")
+            os.system("rm -rf ./tmp")
+        else:
+            print(f"File \"{file}\" is not a Debian archive. Exiting.")
+            sys.exit(1)
+    start_time = time.time()
+    if (args.c):
+        listArchive(file)
+    elif (args.unpack):
+        unpack(file)
+    else:
+        print("No command provided. Defaulting to listing package details.")
+        listArchive(file)
+    verbose = "On" if args.v else "Off"
+    print(f"Finished in {time.time() - start_time} seconds.\nVerbose Mode: {verbose}")
