@@ -1,0 +1,10 @@
+multidim_image_augmentation/__init__.py,sha256=gx5Cz1zf6gL-zy6ku_MsUy4Ee9w-TSDRI_mXa7_cNuw,161
+multidim_image_augmentation/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multidim_image_augmentation/python/ops/_augmentation_ops.so,sha256=3artxPftVpwZgg-TY6GJ_yrBiGWxaakV7K9mRzZEOpk,708960
+multidim_image_augmentation/python/ops/augmentation_ops.py,sha256=NNhG8B-U-FQS2I-jsKZ5kvoUNGQdZkc3vJzfk-r7DPY,492
+multidim_image_augmentation/python/ops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multidim_image_augmentation-0.0.2.dist-info/RECORD,,
+multidim_image_augmentation-0.0.2.dist-info/METADATA,sha256=hxM07tEG8uB5D_gSB3TGOwHlEj-qoS8bthTKK0365O8,1101
+multidim_image_augmentation-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+multidim_image_augmentation-0.0.2.dist-info/top_level.txt,sha256=QyLLx9pbmECwl6p_Bw1LtiNdzdtwKDplyomWRoeSUQU,28
+multidim_image_augmentation-0.0.2.dist-info/WHEEL,sha256=RIeRBYNNiNK3sXfnenIjXDrR2Tzyz05xCMpKF2hJ1iA,111
