@@ -1,0 +1,11 @@
+inflect
+
+[test]
+flake8
+flake8-docstrings>=0.2.7
+pydocstyle==3.0.0
+pyflakes
+pylint==2.3.1
+pytest
+pytest-coverage
+tox
