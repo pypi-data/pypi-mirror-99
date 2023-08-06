@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+qonduit.egg-info/PKG-INFO
+qonduit.egg-info/SOURCES.txt
+qonduit.egg-info/dependency_links.txt
+qonduit.egg-info/not-zip-safe
+qonduit.egg-info/requires.txt
+qonduit.egg-info/top_level.txt
