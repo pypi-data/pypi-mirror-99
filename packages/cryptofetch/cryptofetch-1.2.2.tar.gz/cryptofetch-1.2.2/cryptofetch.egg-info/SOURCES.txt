@@ -1,0 +1,11 @@
+README.md
+setup.py
+cryptofetch/__init__.py
+cryptofetch/__main__.py
+cryptofetch/fetcher.py
+cryptofetch.egg-info/PKG-INFO
+cryptofetch.egg-info/SOURCES.txt
+cryptofetch.egg-info/dependency_links.txt
+cryptofetch.egg-info/entry_points.txt
+cryptofetch.egg-info/requires.txt
+cryptofetch.egg-info/top_level.txt
