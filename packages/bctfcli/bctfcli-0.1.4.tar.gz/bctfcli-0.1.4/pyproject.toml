@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "bctfcli"
+version = "0.1.4"
+description = ""
+authors = ["Riatre Foo <foo@riat.re>"]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+requests = "^2.25.1"
+pydantic = "^1.8.1"
+typer = "^0.3.2"
+python-dateutil = "^2.8.1"
+python-dotenv = "^0.15.0"
+coloredlogs = "^15.0"
+humanize = "^3.2.0"
+tabulate = "^0.8.9"
+typing-extensions = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+bctf = "bctfcli:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

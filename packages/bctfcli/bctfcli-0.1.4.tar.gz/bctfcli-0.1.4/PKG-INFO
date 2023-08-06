@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bctfcli
+Version: 0.1.4
+Summary: 
+Author: Riatre Foo
+Author-email: foo@riat.re
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: coloredlogs (>=15.0,<16.0)
+Requires-Dist: humanize (>=3.2.0,<4.0.0)
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Requires-Dist: python-dateutil (>=2.8.1,<3.0.0)
+Requires-Dist: python-dotenv (>=0.15.0,<0.16.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: tabulate (>=0.8.9,<0.9.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Requires-Dist: typing-extensions (>=3.7.4,<4.0.0)
