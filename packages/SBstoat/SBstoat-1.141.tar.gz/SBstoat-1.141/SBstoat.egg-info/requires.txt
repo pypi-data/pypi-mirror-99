@@ -1,0 +1,8 @@
+lmfit
+numpy
+tellurium
+pandas
+nose
+python-libsbml
+tqdm
+docstring_expander

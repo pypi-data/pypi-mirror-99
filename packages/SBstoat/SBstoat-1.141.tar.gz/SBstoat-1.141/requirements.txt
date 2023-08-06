@@ -1,0 +1,12 @@
+coverage
+docstring_expander
+httplib2
+jupyterlab
+libroadrunner
+lmfit
+nose
+numpy
+pandas
+pylint
+tellurium
+tqdm
