@@ -1,0 +1,10 @@
+[console_scripts]
+casm = casm.scripts.casm:main
+casm-calc = casm.scripts.casm_calc:main
+casm-learn = casm.scripts.casm_learn:main
+casm.view = casm.scripts.casm_view:main
+vasp.converge = casm.scripts.vasp_converge:main
+vasp.relax = casm.scripts.vasp_relax:main
+vasp.relax.report = casm.scripts.vasp_relax_report:main
+vasp.setup = casm.scripts.vasp_setup:main
+
