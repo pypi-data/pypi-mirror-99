@@ -1,0 +1,15 @@
+flexvalue/__init__.py,sha256=OzOhVFhbg28B8evgLJWyPxovUM7Iprn2qHR1wkHIRJo,1221
+flexvalue/__version__.py,sha256=W2Xypuj7W2JG5VNfo8ASwm5hq1FH1GG-VraeDIxOZrY,984
+flexvalue/calculations.py,sha256=dnlflpTNozPLAqVD71thT8C96yxKb9CaRn-oWb-lqaM,16900
+flexvalue/cli.py,sha256=q_95YvtW_sxzYenBB9m2InZ2m44KtbMkquf4h59K0Dk,5953
+flexvalue/db.py,sha256=T4OSxKSdTl5UI7pnT1SI8wsbgvSv2dMPf69kxYBpXQs,3723
+flexvalue/examples.py,sha256=OD7fVeWUt0Re_haFa9aaZQiZGaAesVac0_t6ws7BgvA,3883
+flexvalue/plots.py,sha256=b5brwRoWPrK3I1GIlCGmUDEJPZdiTjdhBR14sx1mtG8,36595
+flexvalue/report.py,sha256=P-oclPKAUNURCfAgE09QZrlQUbl-lT3dyX_5yxq4FKo,2198
+flexvalue/settings.py,sha256=nQuwS48LkYqaI57YWkE_9Bu-Yz8vU8zfrL8G_Sup5ZA,1052
+flexvalue-0.1.0.dist-info/LICENSE.md,sha256=3sa5mpZu9fxdioFHJqxNAr46gTcjxYz-PuQHOhjWy-0,11353
+flexvalue-0.1.0.dist-info/METADATA,sha256=deAqrjPC4b_dEs8AyJpYrFOJiLgQRvfjhXUhQgQKR1M,795
+flexvalue-0.1.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+flexvalue-0.1.0.dist-info/entry_points.txt,sha256=iaG3mM1bT4lbI7QVczz8Y34hnHUlua6K6QqWmyhVHeI,49
+flexvalue-0.1.0.dist-info/top_level.txt,sha256=6nIvloXCHNAGrUDyJoMTquHldjMvPQjEmOJ5VMAOMqE,10
+flexvalue-0.1.0.dist-info/RECORD,,
