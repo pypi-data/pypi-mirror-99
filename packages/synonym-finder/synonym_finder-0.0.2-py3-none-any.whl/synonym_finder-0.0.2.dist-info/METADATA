@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: synonym-finder
+Version: 0.0.2
+Summary: This package consists of synonym finder class 
+Home-page: https://dev.azure.com/aloui0979/_git/synonym_finder
+Author: Aloui Amine
+Author-email: aloui@eurecom.fr
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: pywikibot
+Requires-Dist: SPARQLWrapper
+Requires-Dist: nltk
+Requires-Dist: sentence-transformers
+Requires-Dist: joblib
+
+UNKNOWN
+
+
