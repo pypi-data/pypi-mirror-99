@@ -1,0 +1,13 @@
+sciparse/__init__.py,sha256=B9A1-PtYh2ms80nnB52OdR1uUtSxK-MdHUr-P-6l0s4,99
+sciparse/conftest.py,sha256=G0yMHDAWYOhJ2_3QeNlClAbJ6KUKCj0C71KgNpa1Ajs,234
+sciparse/examples/examples.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sciparse/source/parsers.py,sha256=C7hIM21BTGDmq1m645qvU-izQL6NYJAC-PBUr4SmHjQ,2246
+sciparse/source/some_module.py,sha256=zmrDrpikrRSp-hRuiWARf454FhlNMTNmuvAceWkF63k,68
+sciparse/test/shorthand.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sciparse/test/test_parsing.py,sha256=3TH9I212K3WKvewSV4Hkvc7-MifaxxDSlgU97Y2gO0U,2407
+sciparse/test/data/TEST1~1~type-locked_coupled~peak-Si.txt,sha256=fyytQcrx8vGiXZrKLBrFyMbZschTKryZ52bOUVbbpRg,655
+sciparse-0.1.7.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+sciparse-0.1.7.dist-info/METADATA,sha256=l576cGw3343wiWFY1Rk6iQvUap8g6Y6SHxxtB-cZkHE,2296
+sciparse-0.1.7.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+sciparse-0.1.7.dist-info/top_level.txt,sha256=Y-wyfRvxQb5K3dYvks3a8E1C2IovOU7rtugdqOaDSPc,9
+sciparse-0.1.7.dist-info/RECORD,,
