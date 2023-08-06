@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: wxcast
+Version: 2.0.0
+Summary: A CLI utility for retrieving weather information.
+Home-page: https://github.com/smarlowucf/wxcast
+Author: Sean Marlow
+License: GPLv3+
+Keywords: wxcast
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: certifi
+Requires-Dist: Click (>=6.0)
+Requires-Dist: geopy
+Requires-Dist: requests
+Requires-Dist: metar
+Provides-Extra: test
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: vcrpy ; extra == 'test'
+
+# wxcast
+
+A CLI utility for retrieving weather information.
+
+[![Build Status](https://github.com/smarlowucf/wxcast/actions/workflows/test.yml/badge.svg)](https://github.com/smarlowucf/wxcast/actions/workflows/test.yml)
+
+![wxcast decoded metar](https://raw.githubusercontent.com/smarlowucf/wxcast/master/images/metar-decoded.png)
+
+## Overview
+
+Provides weather information in terminal:
+
+-   Weather text information from NWS API.
+-   METAR info from NWS API.
+-   Seven day forecasts based on location using geopy and NWS API.
+
+## Installation
+
+    pip install wxcast
+
+## Requirements
+
+- certifi
+- Click&gt;=6.0
+- geopy
+- requests
+- metar
+
+## Test Requirements
+
+- flake8
+- pytest
+- pytest-cov
+- vcrpy
+
+## [Docs](https://smarlowucf.github.io/wxcast/)
+
+## Issues/Enhancements
+
+Please submit issues and requests to
+[Github](https://github.com/smarlowucf/wxcast/issues).
+
+## Contributing
+
+Contributions to **wxcast** are welcome and encouraged. See
+[CONTRIBUTING](https://github.com/smarlowucf/wxcast/blob/master/CONTRIBUTING.md)
+for info on getting started.
+
+## License
+
+Copyright (c) 2021 Sean Marlow.
+
+Distributed under the terms of MIT license, see
+[LICENSE](https://github.com/smarlowucf/wxcast/blob/master/LICENSE)
+for details.
+
+
+# v2.0.0 (2021-03-25)
+
+- Fix metar functions.
+- Add temp unit option to metar and conditions.
+- Migrate to GitHub actions.
+- Use F strings.
+- New route, get stations for WFO.
+- New route, get station info.
+- New route, get WFO info.
+- New route, get conditions (alias to decoded metar).
+- Consolidate and update documentation.
+
+# v1.4.0 (2018-09-18)
+
+- Move docs to GitHub Pages.
+- Add endpoint to retrieve the list of WFOs.
+- Migrate license back to MIT.
+- Remove f'strings and use ordered dict to support py3.4 and 3.5.
+
+# v1.3.1 (2018-06-15)
+
+- Fix tag location.
+
+# v1.3.0 (2018-06-15)
+
+- Switch to ArcGIS for geocoding.
+- Cleanup exception messages.
+- Fix metar and products API.
+
+# v1.2.3 (2018-06-04)
+
+- Fix tests for geopy changes.
+- Make readme gif url absolute for use in pypi.
+
+# v1.2.2 (2018-06-04)
+
+- Add long description content type to setup.
+
+# v1.2.1 (2018-02-19)
+
+- Convert docs to md for PyPI compatibility.
+
+# v1.2.0 (2018-02-18)
+
+-   Remove asserts.
+-   Account for dictionary values in decoded metar.
+
+# v1.1.0 (2017-12-01)
+
+-   Update readme.
+-   Cleanup exception handling.
+-   Add unit and integration tests with vcrpy.
+-   Cleanup flake8 warnings.
+-   Add config for travis integration testing.
+
+# v1.0.6 (2017-09-24)
+
+-   Remove docs directory.
+-   Fix manifest.
+
+# v1.0.5 (2017-09-24)
+
+# v1.0.4 (2017-09-24)
+
+-   Fix license trove classifier.
+
+# v1.0.3 (2017-09-24)
+
+-   Remove universal flag from setup config.
+
+# v1.0.2 (2017-09-24)
+
+-   Fix doc extensions in setup.
+
+# v1.0.1 (2017-09-24)
+
+-   Fix manifest.
+
+# v1.0.0 (2017-09-24)
+
+-   Cleanup flake8 warnings.
+-   Remove config in favor of geopy to get location for seven day
+    forecast.
+-   Migrate to f'{strings}'
+-   Migrate to adoc from rst.
+-   Cleanup code.
+-   Update readme and docs.
+
+# v0.3.0 (2017-08-09)
+
+-   Remove cert and use certifi for NWS API.
+-   Convert elevation to feet.
+
+# v0.2.1 (2017-08-09)
+
+-   Attempt to fix cert.
+
+# v0.2.0 (2017-08-08)
+
+-   Attempt to fix cert.
+
+# v0.1.0 (2017-01-14)
+
+-   First release on PyPI.
+
+
