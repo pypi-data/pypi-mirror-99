@@ -1,0 +1,12 @@
+README.md
+setup.py
+static_downsampler/__init__.py
+static_downsampler/create_hgrid_d2.py
+static_downsampler/downsample.py
+static_downsampler/make_basin_mask_d2.py
+static_downsampler/static.py
+static_downsampler.egg-info/PKG-INFO
+static_downsampler.egg-info/SOURCES.txt
+static_downsampler.egg-info/dependency_links.txt
+static_downsampler.egg-info/requires.txt
+static_downsampler.egg-info/top_level.txt
