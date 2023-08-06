@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: deepchain-apps
+Version: 0.0.3
+Summary: Define a personnal scorer for the user of DeepChain.bio
+Home-page: UNKNOWN
+Author: Instadeep
+Author-email: a.delfosse@instadeep.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
