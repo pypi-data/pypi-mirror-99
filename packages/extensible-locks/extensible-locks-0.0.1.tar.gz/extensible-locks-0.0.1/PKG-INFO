@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: extensible-locks
+Version: 0.0.1
+Summary: Lock/RLock classes that are extensible
+Home-page: https://github.com/QuiNovas/extensible-locks
+Author: Joseph Wortmann
+Author-email: jwortmann@quinovas.com
+License: Apache 2.0
+Description: # extensible-locks
+        Lock/RLock classes that are extensible.
+        
+        Every other class in `threading` is extensible. But neither of the locks are.
+        
+        If you need extensible locks, use these instead.
+        
+        Conforms exactly to the `threading.Lock` and `threading.RLock` class signatures in 
+        [`threading`](https://docs.python.org/3.8/library/threading.html#module-threading).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
