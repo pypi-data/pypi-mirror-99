@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: python-typing-update
+Version: 0.3.0
+Summary: Update Python typing syntax
+Home-page: UNKNOWN
+Author: Marc Mueller
+License: MIT
+Keywords: typing,pep585,pep604
+Platform: UNKNOWN
+Requires-Python: >=3.8, <3.10
+Requires-Dist: aiofiles (==0.6.0)
+Requires-Dist: autoflake (==1.4)
+Requires-Dist: isort (==5.7.0)
+Requires-Dist: pyupgrade (==2.10.1)
+Requires-Dist: reorder-python-imports (==2.4.0)
+Provides-Extra: black
+Requires-Dist: black (==20.8b1) ; extra == 'black'
+
+UNKNOWN
+
+
