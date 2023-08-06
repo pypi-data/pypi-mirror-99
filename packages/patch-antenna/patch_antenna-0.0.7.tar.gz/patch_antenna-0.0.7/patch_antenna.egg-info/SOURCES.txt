@@ -1,0 +1,16 @@
+.gitignore
+.travis.yml
+LICENSE
+MANIFEST.in
+readme.md
+setup.py
+.github/workflows/python-publish.yml
+examples/simple_design.py
+patch_antenna/__init__.py
+patch_antenna/designer.py
+patch_antenna.egg-info/PKG-INFO
+patch_antenna.egg-info/SOURCES.txt
+patch_antenna.egg-info/dependency_links.txt
+patch_antenna.egg-info/not-zip-safe
+patch_antenna.egg-info/requires.txt
+patch_antenna.egg-info/top_level.txt
