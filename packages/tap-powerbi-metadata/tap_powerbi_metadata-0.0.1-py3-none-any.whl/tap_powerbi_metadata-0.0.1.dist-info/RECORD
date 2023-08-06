@@ -1,0 +1,8 @@
+tap_powerbi_metadata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tap_powerbi_metadata/streams.py,sha256=sKWjfh-IbN2LiSDoMagG_4oSqFzsz4xRL5sXUO0rzQU,15428
+tap_powerbi_metadata/tap.py,sha256=kbThzPPzBfhcqCLQ7eb1cIFba1Z8dqxYtbl252EEvLk,1083
+tap_powerbi_metadata-0.0.1.dist-info/entry_points.txt,sha256=pjS_biHcDkdEpFNNBonfqN91Q8YGoH2YHWUnLbb1rvU,69
+tap_powerbi_metadata-0.0.1.dist-info/LICENSE,sha256=fJnAaiuc3nv8ECk2KNh8N88fyvz0nHsVQu04aqRE8l8,1063
+tap_powerbi_metadata-0.0.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+tap_powerbi_metadata-0.0.1.dist-info/METADATA,sha256=9GC6HAiWh1h337fyp6wUcHANqbMSnXOb2vdrviD0-LM,716
+tap_powerbi_metadata-0.0.1.dist-info/RECORD,,
