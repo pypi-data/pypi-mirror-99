@@ -1,0 +1,8 @@
+aiogram_broadcaster/__init__.py,sha256=aQBvRiBKljXXbnpDoSQAvEMXys_G0HnhXlYYQyEkWw4,98
+aiogram_broadcaster/base.py,sha256=y0-keycujCxGW_rtvdQH58UPRQOIip6b5d86g_fzWNo,3794
+aiogram_broadcaster/message_broadcaster.py,sha256=MvnFr58pAwJaNpasEhl2L80wq_ibfIov0kHrFu4gnZE,7850
+aiogram_broadcaster/text_broadcaster.py,sha256=XJ3veopd_VruoB62SJxuanxlDt8xi-YJEGQHmG9CFck,3008
+aiogram_broadcaster/types.py,sha256=oEA1imBrIXOMENIB8VD0wRK2ujrb90oAmnDxYuNfql0,475
+aiogram_broadcaster-0.0.2.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+aiogram_broadcaster-0.0.2.dist-info/METADATA,sha256=C4h8tbeFi5fI300fIA2zLoHM_UpB15KXU_BMef-IDoY,773
+aiogram_broadcaster-0.0.2.dist-info/RECORD,,
