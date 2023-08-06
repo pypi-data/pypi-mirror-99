@@ -1,0 +1,6 @@
+README.md
+setup.py
+percentage.egg-info/PKG-INFO
+percentage.egg-info/SOURCES.txt
+percentage.egg-info/dependency_links.txt
+percentage.egg-info/top_level.txt

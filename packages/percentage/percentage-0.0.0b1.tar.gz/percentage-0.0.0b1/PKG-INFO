@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: percentage
+Version: 0.0.0b1
+Summary: Korean High school curriculum(part of percentage) with python code!
+Home-page: UNKNOWN
+Author: jeong seojin
+Author-email: seojin123456@naver.com
+License: BSD
+Description: open source and free to use!!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
