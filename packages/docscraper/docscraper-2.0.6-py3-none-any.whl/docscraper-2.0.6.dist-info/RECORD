@@ -1,0 +1,17 @@
+docscraper/__init__.py,sha256=vlJB4NfwuOi_QUCcMMgL5L6YYi4tk9js3nC8xtbCgok,23
+docscraper/__main__.py,sha256=MJbOMe3ofKQOJx9VwxQIbAalkQ1qv1V8Nxu4nOeZDM0,1675
+docscraper/api.py,sha256=1TY9tvlqfkdd6aly24yukc8F8my8fXqKbv_3XMRelDQ,1936
+docscraper/items.py,sha256=QpO-oLBiO0T1pbY5XxmFgsqjIXU5ZV8ABqUqkxytozs,533
+docscraper/middlewares.py,sha256=4X9Dndzfjai_U3iIwHwzVctMob_Nmd9OdJSynIZpA0U,3682
+docscraper/pipelines.py,sha256=M4m6jOlsDgB6WYX3p0BdTw0gktYkQ98yjvEiKU1WVcA,1693
+docscraper/settings.py,sha256=XkJCVyXcacgNzWwZKmodQYZc237LEBkuodwph6YiQbU,3261
+docscraper/spiders/__init__.py,sha256=YF5hEwVuhdP49_3lkaXwmCbDdhK4eJVRUxsB27a6iE4,202
+docscraper/spiders/docscraper.py,sha256=N941dpJLkytHxtcvrl6S5gL9ecYVk_cpjGJ-MyanhwI,6194
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/base.py,sha256=mGecXUcjBZlWEGZQXbT3hyaU6r9akc8A1TPQldVl2uo,365
+tests/test_api.py,sha256=mPAyYHnR-ngZgNUiBYNDSwifFd_Psqfp58285RsDnmc,1999
+tests/test_spiders_docscraper.py,sha256=QMKNQ_Q9fMMJPk-qnfHsgCeRfMaWfHEeMQGak62YipA,2109
+docscraper-2.0.6.dist-info/METADATA,sha256=XuRYsYAXPAI6NAH6oyjwfg1MhdZP4RnL7dm7INm31yA,1681
+docscraper-2.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+docscraper-2.0.6.dist-info/top_level.txt,sha256=y55Og2rnFCD4ACOvYlkAY0zusikhzkJ-sbPbHIPyTa0,17
+docscraper-2.0.6.dist-info/RECORD,,
