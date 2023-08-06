@@ -1,0 +1,5 @@
+aws_lambda_module_loader/__init__.py,sha256=8zvErdpuDHbr8bBKMrhqad7A_gGmKEAtlUsiLeFa9ms,683
+aws_lambda_module_loader-0.1.1.dist-info/LICENSE,sha256=59HK3useZWi_bKGtySTE3ioYJ6MQpQEYlHt7UC_fUNo,1066
+aws_lambda_module_loader-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+aws_lambda_module_loader-0.1.1.dist-info/METADATA,sha256=iMch7X90WMvVkDq7p8-qvZKDd9oAiwEQMLr0pbYxxkA,372
+aws_lambda_module_loader-0.1.1.dist-info/RECORD,,
