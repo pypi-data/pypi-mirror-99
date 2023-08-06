@@ -1,0 +1,9 @@
+README.md
+setup.py
+boydem/__init__.py
+boydem.egg-info/PKG-INFO
+boydem.egg-info/SOURCES.txt
+boydem.egg-info/dependency_links.txt
+boydem.egg-info/requires.txt
+boydem.egg-info/top_level.txt
+test/test_boydem.py
