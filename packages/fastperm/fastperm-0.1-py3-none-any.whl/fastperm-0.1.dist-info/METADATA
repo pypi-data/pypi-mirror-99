@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fastperm
+Version: 0.1
+Summary: Package for online generation of large permutations without large upfront cost.
+Home-page: http://github.com/adityaramesh/fastperm
+Author: Aditya Ramesh
+Author-email: _@adityaramesh.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: attr
+Requires-Dist: numpy
+
+UNKNOWN
+
+
