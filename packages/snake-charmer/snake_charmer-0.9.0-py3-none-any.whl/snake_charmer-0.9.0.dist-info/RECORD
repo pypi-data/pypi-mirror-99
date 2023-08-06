@@ -1,0 +1,10 @@
+snake_charmer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snake_charmer/__main__.py,sha256=5Q6RIgK_r7z24KDSlHEonDZmImraWHNP97HKaECEjOI,1995
+snake_charmer/api.py,sha256=6Tn23xVfs8qrvxf2yHDnmKZ6ApukWa7wVMYlPYiQCN4,6158
+snake_charmer/github_api.py,sha256=0yIGJtWbDPfHVbAauAvRHP948pKXd1liyXFgoHQ4xOc,5437
+snake_charmer/models.py,sha256=vEHeWQ_CGJdh9ox-CKUIn9CpTD0RPHSV2ZVd7XNfOsU,458
+snake_charmer-0.9.0.dist-info/LICENSE,sha256=tvuYKtuQHl5tKvSrSrQH3aIeEwrVT57Ddw38vdH_bZ0,1070
+snake_charmer-0.9.0.dist-info/METADATA,sha256=Vty5yB8sDzTPxM6dnbvUyykTXNA9FVTo4VD8zJhZ2Ak,1404
+snake_charmer-0.9.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+snake_charmer-0.9.0.dist-info/top_level.txt,sha256=HaIy4PVxrvqCB-SdpTBQuRS31l0LcjTEvLNcDiGbpz8,14
+snake_charmer-0.9.0.dist-info/RECORD,,
