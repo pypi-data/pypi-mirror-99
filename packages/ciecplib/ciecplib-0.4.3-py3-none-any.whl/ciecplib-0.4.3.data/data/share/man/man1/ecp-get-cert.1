@@ -1,0 +1,103 @@
+.TH ecp-get-cert "1" Manual
+.SH NAME
+ecp-get-cert \- create an x.509 certificate using ecp authentication
+.SH SYNOPSIS
+.B ecp-get-cert
+[-i IDENTITY_PROVIDER] [-k] [-u USERNAME] [-h] [-l] [-V] [-d] [-f FILE] [-H HOURS] [-p] [-r [HOURS]] [-v] [-X]
+.SH DESCRIPTION
+ecp\-get\-cert enables you to authenticate using SAML/ECP against any
+identity provider registered with CILogon, and create an X.509
+credential for use in querying services under the same identity and
+access management domain.
+.SH OPTIONS
+
+.TP
+\fB\-i\fR \fI\,IDENTITY_PROVIDER\/\fR, \fB\-\-identity\-provider\fR \fI\,IDENTITY_PROVIDER\/\fR
+name of institution providing the identity (e.g. 'Cardiff University'), or domain name of IdP host (e.g. idp.cf.ac.uk), see \-\-list\-idps for a list of Identity Provider (IdPs) and their IdP URL. Shortened institution names (e.g. 'Cardiff') can be given as long as they uniquely match a full institution name known by CILogon
+
+.TP
+\fB\-k\fR, \fB\-\-kerberos\fR
+enable kerberos negotiation
+
+.TP
+\fB\-u\fR \fI\,USERNAME\/\fR, \fB\-\-username\fR \fI\,USERNAME\/\fR
+authentication username, will be prompted for if not given and not using \-\-kerberos
+
+.TP
+\fB\-d\fR, \fB\-\-debug\fR
+write debug output (uses both stderr and stdout, implies \-\-verbose)
+
+.TP
+\fB\-f\fR \fI\,FILE\/\fR, \fB\-\-file\fR \fI\,FILE\/\fR
+certificate file to create/reuse/destroy
+
+.TP
+\fB\-H\fR \fI\,HOURS\/\fR, \fB\-\-hours\fR \fI\,HOURS\/\fR
+lifetime of the certificate
+
+.TP
+\fB\-p\fR, \fB\-\-proxy\fR
+create RFC 3820 compliant impersonation proxy
+
+.TP
+\fB\-r\fR [HOURS], \fB\-\-reuse\fR [HOURS]
+reuse an existing certificate if valid for more than 1.0 hours, or pass a number of hours to specify
+
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+write verbose output to stdout
+
+.TP
+\fB\-X\fR, \fB\-\-destroy\fR
+destroy existing certificate
+
+.TP
+\fB\-l\fR, \fB\-\-list\-idps\fR
+show IdP names and URLs and exit
+
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+show program's version number and exit
+
+.SH COMMENTS
+Examples:
+
+    $ ecp\-get\-cert \-i 'My Institution'
+
+to authenticate with a username and password prompt, or
+
+    $ ecp\-get\-cert \-u user.name \-i 'My Institution'
+
+to authenticate with only a password prompt, or
+
+    $ ecp\-get\-cert \-i 'My Institution' \-k
+
+to reuse an existing kerberos (``kinit``) credential.
+
+The identitity provider name can be given in a number of ways, so long as the
+argument uniquely identifies a provider.  For example, the following are all
+equivalent:
+
+    $ ecp\-get\-cert \-i 'Cardiff University'
+    $ ecp\-get\-cert \-i Cardiff
+    $ ecp\-get\-cert \-i idp.cf.ac.uk
+    $ ECP_IDP="Cardiff" ecp\-get\-cert
+
+Environment:
+
+X509_USER_PROXY:
+    the default path for the credential file
+ECP_IDP:
+    the name/url of the default Identity Provider (\-\-institution)
+.SH ENVIRONMENT
+.TP
+.B "X509_USER_PROXY"
+The default path for the credential file 
+
+.SH AUTHORS
+.B ciecplib
+was written by Duncan Macleod <duncan.macleod@ligo.org>.
+.SH DISTRIBUTION
+The latest version of ciecplib may be downloaded from
+.UR https://pypi.org/project/ciecplib
+.UE

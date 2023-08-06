@@ -1,0 +1,49 @@
+.TH ecp-cert-info "1" Manual
+.SH NAME
+ecp-cert-info \- print information about an existing x.509 credential
+.SH SYNOPSIS
+.B ecp-cert-info
+[-h] [-l] [-V] [-f FILE] [-v VALID] [--verbose]
+.SH DESCRIPTION
+ecp\-cert\-info prints information from an existing X.509 credential,
+including owner information, certificate type, and time remaining
+until expiry.
+.SH OPTIONS
+
+.TP
+\fB\-f\fR \fI\,FILE\/\fR, \fB\-\-file\fR \fI\,FILE\/\fR
+certificate file to read (must exist)
+
+.TP
+\fB\-v\fR \fI\,VALID\/\fR, \fB\-\-valid\fR \fI\,VALID\/\fR
+time requirement for proxy to be valid
+
+.TP
+\fB\-\-verbose\fR
+print full text of certificate
+
+.TP
+\fB\-l\fR, \fB\-\-list\-idps\fR
+show IdP names and URLs and exit
+
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+show program's version number and exit
+
+.SH COMMENTS
+Environment:
+
+X509_USER_PROXY:
+    the default path for the credential file
+.SH ENVIRONMENT
+.TP
+.B "X509_USER_PROXY"
+The default path for the credential file 
+
+.SH AUTHORS
+.B ciecplib
+was written by Duncan Macleod <duncan.macleod@ligo.org>.
+.SH DISTRIBUTION
+The latest version of ciecplib may be downloaded from
+.UR https://pypi.org/project/ciecplib
+.UE
