@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: timemclust
+Version: 0.0.1.2
+Summary: Imp. of EM Clustering Algorithm
+Home-page: UNKNOWN
+Author: Mason Watson
+Author-email: msn.watson@gmail.com
+License: UNKNOWN
+Keywords: python,clustering,time series
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: ticks
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+Implementation of the EM Clustering Algorithm for arbitrary models
+
+
