@@ -1,0 +1,7 @@
+README.txt
+setup.py
+socketsws.egg-info/PKG-INFO
+socketsws.egg-info/SOURCES.txt
+socketsws.egg-info/dependency_links.txt
+socketsws.egg-info/top_level.txt
+sws/__init__.py
