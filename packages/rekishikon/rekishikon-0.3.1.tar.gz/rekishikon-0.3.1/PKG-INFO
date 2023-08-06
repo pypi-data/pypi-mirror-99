@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: rekishikon
+Version: 0.3.1
+Summary: A simple Language Detection Library
+Home-page: https://github.com/K-Molloy/rekishikon
+Keywords: Language Detection,Language Classifier,Classifier,Multi-Language,n-gram
+Author: K-Molloy
+Author-email: kieran.b.molloy@outlook.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: Free For Educational Use
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Project-URL: Repository, https://github.com/K-Molloy/rekishikon
+Description-Content-Type: text/x-rst
+
+=================
+rekishikon
+=================
+-------------------------------------------------
+A simple, lightweight, language detection library
+-------------------------------------------------
+
+Simple Port of Nakatani Shuyo's Language Detection from Java to Python
+
+
+With some fancy additions   
+
+.. image:: https://travis-ci.com/K-Molloy/rekishikon.svg?branch=main
+    :target: https://travis-ci.com/K-Molloy/rekishikon
