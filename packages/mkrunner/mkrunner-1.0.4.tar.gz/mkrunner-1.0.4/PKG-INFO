@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mkrunner
+Version: 1.0.4
+Summary: One-stop solution for HTTP(S) testing.
+Home-page: https://github.com/httprunner/httprunner
+Author: zhushiwei
+Author-email: 1396516176@qq.com
+License: UNKNOWN
+Description: #基于httprunner封装
+        
+        集成allure报告，对allure报告进行分类整理，展示历史趋势数据
+Platform: UNKNOWN
+Requires-Python: >=3.6,<4.0
+Provides-Extra: upload
+Provides-Extra: locust
+Provides-Extra: allure
