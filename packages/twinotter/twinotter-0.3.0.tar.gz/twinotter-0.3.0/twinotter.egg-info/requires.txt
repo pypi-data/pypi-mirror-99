@@ -1,0 +1,13 @@
+xarray
+numpy
+matplotlib
+pandas
+metpy>=1.0
+cartopy
+parse
+tqdm
+cftime
+worldview_dl
+docopt
+netcdf4
+pyyaml
