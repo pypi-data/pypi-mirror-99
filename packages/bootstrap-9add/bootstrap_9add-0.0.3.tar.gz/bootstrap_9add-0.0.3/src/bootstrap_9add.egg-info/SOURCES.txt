@@ -1,0 +1,14 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/bootstrap_9add/__init__.py
+src/bootstrap_9add/__main__.py
+src/bootstrap_9add/impl.py
+src/bootstrap_9add.egg-info/PKG-INFO
+src/bootstrap_9add.egg-info/SOURCES.txt
+src/bootstrap_9add.egg-info/dependency_links.txt
+src/bootstrap_9add.egg-info/entry_points.txt
+src/bootstrap_9add.egg-info/requires.txt
+src/bootstrap_9add.egg-info/top_level.txt
