@@ -1,0 +1,10 @@
+README.md
+setup.py
+synonym_finder/__init__.py
+synonym_finder/synonym_finder.py
+synonym_finder.egg-info/PKG-INFO
+synonym_finder.egg-info/SOURCES.txt
+synonym_finder.egg-info/dependency_links.txt
+synonym_finder.egg-info/requires.txt
+synonym_finder.egg-info/top_level.txt
+synonym_finder.egg-info/zip-safe
