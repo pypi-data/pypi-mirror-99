@@ -1,0 +1,1 @@
+plover[gui_qt]>=4.0.0.dev3
