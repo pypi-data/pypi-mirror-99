@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/data_parser/DataSource.py
+src/data_parser/__init__.py
+src/data_parser.egg-info/PKG-INFO
+src/data_parser.egg-info/SOURCES.txt
+src/data_parser.egg-info/dependency_links.txt
+src/data_parser.egg-info/requires.txt
+src/data_parser.egg-info/top_level.txt
