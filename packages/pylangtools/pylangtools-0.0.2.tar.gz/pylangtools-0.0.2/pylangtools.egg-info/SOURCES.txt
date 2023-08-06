@@ -1,0 +1,16 @@
+README.md
+README.rst
+setup.py
+pylangtools/Mandarin.dat
+pylangtools/__init__.py
+pylangtools/chconv.py
+pylangtools/langconv.py
+pylangtools/test_langconv.py
+pylangtools/xpinyin.py
+pylangtools/zh_wiki.py
+pylangtools.egg-info/PKG-INFO
+pylangtools.egg-info/SOURCES.txt
+pylangtools.egg-info/dependency_links.txt
+pylangtools.egg-info/top_level.txt
+pylangtools/__pycache__/langconv.cpython-36.pyc
+pylangtools/__pycache__/zh_wiki.cpython-36.pyc
