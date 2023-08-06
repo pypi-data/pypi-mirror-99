@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+FileAnalysis/FileAnalysis.py
+FileAnalysis/__init__.py
+FileAnalysis/__main__.py
+FileAnalysis.egg-info/PKG-INFO
+FileAnalysis.egg-info/SOURCES.txt
+FileAnalysis.egg-info/dependency_links.txt
+FileAnalysis.egg-info/entry_points.txt
+FileAnalysis.egg-info/requires.txt
+FileAnalysis.egg-info/top_level.txt
