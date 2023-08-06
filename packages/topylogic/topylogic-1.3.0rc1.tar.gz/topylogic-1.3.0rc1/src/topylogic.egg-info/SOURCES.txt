@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/topylogic/__init__.py
+src/topylogic/_topylogic.pyd
+src/topylogic/_topylogic.so
+src/topylogic/topylogic.py
+src/topylogic.egg-info/PKG-INFO
+src/topylogic.egg-info/SOURCES.txt
+src/topylogic.egg-info/dependency_links.txt
+src/topylogic.egg-info/top_level.txt
