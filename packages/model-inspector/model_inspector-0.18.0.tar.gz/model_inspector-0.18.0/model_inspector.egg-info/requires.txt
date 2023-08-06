@@ -1,0 +1,11 @@
+black
+flake8
+IPython>7
+matplotlib
+nbqa
+nbdev
+numpy
+pandas
+scikit-learn>=0.23
+seaborn
+waterfallcharts
