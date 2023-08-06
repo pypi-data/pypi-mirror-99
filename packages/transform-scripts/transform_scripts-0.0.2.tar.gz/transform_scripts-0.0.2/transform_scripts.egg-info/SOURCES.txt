@@ -1,0 +1,9 @@
+setup.py
+transform_scripts/__init__.py
+transform_scripts/validate.py
+transform_scripts.egg-info/PKG-INFO
+transform_scripts.egg-info/SOURCES.txt
+transform_scripts.egg-info/dependency_links.txt
+transform_scripts.egg-info/entry_points.txt
+transform_scripts.egg-info/requires.txt
+transform_scripts.egg-info/top_level.txt
