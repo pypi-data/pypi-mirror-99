@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: djangoldp_newsboard
+Version: 0.1.0
+Summary: djangoldp package for newsboard data models
+Home-page: http://git.startinblox.com/djangoldp-packages/djangoldp-newsboard
+Author: Startin'blox
+Author-email: jbaptiste@hubl.world
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
