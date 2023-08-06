@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sentry-dingding-wb
+Version: 1.0.7
+Summary: A Sentry extension which send errors stats to DingDing
+Home-page: https://github.com/dreamerldq/sentry-dingding-format
+Author: dreamerldq
+Author-email: 845790692@qq.com
+License: MIT
+Description: # sentry-dingding-format
+        自定义sentry推送格式
+        
+Keywords: sentry dingding
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
