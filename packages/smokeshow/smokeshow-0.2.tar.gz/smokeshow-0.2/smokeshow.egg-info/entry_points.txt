@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        smokeshow=smokeshow.main:cli
+    
