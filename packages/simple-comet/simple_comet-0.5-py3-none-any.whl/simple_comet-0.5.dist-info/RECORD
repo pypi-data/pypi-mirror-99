@@ -1,0 +1,15 @@
+simple_comet/__init__.py,sha256=ey_8ueP-tCxEwKmU1EjRr-kPfvcjcvfiKOrH3MfAygY,51
+simple_comet/channel.py,sha256=c7a9IjShjJ9bvdvvG9aHwAFTM9PPSVfsPIbagx06__o,1638
+simple_comet/client.py,sha256=rXfbWLeG-RCSEWDRGpbBYXCdVul1nRQWTK3PAs4GIEQ,1349
+simple_comet/client_channel.py,sha256=Q4WBYTCZIYLfsRX0DbRMBvR4dS76xSfPWWl5zEAdhuA,3401
+simple_comet/comet_server.py,sha256=IYl51_MZq8Ip76taen_YHglzXk9J2tgV2LqTZhMZt0M,10110
+simple_comet/config.py,sha256=R4QoqDdONXZ0J7hRz7sCpdnEx3Yy0jI8oDqcVVoJ4gI,4123
+simple_comet/connection.py,sha256=LsBr8mIW3ZWRW7SNRI_N4oPyhVLkOYKTJ0qXlEads7A,4182
+simple_comet/held_connection_channel.py,sha256=CpfoO7fYIsKUk3yEtqT2eD_mScJi0qp8gZB7XFaLG2M,2196
+simple_comet/simple_comet.py,sha256=BFqkjGIyyj066L7cK1kmZqqY_ylCeeczJ9ew-_HrFu8,862
+simple_comet-0.5.data/scripts/simple_comet,sha256=GeUOaghrH6JgDEwa_erui74BcZofvGlBRPD1Tx92Xwg,79
+simple_comet-0.5.dist-info/LICENSE.txt,sha256=7jv5RAS40ageWVHwSX66YDXX9PqGkdEYw1lYCc2RD-M,855
+simple_comet-0.5.dist-info/METADATA,sha256=pPZXQq2rjapFotgIHJqZsbuhSYB2ui02M8Q23Z9Whhw,369
+simple_comet-0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+simple_comet-0.5.dist-info/top_level.txt,sha256=6cj_0ZL2UEewOt43V-XKWBI8u3fVfpjnum7zZ2DI5og,13
+simple_comet-0.5.dist-info/RECORD,,

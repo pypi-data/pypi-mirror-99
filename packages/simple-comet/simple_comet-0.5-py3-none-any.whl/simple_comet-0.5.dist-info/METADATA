@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simple-comet
+Version: 0.5
+Summary: A simple Comet server
+Home-page: https://github.com/jedisct1/Simple-Comet-Server
+Author: Frank Denis
+Author-email: pypi@pureftpd.org
+License: BSD
+Download-URL: https://github.com/jedisct1/Simple-Comet-Server
+Platform: UNKNOWN
+Requires-Dist: nose
+Requires-Dist: twisted
+Requires-Dist: simplejson
+
+UNKNOWN
+
+
