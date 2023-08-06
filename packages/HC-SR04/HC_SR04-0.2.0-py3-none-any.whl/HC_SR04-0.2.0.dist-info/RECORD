@@ -1,0 +1,10 @@
+HC_SR04.py,sha256=xVDcrIV89nSwoetP7WzHnPbm8RWpH9MnVYfK9WK5I3w,2884
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/serial.py,sha256=avt2DpssHE8eHr30k2DZbr8f-5y_nj-ix7JJ1Zbfrho,1964
+tools/test.py,sha256=LqJbYB9LxPH3w2nhn8dqEb9Q6MuQdHjcX1K0uZO5G4E,42
+tools/tester.py,sha256=LqJbYB9LxPH3w2nhn8dqEb9Q6MuQdHjcX1K0uZO5G4E,42
+HC_SR04-0.2.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+HC_SR04-0.2.0.dist-info/METADATA,sha256=yAHqd2WBkZNw2PJQanZIHSGL20jM7DcmngXlbT540o8,2169
+HC_SR04-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+HC_SR04-0.2.0.dist-info/top_level.txt,sha256=n418N7NxWq7NGBKMoMt_DF4qR05yWQjYxhWQrdm8m9A,14
+HC_SR04-0.2.0.dist-info/RECORD,,
