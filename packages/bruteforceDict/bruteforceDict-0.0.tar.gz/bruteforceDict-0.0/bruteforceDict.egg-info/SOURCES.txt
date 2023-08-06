@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+bruteforceDict/__init__.py
+bruteforceDict/bruteforceDict.py
+bruteforceDict.egg-info/PKG-INFO
+bruteforceDict.egg-info/SOURCES.txt
+bruteforceDict.egg-info/dependency_links.txt
+bruteforceDict.egg-info/not-zip-safe
+bruteforceDict.egg-info/top_level.txt
