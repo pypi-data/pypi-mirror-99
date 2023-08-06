@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+src/starkbobo_pkg.egg-info/PKG-INFO
+src/starkbobo_pkg.egg-info/SOURCES.txt
+src/starkbobo_pkg.egg-info/dependency_links.txt
+src/starkbobo_pkg.egg-info/top_level.txt
