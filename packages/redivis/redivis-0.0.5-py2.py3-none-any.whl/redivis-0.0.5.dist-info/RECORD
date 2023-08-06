@@ -1,0 +1,14 @@
+redivis-0.0.5-py3.8-nspkg.pth,sha256=1TVM2GS2uckwpx4j4vMIHbxqC7tnjPnY90T9qFd1668,544
+redivis/bigquery/__init__.py,sha256=o3GlXaQMHYN2JgmsNSaBpX2aHnWD1Sm86tWhRqgtfVs,638
+redivis/common/Dataset.py,sha256=ZeC-Y47rWimpmf0ZiAL4Zjhu-8E9aP1qM3f8xKCwarY,3421
+redivis/common/Table.py,sha256=d7Iv0RI5FAmBmTE-LtqmcmGyDpLJDHS7i-jmlKALbAw,2192
+redivis/common/Upload.py,sha256=wuXPgQ1mVTpcLoUqhJj9VWxTFnuJ8-GJfF_O40gdU1Y,726
+redivis/common/Variable.py,sha256=ZJ9J_h6vt3ZxZWY7Ftskdt1JNTFYSfHSsv_f53JWNmQ,228
+redivis/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+redivis/common/api_request.py,sha256=asbCx3PmbGAyuD9egZ4RH_Q7FqgZv0uIKm3EAo0kHoA,2388
+redivis-0.0.5.dist-info/LICENSE,sha256=G-eigMUkMslJbfyFXa1RpQqw73lD3ylKFMO8Xj8EnwE,1069
+redivis-0.0.5.dist-info/METADATA,sha256=fJmAO9i-MkqApch6O4Azrwfxy8d-PxWyXGHsEGHMnBc,5024
+redivis-0.0.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+redivis-0.0.5.dist-info/namespace_packages.txt,sha256=Ihb06hrTSyeMBS7xVpvVzhzPXHKNs7ybZpD81UmP41Q,8
+redivis-0.0.5.dist-info/top_level.txt,sha256=Ihb06hrTSyeMBS7xVpvVzhzPXHKNs7ybZpD81UmP41Q,8
+redivis-0.0.5.dist-info/RECORD,,
