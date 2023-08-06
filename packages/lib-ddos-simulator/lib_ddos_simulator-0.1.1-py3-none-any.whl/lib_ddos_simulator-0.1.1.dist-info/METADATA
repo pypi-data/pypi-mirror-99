@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lib-ddos-simulator
+Version: 0.1.1
+Summary: DDOS simulator
+Home-page: https://github.com/jfuruness/lib_ddos_simulator.git
+Author: Justin Furuness and Anna Gorbenko
+Author-email: jfuruness@gmail.com, agorbenko97@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/jfuruness/lib_ddos.git
+Keywords: Furuness,Gorbenko,DDOS,DOS,Simulation,Sieve,Protag,KPO,DOSE,Distributed Denial of Service,Denial of Service
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: flasgger
+Requires-Dist: flask
+Requires-Dist: matplotlib
+Requires-Dist: pathos
+Requires-Dist: pytest
+Requires-Dist: scipy
+Requires-Dist: setuptools
+Requires-Dist: tikzplotlib
+Requires-Dist: tqdm
+Requires-Dist: wheel
+
+Docs [here](https://github.com/jfuruness/lib_ddos_simulator/wiki)
+
+One of the many algorithms this package can run! Click the video to see!
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/J0TexyxPCog/0.jpg)](https://www.youtube.com/watch?v=J0TexyxPCog)
+
+
