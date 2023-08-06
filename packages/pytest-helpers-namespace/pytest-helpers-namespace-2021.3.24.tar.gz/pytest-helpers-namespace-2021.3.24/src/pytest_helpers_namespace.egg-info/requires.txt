@@ -1,0 +1,18 @@
+pytest>=6.1.1
+
+[docs]
+sphinx
+sphinx-material-saltstack
+sphinx-prompt
+sphinxcontrib-spelling
+
+[lint]
+pylint==2.4.4
+saltpylint==2019.6.7
+pyenchant
+
+[lint:python_version >= "3.7"]
+black
+reorder-python-imports
+
+[tests]
