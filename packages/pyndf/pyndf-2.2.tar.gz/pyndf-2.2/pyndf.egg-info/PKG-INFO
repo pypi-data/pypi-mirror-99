@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pyndf
+Version: 2.2
+Summary: Library to read, write amd create Neurobit Data Format (NDF) file and stream.
+Home-page: https://www.neurobit.io
+Author: Amiya Patanaik@Neurobit Technologies
+Author-email: amiya@neurobit.io
+License: EULA
+Description: UNKNOWN
+Platform: UNKNOWN

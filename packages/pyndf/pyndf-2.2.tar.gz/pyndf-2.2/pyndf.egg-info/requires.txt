@@ -1,0 +1,7 @@
+numpy
+scikit-image
+scipy
+msgpack
+msgpack_numpy
+py-ecg-detectors
+numba
