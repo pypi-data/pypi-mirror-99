@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: touchtechnology-public
+Version: 0.0.4
+Summary: Publicly released components used in all Touch Technology library code.
+Home-page: http://www.touchtechnology.com.au/
+Author: Touch Technology Pty Ltd
+Author-email: support@touchtechnology.com.au
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Django
+
+UNKNOWN
+
+
