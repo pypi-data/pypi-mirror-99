@@ -1,0 +1,3 @@
+[console_scripts]
+bitrise-reports=bitrise_reports:main
+
