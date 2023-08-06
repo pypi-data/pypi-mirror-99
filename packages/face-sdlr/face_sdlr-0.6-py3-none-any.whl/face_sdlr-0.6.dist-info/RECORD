@@ -1,0 +1,10 @@
+face/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+face/face.py,sha256=Xe2ZQ7qr6ikIlvUjBwpidJc48pQ0PAlZF4duzhMP3YM,9602
+face/detection/face.tflite,sha256=sexaL6Y_lDXZMCp-8tUognbyGOFhAzGSaz3Md8OovsU,22079812
+face/detection/labelmap.txt,sha256=AoLZt59Cx0wVULIP8t0Wqvw_5diumgCy9mmW0K6IJ3U,4
+face/detection/tflite_graph.pb,sha256=vAWgu3BgFt-PbNdXYRVqgBkYxxLHEHiC_qq0LO9Q6Fs,22328022
+face/detection/tflite_graph.pbtxt,sha256=WXhj57MjtDfF9LkOSiLUXhOWDhzqG7gQDPSG_HnYfqY,62945813
+face_sdlr-0.6.dist-info/METADATA,sha256=ZVU4LTWZolBzfNlCJs543WZ86yj36nBKtkHVCJkXaA0,571
+face_sdlr-0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+face_sdlr-0.6.dist-info/top_level.txt,sha256=mNV8JaK-0oPAkLwlCAePr_BBJiiAvsm2t0TmNy1KXwk,5
+face_sdlr-0.6.dist-info/RECORD,,
