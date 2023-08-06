@@ -1,0 +1,50 @@
+Metadata-Version: 1.1
+Name: dogehouse
+Version: 0.2.2
+Summary: A Python wrapper for the Dogehouse API.
+Home-page: https://github.com/Arthurdw/dogehouse.py
+Author: Arthurdw
+Author-email: mail@arthurdw.com
+License: MIT
+Download-URL: https://github.com/Arthurdw/dogehouse.py/archive/0.2.2.tar.gz
+Description: Python wrapper for the dogehouse API
+        ====================================
+        
+        Installation
+        ------------
+        
+        ``pip install dogehouse``
+        
+        
+        Example
+        --------
+        
+        .. code-block:: python
+        
+            from dogehouse import DogeClient, event, command
+            from dogehouse.entities import Message
+        
+        
+            class Client(DogeClient):
+                @event
+                async def on_ready(self):
+                    print(f"Successfully connected as {self.user}!")
+                    await self.create_room("Hello World!")
+                
+                @command
+                async def foo(self, ctx: Message):
+                    await self.send("bar")
+        
+                
+            if __name__ == "__main__":
+                Client("YourToken", "YourRefreshToken", prefix="!").run()
+        
+Keywords: dogehouse
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
