@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: starfruitai
+Version: 0.0.1
+Summary: Starfruit AI - Testing PyPi Package
+Home-page: UNKNOWN
+Author: Harris Rothaermel, Josh Beatty
+Author-email: harris.rothaermel@gmail.com, joshuabeatty88@gmail.com
+License: UNKNOWN
+Keywords: python,pytorch,deployment
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: EasySettings
+Requires-Dist: torch
+Requires-Dist: requests
+
+UNKNOWN
+
+
