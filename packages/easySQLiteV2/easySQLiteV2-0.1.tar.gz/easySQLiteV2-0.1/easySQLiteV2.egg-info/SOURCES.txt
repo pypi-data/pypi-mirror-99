@@ -1,0 +1,10 @@
+README.md
+setup.py
+easySQLite/SED.py
+easySQLite/__init__.py
+easySQLite/eSqlite.py
+easySQLiteV2.egg-info/PKG-INFO
+easySQLiteV2.egg-info/SOURCES.txt
+easySQLiteV2.egg-info/dependency_links.txt
+easySQLiteV2.egg-info/requires.txt
+easySQLiteV2.egg-info/top_level.txt
