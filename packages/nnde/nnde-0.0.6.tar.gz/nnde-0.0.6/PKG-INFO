@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nnde
+Version: 0.0.6
+Summary: A package implementing a collection of neural networks to solve ordinary and partial differential equations
+Home-page: https://github.com/elwinter/nnde
+Author: Eric Winter
+Author-email: eric.winter62@gmail.com
+License: UNKNOWN
+Description: # nnde
+        
+        nnde is a package of Python modules which implement a set of neural networks which solve ordinary and partial differential equations using technique of (Lagaris et al. (1998))[10.1109/72.712178]
+        
+        The package is described in [Winter and Weigel, 2021](https://github.com/elwinter/nnde_joss_paper).
+        
+        Demos are available in the repository [nnde_demos](https://github.com/elwinter/nnde_demos).
+        
+        # Contact
+        
+        Eric Winter
+        
+        eric.winter62@gmail.com
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
