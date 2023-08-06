@@ -1,0 +1,8 @@
+mixbag/__init__.py,sha256=A5Gi9FIEXHU82ts01FZMGNWYTfCCrmv2WZvX3vB4SgQ,28
+mixbag/custom_resources.py,sha256=GdLxssswC9m2Ue7IDevX3bPGz-HaDJ-OXkAVYblWDCw,1921
+mixbag/module_loading.py,sha256=YPJxON2p6AjIUSlCqqwplym4BlUeXS_QFlrVg63mx4g,762
+mixbag/secrets.py,sha256=nCdQIvrltDqqmRcgCiXe2NfyxEfYoMVkbmIxfMbiYHw,593
+mixbag-0.0.0a0.dist-info/LICENSE,sha256=WuYjWnn0ZaKUBhQZ1dc4_nurA76zLS-wL70ZBmQ1tDo,1072
+mixbag-0.0.0a0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+mixbag-0.0.0a0.dist-info/METADATA,sha256=7Hxq2rD6omN_vDFVx6vI6OKfTe47Cbc590spoybj7Nw,1873
+mixbag-0.0.0a0.dist-info/RECORD,,
