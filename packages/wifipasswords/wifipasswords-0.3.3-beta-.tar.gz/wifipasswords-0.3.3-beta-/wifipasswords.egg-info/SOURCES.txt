@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+wifipasswords/__init__.py
+wifipasswords/__main__.py
+wifipasswords/wifipasswords_linux.py
+wifipasswords/wifipasswords_windows.py
+wifipasswords.egg-info/PKG-INFO
+wifipasswords.egg-info/SOURCES.txt
+wifipasswords.egg-info/dependency_links.txt
+wifipasswords.egg-info/entry_points.txt
+wifipasswords.egg-info/requires.txt
+wifipasswords.egg-info/top_level.txt
