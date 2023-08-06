@@ -1,0 +1,16 @@
+conmato/__init__.py,sha256=it1DlGpdWlq7bOe78MymvrbW5VprjqM_KnBaqScoDME,282
+conmato/check_plagiarism.py,sha256=FBdlxc7_Si4W7_Xp41WDSqHhAFDVfuARZTCNnkRJwa4,5866
+conmato/cli.py,sha256=eKwxCYPlrGacTpfQHNDR5hu74xgcJuv2L221ItULhg8,21174
+conmato/contest.py,sha256=UBM7mx_h6ziEXs15CzhQL7RfBSSCOdqmlqxiB_klxAI,9521
+conmato/crawl_standings.py,sha256=ZeqC87YeXI1idbKcTNfrb9ta6782NLBiV0ID94HneZA,11661
+conmato/csession.py,sha256=1SwymhwGImL3T-qg88-0QfrNbDH_FJpkRpk9sZcEpf0,3673
+conmato/member.py,sha256=jix1dR_oZPPYW7LZjEfsR-zQQsdQg9JHjK-vC6F7GSM,6160
+conmato/mossum.py,sha256=O8rhQPgIXn9jpcUZaeYYmfIaRUqHrEQf1aP30kZj24A,6926
+conmato/parameters.py,sha256=85r3Wfjxbf6uXdDNBhOY7H8FgVyoe0KSBPstSNxV8Cs,3559
+conmato/utils.py,sha256=KRfD1cgSlk1aUkxJ9HhnjC5FzWZT4t48uw2Gtg_5_2I,2864
+conmato-0.0.1.dist-info/LICENSE,sha256=TYYfhwk_UGX99xEck6hX4XS7v-W6cEaiM_3xTTSAb48,1065
+conmato-0.0.1.dist-info/METADATA,sha256=XuDvc88MHlcq2ypnfkdupMkad0fIF7PBVZeYWj8uTJw,3582
+conmato-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+conmato-0.0.1.dist-info/entry_points.txt,sha256=zxuXJ1tV3JHwr2eOBe4qLF_qJtIhwUAD5lt63spfaac,65
+conmato-0.0.1.dist-info/top_level.txt,sha256=diwCBmD_5jTd12_u1f6gXjCtDVbXGSJuhWMWnEEem0M,8
+conmato-0.0.1.dist-info/RECORD,,
