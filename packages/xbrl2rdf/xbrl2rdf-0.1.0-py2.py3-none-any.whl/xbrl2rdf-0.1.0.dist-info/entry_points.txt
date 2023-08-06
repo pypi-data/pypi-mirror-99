@@ -1,0 +1,3 @@
+[console_scripts]
+xbrl2rdf = xbrl2rdf.xbrl2rdf:main
+
