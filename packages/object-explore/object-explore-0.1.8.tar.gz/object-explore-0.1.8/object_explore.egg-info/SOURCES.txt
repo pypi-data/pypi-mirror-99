@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+explore.py
+requirements.txt
+setup.py
+./explore.py
+object_explore.egg-info/PKG-INFO
+object_explore.egg-info/SOURCES.txt
+object_explore.egg-info/dependency_links.txt
+object_explore.egg-info/requires.txt
+object_explore.egg-info/top_level.txt
