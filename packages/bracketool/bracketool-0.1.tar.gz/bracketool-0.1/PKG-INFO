@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: bracketool
+Version: 0.1
+Summary: Create pairings and brackets for competitions
+Home-page: https://bitbucket.org/dhontecillas/bracketool
+Author: David Hontecillas
+Author-email: dhontecillas@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3

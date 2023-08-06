@@ -1,0 +1,15 @@
+README.md
+setup.py
+bracketool/__init__.py
+bracketool/brackets.py
+bracketool/domain.py
+bracketool/elorating.py
+bracketool/entities.py
+bracketool/pairings.py
+bracketool/single_elimination.py
+bracketool/teambrackets.py
+bracketool.egg-info/PKG-INFO
+bracketool.egg-info/SOURCES.txt
+bracketool.egg-info/dependency_links.txt
+bracketool.egg-info/not-zip-safe
+bracketool.egg-info/top_level.txt
