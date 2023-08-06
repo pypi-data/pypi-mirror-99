@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: worker
+metadata:
+  name: lintwork
+spec:
+  aosp:
+    sdk:
+      - Correctness
+      - Correctness:Messages
+      - Security
+      - Compliance
+      - Performance
+      - Performance:Application Size
+      - Usability:Typography
+      - Usability:Icons
+      - Usability
+      - Productivity
+      - Accessibility
+      - Internationalization
+      - Internationalization:Bidirectional Text
+    strings:
+  cpp:
+    cpplint:
+      - --linelength=120
+  golang:
+    golangci-lint:
+      - --config ~/opt/golangci-lint/config.yml
+  groovy:
+    groovylint:
+      - --codenarc-version 1.2.1
+      - --gmetrics-version 1.0
+      - --slf4j-version 1.7.25
+      - -includes="./Jenkinsfile,**/*.groovy,**/*.gradle"
+  java:
+    checkstyle:
+      - -c=~/opt/checkstyle/config.xml
+    spotbugs:
+      - -effort:default
+  linux:
+    checkpatch:
+      - --ignore MSLEEP
+  python:
+    flake8:
+      - --ignore=E501,F841,W503,W605
+      - --max-line-length=88
+  rust:
+    clippy:
+      - -D clippy::assign_ops
+  shell:
+    shellcheck:
+      - disable=SC2086
