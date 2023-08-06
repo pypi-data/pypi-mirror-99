@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: termgraphicslib
+Version: 0.1.2
+Summary: A small graphics library for drawing lines, pixels, and tris to the screen
+License: Unlicense
+Author: Ruthenic
+Author-email: mdrakea3@tutanota.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# termgraphicslib
+draw epic triangles in terminal
+
+## Raycaster
+feel free to base your project off of the provided example raycaster (raycaster.py)
+
