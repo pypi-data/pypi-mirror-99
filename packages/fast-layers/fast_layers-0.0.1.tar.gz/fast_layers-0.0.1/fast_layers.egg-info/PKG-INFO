@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: fast-layers
+Version: 0.0.1
+Summary: Fast-Layers is a python library for Keras and Tensorflow users: The fastest way to build complex deep neural network architectures with sequential models
+Home-page: https://github.com/AlexandreMahdhaoui/fast-layers
+Author: Alexandre Mahdhaoui
+Author-email: alexandre.mahdhaoui@gmail.com
+License: MIT
+Download-URL: https://github.com/AlexandreMahdhaoui/fast-layers.git
+Description: # Fast-Layers
+        Fast-Layers is a python library for Keras and Tensorflow users: The fastest way to build complex deep neural network architectures with sequential models
+        
+        
+        
+        ## Introduction
+        Tensorflow's sequential model is a very intuitive way to start learning about Deep Neural Networks.
+        However it is quite hard to dive into more complex networks without learning more about Keras.
+        
+        Well it won't be hard anymore with Fast-layers! Define your Connectors and Pipes to start building complex layers in a sequential fashion.
+        
+        I create fast-layers for beginners who wants to build more advanced networks and for experimented users who wants to quickly build and test complex module architectures.
+        
+        
+        
+        ## Fast Layer MNIST tutorial but using Inception modules
+        
+        TRY IT YOURSELF: https://www.kaggle.com/alexandremahdhaoui/fast-layers-tutorial !
+        
+        original MNIST tutorial: https://www.tensorflow.org/datasets/keras_example
+        Szegedy et al. 2014, Going deeper with convolutions: https://arxiv.org/pdf/1409.4842.pdf!
+Keywords: keras,tensorflow
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
