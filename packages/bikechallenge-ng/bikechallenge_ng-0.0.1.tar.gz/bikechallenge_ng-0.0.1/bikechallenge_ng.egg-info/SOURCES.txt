@@ -1,0 +1,13 @@
+README.md
+setup.py
+bikechallenge_ng.egg-info/PKG-INFO
+bikechallenge_ng.egg-info/SOURCES.txt
+bikechallenge_ng.egg-info/dependency_links.txt
+bikechallenge_ng.egg-info/not-zip-safe
+bikechallenge_ng.egg-info/top_level.txt
+prediction/__init__.py
+prediction/io/__init__.py
+prediction/io/load_data.py
+prediction/preprocess/__init__.py
+prediction/preprocess/bikeformat.py
+prediction/vis/__init__.py
