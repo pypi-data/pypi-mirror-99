@@ -1,0 +1,15 @@
+PyPaperBot/Crossref.py,sha256=-kJsLApXowZmxQEm5rD_vKqwQV_8azDw_Q2aY8b0wJo,2764
+PyPaperBot/Downloader.py,sha256=eBP0OtHo92MwjvAD4LVxA9iPkXyDR_h571fj2cCJmZQ,3570
+PyPaperBot/HTMLparsers.py,sha256=BTZnguBhbTy6VJCbSYZ0ljWmd1wckwHEGOs4KViT7pU,1983
+PyPaperBot/NetInfo.py,sha256=7usXO5-pqTo82i-QGh6djE0131TRlPh5Gfj37xaw24o,236
+PyPaperBot/Paper.py,sha256=lmrSRo0VwExxpIzue7kA7RWVVfIkzEJwPkLOKWjQ5Xg,3017
+PyPaperBot/PapersFilters.py,sha256=2CG8ye0qKqvdNMnr_IWg6X2CEyGUHIo1LOBqe4vTXuA,1388
+PyPaperBot/Scholar.py,sha256=gCSNkmiyfb9NiLEXPvHuWTeoIr2CD4OuFpNb19XWHYo,1734
+PyPaperBot/__init__.py,sha256=2q9ugdjBBiqBUS300z6WI9c9-ksH3L_mHZ23x2IRTPM,21
+PyPaperBot/__main__.py,sha256=L9EeasP7i_1vJGDnTJosrVrjMmB-_snkhfH4OBCkZLw,5580
+PyPaperBot-1.0.2.dist-info/LICENSE.txt,sha256=cw8_76ztuVU49G9UjXG7spptIzcierf-o264gu6Fk4s,1070
+PyPaperBot-1.0.2.dist-info/METADATA,sha256=5nk8wK4XJyHMEQz8fVj2PyupWJ3UvnmJrRz8GcMcQTY,6078
+PyPaperBot-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyPaperBot-1.0.2.dist-info/entry_points.txt,sha256=ZTZR34AvXVoOon83yi9kKYcW9VP4VOGlOTFsigoBxys,57
+PyPaperBot-1.0.2.dist-info/top_level.txt,sha256=dddCTr2_2h5GQyhwY56oZGuIDnj0IpCE91s3DzZ2lgU,11
+PyPaperBot-1.0.2.dist-info/RECORD,,
