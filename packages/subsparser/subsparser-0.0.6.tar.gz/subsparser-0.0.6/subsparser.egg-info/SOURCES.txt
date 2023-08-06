@@ -1,0 +1,15 @@
+README.md
+setup.py
+subsparser/__init__.py
+subsparser/constants.py
+subsparser/subtitle.py
+subsparser/times.py
+subsparser.egg-info/PKG-INFO
+subsparser.egg-info/SOURCES.txt
+subsparser.egg-info/dependency_links.txt
+subsparser.egg-info/requires.txt
+subsparser.egg-info/top_level.txt
+subsparser/readers/__init__.py
+subsparser/readers/base.py
+subsparser/readers/srt.py
+subsparser/readers/txt.py
