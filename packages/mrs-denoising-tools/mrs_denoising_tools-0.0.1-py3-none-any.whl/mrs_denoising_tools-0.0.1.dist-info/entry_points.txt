@@ -1,0 +1,3 @@
+[console_scripts]
+mrsi_denoise = mrs_denoising.mrsi_denoise:main
+
