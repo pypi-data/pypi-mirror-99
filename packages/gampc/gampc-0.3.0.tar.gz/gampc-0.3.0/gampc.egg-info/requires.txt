@@ -1,0 +1,5 @@
+ampd
+apsw
+gasyncio
+xdg
+zeroconf
