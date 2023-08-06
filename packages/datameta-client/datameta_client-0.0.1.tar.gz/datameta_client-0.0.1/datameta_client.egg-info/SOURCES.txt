@@ -1,0 +1,8 @@
+README.md
+setup.py
+datameta_client.egg-info/PKG-INFO
+datameta_client.egg-info/SOURCES.txt
+datameta_client.egg-info/dependency_links.txt
+datameta_client.egg-info/entry_points.txt
+datameta_client.egg-info/requires.txt
+datameta_client.egg-info/top_level.txt
