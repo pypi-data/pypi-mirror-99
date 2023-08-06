@@ -1,0 +1,9 @@
+sximage/__init__.py,sha256=REUUyvLn4mI2oDgr0Gg7hi7i-uDnK2ytjiMKrC8gtKE,80
+sximage/__main__.py,sha256=2pArmWKAhwubVuB_WFJTc7XUIAkkHlS7DdvNHZJRxio,75
+sximage/fpgacap.py,sha256=cf7kn_HqNhNbZfg2mIBcBxWifz6dxf7M8jBZmfY_nko,5969
+sximage/sximage.py,sha256=2lKrSSeKhRdCrgrP71O01VWCTJtLNVsRmqc8oR5urck,594
+sximage-0.0.8.dist-info/METADATA,sha256=6j3nq4OS3xzIEJTuVOAL-jNQN7Hc_FTQvpGPAn3xs8Y,502
+sximage-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sximage-0.0.8.dist-info/entry_points.txt,sha256=Dd4zqlyrsn0jaa1e-5cNPV0gOUojUKAtH5a_vUUUKbc,53
+sximage-0.0.8.dist-info/top_level.txt,sha256=IoGVvF-iDftsv2PkkicjJ0brm92uBMC7fnRLHlXbWg4,8
+sximage-0.0.8.dist-info/RECORD,,
