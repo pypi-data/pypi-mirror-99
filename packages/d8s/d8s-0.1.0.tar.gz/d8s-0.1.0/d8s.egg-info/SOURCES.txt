@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+d8s.egg-info/PKG-INFO
+d8s.egg-info/SOURCES.txt
+d8s.egg-info/dependency_links.txt
+d8s.egg-info/top_level.txt
+d8s.egg-info/zip-safe
+democritus/__init__.py
+democritus/democritus.py
+tests/__init__.py
+tests/test_democritus.py
