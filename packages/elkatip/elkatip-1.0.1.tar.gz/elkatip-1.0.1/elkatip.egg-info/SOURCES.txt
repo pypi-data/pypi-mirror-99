@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+elkatip/__init__.py
+elkatip/api.py
+elkatip/elkatip.py
+elkatip/gui.py
+elkatip.egg-info/PKG-INFO
+elkatip.egg-info/SOURCES.txt
+elkatip.egg-info/dependency_links.txt
+elkatip.egg-info/top_level.txt
+elkatip/storage/ui.png
+elkatip/storage/uyghur-alphabet-map.json
+elkatip/storage/uyghur-frinedly-list.json
+elkatip/storage/uyghur-other-map.json
