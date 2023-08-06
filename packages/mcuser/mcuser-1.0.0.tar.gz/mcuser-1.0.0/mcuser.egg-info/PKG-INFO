@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: mcuser
+Version: 1.0.0
+Summary: Module for parsing Minecraft playerdb.co
+Home-page: https://github.com/8954sood
+Author: babihoba
+Author-email: hobabot@gmail.com
+License: MIT
+Description: # mcuser
+        
+        > Module for parsing Minecraft playerdb.co
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
