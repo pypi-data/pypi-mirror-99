@@ -1,0 +1,9 @@
+pyxdu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyxdu/__main__.py,sha256=grC1keeuu6sOPDT-qy4qpHihOZyWyvzgpQq_A0Lg3N0,2404
+pyxdu/tk.py,sha256=xkSSHI6si3--ziv4FIdksrZnMax9Ou-mVm38UwCqfLY,5095
+pyxdu/xdu.py,sha256=f4bjOrXmDrmDfsMD4rz6AWxTnlKX1VFP1tmJqjYuZcI,5152
+pyxdu-0.2.0.dist-info/entry_points.txt,sha256=d-NA19MV3bYfNapYnCg-VM0M2CuY56ORSgHc-mnDE3U,44
+pyxdu-0.2.0.dist-info/LICENSE.txt,sha256=LuExUtopHoCoOW_j6XXwv2XLbUCThgHSy5LgkkJFqW4,1063
+pyxdu-0.2.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pyxdu-0.2.0.dist-info/METADATA,sha256=O4fpbe-SwHmTP-dq0bqO0vw6g_ULBGgtGPg_K5ZTboY,5367
+pyxdu-0.2.0.dist-info/RECORD,,
