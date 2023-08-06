@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gspack
+Version: 0.2.7
+Summary: Assignment Packager for the Gradescope Autograder.
+Home-page: https://github.com/aksholokhov/gspack
+Author: Aleksei Sholokhov
+Author-email: aksh@uw.edu
+License: GNU GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pipreqs
+Requires-Dist: subprocess32
+Requires-Dist: click
+Requires-Dist: numpy
+Requires-Dist: ipython
+Requires-Dist: nbformat
+Requires-Dist: matplotlib
+Requires-Dist: pathlib
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pandas ; extra == 'dev'
+Provides-Extra: docs
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pandas ; extra == 'test'
+
+This package is designed to simplify setting up programming assignments for Gradescope Autograder. See README.md for details and examples.
+
+
