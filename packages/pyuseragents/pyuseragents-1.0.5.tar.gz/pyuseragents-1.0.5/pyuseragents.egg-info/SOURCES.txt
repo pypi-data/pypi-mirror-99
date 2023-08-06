@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+pyuseragents/__init__.py
+pyuseragents/_backward_compatibility.py
+pyuseragents/_useragents.py
+pyuseragents.egg-info/PKG-INFO
+pyuseragents.egg-info/SOURCES.txt
+pyuseragents.egg-info/dependency_links.txt
+pyuseragents.egg-info/top_level.txt
+pyuseragents/data/__init__.py
+pyuseragents/data/list.py
