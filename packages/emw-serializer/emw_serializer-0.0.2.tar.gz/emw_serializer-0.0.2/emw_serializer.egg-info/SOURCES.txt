@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+emw_serializer/__init__.py
+emw_serializer/serializer.py
+emw_serializer.egg-info/PKG-INFO
+emw_serializer.egg-info/SOURCES.txt
+emw_serializer.egg-info/dependency_links.txt
+emw_serializer.egg-info/entry_points.txt
+emw_serializer.egg-info/top_level.txt
