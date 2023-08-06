@@ -1,0 +1,13 @@
+ziafont/__init__.py,sha256=CokaWGP48_w1O1tlSvFwJfHJhyy8RCtaPMiEz_UxuNA,54
+ziafont/cmap.py,sha256=8AjSG_FRgfprK36bvKALjkuync3faoQRDo7_TqbPnxQ,2423
+ziafont/font.py,sha256=sZKoBsHfYh6H2qLD7KwvhWSUaiZ4pL0jesE9ucc_A8g,18414
+ziafont/fontread.py,sha256=H4tanNbxHxBig8WQN-CLani2qWEHrltV-HRZbP81cYQ,2506
+ziafont/fonttypes.py,sha256=R2dFok9N9oOkMK_pMyM6ab-BzXFsKZHvmqkfFM32wNw,989
+ziafont/glyph.py,sha256=r2onvrnrS1RjmQDFL_zCscZUM6qLEEHchOKRbGYK-yo,15090
+ziafont/gpos.py,sha256=wAe68BJigBMeF0opAzvvBlvT20ya0IqiGeuRZSG5GR0,13880
+ziafont/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ziafont-0.1.dist-info/LICENSE.txt,sha256=7lPA5JZ2kfei2ankiZ6p9oGiE0mDtgp5rAl7hu3TSSU,1060
+ziafont-0.1.dist-info/METADATA,sha256=QcSfP9yv5jkfcOktAK2M2zArnUfa5uvihF-kdQV-7bk,1646
+ziafont-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ziafont-0.1.dist-info/top_level.txt,sha256=PKS36_LRYS6ZidO1RkEs0i8M1EGBE9qvDbl0LyJWOng,8
+ziafont-0.1.dist-info/RECORD,,
