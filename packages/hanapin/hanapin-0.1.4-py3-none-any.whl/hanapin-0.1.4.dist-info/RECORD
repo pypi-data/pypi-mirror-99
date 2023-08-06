@@ -1,0 +1,12 @@
+hanapin/__init__.py,sha256=rXG3P0YVUCZwIiX_uLTUDE0saX7w3rgvWh0VIRshR7s,78
+hanapin/bing.py,sha256=Ce-a6UAoxuMUuhyQYCFhm2kl_mm_LuKLrwwqhUeSveU,669
+hanapin/ddg.py,sha256=ppFDVaQgL92LBWQ7jtfDIDZIOmwSJvW_r5S4zSvP5DI,716
+hanapin/google.py,sha256=MsZ0C42ERnEJ0uZckBwWTA_N9uWJ3Kwd6Hww3GJ1bc8,1066
+hanapin/lib.py,sha256=tlLEm5gTEHy85KjOX8Eyi7rcGFa4T2SRiJwNGdiNAe0,1286
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_search.py,sha256=f6C4ocDK9iiYGZ_7KwJrO9fX1xsQRREslb8O2fBOU4Q,908
+hanapin-0.1.4.dist-info/LICENSE,sha256=0CHR2WdDSUANdeo6bSyrduMdDsYsynUbryTsnir2bpg,1070
+hanapin-0.1.4.dist-info/METADATA,sha256=R3Osd0KxMmeXgobTGQWZs9zRhyGHCXHmKoP9ZN7wRGU,1791
+hanapin-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hanapin-0.1.4.dist-info/top_level.txt,sha256=5GmK692-6dsgHFKme-gHE3WbhnCpuoqT-WxE540somM,8
+hanapin-0.1.4.dist-info/RECORD,,
