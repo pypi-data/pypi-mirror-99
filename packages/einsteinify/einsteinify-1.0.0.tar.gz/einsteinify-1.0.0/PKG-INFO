@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: einsteinify
+Version: 1.0.0
+Summary: A package that transforms every C #include absolute path to a given directory to a relative path to the .c or .h file
+Home-page: https://github.com/euberdeveloper/einsteinify
+License: MIT
+Keywords: c,.h,paths,includes,einsteinify,relative paths
+Author: Eugenio Berretta
+Author-email: euberdeveloper@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/euberdeveloper/einsteinify
+Description-Content-Type: text/markdown
+
+# einsteinify
+A pip moudle that transforms every C #include absolute path to a given directory to a relative path to the .c or .h file
+

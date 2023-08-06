@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "einsteinify"
+version = "1.0.0"
+description = "A package that transforms every C #include absolute path to a given directory to a relative path to the .c or .h file"
+authors = ["Eugenio Berretta <euberdeveloper@gmail.com>"]
+keywords = ["c", ".h", "paths", "includes", "einsteinify", "relative paths"]
+readme = "README.md"
+homepage = "https://github.com/euberdeveloper/einsteinify"
+repository = "https://github.com/euberdeveloper/einsteinify"
+license = "MIT"
+include = [ "LICENSE" ]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
