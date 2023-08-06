@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+pytest_docker_db/__init__.py
+pytest_docker_db/plugin.py
+pytest_docker_db/util.py
+pytest_docker_db.egg-info/PKG-INFO
+pytest_docker_db.egg-info/SOURCES.txt
+pytest_docker_db.egg-info/dependency_links.txt
+pytest_docker_db.egg-info/entry_points.txt
+pytest_docker_db.egg-info/requires.txt
+pytest_docker_db.egg-info/top_level.txt
