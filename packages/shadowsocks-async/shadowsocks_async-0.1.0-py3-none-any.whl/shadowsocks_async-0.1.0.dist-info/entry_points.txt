@@ -1,0 +1,3 @@
+[console_scripts]
+asyncss=shadowsocks.server:main
+
