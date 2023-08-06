@@ -1,0 +1,7 @@
+sqlite-utils>=2.22
+httpx
+feedparser
+awesome-slugify
+
+[test]
+pytest

@@ -1,0 +1,11 @@
+README.md
+setup.py
+feed_to_sqlite/__init__.py
+feed_to_sqlite/cli.py
+feed_to_sqlite/ingest.py
+feed_to_sqlite.egg-info/PKG-INFO
+feed_to_sqlite.egg-info/SOURCES.txt
+feed_to_sqlite.egg-info/dependency_links.txt
+feed_to_sqlite.egg-info/entry_points.txt
+feed_to_sqlite.egg-info/requires.txt
+feed_to_sqlite.egg-info/top_level.txt
