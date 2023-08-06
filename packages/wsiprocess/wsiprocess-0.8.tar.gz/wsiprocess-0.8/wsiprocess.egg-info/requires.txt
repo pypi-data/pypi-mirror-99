@@ -1,0 +1,9 @@
+joblib
+lxml
+numpy
+opencv-python
+openslide-python
+tqdm
+
+[pyvips]
+pyvips
