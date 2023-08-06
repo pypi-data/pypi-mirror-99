@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: chem-kit
+Version: 0.1.1
+Summary: A chemical toolbox based on RDKit
+Home-page: https://github.com/YannBeauxis/chem-kit
+License: GPL-3.0-only
+Author: Yann Beauxis
+Author-email: dev@yannbeauxis.net
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ipython (>=7.21.0,<8.0.0)
+Requires-Dist: numpy (>=1.19.5,<2.0.0)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: pydantic (>=1.8.1,<2.0.0)
+Project-URL: Documentation, http://chem-kit.metwork.science/
+Project-URL: Repository, https://github.com/YannBeauxis/chem-kit
+Description-Content-Type: text/markdown
+
+# ChemKit
+
+<p align="center">
+<a href="https://pypi.org/project/chem-kit" target="_blank">
+    <img src="https://img.shields.io/pypi/v/chem-kit?color=%2334D058&label=pypi%20package" alt="Package version">
+</a>
+</p>
+
+---
+
+**Documentation**: <a href="http://chem-kit.metwork.science/" target="_blank">http://chem-kit.metwork.science/</a>
+
+**Source Code**: <a href="https://github.com/YannBeauxis/chem-kit" target="_blank">https://github.com/YannBeauxis/chem-kit</a>
+
+---
+
+ChemKit is a chemical toolbox based on [RDKit](https://www.rdkit.org/) with currently 2 main purposes :
+
+- Facilitate the usage of the [RDKIt Python API](https://www.rdkit.org/docs/api-docs.html)
+ with some more easy to use classes that can occasionally fix some bug (especially with Jupyter rendering).
+
+- Provide custom method for the [MetWork](http://www.metwork.science) project
+
+## Usage
+
+### Manipulate Molecules
+
+```python
+    from chem_kit import Molecule
+    mol = Molecule("CCO")
+```
+
+### Manipulate Transformation
+
+```python
+    from chem_kit import Transformation
+    tsf = Transformation("[#6:1]-[#8:2]-[#1:3]>>[#6:1]-[#8:2]-[#6:3](-[#1])(-[#1])-[#1]")
+```
+
+More examples with [Jupyter notebook](usage_example)
+
