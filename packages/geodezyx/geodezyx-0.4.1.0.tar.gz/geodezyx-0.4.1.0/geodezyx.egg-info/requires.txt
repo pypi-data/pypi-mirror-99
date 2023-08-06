@@ -1,0 +1,7 @@
+bs4
+collection
+kepler.py
+natsort
+pyorbital
+sympy
+tabulate
