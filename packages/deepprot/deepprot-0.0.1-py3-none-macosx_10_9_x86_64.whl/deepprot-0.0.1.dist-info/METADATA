@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: deepprot
+Version: 0.0.1
+Summary: Machine learning for protein engineering
+Home-page: https://deepprot.latch.ai
+Author-email: kenny@latch.ai, alfredo@latch.ai
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+deepProt
+----
+
+dead simple machine learning for protein engineering
+
+
