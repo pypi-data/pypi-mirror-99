@@ -1,0 +1,16 @@
+netbeansifier/__init__.py,sha256=Pomd6kZcThE2LbcyanTIXrouI6UTE1UyrA-Q0fcEdFI,2319
+netbeansifier/__main__.py,sha256=hJ-S9gtOU2wMGOUJ4Ra_eh5sLCPfPJ2hV9NeQ7C11qw,38
+netbeansifier/netbeansify.py,sha256=jikiNDLsAnAayeOwbUdr2_HDM-2VxoJNJTBQxxUHvzA,9893
+netbeansifier/netbeanz.png,sha256=zb-HNXRapmf-q7Jw9u1LewQ8rbOj_j-MPuRyAzAENEk,172522
+netbeansifier/template/build.xml,sha256=4IuaBwVDUBXGRrD2351uriXV8P3v8xDyfdOAylLppAU,3633
+netbeansifier/template/manifest.mf,sha256=q6E-tOTSwW9xjE20no_VgSoAZOCxLFLhR5eSQKvQGaA,82
+netbeansifier/template/nbproject/build-impl.xml,sha256=8ZltUVjzzkupyJzdSGj2GDQoCAvPdeCO6YBcXU1-_oQ,79360
+netbeansifier/template/nbproject/genfiles.properties,sha256=qhU0vlyOdmZZ9MRwn3V1NhiNxYv-AK-q1zBRH2bnn1I,475
+netbeansifier/template/nbproject/project.properties,sha256=QQofXaGaAFX6b9DeNCr7RJen-NNuAM_JG3AiaW899PY,2517
+netbeansifier/template/nbproject/project.xml,sha256=dBNOxVfeMytsXBwSUOuigTSz5dMCGETF1E9xgdsjTZw,574
+netbeansifier-1.0.0.dist-info/LICENSE,sha256=mvy4CgKfS6GrMz2R2vIFRDLsnqbUyDxv-JC9z4mgpWM,1067
+netbeansifier-1.0.0.dist-info/METADATA,sha256=JB3zwPhBqbgSttC--rfFsEL1sXZJ92LqYp44jOhjyWs,6742
+netbeansifier-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+netbeansifier-1.0.0.dist-info/entry_points.txt,sha256=PeK6PjjvHm1E_vW2CiLFnshCq3ggMR4-Hz46zvE3h4U,52
+netbeansifier-1.0.0.dist-info/top_level.txt,sha256=2xPxZumzHkOnjP3dl1uSj6dGoE74_7dGnV8WbFXd3L4,14
+netbeansifier-1.0.0.dist-info/RECORD,,
