@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: seleniumqt
+Version: 1.0.1
+Summary: test@qtp
+Home-page: http://github.com/lll/seleniumqt
+Author: poseidon
+Author-email: seleniumqt@gmail.com
+License: UNKNOWN
+Project-URL: seleniumqt, http://github.com/lll/seleniumqt
+Description: # Example Package
+        
+        This is a simple example package. You can use
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
