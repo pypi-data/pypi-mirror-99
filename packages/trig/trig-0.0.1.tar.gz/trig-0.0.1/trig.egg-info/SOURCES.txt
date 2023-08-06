@@ -1,0 +1,7 @@
+README.md
+setup.py
+trig.py
+trig.egg-info/PKG-INFO
+trig.egg-info/SOURCES.txt
+trig.egg-info/dependency_links.txt
+trig.egg-info/top_level.txt
