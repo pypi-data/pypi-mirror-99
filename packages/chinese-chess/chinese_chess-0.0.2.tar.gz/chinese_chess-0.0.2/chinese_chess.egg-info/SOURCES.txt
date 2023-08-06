@@ -1,0 +1,7 @@
+setup.py
+chinese_chess/__init__.py
+chinese_chess/test.py
+chinese_chess.egg-info/PKG-INFO
+chinese_chess.egg-info/SOURCES.txt
+chinese_chess.egg-info/dependency_links.txt
+chinese_chess.egg-info/top_level.txt
