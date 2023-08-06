@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: dusted
+Version: 1.0.0
+Summary: Dustforce replay editor
+Home-page: https://github.com/AlexMorson/dustforce-tas-editor
+Author: Alex Morson
+Author-email: alexmorson@btinternet.com
+License: UNKNOWN
+Description: # Dusted
+        
+        An offline editor for Dustforce replays, largely based on dustkid.com's replay composer.
+        
+        ## Installation
+        
+        `pip install dusted`
+        
+        Copy `plugin/tas.as` to `~dustforce/user/script_src`, compile as an in-game plugin, and enable it.
+        
+        On linux, `sudo apt-get install expect` (or equivalent, for the program `unbuffer`).
+        
+        ## Usage
+        
+        Run the editor with
+        
+        `python -m dusted`
+        
+        or, if the python scripts directory is on the PATH
+        
+        `dusted`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
