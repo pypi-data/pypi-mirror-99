@@ -1,0 +1,10 @@
+discord.py
+tornado
+requests
+pycurl
+watchdog
+pymongo
+aiohttp[speedups]
+
+[:python_version > "3.6"]
+uvloop
