@@ -1,0 +1,3 @@
+[console_scripts]
+einsteinify=einsteinify.__main__:main
+
