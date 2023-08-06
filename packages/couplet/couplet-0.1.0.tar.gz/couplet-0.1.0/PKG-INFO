@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: couplet
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/tomdottom/python-couplet
+Author: Tom Marks
+Author-email: thomas.o.marks@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Couplet
+
+Nothing to see here yet!
+
+
