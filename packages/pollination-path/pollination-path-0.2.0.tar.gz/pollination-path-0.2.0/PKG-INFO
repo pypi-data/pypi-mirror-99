@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pollination-path
+Version: 0.2.0
+Summary: File utility plugin for Pollination.
+Home-page: https://github.com/pollination/pollination-path
+Author: pollination
+Author-email: info@ladybug.tools
+Maintainer: pollination
+Maintainer-email: info@pollination.cloud
+License: PolyForm Shield License 1.0.0, https://polyformproject.org/wp-content/uploads/2020/06/PolyForm-Shield-1.0.0.txt
+Project-URL: icon, https://github.com/ladybug-tools/artwork/raw/master/icons_components/ladybug/png/opendir.png
+Project-URL: docker, https://hub.docker.com/r/ladybugtools/path
+Description: # path
+        
+        A Pollination plugin with utilities for files and folders (aka. artifacts).
+        
+Keywords: pollination
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
