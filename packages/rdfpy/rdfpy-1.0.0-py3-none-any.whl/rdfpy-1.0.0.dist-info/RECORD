@@ -1,0 +1,9 @@
+rdfpy/__init__.py,sha256=nzJqPhXWScHuxwOTtUszTDjfJDuZqw4shcIy2Q-0SFs,97
+rdfpy/rdfpy.py,sha256=KmtULJtuR80DGwhAvAS7ohQ63YG7YgVbp3_sQIKkzQE,5557
+tests/__init__.py,sha256=XSvrAIZPigMYYpsPxLUFujWPKnnzxTNzE9D9Vn2Raxc,76
+tests/test_rdf.py,sha256=tTtHO9fNkFnX4A5zbQiy_cZqvzmb3h0_oG9R6zsARBM,921
+rdfpy-1.0.0.dist-info/LICENSE,sha256=peBzF-fw9OnjR42XfgLJrdHdWSqCv3V6jlQD2aDrYyI,1073
+rdfpy-1.0.0.dist-info/METADATA,sha256=QB41ZiyeYTR8x2QlOE-ql2dEsTsVeP13IQPSX6V0MJ4,2213
+rdfpy-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rdfpy-1.0.0.dist-info/top_level.txt,sha256=WYSioT5SP-sxNl3SYX7FTOk4G19pGJrkbcAn0jyb6xI,12
+rdfpy-1.0.0.dist-info/RECORD,,
