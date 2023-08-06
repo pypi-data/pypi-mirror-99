@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pvOps
+Version: 0.1.0
+Summary: pvOps is a python library for the analysis of field collected operational data for photovoltaic systems.
+Home-page: https://github.com/tgunda/pvOps
+Maintainer: Thushara Gunda
+Maintainer-email: tgunda@sandia.gov
+License: Revised BSD
+Description: 
+        pvOps is a python package for PV operators & researchers. It is
+        a collection of functions for working with text-based data
+        from photovoltaic power systems. The library includes functions for
+        processing text data as well as fusion of the text information with
+        time series data for visualization of contextual details for data
+        analysis. 
+        Documentation: https://pvops.readthedocs.io/en/latest/index.html
+        Source code: https://github.com/tgunda/pvOps
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Provides-Extra: optional
+Provides-Extra: test
+Provides-Extra: doc
+Provides-Extra: all
