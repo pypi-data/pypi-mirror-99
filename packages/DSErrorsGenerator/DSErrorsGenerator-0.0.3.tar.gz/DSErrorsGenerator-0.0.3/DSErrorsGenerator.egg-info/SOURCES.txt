@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+DSErrorsGenerator/__init__.py
+DSErrorsGenerator/errors.py
+DSErrorsGenerator/errors_generator.py
+DSErrorsGenerator.egg-info/PKG-INFO
+DSErrorsGenerator.egg-info/SOURCES.txt
+DSErrorsGenerator.egg-info/dependency_links.txt
+DSErrorsGenerator.egg-info/not-zip-safe
+DSErrorsGenerator.egg-info/top_level.txt
