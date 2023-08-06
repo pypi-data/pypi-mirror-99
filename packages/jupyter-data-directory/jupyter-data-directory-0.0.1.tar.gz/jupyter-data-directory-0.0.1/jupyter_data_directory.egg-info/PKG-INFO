@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: jupyter-data-directory
+Version: 0.0.1
+Summary: Notebook Server Extension to serve a data directory
+Home-page: UNKNOWN
+Author: Madhur Tandon
+Author-email: madhur.tandon@quantstack.net
+License: 3-clause BSD
+Description: UNKNOWN
+Platform: any
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5

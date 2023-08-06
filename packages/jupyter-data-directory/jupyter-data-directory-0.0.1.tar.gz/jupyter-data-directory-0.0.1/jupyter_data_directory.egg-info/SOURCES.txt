@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+etc/jupyter/jupyter-data-directory.json
+etc/jupyter/jupyter_notebook_config.d/jupyter-data-directory.json
+etc/jupyter/jupyter_server_config.d/jupyter-data-directory.json
+jupyter-data-directory/__init__.py
+jupyter_data_directory.egg-info/PKG-INFO
+jupyter_data_directory.egg-info/SOURCES.txt
+jupyter_data_directory.egg-info/dependency_links.txt
+jupyter_data_directory.egg-info/not-zip-safe
+jupyter_data_directory.egg-info/requires.txt
+jupyter_data_directory.egg-info/top_level.txt
+share/jupyter/data-directory/example.md
+share/jupyter/data-directory/jupyter-logo.png
