@@ -1,0 +1,7 @@
+README.md
+setup.py
+discrete_differentiator.egg-info/PKG-INFO
+discrete_differentiator.egg-info/SOURCES.txt
+discrete_differentiator.egg-info/dependency_links.txt
+discrete_differentiator.egg-info/requires.txt
+discrete_differentiator.egg-info/top_level.txt
