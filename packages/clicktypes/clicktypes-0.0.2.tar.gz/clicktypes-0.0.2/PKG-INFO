@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: clicktypes
+Version: 0.0.2
+Summary: Additional parameter types for the "click" module that I find useful.
+Home-page: https://github.com/python-modules/clicktypes
+Author: gbe0
+Author-email: python@gbe0.com
+License: MIT
+Description: # clicktypes
+        
+        Additional types for the [click](https://pypi.org/project/click/) module that I find useful.
+        
+        For a list of available types check the [README](clicktypes/README.md) file from the module.
+        
+        ## Installation
+        
+        Install from PyPI:
+        
+        ```python
+        ## Python 3
+        python3 -m pip install clicktypes
+        
+        ## PyPy3
+        pypy3 -m pip install clicktypes
+        ```
+        
+        ## Examples
+        
+        The following are some examples. For complete examples check the appropriate README.
+        
+        ### Networking
+        
+        If you accept an IP address parameter:
+        
+        ```python
+        from clicktypes.network import IPAddressParam
+        
+        @click.argument(
+            'ip',
+            nargs           = -1,
+            required        = True,
+            type            = IPAddressParam(),
+        )
+        ```
+        
+        This will validate the IP or IP's provided are IPv4 or IPv6 addresses and return them as an `IPv4Address` or `IPv6Address` object.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
