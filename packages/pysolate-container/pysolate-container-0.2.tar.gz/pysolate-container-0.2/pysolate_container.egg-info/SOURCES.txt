@@ -1,0 +1,10 @@
+setup.py
+pysolate/__init__.py
+pysolate/cli.py
+pysolate/container.py
+pysolate_container.egg-info/PKG-INFO
+pysolate_container.egg-info/SOURCES.txt
+pysolate_container.egg-info/dependency_links.txt
+pysolate_container.egg-info/entry_points.txt
+pysolate_container.egg-info/requires.txt
+pysolate_container.egg-info/top_level.txt
