@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: check4updates
+Version: 0.0.1
+Summary: Check if an updated package is available and prompt your users to upgrade
+Home-page: https://github.com/MatthewReid854/check4updates
+Author: Matthew Reid
+Author-email: alpha.reliability@gmail.com
+License: MIT
+Description: 
+        *check4updates* is a Python library for developers that prompts your users to upgrade when a new version of your package is released.
+        
+        Documentation will come soon.
+        
+Keywords: check,auto,automatic,upgrade,update,updater,upgrader,package,utility,new,release,autoupgrade,autoupdate,prompt,users,developers,interactive,pip
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
