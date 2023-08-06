@@ -1,0 +1,17 @@
+dca/__init__.py,sha256=P7hcIQtYUbn4R0jE45IQFYYHc-Or-8sQYHHfQaxCbRM,53
+dca/__main__.py,sha256=iAqRoYb0tXg9KKhmtLul0AWiJla_TSlvEYLcZc7MsdA,8216
+dca/api.py,sha256=HgSx5RLva0G3f_TXBvjyiJp8Bs9b7PwQTjYadIZ6vxY,8496
+dca/hyper.py,sha256=jRm8xONJnYrRzA1DWs8qlE9xJzsdcr11zkSMSScqDp8,4225
+dca/io.py,sha256=QfFJi7c90zVG7ml2Sxb6iUnDof76vKtwdQpTfhz3pdw,4523
+dca/layers.py,sha256=_4CWvo9fw65CGy29T0k3a6YcQKdK9wMBBb1bqmLtckE,3056
+dca/loss.py,sha256=HeP7vBAzRhdEXsTwX2-Nl7vsBFKQSrCtVq9DFmIjfqk,5220
+dca/network.py,sha256=1Xl71ka1dhYL9lgBWPoQX6z5SPDHNY4KejvoEJDK0kA,34050
+dca/test.py,sha256=T3o0eXT3-tZzZmYhwCjgGVBv4KnCYeidXg3EMCBJxrk,2503
+dca/train.py,sha256=vWxNacTqO0VWQhnqXcENNUHFYFoU678DmYgOKn0MjYA,6742
+dca/utils.py,sha256=1kNgjXNXmg9RQnLH80aW1kIUjEO4C2EI29RZa45XQKs,4911
+DCA-0.3.dist-info/LICENSE.txt,sha256=L_FQne6Cx-JVmhCNEr_yiDHbE54gitV8_aMMyTl0JYQ,11344
+DCA-0.3.dist-info/METADATA,sha256=fISyjQicd0GZhi1GxnmKgk2TvIzHIgyq1sYjvGwzQFo,676
+DCA-0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+DCA-0.3.dist-info/entry_points.txt,sha256=r5CoHCv_m3DSG-6MM3Is7g_IokgPF-OyNdE7hilnMMY,43
+DCA-0.3.dist-info/top_level.txt,sha256=qKSYwty3ybEWTN3hdkYU4Vm0HeJ3jpN56blKGLyZgHE,4
+DCA-0.3.dist-info/RECORD,,
