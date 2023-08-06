@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: automatic-meter-reader
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/ardiloot/automatic-meter-reader
+Author: Ardi Loot
+Author-email: ardi.loot@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: meter-digits-recognizer
+
+UNKNOWN
+
+
