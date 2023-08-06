@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: eclometer
+Version: 0.0.3
+Summary: ECLometer serial interface, CLI and GUI app.
+Home-page: https://github.com/GVRX/potentiostat
+Author: Grant van Riessen  et al.
+Author-email: g.vanriessen@latrobe.edu.au
+License: MIT
+Keywords: ECL ECLometer potentiostat
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: pyserial
+Requires-Dist: progressbar33
+Requires-Dist: argparse
+Requires-Dist: json-python-module
+Requires-Dist: json-tricks
+Requires-Dist: drawnow
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: gooey
+
+
+iorodeo-potentiostat
+---------------------
+
+Python interface to LTU Electrocheminiluminescence(ECL)/Potentiometer  Shield for the teensy 3.6 development 
+board.  Based upon the IO Rodeostat potentiometer (Will Dickson, http://stuff.iorodeo.com/docs/potentiostat).
+
+
+
+
