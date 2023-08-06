@@ -1,0 +1,5 @@
+setup.py
+jiro_toppings.egg-info/PKG-INFO
+jiro_toppings.egg-info/SOURCES.txt
+jiro_toppings.egg-info/dependency_links.txt
+jiro_toppings.egg-info/top_level.txt
