@@ -1,0 +1,16 @@
+plover_cards/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plover_cards/anki_utils.py,sha256=J0tyO4uq5XO7WCem18FnupZI_cG33MYWYUyYtXCY9Q4,211
+plover_cards/card_builder.py,sha256=zpoDS1T65fevkbwLFOZIgM-9CW7ynNBYWu7wGLer1uM,12123
+plover_cards/card_builder_ui.py,sha256=0MJ9KKny5zKqfOHzsUC2g8QQpIaVAK7YHMIjqycAWHw,10301
+plover_cards/card_suggestions.py,sha256=6NrY61w_ip1uT-tJloGvoqS4g5s4FK-s8xlcpL7SBZ4,1433
+plover_cards/cards.py,sha256=LSPyCqAijUEqvaRpytOJCXouriJbXiFeycM-C83kH7E,4998
+plover_cards/config.py,sha256=NYIijsqAugoJX_deoqmK8r3V7rvPnp-W6rexGfA8QW8,1031
+plover_cards/plover_hook.py,sha256=NqZRyv66nzGGXI_dCo6Gc65vEBO8xrDtVWZ4EApkm_8,1928
+plover_cards/resources_rc.py,sha256=Azda-teguMmsB-GzndTBoAkIjyM8fYwsNaNWD01T67s,8089
+plover_cards-0.1.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plover_cards-0.1.3.dist-info/METADATA,sha256=F5tL1i66z4zOvvLcYl94AFRIYS-2R5c-qvzzPESJP9s,5442
+plover_cards-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+plover_cards-0.1.3.dist-info/entry_points.txt,sha256=Psbo7-41IVV1YxVvieGecBBDubuShFSHIp1TX_1PczA,145
+plover_cards-0.1.3.dist-info/top_level.txt,sha256=NjSb5lBl0dDWrbXoDP4h5m8VGQTh2F_EerTDrE_1JdY,13
+plover_cards-0.1.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+plover_cards-0.1.3.dist-info/RECORD,,
