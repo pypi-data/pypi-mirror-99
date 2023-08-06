@@ -1,0 +1,83 @@
+<Simulation>
+<WeightType>DelayedConnection</WeightType>
+<Algorithms>
+<Algorithm type="OUAlgorithm" name="OULIF_excitatory">
+<NeuronParameter>
+<t_membrane>10e-3</t_membrane>
+<t_refractive>0</t_refractive>
+<V_threshold>20e-3</V_threshold>
+<V_reset>0</V_reset>
+<V_reversal>0</V_reversal>
+</NeuronParameter>
+</Algorithm>
+<Algorithm type="OUAlgorithm" name="OULIF_inhibitory">
+<NeuronParameter>
+<t_membrane>3e-3</t_membrane>
+<t_refractive>0</t_refractive>
+<V_threshold>20e-3</V_threshold>
+<V_reset>0</V_reset>
+<V_reversal>0</V_reversal>
+</NeuronParameter>
+</Algorithm>
+<Algorithm type="GeomAlgorithm" name="LIF_excitatory"  system="LeakingOdeSystem" lambda="0.01">
+<OdeParameter>
+<NeuronParameter>
+<t_membrane>10e-3</t_membrane>
+<t_refractive>0</t_refractive>
+<V_threshold>20e-3</V_threshold>
+<V_reset>0</V_reset>
+<V_reversal>0</V_reversal>
+</NeuronParameter>
+<InitialDensityParameter>
+<mu>0.0</mu>
+<sigma>0.0</sigma>
+</InitialDensityParameter>
+<V_min>-0.02</V_min>
+<N_bins>5000</N_bins>
+</OdeParameter>
+</Algorithm>
+<Algorithm name="LIF_inhibitory"  system="LeakingOdeSystem" lambda="exp( -double(n_bins_3 - 1)*dyn_ode_leak_2.TStep()/(3e-3))" type="GeomAlgorithm">
+<OdeParameter>
+<NeuronParameter>
+<t_membrane>3e-3</t_membrane>
+<t_refractive>0</t_refractive>
+<V_threshold>20e-3</V_threshold>
+<V_reset>0</V_reset>
+<V_reversal>0</V_reversal>
+</NeuronParameter>
+<InitialDensityParameter>
+<mu>0.0</mu>
+<sigma>0.0</sigma>
+</InitialDensityParameter>
+<V_min>-0.02</V_min>
+<N_bins>1 - ((3e-3)/dyn_ode_leak_2.TStep())*log(0.01)</N_bins>
+</OdeParameter>
+</Algorithm>
+<Algorithm name="Cortical_Background_Algorithm" type="RateFunctor">
+<expression><![CDATA[2.0]]></expression>
+</Algorithm>
+</Algorithms>
+<Nodes>
+<Node name="LIF_E" type="EXCITATORY_GAUSSIAN" algorithm="LIF_excitatory"></Node>
+<Node name="LIF_I" type="INHIBITORY_GAUSSIAN" algorithm="LIF_inhibitory"></Node>
+<Node name="Cortical_Background" type="EXCITATORY_GAUSSIAN" algorithm="Cortical_Background_Algorithm"></Node>
+</Nodes>
+<Connections>
+<Connection In="LIF_E" Out="LIF_E">10000 0.000117647 0</Connection>
+<Connection In="LIF_I" Out="LIF_I">2000 -0.00085531 0</Connection>
+<Connection In="LIF_E" Out="LIF_I">10000 0.000285103 0</Connection>
+<Connection In="LIF_I" Out="LIF_E">2000 -0.000352941 0</Connection>
+<Connection In="Cortical_Background" Out="LIF_E">10000 0.000117647 0</Connection>
+<Connection In="Cortical_Background" Out="LIF_I">10000 0.000285103 0</Connection>
+</Connections>
+<Reporting>
+<Rate node="LIF_E" t_interval="0.001"/>
+<Rate node="LIF_I" t_interval="0.001"/>
+</Reporting>
+<SimulationRunParameter>
+<SimulationName>two_pop</SimulationName>
+<t_end>0.05</t_end>
+<t_step>dyn_ode_leak_2.TStep()</t_step>
+<name_log>twopoptest.log</name_log>
+</SimulationRunParameter>
+</Simulation>
