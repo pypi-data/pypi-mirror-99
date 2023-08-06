@@ -1,0 +1,3 @@
+[console_scripts]
+crackomatic = crackomatic.__main__:main
+
