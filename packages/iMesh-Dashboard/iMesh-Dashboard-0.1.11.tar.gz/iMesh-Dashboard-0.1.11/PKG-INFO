@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: iMesh-Dashboard
+Version: 0.1.11
+Summary: Create Dashboard for serial connected meshtastic device
+Home-page: https://github.com/iz1kga/Meshtastic-rpi-dashboard
+Author: iz1kga
+Author-email: iz1kga@gmail.com
+License: apache 2.0
+Description: # Meshtastic-rpi-dashboard
+        ### Create Dashboard for serial connected meshtastic device
+        
+        ## Setup:
+        `sudo pip3 install iMesh-Dashboard`
+        
+        ## Configuration
+        
+        #### First installation
+        ```
+        cd /usr/local/iMeshDashboard/conf/
+        sudo mv app.conf.example app.conf
+        sudo nano app.conf
+        ```
+        
+        #### Configuration example
+        ```
+        [AUTH] #authentication for dashboard
+        username=user
+        password=testPassword
+        
+        [NET] # binding address and port for dashboard
+        bind=0.0.0.0
+        port=5000
+        
+        [Position] # send position beacon for non gps devices
+        lat=45.5
+        lon=7.5
+        alt=250
+        interval=375
+        enabled=False
+        
+        [MQTT] #mqtt server for publishing received nodes (i use it to render imeshmap.iz1kga.it)
+        host=mqtt.test.org
+        port=1883
+        username=MQTTuser
+        password=MQTTpassword
+        keepalive=60
+        enabled=False
+        ```
+        
+        ## Run
+        Install systemd service running: 
+        ```sudo /usr/local/iMeshDashboard/service/iMeshDashboardServiceInstall.sh```
+        the service will start at end of installation
+        
+        control service:
+        ```
+        systemctl start iMeshDashboard
+        systemctl stop iMeshDashboard
+        systemctl status iMeshDashboard
+        ```
+        
+        ### Disclaimer
+        
+        This software is experimental. Please Avoid unauthorized persons to acces your systems!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
