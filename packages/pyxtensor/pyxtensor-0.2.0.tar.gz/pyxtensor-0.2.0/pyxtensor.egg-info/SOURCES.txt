@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyxtensor/__init__.py
+pyxtensor.egg-info/PKG-INFO
+pyxtensor.egg-info/SOURCES.txt
+pyxtensor.egg-info/dependency_links.txt
+pyxtensor.egg-info/requires.txt
+pyxtensor.egg-info/top_level.txt
