@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: python-damas
+Version: 1.0.2
+Summary: Uma biblioteca do jogo de damas.
+Home-page: https://github.com/ghurone/python-damas
+Author: Erick Ghuron
+Author-email: ghuron@usp.br
+License: MIT
+Description: python-damas
+        ============
+        
+        ![Python](https://img.shields.io/badge/Python-%3E%3D%203.4-blue)
+        ![PyPI - Status](https://img.shields.io/pypi/status/python-damas)
+        ![PyPI](https://img.shields.io/pypi/v/python-damas)
+        ![PyPI - License](https://img.shields.io/pypi/l/python-damas)
+        
+        IntroduÃ§Ã£o
+        ----------
+        
+        Ã‰ uma biblioteca de damas para Python, podendo movimentar a peÃ§a e com um sistema de validaÃ§Ã£o dos movimentos.
+        
+        
+Keywords: damas jogo ghuron
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment :: Board Games
+Description-Content-Type: text/markdown

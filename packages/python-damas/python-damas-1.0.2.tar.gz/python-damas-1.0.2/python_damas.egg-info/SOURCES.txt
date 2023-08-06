@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+damas/__init__.py
+damas/peca.py
+damas/quadrado.py
+damas/tabuleiro.py
+python_damas.egg-info/PKG-INFO
+python_damas.egg-info/SOURCES.txt
+python_damas.egg-info/dependency_links.txt
+python_damas.egg-info/top_level.txt
