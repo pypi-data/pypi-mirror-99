@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: SDP18py
+Version: 0.2.1
+Summary: This package schedules surgeries using metaheurisitcs. It is a project done for in NUS for Systems Design Project (SDP):Metaheuristic Surgery Scheduling for Operating Theatre Scheduling
+Home-page: https://github.com/lwq96/NewProject
+Author: SDP18
+Author-email: e0176071@u.nus.edu
+License: MIT
+Keywords: metaheuristic,surgery,scheduling
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pareto
+Requires-Dist: matplotlib
+
+This project was done to fulfil NUS ISE Systems Design Project. The group was **SDP group 18**, consisting of 4 students from ISE, project titled Metaheuristic Methods for Operating Theatre (OT) Scheduling. 
+It was a joint project with SingHealth, aiming to utilize metaheuristics methods to optimize surgery scheduling. 
+
+
+In the optimization process, a multiobjective approach was taken, and the 3 areas where **Overtime, Idle Time** and **Waiting Time**.
+
+
+Hill climbing,Tabu Search, Genetic Algorithm and Simulated Annealing was selected to schedule surgeries.
+The program assumes that you have 3 files ready:
+   1. Current Schedule: This is the current OT schedule that the hospital has, we assume ,  
+   2. To be scheduled: The list of that are supposed to be scheduled, indicate 1 for actual surgeries and 0 for predicted surgeries (if any)
+   3. MAS schedule: The file that tells the program which surgeries are tied to which OTs. Assumes a block scheduling system.
+
+Refer to https://github.com/lwq96/NewProject/tree/master/SDP18py for how the 3 files should look like.
+This files should be in the CSV format and on the local directory.
+
+The main executable function with a working graphic interface is login_page_v2: 
+   1. Sign up for an account and login
+   2. Enter the discipline considered 
+   3. Enter maximum runtime allowed
+   4. Click and upload the 3 files required
+   5. Select the algorithm that you want
+   6. View output solutions 
+
+The output has 3 parts (multiple solutions reported):
+   1. A schedule that showcases the timetable of surgical procedures. The ones to look out for are the blue ones.
+   2. At the very bottom, there is a compiled list of the scheduled day, time and OT for all actual surgeries.
+   3. If the pareto front consists of 3 or more points, a graph showing the pareto front and other non-pareto solutions will be plotted.
+
+The following will describe how each of the metaheuristic works:
+1. Multi-objective Stochastic Hill Climbing with Restart (MOSHCR): At every iteration, the algorithm will randomly choose a neighboring solution. The new solution will be taken 
+if it dominates the current one. If not, it will continue looking for new solutions until maximum runtime. The search will restart at a random point in the objective space at every specified period
+of iterations.The final set of solutions reported is the set of non-dominated solutions throughout its search path.
+
+2. Ulungu's Multiobjective Simulated Annealing (UMOSA): For each set of weight, a random legal swap is selected and the fitness function of it is calculated. If the solution dominates the current solution,
+the algorithm will move to that solution, if not, it is selected based on a probability. In the multi-objective sense, the probability is based on a scalarization function of the three objectives and the temperature.  
+The algorithm will run until maximum runtime.
+
+3. Tabu Search for Multi-objective Combinatorial Optimization (TAMOCO): Employs a parallel tabu search where each stream has its own tabu list, while storing all pareto optimal points across all iterations. 
+At every iteration, for one stream, it randomly chooses a point (that is not on the tabu list for this stream) from the top n pareto fronts (to allow for more diversity). Through the manipulation of weights and the drift criterion, the TAMOCO algorithm can force solutions to move away from one another, encouraging the search to spread evenly over the pareto frontier. 
+then, keeping storing this solution in the tabu list. Consecutive iterations for this stream will reject this solution for _tabu_tenure_ (default = 5) iterations. The algorithm stops 
+will run until maximum runtime.
+
+4. Genetic Algorithm (GA): The algorithm starts with *n* number of random solutions for its population. At every iteration, another *n* child solutions will be created. The following explains the steps
+for child generation.
+    1. Choosing parents: Binary tournament selection, take better ranking one, if same rank, use crowding distance
+    2. Crossover: The genome in this case is the scheduled surgery at the specific slot. The child inherits the parents by
+    taking either of the parents' genome, and inheriting that genome as its own. If there are clashes, the algorithm will randomly slot the surgery in an empty slot
+    3. Mutation: Random perturbation of current solution
+After *n* children are generated, the total population, which includes parents and children *2n* solutions, will undergo pareto sorting, and the best *n* solution is taken as the next generation of solutions.
+The algorithm stops will run until maximum runtime.
+
