@@ -1,0 +1,15 @@
+hypervector/__init__.py,sha256=0M815b9xDQCR2ICFO_D5ChQGv0c6XxkcgUzUtWf4fb8,177
+hypervector/errors.py,sha256=dNU1wMPjiluW1JXSbx_U-irUTN8hIj9PBILbfIJhz9w,206
+hypervector/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypervector/resources/abstract/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypervector/resources/abstract/api_resource.py,sha256=zqGrXDbJhtC1suS6aGeWFhYC4TVKu3Zado0YUtEBQbk,1104
+hypervector/resources/core/__init__.py,sha256=qZZ3YtH0lPsFdi8kTw8oByT6tMfiGiRjdUhNzgzSNfE,232
+hypervector/resources/core/benchmark.py,sha256=Y8BW8wlsZcqYtegzCbKQ-AyMMv-daIb5hyycdVDmpxQ,2033
+hypervector/resources/core/definition.py,sha256=TskfEWRJAjchpbxI1me7iiWGz8wb1D0K8KQ-Vz3U1bE,2130
+hypervector/resources/core/ensemble.py,sha256=bSgrSEPX1egmAiQnAvZXhd89oEzABxgOVeorbiSfM-M,2979
+hypervector/resources/core/project.py,sha256=5Cgw6MpNt3-IjGSaDxjZ64OOxORf6PNR2vTBEh3cHk0,1775
+hypervector_wrapper-0.0.5.dist-info/LICENSE.txt,sha256=LKaHaLCmgdfkmtdWxukUGPn2w-o0cRNnRazTZu-hgfQ,1101
+hypervector_wrapper-0.0.5.dist-info/METADATA,sha256=lCtW-KkCsS_7FuzfwRY2vlVI5Fa98CY-TJ8BBJhL1r8,1669
+hypervector_wrapper-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hypervector_wrapper-0.0.5.dist-info/top_level.txt,sha256=xC5W-UVkNhTMobetLR6MSXb8_F-kSTn7AfWow4qpoKo,12
+hypervector_wrapper-0.0.5.dist-info/RECORD,,
