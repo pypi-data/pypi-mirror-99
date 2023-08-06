@@ -1,0 +1,13 @@
+UVTextureConverter/Atlas2Normal.py,sha256=a5qW1K8cXhlvR6Xj-QZ4w_NZMhhWZENU7xhkckc19BE,7644
+UVTextureConverter/Normal2Atlas.py,sha256=EZ3RrdUWJZN6PY8ZjlFTX8DOuPmukxHkMYJ631OGAGw,8863
+UVTextureConverter/UVConverter.py,sha256=fo50FfJbpIejaH3HOdTJTWHN8Zy-JZg5GGEJ-BOIpks,8296
+UVTextureConverter/__init__.py,sha256=zmezYmmvXVGjXbOkAdakaluAkSS3pZMdXlwOYZ0LHzc,115
+UVTextureConverter/config/UV_Processed.mat,sha256=7xCaluV92t1ntWesWR7Av-coyKVn8pkn_IVQDrPNN0s,287942
+UVTextureConverter/config/normal.pickle,sha256=lYDngOWrz3_EZUYK5MjGF_N2VemoDfOL8390vSfcUzw,265542
+UVTextureConverter/config/normal_faces.pickle,sha256=lytU4XihBXdESGBNYIfx0owpR4RdSoUPs4vSPOrWBiY,231916
+UVTextureConverter/mapping_relations/atlas2normal_200_512.pickle,sha256=He21MbQvG4NSGa_50xPYUezB00ln82SZOPOSQEMSHMw,9344313
+UVTextureConverter/mapping_relations/normal2atlas_512_200.pickle,sha256=-N0GgydvrvqYjXbUg8SHCEEK8MHoCWTiA9OCyjwM3y0,16255619
+uvtextureconverter-1.2.0.dist-info/LICENSE,sha256=fudiJ1guIYZHMCs8NDkJyw5b1zUrS_38VvLeV2rFaX8,1068
+uvtextureconverter-1.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+uvtextureconverter-1.2.0.dist-info/METADATA,sha256=e4-16wk47QYI_XOrd7vt6e1brC1GbQhQypmwzyVd22Y,668
+uvtextureconverter-1.2.0.dist-info/RECORD,,
