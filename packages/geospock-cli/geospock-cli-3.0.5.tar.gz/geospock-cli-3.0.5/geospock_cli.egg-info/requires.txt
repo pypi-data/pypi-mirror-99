@@ -1,0 +1,4 @@
+Click
+boto3
+keyring<=22.0.1
+tenacity<=6.3.1
