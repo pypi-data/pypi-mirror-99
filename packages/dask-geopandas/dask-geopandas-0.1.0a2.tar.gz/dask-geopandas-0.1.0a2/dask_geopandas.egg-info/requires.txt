@@ -1,0 +1,3 @@
+geopandas
+dask>=2.2.0
+distributed>=2.2.0
