@@ -1,0 +1,16 @@
+datameta_client/__init__.py,sha256=w89jmc0zbMTdyJGA3spEEAlRfg_pYE7VTpA9lp4NbO4,874
+datameta_client/__main__.py,sha256=LnssBfgTy7JxVtHNRvx7GXtj2fwlcv_pQV5jB1C8E-I,1334
+datameta_client/config.py,sha256=-rA3jecZgtfJS1nWn1Hr_IG3eaLjMygWRlTJ1wroRdk,3487
+datameta_client/errors.py,sha256=eVk77IzzMITNK1KE43zr029xOxee-NlGCCLaBk5AhYg,128
+datameta_client/files.py,sha256=kLvQc_9iHCuXVYHjRtsWxXhxSWJe8ybYGaXStNC0mgE,3216
+datameta_client/metadatasets.py,sha256=wi-SVsQ94XwMvZ8QnlZu3ftoq7QX1LDsKsgHuMvrc1s,1769
+datameta_client/printing.py,sha256=VkMsoldJMa5VteABzz1sd5JSJOJ67mHqW0hRYJolvb0,2722
+datameta_client/shortcuts.py,sha256=F15SaLjCJnnWBILmqDBK4aCUc0oMDFGpFaKwkLMkSYY,3466
+datameta_client/submissions.py,sha256=BpjCcfYOGE7DVGbgKN7NFEZ20Kr1FojGp7-PPG1fgqg,3731
+datameta_client/utils.py,sha256=0mBH4rd1x3vPsn6AAF7TfO3cYeA2-YzsGwjIKhHMZZA,2302
+datameta_client-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+datameta_client-0.1.0.dist-info/METADATA,sha256=-O9t84JDZSOqJD_atJl9LXKeSlfDR4V-PLXvYyS0SMo,1516
+datameta_client-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+datameta_client-0.1.0.dist-info/entry_points.txt,sha256=HxYTmqgDhr_qXsC_09fvGncNZZDCTrGkpzg9PGEdgng,59
+datameta_client-0.1.0.dist-info/top_level.txt,sha256=0nmAULDAX9QEKICR4CUPtk7JyXxWJGV68V_etvBNH7w,16
+datameta_client-0.1.0.dist-info/RECORD,,
