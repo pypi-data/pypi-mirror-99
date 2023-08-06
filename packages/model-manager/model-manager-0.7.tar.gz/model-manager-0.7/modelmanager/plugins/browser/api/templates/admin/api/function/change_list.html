@@ -1,0 +1,33 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <link rel="stylesheet" href="{% static 'api/function_list.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+{{ block.super }}
+
+<div id="content-results" class="module">
+  <h2>Results</h2>
+  <div id="results" class='pre'>
+    Select configured function.
+  </div>
+</div>
+
+
+<script src="{% static 'api.js' %}" charset="utf-8"></script>
+<script type="text/javascript">
+// remove 'Select function to change'
+django.jQuery('#content h1').remove();
+
+django.jQuery("a[action='call']").click(function(e) {
+    e.preventDefault();
+    var id = django.jQuery(this).attr('name');
+    call_function(id+'/call', '#results');
+});
+</script>
+{% endblock %}
