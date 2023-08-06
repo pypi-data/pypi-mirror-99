@@ -1,0 +1,2 @@
+GenIce2>=2.1b2
+MDAnalysis
