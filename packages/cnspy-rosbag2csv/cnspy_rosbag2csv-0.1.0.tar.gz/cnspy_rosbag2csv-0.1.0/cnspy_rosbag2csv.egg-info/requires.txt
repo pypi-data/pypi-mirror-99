@@ -1,0 +1,14 @@
+numpy
+tqdm
+pandas
+argparse
+PyYAML
+spatialmath-python
+rospy
+rospkg
+pycryptodomex
+pycryptodome
+gnupg
+lz4
+cnspy_script_utils
+cnspy_spatial_csv_formats
