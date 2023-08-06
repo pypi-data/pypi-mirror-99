@@ -1,0 +1,17 @@
+pyQuirk/__init__.py,sha256=Z68YfYGLufQ94eibov17RcBIekGyLjMdPob3a6cXVJ0,1022
+pyQuirk/_version.py,sha256=IXM0aZ3BW6-9tdgR5GscPgVIl5bfjSjzCSGQGRCfl7Q,385
+pyQuirk/quirk.py,sha256=lWy9L-w64891cI4EzRg2KyognPyXIgt-4dMRIISAJDA,5352
+pyQuirk/static/a344cd889e9a479207a9caf74eed7f79.html,sha256=Qag6AfBUAhiH6lrk2SwEZaQkWfkrhvqpApEfefTNG7k,602485
+pyQuirk/static/extension.js,sha256=W0jbSsjALT5ZkrDLUFQwmTqtcFjv_MB7J7It_WN9EMs,1192
+pyQuirk/static/index.js,sha256=4Yj54iPoOSBvGHNANWoOPr9fErVmGUEYBN8YSTtuVVQ,76873
+pyQuirk/static/index.js.map,sha256=gv0t8PPdR_fHVkON196RC2c5bvv9Nx7st9YFsToG-xw,701501
+pyQuirk-0.1.1b0.data/data/etc/jupyter/nbconfig/notebook.d/pyQuirk.json,sha256=IbHCWkTBIU3rVLyDWSIPQWiOT6PVLluCLTH0yf-hUdc,61
+pyQuirk-0.1.1b0.data/data/share/jupyter/nbextensions/pyQuirk/a344cd889e9a479207a9caf74eed7f79.html,sha256=Qag6AfBUAhiH6lrk2SwEZaQkWfkrhvqpApEfefTNG7k,602485
+pyQuirk-0.1.1b0.data/data/share/jupyter/nbextensions/pyQuirk/extension.js,sha256=W0jbSsjALT5ZkrDLUFQwmTqtcFjv_MB7J7It_WN9EMs,1192
+pyQuirk-0.1.1b0.data/data/share/jupyter/nbextensions/pyQuirk/index.js,sha256=4Yj54iPoOSBvGHNANWoOPr9fErVmGUEYBN8YSTtuVVQ,76873
+pyQuirk-0.1.1b0.data/data/share/jupyter/nbextensions/pyQuirk/index.js.map,sha256=gv0t8PPdR_fHVkON196RC2c5bvv9Nx7st9YFsToG-xw,701501
+pyQuirk-0.1.1b0.dist-info/LICENSE,sha256=tfU-3NwH6Ag8PVkkdi0IWv2UTrKFFAXODW7jDy3zjvU,10821
+pyQuirk-0.1.1b0.dist-info/METADATA,sha256=e_cINEZiRjNE-EybLacwz98PC1rvDGwyd1lcbZ8fcYw,1012
+pyQuirk-0.1.1b0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pyQuirk-0.1.1b0.dist-info/top_level.txt,sha256=5ruFDq7vg2fO2T3L14SJm22of00qUBRinqafwn7MmpU,8
+pyQuirk-0.1.1b0.dist-info/RECORD,,
