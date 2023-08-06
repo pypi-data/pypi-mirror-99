@@ -1,0 +1,9 @@
+numpy
+iso8601
+sklearn
+scikit-learn
+zerorpc
+requests
+websocket-client
+cbpro
+python-binance
