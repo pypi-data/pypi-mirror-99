@@ -1,0 +1,9 @@
+pyscs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyscs/alert.py,sha256=9vS97ijQ2Rr3NfGQAhHP4RPAkxcuWHt2NLzKZjxa0p0,450
+pyscs/alertto.py,sha256=oG347cMdgTyHJbFzfTxZLMS1WxLz_qdGQR208BraFFQ,558
+pyscs/script.py,sha256=vELVr7YfhUBY0-mJWw_VJFXIXNE_-ezcVxJjqsOn2Y4,1871
+pyscs/scs.py,sha256=wbnRg3CnOIaeaKYgRva2sVa1qwBQMoGr-QOGnvyI9yY,3207
+pyscs-0.0.10.dist-info/METADATA,sha256=lFZ5qYlhVYEtubHhdp3NCMWPaoOTugDR2Zbk7M7Fv1E,1663
+pyscs-0.0.10.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+pyscs-0.0.10.dist-info/top_level.txt,sha256=su_Vg_xE-8rS4AIWWfpzXzliGwkHlz0E1DPV9ddF_u8,6
+pyscs-0.0.10.dist-info/RECORD,,
