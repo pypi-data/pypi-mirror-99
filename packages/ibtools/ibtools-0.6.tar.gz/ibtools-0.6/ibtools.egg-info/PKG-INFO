@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: ibtools
+Version: 0.6
+Summary: Little helper tools for IB API
+Home-page: https://github.com/juxeii/ibtools
+Author: Juergen Reiss
+Author-email: juxeiier@gmail.com
+License: BSD
+Description: Little helper tools for IB API
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.6
