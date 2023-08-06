@@ -1,0 +1,6 @@
+openpyxl
+beautifulsoup4
+lxml
+virtualenv
+requests
+pyyaml
