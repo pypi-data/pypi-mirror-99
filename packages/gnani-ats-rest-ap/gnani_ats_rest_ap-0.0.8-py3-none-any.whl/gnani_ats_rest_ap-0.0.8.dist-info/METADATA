@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gnani-ats-rest-ap
+Version: 0.0.8
+Summary: gnani_rest_api
+Home-page: UNKNOWN
+Author: Sandeep S
+Author-email: <sandeep.s@gnani.ai>
+License: UNKNOWN
+Keywords: python,automatic text to speech
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+This is a rest api for transcription of audio to text
+
+
