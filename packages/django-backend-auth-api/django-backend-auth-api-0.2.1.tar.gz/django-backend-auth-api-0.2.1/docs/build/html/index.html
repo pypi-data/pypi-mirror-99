@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Django-Backend-Auth-Api’s documentation! &#8212; Django-Backend-Auth-Api  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-django-backend-auth-api-s-documentation">
+<h1>Welcome to Django-Backend-Auth-Api’s documentation!<a class="headerlink" href="#welcome-to-django-backend-auth-api-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>###Setup your project
+1. Create you django api project in my case my project name is backend</p>
+<p>Your project seems like this:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>backend/</dt><dd><p>__init__.py
+settings.py
+urls.py
+wsgi.py</p>
+</dd>
+</dl>
+<p>manage.py
+requirements.txt</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>Install the package in command line on your project directory like this:</p>
+<p>cd backend/  after activate your virtual environment
+pip install django-backend-auth-api == 0.2</p>
+</li>
+<li><p>Add “authapi” to your INSTALLED_APPS setting like this:</p>
+<dl class="simple">
+<dt>INSTALLED_APPS = [</dt><dd><p>…
+‘authapi’,</p>
+</dd>
+</dl>
+<p>]</p>
+</li>
+<li><p>Include the authapi URLconf in your project urls.py like this:</p>
+<p>path(‘authapi/’, include(‘authapi.urls’)),</p>
+</li>
+<li><p>Run <cite>python manage.py migrate</cite> to create the authapi models.</p></li>
+<li><p>Visit <a class="reference external" href="http://127.0.0.1:8000/authapi/">http://127.0.0.1:8000/authapi/</a> to see all urls related to  a backend authentication.</p></li>
+</ol>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Django-Backend-Auth-Api</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Mardochée KIKIGBAGBAN.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

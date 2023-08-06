@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: django-backend-auth-api
+Version: 0.2.1
+Summary: A Django app that provide all urls authentication for your backend api.
+Home-page: https://www.example.com/
+Author: Mardochee KIKIGBAGBAN
+Author-email: kgmardochee@gmail.com
+License: BSD-3-Clause  # Example license
+Description: ================
+        BACKEND-AUTH-API
+        ================
+        
+        BACKEND-AUTH-API is a app to manage your authentication backend api with integrated doc.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "authapi" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'authapi',
+            ]
+        
+        2. Include the authapi URLconf in your project urls.py like this::
+        
+            path('authapi/', include('authapi.urls')),
+        
+        3. Run `python manage.py migrate` to create the authapi models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to see docs (you'll need the Admin app enabled).
+        
+        5. Visit http://127.0.0.1:8000/authapi/ to see all urls related to  a backend authentication.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
