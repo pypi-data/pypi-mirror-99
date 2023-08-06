@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+sci_hub.egg-info/PKG-INFO
+sci_hub.egg-info/SOURCES.txt
+sci_hub.egg-info/dependency_links.txt
+sci_hub.egg-info/entry_points.txt
+sci_hub.egg-info/requires.txt
+sci_hub.egg-info/top_level.txt
+scihub/__init__.py
+scihub/bin/__init__.py
+scihub/core/__init__.py
+scihub/util/__init__.py
+scihub/util/download.py
+scihub/util/host.py
+scihub/version/version.json
