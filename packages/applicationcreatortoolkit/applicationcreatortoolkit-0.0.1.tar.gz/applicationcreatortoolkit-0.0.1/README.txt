@@ -1,0 +1,1 @@
+This is a simple GUI library made with tkinter
