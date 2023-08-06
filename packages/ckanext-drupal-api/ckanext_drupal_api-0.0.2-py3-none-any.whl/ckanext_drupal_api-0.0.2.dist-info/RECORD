@@ -1,0 +1,15 @@
+ckanext_drupal_api-0.0.2-py3.8-nspkg.pth,sha256=VaH--vNo0_vzXvZAeqyq-Bg6m47pBBRlxwvBj0KQxe0,544
+ckanext/drupal_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/drupal_api/helpers.py,sha256=y95oFOm_9hUq3bpzWgTYMXk7KmiKV61QPAIlP_36dKs,947
+ckanext/drupal_api/plugin.py,sha256=IiRi5L5oa1TP7So9QHMkWLq43n86aIEcgDj886nkbh4,265
+ckanext/drupal_api/utils.py,sha256=II50h6mb71IcEfHXx5U-ft0sOme4EXXOuKciOAVnK4k,1776
+ckanext/drupal_api/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/drupal_api/tests/test_plugin.py,sha256=Ksy3fjvzpaePk5sAl8L0_eHbqIeosPEbsCteHQwPEws,1261
+ckanext/drupal_api/tests/test_utils.py,sha256=jg9O55TH8WdedY_WJwLnWRpQrVRlZf4LKVmSN4MS6Ck,74
+ckanext_drupal_api-0.0.2.dist-info/LICENSE,sha256=2lWcRAHjsQhqavGNnR30Ymxq3GJ9BaYL_dnfGO_-WFA,34500
+ckanext_drupal_api-0.0.2.dist-info/METADATA,sha256=xIGedgTKSJQoi2URmYwIN2jACxqpcHj9tbA7kseZkss,3301
+ckanext_drupal_api-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ckanext_drupal_api-0.0.2.dist-info/entry_points.txt,sha256=2WvTyxMj9op38icnz_ZG350i6EIUFf0h7VF3xgsi8-A,162
+ckanext_drupal_api-0.0.2.dist-info/namespace_packages.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_drupal_api-0.0.2.dist-info/top_level.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_drupal_api-0.0.2.dist-info/RECORD,,
