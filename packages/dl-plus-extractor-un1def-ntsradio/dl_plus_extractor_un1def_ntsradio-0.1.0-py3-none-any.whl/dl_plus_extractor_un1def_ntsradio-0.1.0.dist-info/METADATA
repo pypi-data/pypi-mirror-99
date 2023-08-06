@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dl-plus-extractor-un1def-ntsradio
+Version: 0.1.0
+Summary: A dl-plus extractor plugin for NTS Radio
+Home-page: https://github.com/un-def/dl-plus-extractor-un1def-ntsradio
+Author: un.def
+Author-email: me@undef.im
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dl_plus
+Requires-Dist: dl-plus (>=0.3) ; extra == 'dl_plus'
+
+# dl-plus-extractor-un1def-ntsradio
+
+A [dl-plus](https://github.com/un-def/dl-plus) extractor plugin for [NTS Radio](https://www.nts.live/)
+
+## Included extractors
+
+  * `un1def/ntsradio:episode` — episodes (`https://www.nts.live/shows/<show>/episodes/<episode>`)
+
+
