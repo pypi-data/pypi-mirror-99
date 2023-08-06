@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pydocparse
+Version: 0.0.1
+Summary: Docstring parsing for generating argument and config parsers and expediting the common coding processes.
+Home-page: https://github.com/prijatelj/pydocparse
+Author: Derek S. Prijatelj
+Author-email: dprijate@nd.edu
+License: UNKNOWN
+Description: ## Python Docstring Parsing
+        
+        Docstring parsing for convenient creation of argument and configuration
+        parsers, as well as other useful metaprogramming utilities to expedite common
+        coding practices.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

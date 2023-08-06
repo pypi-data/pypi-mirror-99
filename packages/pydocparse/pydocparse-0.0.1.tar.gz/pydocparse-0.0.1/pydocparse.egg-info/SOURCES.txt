@@ -1,0 +1,9 @@
+README.md
+setup.py
+pydocparse/__init__.py
+pydocparse/docstring.py
+pydocparse.egg-info/PKG-INFO
+pydocparse.egg-info/SOURCES.txt
+pydocparse.egg-info/dependency_links.txt
+pydocparse.egg-info/requires.txt
+pydocparse.egg-info/top_level.txt
