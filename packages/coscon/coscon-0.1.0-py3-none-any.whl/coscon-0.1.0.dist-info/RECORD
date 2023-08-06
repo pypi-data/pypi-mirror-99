@@ -1,0 +1,15 @@
+LICENSE,sha256=CQW-3Ks42HlHSolFAwLO8hK-Ow7D9Ma7B-guzlBc_9w,1520
+README.rst,sha256=silbAEu31pQ4WqATwpq_xIBpi2GVaBzc-FBg4F1dqOY,4996
+coscon/__init__.py,sha256=DosBU7EI2EGsFK_l0fD5LKTds-2IMjaFy2mHpP-5lPg,574
+coscon/cmb.py,sha256=QfzKg-IzGCNcJkEJazMld8NUM9qTxRk0s3gNPemB74I,14422
+coscon/fits_helper.py,sha256=uzqe7Ad18bQHhOrIJQkS9niNY-4SfJHG1eJCoVfMqlU,3845
+coscon/io_helper.py,sha256=H-3X245MTf2uCtyMobMEhrTYMDFJtsonCbs93rHlHmk,4052
+coscon/toast_extras.py,sha256=_5iqf4mpHHoYD5N23zhRRuH0w-7E9NLjhpL9NdAD1Fc,12318
+coscon/toast_helper.py,sha256=aqU3HljMv7kZxYy3yLHnRRNV_wLqfN6FV1OHqyue2BA,30845
+coscon/toast_staging/crosstalk.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coscon/util.py,sha256=miqWUrok9lU6LN0ceuVy_MdStaCpBHvqmczJYIDXjPI,19492
+coscon-0.1.0.dist-info/entry_points.txt,sha256=S6ZtkTPKLcWOGrFcs6Zjh5Z2vO3-T2jSW7KetJBNjY8,113
+coscon-0.1.0.dist-info/LICENSE,sha256=CQW-3Ks42HlHSolFAwLO8hK-Ow7D9Ma7B-guzlBc_9w,1520
+coscon-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+coscon-0.1.0.dist-info/METADATA,sha256=NzXhamSc8DgU0kaQQ823pzInPfrKjFd6FOVRp0iDDng,7380
+coscon-0.1.0.dist-info/RECORD,,
