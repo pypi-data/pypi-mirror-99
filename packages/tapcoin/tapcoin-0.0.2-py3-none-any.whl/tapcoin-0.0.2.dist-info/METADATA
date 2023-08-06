@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tapcoin
+Version: 0.0.2
+Summary: Decentralized Finance by Tapcoin
+Home-page: UNKNOWN
+Author: Sahil Raut
+Author-email: neocrust98@gmail.com
+License: UNKNOWN
+Keywords: python,tapcoin,cli,decentralized,finance
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: pynacl
+Requires-Dist: redis
+Requires-Dist: jsonpickle
+Requires-Dist: gevent
+Requires-Dist: zstandard
+
+Tapcoin is a new way of decentralized and user-friendly finance
+
+
