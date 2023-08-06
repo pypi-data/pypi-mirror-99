@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+MicroPython_Dashboard_carlsonrocco.egg-info/PKG-INFO
+MicroPython_Dashboard_carlsonrocco.egg-info/SOURCES.txt
+MicroPython_Dashboard_carlsonrocco.egg-info/dependency_links.txt
+MicroPython_Dashboard_carlsonrocco.egg-info/top_level.txt
+dashboard/__init__.py
+dashboard/dashboard.py

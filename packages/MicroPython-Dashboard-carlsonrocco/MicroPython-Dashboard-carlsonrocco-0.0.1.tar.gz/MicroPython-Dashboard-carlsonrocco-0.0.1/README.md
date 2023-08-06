@@ -1,0 +1,1 @@
+This is a simple package to create a dashboard using WS2812b LED's and an ESP8266 running micropython. It uses the Open Weather API as well as the Alpha Vantage API, both are free, all thats needed are the keys. Right now it only has four possible objects: Temperature, Humidity/Precipitation, Stock Price, and WiFi status. More functionality is certainly possible.
