@@ -1,0 +1,11 @@
+corded/__init__.py,sha256=f1BwlvaMGOP9LVLnuNJE4VCHvSy1HkazA-31OVKNrPY,446
+corded/constants.py,sha256=bs80HTDrpMsSlL1C1uFYvX7trnj3sY3qQ8TWLtmlJu0,56
+corded/errors.py,sha256=tXhXaE6p9XhXuLlHDSNoCETEKdU_9Uvj2g1nAC36rb0,505
+corded/http/__init__.py,sha256=tZNUyHLrTbjjoCfVXceK4-zqpiOLsRbStB-lW8CY_rc,98
+corded/http/client.py,sha256=SBibLCZ_vR8geWLQIZ_Yjt8xvIaXjHBCUH4OVm8L4Wo,5905
+corded/http/ratelimiter.py,sha256=c7tR06mUChT_hCMij46ctBR32dgzz3ooa0NcmwKIDMg,2571
+corded/http/route.py,sha256=blO6-0JdjNY_s_2K0j-Kys2FtszPwVeKrjq0-WwXrpw,1641
+corded-1.0.0.dist-info/LICENSE,sha256=zNiKe6v0Sr-ibjKDPCQhAW8d0RmMm_SIkkvyh0yJky4,1065
+corded-1.0.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+corded-1.0.0.dist-info/METADATA,sha256=QfuFkF2_9UKwMXwOcYf_Sh16ZcGLYTyykWZjypVbj7Q,449
+corded-1.0.0.dist-info/RECORD,,
