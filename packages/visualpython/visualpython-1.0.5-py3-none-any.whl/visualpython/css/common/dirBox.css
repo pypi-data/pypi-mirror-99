@@ -1,0 +1,74 @@
+/* select boxes */
+.vp-dir-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    padding: 5px 14px 0px 14px;
+}
+.vp-dir-select-container {
+    
+}
+.vp-dir-select-title {
+    font-weight: bold;
+    padding: 5px 5px 5px 0px;
+}
+#vp-wrapper .vp-dir-select-container input.vp-dir-search {
+    width: 100%;
+}
+.vp-dir-select-box {
+    margin-top: 5px;
+    border: 0.25px solid #C4C4C4;
+}
+.vp-dir-select-list {
+    height: 200px;
+    width: 100%;
+
+    list-style: none;
+    margin: 0px;
+    padding: 0px 5px 0px 5px;
+    color: #696969;
+
+    overflow: auto;
+}
+.vp-dir-select-list::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+.vp-dir-select-list::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+}
+
+.vp-dir-select-list::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+}
+.vp-dir-select-item {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+.vp-dir-select-item span {
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    margin-right: 5px;
+}
+.vp-dir-select-item:hover {
+    color: #F37704;
+}
+.vp-dir-select-item:hover span {
+    background: #F37704;
+    color: #FFFFFF;
+}
+.vp-dir-option-box.api {
+    width: 95%;
+}
+
+.vp-dir-parameter-box {
+    grid-column: 1/3;
+}
+.vp-dir-parameter {
+    width: 100% !important;
+}
