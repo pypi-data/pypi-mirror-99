@@ -1,0 +1,13 @@
+devicely/__init__.py,sha256=gfdGDtS37jGF-ciMRFcd5h1be1UZ_bRz-81-hS1TzEc,212
+devicely/empatica.py,sha256=JSN4VvmhIR_SzfYq6tbbllHeQT3cpM4oRSqYPWBMoO8,10163
+devicely/everion.py,sha256=LbrDGb_a_GqEAqemD_eH60BLIQPQSl2Do-JFXiW4v8Y,13659
+devicely/faros.py,sha256=ZIfTcfwU7Y8_CXKjY0jOx-9srDUdMV9kkWBd3ado0zQ,5309
+devicely/helpers.py,sha256=6k4hqMq2qTh2qI6427ZBm_CE62sSrJ-6TICgctOyw1w,140
+devicely/shimmer_plus.py,sha256=RCq-wMhEGArwsYzljTkQYh0658ekuMB_YzobBdcoAG8,3764
+devicely/spacelabs.py,sha256=u8JQ-SgA8_DKQMEiBGhCOqFl3KtEB-Tyj6PPcNKwu38,11082
+devicely/tag.py,sha256=saSc9vJpq_dOXVnHPoTMHkRzmofG8wYoVv94Jol1Ww0,2413
+devicely-0.2.4.dist-info/LICENSE,sha256=aYTIWCOtuBhhqnzHMDyB6yDyBIlK17vlzChU8QMtiXQ,1105
+devicely-0.2.4.dist-info/METADATA,sha256=wuRU92pWLxkrhgGv0r457GDMfHW9mrM32ZvN287QJVI,4895
+devicely-0.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+devicely-0.2.4.dist-info/top_level.txt,sha256=Ph-v40gzS35PlrJsUSJbCU6CZeLCo7nDnHBbctpmOlw,9
+devicely-0.2.4.dist-info/RECORD,,
