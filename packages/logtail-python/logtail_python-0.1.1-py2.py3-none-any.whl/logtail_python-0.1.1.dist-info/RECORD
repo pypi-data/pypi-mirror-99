@@ -1,0 +1,13 @@
+logtail/__init__.py,sha256=9rodiwN3hmCrdrHcIOEYn2CkHaWNAAmMG7KFL05fcos,252
+logtail/compat.py,sha256=KbZmcmDpj_vbMotp16pADPwJ1FkEHGDNjKbOfCy-c10,141
+logtail/flusher.py,sha256=hWARIeCCk51CD-FjRagmuZT_GGjjN_ZIbmvZF1el-3w,2998
+logtail/formatter.py,sha256=_-vBKotdXCmpodRi6qX9xcZ7DW8qHCmi0xmEJ5r8b7k,961
+logtail/frame.py,sha256=ma2iDxjUBxinhRZ2c5t5ToFARJGNFbRbFlk4iG_LGFc,2237
+logtail/handler.py,sha256=LnnyJYQkNxOSprSR-fIGxs3ZO8te6xPdsukG3ibhBfc,2393
+logtail/helpers.py,sha256=ezDTLsTBAtCtIh_XptSYOiBrZFa-E9wo2SWTnjKgOOU,1156
+logtail/uploader.py,sha256=Va-08WO1Xr79EaJYNvIpA_fab_esQdXvcDFeesACosY,542
+logtail_python-0.1.1.dist-info/LICENSE.md,sha256=aCBMqxfm7QNyFR9JiJ2GSMvhAURXN2E0yTcYNQloqI0,737
+logtail_python-0.1.1.dist-info/METADATA,sha256=Rw9XpqRWEQ0bQMHZITGru5Jz9oMys8ua52d9qmaSRCY,1707
+logtail_python-0.1.1.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+logtail_python-0.1.1.dist-info/top_level.txt,sha256=QZIbQogN1yFBgjiJ-8NlYArVCL00gBoYbEUT_Ew8l-Q,8
+logtail_python-0.1.1.dist-info/RECORD,,
