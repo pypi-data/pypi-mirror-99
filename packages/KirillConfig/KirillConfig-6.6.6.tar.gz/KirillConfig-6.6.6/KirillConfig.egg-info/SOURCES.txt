@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+KirillConfig.egg-info/PKG-INFO
+KirillConfig.egg-info/SOURCES.txt
+KirillConfig.egg-info/dependency_links.txt
+KirillConfig.egg-info/not-zip-safe
+KirillConfig.egg-info/top_level.txt
+kirillconfig/__init__.py
+kirillconfig/configKirill.py
