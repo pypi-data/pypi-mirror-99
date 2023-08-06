@@ -1,0 +1,14 @@
+whilelang/__init__.py,sha256=3yiWroBQiPWhXjdSdr5ZtVqaT-v3lpu753xFIKz-onA,29
+whilelang/__main__.py,sha256=BoPTbMEp34I3wKK2a4hxXHNu9j0DGZLoXmIC9-jSQvA,30
+whilelang/base_parser.py,sha256=SGduDa9kJVAnqnQDSMQustO46A4ByDsEsafrVnnRPGA,1807
+whilelang/const.py,sha256=TIyqr3TUdoWdtwvX1sDdtYq4aPeC30_SsRdOwvPihH0,125
+whilelang/lexer.py,sha256=zXQyXjfHCCAzMW2Upjr1z9FKwfC7hfYUjdjFuaO5bwg,3657
+whilelang/main.py,sha256=FtOC9OQOp0hpYYboma4eIqqzRAHCNhho3dqYvg2TsIE,1152
+whilelang/nodes.py,sha256=rXM2JvoYENDpteGvonc9mmxvMf4risF2cK1Oz28uoVA,3135
+whilelang/parser.py,sha256=vHpFkR3tFEiSsnk2dYMTY3B9RChYBVF1hYEGhGvNAQA,3761
+whilelang/token.py,sha256=5TV-Dk0H3HA77H6gkhBxhEJb_ReOLm-U4ZZsLRjwPV8,630
+whilelang-0.0.1.data/scripts/while.py,sha256=-TojVLRau8d4ErCZBRaeIU6CzS6V6wj3Y2nXmy1wACE,62
+whilelang-0.0.1.dist-info/METADATA,sha256=xHOCwpCI3dBlmeYEHPX9lj-mhk829pFmDYPfy4dI5dw,1496
+whilelang-0.0.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+whilelang-0.0.1.dist-info/top_level.txt,sha256=j3VQ4VYIpejRa6M0jbbTDyq3Xi4IryxMg0B99ckM3VY,10
+whilelang-0.0.1.dist-info/RECORD,,
