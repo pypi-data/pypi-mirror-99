@@ -1,0 +1,25 @@
+# harmless-virus
+Unless your computer has 1 GB RAM...
+
+## Importing
+`import virus`
+
+## Tutorial (some what)
+The module is quite basic, it has only one class called `Virus` and has one callable function called `start()`
+
+`Virus.start()`
+
+*Parameters*
+```
+duration
+  Type: int
+```
+
+The default duration is 10 minutes and the duration is to be entered in **minutes**. The virus will open a website every second until the time is over
+
+Now you must be thinking, running a python script in your friend's computed cannot be considered a *'virus'*. You can convert it into an executable file using [pyinstaller](https://pypi.org/project/pyinstaller/)
+
+## License
+(c) 2021 Dev Shah
+
+This repository is licensed under the MIT license. See LICENSE for details
