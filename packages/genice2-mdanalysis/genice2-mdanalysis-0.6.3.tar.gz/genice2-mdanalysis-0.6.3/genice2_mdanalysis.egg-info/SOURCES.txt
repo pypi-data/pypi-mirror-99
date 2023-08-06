@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+genice2_mdanalysis/__init__.py
+genice2_mdanalysis.egg-info/PKG-INFO
+genice2_mdanalysis.egg-info/SOURCES.txt
+genice2_mdanalysis.egg-info/dependency_links.txt
+genice2_mdanalysis.egg-info/entry_points.txt
+genice2_mdanalysis.egg-info/requires.txt
+genice2_mdanalysis.egg-info/top_level.txt
+genice2_mdanalysis/formats/__init__.py
+genice2_mdanalysis/formats/mdanalysis.py
