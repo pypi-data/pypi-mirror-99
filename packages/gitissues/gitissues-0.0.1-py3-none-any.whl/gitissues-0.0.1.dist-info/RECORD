@@ -1,0 +1,11 @@
+gitissues/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitissues/classes.py,sha256=CHT3BCjWhT-lf1MCVkkDVy1WnULP-NxbyAYhBJl7It4,4760
+gitissues/cli.py,sha256=M13wO2-XJRd1Qt6awRbqM4g5rJ1sAcxdTm2gWDq3YVA,7751
+gitissues/colour.py,sha256=aSinSuElISKWdSx59nSLSNhU1GmRol0B1WjoZGxmtnc,169
+gitissues/utils.py,sha256=R8XnxO3f9qnorFcLmjD4BVH9JCI3QpC6btJjJ5U6On0,2146
+gitissues-0.0.1.dist-info/LICENSE,sha256=_HUg5HTlwWawbA6RLhZy26mleIwHPgP--5oE7SFJp1U,1091
+gitissues-0.0.1.dist-info/METADATA,sha256=DEV4L9VtBspHTBdNeFEQ1-VC2fGhNVz--uxGLt5oPYY,768
+gitissues-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gitissues-0.0.1.dist-info/entry_points.txt,sha256=1QRjxcWl52o4av6v9NIEGxz2EUWgJ0rfh1Dk7qF3-1A,67
+gitissues-0.0.1.dist-info/top_level.txt,sha256=TBzfGutnEQwItAntuU-nPtILdO56wRw5k9PcebGoNFE,10
+gitissues-0.0.1.dist-info/RECORD,,

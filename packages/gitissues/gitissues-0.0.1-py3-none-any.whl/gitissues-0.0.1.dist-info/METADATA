@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: gitissues
+Version: 0.0.1
+Summary: Manage all your git issues at one place
+Home-page: https://github.com/roopeshvs/git-issues
+Author: Roopesh V S
+Author-email: txtmeroopesh@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click
+Requires-Dist: certifi
+Requires-Dist: urllib3
+Requires-Dist: chardet
+Requires-Dist: idna
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: timeago
+
+UNKNOWN
+
+
