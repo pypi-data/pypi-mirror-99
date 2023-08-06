@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: gamma-desk
+Version: 0.0.1
+Summary: A Python work environment image viewers & plots
+Home-page: https://github.com/thocoo/gamma-desk
+Author: Thomas Cools
+Author-email: thomas.cools@telenet.be
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: imageio
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: PySide2
+Requires-Dist: qtpy
+Requires-Dist: psutil
+Requires-Dist: numba
+Requires-Dist: pyzmq
+Requires-Dist: ninja2
+Requires-Dist: toml
+
+
+# Gamma Desk
+
+![Gamma Desk Logo](https://github.com/thocoo/gamma-desk/raw/main/gdesk/resources/logo/logo_128px.png)
+
+A Python work environment with image viewers & Plots
+
+# Screen shots
+
+![Screen Shot 1](https://github.com/thocoo/gamma-desk/raw/main/doc/sphinx/source/figures/screenshot_01.jpg)
+
+# Usage
+
+python -m gdesk
+
+# Dependencies 
+
+`numpy`
+`matplotlib`
+`scipy`
+`PySide2`
+`qtpy`
+`psutils`
+`pyzmq`
+`ninja2`
+`toml`
+
+
