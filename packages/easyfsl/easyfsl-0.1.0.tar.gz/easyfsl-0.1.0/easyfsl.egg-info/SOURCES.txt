@@ -1,0 +1,15 @@
+README.md
+setup.py
+easyfsl/__init__.py
+easyfsl/utils.py
+easyfsl.egg-info/PKG-INFO
+easyfsl.egg-info/SOURCES.txt
+easyfsl.egg-info/dependency_links.txt
+easyfsl.egg-info/requires.txt
+easyfsl.egg-info/top_level.txt
+easyfsl/data_tools/__init__.py
+easyfsl/data_tools/easy_set.py
+easyfsl/data_tools/task_sampler.py
+easyfsl/methods/__init__.py
+easyfsl/methods/abstract_meta_learner.py
+easyfsl/methods/prototypical_networks.py
