@@ -1,0 +1,12 @@
+smoldyn-2.64.dev20210325.dist-info/RECORD,,
+smoldyn-2.64.dev20210325.dist-info/WHEEL,sha256=zjhvVxjD6g7O3ejxlonIResSLzKh91a-Z9sfR3zAQ80,111
+smoldyn-2.64.dev20210325.dist-info/top_level.txt,sha256=2FmedD0M8FnH4zNLmZCw84tbGuurvZfurkH4l4zSybQ,8
+smoldyn-2.64.dev20210325.dist-info/METADATA,sha256=WFDLfsekq8zU7shzJk9KuJa3VNILfr9TbVcur_xSvjo,1346
+smoldyn/smoldyn.py,sha256=KCFXtazvhszBRs7_bZQx3K782dpO3bgkgkMj-HuOle0,81391
+smoldyn/_smoldyn.cpython-37m-darwin.so,sha256=HovDVYS0S1WsRrUCO5iwt5_KGczd05vmBBkiYrLFcSA,1707976
+smoldyn/__init__.py,sha256=VP_zCcXkmkY3sTHu4pUw6fADpQKGrB8zHltr7FjuMmk,216
+smoldyn/types.py,sha256=f5V2ONb7or4vFKLCi_gyCL6vtqdvn1j5MinFmyFxi48,1155
+smoldyn/utils.py,sha256=DYhkM9yei_3lLs5aK6fzis0fg6wo_CGvF9-QuMkXMqQ,1119
+smoldyn/__main__.py,sha256=vr4fZo3wvGQ5eqfqlNnBswWYYyyWw3sjJAdyL2kYtB4,833
+smoldyn/.dylibs/libjpeg.9.dylib,sha256=TAmUpechAzOiozaDrua-HwftOCTsepGhDmk7mikwcuw,219172
+smoldyn/.dylibs/libtiff.5.dylib,sha256=Zs0QWylXW94iBH3Er1KzcroO5GWCYC4101HSK5avMnM,477088
