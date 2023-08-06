@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: GinniroDQN
+Version: 0.2.1
+Summary: My own DQN Library
+Home-page: https://github.com/RuiZhangCHN/GinniroDQN
+Author: RuiZhangCHN
+Author-email: zhang1rui4@foxmail.com
+License: MIT
+Description: 
+        # GinniroDQN
+        Default Readme
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=2.7.0
+Description-Content-Type: text/markdown
