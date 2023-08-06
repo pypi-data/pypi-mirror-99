@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+twarc_videos.py
+twarc_videos.egg-info/PKG-INFO
+twarc_videos.egg-info/SOURCES.txt
+twarc_videos.egg-info/dependency_links.txt
+twarc_videos.egg-info/entry_points.txt
+twarc_videos.egg-info/requires.txt
+twarc_videos.egg-info/top_level.txt
