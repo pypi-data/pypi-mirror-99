@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_date_tax_poland.py,sha256=NG98zPkQn2f4UCsRWq8g7g-4vz1eDfnta4YY5xDvbu4,544
+tests/test_degiro_pit_config.py,sha256=XWqyPmFmX_lk4J3P6DiQ2V4Nkq60WbIHwdbxs5Wq-2U,618
+tests/test_nbp_api.py,sha256=H1oxYHhZmtYJkkMctx8nBjSjhjx5GKWAOJ4SRkxAk8s,849
+degiro_pit_woj_i-0.2.1.dist-info/LICENSE,sha256=OFr27MUhBdIdyJ7dwY0MYBqJJWv718L5MlU8ommk02M,1071
+degiro_pit_woj_i-0.2.1.dist-info/METADATA,sha256=NlOlzRgSqSsvzsU_k9NvdLdrRKK7trnVol3IR32-WwY,2338
+degiro_pit_woj_i-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+degiro_pit_woj_i-0.2.1.dist-info/entry_points.txt,sha256=gBZOe05pr7kVdB3_4uLPo3SkKkQ7wJt2-LJzqhanBQw,58
+degiro_pit_woj_i-0.2.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+degiro_pit_woj_i-0.2.1.dist-info/RECORD,,

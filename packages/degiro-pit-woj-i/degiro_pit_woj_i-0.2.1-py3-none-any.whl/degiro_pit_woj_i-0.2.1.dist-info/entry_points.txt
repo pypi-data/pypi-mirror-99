@@ -1,0 +1,3 @@
+[console_scripts]
+degiro-pit = degiro_pit.enricher:_main
+
