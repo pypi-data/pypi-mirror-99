@@ -1,0 +1,7 @@
+README.md
+setup.py
+convert2tif.egg-info/PKG-INFO
+convert2tif.egg-info/SOURCES.txt
+convert2tif.egg-info/dependency_links.txt
+convert2tif.egg-info/requires.txt
+convert2tif.egg-info/top_level.txt
