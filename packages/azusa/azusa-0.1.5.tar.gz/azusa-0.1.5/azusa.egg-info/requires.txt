@@ -1,0 +1,10 @@
+scrython
+fire==0.3.1
+numpy
+requests
+terminaltables
+tqdm
+python-constraint==1.4.0
+
+[tests]
+pytest
