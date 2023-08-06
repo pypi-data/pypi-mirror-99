@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: python-paseto
+Version: 0.1.0a3
+Summary: Platform-Agnostic Security Tokens for Python
+License: MIT
+Requires-Python: >=3.6,<3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cython (>=0.29.22,<0.30.0)
+Requires-Dist: pynacl (>=1.4.0,<2.0.0)
+Requires-Dist: pysodium (>=0.7.7,<0.8.0)
