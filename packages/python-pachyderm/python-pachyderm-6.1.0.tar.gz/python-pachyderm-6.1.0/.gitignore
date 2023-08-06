@@ -1,0 +1,33 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+*.py[cod]
+__pycache__/
+*.so
+*~
+.DS_Store
+
+# ignore vim temporary files
+.*.sw*
+
+# due to using tox and pytest
+.tox
+.cache
+
+# due to jupyter
+.ipynb_checkpoints/
+
+# PyCharm
+.idea
+
+# VSCode
+.vscode
+
+# python-pachyderm
+src/python_pachyderm/version.py
+
+# virtualenv
+venv
