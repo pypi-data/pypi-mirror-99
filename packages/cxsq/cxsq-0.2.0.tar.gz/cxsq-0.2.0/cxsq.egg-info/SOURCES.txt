@@ -1,0 +1,14 @@
+.gitignore
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+cxsq/__init__.py
+cxsq/__main__.py
+cxsq/cxsq.py
+cxsq.egg-info/PKG-INFO
+cxsq.egg-info/SOURCES.txt
+cxsq.egg-info/dependency_links.txt
+cxsq.egg-info/entry_points.txt
+cxsq.egg-info/requires.txt
+cxsq.egg-info/top_level.txt
