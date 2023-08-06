@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: notebook-2-py
+Version: 0.0.14
+Summary: A package to convert your Jupyter Notebook
+Home-page: https://github.com/notebook2all/notebook_2_py/
+Author: Sebastian Gonzalez-Tirado
+Author-email: sebgoti8@gmail.com
+License: UNKNOWN
+Description: # notebook_2_py
+        Small project to change Jupiter notebooks to ready-to-use .py files for submitting in HPC resources
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
