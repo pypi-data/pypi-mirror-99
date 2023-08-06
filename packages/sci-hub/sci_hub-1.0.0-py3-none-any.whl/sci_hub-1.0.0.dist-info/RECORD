@@ -1,0 +1,12 @@
+scihub/__init__.py,sha256=uVzPAmxFWY-4yJiVMaezT-_WbekuAgYNFsw4IW4-Fh8,200
+scihub/bin/__init__.py,sha256=QQtU2cGLzDD-T43ZM7CB1Un5ViATAPd5h6SyqiVHiPo,3880
+scihub/core/__init__.py,sha256=Wzaee_TaE6TKOPpmYOmNT_Mo2MVssYH-mq0qvmubnuk,6378
+scihub/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scihub/util/download.py,sha256=08R5uCxZVAh6jtw0n7A7CwcNdjvHKy-wcAfjShTM0nk,3268
+scihub/util/host.py,sha256=t2SbGNXHopUW6dIhYbEExceUfAiOSpoMxvD_a2uNgfg,788
+scihub/version/version.json,sha256=oNHg1oUmioka9mJfvxNmIVqaAC34GCmk3Mka_RDlYrY,161
+sci_hub-1.0.0.dist-info/METADATA,sha256=BrSgJUKacQf5tI7OXVOLi6zlHSE4JcG0hRSTmjWAkS0,1776
+sci_hub-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sci_hub-1.0.0.dist-info/entry_points.txt,sha256=BFNoL_uJxWIxfEpS7_ULfPYSe53aR76zXpkVxcRARfo,53
+sci_hub-1.0.0.dist-info/top_level.txt,sha256=pJdZmJSruOGuc44QwwXTGHR-GJztvTXHn2UFDcobENk,7
+sci_hub-1.0.0.dist-info/RECORD,,
