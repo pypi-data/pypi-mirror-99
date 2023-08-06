@@ -1,0 +1,7 @@
+setup.py
+Social_Recommender_System.egg-info/PKG-INFO
+Social_Recommender_System.egg-info/SOURCES.txt
+Social_Recommender_System.egg-info/dependency_links.txt
+Social_Recommender_System.egg-info/top_level.txt
+main/__init__.py
+main/finalproject.py

@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: Social-Recommender-System
+Version: 0.0.1
+Summary: social recommender system to rated movies and tv shows
+Home-page: https://github.com/jade-bejide/Social-Recommender-System
+Author: Jadesola Bejide
+Author-email: jbejid14@st-pauls.leicester.sch.uk
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Netflix,IMDb,recommender system,streaming,entertainment
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Requires: guizero
+Requires: mysql.connector
+Requires: json
+Requires: urllib
+Requires: numpy
+Requires: math
+Requires: requests
+Requires: random
+Requires: PIL
+Requires: sys
