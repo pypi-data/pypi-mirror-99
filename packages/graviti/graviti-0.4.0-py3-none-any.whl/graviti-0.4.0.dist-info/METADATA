@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: graviti
+Version: 0.4.0
+Summary: This package is deprecated, please use 'tensorbay' instead.
+Home-page: UNKNOWN
+Author: graviti
+Author-email: pypi@graviti.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+
+# This package is deprecated!
+
+This package is deprecated, please use 'tensorbay' instead.
+
+## Install tensorbay package:
+
+```console
+pip3 install tensorbay
+```
+
+## Start using tensorbay:
+
+```python
+from tensorbay import GAS
+```
+
+## Reference:
+
+-   Github: <https://github.com/Graviti-AI/tensorbay-python-sdk>
+-   Pypi: <https://pypi.org/project/tensorbay/>
+-   Documentation: <https://tensorbay-python-sdk.graviti.com/en/stable/>
+
+
