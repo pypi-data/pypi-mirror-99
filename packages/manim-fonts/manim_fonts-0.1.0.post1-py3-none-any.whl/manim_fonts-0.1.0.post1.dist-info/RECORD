@@ -1,0 +1,12 @@
+manim_fonts/__init__.py,sha256=FRCEr1qpwhq8tCOcVrX3tGBcsuyTp4vN5jior0RE4FE,39
+manim_fonts/_logging.py,sha256=W9eBblY-raNslmQb4nnWSrJhLvHOWTtsb01jz2JqPcA,61
+manim_fonts/config.py,sha256=jrl3Zt7Kp05kMPuWHx4U_oPhCVrQaCTg0KcP-whPUnY,200
+manim_fonts/download.py,sha256=8Nx3uc1MWijT8GKD8lUMiAcKiTVYaxi5xJbLQFTQkrw,1225
+manim_fonts/register_font.py,sha256=Ld-TFTlJ_IMjN5c8KlOIH0r90O6kF3o3JNOy5Wdt17I,776
+manim_fonts/search.py,sha256=tUnbBt6dpszRc3rqoOIJVe6gxZy0jWLUKh5VqHKo2l0,311
+manim_fonts/utils.py,sha256=mNNPpM4lmDKpcBqCcsiyJ5eQ6w1KZais1myzMT53UWk,942
+manim_fonts-0.1.0.post1.dist-info/entry_points.txt,sha256=u5tLqdOW7lVlTD_tsAfZHqCAYIJUvv1fU5KuPMKqe2A,41
+manim_fonts-0.1.0.post1.dist-info/LICENSE,sha256=EjXk19P2Wf3KhU3z3yYqDvnBpLnD3gELIrG_1SZUogw,1547
+manim_fonts-0.1.0.post1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+manim_fonts-0.1.0.post1.dist-info/METADATA,sha256=S7f1ikfYXe3j5sXXJRESgZfAx4G_CpJOrjSseCj4Rtg,796
+manim_fonts-0.1.0.post1.dist-info/RECORD,,
