@@ -1,0 +1,11 @@
+twacapic/__init__.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+twacapic/auth.py,sha256=5CHeqih5xSop7iNMh4e2eryOOyN5W59a6j_0-gWF3s8,925
+twacapic/collect.py,sha256=4cg3zSCu6PVuCeeVe5PA2oaPRqxEBjTlf0V9JXBfssA,5786
+twacapic/main.py,sha256=9b82XPClOPSHD9zHxxn1fekC1Y5R0HLSCuriHX80XRY,1588
+twacapic/templates/__init__.py,sha256=0jUN4ZPKMMBgRFZH4_zpkcP4f9QJ-fYiftfIYOVUN-0,218
+twacapic/templates/group_config.yaml,sha256=h6Hb4AKsrOSEEBXgBFmHVT-qNtDus4tAmeRjrwa2IY0,607
+twacapic-0.3.0.dist-info/entry_points.txt,sha256=CL1k6Xj-cFmiLc_vJRllVl-D0hxSmyr9EHwcvOqcQ3M,46
+twacapic-0.3.0.dist-info/LICENSE,sha256=GX4Zbm3KuZmGdcUzLFALCEMl5WXo4t2Q__YHeM2vPEo,1117
+twacapic-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+twacapic-0.3.0.dist-info/METADATA,sha256=9O5QbxG06DDCOkg0D0yp3BZig5I4yqhghj4xqM2V0yY,2390
+twacapic-0.3.0.dist-info/RECORD,,
