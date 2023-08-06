@@ -1,0 +1,9 @@
+README.md
+setup.py
+fastperm/__init__.py
+fastperm.egg-info/PKG-INFO
+fastperm.egg-info/SOURCES.txt
+fastperm.egg-info/dependency_links.txt
+fastperm.egg-info/requires.txt
+fastperm.egg-info/top_level.txt
+fastperm.egg-info/zip-safe
