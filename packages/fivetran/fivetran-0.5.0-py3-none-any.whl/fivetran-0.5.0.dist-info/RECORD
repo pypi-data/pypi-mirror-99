@@ -1,0 +1,6 @@
+fivetran/__init__.py,sha256=G5ug1nbb7sT53nA3fsjEUYDEUgrdBXDRC1KY_QPT25k,124
+fivetran/aggregate_connector.py,sha256=EL14fBer41XrOAd7F6VS9VjTTkYUZM3TkJf3Kes3VwE,2368
+fivetran/base_connector.py,sha256=xqe5xIP2-AKouzMiDD4-MJJV6e0N_llLA-SRX2MUtWY,3022
+fivetran-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+fivetran-0.5.0.dist-info/METADATA,sha256=djVgQmu0lCiG3s4ALWSckV-yaW9OHBqlY3NnAA0eqIw,250
+fivetran-0.5.0.dist-info/RECORD,,
