@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: scippy
+Version: 0.1.9
+Summary: Python package for communication with SCPI-based instruments
+Home-page: https://github.com/edmundsj/scippy
+Author: Jordan Edmunds
+Author-email: edmundsj@uci.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.14.5)
+Requires-Dist: matplotlib (>=2.0.0)
+Requires-Dist: pandas (>=0.24.0)
+Requires-Dist: scipy (>=1.2.2)
+Requires-Dist: pyyaml (>=5.1.1)
+Requires-Dist: pint (>=0.16.0)
+
+Setting up a new Repository
+===============================
+[![Build](https://github.com/edmundsj/pyscpi/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/edmundsj/pyscpi/actions/workflows/python-package-conda.yml) [![docs](https://github.com/edmundsj/pyscpi/actions/workflows/build-docs.yml/badge.svg)](https://github.com/edmundsj/pyscpi/actions/workflows/build-docs.yml) [![codecov](https://codecov.io/gh/edmundsj/pyscpi/branch/main/graph/badge.svg?token=VossgkNDyW)](https://codecov.io/gh/edmundsj/pyscpi)
+
+Pronounced "skippy". 
+
+
+Getting Started
+------------------
+
+
