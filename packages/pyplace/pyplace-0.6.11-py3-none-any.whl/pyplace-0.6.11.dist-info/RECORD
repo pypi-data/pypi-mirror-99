@@ -1,0 +1,9 @@
+pyplace/__init__.py,sha256=LynIbTSWMXt1OMOEfIk5HRhXMYMOssEviLJaSc7d3W8,193
+pyplace/container.py,sha256=88Lp4ZZVawuNCekCODq0YWg8hTeqE6bxkq0i4rqZ-MM,1710
+pyplace/pbp.py,sha256=ma3cDMMT7NrEBIUX_JrqZHUpOF19JnFKXNs9MNchy9s,3208
+pyplace/psc.py,sha256=_P5oqys8NllZTjD6Zkajh31m35FuSMZeJUiMC_m_jXw,5175
+pyplace-0.6.11.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pyplace-0.6.11.dist-info/METADATA,sha256=Kxj30KQzsHRb4CJhFyy42TibDAfPQX9PXFZdbJw7gWk,6229
+pyplace-0.6.11.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyplace-0.6.11.dist-info/top_level.txt,sha256=iqGumAbE04E0ZkiGCQzVy4sYuo0HRvy0-_GGu5oZqf8,8
+pyplace-0.6.11.dist-info/RECORD,,
