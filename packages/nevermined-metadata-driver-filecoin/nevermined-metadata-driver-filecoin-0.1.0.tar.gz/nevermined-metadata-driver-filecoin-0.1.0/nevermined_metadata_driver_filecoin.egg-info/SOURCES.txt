@@ -1,0 +1,15 @@
+HISTORY.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+metadata_driver_filecoin/__init__.py
+metadata_driver_filecoin/data_plugin.py
+nevermined_metadata_driver_filecoin.egg-info/PKG-INFO
+nevermined_metadata_driver_filecoin.egg-info/SOURCES.txt
+nevermined_metadata_driver_filecoin.egg-info/dependency_links.txt
+nevermined_metadata_driver_filecoin.egg-info/not-zip-safe
+nevermined_metadata_driver_filecoin.egg-info/requires.txt
+nevermined_metadata_driver_filecoin.egg-info/top_level.txt
+tests/__init__.py
