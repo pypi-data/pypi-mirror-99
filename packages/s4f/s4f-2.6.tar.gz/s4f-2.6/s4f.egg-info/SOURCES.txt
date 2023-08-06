@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+s4f.egg-info/PKG-INFO
+s4f.egg-info/SOURCES.txt
+s4f.egg-info/dependency_links.txt
+s4f.egg-info/top_level.txt
