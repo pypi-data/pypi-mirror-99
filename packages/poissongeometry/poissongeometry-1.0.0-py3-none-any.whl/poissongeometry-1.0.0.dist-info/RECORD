@@ -1,0 +1,9 @@
+poisson/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+poisson/errors.py,sha256=2uD20hsH2k9CT8wgGmRLZ-DbXZiLRUoRJfHjFYUM_QY,1226
+poisson/poisson.py,sha256=QOdOeTl97D5771n9IUIhSICwv0nfSgUOb2KYC9NOixc,57380
+poisson/utils.py,sha256=OsNSbN0y3g8x45nrXphVQljb4DesvuRqqY5pTE4WrtM,1589
+poissongeometry-1.0.0.dist-info/LICENSE.md,sha256=Cuo-FCMABuSvIuJIk3HShrcjkqRMLjXYnxTwbsbLJ9E,1113
+poissongeometry-1.0.0.dist-info/METADATA,sha256=ysGyT-oys1tSEoCfSVHDYIizNHUbTeFHYCKS9Khqp9w,8516
+poissongeometry-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+poissongeometry-1.0.0.dist-info/top_level.txt,sha256=4MIz2N0Z5yIYp-slH06rJZa8bYQsjOkdSR30xYnvnic,8
+poissongeometry-1.0.0.dist-info/RECORD,,
