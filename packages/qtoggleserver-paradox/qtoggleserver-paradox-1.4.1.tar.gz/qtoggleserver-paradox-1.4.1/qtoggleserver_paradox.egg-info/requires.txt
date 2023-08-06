@@ -1,0 +1,4 @@
+paradox-alarm-interface<2.3,>=2.2.0
+pyserial>=3.4
+pyserial-asyncio>=0.4
+requests
