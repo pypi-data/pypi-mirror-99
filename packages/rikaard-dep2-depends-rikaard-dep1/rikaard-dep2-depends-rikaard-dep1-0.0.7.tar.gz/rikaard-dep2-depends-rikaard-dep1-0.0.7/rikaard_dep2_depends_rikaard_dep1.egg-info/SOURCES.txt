@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+pkg/__init__.py
+rikaard_dep2_depends_rikaard_dep1.egg-info/PKG-INFO
+rikaard_dep2_depends_rikaard_dep1.egg-info/SOURCES.txt
+rikaard_dep2_depends_rikaard_dep1.egg-info/dependency_links.txt
+rikaard_dep2_depends_rikaard_dep1.egg-info/requires.txt
+rikaard_dep2_depends_rikaard_dep1.egg-info/top_level.txt
