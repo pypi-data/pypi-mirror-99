@@ -1,0 +1,1301 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  7 JAN 2021 09:57
+entering extended mode
+**./corelibs.tex
+(corelibs.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-07> xparse <2020-03-03> (sphinxmanual.cls
+Document Class: sphinxmanual 2019/12/01 v2.3.0 Document class (Sphinx manual)
+("C:\Program Files\MiKTeX\tex/latex/base\report.cls"
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+("C:\Program Files\MiKTeX\tex/latex/base\size10.clo"
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+LaTeX Info: Redefining \and on input line 35.
+)
+("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+2500 (decimal 9472)
+   defining Unicode char U+2502 (decimal 9474)
+   defining Unicode char U+2514 (decimal 9492)
+   defining Unicode char U+251C (decimal 9500)
+   defining Unicode char U+2572 (decimal 9586)
+
+("C:\Program Files\MiKTeX\tex/latex/cmap\cmap.sty"
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+)
+("C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+<<t1.cmap>>)
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen139
+))
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count186
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count187
+\leftroot@=\count188
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count189
+\DOTSCASE@=\count190
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
+\dotsspace@=\muskip16
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
+\tag@help=\toks18
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
+\andhelp@=\toks19
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.sty"
+Package: babel 2020/10/27 3.51 The Babel package
+
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.def"
+File: babel.def 2020/10/27 3.51 Babel common definitions
+\babel@savecnt=\count198
+\U@D=\dimen148
+\l@babelnohyphens=\language79
+
+("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count199
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language73) on input line 108.
+))
+("C:\Program Files\MiKTeX\tex/latex/psnfss\times.sty"
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+("C:\Program Files\MiKTeX\tex/latex/fncychap\fncychap.sty"
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip52
+\mylen=\skip53
+\myhi=\skip54
+\px=\skip55
+\py=\skip56
+\pyy=\skip57
+\pxx=\skip58
+\c@AlphaCnt=\count266
+\c@AlphaDecCnt=\count267
+) (sphinx.sty
+Package: sphinx 2019/09/02 v2.3.0 LaTeX package (Sphinx markup)
+
+("C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+("C:\Program Files\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip59
+\f@nch@O@elh=\skip60
+\f@nch@O@erh=\skip61
+\f@nch@O@olh=\skip62
+\f@nch@O@orh=\skip63
+\f@nch@O@elf=\skip64
+\f@nch@O@erf=\skip65
+\f@nch@O@olf=\skip66
+\f@nch@O@orf=\skip67
+)
+("C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+("C:\Program Files\MiKTeX\tex/latex/titlesec\titlesec.sty"
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box49
+\beforetitleunit=\skip68
+\aftertitleunit=\skip69
+\ttl@plus=\dimen151
+\ttl@minus=\dimen152
+\ttl@toksa=\toks23
+\titlewidth=\dimen153
+\titlewidthlast=\dimen154
+\titlewidthfirst=\dimen155
+)
+("C:\Program Files\MiKTeX\tex/latex/tabulary\tabulary.sty"
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+
+("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen156
+\ar@mcellbox=\box50
+\extrarowheight=\dimen157
+\NC@list=\toks24
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box51
+)
+\TY@count=\count268
+\TY@linewidth=\dimen158
+\tymin=\dimen159
+\tymax=\dimen160
+\TY@tablewidth=\dimen161
+)
+("C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty"
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip72
+\LTright=\skip73
+\LTpre=\skip74
+\LTpost=\skip75
+\LTchunksize=\count269
+\LTcapwidth=\dimen162
+\LT@head=\box52
+\LT@firsthead=\box53
+\LT@foot=\box54
+\LT@lastfoot=\box55
+\LT@cols=\count270
+\LT@rows=\count271
+\c@LT@tables=\count272
+\c@LT@chunks=\count273
+\LT@p@ftn=\toks25
+)
+("C:\Program Files\MiKTeX\tex/latex/varwidth\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box56
+\sift@deathcycles=\count274
+\@vwid@loff=\dimen163
+\@vwid@roff=\dimen164
+)
+(sphinxmulticell.sty
+Package: sphinxmulticell 2017/02/23 v1.6 better span rows and columns of a tabl
+e (Sphinx team)
+\sphinx@TY@tablewidth=\dimen165
+) ("C:\Program Files\MiKTeX\tex/latex/base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files\MiKTeX\tex/latex/framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip76
+\fb@frw=\dimen166
+\fb@frh=\dimen167
+\FrameRule=\dimen168
+\FrameSep=\dimen169
+)
+("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count275
+\FV@InFile=\read3
+\FV@TabBox=\box57
+\c@FancyVerbLine=\count276
+\FV@StepNumber=\count277
+\FV@OutFile=\write3
+)
+(footnotehyper-sphinx.sty
+Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for s
+phinx (JFB)
+\FNH@notes=\box58
+\FNH@width=\dimen170
+) ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count278
+\float@exts=\toks26
+\float@box=\box59
+\@float@everytoks=\toks27
+\@floatcapt=\box60
+) ("C:\Program Files\MiKTeX\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen171
+\WF@size=\dimen172
+\c@WF@wrappedlines=\count279
+\WF@box=\box61
+\WF@everypar=\toks28
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files\MiKTeX\tex/latex/parskip\parskip.sty"
+Rollback for package 'parskip' requested -> version 'v1'.
+         This corresponds to the release introduced on 2001-04-09.
+
+("C:\Program Files\MiKTeX\tex/latex/parskip\parskip-2001-04-09.sty"
+Package: parskip 2001/04/09 non-zero parskip adjustments
+))
+("C:\Program Files\MiKTeX\tex/latex/base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files\MiKTeX\tex/latex/upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+("C:\Program Files\MiKTeX\tex/latex/capt-of\capt-of.sty"
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+("C:\Program Files\MiKTeX\tex/latex/needspace\needspace.sty"
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+(sphinxhighlight.sty
+Package: sphinxhighlight 2016/05/29 stylesheet for highlighting with pygments
+)
+("C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+\sphinxverbatimsep=\dimen173
+\sphinxverbatimborder=\dimen174
+\sphinxshadowsep=\dimen175
+\sphinxshadowsize=\dimen176
+\sphinxshadowrule=\dimen177
+\spx@notice@border=\dimen178
+\spx@image@maxheight=\dimen179
+\spx@image@box=\dimen180
+\c@literalblock=\count280
+\sphinxcontinuationbox=\box62
+\sphinxvisiblespacebox=\box63
+\sphinxVerbatim@TitleBox=\box64
+\sphinxVerbatim@ContentsBox=\box65
+\py@argswidth=\skip77
+\lineblockindentation=\skip78
+\DUlineblockindent=\skip79
+)
+("C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+("C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count281
+\Gm@cntv=\count282
+\c@Gm@tempcnt=\count283
+\Gm@bindingoffset=\dimen181
+\Gm@wd@mp=\dimen182
+\Gm@odd@mp=\dimen183
+\Gm@even@mp=\dimen184
+\Gm@layoutwidth=\dimen185
+\Gm@layoutheight=\dimen186
+\Gm@layouthoffset=\dimen187
+\Gm@layoutvoffset=\dimen188
+\Gm@dimlist=\toks29
+
+("C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+("C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+("C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+("C:\Program Files\MiKTeX\tex/latex/auxhook\auxhook.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen189
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
+
+("C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+("C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+("C:\Program Files\MiKTeX\tex/generic/etexcmds\etexcmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count286
+Package hyperref Info: Option `unicode' set `true' on input line 4338.
+
+("C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def"
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4338.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4338.
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count287
+
+("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen190
+
+("C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+("C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count288
+\Field@Width=\dimen191
+\Fld@charsize=\dimen192
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring ON on input line 6365.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+("C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty"
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count289
+\c@Item=\count290
+\c@Hfootnote=\count291
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+("C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty"
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
+
+("C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+("C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip80
+)
+("C:\Program Files\MiKTeX\tex/latex/oberdiek\hypcap.sty"
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+) (sphinxmessages.sty
+Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
+)
+\@indexfile=\write4
+\openout4 = `corelibs.idx'.
+
+
+Writing index file corelibs.idx
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 83
+.
+("C:\Program Files\MiKTeX\tex/latex/psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count294
+\l__pdf_internal_box=\box66
+)
+No file corelibs.aux.
+\openout1 = `corelibs.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count295
+\scratchdimen=\dimen193
+\scratchbox=\box67
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen194
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks31
+) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=36.135pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 83.
+("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count301
+)
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
+\@outlinefile=\write5
+\openout5 = `corelibs.out'.
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 86.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 86
+.
+
+("C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd"
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 86.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 86.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+
+ ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/miki/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
+
+
+]
+\tf@toc=\write6
+\openout6 = `corelibs.toc'.
+
+ [1
+
+] [2
+
+] [1] [2
+
+]
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+09.
+("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd"
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 13
+2.
+
+("C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.open_explorer' on page 3 un
+defined on input line 153.
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 153.
+<jupyter_user_config.png, id=37, 865.43324pt x 360.74776pt>
+File: jupyter_user_config.png Graphic file (type png)
+<use jupyter_user_config.png>
+Package pdftex.def Info: jupyter_user_config.png  used on input line 166.
+(pdftex.def)             Requested size: 458.96796pt x 191.31648pt.
+
+LaTeX Warning: Hyper reference `index:reference-label-liens-utiles' on page 3 u
+ndefined on input line 176.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-dependances' on page 3 un
+defined on input line 176.
+
+[3]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 183.
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
+16.
+ ("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1pcr.fd"
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <9> not available
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 216.
+
+Underfull \vbox (badness 10000) detected at line 345
+ []
+
+[4 <./jupyter_user_config.png>]
+Underfull \vbox (badness 10000) detected at line 345
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 345
+ []
+
+[5]
+Underfull \vbox (badness 10000) detected at line 345
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 345
+ []
+
+[6]
+Underfull \vbox (badness 10000) detected at line 345
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 345
+ []
+
+[7] [8]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+[]\T1/ptm/m/it/10 dt_str\T1/ptm/m/n/10 , \T1/ptm/m/it/10 in_format=\TS1/ptm/m/i
+t/10 '\T1/ptm/m/it/10 %d/%m/%Y %H:%M:%S\TS1/ptm/m/it/10 '\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+\T1/ptm/m/it/10 out_format=\TS1/ptm/m/it/10 '\T1/ptm/m/it/10 %d/%m/%Y %H:%M:%S\
+TS1/ptm/m/it/10 '\T1/ptm/m/n/10 , \T1/ptm/m/it/10 con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 9 undefin
+ed on input line 384.
+
+[9
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
+[]\T1/ptm/m/it/10 string\T1/ptm/m/n/10 , \T1/ptm/m/it/10 strip_non_printable_ch
+ar=True\T1/ptm/m/n/10 , \T1/ptm/m/it/10 strip_accented_char=False\T1/ptm/m/n/10
+ ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+[10] [11]
+Underfull \vbox (badness 10000) detected at line 605
+ []
+
+
+Overfull \vbox (5.52583pt too high) detected at line 605
+ []
+
+[12] [13] [14
+
+]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 680--681
+
+ []
+
+
+Overfull \vbox (2.12567pt too high) detected at line 741
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 748--749
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
+[]\T1/ptm/m/it/10 date_time\T1/ptm/m/n/10 , \T1/ptm/m/it/10 time_format=\TS1/pt
+m/m/it/10 '\T1/ptm/m/it/10 %d/%m/%Y %H:%M:%S\TS1/ptm/m/it/10 '\T1/ptm/m/n/10 , 
+\T1/ptm/m/it/10 ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
+
+ []
+
+[18]
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.epoch_2_datetime' on page 1
+9 undefined on input line 843.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 19 undefi
+ned on input line 876.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 20 undefi
+ned on input line 954.
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.datetime_2_epoch' on page 2
+1 undefined on input line 1019.
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1065
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1112
+[]\T1/ptm/m/it/10 byte_size_format\T1/ptm/m/n/10 , \T1/ptm/m/it/10 de-fault_for
+mat=None\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
+
+ []
+
+[22]
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_bytes_size_formats' on 
+page 23 undefined on input line 1122.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+[]\T1/pcr/b/n/10 byte_size_format \T1/ptm/m/n/10  tu-ple nommé cal-culé par \T
+1/pcr/m/sl/10 corelibs.lazy.
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 23 undefi
+ned on input line 1132.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 23 undefi
+ned on input line 1150.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
+
+ []
+
+[24]
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 25 undefi
+ned on input line 1270.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 26 undefi
+ned on input line 1383.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1424
+
+ []
+
+
+Overfull \vbox (3.52582pt too high) detected at line 1471
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1490--1491
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1571--1572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1603
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1634--1635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1662--1663
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1703--1704
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 31 undefined
+ on input line 1708.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 31
+ undefined on input line 1717.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 32 undefined
+ on input line 1777.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 32
+ undefined on input line 1786.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1841--1842
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 33 undefined
+ on input line 1846.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 33
+ undefined on input line 1855.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 34 undefined
+ on input line 1915.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 34
+ undefined on input line 1924.
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1979--1980
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 35 undefined
+ on input line 1983.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 35
+ undefined on input line 1993.
+
+[35]
+Overfull \vbox (1.72583pt too high) detected at line 2091
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 2098--2099
+
+ []
+
+[37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 2207--2208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2240
+
+ []
+
+[39]
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 40 undefi
+ned on input line 2267.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2330--2331
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 2362--2363
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 2408--2409
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 42 undefi
+ned on input line 2433.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2466--2467
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2488
+[]\T1/ptm/m/it/10 data_2_validate\T1/ptm/m/n/10 , \T1/ptm/m/it/10 schema\T1/ptm
+/m/n/10 , \T1/ptm/m/it/10 is_dict_schema=True\T1/ptm/m/n/10 , \T1/ptm/m/it/10 v
+er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2489
+
+ []
+
+[43]
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 44 undefi
+ned on input line 2536.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 44 undefi
+ned on input line 2546.
+
+
+Overfull \hbox (30.44447pt too wide) in paragraph at lines 2711--2711
+[][][]\T1/pcr/m/n/9 b(asctime|created|filename|funcName|levelname|levelno|linen
+o|message|module|msecs|name[][] 
+ []
+
+
+Overfull \hbox (19.64449pt too wide) in paragraph at lines 2712--2712
+[]\T1/pcr/m/n/9 "[][]|pathname|process|processName|relativeCreated|thread|threa
+dName|username|hostname)[][]\ 
+ []
+
+[44]
+Underfull \vbox (badness 10000) detected at line 2741
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 2741
+ []
+
+[45]
+Underfull \vbox (badness 10000) detected at line 2741
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 2741
+ []
+
+[46]
+Overfull \vbox (2.68166pt too high) detected at line 2771
+ []
+
+[47]
+<is_well_formatted_schema_log.png, id=275, 1419.80438pt x 95.6072pt>
+File: is_well_formatted_schema_log.png Graphic file (type png)
+<use is_well_formatted_schema_log.png>
+Package pdftex.def Info: is_well_formatted_schema_log.png  used on input line 2
+779.
+(pdftex.def)             Requested size: 444.74934pt x 29.94865pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2786--2787
+
+ []
+
+[48 <./is_well_formatted_schema_log.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2876--2877
+
+ []
+
+[49]
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 50 undefi
+ned on input line 2905.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2904--2906
+[]
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 50 undefined
+ on input line 2910.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.get_module_path' on page 50
+ undefined on input line 2921.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 50 undefi
+ned on input line 2931.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 50 undefi
+ned on input line 2952.
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 50 undefi
+ned on input line 2962.
+
+[50]
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 2984.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+984.
+("C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+2984.
+
+("C:\Program Files\MiKTeX\tex/latex/base\ts1cmtt.fd"
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 2984.
+
+[51]
+Underfull \vbox (badness 10000) detected at line 3081
+ []
+
+
+Overfull \vbox (13.68169pt too high) detected at line 3081
+ []
+
+[52]
+<mkdir_log.png, id=301, 1143.67274pt x 138.5175pt>
+File: mkdir_log.png Graphic file (type png)
+<use mkdir_log.png>
+Package pdftex.def Info: mkdir_log.png  used on input line 3089.
+(pdftex.def)             Requested size: 444.75665pt x 53.86731pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3096--3097
+
+ []
+
+
+Overfull \vbox (5.54877pt too high) detected at line 3176
+ []
+
+[53 <./mkdir_log.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3183--3184
+
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 3221--3222
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.move' on page 55 undefined 
+on input line 3231.
+
+[55]
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 56 undefi
+ned on input line 3310.
+
+
+Overfull \vbox (9.32568pt too high) detected at line 3432
+ []
+
+[56]
+Underfull \vbox (badness 10000) detected at line 3432
+ []
+
+
+Overfull \vbox (2.68169pt too high) detected at line 3432
+ []
+
+[57]
+Underfull \vbox (badness 10000) detected at line 3432
+ []
+
+
+Overfull \vbox (13.68169pt too high) detected at line 3432
+ []
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 3439--3439
+[]\T1/ptm/m/it/10 named_tuple\T1/ptm/m/n/10 , \T1/ptm/m/it/10 con-vert_2_dict=F
+alse\T1/ptm/m/n/10 , \T1/ptm/m/it/10 con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3439--3440
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 59 undefi
+ned on input line 3467.
+
+[59] [60]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3535--3535
+\T1/ptm/m/it/10 log_file_name=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 field_styles
+=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 level_styles=None\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3535--3536
+
+ []
+
+
+LaTeX Warning: Hyper reference `index:reference-label-config' on page 61 undefi
+ned on input line 3542.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.log.JupyterColorLog' on page 61 
+undefined on input line 3551.
+
+
+LaTeX Warning: Hyper reference `index:corelibs.log.TermColorLog' on page 61 und
+efined on input line 3554.
+
+[61
+
+]
+
+LaTeX Warning: Hyper reference `index:corelibs.lazy.mkdir' on page 62 undefined
+ on input line 3603.
+
+
+Overfull \hbox (40.17065pt too wide) in paragraph at lines 3602--3604
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3608--3609
+[]\T1/ptm/m/n/10 Sinon les logs seront en-reg-istrés dans le dossier \T1/ptm/m/
+it/10 lo-ca-
+ []
+
+
+! LaTeX Error: Too deeply nested.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3623 ...etours de :}] \leavevmode\begin{itemize}
+                                                  
+? 

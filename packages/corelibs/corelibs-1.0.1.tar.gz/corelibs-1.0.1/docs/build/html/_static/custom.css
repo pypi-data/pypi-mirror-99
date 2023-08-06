@@ -1,0 +1,326 @@
+/* This file intentionally left blank. */
+@import url("nature.css");
+
+div.related {
+    background-color: gray;
+    line-height: 32px;
+    color: #fff;
+    text-shadow: 0px 1px 0 #444;
+    font-size: 0.9em;
+}
+
+div.topic {
+    border-top: 0px solid #BED4EB;
+    border-bottom: 0px solid #BED4EB;
+    border-left: 3px solid #BED4EB;
+    border-right: 0px solid #BED4EB;
+    background-color: #f7f7f7;
+}
+
+p.topic-title {
+    display: inline;
+    color: #BED4EB;
+}
+
+p.topic-title:after {
+    content: " :";
+}
+
+div.admonition-description {
+    border-top: 0px solid green;
+    border-bottom: 0px solid green;
+    border-left: 3px solid green;
+    border-right: 0px solid green;
+    background-color: #b9ffa6; /*#63cc47*/
+}
+div.admonition-description p.admonition-title {
+    color: green;
+}
+
+div.admonition-todo {
+    border-top: 0px solid red;
+    border-bottom: 0px solid red;
+    border-left: 3px solid red;
+    border-right: 0px solid red;
+    background-color: #ff6347;
+    color: white;
+}
+
+div.note {
+    border-top: 1px solid dodgerblue;
+    border-bottom: 1px solid dodgerblue;
+    border-left: 3px solid dodgerblue;
+    border-right: 1px solid dodgerblue;
+    background-color: #e0f7ff;
+}
+div.note p.admonition-title {
+    color: dodgerblue;
+}
+
+div.warning {
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+    border-left: 3px solid orangered;
+    border-right: 1px solid orangered;
+    background-color: #ffe4e4;
+}
+div.warning p.admonition-title {
+    color: orangered;
+}
+
+dl {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+dl.function {
+    margin-top: 31px;
+}
+
+dl.field-list > dt {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 11px;
+    background-color: #BED4EB;
+    color: dodgerblue;
+}
+
+dl.field-list > dd {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 11px;
+    background-color: #f7f7f7;
+}
+
+dl.field-list > dd p strong {
+    color: orangered;
+}
+
+p.admonition-title:after {
+    content: " :";
+}
+
+code.sig-name {
+    font-size: 1.5em;
+}
+code.descname {
+    color: dodgerblue;
+}
+em.property {
+    font-size: 1.3em;
+    color: magenta;
+}
+em.sig-param {
+    font-size: 1.1em;
+    color: orangered;
+}
+span.sig-paren {
+    color: dodgerblue;
+}
+
+em.sig-param .default_value {
+    color: magenta;
+}
+
+em.sig-param .o {
+    color: dodgerblue;
+}
+
+code.sig-prename {
+    font-size: 1.3em;
+    color: darkgray;
+}
+
+div.highlight {
+    border-top: 0px solid green;
+    border-bottom: 0px solid green;
+    border-left: 3px solid green;
+    border-right: 0px solid green;
+}
+
+code.xref span {
+    font-size: 1.3em;
+    color: dodgerblue;
+}
+
+div.line cite {
+    background-color: #BED4EB;
+    color: dodgerblue;
+}
+cite:before {
+    content: "` ";
+}
+cite:after {
+    content: " `";
+}
+
+dd cite {
+    background-color: #BED4EB;
+    color: dodgerblue;
+}
+
+
+/** 
+ * Colors and text decoration.
+ * For example, :black:`text in black` or :blink:`text blinking` in rST
+ **/
+
+.dodgerblue {
+    color: dodgerblue;
+}
+
+.darkgray {
+    color: darkgray;
+}
+
+.orangered {
+    color: orangered;
+}
+
+.black {
+    color: black;
+}
+
+.gray {
+    color: gray;
+}
+
+.grey {
+    color: gray;
+}
+
+.silver {
+    color: silver;
+}
+
+.white {
+    color: white;
+}
+
+.maroon {
+    color: maroon;
+}
+
+.red {
+    color: red;
+}
+
+.magenta {
+    color: magenta;
+}
+
+.fuchsia {
+    color: fuchsia;
+}
+
+.pink {
+    color: pink;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.lime {
+    color: lime;
+}
+
+.green {
+    color: green;
+}
+
+.olive {
+    color: olive;
+}
+
+.teal {
+    color: teal;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.aqua {
+    color: aqua;
+}
+
+.blue {
+    color: blue;
+}
+
+.navy {
+    color: navy;
+}
+
+.purple {
+    color: purple;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.over {
+    text-decoration: overline;
+}
+
+.blink {
+    text-decoration: blink;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.it {
+    font-style: italic;
+}
+
+.ob {
+    font-style: oblique;
+}
+
+.small {
+    font-size: small;
+}
+
+.large {
+    font-size: large;
+}
+
+.smallpar {
+    font-size: small;
+}
+
+/**[ context menu ]****************************************************************************************************/
+.custom-menu {
+    display: none;
+    z-index: 99999;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.custom-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+    user-select: none;
+}
+
+.custom-menu li:hover {
+    background-color: #DEF;
+}
+/**[/ context menu ]***************************************************************************************************/

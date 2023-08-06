@@ -1,0 +1,8 @@
+# schema_archives.yaml
+# schema 2 validate archives files from Archive()
+archive:
+  name: str()
+  root: str()
+files: any(str(), include("files_2_archive"))
+---
+files_2_archive: list(str(), min=1)
