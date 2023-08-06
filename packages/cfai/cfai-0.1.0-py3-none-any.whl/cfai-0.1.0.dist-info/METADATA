@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cfai
+Version: 0.1.0
+Summary: The package for counterfactual explanations on Pytorch platform
+Home-page: https://github.com/wangyongjie-ntu/CFAI
+Author: wang yongjie
+Author-email: yongjie.wang@ntu.edu.sg
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: interactive
+Requires-Dist: matplotlib (>=2.2.0) ; extra == 'interactive'
+Requires-Dist: jupyter ; extra == 'interactive'
+
+UNKNOWN
+
+
