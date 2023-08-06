@@ -1,0 +1,3 @@
+mkdocs>=1
+mkdocs-awesome-pages-plugin
+mkdocs-material
