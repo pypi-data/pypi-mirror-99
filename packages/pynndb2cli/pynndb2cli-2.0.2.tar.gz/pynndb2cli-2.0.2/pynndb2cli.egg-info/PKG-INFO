@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: pynndb2cli
+Version: 2.0.2
+Summary: PyNNDB2 CLI
+Home-page: https://gitlab.com/oddjobz/pynndb2-cli
+Author: Gareth Bult
+Author-email: gareth@bult.co.uk
+License: MIT
+Description: # PyNNDB2-CLI
+        
+        Command line shell for the PyNNDB2 database library.
+        
+        * Docs [pynndb2_ docs are here]
+        
+        .. _pynndb2: https://pynndb.madpenguin.uk/
+        
+Keywords: pynndb2,cli,shell,python,database
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
