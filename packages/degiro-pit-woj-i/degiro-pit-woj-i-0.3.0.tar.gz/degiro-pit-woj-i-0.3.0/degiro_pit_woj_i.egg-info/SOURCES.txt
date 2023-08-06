@@ -1,0 +1,17 @@
+README.md
+setup.py
+degiro_pit/__init__.py
+degiro_pit/config.py
+degiro_pit/date_tax.py
+degiro_pit/enricher.py
+degiro_pit/nbp_api.py
+degiro_pit_woj_i.egg-info/PKG-INFO
+degiro_pit_woj_i.egg-info/SOURCES.txt
+degiro_pit_woj_i.egg-info/dependency_links.txt
+degiro_pit_woj_i.egg-info/entry_points.txt
+degiro_pit_woj_i.egg-info/requires.txt
+degiro_pit_woj_i.egg-info/top_level.txt
+tests/__init__.py
+tests/test_date_tax_poland.py
+tests/test_degiro_pit_config.py
+tests/test_nbp_api.py
