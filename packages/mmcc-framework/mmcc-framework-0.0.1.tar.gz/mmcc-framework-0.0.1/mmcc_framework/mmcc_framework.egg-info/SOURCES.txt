@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mmcc_framework/mmcc_framework.egg-info/PKG-INFO
+mmcc_framework/mmcc_framework.egg-info/SOURCES.txt
+mmcc_framework/mmcc_framework.egg-info/dependency_links.txt
+mmcc_framework/mmcc_framework.egg-info/top_level.txt
