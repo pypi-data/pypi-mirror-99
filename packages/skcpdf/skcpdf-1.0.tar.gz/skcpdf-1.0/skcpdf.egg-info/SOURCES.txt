@@ -1,0 +1,5 @@
+setup.py
+skcpdf.egg-info/PKG-INFO
+skcpdf.egg-info/SOURCES.txt
+skcpdf.egg-info/dependency_links.txt
+skcpdf.egg-info/top_level.txt
