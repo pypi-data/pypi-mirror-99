@@ -1,0 +1,5 @@
+flit
+tox
+pytest
+mdformat >=0.5.3,<0.6.0
+mdit_py_plugins
