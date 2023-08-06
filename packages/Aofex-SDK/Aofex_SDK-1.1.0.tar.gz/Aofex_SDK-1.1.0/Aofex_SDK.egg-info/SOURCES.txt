@@ -1,0 +1,8 @@
+README.md
+setup.py
+Aofex_SDK/Aofex_SDK.py
+Aofex_SDK/__init__.py
+Aofex_SDK.egg-info/PKG-INFO
+Aofex_SDK.egg-info/SOURCES.txt
+Aofex_SDK.egg-info/dependency_links.txt
+Aofex_SDK.egg-info/top_level.txt
