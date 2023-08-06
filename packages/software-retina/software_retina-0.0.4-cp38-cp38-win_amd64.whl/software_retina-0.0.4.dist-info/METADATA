@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: software-retina
+Version: 0.0.4
+Summary: A software retina inspired by the biological vision system
+Home-page: https://github.com/hanl00/software-retina
+Author: Han M. Loo
+Author-email: nloo33755@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: Implementation :: CPython
+
+## Intro
+
+## Purpose
+
+To optimise the existing retina generation and sampling methods
+
+
+### Sources:
+* https://github.com/georgeKillick90/Retina
+* https://github.com/Pozimek/RetinaVision
+
