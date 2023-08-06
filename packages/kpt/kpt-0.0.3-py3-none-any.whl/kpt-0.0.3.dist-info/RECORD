@@ -1,0 +1,8 @@
+kpt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kpt/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kpt/model/quaternion.py,sha256=K6en4Ygr_ID4VZh9aT4Y-7NJw0XLApQ1ZJd82Ek5n1s,6600
+kpt/model/skeleton.py,sha256=tPvhZU3FSreK2RvWpCb_UPfKWESB2wJGih7qqJqgMWE,3708
+kpt-0.0.3.dist-info/METADATA,sha256=yWM4Owjd5tCl3aH3SQ2T8kYKYn5V7fYQJAF9GPAEJfM,797
+kpt-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kpt-0.0.3.dist-info/top_level.txt,sha256=42veXx72QwaTPptQtN-ueOBKreUpP8HYy1jVlBrjQek,4
+kpt-0.0.3.dist-info/RECORD,,
