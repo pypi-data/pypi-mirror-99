@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+codecov_validator/__init__.py
+codecov_validator/ccv.py
+codecov_validator.egg-info/PKG-INFO
+codecov_validator.egg-info/SOURCES.txt
+codecov_validator.egg-info/dependency_links.txt
+codecov_validator.egg-info/entry_points.txt
+codecov_validator.egg-info/requires.txt
+codecov_validator.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+ccv = codecov_validator.ccv:run_request
+
