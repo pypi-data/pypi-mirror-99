@@ -1,0 +1,5 @@
+publish_npm.py,sha256=qSmaT2NPb0RohqWPgSNLwmiPU4wrFTMsYh77fBCRPUs,6088
+publish_npm-1.0.4.dist-info/entry_points.txt,sha256=iXyxZUxmD-w97E0MpE3eQpwtDyZ9zRgYQK5QX5L98YA,48
+publish_npm-1.0.4.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+publish_npm-1.0.4.dist-info/METADATA,sha256=x68PQvOwsfQtxZ5o--YgeagW_ouv1eJK90taHBCK_G4,389
+publish_npm-1.0.4.dist-info/RECORD,,
