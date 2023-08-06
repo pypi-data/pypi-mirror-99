@@ -1,0 +1,2 @@
+recursive-include scil/stanford-postagger-full-2015-04-20 *
+global-include emotive_words.pickle
