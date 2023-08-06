@@ -1,0 +1,7 @@
+setup.py
+picsellia_yolov5/utils.py
+picsellia_yolov5.egg-info/PKG-INFO
+picsellia_yolov5.egg-info/SOURCES.txt
+picsellia_yolov5.egg-info/dependency_links.txt
+picsellia_yolov5.egg-info/requires.txt
+picsellia_yolov5.egg-info/top_level.txt
