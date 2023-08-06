@@ -1,0 +1,193 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Developer Guide &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P" href="anonymity-configuration.html" />
+    <link rel="prev" title="The Tahoe BackupDB" href="backupdb.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="anonymity-configuration.html" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="backupdb.html" title="The Tahoe BackupDB"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pre-commit-checks">
+<h2>Pre-commit Checks<a class="headerlink" href="#pre-commit-checks" title="Permalink to this headline">¶</a></h2>
+<p>This project is configured for use with <a class="reference external" href="https://pre-commit.com">pre-commit</a> to install <a class="reference external" href="https://pre-commit.com">VCS/git hooks</a> which
+perform some static code analysis checks and other code checks to catch common errors
+before each commit and to run the full self-test suite to find less obvious regressions
+before each push to a remote.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe-lafs $ make install-vcs-hooks
+...
++ ./.tox//py36/bin/pre-commit install --hook-type pre-commit
+pre-commit installed at .git/hooks/pre-commit
++ ./.tox//py36/bin/pre-commit install --hook-type pre-push
+pre-commit installed at .git/hooks/pre-push
+tahoe-lafs $ python -c &quot;import pathlib; pathlib.Path(&#39;src/allmydata/tabbed.py&#39;).write_text(&#39;def foo():\\n\\tpass\\n&#39;)&quot;
+tahoe-lafs $ git add src/allmydata/tabbed.py
+tahoe-lafs $ git commit -a -m &quot;Add a file that violates flake8&quot;
+...
+codechecks...............................................................Failed
+- hook id: codechecks
+- exit code: 1
+
+GLOB sdist-make: ./tahoe-lafs/setup.py
+codechecks inst-nodeps: ...
+codechecks installed: ...
+codechecks run-test-pre: PYTHONHASHSEED=&#39;...&#39;
+codechecks run-test: commands[0] | flake8 src static misc setup.py
+src/allmydata/tabbed.py:2:1: W191 indentation contains tabs
+ERROR: InvocationError for command ./tahoe-lafs/.tox/codechecks/bin/flake8 src static misc setup.py (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   codechecks: commands failed
+...
+</pre></div>
+</div>
+<p>To uninstall:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe-lafs $ make uninstall-vcs-hooks
+...
++ ./.tox/py36/bin/pre-commit uninstall
+pre-commit uninstalled
++ ./.tox/py36/bin/pre-commit uninstall -t pre-push
+pre-push uninstalled
+</pre></div>
+</div>
+<p>Note that running the full self-test suite takes several minutes so expect pushing to
+take some time.  If you can’t or don’t want to wait for the hooks in some cases, use the
+<code class="docutils literal notranslate"><span class="pre">--no-verify</span></code> option to <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">...</span></code> or <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span> <span class="pre">...</span></code>.  Alternatively,
+see the <a class="reference external" href="https://pre-commit.com">pre-commit</a> documentation and CLI help output and use the committed
+<a class="reference external" href="../.pre-commit-config.yaml">pre-commit configuration</a> as a starting point to write a local, uncommitted
+<code class="docutils literal notranslate"><span class="pre">../.pre-commit-config.local.yaml</span></code> configuration to use instead.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe-lafs $ ./.tox/py36/bin/pre-commit --help
+tahoe-lafs $ ./.tox/py36/bin/pre-commit instll --help
+tahoe-lafs $ cp  &quot;./.pre-commit-config.yaml&quot; &quot;./.pre-commit-config.local.yaml&quot;
+tahoe-lafs $ editor &quot;./.pre-commit-config.local.yaml&quot;
+...
+tahoe-lafs $ ./.tox/py36/bin/pre-commit install -c &quot;./.pre-commit-config.local.yaml&quot; -t pre-push
+pre-commit installed at .git/hooks/pre-push
+tahoe-lafs $ git commit -a -m &quot;Add a file that violates flake8&quot;
+[3398.pre-commit 29f8f43d2] Add a file that violates flake8
+ 1 file changed, 2 insertions(+)
+ create mode 100644 src/allmydata/tabbed.py
+tahoe-lafs $ git push
+...
+codechecks...............................................................Failed
+- hook id: codechecks
+- exit code: 1
+
+GLOB sdist-make: ./tahoe-lafs/setup.py
+codechecks inst-nodeps: ...
+codechecks installed: ...
+codechecks run-test-pre: PYTHONHASHSEED=&#39;...&#39;
+codechecks run-test: commands[0] | flake8 src static misc setup.py
+src/allmydata/tabbed.py:2:1: W191 indentation contains tabs
+ERROR: InvocationError for command ./tahoe-lafs/.tox/codechecks/bin/flake8 src static misc setup.py (exited with code 1)
+___________________________________ summary ____________________________________
+ERROR:   codechecks: commands failed
+...
+
+error: failed to push some refs to &#39;github.com:jaraco/tahoe-lafs.git&#39;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Developer Guide</a><ul>
+<li><a class="reference internal" href="#pre-commit-checks">Pre-commit Checks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="backupdb.html"
+                        title="previous chapter">The Tahoe BackupDB</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="anonymity-configuration.html"
+                        title="next chapter">Using Tahoe-LAFS with an anonymizing network: Tor, I2P</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/developer-guide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="anonymity-configuration.html" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="backupdb.html" title="The Tahoe BackupDB"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

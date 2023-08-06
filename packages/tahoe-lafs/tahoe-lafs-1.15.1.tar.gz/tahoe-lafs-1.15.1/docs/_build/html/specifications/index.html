@@ -1,0 +1,173 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Specifications &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Specification Document Outline" href="outline.html" />
+    <link rel="prev" title="Building pyOpenSSL on Windows" href="../build/build-pyOpenSSL.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="outline.html" title="Specification Document Outline"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../build/build-pyOpenSSL.html" title="Building pyOpenSSL on Windows"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="specifications">
+<h1>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">¶</a></h1>
+<p>This section contains various attempts at writing detailed specifications of
+the data formats used by Tahoe.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Specification Document Outline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outline.html#share-format-encoding-algorithm">#1: Share Format, Encoding Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline.html#share-exchange-protocol">#2: Share Exchange Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline.html#server-selection-algorithm-filecap-format">#3: Server Selection Algorithm, filecap format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline.html#directory-format">#4: Directory Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uri.html">Tahoe URIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uri.html#file-uris">File URIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uri.html#directory-uris">Directory URIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uri.html#internal-usage-of-uris">Internal Usage of URIs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="file-encoding.html">File Encoding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file-encoding.html#hashes">Hashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="URI-extension.html">URI Extension Block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutable.html">Mutable Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#mutable-formats">Mutable Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#consistency-vs-availability">Consistency vs. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#the-prime-coordination-directive-don-t-do-that">The Prime Coordination Directive: “Don’t Do That”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#small-distributed-mutable-files">Small Distributed Mutable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#medium-distributed-mutable-files">Medium Distributed Mutable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#large-distributed-mutable-files">Large Distributed Mutable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable.html#todo">TODO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dirnodes.html">Tahoe-LAFS Directory Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#key-value-store-primitives">Key-value Store Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#file-store-goals">File Store Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#dirnode-goals">Dirnode Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#dirnode-secret-values">Dirnode secret values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#dirnode-storage-format">Dirnode storage format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#dirnode-sizes-mutable-file-initial-read-sizes">Dirnode sizes, mutable-file initial read sizes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#design-goals-redux">Design Goals, redux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#starting-points-root-dirnodes">Starting Points: root dirnodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#mounting-and-sharing-directories">Mounting and Sharing Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dirnodes.html#revocation">Revocation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="servers-of-happiness.html">Servers of Happiness</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="servers-of-happiness.html#measuring-servers-of-happiness">Measuring Servers of Happiness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers-of-happiness.html#issues">Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="servers-of-happiness.html#upload-strategy-of-happiness">Upload Strategy of Happiness</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="servers-of-happiness.html#calculating-share-placements">Calculating Share Placements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers-of-happiness.html#properties-of-upload-strategy-of-happiness">Properties of Upload Strategy of Happiness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="backends/raic.html">Redundant Array of Independent Clouds: Share To Cloud Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#terminology">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#functional-requirements">Functional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#mapping">Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#costs">Costs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#structure-of-implementation">Structure of Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#known-issues">Known Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backends/raic.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../build/build-pyOpenSSL.html"
+                        title="previous chapter">Building pyOpenSSL on Windows</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="outline.html"
+                        title="next chapter">Specification Document Outline</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/specifications/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="outline.html" title="Specification Document Outline"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../build/build-pyOpenSSL.html" title="Building pyOpenSSL on Windows"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

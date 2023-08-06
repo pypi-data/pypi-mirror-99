@@ -1,0 +1,118 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Avoiding Write Collisions in Tahoe &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Tahoe BackupDB" href="backupdb.html" />
+    <link rel="prev" title="Things To Be Careful About As We Venture Boldly Forth" href="cautions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="backupdb.html" title="The Tahoe BackupDB"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cautions.html" title="Things To Be Careful About As We Venture Boldly Forth"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="avoiding-write-collisions-in-tahoe">
+<h1>Avoiding Write Collisions in Tahoe<a class="headerlink" href="#avoiding-write-collisions-in-tahoe" title="Permalink to this headline">¶</a></h1>
+<p>Tahoe does not provide locking of mutable files and directories.
+If there is more than one simultaneous attempt to change a mutable file
+or directory, then an <code class="docutils literal notranslate"><span class="pre">UncoordinatedWriteError</span></code> may result.
+This might, in rare cases, cause the file or directory contents to be
+accidentally deleted.  The user is expected to ensure that there is at
+most one outstanding write or update request for a given file or
+directory at a time.  One convenient way to accomplish this is to make
+a different file or directory for each person or process that wants to
+write.</p>
+<p>If mutable parts of a file store are accessed via sshfs, only a single
+sshfs mount should be used. There may be data loss if mutable files or
+directories are accessed via two sshfs mounts, or written both via sshfs
+and from other clients.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cautions.html"
+                        title="previous chapter">Things To Be Careful About As We Venture Boldly Forth</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="backupdb.html"
+                        title="next chapter">The Tahoe BackupDB</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/write_coordination.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="backupdb.html" title="The Tahoe BackupDB"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cautions.html" title="Things To Be Careful About As We Venture Boldly Forth"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

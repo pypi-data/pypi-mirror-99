@@ -1,0 +1,420 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tahoe Statistics &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How To Build Tahoe-LAFS On A Desert Island" href="desert-island.html" />
+    <link rel="prev" title="Tahoe Logging" href="logging.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="desert-island.html" title="How To Build Tahoe-LAFS On A Desert Island"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Tahoe Logging"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tahoe-statistics">
+<h1>Tahoe Statistics<a class="headerlink" href="#tahoe-statistics" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#statistics-categories">Statistics Categories</a></li>
+<li><a class="reference internal" href="#running-a-tahoe-stats-gatherer-service">Running a Tahoe Stats-Gatherer Service</a></li>
+<li><a class="reference internal" href="#using-munin-to-graph-stats-values">Using Munin To Graph Stats Values</a></li>
+</ol>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Each Tahoe node collects and publishes statistics about its operations as it
+runs. These include counters of how many files have been uploaded and
+downloaded, CPU usage information, performance numbers like latency of
+storage server operations, and available disk space.</p>
+<p>The easiest way to see the stats for any given node is use the web interface.
+From the main “Welcome Page”, follow the “Operational Statistics” link inside
+the small “This Client” box. If the welcome page lives at
+<a class="reference external" href="http://localhost:3456/">http://localhost:3456/</a>, then the statistics page will live at
+<a class="reference external" href="http://localhost:3456/statistics">http://localhost:3456/statistics</a> . This presents a summary of the stats
+block, along with a copy of the raw counters. To obtain just the raw counters
+(in JSON format), use /statistics?t=json instead.</p>
+</div>
+<div class="section" id="statistics-categories">
+<h2>Statistics Categories<a class="headerlink" href="#statistics-categories" title="Permalink to this headline">¶</a></h2>
+<p>The stats dictionary contains two keys: ‘counters’ and ‘stats’. ‘counters’
+are strictly counters: they are reset to zero when the node is started, and
+grow upwards. ‘stats’ are non-incrementing values, used to measure the
+current state of various systems. Some stats are actually booleans, expressed
+as ‘1’ for true and ‘0’ for false (internal restrictions require all stats
+values to be numbers).</p>
+<p>Under both the ‘counters’ and ‘stats’ dictionaries, each individual stat has
+a key with a dot-separated name, breaking them up into groups like
+‘cpu_monitor’ and ‘storage_server’.</p>
+<p>The currently available stats (as of release 1.6.0 or so) are described here:</p>
+<p><strong>counters.storage_server.*</strong></p>
+<blockquote>
+<div><p>this group counts inbound storage-server operations. They are not provided
+by client-only nodes which have been configured to not run a storage server
+(with [storage]enabled=false in tahoe.cfg)</p>
+<dl class="docutils">
+<dt>allocate, write, close, abort</dt>
+<dd>these are for immutable file uploads. ‘allocate’ is incremented when a
+client asks if it can upload a share to the server. ‘write’ is
+incremented for each chunk of data written. ‘close’ is incremented when
+the share is finished. ‘abort’ is incremented if the client abandons
+the upload.</dd>
+<dt>get, read</dt>
+<dd>these are for immutable file downloads. ‘get’ is incremented
+when a client asks if the server has a specific share. ‘read’ is
+incremented for each chunk of data read.</dd>
+<dt>readv, writev</dt>
+<dd>these are for immutable file creation, publish, and retrieve. ‘readv’
+is incremented each time a client reads part of a mutable share.
+‘writev’ is incremented each time a client sends a modification
+request.</dd>
+<dt>add-lease, renew, cancel</dt>
+<dd>these are for share lease modifications. ‘add-lease’ is incremented
+when an ‘add-lease’ operation is performed (which either adds a new
+lease or renews an existing lease). ‘renew’ is for the ‘renew-lease’
+operation (which can only be used to renew an existing one). ‘cancel’
+is used for the ‘cancel-lease’ operation.</dd>
+<dt>bytes_freed</dt>
+<dd>this counts how many bytes were freed when a ‘cancel-lease’
+operation removed the last lease from a share and the share
+was thus deleted.</dd>
+<dt>bytes_added</dt>
+<dd>this counts how many bytes were consumed by immutable share
+uploads. It is incremented at the same time as the ‘close’
+counter.</dd>
+</dl>
+</div></blockquote>
+<p><strong>stats.storage_server.*</strong></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>allocated</dt>
+<dd>this counts how many bytes are currently ‘allocated’, which
+tracks the space that will eventually be consumed by immutable
+share upload operations. The stat is increased as soon as the
+upload begins (at the same time the ‘allocated’ counter is
+incremented), and goes back to zero when the ‘close’ or ‘abort’
+message is received (at which point the ‘disk_used’ stat should
+incremented by the same amount).</dd>
+<dt>disk_total, disk_used, disk_free_for_root, disk_free_for_nonroot, disk_avail, reserved_space</dt>
+<dd>these all reflect disk-space usage policies and status.
+‘disk_total’ is the total size of disk where the storage
+server’s BASEDIR/storage/shares directory lives, as reported
+by /bin/df or equivalent. ‘disk_used’, ‘disk_free_for_root’,
+and ‘disk_free_for_nonroot’ show related information.
+‘reserved_space’ reports the reservation configured by the
+tahoe.cfg [storage]reserved_space value. ‘disk_avail’
+reports the remaining disk space available for the Tahoe
+server after subtracting reserved_space from disk_avail. All
+values are in bytes.</dd>
+<dt>accepting_immutable_shares</dt>
+<dd>this is ‘1’ if the storage server is currently accepting uploads of
+immutable shares. It may be ‘0’ if a server is disabled by
+configuration, or if the disk is full (i.e. disk_avail is less than
+reserved_space).</dd>
+<dt>total_bucket_count</dt>
+<dd>this counts the number of ‘buckets’ (i.e. unique
+storage-index values) currently managed by the storage
+server. It indicates roughly how many files are managed
+by the server.</dd>
+<dt>latencies.*.*</dt>
+<dd>these stats keep track of local disk latencies for
+storage-server operations. A number of percentile values are
+tracked for many operations. For example,
+‘storage_server.latencies.readv.50_0_percentile’ records the
+median response time for a ‘readv’ request. All values are in
+seconds. These are recorded by the storage server, starting
+from the time the request arrives (post-deserialization) and
+ending when the response begins serialization. As such, they
+are mostly useful for measuring disk speeds. The operations
+tracked are the same as the counters.storage_server.* counter
+values (allocate, write, close, get, read, add-lease, renew,
+cancel, readv, writev). The percentile values tracked are:
+mean, 01_0_percentile, 10_0_percentile, 50_0_percentile,
+90_0_percentile, 95_0_percentile, 99_0_percentile,
+99_9_percentile. (the last value, 99.9 percentile, means that
+999 out of the last 1000 operations were faster than the
+given number, and is the same threshold used by Amazon’s
+internal SLA, according to the Dynamo paper).
+Percentiles are only reported in the case of a sufficient
+number of observations for unambiguous interpretation. For
+example, the 99.9th percentile is (at the level of thousandths
+precision) 9 thousandths greater than the 99th
+percentile for sample sizes greater than or equal to 1000,
+thus the 99.9th percentile is only reported for samples of 1000
+or more observations.</dd>
+</dl>
+</div></blockquote>
+<p><strong>counters.uploader.files_uploaded</strong></p>
+<p><strong>counters.uploader.bytes_uploaded</strong></p>
+<p><strong>counters.downloader.files_downloaded</strong></p>
+<p><strong>counters.downloader.bytes_downloaded</strong></p>
+<blockquote>
+<div>These count client activity: a Tahoe client will increment these when it
+uploads or downloads an immutable file. ‘files_uploaded’ is incremented by
+one for each operation, while ‘bytes_uploaded’ is incremented by the size of
+the file.</div></blockquote>
+<p><strong>counters.mutable.files_published</strong></p>
+<p><strong>counters.mutable.bytes_published</strong></p>
+<p><strong>counters.mutable.files_retrieved</strong></p>
+<p><strong>counters.mutable.bytes_retrieved</strong></p>
+<blockquote>
+<div>These count client activity for mutable files. ‘published’ is the act of
+changing an existing mutable file (or creating a brand-new mutable file).
+‘retrieved’ is the act of reading its current contents.</div></blockquote>
+<p><strong>counters.chk_upload_helper.*</strong></p>
+<blockquote>
+<div><p>These count activity of the “Helper”, which receives ciphertext from clients
+and performs erasure-coding and share upload for files that are not already
+in the grid. The code which implements these counters is in
+src/allmydata/immutable/offloaded.py .</p>
+<dl class="docutils">
+<dt>upload_requests</dt>
+<dd>incremented each time a client asks to upload a file
+upload_already_present: incremented when the file is already in the grid</dd>
+<dt>upload_need_upload</dt>
+<dd>incremented when the file is not already in the grid</dd>
+<dt>resumes</dt>
+<dd>incremented when the helper already has partial ciphertext for
+the requested upload, indicating that the client is resuming an
+earlier upload</dd>
+<dt>fetched_bytes</dt>
+<dd>this counts how many bytes of ciphertext have been fetched
+from uploading clients</dd>
+<dt>encoded_bytes</dt>
+<dd>this counts how many bytes of ciphertext have been
+encoded and turned into successfully-uploaded shares. If no
+uploads have failed or been abandoned, encoded_bytes should
+eventually equal fetched_bytes.</dd>
+</dl>
+</div></blockquote>
+<p><strong>stats.chk_upload_helper.*</strong></p>
+<blockquote>
+<div><p>These also track Helper activity:</p>
+<dl class="docutils">
+<dt>active_uploads</dt>
+<dd>how many files are currently being uploaded. 0 when idle.</dd>
+<dt>incoming_count</dt>
+<dd>how many cache files are present in the incoming/ directory,
+which holds ciphertext files that are still being fetched
+from the client</dd>
+<dt>incoming_size</dt>
+<dd>total size of cache files in the incoming/ directory</dd>
+<dt>incoming_size_old</dt>
+<dd>total size of ‘old’ cache files (more than 48 hours)</dd>
+<dt>encoding_count</dt>
+<dd>how many cache files are present in the encoding/ directory,
+which holds ciphertext files that are being encoded and
+uploaded</dd>
+<dt>encoding_size</dt>
+<dd>total size of cache files in the encoding/ directory</dd>
+<dt>encoding_size_old</dt>
+<dd>total size of ‘old’ cache files (more than 48 hours)</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>stats.node.uptime</strong></dt>
+<dd>how many seconds since the node process was started</dd>
+</dl>
+<p><strong>stats.cpu_monitor.*</strong></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>1min_avg, 5min_avg, 15min_avg</dt>
+<dd>estimate of what percentage of system CPU time was consumed by the
+node process, over the given time interval. Expressed as a float, 0.0
+for 0%, 1.0 for 100%</dd>
+<dt>total</dt>
+<dd>estimate of total number of CPU seconds consumed by node since
+the process was started. Ticket #472 indicates that .total may
+sometimes be negative due to wraparound of the kernel’s counter.</dd>
+</dl>
+</div></blockquote>
+<p><strong>stats.load_monitor.*</strong></p>
+<blockquote>
+<div><p>When enabled, the “load monitor” continually schedules a one-second
+callback, and measures how late the response is. This estimates system load
+(if the system is idle, the response should be on time). This is only
+enabled if a stats-gatherer is configured.</p>
+<dl class="docutils">
+<dt>avg_load</dt>
+<dd>average “load” value (seconds late) over the last minute</dd>
+<dt>max_load</dt>
+<dd>maximum “load” value over the last minute</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="running-a-tahoe-stats-gatherer-service">
+<h2>Running a Tahoe Stats-Gatherer Service<a class="headerlink" href="#running-a-tahoe-stats-gatherer-service" title="Permalink to this headline">¶</a></h2>
+<p>The “stats-gatherer” is a simple daemon that periodically collects stats from
+several tahoe nodes. It could be useful, e.g., in a production environment,
+where you want to monitor dozens of storage servers from a central management
+host. It merely gatherers statistics from many nodes into a single place: it
+does not do any actual analysis.</p>
+<p>The stats gatherer listens on a network port using the same <a class="reference external" href="https://foolscap.lothar.com/trac">Foolscap</a>
+connection library that Tahoe clients use to connect to storage servers.
+Tahoe nodes can be configured to connect to the stats gatherer and publish
+their stats on a periodic basis. (In fact, what happens is that nodes connect
+to the gatherer and offer it a second FURL which points back to the node’s
+“stats port”, which the gatherer then uses to pull stats on a periodic basis.
+The initial connection is flipped to allow the nodes to live behind NAT
+boxes, as long as the stats-gatherer has a reachable IP address.)</p>
+<p>The stats-gatherer is created in the same fashion as regular tahoe client
+nodes and introducer nodes. Choose a base directory for the gatherer to live
+in (but do not create the directory). Choose the hostname that should be
+advertised in the gatherer’s FURL. Then run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe create-stats-gatherer --hostname=HOSTNAME $BASEDIR
+</pre></div>
+</div>
+<p>and start it with “tahoe start $BASEDIR”. Once running, the gatherer will
+write a FURL into $BASEDIR/stats_gatherer.furl .</p>
+<p>To configure a Tahoe client/server node to contact the stats gatherer, copy
+this FURL into the node’s tahoe.cfg file, in a section named “[client]”,
+under a key named “stats_gatherer.furl”, like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">client</span><span class="p">]</span>
+<span class="n">stats_gatherer</span><span class="o">.</span><span class="n">furl</span> <span class="o">=</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">qbo4ktl667zmtiuou6lwbjryli2brv6t</span><span class="nd">@HOSTNAME</span><span class="p">:</span><span class="n">PORTNUM</span><span class="o">/</span><span class="n">wxycb4kaexzskubjnauxeoptympyf45y</span>
+</pre></div>
+</div>
+<p>or simply copy the stats_gatherer.furl file into the node’s base directory
+(next to the tahoe.cfg file): it will be interpreted in the same way.</p>
+<p>When the gatherer is created, it will allocate a random unused TCP port, so
+it should not conflict with anything else that you have running on that host
+at that time. To explicitly control which port it uses, run the creation
+command with <code class="docutils literal notranslate"><span class="pre">--location=</span></code> and <code class="docutils literal notranslate"><span class="pre">--port=</span></code> instead of <code class="docutils literal notranslate"><span class="pre">--hostname=</span></code>. If
+you use a hostname of <code class="docutils literal notranslate"><span class="pre">example.org</span></code> and a port number of <code class="docutils literal notranslate"><span class="pre">1234</span></code>, then
+run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tahoe</span> <span class="n">create</span><span class="o">-</span><span class="n">stats</span><span class="o">-</span><span class="n">gatherer</span> <span class="o">--</span><span class="n">location</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">1234</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="mi">1234</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--location=</span></code> is a Foolscap FURL hints string (so it can be a
+comma-separated list of connection hints), and <code class="docutils literal notranslate"><span class="pre">--port=</span></code> is a Twisted
+“server endpoint specification string”, as described in <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a>.</p>
+<p>Once running, the stats gatherer will create a standard JSON file in
+<code class="docutils literal notranslate"><span class="pre">$BASEDIR/stats.json</span></code>. Once a minute, the gatherer will pull stats
+information from every connected node and write them into the file. The file
+will contain a dictionary, in which node identifiers (known as “tubid”
+strings) are the keys, and the values are a dict with ‘timestamp’,
+‘nickname’, and ‘stats’ keys. d[tubid][stats] will contain the stats
+dictionary as made available at <a class="reference external" href="http://localhost:3456/statistics?t=json">http://localhost:3456/statistics?t=json</a> . The
+file will only contain the most recent update from each node.</p>
+<p>Other tools can be built to examine these stats and render them into
+something useful. For example, a tool could sum the
+“storage_server.disk_avail’ values from all servers to compute a
+total-disk-available number for the entire grid (however, the “disk watcher”
+daemon, in misc/operations_helpers/spacetime/, is better suited for this
+specific task).</p>
+</div>
+<div class="section" id="using-munin-to-graph-stats-values">
+<h2>Using Munin To Graph Stats Values<a class="headerlink" href="#using-munin-to-graph-stats-values" title="Permalink to this headline">¶</a></h2>
+<p>The misc/operations_helpers/munin/ directory contains various plugins to
+graph stats for Tahoe nodes. They are intended for use with the <a class="reference external" href="http://munin-monitoring.org/">Munin</a>
+system-management tool, which typically polls target systems every 5 minutes
+and produces a web page with graphs of various things over multiple time
+scales (last hour, last month, last year).</p>
+<p>Most of the plugins are designed to pull stats from a single Tahoe node, and
+are configured with the e.g. <a class="reference external" href="http://localhost:3456/statistics?t=json">http://localhost:3456/statistics?t=json</a> URL. The
+“tahoe_stats” plugin is designed to read from the JSON file created by the
+stats-gatherer. Some plugins are to be used with the disk watcher, and a few
+(like tahoe_nodememory) are designed to watch the node processes directly
+(and must therefore run on the same host as the target node).</p>
+<p>Please see the docstrings at the beginning of each plugin for details, and
+the “tahoe-conf” file for notes about configuration and installing these
+plugins into a Munin environment.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tahoe Statistics</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#statistics-categories">Statistics Categories</a></li>
+<li><a class="reference internal" href="#running-a-tahoe-stats-gatherer-service">Running a Tahoe Stats-Gatherer Service</a></li>
+<li><a class="reference internal" href="#using-munin-to-graph-stats-values">Using Munin To Graph Stats Values</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="logging.html"
+                        title="previous chapter">Tahoe Logging</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="desert-island.html"
+                        title="next chapter">How To Build Tahoe-LAFS On A Desert Island</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/stats.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="desert-island.html" title="How To Build Tahoe-LAFS On A Desert Island"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="logging.html" title="Tahoe Logging"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

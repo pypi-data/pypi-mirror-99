@@ -1,0 +1,318 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>How To Run Tahoe-LAFS &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Magic Wormhole Invites" href="magic-wormhole-invites.html" />
+    <link rel="prev" title="Installing Tahoe-LAFS" href="INSTALL.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="magic-wormhole-invites.html" title="Magic Wormhole Invites"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="INSTALL.html" title="Installing Tahoe-LAFS"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-run-tahoe-lafs">
+<h1>How To Run Tahoe-LAFS<a class="headerlink" href="#how-to-run-tahoe-lafs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This is how to run a Tahoe-LAFS client or a complete Tahoe-LAFS grid.
+First you have to install the Tahoe-LAFS software, as documented in
+<a class="reference internal" href="INSTALL.html"><span class="doc">Installing Tahoe-LAFS</span></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> program in your virtualenv’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory is used to
+create, start, and stop nodes. Each node lives in a separate base
+directory, in which there is a configuration file named <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>.
+Nodes read and write files within this base directory.</p>
+<p>A grid consists of a set of <em>storage nodes</em> and <em>client nodes</em> running
+the Tahoe-LAFS code. There is also an <em>introducer node</em> that is
+responsible for getting the other nodes talking to each other.</p>
+<p>If you’re getting started we recommend you try connecting to the <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/TestGrid">public test
+grid</a> as you only need to create a client node. When you want to create your
+own grid you’ll need to create the introducer and several initial storage
+nodes (see the note about small grids below).</p>
+<div class="section" id="being-introduced-to-a-grid">
+<h3>Being Introduced to a Grid<a class="headerlink" href="#being-introduced-to-a-grid" title="Permalink to this headline">¶</a></h3>
+<p>A collection of Tahoe servers is called a Grid and usually has 1
+Introducer (but sometimes more, and it’s possible to run with zero). The
+Introducer announces which storage servers constitute the Grid and how to
+contact them. There is a secret “fURL” you need to know to talk to the
+Introducer.</p>
+<p>One way to get this secret is using traditional tools such as encrypted
+email, encrypted instant-messaging, etcetera. It is important to transmit
+this fURL secretly as knowing it gives you access to the Grid.</p>
+<p>An additional way to share the fURL securely is via <a class="reference external" href="https://magic-wormhole.io/">magic
+wormhole</a>. This uses a weak one-time password and a server on the
+internet (at <cite>wormhole.tahoe-lafs.org</cite>) to open a secure channel between
+two computers. In Tahoe-LAFS this functions via the commands <cite>tahoe
+invite</cite> and <cite>tahoe create-client –join</cite>. A person who already has access
+to a Grid can use <cite>tahoe invite</cite> to create one end of the <a class="reference external" href="https://magic-wormhole.io/">magic
+wormhole</a> and then transmits some JSON (including the Introducer’s
+secret fURL) to the other end. <cite>tahoe invite</cite> will print a one-time
+secret code; you must then communicate this code to the person who will
+join the Grid.</p>
+<p>The other end of the <a class="reference external" href="https://magic-wormhole.io/">magic wormhole</a> in this case is <cite>tahoe
+create-client –join &lt;one-time code&gt;</cite>, where the person being invited
+types in the code they were given. Ideally, this code would be
+transmitted securely. It is, however, only useful exactly once. Also, it
+is much easier to transcribe by a human. Codes look like
+<cite>7-surrender-tunnel</cite> (a short number and two words).</p>
+</div>
+<div class="section" id="running-a-client">
+<h3>Running a Client<a class="headerlink" href="#running-a-client" title="Permalink to this headline">¶</a></h3>
+<p>To construct a client node, run “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span></code>”, which will create
+<code class="docutils literal notranslate"><span class="pre">~/.tahoe</span></code> to be the node’s base directory. Acquire the <code class="docutils literal notranslate"><span class="pre">introducer.furl</span></code>
+(see below if you are running your own introducer, or use the one from the
+<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/TestGrid">TestGrid page</a>), and paste it after <code class="docutils literal notranslate"><span class="pre">introducer.furl</span> <span class="pre">=</span></code> in the
+<code class="docutils literal notranslate"><span class="pre">[client]</span></code> section of <code class="docutils literal notranslate"><span class="pre">~/.tahoe/tahoe.cfg</span></code>. Then use “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">run</span>
+<span class="pre">~/.tahoe</span></code>”. After that, the node should be off and running. The first thing
+it will do is connect to the introducer and get itself connected to all other
+nodes on the grid.</p>
+<p>Some Grids use “magic wormhole” one-time codes to configure the basic
+options. In such a case you use <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span> <span class="pre">--join</span>
+<span class="pre">&lt;one-time-code&gt;</span></code> and do not have to do any of the <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> editing
+mentioned above.</p>
+<p>By default, “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span></code>” creates a client-only node, that
+does not offer its disk space to other nodes. To configure other behavior,
+use “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span></code>” or see <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a>.</p>
+<p>The “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">run</span></code>” command above will run the node in the foreground.
+On Unix, you can run it in the background instead by using the
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">start</span></code>” command. To stop a node started in this way, use
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">stop</span></code>”. <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">--help</span></code> gives a summary of all commands.</p>
+</div>
+<div class="section" id="running-a-server-or-introducer">
+<h3>Running a Server or Introducer<a class="headerlink" href="#running-a-server-or-introducer" title="Permalink to this headline">¶</a></h3>
+<p>To build either a storage server node, or an introducer node, you’ll need
+a way for clients to connect to it. The simplest case is when the
+computer is on the public internet (e.g. a “VPS” virtual private server,
+with a public IP address and a DNS hostname like <code class="docutils literal notranslate"><span class="pre">example.net</span></code>). See
+<a class="reference internal" href="servers.html"><span class="doc">How To Configure A Server</span></a> for help with more complex scenarios, using the <code class="docutils literal notranslate"><span class="pre">--port</span></code>
+and <code class="docutils literal notranslate"><span class="pre">--location</span></code> arguments.</p>
+<p>To construct an introducer, create a new base directory for it (the name
+of the directory is up to you), <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it, and run “<code class="docutils literal notranslate"><span class="pre">tahoe</span>
+<span class="pre">create-introducer</span> <span class="pre">--hostname=example.net</span> <span class="pre">.</span></code>” (but using the hostname of
+your VPS). Now run the introducer using “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">start</span> <span class="pre">.</span></code>”. After it
+starts, it will write a file named <code class="docutils literal notranslate"><span class="pre">introducer.furl</span></code> into the
+<code class="docutils literal notranslate"><span class="pre">private/</span></code> subdirectory of that base directory. This file contains the
+URL the other nodes must use in order to connect to this introducer.
+(Note that “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">run</span> <span class="pre">.</span></code>” doesn’t work for introducers, this is a
+known issue: <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/937">#937</a>.)</p>
+<p>You can distribute your Introducer fURL securely to new clients by using
+the <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">invite</span></code> command. This will prepare some JSON to send to the
+other side, request a <a class="reference external" href="https://magic-wormhole.io/">magic wormhole</a> code from
+<code class="docutils literal notranslate"><span class="pre">wormhole.tahoe-lafs.org</span></code> and print it out to the terminal. This
+one-time code should be transmitted to the user of the client, who can
+then run <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span> <span class="pre">--join</span> <span class="pre">&lt;one-time-code&gt;</span></code>.</p>
+<p>Storage servers are created the same way: <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span>
+<span class="pre">--hostname=HOSTNAME</span> <span class="pre">.</span></code> from a new directory. You’ll need to provide the
+introducer FURL (either as a <code class="docutils literal notranslate"><span class="pre">--introducer=</span></code> argument, or by editing
+the <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> configuration file afterwards) to connect to the
+introducer of your choice.</p>
+<p>See <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a> for more details about how to configure
+Tahoe-LAFS.</p>
+</div>
+<div class="section" id="a-note-about-small-grids">
+<h3>A note about small grids<a class="headerlink" href="#a-note-about-small-grids" title="Permalink to this headline">¶</a></h3>
+<p>By default, Tahoe-LAFS ships with the configuration parameter
+<code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> set to 7. If you are using Tahoe-LAFS on a grid with
+fewer than 7 storage nodes, this won’t work well for you — none of your
+uploads will succeed. To fix this, see <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a> to learn how
+to set <code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> to a more suitable value for your grid.</p>
+</div>
+<div class="section" id="development-with-docker">
+<h3>Development with Docker<a class="headerlink" href="#development-with-docker" title="Permalink to this headline">¶</a></h3>
+<p>If you want to stand up a small local test environment, you can install
+<a class="reference external" href="https://docs.docker.com/">Docker</a> and <a class="reference external" href="https://docs.docker.com/compose/">Docker Compose</a>. Once you have cloned the repository, run
+<code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code> from the project’s root directory. This will start a
+introducer, server, and a client configured to connect to them. After the
+containers start, you can access the WUI by navigating to
+<code class="docutils literal notranslate"><span class="pre">http://localhost:3456</span></code> in your browser.</p>
+</div>
+</div>
+<div class="section" id="do-stuff-with-it">
+<h2>Do Stuff With It<a class="headerlink" href="#do-stuff-with-it" title="Permalink to this headline">¶</a></h2>
+<p>This is how to use your Tahoe-LAFS node.</p>
+<div class="section" id="the-wui">
+<h3>The WUI<a class="headerlink" href="#the-wui" title="Permalink to this headline">¶</a></h3>
+<p>Point your web browser to <a class="reference external" href="http://127.0.0.1:3456">http://127.0.0.1:3456</a> — which is the URL of the
+gateway running on your own local computer — to use your newly created node.</p>
+<p>Create a new directory (with the button labelled “create a directory”).
+Your web browser will load the new directory.  Now if you want to be
+able to come back to this directory later, you have to bookmark it, or
+otherwise save a copy of the URL.  If you lose the URL to this directory,
+then you can never again come back to this directory.</p>
+</div>
+<div class="section" id="the-cli">
+<h3>The CLI<a class="headerlink" href="#the-cli" title="Permalink to this headline">¶</a></h3>
+<p>Prefer the command-line? Run “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">--help</span></code>” (the same command-line
+tool that is used to start and stop nodes serves to navigate and use the
+decentralized file store). To get started, create a new directory and
+mark it as the ‘tahoe:’ alias by running “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-alias</span> <span class="pre">tahoe</span></code>”.
+Once you’ve done that, you can do “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">ls</span> <span class="pre">tahoe:</span></code>” and “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">cp</span>
+<span class="pre">LOCALFILE</span> <span class="pre">tahoe:foo.txt</span></code>” to work with your file store. The Tahoe-LAFS
+CLI uses similar syntax to the well-known scp and rsync tools. See
+<a class="reference internal" href="frontends/CLI.html"><span class="doc">The Tahoe-LAFS CLI commands</span></a> for more details.</p>
+<p>To backup a directory full of files and subdirectories, run “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span>
+<span class="pre">LOCALDIRECTORY</span> <span class="pre">tahoe:</span></code>”. This will create a new LAFS subdirectory inside the
+“tahoe” LAFS directory named “Archive”, and inside “Archive”, it will create
+a new subdirectory whose name is the current date and time. That newly
+created subdirectory will be populated with a snapshot copy of all files and
+directories currently reachable from LOCALDIRECTORY. Then <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span></code>
+will make a link to that snapshot directory from the “tahoe” LAFS directory,
+and name the link “Latest”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span></code> cleverly avoids uploading any files or directories that
+haven’t changed, and it also cleverly deduplicates any files or directories
+that have identical contents to other files or directories that it has
+previously backed-up. This means that running <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span></code> is a nice
+incremental operation that backs up your files and directories efficiently,
+and if it gets interrupted (for example by a network outage, or by you
+rebooting your computer during the backup, or so on), it will resume right
+where it left off the next time you run <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span></code>.</p>
+<p>See <a class="reference internal" href="frontends/CLI.html"><span class="doc">The Tahoe-LAFS CLI commands</span></a> for more information about the <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">backup</span></code>
+command, as well as other commands.</p>
+<p>As with the WUI (and with all current interfaces to Tahoe-LAFS), you
+are responsible for remembering directory capabilities yourself. If you
+create a new directory and lose the capability to it, then you cannot
+access that directory ever again.</p>
+</div>
+<div class="section" id="the-sftp-and-ftp-frontends">
+<h3>The SFTP and FTP frontends<a class="headerlink" href="#the-sftp-and-ftp-frontends" title="Permalink to this headline">¶</a></h3>
+<p>You can access your Tahoe-LAFS grid via any <a class="reference external" href="https://en.wikipedia.org/wiki/SSH_file_transfer_protocol">SFTP</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a> client. See
+<a class="reference internal" href="frontends/FTP-and-SFTP.html"><span class="doc">Tahoe-LAFS SFTP and FTP Frontends</span></a> for how to set this up. On most Unix
+platforms, you can also use SFTP to plug Tahoe-LAFS into your computer’s
+local filesystem via <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, but see the <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/FAQ#Q23_FUSE">FAQ about performance
+problems</a>.</p>
+<p>The <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/SftpFrontend">SftpFrontend</a> page on the wiki has more information about using SFTP with
+Tahoe-LAFS.</p>
+</div>
+<div class="section" id="the-wapi">
+<h3>The WAPI<a class="headerlink" href="#the-wapi" title="Permalink to this headline">¶</a></h3>
+<p>Want to program your Tahoe-LAFS node to do your bidding?  Easy!  See
+<a class="reference internal" href="frontends/webapi.html"><span class="doc">The Tahoe REST-ful Web API</span></a>.</p>
+</div>
+</div>
+<div class="section" id="socialize">
+<h2>Socialize<a class="headerlink" href="#socialize" title="Permalink to this headline">¶</a></h2>
+<p>You can chat with other users of and hackers of this software on the
+#tahoe-lafs IRC channel at <code class="docutils literal notranslate"><span class="pre">irc.freenode.net</span></code>, or on the <a class="reference external" href="https://tahoe-lafs.org/cgi-bin/mailman/listinfo/tahoe-dev">tahoe-dev mailing
+list</a>.</p>
+</div>
+<div class="section" id="complain">
+<h2>Complain<a class="headerlink" href="#complain" title="Permalink to this headline">¶</a></h2>
+<p>Bugs can be filed on the Tahoe-LAFS “Trac” instance, at
+<a class="reference external" href="https://tahoe-lafs.org/trac/">https://tahoe-lafs.org/trac/</a> .</p>
+<p>You can also “fork” the repo and submit Pull Requests on Github:
+<a class="reference external" href="https://github.com/tahoe-lafs/tahoe-lafs">https://github.com/tahoe-lafs/tahoe-lafs</a> .</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How To Run Tahoe-LAFS</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#being-introduced-to-a-grid">Being Introduced to a Grid</a></li>
+<li><a class="reference internal" href="#running-a-client">Running a Client</a></li>
+<li><a class="reference internal" href="#running-a-server-or-introducer">Running a Server or Introducer</a></li>
+<li><a class="reference internal" href="#a-note-about-small-grids">A note about small grids</a></li>
+<li><a class="reference internal" href="#development-with-docker">Development with Docker</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#do-stuff-with-it">Do Stuff With It</a><ul>
+<li><a class="reference internal" href="#the-wui">The WUI</a></li>
+<li><a class="reference internal" href="#the-cli">The CLI</a></li>
+<li><a class="reference internal" href="#the-sftp-and-ftp-frontends">The SFTP and FTP frontends</a></li>
+<li><a class="reference internal" href="#the-wapi">The WAPI</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#socialize">Socialize</a></li>
+<li><a class="reference internal" href="#complain">Complain</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="INSTALL.html"
+                        title="previous chapter">Installing Tahoe-LAFS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="magic-wormhole-invites.html"
+                        title="next chapter">Magic Wormhole Invites</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/running.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="magic-wormhole-invites.html" title="Magic Wormhole Invites"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="INSTALL.html" title="Installing Tahoe-LAFS"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

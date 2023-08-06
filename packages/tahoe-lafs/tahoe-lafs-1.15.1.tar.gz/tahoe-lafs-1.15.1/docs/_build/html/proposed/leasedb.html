@@ -1,0 +1,369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lease database design &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Storage Node Protocol (“Great Black Swamp”, “GBS”)" href="http-storage-node-protocol.html" />
+    <link rel="prev" title="Proposed Specifications" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="http-storage-node-protocol.html" title="Storage Node Protocol (“Great Black Swamp”, “GBS”)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Proposed Specifications"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Proposed Specifications</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lease-database-design">
+<h1>Lease database design<a class="headerlink" href="#lease-database-design" title="Permalink to this headline">¶</a></h1>
+<p>The target audience for this document is developers who wish to understand
+the new lease database (leasedb) planned to be added in Tahoe-LAFS v1.11.0.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>A “lease” is a request by an account that a share not be deleted before a
+specified time. Each storage server stores leases in order to know which
+shares to spare from garbage collection.</p>
+</div>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>The leasedb will replace the current design in which leases are stored in
+the storage server’s share container files. That design has several
+disadvantages:</p>
+<ul class="simple">
+<li>Updating a lease requires modifying a share container file (even for
+immutable shares). This complicates the implementation of share classes.
+The mixing of share contents and lease data in share files also led to a
+security bug (ticket <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1528">#1528</a>).</li>
+<li>When only the disk backend is supported, it is possible to read and
+update leases synchronously because the share files are stored locally
+to the storage server. For the cloud backend, accessing share files
+requires an HTTP request, and so must be asynchronous. Accepting this
+asynchrony for lease queries would be both inefficient and complex.
+Moving lease information out of shares and into a local database allows
+lease queries to stay synchronous.</li>
+</ul>
+<p>Also, the current cryptographic protocol for renewing and cancelling leases
+(based on shared secrets derived from secure hash functions) is complex,
+and the cancellation part was never used.</p>
+<p>The leasedb solves the first two problems by storing the lease information in
+a local database instead of in the share container files. The share data
+itself is still held in the share container file.</p>
+<p>At the same time as implementing leasedb, we devised a simpler protocol for
+allocating and cancelling leases: a client can use a public key digital
+signature to authenticate access to a foolscap object representing the
+authority of an account. This protocol is not yet implemented; at the time
+of writing, only an “anonymous” account is supported.</p>
+<p>The leasedb also provides an efficient way to get summarized information,
+such as total space usage of shares leased by an account, for accounting
+purposes.</p>
+</div>
+<div class="section" id="design-constraints">
+<h2>Design constraints<a class="headerlink" href="#design-constraints" title="Permalink to this headline">¶</a></h2>
+<p>A share is stored as a collection of objects. The persistent storage may be
+remote from the server (for example, cloud storage).</p>
+<p>Writing to the persistent store objects is in general not an atomic
+operation. So the leasedb also keeps track of which shares are in an
+inconsistent state because they have been partly written. (This may
+change in future when we implement a protocol to improve atomicity of
+updates to mutable shares.)</p>
+<p>Leases are no longer stored in shares. The same share format is used as
+before, but the lease slots are ignored, and are cleared when rewriting a
+mutable share. The new design also does not use lease renewal or cancel
+secrets. (They are accepted as parameters in the storage protocol interfaces
+for backward compatibility, but are ignored. Cancel secrets were already
+ignored due to the fix for <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1528">#1528</a>.)</p>
+<p>The new design needs to be fail-safe in the sense that if the lease database
+is lost or corruption is detected, no share data will be lost (even though
+the metadata about leases held by particular accounts has been lost).</p>
+</div>
+<div class="section" id="accounting-crawler">
+<h2>Accounting crawler<a class="headerlink" href="#accounting-crawler" title="Permalink to this headline">¶</a></h2>
+<p>A “crawler” is a long-running process that visits share container files at a
+slow rate, so as not to overload the server by trying to visit all share
+container files one after another immediately.</p>
+<p>The accounting crawler replaces the previous “lease crawler”. It examines
+each share container file and compares it with the state of the leasedb, and
+may update the state of the share and/or the leasedb.</p>
+<p>The accounting crawler may perform the following functions (but see ticket
+#1834 for a proposal to reduce the scope of its responsibility):</p>
+<ul class="simple">
+<li>Remove leases that are past their expiration time. (Currently, this is
+done automatically before deleting shares, but we plan to allow expiration
+to be performed separately for individual accounts in future.)</li>
+<li>Delete the objects containing unleased shares — that is, shares that have
+stable entries in the leasedb but no current leases (see below for the
+definition of “stable” entries).</li>
+<li>Discover shares that have been manually added to storage, via <code class="docutils literal notranslate"><span class="pre">scp</span></code> or
+some other out-of-band means.</li>
+<li>Discover shares that are present when a storage server is upgraded to
+a leasedb-supporting version from a previous version, and give them
+“starter leases”.</li>
+<li>Recover from a situation where the leasedb is lost or detectably
+corrupted. This is handled in the same way as upgrading from a previous
+version.</li>
+<li>Detect shares that have unexpectedly disappeared from storage.  The
+disappearance of a share is logged, and its entry and leases are removed
+from the leasedb.</li>
+</ul>
+</div>
+<div class="section" id="accounts">
+<h2>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h2>
+<p>An account holds leases for some subset of shares stored by a server. The
+leasedb schema can handle many distinct accounts, but for the time being we
+create only two accounts: an anonymous account and a starter account. The
+starter account is used for leases on shares discovered by the accounting
+crawler; the anonymous account is used for all other leases.</p>
+<p>The leasedb has at most one lease entry per account per (storage_index,
+shnum) pair. This entry stores the times when the lease was last renewed and
+when it is set to expire (if the expiration policy does not force it to
+expire earlier), represented as Unix UTC-seconds-since-epoch timestamps.</p>
+<p>For more on expiration policy, see <a class="reference internal" href="../garbage-collection.html"><span class="doc">Garbage Collection in Tahoe</span></a>.</p>
+</div>
+<div class="section" id="share-states">
+<h2>Share states<a class="headerlink" href="#share-states" title="Permalink to this headline">¶</a></h2>
+<p>The leasedb holds an explicit indicator of the state of each share.</p>
+<p>The diagram and descriptions below give the possible values of the “state”
+indicator, what that value means, and transitions between states, for any
+(storage_index, shnum) pair on each server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#        STATE_STABLE -------.</span>
+<span class="c1">#         ^   |   ^ |         |</span>
+<span class="c1">#         |   v   | |         v</span>
+<span class="c1">#    STATE_COMING | |    STATE_GOING</span>
+<span class="c1">#         ^       | |         |</span>
+<span class="c1">#         |       | v         |</span>
+<span class="c1">#         &#39;----- NONE &lt;------&#39;</span>
+</pre></div>
+</div>
+<p><strong>NONE</strong>: There is no entry in the <code class="docutils literal notranslate"><span class="pre">shares</span></code> table for this (storage_index,
+shnum) in this server’s leasedb. This is the initial state.</p>
+<p><strong>STATE_COMING</strong>: The share is being created or (if a mutable share)
+updated. The store objects may have been at least partially written, but
+the storage server doesn’t have confirmation that they have all been
+completely written.</p>
+<p><strong>STATE_STABLE</strong>: The store objects have been completely written and are
+not in the process of being modified or deleted by the storage server. (It
+could have been modified or deleted behind the back of the storage server,
+but if it has, the server has not noticed that yet.) The share may or may not
+be leased.</p>
+<p><strong>STATE_GOING</strong>: The share is being deleted.</p>
+</div>
+<div class="section" id="state-transitions">
+<h2>State transitions<a class="headerlink" href="#state-transitions" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><strong>STATE_GOING</strong> → <strong>NONE</strong></p>
+<blockquote>
+<div><p>trigger: The storage server gains confidence that all store objects for
+the share have been removed.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Remove the entry in the leasedb.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>STATE_STABLE</strong> → <strong>NONE</strong></p>
+<blockquote>
+<div><p>trigger: The accounting crawler noticed that all the store objects for
+this share are gone.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Remove the entry in the leasedb.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>NONE</strong> → <strong>STATE_COMING</strong></p>
+<blockquote>
+<div><p>triggers: A new share is being created, as explicitly signalled by a
+client invoking a creation command, <em>or</em> the accounting crawler discovers
+an incomplete share.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Add an entry to the leasedb with <strong>STATE_COMING</strong>.</li>
+<li>(In case of explicit creation) begin writing the store objects to hold
+the share.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>STATE_STABLE</strong> → <strong>STATE_COMING</strong></p>
+<blockquote>
+<div><p>trigger: A mutable share is being modified, as explicitly signalled by a
+client invoking a modification command.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Add an entry to the leasedb with <strong>STATE_COMING</strong>.</li>
+<li>Begin updating the store objects.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>STATE_COMING</strong> → <strong>STATE_STABLE</strong></p>
+<blockquote>
+<div><p>trigger: All store objects have been written.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Change the state value of this entry in the leasedb from
+<strong>STATE_COMING</strong> to <strong>STATE_STABLE</strong>.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>NONE</strong> → <strong>STATE_STABLE</strong></p>
+<blockquote>
+<div><p>trigger: The accounting crawler discovers a complete share.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Add an entry to the leasedb with <strong>STATE_STABLE</strong>.</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>STATE_STABLE</strong> → <strong>STATE_GOING</strong></p>
+<blockquote>
+<div><p>trigger: The share should be deleted because it is unleased.</p>
+<p>implementation:</p>
+<ol class="arabic simple">
+<li>Change the state value of this entry in the leasedb from
+<strong>STATE_STABLE</strong> to <strong>STATE_GOING</strong>.</li>
+<li>Initiate removal of the store objects.</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p>The following constraints are needed to avoid race conditions:</p>
+<ul class="simple">
+<li>While a share is being deleted (entry in <strong>STATE_GOING</strong>), we do not accept
+any requests to recreate it. That would result in add and delete requests
+for store objects being sent concurrently, with undefined results.</li>
+<li>While a share is being added or modified (entry in <strong>STATE_COMING</strong>), we
+treat it as leased.</li>
+<li>Creation or modification requests for a given mutable share are serialized.</li>
+</ul>
+</div>
+<div class="section" id="unresolved-design-issues">
+<h2>Unresolved design issues<a class="headerlink" href="#unresolved-design-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>What happens if a write to store objects for a new share fails
+permanently?  If we delete the share entry, then the accounting crawler
+will eventually get to those store objects and see that their lengths
+are inconsistent with the length in the container header. This will cause
+the share to be treated as corrupted. Should we instead attempt to
+delete those objects immediately? If so, do we need a direct
+<strong>STATE_COMING</strong> → <strong>STATE_GOING</strong> transition to handle this case?</li>
+<li>What happens if only some store objects for a share disappear
+unexpectedly?  This case is similar to only some objects having been
+written when we get an unrecoverable error during creation of a share, but
+perhaps we want to treat it differently in order to preserve information
+about the storage service having lost data.</li>
+<li>Does the leasedb need to track corrupted shares?</li>
+</ul>
+</div>
+<div class="section" id="future-directions">
+<h2>Future directions<a class="headerlink" href="#future-directions" title="Permalink to this headline">¶</a></h2>
+<p>Clients will have key pairs identifying accounts, and will be able to add
+leases for a specific account. Various space usage policies can be defined.</p>
+<p>Better migration tools (‘tahoe storage export’?) will create export files
+that include both the share data and the lease data, and then an import tool
+will both put the share in the right place and update the recipient node’s
+leasedb.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Lease database design</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#design-constraints">Design constraints</a></li>
+<li><a class="reference internal" href="#accounting-crawler">Accounting crawler</a></li>
+<li><a class="reference internal" href="#accounts">Accounts</a></li>
+<li><a class="reference internal" href="#share-states">Share states</a></li>
+<li><a class="reference internal" href="#state-transitions">State transitions</a></li>
+<li><a class="reference internal" href="#unresolved-design-issues">Unresolved design issues</a></li>
+<li><a class="reference internal" href="#future-directions">Future directions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Proposed Specifications</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="http-storage-node-protocol.html"
+                        title="next chapter">Storage Node Protocol (“Great Black Swamp”, “GBS”)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/proposed/leasedb.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="http-storage-node-protocol.html" title="Storage Node Protocol (“Great Black Swamp”, “GBS”)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Proposed Specifications"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Proposed Specifications</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

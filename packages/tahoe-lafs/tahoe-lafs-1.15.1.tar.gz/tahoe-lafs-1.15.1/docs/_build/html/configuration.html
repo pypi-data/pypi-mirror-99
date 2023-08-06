@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuring a Tahoe-LAFS node &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tahoe-LAFS Architecture" href="architecture.html" />
+    <link rel="prev" title="Magic Wormhole Invites" href="magic-wormhole-invites.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="architecture.html" title="Tahoe-LAFS Architecture"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="magic-wormhole-invites.html" title="Magic Wormhole Invites"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuring-a-tahoe-lafs-node">
+<h1>Configuring a Tahoe-LAFS node<a class="headerlink" href="#configuring-a-tahoe-lafs-node" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#node-types">Node Types</a></li>
+<li><a class="reference internal" href="#overall-node-configuration">Overall Node Configuration</a></li>
+<li><a class="reference internal" href="#connection-management">Connection Management</a></li>
+<li><a class="reference internal" href="#client-configuration">Client Configuration</a></li>
+<li><a class="reference internal" href="#storage-server-configuration">Storage Server Configuration</a></li>
+<li><a class="reference internal" href="#storage-server-plugin-configuration">Storage Server Plugin Configuration</a></li>
+<li><a class="reference internal" href="#frontend-configuration">Frontend Configuration</a></li>
+<li><a class="reference internal" href="#running-a-helper">Running A Helper</a></li>
+<li><a class="reference internal" href="#running-an-introducer">Running An Introducer</a></li>
+<li><a class="reference internal" href="#other-files-in-basedir">Other Files in BASEDIR</a></li>
+<li><a class="reference internal" href="#static-server-definitions">Static Server Definitions</a></li>
+<li><a class="reference internal" href="#other-files">Other files</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ol>
+<p>A Tahoe-LAFS node is configured by writing to files in its base directory.
+These files are read by the node when it starts, so each time you change
+them, you need to restart the node.</p>
+<p>The node also writes state to its base directory, so it will create files on
+its own.</p>
+<p>This document contains a complete list of the config files that are examined
+by the client node, as well as the state files that you’ll observe in its
+base directory.</p>
+<p>The main file is named “<code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>”, and is an “<a class="reference external" href="https://en.wikipedia.org/wiki/INI_file">.INI</a>”-style configuration
+file (parsed by the Python stdlib <a class="reference external" href="https://docs.python.org/2/library/configparser.html">ConfigParser</a> module: “<code class="docutils literal notranslate"><span class="pre">[name]</span></code>” section
+markers, lines with “<code class="docutils literal notranslate"><span class="pre">key.subkey:</span> <span class="pre">value</span></code>”, <a class="reference external" href="https://www.ietf.org/rfc/rfc0822">RFC822-style</a>
+continuations). There are also other files containing information that does
+not easily fit into this format. The “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span></code>” or “<code class="docutils literal notranslate"><span class="pre">tahoe</span>
+<span class="pre">create-client</span></code>” command will create an initial <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file for
+you. After creation, the node will never modify the <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file: all
+persistent state is put in other files.</p>
+<p>The item descriptions below use the following types:</p>
+<p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p>
+<blockquote>
+<div>one of (True, yes, on, 1, False, off, no, 0), case-insensitive</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">strports</span> <span class="pre">string</span></code></p>
+<blockquote>
+<div>a Twisted listening-port specification string, like “<code class="docutils literal notranslate"><span class="pre">tcp:80</span></code>” or
+“<code class="docutils literal notranslate"><span class="pre">tcp:3456:interface=127.0.0.1</span></code>”. For a full description of the format,
+see <a class="reference external" href="https://twistedmatrix.com/documents/current/api/twisted.application.strports.html">the Twisted strports documentation</a>.  Please note, if interface= is
+not specified, Tahoe-LAFS will attempt to bind the port specified on all
+interfaces.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">endpoint</span> <span class="pre">specification</span> <span class="pre">string</span></code></p>
+<blockquote>
+<div>a Twisted Endpoint specification string, like “<code class="docutils literal notranslate"><span class="pre">tcp:80</span></code>” or
+“<code class="docutils literal notranslate"><span class="pre">tcp:3456:interface=127.0.0.1</span></code>”. These are replacing strports strings.
+For a full description of the format, see <a class="reference external" href="http://twistedmatrix.com/documents/current/core/howto/endpoints.html#endpoint-types-included-with-twisted">the Twisted Endpoints
+documentation</a>. Please note, if interface= is not specified, Tahoe-LAFS
+will attempt to bind the port specified on all interfaces. Also note that
+<code class="docutils literal notranslate"><span class="pre">tub.port</span></code> only works with TCP endpoints right now.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">FURL</span> <span class="pre">string</span></code></p>
+<blockquote>
+<div>a Foolscap endpoint identifier, like
+<code class="docutils literal notranslate"><span class="pre">pb://soklj4y7eok5c3xkmjeqpw&#64;192.168.69.247:44801/eqpwqtzm</span></code></div></blockquote>
+<div class="section" id="node-types">
+<h2>Node Types<a class="headerlink" href="#node-types" title="Permalink to this headline">¶</a></h2>
+<p>A node can be a client/server, an introducer, or a statistics gatherer.</p>
+<p>Client/server nodes provide one or more of the following services:</p>
+<ul class="simple">
+<li>web-API service</li>
+<li>SFTP service</li>
+<li>FTP service</li>
+<li>helper service</li>
+<li>storage service.</li>
+</ul>
+<p>A client/server that provides storage service (i.e. storing shares for
+clients) is called a “storage server”. If it provides any of the other
+services, it is a “storage client” (a node can be both a storage server and a
+storage client). A client/server node that provides web-API service is called
+a “gateway”.</p>
+</div>
+<div class="section" id="overall-node-configuration">
+<h2>Overall Node Configuration<a class="headerlink" href="#overall-node-configuration" title="Permalink to this headline">¶</a></h2>
+<p>This section controls the network behavior of the node overall: which ports
+and IP addresses are used, when connections are timed out, etc. This
+configuration applies to all node types and is independent of the services
+that the node is offering.</p>
+<p>If your node is behind a firewall or NAT device and you want other clients to
+connect to it, you’ll need to open a port in the firewall or NAT, and specify
+that port number in the tub.port option. If behind a NAT, you <em>may</em> need to
+set the <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> option described below.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[node]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">nickname</span> <span class="pre">=</span> <span class="pre">(UTF-8</span> <span class="pre">string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>This value will be displayed in management tools as this node’s
+“nickname”. If not provided, the nickname will be set to “&lt;unspecified&gt;”.
+This string shall be a UTF-8 encoded Unicode string.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">web.port</span> <span class="pre">=</span> <span class="pre">(strports</span> <span class="pre">string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This controls where the node’s web server should listen, providing node
+status and, if the node is a client/server, providing web-API service as
+defined in <a class="reference internal" href="frontends/webapi.html"><span class="doc">The Tahoe REST-ful Web API</span></a>.</p>
+<p>This file contains a Twisted “strports” specification such as “<code class="docutils literal notranslate"><span class="pre">3456</span></code>”
+or “<code class="docutils literal notranslate"><span class="pre">tcp:3456:interface=127.0.0.1</span></code>”. The “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span></code>” or
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span></code>” commands set the <code class="docutils literal notranslate"><span class="pre">web.port</span></code> to
+“<code class="docutils literal notranslate"><span class="pre">tcp:3456:interface=127.0.0.1</span></code>” by default; this is overridable by the
+<code class="docutils literal notranslate"><span class="pre">--webport</span></code> option. You can make it use SSL by writing
+“<code class="docutils literal notranslate"><span class="pre">ssl:3456:privateKey=mykey.pem:certKey=cert.pem</span></code>” instead.</p>
+<p>If this is not provided, the node will not run a web server.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">web.static</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This controls where the <code class="docutils literal notranslate"><span class="pre">/static</span></code> portion of the URL space is
+served. The value is a directory name (<code class="docutils literal notranslate"><span class="pre">~username</span></code> is allowed, and
+non-absolute names are interpreted relative to the node’s basedir), which
+can contain HTML and other files. This can be used to serve a
+Javascript-based frontend to the Tahoe-LAFS node, or other services.</p>
+<p>The default value is “<code class="docutils literal notranslate"><span class="pre">public_html</span></code>”, which will serve
+<code class="docutils literal notranslate"><span class="pre">BASEDIR/public_html</span></code> .  With the default settings,
+<code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:3456/static/foo.html</span></code> will serve the contents of
+<code class="docutils literal notranslate"><span class="pre">BASEDIR/public_html/foo.html</span></code> .</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tub.port</span> <span class="pre">=</span> <span class="pre">(endpoint</span> <span class="pre">specification</span> <span class="pre">strings</span> <span class="pre">or</span> <span class="pre">&quot;disabled&quot;,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This controls which port the node uses to accept Foolscap connections
+from other nodes. It is parsed as a comma-separated list of Twisted
+“server endpoint descriptor” strings, each of which is a value like
+<code class="docutils literal notranslate"><span class="pre">tcp:12345</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp:23456:interface=127.0.0.1</span></code>.</p>
+<p>To listen on multiple ports at once (e.g. both TCP-on-IPv4 and TCP-on-IPv6),
+use something like <code class="docutils literal notranslate"><span class="pre">tcp6:interface=2600\:3c01\:f03c\:91ff\:fe93\:d272:3456,tcp:interface=8.8.8.8:3456</span></code>.
+Lists of endpoint descriptor strings like the following <code class="docutils literal notranslate"><span class="pre">tcp:12345,tcp6:12345</span></code>
+are known to not work because an <code class="docutils literal notranslate"><span class="pre">Address</span> <span class="pre">already</span> <span class="pre">in</span> <span class="pre">use.</span></code> error.</p>
+<p>If any descriptor begins with <code class="docutils literal notranslate"><span class="pre">listen:tor</span></code>, or <code class="docutils literal notranslate"><span class="pre">listen:i2p</span></code>, the
+corresponding tor/i2p Provider object will construct additional endpoints
+for the Tub to listen on. This allows the <code class="docutils literal notranslate"><span class="pre">[tor]</span></code> or <code class="docutils literal notranslate"><span class="pre">[i2p]</span></code> sections
+in <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> to customize the endpoint; e.g. to add I2CP control
+options. If you use <code class="docutils literal notranslate"><span class="pre">listen:i2p</span></code>, you should not also have an
+<code class="docutils literal notranslate"><span class="pre">i2p:..</span></code> endpoint in <code class="docutils literal notranslate"><span class="pre">tub.port</span></code>, as that would result in multiple
+I2P-based listeners.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> is the string <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, the node will not listen at
+all, and thus cannot accept connections from other nodes. If <code class="docutils literal notranslate"><span class="pre">[storage]</span>
+<span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code>, or <code class="docutils literal notranslate"><span class="pre">[helper]</span> <span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code>, or the node is an
+Introducer, then it is an error to have <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> be empty. If
+<code class="docutils literal notranslate"><span class="pre">tub.port</span></code> is disabled, then <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> must also be disabled,
+and vice versa.</p>
+<p>For backwards compatibility, if this contains a simple integer, it will
+be used as a TCP port number, like <code class="docutils literal notranslate"><span class="pre">tcp:%d</span></code> (which will accept
+connections on all interfaces). However <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> cannot be <code class="docutils literal notranslate"><span class="pre">0</span></code> or
+<code class="docutils literal notranslate"><span class="pre">tcp:0</span></code> (older versions accepted this, but the node is no longer
+willing to ask Twisted to allocate port numbers in this way). If
+<code class="docutils literal notranslate"><span class="pre">tub.port</span></code> is present, it may not be empty.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> config key is not provided (e.g. <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> appears
+nowhere in the <code class="docutils literal notranslate"><span class="pre">[node]</span></code> section, or is commented out), the node will
+look in <code class="docutils literal notranslate"><span class="pre">BASEDIR/client.port</span></code> (or <code class="docutils literal notranslate"><span class="pre">BASEDIR/introducer.port</span></code>, for
+introducers) for the descriptor that was used last time.</p>
+<p>If neither <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> nor the port file is available, the node will ask
+the kernel to allocate any available port (the moral equivalent of
+<code class="docutils literal notranslate"><span class="pre">tcp:0</span></code>). The allocated port number will be written into a descriptor
+string in <code class="docutils literal notranslate"><span class="pre">BASEDIR/client.port</span></code> (or <code class="docutils literal notranslate"><span class="pre">introducer.port</span></code>), so that
+subsequent runs will re-use the same port.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tub.location</span> <span class="pre">=</span> <span class="pre">(hint</span> <span class="pre">string</span> <span class="pre">or</span> <span class="pre">&quot;disabled&quot;,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>In addition to running as a client, each Tahoe-LAFS node can also run as
+a server, listening for connections from other Tahoe-LAFS clients. The
+node announces its location by publishing a “FURL” (a string with some
+connection hints) to the Introducer. The string it publishes can be found
+in <code class="docutils literal notranslate"><span class="pre">BASEDIR/private/storage.furl</span></code> . The <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> configuration
+controls what location is published in this announcement.</p>
+<p>If your node is meant to run as a server, you should fill this in, using
+a hostname or IP address that is reachable from your intended clients.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> is set to <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, then <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> must also
+be <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p>
+<p>If you don’t provide <code class="docutils literal notranslate"><span class="pre">tub.location</span></code>, the node will try to figure out a
+useful one by itself, by using tools like “<code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>” to determine the
+set of IP addresses on which it can be reached from nodes both near and
+far. It will also include the TCP port number on which it is listening
+(either the one specified by <code class="docutils literal notranslate"><span class="pre">tub.port</span></code>, or whichever port was assigned
+by the kernel when <code class="docutils literal notranslate"><span class="pre">tub.port</span></code> is left unspecified). However this
+automatic address-detection is discouraged, and will probably be removed
+from a future release. It will include the <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> “localhost”
+address (which is only useful to clients running on the same computer),
+and RFC1918 private-network addresses like <code class="docutils literal notranslate"><span class="pre">10.*.*.*</span></code> and
+<code class="docutils literal notranslate"><span class="pre">192.168.*.*</span></code> (which are only useful to clients on the local LAN). In
+general, the automatically-detected IP addresses will only be useful if
+the node has a public IP address, such as a VPS or colo-hosted server.</p>
+<p>You will certainly need to set <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> if your node lives behind
+a firewall that is doing inbound port forwarding, or if you are using
+other proxies such that the local IP address or port number is not the
+same one that remote clients should use to connect. You might also want
+to control this when using a Tor proxy to avoid revealing your actual IP
+address through the Introducer announcement.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">tub.location</span></code> is specified, by default it entirely replaces the
+automatically determined set of IP addresses. To include the automatically
+determined addresses as well as the specified ones, include the uppercase
+string “<code class="docutils literal notranslate"><span class="pre">AUTO</span></code>” in the list.</p>
+<p>The value is a comma-separated string of method:host:port location hints,
+like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tcp</span><span class="p">:</span><span class="mf">123.45</span><span class="o">.</span><span class="mf">67.89</span><span class="p">:</span><span class="mi">8098</span><span class="p">,</span><span class="n">tcp</span><span class="p">:</span><span class="n">tahoe</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">8098</span><span class="p">,</span><span class="n">tcp</span><span class="p">:</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8098</span>
+</pre></div>
+</div>
+<p>A few examples:</p>
+<ul>
+<li><p class="first">Don’t listen at all (client-only mode):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">disabled</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">disabled</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Use a DNS name so you can change the IP address more easily:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="n">tahoe</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">8098</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run a node behind a firewall (which has an external IP address) that
+has been configured to forward external port 7912 to our internal
+node’s port 8098:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="n">external</span><span class="o">-</span><span class="n">firewall</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">7912</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Emulate default behavior, assuming your host has public IP address of
+123.45.67.89, and the kernel-allocated port number was 8098:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mf">123.45</span><span class="o">.</span><span class="mf">67.89</span><span class="p">:</span><span class="mi">8098</span><span class="p">,</span><span class="n">tcp</span><span class="p">:</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8098</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Use a DNS name but also include the default set of addresses:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="n">tahoe</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">8098</span><span class="p">,</span><span class="n">AUTO</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run a node behind a Tor proxy (perhaps via <code class="docutils literal notranslate"><span class="pre">torsocks</span></code>), in
+client-only mode (i.e. we can make outbound connections, but other
+nodes will not be able to connect to us). The literal
+‘<code class="docutils literal notranslate"><span class="pre">unreachable.example.org</span></code>’ will not resolve, but will serve as a
+reminder to human observers that this node cannot be reached. “Don’t
+call us.. we’ll call you”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="n">unreachable</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run a node behind a Tor proxy, and make the server available as a Tor
+“hidden service”. (This assumes that other clients are running their
+node with <code class="docutils literal notranslate"><span class="pre">torsocks</span></code>, such that they are prepared to connect to a
+<code class="docutils literal notranslate"><span class="pre">.onion</span></code> address.) The hidden service must first be configured in
+Tor, by giving it a local port number and then obtaining a <code class="docutils literal notranslate"><span class="pre">.onion</span></code>
+name, using something in the <code class="docutils literal notranslate"><span class="pre">torrc</span></code> file like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HiddenServiceDir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tor</span><span class="o">/</span><span class="n">hidden_services</span><span class="o">/</span><span class="n">tahoe</span>
+<span class="n">HiddenServicePort</span> <span class="mi">29212</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8098</span>
+</pre></div>
+</div>
+<p>once Tor is restarted, the <code class="docutils literal notranslate"><span class="pre">.onion</span></code> hostname will be in
+<code class="docutils literal notranslate"><span class="pre">/var/lib/tor/hidden_services/tahoe/hostname</span></code>. Then set up your
+<code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tor</span><span class="p">:</span><span class="n">ualhejtq2p7ohfbb</span><span class="o">.</span><span class="n">onion</span><span class="p">:</span><span class="mi">29212</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">log_gatherer.furl</span> <span class="pre">=</span> <span class="pre">(FURL,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If provided, this contains a single FURL string that is used to contact a
+“log gatherer”, which will be granted access to the logport. This can be
+used to gather operational logs in a single place. Note that in previous
+releases of Tahoe-LAFS, if an old-style <code class="docutils literal notranslate"><span class="pre">BASEDIR/log_gatherer.furl</span></code>
+file existed it would also be used in addition to this value, allowing
+multiple log gatherers to be used at once. As of Tahoe-LAFS v1.9.0, an
+old-style file is ignored and a warning will be emitted if one is
+detected. This means that as of Tahoe-LAFS v1.9.0 you can have at most
+one log gatherer per node. See ticket <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1423">#1423</a> about lifting this
+restriction and letting you have multiple log gatherers.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">timeout.keepalive</span> <span class="pre">=</span> <span class="pre">(integer</span> <span class="pre">in</span> <span class="pre">seconds,</span> <span class="pre">optional)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">timeout.disconnect</span> <span class="pre">=</span> <span class="pre">(integer</span> <span class="pre">in</span> <span class="pre">seconds,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>If <code class="docutils literal notranslate"><span class="pre">timeout.keepalive</span></code> is provided, it is treated as an integral number
+of seconds, and sets the Foolscap “keepalive timer” to that value. For
+each connection to another node, if nothing has been heard for a while,
+we will attempt to provoke the other end into saying something. The
+duration of silence that passes before sending the PING will be between
+KT and 2*KT. This is mainly intended to keep NAT boxes from expiring idle
+TCP sessions, but also gives TCP’s long-duration keepalive/disconnect
+timers some traffic to work with. The default value is 240 (i.e. 4
+minutes).</p>
+<p>If timeout.disconnect is provided, this is treated as an integral number
+of seconds, and sets the Foolscap “disconnect timer” to that value. For
+each connection to another node, if nothing has been heard for a while,
+we will drop the connection. The duration of silence that passes before
+dropping the connection will be between DT-2*KT and 2*DT+2*KT (please see
+ticket <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/521">#521</a> for more details). If we are sending a large amount of
+data to the other end (which takes more than DT-2*KT to deliver), we
+might incorrectly drop the connection. The default behavior (when this
+value is not provided) is to disable the disconnect timer.</p>
+<p>See ticket <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/521">#521</a> for a discussion of how to pick these timeout values.
+Using 30 minutes means we’ll disconnect after 22 to 68 minutes of
+inactivity. Receiving data will reset this timeout, however if we have
+more than 22min of data in the outbound queue (such as 800kB in two
+pipelined segments of 10 shares each) and the far end has no need to
+contact us, our ping might be delayed, so we may disconnect them by
+accident.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tempdir</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This specifies a temporary directory for the web-API server to use, for
+holding large files while they are being uploaded. If a web-API client
+attempts to upload a 10GB file, this tempdir will need to have at least
+10GB available for the upload to complete.</p>
+<p>The default value is the <code class="docutils literal notranslate"><span class="pre">tmp</span></code> directory in the node’s base directory
+(i.e. <code class="docutils literal notranslate"><span class="pre">BASEDIR/tmp</span></code>), but it can be placed elsewhere. This directory is
+used for files that usually (on a Unix system) go into <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>. The
+string will be interpreted relative to the node’s base directory.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">reveal-IP-address</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">True)</span></code></p>
+<blockquote>
+<div><p>This is a safety flag. When set to False (aka “private mode”), the node
+will refuse to start if any of the other configuration options would
+reveal the node’s IP address to servers or the external network. This
+flag does not directly affect the node’s behavior: its only power is to
+veto node startup when something looks unsafe.</p>
+<p>The default is True (non-private mode), because setting it to False
+requires the installation of additional libraries (use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span>
+<span class="pre">tahoe-lafs[tor]</span></code> and/or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tahoe-lafs[i2p]</span></code> to get them) as
+well as additional non-python software (Tor/I2P daemons). Performance is
+also generally reduced when operating in private mode.</p>
+<p>When False, any of the following configuration problems will cause
+<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">start</span></code> to throw a PrivacyError instead of starting the node:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">[node]</span> <span class="pre">tub.location</span></code> contains any <code class="docutils literal notranslate"><span class="pre">tcp:</span></code> hints</li>
+<li><code class="docutils literal notranslate"><span class="pre">[node]</span> <span class="pre">tub.location</span></code> uses <code class="docutils literal notranslate"><span class="pre">AUTO</span></code>, or is missing/empty (because
+that defaults to AUTO)</li>
+<li><code class="docutils literal notranslate"><span class="pre">[connections]</span> <span class="pre">tcp</span> <span class="pre">=</span></code> is set to <code class="docutils literal notranslate"><span class="pre">tcp</span></code> (or left as the default),
+rather than being set to <code class="docutils literal notranslate"><span class="pre">tor</span></code> or <code class="docutils literal notranslate"><span class="pre">disabled</span></code></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="connection-management">
+<span id="id3"></span><h2>Connection Management<a class="headerlink" href="#connection-management" title="Permalink to this headline">¶</a></h2>
+<p>Three sections (<code class="docutils literal notranslate"><span class="pre">[tor]</span></code>, <code class="docutils literal notranslate"><span class="pre">[i2p]</span></code>, and <code class="docutils literal notranslate"><span class="pre">[connections]</span></code>) control how the
+Tahoe node makes outbound connections. Tor and I2P are configured here. This
+also controls when Tor and I2P are used: for all TCP connections (to hide
+your IP address), or only when necessary (just for servers which declare that
+they need Tor, because they use <code class="docutils literal notranslate"><span class="pre">.onion</span></code> addresses).</p>
+<p>Note that if you want to protect your node’s IP address, you should set
+<code class="docutils literal notranslate"><span class="pre">[node]</span> <span class="pre">reveal-IP-address</span> <span class="pre">=</span> <span class="pre">False</span></code>, which will refuse to launch the node if
+any of the other configuration settings might violate this privacy property.</p>
+<div class="section" id="connections">
+<h3><code class="docutils literal notranslate"><span class="pre">[connections]</span></code><a class="headerlink" href="#connections" title="Permalink to this headline">¶</a></h3>
+<p>This section controls <em>when</em> Tor and I2P are used. The <code class="docutils literal notranslate"><span class="pre">[tor]</span></code> and
+<code class="docutils literal notranslate"><span class="pre">[i2p]</span></code> sections (described later) control <em>how</em> Tor/I2P connections are
+managed.</p>
+<p>All Tahoe nodes need to make a connection to the Introducer; the <code class="docutils literal notranslate"><span class="pre">[client]</span>
+<span class="pre">introducer.furl</span></code> setting (described below) indicates where the Introducer
+lives. Tahoe client nodes must also make connections to storage servers:
+these targets are specified in announcements that come from the Introducer.
+Both are expressed as FURLs (a Foolscap URL), which include a list of
+“connection hints”. Each connection hint describes one (of perhaps many)
+network endpoints where the service might live.</p>
+<p>Connection hints include a type, and look like:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">tcp:tahoe.example.org:12345</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">tor:u33m4y7klhz3b.onion:1000</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">i2p:c2ng2pbrmxmlwpijn</span></code></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">tor</span></code> hints are always handled by the <code class="docutils literal notranslate"><span class="pre">tor</span></code> handler (configured in the
+<code class="docutils literal notranslate"><span class="pre">[tor]</span></code> section, described below). Likewise, <code class="docutils literal notranslate"><span class="pre">i2p</span></code> hints are always
+routed to the <code class="docutils literal notranslate"><span class="pre">i2p</span></code> handler. But either will be ignored if Tahoe was not
+installed with the necessary Tor/I2P support libraries, or if the Tor/I2P
+daemon is unreachable.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">[connections]</span></code> section lets you control how <code class="docutils literal notranslate"><span class="pre">tcp</span></code> hints are handled.
+By default, they use the normal TCP handler, which just makes direct
+connections (revealing your node’s IP address to both the target server and
+the intermediate network). The node behaves this way if the <code class="docutils literal notranslate"><span class="pre">[connections]</span></code>
+section is missing entirely, or if it looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">connections</span><span class="p">]</span>
+ <span class="n">tcp</span> <span class="o">=</span> <span class="n">tcp</span>
+</pre></div>
+</div>
+<p>To hide the Tahoe node’s IP address from the servers that it uses, set the
+<code class="docutils literal notranslate"><span class="pre">[connections]</span></code> section to use Tor for TCP hints:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">connections</span><span class="p">]</span>
+ <span class="n">tcp</span> <span class="o">=</span> <span class="n">tor</span>
+</pre></div>
+</div>
+<p>You can also disable TCP hints entirely, which would be appropriate when
+running an I2P-only node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">connections</span><span class="p">]</span>
+ <span class="n">tcp</span> <span class="o">=</span> <span class="n">disabled</span>
+</pre></div>
+</div>
+<p>(Note that I2P does not support connections to normal TCP ports, so
+<code class="docutils literal notranslate"><span class="pre">[connections]</span> <span class="pre">tcp</span> <span class="pre">=</span> <span class="pre">i2p</span></code> is invalid)</p>
+<p>In the future, Tahoe services may be changed to live on HTTP/HTTPS URLs
+instead of Foolscap. In that case, connections will be made using whatever
+handler is configured for <code class="docutils literal notranslate"><span class="pre">tcp</span></code> hints. So the same <code class="docutils literal notranslate"><span class="pre">tcp</span> <span class="pre">=</span> <span class="pre">tor</span></code>
+configuration will work.</p>
+</div>
+<div class="section" id="tor">
+<h3><code class="docutils literal notranslate"><span class="pre">[tor]</span></code><a class="headerlink" href="#tor" title="Permalink to this headline">¶</a></h3>
+<p>This controls how Tor connections are made. The defaults (all empty) mean
+that, when Tor is needed, the node will try to connect to a Tor daemon’s
+SOCKS proxy on localhost port 9050 or 9150. Port 9050 is the default Tor
+SOCKS port, so it should be available under any system Tor instance (e.g. the
+one launched at boot time when the standard Debian <code class="docutils literal notranslate"><span class="pre">tor</span></code> package is
+installed). Port 9150 is the SOCKS port for the Tor Browser Bundle, so it
+will be available any time the TBB is running.</p>
+<p>You can set <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">True</span></code> to cause the Tahoe node to launch a new Tor
+daemon when it starts up (and kill it at shutdown), if you don’t have a
+system-wide instance available. Note that it takes 30-60 seconds for Tor to
+get running, so using a long-running Tor process may enable a faster startup.
+If your Tor executable doesn’t live on <code class="docutils literal notranslate"><span class="pre">$PATH</span></code>, use <code class="docutils literal notranslate"><span class="pre">tor.executable=</span></code> to
+specify it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[tor]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">True)</span></code></p>
+<blockquote>
+<div>If False, this will disable the use of Tor entirely. The default of True
+means the node will use Tor, if necessary, and if possible.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">socks.port</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">endpoint</span> <span class="pre">specification</span> <span class="pre">string,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">empty)</span></code></p>
+<blockquote>
+<div><p>This tells the node that Tor connections should be routed to a SOCKS
+proxy listening on the given endpoint. The default (of an empty value)
+will cause the node to first try localhost port 9050, then if that fails,
+try localhost port 9150. These are the default listening ports of the
+standard Tor daemon, and the Tor Browser Bundle, respectively.</p>
+<p>While this nominally accepts an arbitrary endpoint string, internal
+limitations prevent it from accepting anything but <code class="docutils literal notranslate"><span class="pre">tcp:HOST:PORT</span></code>
+(unfortunately, unix-domain sockets are not yet supported). See ticket
+#2813 for details. Also note that using a HOST of anything other than
+localhost is discouraged, because you would be revealing your IP address
+to external (and possibly hostile) machines.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">control.port</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">endpoint</span> <span class="pre">specification</span> <span class="pre">string)</span></code></p>
+<blockquote>
+<div>This tells the node to connect to a pre-existing Tor daemon on the given
+control port (which is typically <code class="docutils literal notranslate"><span class="pre">unix://var/run/tor/control</span></code> or
+<code class="docutils literal notranslate"><span class="pre">tcp:localhost:9051</span></code>). The node will then ask Tor what SOCKS port it is
+using, and route Tor connections to that.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">(bool,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">False)</span></code></p>
+<blockquote>
+<div>If True, the node will spawn a new (private) copy of Tor at startup, and
+will kill it at shutdown. The new Tor will be given a persistent state
+directory under <code class="docutils literal notranslate"><span class="pre">NODEDIR/private/</span></code>, where Tor’s microdescriptors will
+be cached, to speed up subsequent startup.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tor.executable</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">empty)</span></code></p>
+<blockquote>
+<div>This controls which Tor executable is used when <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">True</span></code>. If
+empty, the first executable program named <code class="docutils literal notranslate"><span class="pre">tor</span></code> found on <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> will
+be used.</div></blockquote>
+<p>There are 5 valid combinations of these configuration settings:</p>
+<ul class="simple">
+<li>1: <code class="docutils literal notranslate"><span class="pre">(empty)</span></code>: use SOCKS on port 9050/9150</li>
+<li>2: <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">true</span></code>: launch a new Tor</li>
+<li>3: <code class="docutils literal notranslate"><span class="pre">socks.port</span> <span class="pre">=</span> <span class="pre">tcp:HOST:PORT</span></code>: use an existing Tor on the given SOCKS port</li>
+<li>4: <code class="docutils literal notranslate"><span class="pre">control.port</span> <span class="pre">=</span> <span class="pre">ENDPOINT</span></code>: use an existing Tor at the given control port</li>
+<li>5: <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">false</span></code>: no Tor at all</li>
+</ul>
+<p>1 is the default, and should work for any Linux host with the system Tor
+package installed. 2 should work on any box with Tor installed into $PATH,
+but will take an extra 30-60 seconds at startup. 3 and 4 can be used for
+specialized installations, where Tor is already running, but not listening on
+the default port. 5 should be used in environments where Tor is installed,
+but should not be used (perhaps due to a site-wide policy).</p>
+<p>Note that Tor support depends upon some additional Python libraries. To
+install Tahoe with Tor support, use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tahoe-lafs[tor]</span></code>.</p>
+</div>
+<div class="section" id="i2p">
+<h3><code class="docutils literal notranslate"><span class="pre">[i2p]</span></code><a class="headerlink" href="#i2p" title="Permalink to this headline">¶</a></h3>
+<p>This controls how I2P connections are made. Like with Tor, the all-empty
+defaults will cause I2P connections to be routed to a pre-existing I2P daemon
+on port 7656. This is the default SAM port for the <code class="docutils literal notranslate"><span class="pre">i2p</span></code> daemon.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[i2p]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">True)</span></code></p>
+<blockquote>
+<div>If False, this will disable the use of I2P entirely. The default of True
+means the node will use I2P, if necessary, and if possible.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">sam.port</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">endpoint</span> <span class="pre">descriptor,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">empty)</span></code></p>
+<blockquote>
+<div>This tells the node that I2P connections should be made via the SAM
+protocol on the given port. The default (of an empty value) will cause
+the node to try localhost port 7656. This is the default listening port
+of the standard I2P daemon.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">(bool,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">False)</span></code></p>
+<blockquote>
+<div>If True, the node will spawn a new (private) copy of I2P at startup, and
+will kill it at shutdown. The new I2P will be given a persistent state
+directory under <code class="docutils literal notranslate"><span class="pre">NODEDIR/private/</span></code>, where I2P’s microdescriptors will
+be cached, to speed up subsequent startup. The daemon will allocate its
+own SAM port, which will be queried from the config directory.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">i2p.configdir</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">directory)</span></code></p>
+<blockquote>
+<div>This tells the node to parse an I2P config file in the given directory,
+and use the SAM port it finds there. If <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">True</span></code>, the new I2P
+daemon will be told to use the given directory (which can be
+pre-populated with a suitable config file). If <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">False</span></code>, we
+assume there is a pre-running I2P daemon running from this directory, and
+can again parse the config file for the SAM port.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">i2p.executable</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">empty)</span></code></p>
+<blockquote>
+<div>This controls which I2P executable is used when <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">=</span> <span class="pre">True</span></code>. If
+empty, the first executable program named <code class="docutils literal notranslate"><span class="pre">i2p</span></code> found on <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> will
+be used.</div></blockquote>
+</div>
+</div>
+<div class="section" id="client-configuration">
+<span id="id4"></span><h2>Client Configuration<a class="headerlink" href="#client-configuration" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">[client]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">introducer.furl</span> <span class="pre">=</span> <span class="pre">(FURL</span> <span class="pre">string,</span> <span class="pre">mandatory)</span></code></p>
+<blockquote>
+<div>This FURL tells the client how to connect to the introducer. Each
+Tahoe-LAFS grid is defined by an introducer. The introducer’s FURL is
+created by the introducer node and written into its private base
+directory when it starts, whereupon it should be published to everyone
+who wishes to attach a client to that grid</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">helper.furl</span> <span class="pre">=</span> <span class="pre">(FURL</span> <span class="pre">string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If provided, the node will attempt to connect to and use the given helper
+for uploads. See <a class="reference internal" href="helper.html"><span class="doc">The Tahoe Upload Helper</span></a> for details.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">stats_gatherer.furl</span> <span class="pre">=</span> <span class="pre">(FURL</span> <span class="pre">string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If provided, the node will connect to the given stats gatherer and
+provide it with operational statistics.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">shares.needed</span> <span class="pre">=</span> <span class="pre">(int,</span> <span class="pre">optional)</span> <span class="pre">aka</span> <span class="pre">&quot;k&quot;,</span> <span class="pre">default</span> <span class="pre">3</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">shares.total</span> <span class="pre">=</span> <span class="pre">(int,</span> <span class="pre">optional)</span> <span class="pre">aka</span> <span class="pre">&quot;N&quot;,</span> <span class="pre">N</span> <span class="pre">&gt;=</span> <span class="pre">k,</span> <span class="pre">default</span> <span class="pre">10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">shares.happy</span> <span class="pre">=</span> <span class="pre">(int,</span> <span class="pre">optional)</span> <span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">happy</span> <span class="pre">&lt;=</span> <span class="pre">N,</span> <span class="pre">default</span> <span class="pre">7</span></code></p>
+<blockquote>
+<div><p>These three values set the default encoding parameters. Each time a new
+file is uploaded, erasure-coding is used to break the ciphertext into
+separate shares. There will be <code class="docutils literal notranslate"><span class="pre">N</span></code> (i.e. <code class="docutils literal notranslate"><span class="pre">shares.total</span></code>) shares
+created, and the file will be recoverable if any <code class="docutils literal notranslate"><span class="pre">k</span></code>
+(i.e. <code class="docutils literal notranslate"><span class="pre">shares.needed</span></code>) shares are retrieved. The default values are
+3-of-10 (i.e.  <code class="docutils literal notranslate"><span class="pre">shares.needed</span> <span class="pre">=</span> <span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">shares.total</span> <span class="pre">=</span> <span class="pre">10</span></code>). Setting
+<code class="docutils literal notranslate"><span class="pre">k</span></code> to 1 is equivalent to simple replication (uploading <code class="docutils literal notranslate"><span class="pre">N</span></code> copies of
+the file).</p>
+<p>These values control the tradeoff between storage overhead and
+reliability. To a first approximation, a 1MB file will use (1MB *
+<code class="docutils literal notranslate"><span class="pre">N</span></code>/<code class="docutils literal notranslate"><span class="pre">k</span></code>) of backend storage space (the actual value will be a bit
+more, because of other forms of overhead). Up to <code class="docutils literal notranslate"><span class="pre">N</span></code>-<code class="docutils literal notranslate"><span class="pre">k</span></code> shares can
+be lost before the file becomes unrecoverable.  So large <code class="docutils literal notranslate"><span class="pre">N</span></code>/<code class="docutils literal notranslate"><span class="pre">k</span></code>
+ratios are more reliable, and small <code class="docutils literal notranslate"><span class="pre">N</span></code>/<code class="docutils literal notranslate"><span class="pre">k</span></code> ratios use less disk
+space. <code class="docutils literal notranslate"><span class="pre">N</span></code> cannot be larger than 256, because of the 8-bit
+erasure-coding algorithm that Tahoe-LAFS uses. <code class="docutils literal notranslate"><span class="pre">k</span></code> can not be greater
+than <code class="docutils literal notranslate"><span class="pre">N</span></code>. See <a class="reference internal" href="performance.html"><span class="doc">Performance costs for some common operations</span></a> for more details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> allows you control over how well to “spread out” the
+shares of an immutable file. For a successful upload, shares are
+guaranteed to be initially placed on at least <code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> distinct
+servers, the correct functioning of any <code class="docutils literal notranslate"><span class="pre">k</span></code> of which is sufficient to
+guarantee the availability of the uploaded file. This value should not be
+larger than the number of servers on your grid.</p>
+<p>A value of <code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> &lt;= <code class="docutils literal notranslate"><span class="pre">k</span></code> is allowed, but this is not
+guaranteed to provide any redundancy if some servers fail or lose shares.
+It may still provide redundancy in practice if <code class="docutils literal notranslate"><span class="pre">N</span></code> is greater than
+the number of connected servers, because in that case there will typically
+be more than one share on at least some storage nodes. However, since a
+successful upload only guarantees that at least <code class="docutils literal notranslate"><span class="pre">shares.happy</span></code> shares
+have been stored, the worst case is still that there is no redundancy.</p>
+<p>(Mutable files use a different share placement algorithm that does not
+currently consider this parameter.)</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">mutable.format</span> <span class="pre">=</span> <span class="pre">sdmf</span> <span class="pre">or</span> <span class="pre">mdmf</span></code></p>
+<blockquote>
+<div><p>This value tells Tahoe-LAFS what the default mutable file format should
+be. If <code class="docutils literal notranslate"><span class="pre">mutable.format=sdmf</span></code>, then newly created mutable files will be
+in the old SDMF format. This is desirable for clients that operate on
+grids where some peers run older versions of Tahoe-LAFS, as these older
+versions cannot read the new MDMF mutable file format. If
+<code class="docutils literal notranslate"><span class="pre">mutable.format</span></code> is <code class="docutils literal notranslate"><span class="pre">mdmf</span></code>, then newly created mutable files will use
+the new MDMF format, which supports efficient in-place modification and
+streaming downloads. You can overwrite this value using a special
+mutable-type parameter in the webapi. If you do not specify a value here,
+Tahoe-LAFS will use SDMF for all newly-created mutable files.</p>
+<p>Note that this parameter applies only to files, not to directories.
+Mutable directories, which are stored in mutable files, are not
+controlled by this parameter and will always use SDMF. We may revisit
+this decision in future versions of Tahoe-LAFS.</p>
+<p>See <a class="reference internal" href="specifications/mutable.html"><span class="doc">Mutable Files</span></a> for details about mutable file formats.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">peers.preferred</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This is an optional comma-separated list of Node IDs of servers that will
+be tried first when selecting storage servers for reading or writing.</p>
+<p>Servers should be identified here by their Node ID as it appears in the web
+ui, underneath the server’s nickname. For storage servers running tahoe
+versions &gt;=1.10 (if the introducer is also running tahoe &gt;=1.10) this will
+be a “Node Key” (which is prefixed with ‘v0-‘). For older nodes, it will be
+a TubID instead. When a preferred server (and/or the introducer) is
+upgraded to 1.10 or later, clients must adjust their configs accordingly.</p>
+<p>Every node selected for upload, whether preferred or not, will still
+receive the same number of shares (one, if there are <code class="docutils literal notranslate"><span class="pre">N</span></code> or more servers
+accepting uploads). Preferred nodes are simply moved to the front of the
+server selection lists computed for each file.</p>
+<p>This is useful if a subset of your nodes have different availability or
+connectivity characteristics than the rest of the grid. For instance, if
+there are more than <code class="docutils literal notranslate"><span class="pre">N</span></code> servers on the grid, and <code class="docutils literal notranslate"><span class="pre">K</span></code> or more of them
+are at a single physical location, it would make sense for clients at that
+location to prefer their local servers so that they can maintain access to
+all of their uploads without using the internet.</p>
+</div></blockquote>
+<p>In addition,
+see <a class="reference internal" href="accepting-donations.html"><span class="doc">Storage Server Donations</span></a> for a convention for donating to storage server operators.</p>
+</div>
+<div class="section" id="frontend-configuration">
+<h2>Frontend Configuration<a class="headerlink" href="#frontend-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The Tahoe-LAFS client process can run a variety of frontend file access
+protocols. You will use these to create and retrieve files from the
+Tahoe-LAFS file store. Configuration details for each are documented in
+the following protocol-specific guides:</p>
+<p>HTTP</p>
+<blockquote>
+<div>Tahoe runs a webserver by default on port 3456. This interface provides a
+human-oriented “WUI”, with pages to create, modify, and browse
+directories and files, as well as a number of pages to check on the
+status of your Tahoe node. It also provides a machine-oriented “WAPI”,
+with a REST-ful HTTP interface that can be used by other programs
+(including the CLI tools). Please see <a class="reference internal" href="frontends/webapi.html"><span class="doc">The Tahoe REST-ful Web API</span></a> for full
+details, and the <code class="docutils literal notranslate"><span class="pre">web.port</span></code> and <code class="docutils literal notranslate"><span class="pre">web.static</span></code> config variables above.
+<a class="reference internal" href="frontends/download-status.html"><span class="doc">Download status</span></a> also describes a few WUI status pages.</div></blockquote>
+<p>CLI</p>
+<blockquote>
+<div>The main <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable includes subcommands for manipulating the
+file store, uploading/downloading files, and creating/running Tahoe
+nodes. See <a class="reference internal" href="frontends/CLI.html"><span class="doc">The Tahoe-LAFS CLI commands</span></a> for details.</div></blockquote>
+<p>SFTP, FTP</p>
+<blockquote>
+<div>Tahoe can also run both SFTP and FTP servers, and map a username/password
+pair to a top-level Tahoe directory. See <a class="reference internal" href="frontends/FTP-and-SFTP.html"><span class="doc">Tahoe-LAFS SFTP and FTP Frontends</span></a>
+for instructions on configuring these services, and the <code class="docutils literal notranslate"><span class="pre">[sftpd]</span></code> and
+<code class="docutils literal notranslate"><span class="pre">[ftpd]</span></code> sections of <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>.</div></blockquote>
+</div>
+<div class="section" id="storage-server-configuration">
+<h2>Storage Server Configuration<a class="headerlink" href="#storage-server-configuration" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">[storage]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If this is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the node will run a storage server, offering space
+to other clients. If it is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the node will not run a storage
+server, meaning that no shares will be stored on this node. Use <code class="docutils literal notranslate"><span class="pre">False</span></code>
+for clients who do not wish to provide storage service. The default value
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">anonymous</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If this is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the node will expose the storage server via Foolscap
+without any additional authentication or authorization.  The capability to
+use all storage services is conferred by knowledge of the Foolscap fURL
+for the storage server which will be included in the storage server’s
+announcement.  If it is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the node will not expose this and
+storage must be exposed using the storage server plugin system (see
+<a class="reference internal" href="#storage-server-plugin-configuration">Storage Server Plugin Configuration</a> for details).  The default value is
+<code class="docutils literal notranslate"><span class="pre">True</span></code>.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">readonly</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the node will run a storage server but will not accept any
+shares, making it effectively read-only. Use this for storage servers
+that are being decommissioned: the <code class="docutils literal notranslate"><span class="pre">storage/</span></code> directory could be
+mounted read-only, while shares are moved to other servers. Note that
+this currently only affects immutable shares. Mutable shares (used for
+directories) will be written and modified anyway. See ticket <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/390">#390</a> for
+the current status of this bug. The default value is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">reserved_space</span> <span class="pre">=</span> <span class="pre">(str,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>If provided, this value defines how much disk space is reserved: the
+storage server will not accept any share that causes the amount of free
+disk space to drop below this value. (The free space is measured by a
+call to <code class="docutils literal notranslate"><span class="pre">statvfs(2)</span></code> on Unix, or <code class="docutils literal notranslate"><span class="pre">GetDiskFreeSpaceEx</span></code> on Windows, and
+is the space available to the user account under which the storage server
+runs.)</p>
+<p>This string contains a number, with an optional case-insensitive scale
+suffix, optionally followed by “B” or “iB”. The supported scale suffixes
+are “K”, “M”, “G”, “T”, “P” and “E”, and a following “i” indicates to use
+powers of 1024 rather than 1000. So “100MB”, “100 M”, “100000000B”,
+“100000000”, and “100000kb” all mean the same thing. Likewise, “1MiB”,
+“1024KiB”, “1024 Ki”, and “1048576 B” all mean the same thing.</p>
+<p>“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span></code>” generates a tahoe.cfg with
+“<code class="docutils literal notranslate"><span class="pre">reserved_space=1G</span></code>”, but you may wish to raise, lower, or remove the
+reservation to suit your needs.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">expire.enabled</span> <span class="pre">=</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">expire.mode</span> <span class="pre">=</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">expire.override_lease_duration</span> <span class="pre">=</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">expire.cutoff_date</span> <span class="pre">=</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">expire.immutable</span> <span class="pre">=</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">expire.mutable</span> <span class="pre">=</span></code></p>
+<blockquote>
+<div>These settings control garbage collection, in which the server will
+delete shares that no longer have an up-to-date lease on them. Please see
+<a class="reference internal" href="garbage-collection.html"><span class="doc">Garbage Collection in Tahoe</span></a> for full details.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">storage_dir</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div><p>This specifies a directory where share files and other state pertaining to
+storage servers will be kept.</p>
+<p>The default value is the <code class="docutils literal notranslate"><span class="pre">storage</span></code> directory in the node’s base directory
+(i.e. <code class="docutils literal notranslate"><span class="pre">BASEDIR/storage</span></code>), but it can be placed elsewhere. Relative paths
+will be interpreted relative to the node’s base directory.</p>
+</div></blockquote>
+<p>In addition,
+see <a class="reference internal" href="accepting-donations.html"><span class="doc">Storage Server Donations</span></a> for a convention encouraging donations to storage server operators.</p>
+</div>
+<div class="section" id="storage-server-plugin-configuration">
+<h2>Storage Server Plugin Configuration<a class="headerlink" href="#storage-server-plugin-configuration" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the built-in storage server,
+it is also possible to load and configure storage server plugins into Tahoe-LAFS.</p>
+<p>Plugins to load are specified in the <code class="docutils literal notranslate"><span class="pre">[storage]</span></code> section.</p>
+<p><code class="docutils literal notranslate"><span class="pre">plugins</span> <span class="pre">=</span> <span class="pre">(string,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>This gives a comma-separated list of plugin names.
+Plugins named here will be loaded and offered to clients.
+The default is for no such plugins to be loaded.</div></blockquote>
+<p>Each plugin can also be configured in a dedicated section.
+The section for each plugin is named after the plugin itself:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">storageserver</span><span class="o">.</span><span class="n">plugins</span><span class="o">.&lt;</span><span class="n">plugin</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For example,
+the configuration section for a plugin named <code class="docutils literal notranslate"><span class="pre">acme-foo-v1</span></code> is <code class="docutils literal notranslate"><span class="pre">[storageserver.plugins.acme-foo-v1]</span></code>.</p>
+<p>The contents of such sections are defined by the plugins themselves.
+Refer to the documentation provided with those plugins.</p>
+</div>
+<div class="section" id="running-a-helper">
+<h2>Running A Helper<a class="headerlink" href="#running-a-helper" title="Permalink to this headline">¶</a></h2>
+<p>A “helper” is a regular client node that also offers the “upload helper”
+service.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[helper]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">(boolean,</span> <span class="pre">optional)</span></code></p>
+<blockquote>
+<div>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the node will run a helper (see <a class="reference internal" href="helper.html"><span class="doc">The Tahoe Upload Helper</span></a> for details).
+The helper’s contact FURL will be placed in <code class="docutils literal notranslate"><span class="pre">private/helper.furl</span></code>, from
+which it can be copied to any clients that wish to use it. Clearly nodes
+should not both run a helper and attempt to use one: do not create
+<code class="docutils literal notranslate"><span class="pre">helper.furl</span></code> and also define <code class="docutils literal notranslate"><span class="pre">[helper]enabled</span></code> in the same node. The
+default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</div></blockquote>
+</div>
+<div class="section" id="running-an-introducer">
+<h2>Running An Introducer<a class="headerlink" href="#running-an-introducer" title="Permalink to this headline">¶</a></h2>
+<p>The introducer node uses a different <code class="docutils literal notranslate"><span class="pre">.tac</span></code> file (named
+“<code class="docutils literal notranslate"><span class="pre">introducer.tac</span></code>”), and pays attention to the <code class="docutils literal notranslate"><span class="pre">[node]</span></code> section, but not
+the others.</p>
+<p>The Introducer node maintains some different state than regular client nodes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BASEDIR/private/introducer.furl</span></code></p>
+<blockquote>
+<div>This is generated the first time the introducer node is started, and used
+again on subsequent runs, to give the introduction service a persistent
+long-term identity. This file should be published and copied into new
+client nodes before they are started for the first time.</div></blockquote>
+</div>
+<div class="section" id="other-files-in-basedir">
+<h2>Other Files in BASEDIR<a class="headerlink" href="#other-files-in-basedir" title="Permalink to this headline">¶</a></h2>
+<p>Some configuration is not kept in <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>, for the following reasons:</p>
+<ul class="simple">
+<li>it doesn’t fit into the INI format of <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> (e.g.
+<code class="docutils literal notranslate"><span class="pre">private/servers.yaml</span></code>)</li>
+<li>it is generated by the node at startup, e.g. encryption keys. The node
+never writes to <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>.</li>
+<li>it is generated by user action, e.g. the “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-alias</span></code>” command.</li>
+</ul>
+<p>In addition, non-configuration persistent state is kept in the node’s base
+directory, next to the configuration knobs.</p>
+<p>This section describes these other files.</p>
+<p><code class="docutils literal notranslate"><span class="pre">private/node.pem</span></code></p>
+<blockquote>
+<div>This contains an SSL private-key certificate. The node generates this the
+first time it is started, and re-uses it on subsequent runs. This
+certificate allows the node to have a cryptographically-strong identifier
+(the Foolscap “TubID”), and to establish secure connections to other nodes.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">storage/</span></code></p>
+<blockquote>
+<div>Nodes that host StorageServers will create this directory to hold shares of
+files on behalf of other clients. There will be a directory underneath it
+for each StorageIndex for which this node is holding shares. There is also
+an “incoming” directory where partially-completed shares are held while
+they are being received.  This location may be overridden in <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tahoe-client.tac</span></code></p>
+<blockquote>
+<div>This file defines the client, by constructing the actual Client instance
+each time the node is started. It is used by the “<code class="docutils literal notranslate"><span class="pre">twistd</span></code>” daemonization
+program (in the <code class="docutils literal notranslate"><span class="pre">-y</span></code> mode), which is run internally by the “<code class="docutils literal notranslate"><span class="pre">tahoe</span>
+<span class="pre">start</span></code>” command. This file is created by the “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-node</span></code>” or
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span></code>” commands.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tahoe-introducer.tac</span></code></p>
+<blockquote>
+<div>This file is used to construct an introducer, and is created by the
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-introducer</span></code>” command.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">tahoe-stats-gatherer.tac</span></code></p>
+<blockquote>
+<div>This file is used to construct a statistics gatherer, and is created by the
+“<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-stats-gatherer</span></code>” command.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">private/control.furl</span></code></p>
+<blockquote>
+<div>This file contains a FURL that provides access to a control port on the
+client node, from which files can be uploaded and downloaded. This file is
+created with permissions that prevent anyone else from reading it (on
+operating systems that support such a concept), to insure that only the
+owner of the client node can use this feature. This port is intended for
+debugging and testing use.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">private/logport.furl</span></code></p>
+<blockquote>
+<div>This file contains a FURL that provides access to a ‘log port’ on the
+client node, from which operational logs can be retrieved. Do not grant
+logport access to strangers, because occasionally secret information may be
+placed in the logs.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">private/helper.furl</span></code></p>
+<blockquote>
+<div>If the node is running a helper (for use by other clients), its contact
+FURL will be placed here. See <a class="reference internal" href="helper.html"><span class="doc">The Tahoe Upload Helper</span></a> for more details.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">private/root_dir.cap</span></code> (optional)</p>
+<blockquote>
+<div>The command-line tools will read a directory cap out of this file and use
+it, if you don’t specify a ‘–dir-cap’ option or if you specify
+‘–dir-cap=root’.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">private/convergence</span></code> (automatically generated)</p>
+<blockquote>
+<div><p>An added secret for encrypting immutable files. Everyone who has this same
+string in their <code class="docutils literal notranslate"><span class="pre">private/convergence</span></code> file encrypts their immutable files
+in the same way when uploading them. This causes identical files to
+“converge” – to share the same storage space since they have identical
+ciphertext – which conserves space and optimizes upload time, but it also
+exposes file contents to the possibility of a brute-force attack by people
+who know that string. In this attack, if the attacker can guess most of the
+contents of a file, then they can use brute-force to learn the remaining
+contents.</p>
+<p>So the set of people who know your <code class="docutils literal notranslate"><span class="pre">private/convergence</span></code> string is the
+set of people who converge their storage space with you when you and they
+upload identical immutable files, and it is also the set of people who
+could mount such an attack.</p>
+<p>The content of the <code class="docutils literal notranslate"><span class="pre">private/convergence</span></code> file is a base-32 encoded
+string.  If the file doesn’t exist, then when the Tahoe-LAFS client starts
+up it will generate a random 256-bit string and write the base-32 encoding
+of this string into the file. If you want to converge your immutable files
+with as many people as possible, put the empty string (so that
+<code class="docutils literal notranslate"><span class="pre">private/convergence</span></code> is a zero-length file).</p>
+</div></blockquote>
+</div>
+<div class="section" id="additional-introducer-definitions">
+<h2>Additional Introducer Definitions<a class="headerlink" href="#additional-introducer-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">private/introducers.yaml</span></code> file defines additional Introducers. The
+first introducer is defined in <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>, in <code class="docutils literal notranslate"><span class="pre">[client]</span>
+<span class="pre">introducer.furl</span></code>. To use two or more Introducers, choose a locally-unique
+“petname” for each one, then define their FURLs in
+<code class="docutils literal notranslate"><span class="pre">private/introducers.yaml</span></code> like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">introducers</span><span class="p">:</span>
+  <span class="n">petname2</span><span class="p">:</span>
+    <span class="n">furl</span><span class="p">:</span> <span class="n">FURL2</span>
+  <span class="n">petname3</span><span class="p">:</span>
+    <span class="n">furl</span><span class="p">:</span> <span class="n">FURL3</span>
+</pre></div>
+</div>
+<p>Servers will announce themselves to all configured introducers. Clients will
+merge the announcements they receive from all introducers. Nothing will
+re-broadcast an announcement (i.e. telling introducer 2 about something you
+heard from introducer 1).</p>
+<p>If you omit the introducer definitions from both <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> and
+<code class="docutils literal notranslate"><span class="pre">introducers.yaml</span></code>, the node will not use an Introducer at all. Such
+“introducerless” clients must be configured with static servers (described
+below), or they will not be able to upload and download files.</p>
+</div>
+<div class="section" id="static-server-definitions">
+<h2>Static Server Definitions<a class="headerlink" href="#static-server-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">private/servers.yaml</span></code> file defines “static servers”: those which are
+not announced through the Introducer. This can also control how we connect to
+those servers.</p>
+<p>Most clients do not need this file. It is only necessary if you want to use
+servers which are (for some specialized reason) not announced through the
+Introducer, or to connect to those servers in different ways. You might do
+this to “freeze” the server list: use the Introducer for a while, then copy
+all announcements into <code class="docutils literal notranslate"><span class="pre">servers.yaml</span></code>, then stop using the Introducer
+entirely. Or you might have a private server that you don’t want other users
+to learn about (via the Introducer). Or you might run a local server which is
+announced to everyone else as a Tor onion address, but which you can connect
+to directly (via TCP).</p>
+<p>The file syntax is <a class="reference external" href="http://yaml.org/">YAML</a>, with a top-level dictionary named <code class="docutils literal notranslate"><span class="pre">storage</span></code>.
+Other items may be added in the future.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">storage</span></code> dictionary takes keys which are server-ids, and values which
+are dictionaries with two keys: <code class="docutils literal notranslate"><span class="pre">ann</span></code> and <code class="docutils literal notranslate"><span class="pre">connections</span></code>. The <code class="docutils literal notranslate"><span class="pre">ann</span></code>
+value is a dictionary which will be used in lieu of the introducer
+announcement, so it can be populated by copying the <code class="docutils literal notranslate"><span class="pre">ann</span></code> dictionary from
+<code class="docutils literal notranslate"><span class="pre">NODEDIR/introducer_cache.yaml</span></code>.</p>
+<p>The server-id can be any string, but ideally you should use the public key as
+published by the server. Each server displays this as “Node ID:” in the
+top-right corner of its “WUI” web welcome page. It can also be obtained from
+other client nodes, which record it as <code class="docutils literal notranslate"><span class="pre">key_s:</span></code> in their
+<code class="docutils literal notranslate"><span class="pre">introducer_cache.yaml</span></code> file. The format is “v0-” followed by 52 base32
+characters like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v0</span><span class="o">-</span><span class="n">c2ng2pbrmxmlwpijn3mr72ckk5fmzk6uxf6nhowyosaubrt6y5mq</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ann</span></code> dictionary really only needs one key:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">anonymous-storage-FURL</span></code>: how we connect to the server</li>
+</ul>
+<p>(note that other important keys may be added in the future, as Accounting and
+HTTP-based servers are implemented)</p>
+<p>Optional keys include:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">nickname</span></code>: the name of this server, as displayed on the Welcome page
+server list</li>
+<li><code class="docutils literal notranslate"><span class="pre">permutation-seed-base32</span></code>: this controls how shares are mapped to
+servers. This is normally computed from the server-ID, but can be
+overridden to maintain the mapping for older servers which used to use
+Foolscap TubIDs as server-IDs. If your selected server-ID cannot be parsed
+as a public key, it will be hashed to compute the permutation seed. This is
+fine as long as all clients use the same thing, but if they don’t, then
+your client will disagree with the other clients about which servers should
+hold each share. This will slow downloads for everybody, and may cause
+additional work or consume extra storage when repair operations don’t
+converge.</li>
+<li>anything else from the <code class="docutils literal notranslate"><span class="pre">introducer_cache.yaml</span></code> announcement, like
+<code class="docutils literal notranslate"><span class="pre">my-version</span></code>, which is displayed on the Welcome page server list</li>
+</ul>
+<p>For example, a private static server could be defined with a
+<code class="docutils literal notranslate"><span class="pre">private/servers.yaml</span></code> file like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">storage</span><span class="p">:</span>
+  <span class="n">v0</span><span class="o">-</span><span class="mi">4</span><span class="n">uazse3xb6uu5qpkb7tel2bm6bpea4jhuigdhqcuvvse7hugtsia</span><span class="p">:</span>
+    <span class="n">ann</span><span class="p">:</span>
+      <span class="n">nickname</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">1</span>
+      <span class="n">anonymous</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">FURL</span><span class="p">:</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">u33m4y7klhz3bypswqkozwetvabelhxt</span><span class="nd">@tcp</span><span class="p">:</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">:</span><span class="mi">51298</span><span class="o">/</span><span class="n">eiu2i7p6d6mm4ihmss7ieou5hac3wn6b</span>
+</pre></div>
+</div>
+<p>Or, if you’re feeling really lazy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">storage</span><span class="p">:</span>
+  <span class="n">my</span><span class="o">-</span><span class="n">serverid</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">ann</span><span class="p">:</span>
+      <span class="n">anonymous</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">FURL</span><span class="p">:</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">u33m4y7klhz3bypswqkozwetvabelhxt</span><span class="nd">@tcp</span><span class="p">:</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">:</span><span class="mi">51298</span><span class="o">/</span><span class="n">eiu2i7p6d6mm4ihmss7ieou5hac3wn6b</span>
+</pre></div>
+</div>
+<div class="section" id="overriding-connection-handlers-for-static-servers">
+<h3>Overriding Connection-Handlers for Static Servers<a class="headerlink" href="#overriding-connection-handlers-for-static-servers" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">connections</span></code> entry will override the default connection-handler mapping
+(as established by <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span> <span class="pre">[connections]</span></code>). This can be used to build a
+“Tor-mostly client”: one which is restricted to use Tor for all connections,
+except for a few private servers to which normal TCP connections will be
+made. To override the published announcement (and thus avoid connecting twice
+to the same server), the server ID must exactly match.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">connections</span><span class="p">]</span>
+ <span class="c1"># this forces the use of Tor for all &quot;tcp&quot; hints</span>
+ <span class="n">tcp</span> <span class="o">=</span> <span class="n">tor</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">private/servers.yaml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">storage</span><span class="p">:</span>
+  <span class="n">v0</span><span class="o">-</span><span class="n">c2ng2pbrmxmlwpijn3mr72ckk5fmzk6uxf6nhowyosaubrt6y5mq</span><span class="p">:</span>
+    <span class="n">ann</span><span class="p">:</span>
+      <span class="n">nickname</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">1</span>
+      <span class="n">anonymous</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">FURL</span><span class="p">:</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">u33m4y7klhz3bypswqkozwetvabelhxt</span><span class="nd">@tcp</span><span class="p">:</span><span class="mf">10.1</span><span class="o">.</span><span class="mf">2.3</span><span class="p">:</span><span class="mi">51298</span><span class="o">/</span><span class="n">eiu2i7p6d6mm4ihmss7ieou5hac3wn6b</span>
+    <span class="n">connections</span><span class="p">:</span>
+      <span class="c1"># this overrides the tcp=tor from tahoe.cfg, for just this server</span>
+      <span class="n">tcp</span><span class="p">:</span> <span class="n">tcp</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">connections</span></code> table is needed to override the <code class="docutils literal notranslate"><span class="pre">tcp</span> <span class="pre">=</span> <span class="pre">tor</span></code> mapping
+that comes from <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>. Without it, the client would attempt to use
+Tor to connect to <code class="docutils literal notranslate"><span class="pre">10.1.2.3</span></code>, which would fail because it is a
+local/non-routeable (RFC1918) address.</p>
+</div>
+</div>
+<div class="section" id="other-files">
+<h2>Other files<a class="headerlink" href="#other-files" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">logs/</span></code></p>
+<blockquote>
+<div>Each Tahoe-LAFS node creates a directory to hold the log messages produced
+as the node runs. These logfiles are created and rotated by the
+“<code class="docutils literal notranslate"><span class="pre">twistd</span></code>” daemonization program, so <code class="docutils literal notranslate"><span class="pre">logs/twistd.log</span></code> will contain the
+most recent messages, <code class="docutils literal notranslate"><span class="pre">logs/twistd.log.1</span></code> will contain the previous ones,
+<code class="docutils literal notranslate"><span class="pre">logs/twistd.log.2</span></code> will be older still, and so on. <code class="docutils literal notranslate"><span class="pre">twistd</span></code> rotates
+logfiles after they grow beyond 1MB in size. If the space consumed by
+logfiles becomes troublesome, they should be pruned: a cron job to delete
+all files that were created more than a month ago in this <code class="docutils literal notranslate"><span class="pre">logs/</span></code>
+directory should be sufficient.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">my_nodeid</span></code></p>
+<blockquote>
+<div>this is written by all nodes after startup, and contains a base32-encoded
+(i.e. human-readable) NodeID that identifies this specific node. This
+NodeID is the same string that gets displayed on the web page (in the
+“which peers am I connected to” list), and the shortened form (the first
+few characters) is recorded in various log messages.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">access.blacklist</span></code></p>
+<blockquote>
+<div>Gateway nodes may find it necessary to prohibit access to certain
+files. The web-API has a facility to block access to filecaps by their
+storage index, returning a 403 “Forbidden” error instead of the original
+file. For more details, see the “Access Blacklist” section of
+<a class="reference internal" href="frontends/webapi.html"><span class="doc">The Tahoe REST-ful Web API</span></a>.</div></blockquote>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The following is a sample <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file, containing values for some of
+the keys described in the previous section. Note that this is not a
+recommended configuration (most of these are not the default values), merely
+a legal one.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+<span class="n">nickname</span> <span class="o">=</span> <span class="n">Bob</span><span class="s1">&#39;s Tahoe-LAFS Node</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">34912</span>
+<span class="n">tub</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mf">123.45</span><span class="o">.</span><span class="mf">67.89</span><span class="p">:</span><span class="mi">8098</span><span class="p">,</span><span class="n">tcp</span><span class="p">:</span><span class="mf">44.55</span><span class="o">.</span><span class="mf">66.77</span><span class="p">:</span><span class="mi">8098</span>
+<span class="n">web</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">3456</span>
+<span class="n">log_gatherer</span><span class="o">.</span><span class="n">furl</span> <span class="o">=</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">soklj4y7eok5c3xkmjeqpw</span><span class="o">@</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">69.247</span><span class="p">:</span><span class="mi">44801</span><span class="o">/</span><span class="n">eqpwqtzm</span>
+<span class="n">timeout</span><span class="o">.</span><span class="n">keepalive</span> <span class="o">=</span> <span class="mi">240</span>
+<span class="n">timeout</span><span class="o">.</span><span class="n">disconnect</span> <span class="o">=</span> <span class="mi">1800</span>
+
+<span class="p">[</span><span class="n">client</span><span class="p">]</span>
+<span class="n">introducer</span><span class="o">.</span><span class="n">furl</span> <span class="o">=</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">ok45ssoklj4y7eok5c3xkmj</span><span class="nd">@tcp</span><span class="p">:</span><span class="n">tahoe</span><span class="o">.</span><span class="n">example</span><span class="p">:</span><span class="mi">44801</span><span class="o">/</span><span class="n">ii3uumo</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">furl</span> <span class="o">=</span> <span class="n">pb</span><span class="p">:</span><span class="o">//</span><span class="n">ggti5ssoklj4y7eok5c3xkmj</span><span class="nd">@tcp</span><span class="p">:</span><span class="n">helper</span><span class="o">.</span><span class="n">tahoe</span><span class="o">.</span><span class="n">example</span><span class="p">:</span><span class="mi">7054</span><span class="o">/</span><span class="n">kk8lhr</span>
+
+<span class="p">[</span><span class="n">storage</span><span class="p">]</span>
+<span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">readonly</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">reserved_space</span> <span class="o">=</span> <span class="mi">10000000000</span>
+
+<span class="p">[</span><span class="n">helper</span><span class="p">]</span>
+<span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="old-configuration-files">
+<h2>Old Configuration Files<a class="headerlink" href="#old-configuration-files" title="Permalink to this headline">¶</a></h2>
+<p>Tahoe-LAFS releases before v1.3.0 had no <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file, and used
+distinct files for each item. This is no longer supported and if you have
+configuration in the old format you must manually convert it to the new
+format for Tahoe-LAFS to detect it. See <a class="reference internal" href="historical/configuration.html"><span class="doc">Old Configuration Files</span></a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuring a Tahoe-LAFS node</a><ul>
+<li><a class="reference internal" href="#node-types">Node Types</a></li>
+<li><a class="reference internal" href="#overall-node-configuration">Overall Node Configuration</a></li>
+<li><a class="reference internal" href="#connection-management">Connection Management</a><ul>
+<li><a class="reference internal" href="#connections"><code class="docutils literal notranslate"><span class="pre">[connections]</span></code></a></li>
+<li><a class="reference internal" href="#tor"><code class="docutils literal notranslate"><span class="pre">[tor]</span></code></a></li>
+<li><a class="reference internal" href="#i2p"><code class="docutils literal notranslate"><span class="pre">[i2p]</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#client-configuration">Client Configuration</a></li>
+<li><a class="reference internal" href="#frontend-configuration">Frontend Configuration</a></li>
+<li><a class="reference internal" href="#storage-server-configuration">Storage Server Configuration</a></li>
+<li><a class="reference internal" href="#storage-server-plugin-configuration">Storage Server Plugin Configuration</a></li>
+<li><a class="reference internal" href="#running-a-helper">Running A Helper</a></li>
+<li><a class="reference internal" href="#running-an-introducer">Running An Introducer</a></li>
+<li><a class="reference internal" href="#other-files-in-basedir">Other Files in BASEDIR</a></li>
+<li><a class="reference internal" href="#additional-introducer-definitions">Additional Introducer Definitions</a></li>
+<li><a class="reference internal" href="#static-server-definitions">Static Server Definitions</a><ul>
+<li><a class="reference internal" href="#overriding-connection-handlers-for-static-servers">Overriding Connection-Handlers for Static Servers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-files">Other files</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#old-configuration-files">Old Configuration Files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="magic-wormhole-invites.html"
+                        title="previous chapter">Magic Wormhole Invites</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="architecture.html"
+                        title="next chapter">Tahoe-LAFS Architecture</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/configuration.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="architecture.html" title="Tahoe-LAFS Architecture"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="magic-wormhole-invites.html" title="Magic Wormhole Invites"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

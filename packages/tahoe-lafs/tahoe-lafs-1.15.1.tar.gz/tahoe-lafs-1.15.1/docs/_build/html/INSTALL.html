@@ -1,0 +1,387 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Installing Tahoe-LAFS &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How To Run Tahoe-LAFS" href="running.html" />
+    <link rel="prev" title="Welcome to Tahoe-LAFS!" href="about.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="running.html" title="How To Run Tahoe-LAFS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="Welcome to Tahoe-LAFS!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installing-tahoe-lafs">
+<h1>Installing Tahoe-LAFS<a class="headerlink" href="#installing-tahoe-lafs" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to <a class="reference external" href="https://tahoe-lafs.org">the Tahoe-LAFS project</a>, a secure, decentralized, fault-tolerant
+storage system. See <a class="reference internal" href="about.html"><span class="doc">Welcome to Tahoe-LAFS!</span></a> for an overview of the architecture and
+security properties of the system.</p>
+<p>This procedure should work on Windows, Mac, illumos (previously OpenSolaris),
+and too many flavors of Linux and of BSD to list.</p>
+<div class="section" id="first-in-case-of-trouble">
+<h2>First: In Case Of Trouble<a class="headerlink" href="#first-in-case-of-trouble" title="Permalink to this headline">¶</a></h2>
+<p>In some cases these instructions may fail due to peculiarities of your
+platform.</p>
+<p>If the following instructions don’t Just Work without any further effort on
+your part, then please write to <a class="reference external" href="https://tahoe-lafs.org/cgi-bin/mailman/listinfo/tahoe-dev">the tahoe-dev mailing list</a> where friendly
+hackers will help you out.</p>
+</div>
+<div class="section" id="pre-packaged-versions">
+<h2>Pre-Packaged Versions<a class="headerlink" href="#pre-packaged-versions" title="Permalink to this headline">¶</a></h2>
+<p>You may not need to build Tahoe at all.</p>
+<p>If you are on Windows, please see <a class="reference internal" href="windows.html"><span class="doc">Building Tahoe-LAFS on Windows</span></a> for platform-specific
+instructions.</p>
+<p>If you are on a Mac, you can either follow these instructions, or use the
+pre-packaged bundle described in <a class="reference internal" href="OS-X.html"><span class="doc">OS-X Packaging</span></a>. The Tahoe project hosts
+pre-compiled “wheels” for all dependencies, so use the <code class="docutils literal notranslate"><span class="pre">--find-links=</span></code>
+option described below to avoid needing a compiler.</p>
+<p>Many Linux distributions include Tahoe-LAFS packages. Debian and Ubuntu users
+can <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">tahoe-lafs</span></code>. See <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/OSPackages">OSPackages</a> for other
+platforms.</p>
+</div>
+<div class="section" id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h2>
+<p>If you don’t use a pre-packaged copy of Tahoe, you can build it yourself.
+You’ll need Python2.7, pip, and virtualenv. On unix-like platforms, you will
+need a C compiler, the Python development headers, and some libraries
+(libffi-dev and libssl-dev).</p>
+<p>On a modern Debian/Ubuntu-derived distribution, this command will get you
+everything you need:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span> <span class="n">libffi</span><span class="o">-</span><span class="n">dev</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libyaml</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">-</span><span class="n">virtualenv</span>
+</pre></div>
+</div>
+<p>On OS-X, install pip and virtualenv as described below. If you want to
+compile the dependencies yourself (instead of using <code class="docutils literal notranslate"><span class="pre">--find-links</span></code> to take
+advantage of the pre-compiled ones we host), you’ll also need to install
+Xcode and its command-line tools.</p>
+<p><strong>Note</strong> that Tahoe-LAFS depends on <cite>openssl 1.1.1c</cite> or greater.</p>
+<div class="section" id="python-2-7">
+<h3>Python 2.7<a class="headerlink" href="#python-2-7" title="Permalink to this headline">¶</a></h3>
+<p>Check if you already have an adequate version of Python installed by running
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-V</span></code>. The latest version of Python v2.7 is recommended, which is
+2.7.11 as of this writing. Python v2.6.x and v3 do not work. On Windows, we
+recommend the use of native Python v2.7, not Cygwin Python. If you don’t have
+one of these versions of Python installed, <a class="reference external" href="https://www.python.org/downloads/">download</a> and install the latest
+version of Python v2.7. Make sure that the path to the installation directory
+has no spaces in it (e.g. on Windows, do not install Python in the “Program
+Files” directory):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">11</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pip">
+<h3>pip<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
+<p>Many Python installations already include <code class="docutils literal notranslate"><span class="pre">pip</span></code>, but in case yours does
+not, get it with the <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip install instructions</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pip</span> <span class="mf">10.0</span><span class="o">.</span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">...</span> <span class="p">(</span><span class="n">python</span> <span class="mf">2.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="virtualenv">
+<h3>virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h3>
+<p>If you do not have an OS-provided copy of <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>, install it with the
+instructions from the <a class="reference external" href="https://virtualenv.pypa.io/en/latest/installation.html">virtualenv documentation</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">virtualenv</span> <span class="o">--</span><span class="n">version</span>
+<span class="mf">15.1</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="c-compiler-and-libraries">
+<h3>C compiler and libraries<a class="headerlink" href="#c-compiler-and-libraries" title="Permalink to this headline">¶</a></h3>
+<p>Except on OS-X, where the Tahoe project hosts pre-compiled wheels for all
+dependencies, you will need several C libraries installed before you can
+build. You will also need the Python development headers, and a C compiler
+(your python installation should know how to find these).</p>
+<p>On Debian/Ubuntu-derived systems, the necessary packages are <code class="docutils literal notranslate"><span class="pre">python-dev</span></code>,
+<code class="docutils literal notranslate"><span class="pre">libffi-dev</span></code>, and <code class="docutils literal notranslate"><span class="pre">libssl-dev</span></code>, and can be installed with <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>. On
+RPM-based system (like Fedora) these may be named <code class="docutils literal notranslate"><span class="pre">python-devel</span></code>, etc,
+instead, and cam be installed with <code class="docutils literal notranslate"><span class="pre">yum</span></code> or <code class="docutils literal notranslate"><span class="pre">rpm</span></code>.</p>
+<p><strong>Note</strong> that Tahoe-LAFS depends on <cite>openssl 1.1.1c</cite> or greater.</p>
+</div>
+</div>
+<div class="section" id="install-the-latest-tahoe-lafs-release">
+<h2>Install the Latest Tahoe-LAFS Release<a class="headerlink" href="#install-the-latest-tahoe-lafs-release" title="Permalink to this headline">¶</a></h2>
+<p>We recommend creating a fresh virtualenv for your Tahoe-LAFS install, to
+isolate it from any python packages that are already installed (and to
+isolate the rest of your system from Tahoe’s dependencies).</p>
+<p>This example uses a virtualenv named <code class="docutils literal notranslate"><span class="pre">venv</span></code>, but you can call it anything
+you like. Many people prefer to keep all their virtualenvs in one place, like
+<code class="docutils literal notranslate"><span class="pre">~/.local/venvs/</span></code> or <code class="docutils literal notranslate"><span class="pre">~/venvs/</span></code>.</p>
+<p>It’s usually a good idea to upgrade the virtualenv’s <code class="docutils literal notranslate"><span class="pre">pip</span></code> and
+<code class="docutils literal notranslate"><span class="pre">setuptools</span></code> to their latest versions, with <code class="docutils literal notranslate"><span class="pre">venv/bin/pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">pip</span>
+<span class="pre">setuptools</span></code>. Many operating systems have an older version of <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>,
+which then includes older versions of pip and setuptools. Upgrading is easy,
+and only affects the virtualenv: not the rest of your computer.</p>
+<p>Then use the virtualenv’s <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install the latest Tahoe-LAFS release
+from PyPI with <code class="docutils literal notranslate"><span class="pre">venv/bin/pip</span> <span class="pre">install</span> <span class="pre">tahoe-lafs</span></code>. After installation, run
+<code class="docutils literal notranslate"><span class="pre">venv/bin/tahoe</span> <span class="pre">--version</span></code> to confirm the install was successful:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">virtualenv</span> <span class="n">venv</span>
+<span class="n">New</span> <span class="n">python</span> <span class="n">executable</span> <span class="ow">in</span> <span class="o">~/</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span>
+<span class="n">Installing</span> <span class="n">setuptools</span><span class="p">,</span> <span class="n">pip</span><span class="p">,</span> <span class="n">wheel</span><span class="o">...</span><span class="n">done</span><span class="o">.</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span> <span class="n">setuptools</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span> <span class="n">pip</span> <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/...</span>
+<span class="o">...</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">pip</span> <span class="n">setuptools</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span>
+<span class="n">Collecting</span> <span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span>
+<span class="o">...</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="o">...</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="o">...</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">tahoe</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="p">:</span> <span class="mf">1.15</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">foolscap</span><span class="p">:</span> <span class="o">...</span>
+
+<span class="o">%</span>
+</pre></div>
+</div>
+<p>On OS-X, instead of <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tahoe-lafs</span></code>, use this command to take
+advantage of the hosted pre-compiled wheels:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">find</span><span class="o">-</span><span class="n">links</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">deps</span> <span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span>
+</pre></div>
+</div>
+<div class="section" id="install-from-a-source-tarball">
+<h3>Install From a Source Tarball<a class="headerlink" href="#install-from-a-source-tarball" title="Permalink to this headline">¶</a></h3>
+<p>You can also install directly from the source tarball URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">virtualenv</span> <span class="n">venv</span>
+<span class="n">New</span> <span class="n">python</span> <span class="n">executable</span> <span class="ow">in</span> <span class="o">~/</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span>
+<span class="n">Installing</span> <span class="n">setuptools</span><span class="p">,</span> <span class="n">pip</span><span class="p">,</span> <span class="n">wheel</span><span class="o">...</span><span class="n">done</span><span class="o">.</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">-</span><span class="mf">1.15</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="n">Collecting</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">-</span><span class="mf">1.15</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="o">...</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="o">...</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="o">...</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">tahoe</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="p">:</span> <span class="mf">1.15</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="extras">
+<h3>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h3>
+<p>Tahoe-LAFS provides some functionality only when explicitly requested at installation time.
+It does this using the “extras” feature of setuptools.
+You can request these extra features when running the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="p">[</span><span class="n">tor</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This example enables support for listening and connecting using Tor.
+The Tahoe-LAFS documentation for specific features which require an explicit install-time step will mention the “extra” that must be requested.</p>
+</div>
+<div class="section" id="hacking-on-tahoe-lafs">
+<h3>Hacking On Tahoe-LAFS<a class="headerlink" href="#hacking-on-tahoe-lafs" title="Permalink to this headline">¶</a></h3>
+<p>To modify the Tahoe source code, you should get a git checkout, and install
+with the <code class="docutils literal notranslate"><span class="pre">--editable</span></code> flag. You should also use the <code class="docutils literal notranslate"><span class="pre">[test]</span></code> extra to get
+the additional libraries needed to run the unit tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">.</span><span class="n">git</span>
+
+<span class="o">%</span> <span class="n">cd</span> <span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span>
+
+<span class="o">%</span> <span class="n">virtualenv</span> <span class="n">venv</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">editable</span> <span class="o">.</span><span class="p">[</span><span class="n">test</span><span class="p">]</span>
+<span class="n">Obtaining</span> <span class="n">file</span><span class="p">::</span><span class="o">~/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span>
+<span class="o">...</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="o">...</span>
+
+<span class="o">%</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">tahoe</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="p">:</span> <span class="mf">1.15</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>This way, you won’t have to re-run the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> step each time you
+modify the source code.</p>
+</div>
+</div>
+<div class="section" id="running-the-tahoe-executable">
+<h2>Running the <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable<a class="headerlink" href="#running-the-tahoe-executable" title="Permalink to this headline">¶</a></h2>
+<p>The rest of the Tahoe-LAFS documentation assumes that you can run the
+<code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable that you just created. You have four basic options:</p>
+<ul class="simple">
+<li>Use the full path each time (e.g. <code class="docutils literal notranslate"><span class="pre">~/venv/bin/tahoe</span></code>).</li>
+<li>“<a class="reference external" href="https://virtualenv.pypa.io/en/latest/userguide.html#activate-script">Activate</a>” the virtualenv with <code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">venv/bin/activate</span></code>, to get a
+subshell with a <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> that includes the <code class="docutils literal notranslate"><span class="pre">venv/bin/</span></code> directory, then
+you can just run <code class="docutils literal notranslate"><span class="pre">tahoe</span></code>.</li>
+<li>Change your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> to include the <code class="docutils literal notranslate"><span class="pre">venv/bin/</span></code> directory, so you can
+just run <code class="docutils literal notranslate"><span class="pre">tahoe</span></code>.</li>
+<li>Symlink from <code class="docutils literal notranslate"><span class="pre">~/bin/tahoe</span></code> to the <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable. Since <code class="docutils literal notranslate"><span class="pre">~/bin</span></code>
+is typically in your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> (at least if it exists when you log in),
+this will let you just run <code class="docutils literal notranslate"><span class="pre">tahoe</span></code>.</li>
+</ul>
+<p>You might also find the <a class="reference external" href="https://pypi.python.org/pypi/pipsi/0.9">pipsi</a> tool convenient: <code class="docutils literal notranslate"><span class="pre">pipsi</span> <span class="pre">install</span>
+<span class="pre">tahoe-lafs</span></code> will create a new virtualenv, install tahoe into it, then
+symlink just the executable (into <code class="docutils literal notranslate"><span class="pre">~/.local/bin/tahoe</span></code>). Then either add
+<code class="docutils literal notranslate"><span class="pre">~/.local/bin/</span></code> to your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code>, or make one last symlink into
+<code class="docutils literal notranslate"><span class="pre">~/bin/tahoe</span></code>.</p>
+</div>
+<div class="section" id="running-the-self-tests">
+<h2>Running the Self-Tests<a class="headerlink" href="#running-the-self-tests" title="Permalink to this headline">¶</a></h2>
+<p>To run the self-tests from a source tree, you’ll need <code class="docutils literal notranslate"><span class="pre">tox</span></code> installed. On a
+Debian/Ubuntu system, use <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">tox</span></code>. You can also install it
+into your tahoe-specific virtualenv with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tox</span></code>.</p>
+<p>Then just run <code class="docutils literal notranslate"><span class="pre">tox</span></code>. This will create a new fresh virtualenv, install Tahoe
+(from the source tree, including any changes you have made) and all its
+dependencies (including testing-only dependencies) into the virtualenv, then
+run the unit tests. This ensures that the tests are repeatable and match the
+results of other users, unaffected by any other Python packages installed on
+your machine. On a modern computer this will take 5-10 minutes, and should
+result in a “all tests passed” mesage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">tox</span>
+<span class="n">GLOB</span> <span class="n">sdist</span><span class="o">-</span><span class="n">make</span><span class="p">:</span> <span class="o">~/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">py27</span> <span class="n">recreate</span><span class="p">:</span> <span class="o">~/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">/.</span><span class="n">tox</span><span class="o">/</span><span class="n">py27</span>
+<span class="n">py27</span> <span class="n">inst</span><span class="p">:</span> <span class="o">~/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">/.</span><span class="n">tox</span><span class="o">/</span><span class="n">dist</span><span class="o">/</span><span class="n">tahoe</span><span class="o">-</span><span class="n">lafs</span><span class="o">-</span><span class="mf">1.15</span><span class="o">.</span><span class="mf">1.</span><span class="n">zip</span>
+<span class="n">py27</span> <span class="n">runtests</span><span class="p">:</span> <span class="n">commands</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">|</span> <span class="n">tahoe</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">py27</span> <span class="n">runtests</span><span class="p">:</span> <span class="n">commands</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|</span> <span class="n">trial</span> <span class="o">--</span><span class="n">rterrors</span> <span class="n">allmydata</span>
+<span class="n">allmydata</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">test_auth</span>
+  <span class="n">AccountFileCheckerKeyTests</span>
+    <span class="n">test_authenticated</span> <span class="o">...</span>                                           <span class="p">[</span><span class="n">OK</span><span class="p">]</span>
+    <span class="n">test_missing_signature</span> <span class="o">...</span>                                       <span class="p">[</span><span class="n">OK</span><span class="p">]</span>
+ <span class="o">...</span>
+<span class="n">Ran</span> <span class="mi">1186</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mf">423.179</span><span class="n">s</span>
+
+<span class="n">PASSED</span> <span class="p">(</span><span class="n">skips</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">expectedFailures</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">successes</span><span class="o">=</span><span class="mi">1176</span><span class="p">)</span>
+<span class="n">__________________________</span> <span class="n">summary</span> <span class="n">___________________________________</span>
+  <span class="n">py27</span><span class="p">:</span> <span class="n">commands</span> <span class="n">succeeded</span>
+  <span class="n">congratulations</span> <span class="p">:)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="common-problems">
+<h2>Common Problems<a class="headerlink" href="#common-problems" title="Permalink to this headline">¶</a></h2>
+<p>If you see an error like <code class="docutils literal notranslate"><span class="pre">fatal</span> <span class="pre">error:</span> <span class="pre">Python.h:</span> <span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code>
+while compiling the dependencies, you need the Python development headers. If
+you are on a Debian or Ubuntu system, you can install them with <code class="docutils literal notranslate"><span class="pre">sudo</span>
+<span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-dev</span></code>. On RedHat/Fedora, install <code class="docutils literal notranslate"><span class="pre">python-devel</span></code>.</p>
+<p>Similar errors about <code class="docutils literal notranslate"><span class="pre">openssl/crypto.h</span></code> indicate that you are missing the
+OpenSSL development headers (<code class="docutils literal notranslate"><span class="pre">libssl-dev</span></code>). Likewise <code class="docutils literal notranslate"><span class="pre">ffi.h</span></code> means you
+need <code class="docutils literal notranslate"><span class="pre">libffi-dev</span></code>.</p>
+<p><strong>Note</strong> that Tahoe-LAFS depends on <cite>openssl 1.1.1c</cite> or greater.</p>
+</div>
+<div class="section" id="using-tahoe-lafs">
+<h2>Using Tahoe-LAFS<a class="headerlink" href="#using-tahoe-lafs" title="Permalink to this headline">¶</a></h2>
+<p>Now you are ready to deploy a decentralized filesystem. You will use the
+<code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable to create, configure, and launch your Tahoe-LAFS nodes.
+See <a class="reference internal" href="running.html"><span class="doc">How To Run Tahoe-LAFS</span></a> for instructions on how to do that.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installing Tahoe-LAFS</a><ul>
+<li><a class="reference internal" href="#first-in-case-of-trouble">First: In Case Of Trouble</a></li>
+<li><a class="reference internal" href="#pre-packaged-versions">Pre-Packaged Versions</a></li>
+<li><a class="reference internal" href="#preliminaries">Preliminaries</a><ul>
+<li><a class="reference internal" href="#python-2-7">Python 2.7</a></li>
+<li><a class="reference internal" href="#pip">pip</a></li>
+<li><a class="reference internal" href="#virtualenv">virtualenv</a></li>
+<li><a class="reference internal" href="#c-compiler-and-libraries">C compiler and libraries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-the-latest-tahoe-lafs-release">Install the Latest Tahoe-LAFS Release</a><ul>
+<li><a class="reference internal" href="#install-from-a-source-tarball">Install From a Source Tarball</a></li>
+<li><a class="reference internal" href="#extras">Extras</a></li>
+<li><a class="reference internal" href="#hacking-on-tahoe-lafs">Hacking On Tahoe-LAFS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-the-tahoe-executable">Running the <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> executable</a></li>
+<li><a class="reference internal" href="#running-the-self-tests">Running the Self-Tests</a></li>
+<li><a class="reference internal" href="#common-problems">Common Problems</a></li>
+<li><a class="reference internal" href="#using-tahoe-lafs">Using Tahoe-LAFS</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="about.html"
+                        title="previous chapter">Welcome to Tahoe-LAFS!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="running.html"
+                        title="next chapter">How To Run Tahoe-LAFS</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/INSTALL.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="running.html" title="How To Run Tahoe-LAFS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="Welcome to Tahoe-LAFS!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

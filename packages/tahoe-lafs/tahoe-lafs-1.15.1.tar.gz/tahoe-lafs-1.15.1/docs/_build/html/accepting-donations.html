@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Storage Server Donations &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Expenses paid by donated BTC" href="expenses.html" />
+    <link rel="prev" title="Donations" href="donations.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="expenses.html" title="Expenses paid by donated BTC"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="donations.html" title="Donations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="storage-server-donations">
+<h1>Storage Server Donations<a class="headerlink" href="#storage-server-donations" title="Permalink to this headline">¶</a></h1>
+<p>The following is a configuration convention which allows users to anonymously support the operators of storage servers.
+Donations are made using <a class="reference external" href="https://z.cash/support/security/privacy-security-recommendations.html#transaction">Zcash shielded transactions</a> to limit the amount of personal information incidentally conveyed.</p>
+<div class="section" id="sending-donations">
+<h2>Sending Donations<a class="headerlink" href="#sending-donations" title="Permalink to this headline">¶</a></h2>
+<p>To support a storage server following this convention, you need several things:</p>
+<ul class="simple">
+<li>a Zcash wallet capable of sending shielded transactions
+(at least until Zcash 1.1.1 this requires a Zcash full node)</li>
+<li>a shielded address with sufficient balance</li>
+<li>a running Tahoe-LAFS client node which knows about the recipient storage server</li>
+</ul>
+<p>For additional protection, you may also wish to operate your Zcash wallet and full node using Tor.</p>
+<div class="section" id="find-zcash-shielded-address">
+<h3>Find Zcash Shielded Address<a class="headerlink" href="#find-zcash-shielded-address" title="Permalink to this headline">¶</a></h3>
+<p>To find an address at which a storage server operator wishes to receive donations,
+launch the Tahoe-LAFS web UI:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tahoe webopen
+</pre></div>
+</div>
+<p>Inspect the page for the storage server area.
+This will have a heading like <em>Connected to N of M known storage servers</em>.
+Each storage server in this section will have a nickname.
+A storage server with a nickname beginning with <code class="docutils literal notranslate"><span class="pre">zcash:</span></code> is signaling it accepts Zcash donations.
+Copy the full address following the <code class="docutils literal notranslate"><span class="pre">zcash:</span></code> prefix and save it for the next step.
+This is the donation address.
+Donation addresses beginning with <code class="docutils literal notranslate"><span class="pre">z</span></code> are shielded.
+It is recommended that all donations be sent from and to shielded addresses.</p>
+</div>
+<div class="section" id="send-the-donation">
+<h3>Send the Donation<a class="headerlink" href="#send-the-donation" title="Permalink to this headline">¶</a></h3>
+<p>First, select a donation amount.
+Next, use a Zcash wallet to send the selected amount to the donation address.
+Using the Zcash cli wallet, this can be done with commands like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ DONATION_ADDRESS=&quot;...&quot;
+$ AMOUNT=&quot;...&quot;
+$ YOUR_ADDRESS=&quot;...&quot;
+$ zcash-cli z_sendmany $YOUR_ADDRESS &quot;[{\&quot;address\&quot;: \&quot;$DONATION_ADDRESS\&quot;, \&quot;amount\&quot;: $AMOUNT}]&quot;
+</pre></div>
+</div>
+<p>Remember that you must also have funds to pay the transaction fee
+(which defaults to 0.0001 ZEC in mid-2018).</p>
+</div>
+</div>
+<div class="section" id="receiving-donations">
+<h2>Receiving Donations<a class="headerlink" href="#receiving-donations" title="Permalink to this headline">¶</a></h2>
+<p>To receive donations from users following this convention, you need the following:</p>
+<ul class="simple">
+<li>a Zcash shielded address</li>
+</ul>
+<div class="section" id="configuring-tahoe-lafs">
+<h3>Configuring Tahoe-LAFS<a class="headerlink" href="#configuring-tahoe-lafs" title="Permalink to this headline">¶</a></h3>
+<p>The Zcash shielded address is placed in the storage server’s <code class="docutils literal notranslate"><span class="pre">nickname</span></code> field.
+Edit <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> and edit the <code class="docutils literal notranslate"><span class="pre">nickname</span></code> field in the <code class="docutils literal notranslate"><span class="pre">node</span></code> section like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+<span class="n">nickname</span> <span class="o">=</span> <span class="n">zcash</span><span class="p">:</span><span class="n">zcABCDEF</span><span class="o">....</span>
+</pre></div>
+</div>
+<p>Then restart the storage server.</p>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p>To acquaint yourself with the security and privacy properties of Zcash,
+refer to the <a class="reference external" href="http://zcash.readthedocs.io/en/latest/">Zcash documentation</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Storage Server Donations</a><ul>
+<li><a class="reference internal" href="#sending-donations">Sending Donations</a><ul>
+<li><a class="reference internal" href="#find-zcash-shielded-address">Find Zcash Shielded Address</a></li>
+<li><a class="reference internal" href="#send-the-donation">Send the Donation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#receiving-donations">Receiving Donations</a><ul>
+<li><a class="reference internal" href="#configuring-tahoe-lafs">Configuring Tahoe-LAFS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="donations.html"
+                        title="previous chapter">Donations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="expenses.html"
+                        title="next chapter">Expenses paid by donated BTC</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/accepting-donations.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="expenses.html" title="Expenses paid by donated BTC"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="donations.html" title="Donations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

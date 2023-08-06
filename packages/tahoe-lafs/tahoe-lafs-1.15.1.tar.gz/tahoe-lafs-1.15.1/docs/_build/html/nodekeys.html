@@ -1,0 +1,228 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Node Keys in Tahoe-LAFS &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Performance costs for some common operations" href="performance.html" />
+    <link rel="prev" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P" href="anonymity-configuration.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="performance.html" title="Performance costs for some common operations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="anonymity-configuration.html" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="node-keys-in-tahoe-lafs">
+<h1>Node Keys in Tahoe-LAFS<a class="headerlink" href="#node-keys-in-tahoe-lafs" title="Permalink to this headline">¶</a></h1>
+<p>“Node Keys” are cryptographic signing/verifying keypairs used to
+identify Tahoe-LAFS nodes (client-only and client+server). The private
+signing key is stored in NODEDIR/private/node.privkey , and is used to
+sign the announcements that are distributed to all nodes by the
+Introducer. The public verifying key is used to identify the sending
+node from those other systems: it is displayed as a “Node ID” that looks
+like “v0-abc234xyz567..”, which ends with a long base32-encoded string.</p>
+<p>These node keys were introduced in the 1.10 release (April 2013), as
+part of ticket #466. In previous releases, announcements were unsigned,
+and nodes were identified by their Foolscap “Tub ID” (a somewhat shorter
+base32 string, with no “v0-” prefix).</p>
+<div class="section" id="why-announcements-are-signed">
+<h2>Why Announcements Are Signed<a class="headerlink" href="#why-announcements-are-signed" title="Permalink to this headline">¶</a></h2>
+<p>All nodes (both client-only and client+server) publish announcements to
+the Introducer, which then relays them to all other nodes. These
+announcements contain information about the publishing node’s nickname,
+how to reach the node, what services it offers, and what version of code
+it is running.</p>
+<p>The new private node key is used to sign these announcements, preventing
+the Introducer from modifying their contents en-route. This will enable
+future versions of Tahoe-LAFS to use other forms of introduction
+(gossip, multiple introducers) without weakening the security model.</p>
+<p>The Node ID is useful as a handle with which to talk about a node. For
+example, when clients eventually gain the ability to control which
+storage servers they are willing to use (#467), the configuration file
+might simply include a list of Node IDs for the approved servers.</p>
+<p>TubIDs are currently also suitable for this job, but they depend upon
+having a Foolscap connection to the server. Since our goal is to move
+away from Foolscap towards a simpler (faster and more portable)
+protocol, we want to reduce our dependence upon TubIDs. Node IDs and
+Ed25519 signatures can be used for non-Foolscap non-SSL based protocols.</p>
+</div>
+<div class="section" id="how-the-node-id-is-computed">
+<h2>How The Node ID Is Computed<a class="headerlink" href="#how-the-node-id-is-computed" title="Permalink to this headline">¶</a></h2>
+<p>The long-form Node ID is the Ed25519 public verifying key, 256 bits (32
+bytes) long, base32-encoded, with a “v0-” prefix appended, and the
+trailing “=” padding removed, like so:</p>
+<blockquote>
+<div>v0-rlj3jnxqv4ee5rtpyngvzbhmhuikjfenjve7j5mzmfcxytwmyf6q</div></blockquote>
+<p>The Node ID is displayed in this long form on the node’s front Welcome
+page, and on the Introducer’s status page. In most other places
+(share-placement lists, file health displays), the “short form” is used
+instead. This is simply the first 8 characters of the base32 portion,
+frequently enclosed in square brackets, like this:</p>
+<blockquote>
+<div>[rlj3jnxq]</div></blockquote>
+<p>In contrast, old-style TubIDs are usually displayed with just 6 base32
+characters.</p>
+</div>
+<div class="section" id="version-compatibility-fallbacks-for-old-versions">
+<h2>Version Compatibility, Fallbacks For Old Versions<a class="headerlink" href="#version-compatibility-fallbacks-for-old-versions" title="Permalink to this headline">¶</a></h2>
+<p>Since Tahoe-LAFS 1.9 does not know about signed announcements, 1.10
+includes backwards-compatibility code to allow old and new versions to
+interoperate. There are three relevant participants: the node publishing
+an announcement, the Introducer which relays them, and the node
+receiving the (possibly signed) announcement.</p>
+<p>When a 1.10 node connects to an old Introducer (version 1.9 or earlier),
+it sends downgraded non-signed announcements. It likewise accepts
+non-signed announcements from the Introducer. The non-signed
+announcements use TubIDs to identify the sending node. The new 1.10
+Introducer, when it connects to an old node, downgrades any signed
+announcements to non-signed ones before delivery.</p>
+<p>As a result, the only way to receive signed announcements is for all
+three systems to be running the new 1.10 code. In a grid with a mixture
+of old and new nodes, if the Introducer is old, then all nodes will see
+unsigned TubIDs. If the Introducer is new, then nodes will see signed
+Node IDs whenever possible.</p>
+</div>
+<div class="section" id="share-placement">
+<h2>Share Placement<a class="headerlink" href="#share-placement" title="Permalink to this headline">¶</a></h2>
+<p>Tahoe-LAFS uses a “permuted ring” algorithm to decide where to place
+shares for any given file. For each potential server, it uses that
+server’s “permutation seed” to compute a pseudo-random but deterministic
+location on a ring, then walks the ring in clockwise order, asking each
+server in turn to hold a share until all are placed. When downloading a
+file, the servers are accessed in the same order. This minimizes the
+number of queries that must be done to download a file, and tolerates
+“churn” (nodes being added and removed from the grid) fairly well.</p>
+<p>This property depends upon server nodes having a stable permutation
+seed. If a server’s permutation seed were to change, it would
+effectively wind up at a randomly selected place on the permuted ring.
+Downloads would still complete, but clients would spend more time asking
+other servers before querying the correct one.</p>
+<p>In the old 1.9 code, the permutation-seed was always equal to the TubID.
+In 1.10, servers include their permutation-seed as part of their
+announcement. To improve stability for existing grids, if an old server
+(one with existing shares) is upgraded to run the 1.10 codebase, it will
+use its old TubID as its permutation-seed. When a new empty server runs
+the 1.10 code, it will use its Node ID instead. In both cases, once the
+node has picked a permutation-seed, it will continue using that value
+forever.</p>
+<p>To be specific, when a node wakes up running the 1.10 code, it will look
+for a recorded NODEDIR/permutation-seed file, and use its contents if
+present. If that file does not exist, it creates it (with the TubID if
+it has any shares, otherwise with the Node ID), and uses the contents as
+the permutation-seed.</p>
+<p>There is one unfortunate consequence of this pattern. If new 1.10 server
+is created in a grid that has an old client, or has a new client but an
+old Introducer, then that client will see downgraded non-signed
+announcements, and thus will first upload shares with the TubID-based
+permutation-seed. Later, when the client and/or Introducer is upgraded,
+the client will start seeing signed announcements with the NodeID-based
+permutation-seed, and will then look for shares in the wrong place. This
+will hurt performance in a large grid, but should not affect
+reliability. This effect shouldn’t even be noticeable in grids for which
+the number of servers is close to the “N” shares.total number (e.g.
+where num-servers &lt; 3*N). And the as-yet-unimplemented “share
+rebalancing” feature should repair the misplacement.</p>
+<p>If you wish to avoid this effect, try to upgrade both Introducers and
+clients at about the same time. (Upgrading servers does not matter: they
+will continue to use the old permutation-seed).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Node Keys in Tahoe-LAFS</a><ul>
+<li><a class="reference internal" href="#why-announcements-are-signed">Why Announcements Are Signed</a></li>
+<li><a class="reference internal" href="#how-the-node-id-is-computed">How The Node ID Is Computed</a></li>
+<li><a class="reference internal" href="#version-compatibility-fallbacks-for-old-versions">Version Compatibility, Fallbacks For Old Versions</a></li>
+<li><a class="reference internal" href="#share-placement">Share Placement</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="anonymity-configuration.html"
+                        title="previous chapter">Using Tahoe-LAFS with an anonymizing network: Tor, I2P</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="performance.html"
+                        title="next chapter">Performance costs for some common operations</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodekeys.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="performance.html" title="Performance costs for some common operations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="anonymity-configuration.html" title="Using Tahoe-LAFS with an anonymizing network: Tor, I2P"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

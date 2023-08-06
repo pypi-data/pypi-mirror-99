@@ -1,0 +1,360 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tahoe Logging &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tahoe Statistics" href="stats.html" />
+    <link rel="prev" title="Performance costs for some common operations" href="performance.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="stats.html" title="Tahoe Statistics"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="performance.html" title="Performance costs for some common operations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tahoe-logging">
+<h1>Tahoe Logging<a class="headerlink" href="#tahoe-logging" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#realtime-logging">Realtime Logging</a></li>
+<li><a class="reference internal" href="#incidents">Incidents</a></li>
+<li><a class="reference internal" href="#working-with-flogfiles">Working with flogfiles</a></li>
+<li><a class="reference internal" href="#gatherers">Gatherers</a><ol class="arabic">
+<li><a class="reference internal" href="#incident-gatherer">Incident Gatherer</a></li>
+<li><a class="reference internal" href="#log-gatherer">Log Gatherer</a></li>
+</ol>
+</li>
+<li><a class="reference internal" href="#adding-log-messages">Adding log messages</a></li>
+<li><a class="reference internal" href="#log-messages-during-unit-tests">Log Messages During Unit Tests</a></li>
+</ol>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Tahoe uses the Foolscap logging mechanism (known as the “flog” subsystem) to
+record information about what is happening inside the Tahoe node. This is
+primarily for use by programmers and grid operators who want to find out what
+went wrong.</p>
+<p>The Foolscap logging system is documented at
+<a class="reference external" href="https://github.com/warner/foolscap/blob/latest-release/doc/logging.rst">https://github.com/warner/foolscap/blob/latest-release/doc/logging.rst</a>.</p>
+<p>The Foolscap distribution includes a utility named “<code class="docutils literal notranslate"><span class="pre">flogtool</span></code>” that is
+used to get access to many Foolscap logging features. <code class="docutils literal notranslate"><span class="pre">flogtool</span></code> should get
+installed into the same virtualenv as the <code class="docutils literal notranslate"><span class="pre">tahoe</span></code> command.</p>
+</div>
+<div class="section" id="realtime-logging">
+<h2>Realtime Logging<a class="headerlink" href="#realtime-logging" title="Permalink to this headline">¶</a></h2>
+<p>When you are working on Tahoe code, and want to see what the node is doing,
+the easiest tool to use is “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">tail</span></code>”. This connects to the Tahoe
+node and subscribes to hear about all log events. These events are then
+displayed to stdout, and optionally saved to a file.</p>
+<p>“<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">tail</span></code>” connects to the “logport”, for which the FURL is stored
+in <code class="docutils literal notranslate"><span class="pre">BASEDIR/private/logport.furl</span></code> . The following command will connect to
+this port and start emitting log information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flogtool</span> <span class="n">tail</span> <span class="n">BASEDIR</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">logport</span><span class="o">.</span><span class="n">furl</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--save-to</span> <span class="pre">FILENAME</span></code> option will save all received events to a file,
+where then can be examined later with “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span></code>” or “<code class="docutils literal notranslate"><span class="pre">flogtool</span>
+<span class="pre">web-viewer</span></code>”. The <code class="docutils literal notranslate"><span class="pre">--catch-up</span></code> option will ask the node to dump all stored
+events before subscribing to new ones (without <code class="docutils literal notranslate"><span class="pre">--catch-up</span></code>, you will only
+hear about events that occur after the tool has connected and subscribed).</p>
+</div>
+<div class="section" id="incidents">
+<h2>Incidents<a class="headerlink" href="#incidents" title="Permalink to this headline">¶</a></h2>
+<p>Foolscap keeps a short list of recent events in memory. When something goes
+wrong, it writes all the history it has (and everything that gets logged in
+the next few seconds) into a file called an “incident”. These files go into
+<code class="docutils literal notranslate"><span class="pre">BASEDIR/logs/incidents/</span></code> , in a file named
+“<code class="docutils literal notranslate"><span class="pre">incident-TIMESTAMP-UNIQUE.flog.bz2</span></code>”. The default definition of
+“something goes wrong” is the generation of a log event at the <code class="docutils literal notranslate"><span class="pre">log.WEIRD</span></code>
+level or higher, but other criteria could be implemented.</p>
+<p>The typical “incident report” we’ve seen in a large Tahoe grid is about 40kB
+compressed, representing about 1800 recent events.</p>
+<p>These “flogfiles” have a similar format to the files saved by “<code class="docutils literal notranslate"><span class="pre">flogtool</span>
+<span class="pre">tail</span> <span class="pre">--save-to</span></code>”. They are simply lists of log events, with a small header
+to indicate which event triggered the incident.</p>
+<p>The “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span> <span class="pre">FLOGFILE</span></code>” command will take one of these <code class="docutils literal notranslate"><span class="pre">.flog.bz2</span></code>
+files and print their contents to stdout, one line per event. The raw event
+dictionaries can be dumped by using “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span> <span class="pre">--verbose</span> <span class="pre">FLOGFILE</span></code>”.</p>
+<p>The “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">web-viewer</span></code>” command can be used to examine the flogfile in
+a web browser. It runs a small HTTP server and emits the URL on stdout.  This
+view provides more structure than the output of “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span></code>”: the
+parent/child relationships of log events is displayed in a nested format.
+“<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">web-viewer</span></code>” is still fairly immature.</p>
+</div>
+<div class="section" id="working-with-flogfiles">
+<h2>Working with flogfiles<a class="headerlink" href="#working-with-flogfiles" title="Permalink to this headline">¶</a></h2>
+<p>The “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">filter</span></code>” command can be used to take a large flogfile
+(perhaps one created by the log-gatherer, see below) and copy a subset of
+events into a second file. This smaller flogfile may be easier to work with
+than the original. The arguments to “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">filter</span></code>” specify filtering
+criteria: a predicate that each event must match to be copied into the target
+file. <code class="docutils literal notranslate"><span class="pre">--before</span></code> and <code class="docutils literal notranslate"><span class="pre">--after</span></code> are used to exclude events outside a given
+window of time. <code class="docutils literal notranslate"><span class="pre">--above</span></code> will retain events above a certain severity
+level. <code class="docutils literal notranslate"><span class="pre">--from</span></code> retains events send by a specific tubid.
+<code class="docutils literal notranslate"><span class="pre">--strip-facility</span></code> removes events that were emitted with a given facility
+(like <code class="docutils literal notranslate"><span class="pre">foolscap.negotiation</span></code> or <code class="docutils literal notranslate"><span class="pre">tahoe.upload</span></code>).</p>
+</div>
+<div class="section" id="gatherers">
+<h2>Gatherers<a class="headerlink" href="#gatherers" title="Permalink to this headline">¶</a></h2>
+<p>In a deployed Tahoe grid, it is useful to get log information automatically
+transferred to a central log-gatherer host. This offloads the (admittedly
+modest) storage requirements to a different host and provides access to
+logfiles from multiple nodes (web-API, storage, or helper) in a single place.</p>
+<p>There are two kinds of gatherers: “log gatherer” and “stats gatherer”. Each
+produces a FURL which needs to be placed in the <code class="docutils literal notranslate"><span class="pre">NODEDIR/tahoe.cfg</span></code> file of
+each node that is to publish to the gatherer, under the keys
+“log_gatherer.furl” and “stats_gatherer.furl” respectively. When the Tahoe
+node starts, it will connect to the configured gatherers and offer its
+logport: the gatherer will then use the logport to subscribe to hear about
+events.</p>
+<p>The gatherer will write to files in its working directory, which can then be
+examined with tools like “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span></code>” as described above.</p>
+<div class="section" id="incident-gatherer">
+<h3>Incident Gatherer<a class="headerlink" href="#incident-gatherer" title="Permalink to this headline">¶</a></h3>
+<p>The “incident gatherer” only collects Incidents: records of the log events
+that occurred just before and slightly after some high-level “trigger event”
+was recorded. Each incident is classified into a “category”: a short string
+that summarizes what sort of problem took place. These classification
+functions are written after examining a new/unknown incident. The idea is to
+recognize when the same problem is happening multiple times.</p>
+<p>A collection of classification functions that are useful for Tahoe nodes are
+provided in <code class="docutils literal notranslate"><span class="pre">misc/incident-gatherer/support_classifiers.py</span></code> . There is
+roughly one category for each <code class="docutils literal notranslate"><span class="pre">log.WEIRD</span></code>-or-higher level event in the
+Tahoe source code.</p>
+<p>The incident gatherer is created with the “<code class="docutils literal notranslate"><span class="pre">flogtool</span>
+<span class="pre">create-incident-gatherer</span> <span class="pre">WORKDIR</span></code>” command, and started with “<code class="docutils literal notranslate"><span class="pre">tahoe</span>
+<span class="pre">start</span></code>”. The generated “<code class="docutils literal notranslate"><span class="pre">gatherer.tac</span></code>” file should be modified to add
+classifier functions.</p>
+<p>The incident gatherer writes incident names (which are simply the relative
+pathname of the <code class="docutils literal notranslate"><span class="pre">incident-\*.flog.bz2</span></code> file) into <code class="docutils literal notranslate"><span class="pre">classified/CATEGORY</span></code>.
+For example, the <code class="docutils literal notranslate"><span class="pre">classified/mutable-retrieve-uncoordinated-write-error</span></code>
+file contains a list of all incidents which were triggered by an
+uncoordinated write that was detected during mutable file retrieval (caused
+when somebody changed the contents of the mutable file in between the node’s
+mapupdate step and the retrieve step). The <code class="docutils literal notranslate"><span class="pre">classified/unknown</span></code> file
+contains a list of all incidents that did not match any of the classification
+functions.</p>
+<p>At startup, the incident gatherer will automatically reclassify any incident
+report which is not mentioned in any of the <code class="docutils literal notranslate"><span class="pre">classified/\*</span></code> files. So the
+usual workflow is to examine the incidents in <code class="docutils literal notranslate"><span class="pre">classified/unknown</span></code>, add a
+new classification function, delete <code class="docutils literal notranslate"><span class="pre">classified/unknown</span></code>, then bound the
+gatherer with “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">restart</span> <span class="pre">WORKDIR</span></code>”. The incidents which can be
+classified with the new functions will be added to their own
+<code class="docutils literal notranslate"><span class="pre">classified/FOO</span></code> lists, and the remaining ones will be put in
+<code class="docutils literal notranslate"><span class="pre">classified/unknown</span></code>, where the process can be repeated until all events
+are classifiable.</p>
+<p>The incident gatherer is still fairly immature: future versions will have a
+web interface and an RSS feed, so operations personnel can track problems in
+the storage grid.</p>
+<p>In our experience, each incident takes about two seconds to transfer from the
+node that generated it to the gatherer. The gatherer will automatically catch
+up to any incidents which occurred while it is offline.</p>
+</div>
+<div class="section" id="log-gatherer">
+<h3>Log Gatherer<a class="headerlink" href="#log-gatherer" title="Permalink to this headline">¶</a></h3>
+<p>The “Log Gatherer” subscribes to hear about every single event published by
+the connected nodes, regardless of severity. This server writes these log
+events into a large flogfile that is rotated (closed, compressed, and
+replaced with a new one) on a periodic basis. Each flogfile is named
+according to the range of time it represents, with names like
+“<code class="docutils literal notranslate"><span class="pre">from-2008-08-26-132256--to-2008-08-26-162256.flog.bz2</span></code>”. The flogfiles
+contain events from many different sources, making it easier to correlate
+things that happened on multiple machines (such as comparing a client node
+making a request with the storage servers that respond to that request).</p>
+<p>Create the Log Gatherer with the “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">create-gatherer</span> <span class="pre">WORKDIR</span></code>”
+command, and start it with “<code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">start</span></code>”. Then copy the contents of the
+<code class="docutils literal notranslate"><span class="pre">log_gatherer.furl</span></code> file it creates into the <code class="docutils literal notranslate"><span class="pre">BASEDIR/tahoe.cfg</span></code> file
+(under the key <code class="docutils literal notranslate"><span class="pre">log_gatherer.furl</span></code> of the section <code class="docutils literal notranslate"><span class="pre">[node]</span></code>) of all nodes
+that should be sending it log events. (See <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a>)</p>
+<p>The “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">filter</span></code>” command, described above, is useful to cut down the
+potentially large flogfiles into a more focussed form.</p>
+<p>Busy nodes, particularly web-API nodes which are performing recursive
+deep-size/deep-stats/deep-check operations, can produce a lot of log events.
+To avoid overwhelming the node (and using an unbounded amount of memory for
+the outbound TCP queue), publishing nodes will start dropping log events when
+the outbound queue grows too large. When this occurs, there will be gaps
+(non-sequential event numbers) in the log-gatherer’s flogfiles.</p>
+</div>
+</div>
+<div class="section" id="adding-log-messages">
+<h2>Adding log messages<a class="headerlink" href="#adding-log-messages" title="Permalink to this headline">¶</a></h2>
+<p>When adding new code, the Tahoe developer should add a reasonable number of
+new log events. For details, please see the Foolscap logging documentation,
+but a few notes are worth stating here:</p>
+<ul class="simple">
+<li>use a facility prefix of “<code class="docutils literal notranslate"><span class="pre">tahoe.</span></code>”, like “<code class="docutils literal notranslate"><span class="pre">tahoe.mutable.publish</span></code>”</li>
+<li>assign each severe (<code class="docutils literal notranslate"><span class="pre">log.WEIRD</span></code> or higher) event a unique message
+identifier, as the <code class="docutils literal notranslate"><span class="pre">umid=</span></code> argument to the <code class="docutils literal notranslate"><span class="pre">log.msg()</span></code> call. The
+<code class="docutils literal notranslate"><span class="pre">misc/coding_tools/make_umid</span></code> script may be useful for this purpose.
+This will make it easier to write a classification function for these
+messages.</li>
+<li>use the <code class="docutils literal notranslate"><span class="pre">parent=</span></code> argument whenever the event is causally/temporally
+clustered with its parent. For example, a download process that involves
+three sequential hash fetches could announce the send and receipt of those
+hash-fetch messages with a <code class="docutils literal notranslate"><span class="pre">parent=</span></code> argument that ties them to the
+overall download process. However, each new web-API download request should
+be unparented.</li>
+<li>use the <code class="docutils literal notranslate"><span class="pre">format=</span></code> argument in preference to the <code class="docutils literal notranslate"><span class="pre">message=</span></code> argument.
+E.g. use <code class="docutils literal notranslate"><span class="pre">log.msg(format=&quot;got</span> <span class="pre">%(n)d</span> <span class="pre">shares,</span> <span class="pre">need</span> <span class="pre">%(k)d&quot;,</span> <span class="pre">n=n,</span> <span class="pre">k=k)</span></code>
+instead of <code class="docutils literal notranslate"><span class="pre">log.msg(&quot;got</span> <span class="pre">%d</span> <span class="pre">shares,</span> <span class="pre">need</span> <span class="pre">%d&quot;</span> <span class="pre">%</span> <span class="pre">(n,k))</span></code>. This will allow
+later tools to analyze the event without needing to scrape/reconstruct the
+structured data out of the formatted string.</li>
+<li>Pass extra information as extra keyword arguments, even if they aren’t
+included in the <code class="docutils literal notranslate"><span class="pre">format=</span></code> string. This information will be displayed in
+the “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span> <span class="pre">--verbose</span></code>” output, as well as being available to
+other tools. The <code class="docutils literal notranslate"><span class="pre">umid=</span></code> argument should be passed this way.</li>
+<li>use <code class="docutils literal notranslate"><span class="pre">log.err</span></code> for the catch-all <code class="docutils literal notranslate"><span class="pre">addErrback</span></code> that gets attached to the
+end of any given Deferred chain. When used in conjunction with
+<code class="docutils literal notranslate"><span class="pre">LOGTOTWISTED=1</span></code>, <code class="docutils literal notranslate"><span class="pre">log.err()</span></code> will tell Twisted about the error-nature
+of the log message, causing Trial to flunk the test (with an “ERROR”
+indication that prints a copy of the Failure, including a traceback).
+Don’t use <code class="docutils literal notranslate"><span class="pre">log.err</span></code> for events that are <code class="docutils literal notranslate"><span class="pre">BAD</span></code> but handled (like hash
+failures: since these are often deliberately provoked by test code, they
+should not cause test failures): use <code class="docutils literal notranslate"><span class="pre">log.msg(level=BAD)</span></code> for those
+instead.</li>
+</ul>
+</div>
+<div class="section" id="log-messages-during-unit-tests">
+<h2>Log Messages During Unit Tests<a class="headerlink" href="#log-messages-during-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>If a test is failing and you aren’t sure why, start by enabling
+<code class="docutils literal notranslate"><span class="pre">FLOGTOTWISTED=1</span></code> like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span> <span class="n">FLOGTOTWISTED</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">FLOGTOTWISTED=1</span></code>, sufficiently-important log events will be written
+into <code class="docutils literal notranslate"><span class="pre">_trial_temp/test.log</span></code>, which may give you more ideas about why the
+test is failing.</p>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">_trial_temp/test.log</span></code> will not receive messages below the
+<code class="docutils literal notranslate"><span class="pre">level=OPERATIONAL</span></code> threshold. You can change the threshold via the <code class="docutils literal notranslate"><span class="pre">FLOGLEVEL</span></code>
+variable, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span> <span class="n">FLOGLEVEL</span><span class="o">=</span><span class="mi">10</span> <span class="n">FLOGTOTWISTED</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>(The level numbers are listed in src/allmydata/util/log.py.)</p>
+<p>To look at the detailed foolscap logging messages, run the tests like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span> <span class="n">FLOGFILE</span><span class="o">=</span><span class="n">flog</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bz2</span> <span class="n">FLOGLEVEL</span><span class="o">=</span><span class="mi">1</span> <span class="n">FLOGTOTWISTED</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>The first environment variable will cause foolscap log events to be written
+to <code class="docutils literal notranslate"><span class="pre">./flog.out.bz2</span></code> (instead of merely being recorded in the circular
+buffers for the use of remote subscribers or incident reports). The second
+will cause all log events to be written out, not just the higher-severity
+ones. The third will cause twisted log events (like the markers that indicate
+when each unit test is starting and stopping) to be copied into the flogfile,
+making it easier to correlate log events with unit tests.</p>
+<p>Enabling this form of logging appears to roughly double the runtime of the
+unit tests. The <code class="docutils literal notranslate"><span class="pre">flog.out.bz2</span></code> file is approximately 2MB.</p>
+<p>You can then use “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">dump</span></code>” or “<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">web-viewer</span></code>” on the
+resulting <code class="docutils literal notranslate"><span class="pre">flog.out</span></code> file.</p>
+<p>(“<code class="docutils literal notranslate"><span class="pre">flogtool</span> <span class="pre">tail</span></code>” and the log-gatherer are not useful during unit tests,
+since there is no single Tub to which all the log messages are published).</p>
+<p>It is possible for setting these environment variables to cause spurious test
+failures in tests with race condition bugs. All known instances of this have
+been fixed as of Tahoe-LAFS v1.7.1.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tahoe Logging</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#realtime-logging">Realtime Logging</a></li>
+<li><a class="reference internal" href="#incidents">Incidents</a></li>
+<li><a class="reference internal" href="#working-with-flogfiles">Working with flogfiles</a></li>
+<li><a class="reference internal" href="#gatherers">Gatherers</a><ul>
+<li><a class="reference internal" href="#incident-gatherer">Incident Gatherer</a></li>
+<li><a class="reference internal" href="#log-gatherer">Log Gatherer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adding-log-messages">Adding log messages</a></li>
+<li><a class="reference internal" href="#log-messages-during-unit-tests">Log Messages During Unit Tests</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="performance.html"
+                        title="previous chapter">Performance costs for some common operations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="stats.html"
+                        title="next chapter">Tahoe Statistics</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/logging.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="stats.html" title="Tahoe Statistics"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="performance.html" title="Performance costs for some common operations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

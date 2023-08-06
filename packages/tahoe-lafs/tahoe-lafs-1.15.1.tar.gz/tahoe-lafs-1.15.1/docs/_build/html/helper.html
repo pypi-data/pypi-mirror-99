@@ -1,0 +1,267 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Tahoe Upload Helper &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Convergence Secret" href="convergence-secret.html" />
+    <link rel="prev" title="How To Configure A Server" href="servers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="convergence-secret.html" title="The Convergence Secret"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="servers.html" title="How To Configure A Server"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-tahoe-upload-helper">
+<h1>The Tahoe Upload Helper<a class="headerlink" href="#the-tahoe-upload-helper" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#setting-up-a-helper">Setting Up A Helper</a></li>
+<li><a class="reference internal" href="#using-a-helper">Using a Helper</a></li>
+<li><a class="reference internal" href="#other-helper-modes">Other Helper Modes</a></li>
+</ol>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>As described in the “Swarming Download, Trickling Upload” section of
+<a class="reference internal" href="architecture.html"><span class="doc">Tahoe-LAFS Architecture</span></a>, Tahoe uploads require more bandwidth than downloads: you
+must push the redundant shares during upload, but you do not need to retrieve
+them during download. With the default 3-of-10 encoding parameters, this
+means that an upload will require about 3.3x the traffic as a download of the
+same file.</p>
+<p>Unfortunately, this “expansion penalty” occurs in the same upstream direction
+that most consumer DSL lines are slow anyways. Typical ADSL lines get 8 times
+as much download capacity as upload capacity. When the ADSL upstream penalty
+is combined with the expansion penalty, the result is uploads that can take
+up to 32 times longer than downloads.</p>
+<p>The “Helper” is a service that can mitigate the expansion penalty by
+arranging for the client node to send data to a central Helper node instead
+of sending it directly to the storage servers. It sends ciphertext to the
+Helper, so the security properties remain the same as with non-Helper
+uploads. The Helper is responsible for applying the erasure encoding
+algorithm and placing the resulting shares on the storage servers.</p>
+<p>Of course, the helper cannot mitigate the ADSL upstream penalty.</p>
+<p>The second benefit of using an upload helper is that clients who lose their
+network connections while uploading a file (because of a network flap, or
+because they shut down their laptop while an upload was in progress) can
+resume their upload rather than needing to start again from scratch. The
+helper holds the partially-uploaded ciphertext on disk, and when the client
+tries to upload the same file a second time, it discovers that the partial
+ciphertext is already present. The client then only needs to upload the
+remaining ciphertext. This reduces the “interrupted upload penalty” to a
+minimum.</p>
+<p>This also serves to reduce the number of active connections between the
+client and the outside world: most of their traffic flows over a single TCP
+connection to the helper. This can improve TCP fairness, and should allow
+other applications that are sharing the same uplink to compete more evenly
+for the limited bandwidth.</p>
+</div>
+<div class="section" id="setting-up-a-helper">
+<h2>Setting Up A Helper<a class="headerlink" href="#setting-up-a-helper" title="Permalink to this headline">¶</a></h2>
+<p>Who should consider running a helper?</p>
+<ul class="simple">
+<li>Benevolent entities which wish to provide better upload speed for clients
+that have slow uplinks</li>
+<li>Folks which have machines with upload bandwidth to spare.</li>
+<li>Server grid operators who want clients to connect to a small number of
+helpers rather than a large number of storage servers (a “multi-tier”
+architecture)</li>
+</ul>
+<p>What sorts of machines are good candidates for running a helper?</p>
+<ul class="simple">
+<li>The Helper needs to have good bandwidth to the storage servers. In
+particular, it needs to have at least 3.3x better upload bandwidth than
+the client does, or the client might as well upload directly to the
+storage servers. In a commercial grid, the helper should be in the same
+colo (and preferably in the same rack) as the storage servers.</li>
+<li>The Helper will take on most of the CPU load involved in uploading a file.
+So having a dedicated machine will give better results.</li>
+<li>The Helper buffers ciphertext on disk, so the host will need at least as
+much free disk space as there will be simultaneous uploads. When an upload
+is interrupted, that space will be used for a longer period of time.</li>
+</ul>
+<p>To turn a Tahoe-LAFS node into a helper (i.e. to run a helper service in
+addition to whatever else that node is doing), edit the tahoe.cfg file in your
+node’s base directory and set “enabled = true” in the section named
+“[helper]”.</p>
+<p>Then restart the node. This will signal the node to create a Helper service
+and listen for incoming requests. Once the node has started, there will be a
+file named private/helper.furl which contains the contact information for the
+helper: you will need to give this FURL to any clients that wish to use your
+helper.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cat $BASEDIR/private/helper.furl | mail -s &quot;helper furl&quot; friend@example.com
+</pre></div>
+</div>
+<p>You can tell if your node is running a helper by looking at its web status
+page. Assuming that you’ve set up the ‘webport’ to use port 3456, point your
+browser at <code class="docutils literal notranslate"><span class="pre">http://localhost:3456/</span></code> . The welcome page will say “Helper: 0
+active uploads” or “Not running helper” as appropriate. The
+<a class="reference external" href="http://localhost:3456/helper_status">http://localhost:3456/helper_status</a> page will also provide details on what
+the helper is currently doing.</p>
+<p>The helper will store the ciphertext that is is fetching from clients in
+$BASEDIR/helper/CHK_incoming/ . Once all the ciphertext has been fetched, it
+will be moved to $BASEDIR/helper/CHK_encoding/ and erasure-coding will
+commence. Once the file is fully encoded and the shares are pushed to the
+storage servers, the ciphertext file will be deleted.</p>
+<p>If a client disconnects while the ciphertext is being fetched, the partial
+ciphertext will remain in CHK_incoming/ until they reconnect and finish
+sending it. If a client disconnects while the ciphertext is being encoded,
+the data will remain in CHK_encoding/ until they reconnect and encoding is
+finished. For long-running and busy helpers, it may be a good idea to delete
+files in these directories that have not been modified for a week or two.
+Future versions of tahoe will try to self-manage these files a bit better.</p>
+</div>
+<div class="section" id="using-a-helper">
+<h2>Using a Helper<a class="headerlink" href="#using-a-helper" title="Permalink to this headline">¶</a></h2>
+<p>Who should consider using a Helper?</p>
+<ul class="simple">
+<li>clients with limited upstream bandwidth, such as a consumer ADSL line</li>
+<li>clients who believe that the helper will give them faster uploads than
+they could achieve with a direct upload</li>
+<li>clients who experience problems with TCP connection fairness: if other
+programs or machines in the same home are getting less than their fair
+share of upload bandwidth. If the connection is being shared fairly, then
+a Tahoe upload that is happening at the same time as a single FTP upload
+should get half the bandwidth.</li>
+<li>clients who have been given the helper.furl by someone who is running a
+Helper and is willing to let them use it</li>
+</ul>
+<p>To take advantage of somebody else’s Helper, take the helper furl that they
+give you, and edit your tahoe.cfg file. Enter the helper’s furl into the
+value of the key “helper.furl” in the “[client]” section of tahoe.cfg, as
+described in the “Client Configuration” section of <a class="reference internal" href="configuration.html"><span class="doc">Configuring a Tahoe-LAFS node</span></a>.</p>
+<p>Then restart the node. This will signal the client to try and connect to the
+helper. Subsequent uploads will use the helper rather than using direct
+connections to the storage server.</p>
+<p>If the node has been configured to use a helper, that node’s HTTP welcome
+page (<code class="docutils literal notranslate"><span class="pre">http://localhost:3456/</span></code>) will say “Helper: $HELPERFURL” instead of
+“Helper: None”. If the helper is actually running and reachable, the bullet
+to the left of “Helper” will be green.</p>
+<p>The helper is optional. If a helper is connected when an upload begins, the
+upload will use the helper. If there is no helper connection present when an
+upload begins, that upload will connect directly to the storage servers. The
+client will automatically attempt to reconnect to the helper if the
+connection is lost, using the same exponential-backoff algorithm as all other
+tahoe/foolscap connections.</p>
+<p>The upload/download status page (<code class="docutils literal notranslate"><span class="pre">http://localhost:3456/status</span></code>) will announce
+the using-helper-or-not state of each upload, in the “Helper?” column.</p>
+</div>
+<div class="section" id="other-helper-modes">
+<h2>Other Helper Modes<a class="headerlink" href="#other-helper-modes" title="Permalink to this headline">¶</a></h2>
+<p>The Tahoe Helper only currently helps with one kind of operation: uploading
+immutable files. There are three other things it might be able to help with
+in the future:</p>
+<ul class="simple">
+<li>downloading immutable files</li>
+<li>uploading mutable files (such as directories)</li>
+<li>downloading mutable files (like directories)</li>
+</ul>
+<p>Since mutable files are currently limited in size, the ADSL upstream penalty
+is not so severe for them. There is no ADSL penalty to downloads, but there
+may still be benefit to extending the helper interface to assist with them:
+fewer connections to the storage servers, and better TCP fairness.</p>
+<p>A future version of the Tahoe helper might provide assistance with these
+other modes. If it were to help with all four modes, then the clients would
+not need direct connections to the storage servers at all: clients would
+connect to helpers, and helpers would connect to servers. For a large grid
+with tens of thousands of clients, this might make the grid more scalable.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Tahoe Upload Helper</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#setting-up-a-helper">Setting Up A Helper</a></li>
+<li><a class="reference internal" href="#using-a-helper">Using a Helper</a></li>
+<li><a class="reference internal" href="#other-helper-modes">Other Helper Modes</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="servers.html"
+                        title="previous chapter">How To Configure A Server</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="convergence-secret.html"
+                        title="next chapter">The Convergence Secret</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/helper.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="convergence-secret.html" title="The Convergence Secret"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="servers.html" title="How To Configure A Server"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

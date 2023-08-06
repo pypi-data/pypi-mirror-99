@@ -1,0 +1,55 @@
+setuptools>=28.8.0
+zfec>=1.1.0
+zope.interface!=3.6.3,!=3.6.4,>=3.6.0
+cryptography>=2.6
+Twisted[conch,tls]>=18.4.0
+Nevow>=0.11.1
+PyYAML>=3.11
+six>=1.10.0
+magic-wormhole>=0.10.2
+eliot~=1.7
+pyrsistent<0.17.0
+attrs<20,>=18.2.0
+autobahn>=19.5.2
+future>=0.18.2
+pyutil>=3.3.0
+distro>=1.4.0
+
+[:python_version < "3.0"]
+foolscap==0.13.1
+
+[:python_version > "3.0"]
+foolscap>=20.4.0
+
+[:sys_platform=="win32"]
+pywin32!=226
+
+[i2p]
+
+[i2p:python_version < "3.0"]
+txi2p
+
+[test]
+flake8
+pyflakes==2.2.0
+coverage~=4.5
+mock
+tox
+pytest
+pytest-twisted
+hypothesis>=3.6.1
+treq
+towncrier
+testtools
+fixtures
+beautifulsoup4
+html5lib
+junitxml
+tenacity
+txtorcon>=0.17.0
+
+[test:python_version < "3.0"]
+txi2p
+
+[tor]
+txtorcon>=0.17.0

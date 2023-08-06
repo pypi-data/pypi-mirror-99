@@ -1,0 +1,213 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Building pyOpenSSL on Windows &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Specifications" href="../specifications/index.html" />
+    <link rel="prev" title="OS-X Packaging" href="../OS-X.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../specifications/index.html" title="Specifications"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../OS-X.html" title="OS-X Packaging"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="building-pyopenssl-on-windows">
+<h1>Building pyOpenSSL on Windows<a class="headerlink" href="#building-pyopenssl-on-windows" title="Permalink to this headline">¶</a></h1>
+<p>This document details the steps to build an pyOpenSSL egg with embedded
+OpenSSL library, for use by Tahoe-LAFS on Windows.</p>
+<p>The instructions were tried on Windows 7 64-bit and Windows XP 32-bit.
+They should work on other versions of Windows, maybe with minor variations.</p>
+<div class="section" id="download-and-install-microsoft-visual-c-compiler-for-python-2-7">
+<h2>Download and install Microsoft Visual C++ compiler for Python 2.7<a class="headerlink" href="#download-and-install-microsoft-visual-c-compiler-for-python-2-7" title="Permalink to this headline">¶</a></h2>
+<p>For reasons detailed in <a class="reference external" href="https://docs.python.org/2/extending/windows.html">the Python documentation</a>, Python extension modules
+need to be built using a compiler compatible with the same version of Visual C++
+that was used to build Python itself. Until recently, this meant downloading
+Microsoft Visual Studio 2008 Express Edition and Windows SDK 3.5. The recent
+release of the Microsoft Visual C++ compiler for Python 2.7 made things a lot
+simpler.</p>
+<p>So, the first step is to download and install the C++ compiler from Microsoft
+from <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=44266">this link</a>.</p>
+<p>Find the location where it installed the <code class="docutils literal notranslate"><span class="pre">vcvarsall.bat</span></code> file; depending on
+the version of Windows it could be either
+<code class="docutils literal notranslate"><span class="pre">&quot;%USERPROFILE%\AppData\Local\Programs\Common\Microsoft\Visual</span> <span class="pre">C++</span> <span class="pre">for</span> <span class="pre">Python\9.0&quot;</span></code>
+or <code class="docutils literal notranslate"><span class="pre">&quot;%CommonProgramFiles%\Microsoft\Visual</span> <span class="pre">C++</span> <span class="pre">for</span> <span class="pre">Python\9.0&quot;</span></code>, for example.
+We’ll call this <code class="docutils literal notranslate"><span class="pre">%VCDIR%</span></code> below.</p>
+</div>
+<div class="section" id="download-and-install-perl">
+<h2>Download and install Perl<a class="headerlink" href="#download-and-install-perl" title="Permalink to this headline">¶</a></h2>
+<p>Download and install ActiveState Perl:</p>
+<ul class="simple">
+<li>go to <a class="reference external" href="https://www.activestate.com/activeperl/downloads">the ActiveState Perl download page</a>.</li>
+<li>identify the correct link and manually change it from http to https.</li>
+</ul>
+</div>
+<div class="section" id="download-and-install-the-latest-openssl-version">
+<h2>Download and install the latest OpenSSL version<a class="headerlink" href="#download-and-install-the-latest-openssl-version" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Download the latest OpenSSL from <a class="reference external" href="https://www.openssl.org/source/">the OpenSSL source download page</a> and untar it.
+At the time of writing, the latest version was OpenSSL 1.0.1m.</p>
+</li>
+<li><p class="first">Set up the build environment. For 64-bit Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;%VCDIR%</span><span class="se">\v</span><span class="s2">cvarsall.bat&quot;</span> <span class="n">amd64</span>
+</pre></div>
+</div>
+<p>or for 32-bit Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;%VCDIR%</span><span class="se">\v</span><span class="s2">cvarsall.bat&quot;</span> <span class="n">x86</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Go to the untar’ed OpenSSL source base directory. For 64-bit Windows, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>
+<span class="n">perl</span> <span class="n">Configure</span> <span class="n">VC</span><span class="o">-</span><span class="n">WIN64A</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>\<span class="n">openssl</span> <span class="n">no</span><span class="o">-</span><span class="n">asm</span> <span class="n">enable</span><span class="o">-</span><span class="n">tlsext</span>
+<span class="n">ms</span>\<span class="n">do_win64a</span><span class="o">.</span><span class="n">bat</span>
+<span class="n">nmake</span> <span class="o">-</span><span class="n">f</span> <span class="n">ms</span>\<span class="n">ntdll</span><span class="o">.</span><span class="n">mak</span>
+<span class="n">nmake</span> <span class="o">-</span><span class="n">f</span> <span class="n">ms</span>\<span class="n">ntdll</span><span class="o">.</span><span class="n">mak</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>or for 32-bit Windows, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>
+<span class="n">perl</span> <span class="n">Configure</span> <span class="n">VC</span><span class="o">-</span><span class="n">WIN32</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>\<span class="n">openssl</span> <span class="n">no</span><span class="o">-</span><span class="n">asm</span> <span class="n">enable</span><span class="o">-</span><span class="n">tlsext</span>
+<span class="n">ms</span>\<span class="n">do_ms</span><span class="o">.</span><span class="n">bat</span>
+<span class="n">nmake</span> <span class="o">-</span><span class="n">f</span> <span class="n">ms</span>\<span class="n">ntdll</span><span class="o">.</span><span class="n">mak</span>
+<span class="n">nmake</span> <span class="o">-</span><span class="n">f</span> <span class="n">ms</span>\<span class="n">ntdll</span><span class="o">.</span><span class="n">mak</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>To check that it is working, run <code class="docutils literal notranslate"><span class="pre">c:\dist\openssl\bin\openssl</span> <span class="pre">version</span></code>.</p>
+</div>
+<div class="section" id="building-pyopenssl">
+<h2>Building PyOpenSSL<a class="headerlink" href="#building-pyopenssl" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Download and untar pyOpenSSL 0.13.1 (see <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/2221">ticket #2221</a> for why we
+currently use this version). The MD5 hash of pyOpenSSL-0.13.1.tar.gz is
+e27a3b76734c39ea03952ca94cc56715.</p>
+</li>
+<li><p class="first">Set up the build environment by running <code class="docutils literal notranslate"><span class="pre">vcvarsall.bat</span></code> as for building
+OpenSSL above.</p>
+</li>
+<li><p class="first">Set OpenSSL <code class="docutils literal notranslate"><span class="pre">LIB</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> and <code class="docutils literal notranslate"><span class="pre">PATH</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">LIB</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>\<span class="n">openssl</span>\<span class="n">lib</span><span class="p">;</span><span class="o">%</span><span class="n">LIB</span><span class="o">%</span>
+<span class="nb">set</span> <span class="n">INCLUDE</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>\<span class="n">openssl</span>\<span class="n">include</span><span class="p">;</span><span class="o">%</span><span class="n">INCLUDE</span><span class="o">%</span>
+<span class="nb">set</span> <span class="n">PATH</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">dist</span>\<span class="n">openssl</span>\<span class="nb">bin</span><span class="p">;</span><span class="o">%</span><span class="n">PATH</span><span class="o">%</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">A workaround is needed to ensure that the setuptools <code class="docutils literal notranslate"><span class="pre">bdist_egg</span></code> command
+is available. Edit pyOpenSSL’s <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> around line 13 as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span> <span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">Extension</span><span class="p">,</span> <span class="n">setup</span>
+<span class="o">---</span>
+<span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">Extension</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">bdist_egg</span></code></p>
+</li>
+</ul>
+<p>The generated egg will be in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> directory. It is a good idea
+to check that Tahoe-LAFS is able to use it before uploading the egg to
+tahoe-lafs.org. This can be done by putting it in the <code class="docutils literal notranslate"><span class="pre">tahoe-deps</span></code> directory
+of a Tahoe-LAFS checkout or release, then running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">test</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Building pyOpenSSL on Windows</a><ul>
+<li><a class="reference internal" href="#download-and-install-microsoft-visual-c-compiler-for-python-2-7">Download and install Microsoft Visual C++ compiler for Python 2.7</a></li>
+<li><a class="reference internal" href="#download-and-install-perl">Download and install Perl</a></li>
+<li><a class="reference internal" href="#download-and-install-the-latest-openssl-version">Download and install the latest OpenSSL version</a></li>
+<li><a class="reference internal" href="#building-pyopenssl">Building PyOpenSSL</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../OS-X.html"
+                        title="previous chapter">OS-X Packaging</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../specifications/index.html"
+                        title="next chapter">Specifications</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/build/build-pyOpenSSL.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../specifications/index.html" title="Specifications"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../OS-X.html" title="OS-X Packaging"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Managed Grid &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Tahoe Upload Helper" href="helper.html" />
+    <link rel="prev" title="How To Configure A Server" href="servers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="helper.html" title="The Tahoe Upload Helper"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="servers.html" title="How To Configure A Server"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="managed-grid">
+<h1>Managed Grid<a class="headerlink" href="#managed-grid" title="Permalink to this headline">¶</a></h1>
+<p>This document explains the “Grid Manager” concept and the
+<cite>grid-manager</cite> command. Someone operating a grid may choose to use a
+Grid Manager. Operators of storage-servers and clients will then be
+given additional configuration in this case.</p>
+<div class="section" id="overview-and-motivation">
+<h2>Overview and Motivation<a class="headerlink" href="#overview-and-motivation" title="Permalink to this headline">¶</a></h2>
+<p>In a grid using an Introducer, a client will use any storage-server
+the Introducer announces (and the Introducer will announce any
+storage-server that connects to it). This means that anyone with the
+Introducer fURL can connect storage to the grid.</p>
+<p>Sometimes, this is just what you want!</p>
+<p>For some use-cases, though, you want to have clients only use certain
+servers. One case might be a “managed” grid, where some entity runs
+the grid; clients of this grid don’t want their uploads to go to
+“unmanaged” storage if some other client decides to provide storage.</p>
+<p>One way to limit which storage servers a client connects to is via the
+“server list” (<a class="reference internal" href="configuration.html#server-list"><span class="std std-ref">Static Server Definitions</span></a>) (aka “Introducerless”
+mode). Clients are given static lists of storage-servers, and connect
+only to those. This means manually updating these lists if the storage
+servers change, however.</p>
+<p>Another method is for clients to use <cite>[client] peers.preferred=</cite>
+configuration option (<a class="reference internal" href="configuration.html#client-configuration"><span class="std std-ref">Client Configuration</span></a>), which suffers
+from a similar disadvantage.</p>
+</div>
+<div class="section" id="grid-manager">
+<h2>Grid Manager<a class="headerlink" href="#grid-manager" title="Permalink to this headline">¶</a></h2>
+<p>A “grid-manager” consists of some data defining a keypair (along with
+some other details) and Tahoe sub-commands to manipulate the data and
+produce certificates to give to storage-servers. Certificates assert
+the statement: “Grid Manager X suggests you use storage-server Y to
+upload shares to” (X and Y are public-keys). Such a certificate
+consists of:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a version</li>
+<li>the public-key of a storage-server</li>
+<li>an expiry timestamp</li>
+<li>a signature of the above</li>
+</ul>
+</div></blockquote>
+<p>A client will always use any storage-server for downloads (expired
+certificate, or no certificate) because clients check the ciphertext
+and re-assembled plaintext against the keys in the capability;
+“grid-manager” certificates only control uploads.</p>
+</div>
+<div class="section" id="grid-manager-data-storage">
+<h2>Grid Manager Data Storage<a class="headerlink" href="#grid-manager-data-storage" title="Permalink to this headline">¶</a></h2>
+<p>The data defining the grid-manager is stored in an arbitrary
+directory, which you indicate with the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option (in the
+future, we may add the ability to store the data directly in a grid,
+at which time you may be able to pass a directory-capability to this
+option).</p>
+<p>If you don’t want to store the configuration on disk at all, you may
+use <code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">-</span></code> (the last character is a dash) and write a valid
+JSON configuration to stdin.</p>
+<p>All commands require the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option and they all behave
+similarly for “data from stdin” versus “data from disk”. A directory
+(and not a file) is used on disk because in that mode, each
+certificate issued is also stored alongside the configuration
+document; in “stdin / stdout” mode, an issued certificate is only
+ever available on stdout.</p>
+<p>The configuration is a JSON document. It is subject to change as Grid
+Manager evolves. It contains a version number in the
+<cite>grid_manager_config_version</cite> key which should increment whenever the
+document schema changes.</p>
+<div class="section" id="grid-manager-create">
+<h3>grid-manager create<a class="headerlink" href="#grid-manager-create" title="Permalink to this headline">¶</a></h3>
+<p>Create a new grid-manager.</p>
+<p>If you specify <code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">-</span></code> then a new grid-manager configuration is
+written to stdout. Otherwise, a new grid-manager is created in the
+directory specified by the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option. It is an error if the
+directory already exists.</p>
+</div>
+<div class="section" id="grid-manager-public-identity">
+<h3>grid-manager public-identity<a class="headerlink" href="#grid-manager-public-identity" title="Permalink to this headline">¶</a></h3>
+<p>Print out a grid-manager’s public key. This key is derived from the
+private-key of the grid-manager, so a valid grid-manager config must
+be given via <code class="docutils literal notranslate"><span class="pre">--config</span></code></p>
+<p>This public key is what is put in clients’ configuration to actually
+validate and use grid-manager certificates.</p>
+</div>
+<div class="section" id="grid-manager-add">
+<h3>grid-manager add<a class="headerlink" href="#grid-manager-add" title="Permalink to this headline">¶</a></h3>
+<p>Takes two args: <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">pubkey</span></code>. The <code class="docutils literal notranslate"><span class="pre">name</span></code> is an arbitrary local
+identifier for the new storage node (also sometimes called “a petname”
+or “nickname”). The pubkey is the tahoe-encoded key from a <code class="docutils literal notranslate"><span class="pre">node.pubkey</span></code>
+file in the storage-server’s node directory (minus any
+whitespace). For example, if <code class="docutils literal notranslate"><span class="pre">~/storage0</span></code> contains a storage-node,
+you might do something like this:</p>
+<blockquote>
+<div>grid-manager –config ./gm0 add storage0 $(cat ~/storage0/node.pubkey)</div></blockquote>
+<p>This adds a new storage-server to a Grid Manager’s
+configuration. (Since it mutates the configuration, if you used
+<code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">-</span></code> the new configuration will be printed to stdout). The
+usefulness of the <code class="docutils literal notranslate"><span class="pre">name</span></code> is solely for reference within this Grid
+Manager.</p>
+</div>
+<div class="section" id="grid-manager-list">
+<h3>grid-manager list<a class="headerlink" href="#grid-manager-list" title="Permalink to this headline">¶</a></h3>
+<p>Lists all storage-servers that have previously been added using
+<code class="docutils literal notranslate"><span class="pre">grid-manager</span> <span class="pre">add</span></code>.</p>
+</div>
+<div class="section" id="grid-manager-sign">
+<h3>grid-manager sign<a class="headerlink" href="#grid-manager-sign" title="Permalink to this headline">¶</a></h3>
+<p>Takes one arg: <code class="docutils literal notranslate"><span class="pre">name</span></code>, the nickname used previously in a
+<code class="docutils literal notranslate"><span class="pre">grid-manager</span> <span class="pre">add</span></code> command.</p>
+<p>Note that this mutates the state of the grid-manager if it is on disk,
+by adding this certificate to our collection of issued
+certificates. If you used <code class="docutils literal notranslate"><span class="pre">--config</span> <span class="pre">-</span></code>, the certificate isn’t
+persisted anywhere except to stdout (so if you wish to keep it
+somewhere, that is up to you).</p>
+<p>This command creates a new “version 1” certificate for a
+storage-server (identified by its public key). The new certificate is
+printed to stdout. If you stored the config on disk, the new
+certificate will (also) be in a file named like <code class="docutils literal notranslate"><span class="pre">alice.cert.0</span></code>.</p>
+</div>
+</div>
+<div class="section" id="enrolling-a-storage-server-cli">
+<h2>Enrolling a Storage Server: CLI<a class="headerlink" href="#enrolling-a-storage-server-cli" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tahoe-admin-add-grid-manager-cert">
+<h3>tahoe admin add-grid-manager-cert<a class="headerlink" href="#tahoe-admin-add-grid-manager-cert" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><cite>–filename</cite>: the file to read the cert from</li>
+<li><cite>–name</cite>: the name of this certificate</li>
+</ul>
+<p>Import a “version 1” storage-certificate produced by a grid-manager A
+storage server may have zero or more such certificates installed; for
+now just one is sufficient. You will have to re-start your node after
+this. Subsequent announcements to the Introducer will include this
+certificate.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This command will simply edit the <cite>tahoe.cfg</cite> file and direct you
+to re-start. In the Future(tm), we should consider (in exarkun’s
+words):</p>
+<blockquote class="last">
+<div>“A python program you run as a new process” might not be the
+best abstraction to layer on top of the configuration
+persistence system, though.  It’s a nice abstraction for users
+(although most users would probably rather have a GUI) but it’s
+not a great abstraction for automation.  So at some point it
+may be better if there is CLI -&gt; public API -&gt; configuration
+persistence system.  And maybe “public API” is even a network
+API for the storage server so it’s equally easy to access from
+an agent implemented in essentially any language and maybe if
+the API is exposed by the storage node itself then this also
+gives you live-configuration-updates, avoiding the need for
+node restarts (not that this is the only way to accomplish
+this, but I think it’s a good way because it avoids the need
+for messes like inotify and it supports the notion that the
+storage node process is in charge of its own configuration
+persistence system, not just one consumer among many … which
+has some nice things going for it … though how this interacts
+exactly with further node management automation might bear
+closer scrutiny).</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="enrolling-a-storage-server-config">
+<h2>Enrolling a Storage Server: Config<a class="headerlink" href="#enrolling-a-storage-server-config" title="Permalink to this headline">¶</a></h2>
+<p>You may edit the <code class="docutils literal notranslate"><span class="pre">[storage]</span></code> section of the <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file to
+turn on grid-management with <code class="docutils literal notranslate"><span class="pre">grid_management</span> <span class="pre">=</span> <span class="pre">true</span></code>. You then must
+also provide a <code class="docutils literal notranslate"><span class="pre">[grid_management_certificates]</span></code> section in the
+config-file which lists <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">path/to/certificate</span></code> pairs.</p>
+<p>These certificate files are issued by the <code class="docutils literal notranslate"><span class="pre">grid-manager</span> <span class="pre">sign</span></code>
+command; these should be transmitted to the storage server operator
+who includes them in the config for the storage sever. Relative paths
+are based from the node directory. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">storage</span><span class="p">]</span>
+<span class="n">grid_management</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="p">[</span><span class="n">grid_management_certificates</span><span class="p">]</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">example_grid</span><span class="o">.</span><span class="n">cert</span>
+</pre></div>
+</div>
+<p>This will cause us to give this certificate to any Introducers we
+connect to (and subsequently, the Introducer will give the certificate
+out to clients).</p>
+</div>
+<div class="section" id="enrolling-a-client-config">
+<h2>Enrolling a Client: Config<a class="headerlink" href="#enrolling-a-client-config" title="Permalink to this headline">¶</a></h2>
+<p>You may instruct a Tahoe client to use only storage servers from given
+Grid Managers. If there are no such keys, any servers are used. If
+there are one or more keys, the client will only upload to a storage
+server that has a valid certificate (from any of the keys).</p>
+<p>To specify public-keys, add a <code class="docutils literal notranslate"><span class="pre">[grid_managers]</span></code> section to the
+config. This consists of <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">value</span></code> pairs where <code class="docutils literal notranslate"><span class="pre">name</span></code> is an
+arbitrary name and <code class="docutils literal notranslate"><span class="pre">value</span></code> is a public-key of a Grid
+Manager. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">grid_managers</span><span class="p">]</span>
+<span class="n">example_grid</span> <span class="o">=</span> <span class="n">pub</span><span class="o">-</span><span class="n">v0</span><span class="o">-</span><span class="n">vqimc4s5eflwajttsofisp5st566dbq36xnpp4siz57ufdavpvlq</span>
+</pre></div>
+</div>
+<p>See also <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/3507">https://tahoe-lafs.org/trac/tahoe-lafs/ticket/3507</a> which
+proposes a command to edit the config.</p>
+</div>
+<div class="section" id="example-setup-of-a-new-managed-grid">
+<h2>Example Setup of a New Managed Grid<a class="headerlink" href="#example-setup-of-a-new-managed-grid" title="Permalink to this headline">¶</a></h2>
+<p>This example creates an actual grid, but it’s all just on one machine
+with different “node directories” and a separate tahoe process for
+each node. Usually of course each storage server would be on a
+separate computer.</p>
+<p>Note that we use the <code class="docutils literal notranslate"><span class="pre">daemonize</span></code> command in the following but that’s
+only one way to handle “running a command in the background”. You
+could instead run commands that start with <code class="docutils literal notranslate"><span class="pre">daemonize</span> <span class="pre">...</span></code> in their
+own shell/terminal window or via something like <code class="docutils literal notranslate"><span class="pre">systemd</span></code></p>
+<p>We’ll store our Grid Manager configuration on disk, in
+<code class="docutils literal notranslate"><span class="pre">./gm0</span></code>. To initialize this directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="n">config</span> <span class="o">./</span><span class="n">gm0</span> <span class="n">create</span>
+</pre></div>
+</div>
+<p>(If you already have a grid, you can <a class="reference internal" href="#skip-ahead"><span class="std std-ref">skip ahead</span></a>.)</p>
+<p>First of all, create an Introducer. Note that we actually have to run
+it briefly before it creates the “Introducer fURL” we want for the
+next steps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tahoe</span> <span class="n">create</span><span class="o">-</span><span class="n">introducer</span> <span class="o">--</span><span class="n">listen</span><span class="o">=</span><span class="n">tcp</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">5555</span> <span class="o">--</span><span class="n">location</span><span class="o">=</span><span class="n">tcp</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5555</span> <span class="o">./</span><span class="n">introducer</span>
+<span class="n">daemonize</span> <span class="n">tahoe</span> <span class="o">-</span><span class="n">d</span> <span class="n">introducer</span> <span class="n">run</span>
+</pre></div>
+</div>
+<p>Next, we attach a couple of storage nodes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe create-node --introducer $(cat introducer/private/introducer.furl) --nickname storage0 --webport 6001 --location tcp:localhost:6003 --port 6003 ./storage0
+tahoe create-node --introducer $(cat introducer/private/introducer.furl) --nickname storage1 --webport 6101 --location tcp:localhost:6103 --port 6103 ./storage1
+daemonize tahoe -d storage0 run
+daemonize tahoe -d storage1 run
+</pre></div>
+</div>
+<p id="skip-ahead">We can now tell the Grid Manager about our new storage servers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grid-manager --config ./gm0 add storage0 $(cat storage0/node.pubkey)
+grid-manager --config ./gm0 add storage1 $(cat storage1/node.pubkey)
+</pre></div>
+</div>
+<p>To produce a new certificate for each node, we do this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="n">config</span> <span class="o">./</span><span class="n">gm0</span> <span class="n">sign</span> <span class="n">storage0</span> <span class="o">&gt;</span> <span class="o">./</span><span class="n">storage0</span><span class="o">/</span><span class="n">gridmanager</span><span class="o">.</span><span class="n">cert</span>
+<span class="n">grid</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="n">config</span> <span class="o">./</span><span class="n">gm0</span> <span class="n">sign</span> <span class="n">storage1</span> <span class="o">&gt;</span> <span class="o">./</span><span class="n">storage1</span><span class="o">/</span><span class="n">gridmanager</span><span class="o">.</span><span class="n">cert</span>
+</pre></div>
+</div>
+<p>Now, we want our storage servers to actually announce these
+certificates into the grid. We do this by adding some configuration
+(in <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">storage</span><span class="p">]</span>
+<span class="n">grid_management</span> <span class="o">=</span> <span class="n">true</span>
+
+<span class="p">[</span><span class="n">grid_manager_certificates</span><span class="p">]</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gridmanager</span><span class="o">.</span><span class="n">cert</span>
+</pre></div>
+</div>
+<p>Add the above bit to each node’s <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> and re-start the
+storage nodes. (Alternatively, use the <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">add-grid-manager</span></code>
+command).</p>
+<p>Now try adding a new storage server <code class="docutils literal notranslate"><span class="pre">storage2</span></code>. This client can join
+the grid just fine, and announce itself to the Introducer as providing
+storage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe create-node --introducer $(cat introducer/private/introducer.furl) --nickname storage2 --webport 6301 --location tcp:localhost:6303 --port 6303 ./storage2
+daemonize tahoe -d storage2 run
+</pre></div>
+</div>
+<p>At this point any client will upload to any of these three
+storage-servers. Make a client “alice” and try!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tahoe create-client --introducer $(cat introducer/private/introducer.furl) --nickname alice --webport 6401 --shares-total=3 --shares-needed=2 --shares-happy=3 ./alice
+daemonize tahoe -d alice run
+tahoe -d alice put README.rst  # prints out a read-cap
+find storage2/storage/shares  # confirm storage2 has a share
+</pre></div>
+</div>
+<p>Now we want to make Alice only upload to the storage servers that the
+grid-manager has given certificates to (<code class="docutils literal notranslate"><span class="pre">storage0</span></code> and
+<code class="docutils literal notranslate"><span class="pre">storage1</span></code>). We need the grid-manager’s public key to put in Alice’s
+configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="n">config</span> <span class="o">./</span><span class="n">gm0</span> <span class="n">public</span><span class="o">-</span><span class="n">identity</span>
+</pre></div>
+</div>
+<p>Put the key printed out above into Alice’s <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> in section
+<code class="docutils literal notranslate"><span class="pre">client</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">grid_managers</span><span class="p">]</span>
+<span class="n">example_name</span> <span class="o">=</span> <span class="n">pub</span><span class="o">-</span><span class="n">v0</span><span class="o">-</span><span class="n">vqimc4s5eflwajttsofisp5st566dbq36xnpp4siz57ufdavpvlq</span>
+</pre></div>
+</div>
+<p>Now, re-start the “alice” client. Since we made Alice’s parameters
+require 3 storage servers to be reachable (<code class="docutils literal notranslate"><span class="pre">--happy=3</span></code>), all their
+uploads should now fail (so <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">put</span></code> will fail) because they
+won’t use storage2 and thus can’t “achieve happiness”.</p>
+<p>A proposal to expose more information about Grid Manager and
+certifcate status in the Welcome page is discussed in
+<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/3506">https://tahoe-lafs.org/trac/tahoe-lafs/ticket/3506</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Managed Grid</a><ul>
+<li><a class="reference internal" href="#overview-and-motivation">Overview and Motivation</a></li>
+<li><a class="reference internal" href="#grid-manager">Grid Manager</a></li>
+<li><a class="reference internal" href="#grid-manager-data-storage">Grid Manager Data Storage</a><ul>
+<li><a class="reference internal" href="#grid-manager-create">grid-manager create</a></li>
+<li><a class="reference internal" href="#grid-manager-public-identity">grid-manager public-identity</a></li>
+<li><a class="reference internal" href="#grid-manager-add">grid-manager add</a></li>
+<li><a class="reference internal" href="#grid-manager-list">grid-manager list</a></li>
+<li><a class="reference internal" href="#grid-manager-sign">grid-manager sign</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enrolling-a-storage-server-cli">Enrolling a Storage Server: CLI</a><ul>
+<li><a class="reference internal" href="#tahoe-admin-add-grid-manager-cert">tahoe admin add-grid-manager-cert</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enrolling-a-storage-server-config">Enrolling a Storage Server: Config</a></li>
+<li><a class="reference internal" href="#enrolling-a-client-config">Enrolling a Client: Config</a></li>
+<li><a class="reference internal" href="#example-setup-of-a-new-managed-grid">Example Setup of a New Managed Grid</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="servers.html"
+                        title="previous chapter">How To Configure A Server</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="helper.html"
+                        title="next chapter">The Tahoe Upload Helper</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/managed-grid.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="helper.html" title="The Tahoe Upload Helper"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="servers.html" title="How To Configure A Server"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

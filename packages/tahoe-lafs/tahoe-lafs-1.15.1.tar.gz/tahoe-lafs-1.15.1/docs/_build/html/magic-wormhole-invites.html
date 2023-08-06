@@ -1,0 +1,169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Magic Wormhole Invites &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuring a Tahoe-LAFS node" href="configuration.html" />
+    <link rel="prev" title="How To Run Tahoe-LAFS" href="running.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="configuration.html" title="Configuring a Tahoe-LAFS node"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="running.html" title="How To Run Tahoe-LAFS"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="magic-wormhole-invites">
+<h1>Magic Wormhole Invites<a class="headerlink" href="#magic-wormhole-invites" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="magic-wormhole">
+<h2>Magic Wormhole<a class="headerlink" href="#magic-wormhole" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/warner/magic-wormhole#design">magic wormhole</a> is a server and a client which together use Password
+Authenticated Key Exchange (PAKE) to use a short code to establish a
+secure channel between two computers. These codes are one-time use and
+an attacker gets at most one “guess”, thus allowing low-entropy codes
+to be used.</p>
+</div>
+<div class="section" id="invites-and-joins">
+<h2>Invites and Joins<a class="headerlink" href="#invites-and-joins" title="Permalink to this headline">¶</a></h2>
+<p>Inside Tahoe-LAFS we are using a channel created using <a class="reference external" href="https://github.com/warner/magic-wormhole#design">magic
+wormhole</a> to exchange configuration and the secret fURL of the
+Introducer with new clients.</p>
+<p>This is a two-part process. Alice runs a grid and wishes to have her
+friend Bob use it as a client. She runs <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">invite</span> <span class="pre">bob</span></code> which
+will print out a short “wormhole code” like <code class="docutils literal notranslate"><span class="pre">2-unicorn-quiver</span></code>. You
+may also include some options for total, happy and needed shares if
+you like.</p>
+<p>Alice then transmits this one-time secret code to Bob. Alice must keep
+her command running until Bob has done his step as it is waiting until
+a secure channel is established before sending the data.</p>
+<p>Bob then runs <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span> <span class="pre">--join</span> <span class="pre">&lt;secret</span> <span class="pre">code&gt;</span></code> with any
+other options he likes. This will “use up” the code establishing a
+secure session with Alice’s computer. If an attacker tries to guess
+the code, they get only once chance to do so (and then Bob’s side will
+fail). Once Bob’s computer has connected to Alice’s computer, the two
+computers performs the protocol described below, resulting in some
+JSON with the Introducer fURL, nickname and any other options being
+sent to Bob’s computer. The <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">create-client</span></code> command then uses
+these options to set up Bob’s client.</p>
+</div>
+<div class="section" id="tahoe-lafs-secret-exchange">
+<h2>Tahoe-LAFS Secret Exchange<a class="headerlink" href="#tahoe-lafs-secret-exchange" title="Permalink to this headline">¶</a></h2>
+<p>The protocol that the Alice (the one doing the invite) and Bob (the
+one being invited) sides perform once a magic wormhole secure channel
+has been established goes as follows:</p>
+<p>Alice and Bob both immediately send an “abilities” message as
+JSON. For Alice this is <code class="docutils literal notranslate"><span class="pre">{&quot;abilities&quot;:</span> <span class="pre">{&quot;server-v1&quot;:</span> <span class="pre">{}}}</span></code>. For Bob,
+this is <code class="docutils literal notranslate"><span class="pre">{&quot;abilities&quot;:</span> <span class="pre">{&quot;client-v1&quot;:</span> <span class="pre">{}}}</span></code>.</p>
+<p>After receiving the message from the other side and confirming the
+expected protocol, Alice transmits the configuration JSON:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;needed&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s2">&quot;nickname&quot;</span><span class="p">:</span> <span class="s2">&quot;bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;introducer&quot;</span><span class="p">:</span> <span class="s2">&quot;pb://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com:41505/yyyyyyyyyyyyyyyyyyyyyyy&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Both sides then disconnect.</p>
+<p>As you can see, there is room for future revisions of the protocol but
+as of yet none have been sketched out.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Magic Wormhole Invites</a><ul>
+<li><a class="reference internal" href="#magic-wormhole">Magic Wormhole</a></li>
+<li><a class="reference internal" href="#invites-and-joins">Invites and Joins</a></li>
+<li><a class="reference internal" href="#tahoe-lafs-secret-exchange">Tahoe-LAFS Secret Exchange</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="running.html"
+                        title="previous chapter">How To Run Tahoe-LAFS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="configuration.html"
+                        title="next chapter">Configuring a Tahoe-LAFS node</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/magic-wormhole-invites.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="configuration.html" title="Configuring a Tahoe-LAFS node"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="running.html" title="How To Run Tahoe-LAFS"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

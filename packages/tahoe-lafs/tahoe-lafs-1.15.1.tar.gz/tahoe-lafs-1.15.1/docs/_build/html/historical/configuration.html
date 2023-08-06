@@ -1,0 +1,207 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Old Configuration Files &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using Tahoe as a key-value store" href="../key-value-store.html" />
+    <link rel="prev" title="Filesystem-specific notes" href="../filesystem-notes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../key-value-store.html" title="Using Tahoe as a key-value store"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../filesystem-notes.html" title="Filesystem-specific notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="old-configuration-files">
+<h1>Old Configuration Files<a class="headerlink" href="#old-configuration-files" title="Permalink to this headline">¶</a></h1>
+<p>Tahoe-LAFS releases before v1.3.0 had no <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> file, and used
+distinct files for each item listed below. If Tahoe-LAFS v1.9.0 or above
+detects the old configuration files at start up it emits a warning and
+aborts the start up. (This was issue ticket #1385.)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Config setting</th>
+<th class="head">File</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[node]nickname</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/nickname</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[node]web.port</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/webport</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[node]tub.port</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/client.port</span></code></td>
+<td>(for Clients, not Introducers)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[node]tub.port</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/introducer.port</span></code></td>
+<td>(for Introducers, not Clients) (note that, unlike other keys, <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> overrode this file from Tahoe-LAFS v1.3.0 up to and including Tahoe-LAFS v1.8.2)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[node]tub.location</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/advertised_ip_addresses</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[node]log_gatherer.furl</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/log_gatherer.furl</span></code></td>
+<td>(one per line)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[node]timeout.keepalive</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/keepalive_timeout</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[node]timeout.disconnect</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/disconnect_timeout</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[client]introducer.furl</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/introducer.furl</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[client]helper.furl</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/helper.furl</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[client]key_generator.furl</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/key_generator.furl</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[client]stats_gatherer.furl</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/stats_gatherer.furl</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[storage]enabled</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/no_storage</span></code></td>
+<td>(<code class="docutils literal notranslate"><span class="pre">False</span></code> if <code class="docutils literal notranslate"><span class="pre">no_storage</span></code> exists)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[storage]readonly</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/readonly_storage</span></code></td>
+<td>(<code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">readonly_storage</span></code> exists)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[storage]sizelimit</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/sizelimit</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[storage]debug_discard</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/debug_discard_storage</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[helper]enabled</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">BASEDIR/run_helper</span></code></td>
+<td>(<code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">run_helper</span></code> exists)</td>
+</tr>
+</tbody>
+</table>
+<p>Note: the functionality of <code class="docutils literal notranslate"><span class="pre">[node]ssh.port</span></code> and
+<code class="docutils literal notranslate"><span class="pre">[node]ssh.authorized_keys_file</span></code> were previously (before Tahoe-LAFS
+v1.3.0) combined, controlled by the presence of a
+<code class="docutils literal notranslate"><span class="pre">BASEDIR/authorized_keys.SSHPORT</span></code> file, in which the suffix of the
+filename indicated which port the ssh server should listen on, and the
+contents of the file provided the ssh public keys to accept. Support
+for these files has been removed completely. To <code class="docutils literal notranslate"><span class="pre">ssh</span></code> into your
+Tahoe-LAFS node, add <code class="docutils literal notranslate"><span class="pre">[node]ssh.port</span></code> and
+<code class="docutils literal notranslate"><span class="pre">[node].ssh_authorized_keys_file</span></code> statements to your <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>.</p>
+<p>Likewise, the functionality of <code class="docutils literal notranslate"><span class="pre">[node]tub.location</span></code> is a variant of
+the now (since Tahoe-LAFS v1.3.0) unsupported
+<code class="docutils literal notranslate"><span class="pre">BASEDIR/advertised_ip_addresses</span></code> . The old file was additive (the
+addresses specified in <code class="docutils literal notranslate"><span class="pre">advertised_ip_addresses</span></code> were used in
+addition to any that were automatically discovered), whereas the new
+<code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code> directive is not (<code class="docutils literal notranslate"><span class="pre">tub.location</span></code> is used verbatim).</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../filesystem-notes.html"
+                        title="previous chapter">Filesystem-specific notes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../key-value-store.html"
+                        title="next chapter">Using Tahoe as a key-value store</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/historical/configuration.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../key-value-store.html" title="Using Tahoe as a key-value store"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../filesystem-notes.html" title="Filesystem-specific notes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

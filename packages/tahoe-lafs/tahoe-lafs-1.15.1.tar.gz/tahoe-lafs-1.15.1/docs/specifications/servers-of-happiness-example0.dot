@@ -1,0 +1,11 @@
+digraph {
+   rankdir = "LR";
+   Share0 -> Server0;
+#   Share0 -> Server1, Server2 [color=red];
+   Share1 -> Server1;
+#   Share1 -> Server0, Server2 [color=red]
+#   Share2 -> Server0, Server1, Server2 [color=red];
+
+   { rank = same; Share0; Share1; Share2 }
+   { rank = same; Server0; Server1; Server2 }
+}

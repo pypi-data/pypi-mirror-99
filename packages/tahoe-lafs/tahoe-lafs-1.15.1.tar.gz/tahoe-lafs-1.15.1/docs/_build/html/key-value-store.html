@@ -1,0 +1,208 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Using Tahoe as a key-value store &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Old Configuration Files" href="historical/configuration.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="historical/configuration.html" title="Old Configuration Files"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-tahoe-as-a-key-value-store">
+<h1>Using Tahoe as a key-value store<a class="headerlink" href="#using-tahoe-as-a-key-value-store" title="Permalink to this headline">¶</a></h1>
+<p>There are several ways you could use Tahoe-LAFS as a key-value store.</p>
+<p>Looking only at things that are <em>already implemented</em>, there are three
+options:</p>
+<ol class="arabic">
+<li><p class="first">Immutable files</p>
+<p>API:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">key ← put(value)</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#writing-uploading-a-file">PUT /uri</a>” in the API.</p>
+<p>Note: the user (client code) of this API does not get to choose the key!
+The key is determined programmatically using secure hash functions and
+encryption of the value and of the optional “added convergence secret”.</p>
+</li>
+<li><p class="first">value ← get(key)</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#viewing-downloading-a-file">GET /uri/$FILECAP</a>” in the API. “$FILECAP” is the
+key.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>For details, see “immutable files” in <a class="reference internal" href="performance.html"><span class="doc">Performance costs for some common operations</span></a>, but in summary:
+the performance is not great but not bad.</p>
+<p>That document doesn’t mention that if the size of the A-byte mutable file
+is less than or equal to <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/src/allmydata/immutable/upload.py?rev=196bd583b6c4959c60d3f73cdcefc9edda6a38ae#L1504">55 bytes</a> then the performance cost is much
+smaller, because the value gets packed into the key. Added a ticket:
+<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/2226">#2226</a>.</p>
+</li>
+<li><p class="first">Mutable files</p>
+<p>API:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">key ← create()</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#writing-uploading-a-file">PUT /uri?format=mdmf</a>”.</p>
+<p>Note: again, the key cannot be chosen by the user! The key is
+determined programmatically using secure hash functions and RSA public
+key pair generation.</p>
+</li>
+<li><p class="first">set(key, value)</p>
+</li>
+<li><p class="first">value ← get(key)</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#viewing-downloading-a-file">GET /uri/$FILECAP</a>”. Again, the “$FILECAP” is the
+key. This is the same API as for getting the value from an immutable,
+above. Whether the value you get this way is immutable (i.e. it will
+always be the same value) or mutable (i.e. an authorized person can
+change what value you get when you read) depends on the type of the
+key.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>Again, for details, see “mutable files” in <a class="reference internal" href="performance.html"><span class="doc">Performance costs for some common operations</span></a> (and
+<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/query?status=assigned&amp;status=new&amp;status=reopened&amp;keywords=~doc&amp;description=~performance.rst&amp;col=id&amp;col=summary&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;order=priority">these tickets</a> about how that doc is incomplete), but in summary, the
+performance of the create() operation is <em>terrible</em>! (It involves
+generating a 2048-bit RSA key pair.) The performance of the set and get
+operations are probably merely not great but not bad.</p>
+</li>
+<li><p class="first">Directories</p>
+<p>API:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">directory ← create()</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#creating-a-new-directory">POST /uri?t=mkdir</a>”.</p>
+<p><a class="reference internal" href="performance.html"><span class="doc">Performance costs for some common operations</span></a> does not mention directories (<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/ticket/2228">#2228</a>), but in order
+to understand the performance of directories you have to understand how
+they are implemented. Mkdir creates a new mutable file, exactly the
+same, and with exactly the same performance, as the “create() mutable”
+above.</p>
+</li>
+<li><p class="first">set(directory, key, value)</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#creating-a-new-directory">PUT /uri/$DIRCAP/[SUBDIRS../]FILENAME</a>”. “$DIRCAP”
+is the directory, “FILENAME” is the key. The value is the body of the
+HTTP PUT request. The part about “[SUBDIRS../]” in there is for
+optional nesting which you can ignore for the purposes of this
+key-value store.</p>
+<p>This way, you <em>do</em> get to choose the key to be whatever you want (an
+arbitrary unicode string).</p>
+<p>To understand the performance of <code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/uri/$directory/$key</span></code>,
+understand that this proceeds in two steps: first it uploads the value
+as an immutable file, exactly the same as the “put(value)” API from the
+immutable API above. So right there you’ve already paid exactly the
+same cost as if you had used that API. Then after it has finished
+uploading that, and it has the immutable file cap from that operation
+in hand, it downloads the entire current directory, changes it to
+include the mapping from key to the immutable file cap, and re-uploads
+the entire directory. So that has a cost which is easy to understand:
+you have to download and re-upload the entire directory, which is the
+entire set of mappings from user-chosen keys (Unicode strings) to
+immutable file caps. Each entry in the directory occupies something on
+the order of 300 bytes.</p>
+<p>So the “set()” call from this directory-based API has obviously much
+worse performance than the the equivalent “set()” calls from the
+immutable-file-based API or the mutable-file-based API. This is not
+necessarily worse overall than the performance of the
+mutable-file-based API if you take into account the cost of the
+necessary create() calls.</p>
+</li>
+<li><p class="first">value ← get(directory, key)</p>
+<p>This is spelled “<a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/frontends/webapi.rst#reading-a-file">GET /uri/$DIRCAP/[SUBDIRS../]FILENAME</a>”. As above,
+“$DIRCAP” is the directory, “FILENAME” is the key.</p>
+<p>The performance of this is determined by the fact that it first
+downloads the entire directory, then finds the immutable filecap for
+the given key, then does a GET on that immutable filecap. So again,
+it is strictly worse than using the immutable file API (about twice
+as bad, if the directory size is similar to the value size).</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>What about ways to use LAFS as a key-value store that are not yet
+implemented? Well, Zooko has lots of ideas about ways to extend Tahoe-LAFS to
+support different kinds of storage APIs or better performance. One that he
+thinks is pretty promising is just the Keep It Simple, Stupid idea of “store a
+sqlite db in a Tahoe-LAFS mutable”. ☺</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="historical/configuration.html"
+                        title="previous chapter">Old Configuration Files</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/key-value-store.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="historical/configuration.html" title="Old Configuration Files"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

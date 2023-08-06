@@ -1,0 +1,195 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Magic Folder local filesystem integration design &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Magic Folder design for remote-to-local sync" href="remote-to-local-sync.html" />
+    <link rel="prev" title="Lease database design" href="../leasedb.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="remote-to-local-sync.html" title="Magic Folder design for remote-to-local sync"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../leasedb.html" title="Lease database design"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Proposed Specifications</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="magic-folder-local-filesystem-integration-design">
+<h1>Magic Folder local filesystem integration design<a class="headerlink" href="#magic-folder-local-filesystem-integration-design" title="Permalink to this headline">¶</a></h1>
+<p><em>Scope</em></p>
+<p>This document describes how to integrate the local filesystem with Magic
+Folder in an efficient and reliable manner. For now we ignore Remote to
+Local synchronization; the design and implementation of this is scheduled
+for a later time. We also ignore multiple writers for the same Magic
+Folder, which may or may not be supported in future. The design here will
+be updated to account for those features in later Objectives. Objective 3
+may require modifying the database schema or operation, and Objective 5
+may modify the User interface.</p>
+<p>Tickets on the Tahoe-LAFS trac with the <a class="reference external" href="https://tahoe-lafs.org/trac/tahoe-lafs/query?status=!closed&amp;keywords=~otf-magic-folder-objective2">otf-magic-folder-objective2</a>
+keyword are within the scope of the local filesystem integration for
+Objective 2.</p>
+<p id="filesystem-integration-local-scanning-and-database"><em>Local scanning and database</em></p>
+<p>When a Magic-Folder-enabled node starts up, it scans all directories
+under the local directory and adds every file to a first-in first-out
+“scan queue”. When processing the scan queue, redundant uploads are
+avoided by using the same mechanism the Tahoe backup command uses: we
+keep track of previous uploads by recording each file’s metadata such as
+size, <code class="docutils literal notranslate"><span class="pre">ctime</span></code> and <code class="docutils literal notranslate"><span class="pre">mtime</span></code>. This information is stored in a database,
+referred to from now on as the magic folder db. Using this recorded
+state, we ensure that when Magic Folder is subsequently started, the
+local directory tree can be scanned quickly by comparing current
+filesystem metadata with the previously recorded metadata. Each file
+referenced in the scan queue is uploaded only if its metadata differs at
+the time it is processed. If a change event is detected for a file that
+is already queued (and therefore will be processed later), the redundant
+event is ignored.</p>
+<p>To implement the magic folder db, we will use an SQLite schema that
+initially is the existing Tahoe-LAFS backup schema. This schema may
+change in later objectives; this will cause no backward compatibility
+problems, because this new feature will be developed on a branch that
+makes no compatibility guarantees. However we will have a separate SQLite
+database file and separate mutex lock just for Magic Folder. This avoids
+usability problems related to mutual exclusion. (If a single file and
+lock were used, a backup would block Magic Folder updates for a long
+time, and a user would not be able to tell when backups are possible
+because Magic Folder would acquire a lock at arbitrary times.)</p>
+<p><em>Eventual consistency property</em></p>
+<p>During the process of reading a file in order to upload it, it is not
+possible to prevent further local writes. Such writes will result in
+temporary inconsistency (that is, the uploaded file will not reflect
+what the contents of the local file were at any specific time). Eventual
+consistency is reached when the queue of pending uploads is empty. That
+is, a consistent snapshot will be achieved eventually when local writes
+to the target folder cease for a sufficiently long period of time.</p>
+<p><em>Detecting filesystem changes</em></p>
+<p>For the Linux implementation, we will use the <a class="reference external" href="https://en.wikipedia.org/wiki/Inotify">inotify</a> Linux kernel
+subsystem to gather events on the local Magic Folder directory tree. This
+implementation was already present in Tahoe-LAFS 1.9.0, but needs to be
+changed to gather directory creation and move events, in addition to the
+events indicating that a file has been written that are gathered by the
+current code.</p>
+<p>For the Windows implementation, we will use the <code class="docutils literal notranslate"><span class="pre">ReadDirectoryChangesW</span></code>
+Win32 API. The prototype implementation simulates a Python interface to
+the inotify API in terms of <code class="docutils literal notranslate"><span class="pre">ReadDirectoryChangesW</span></code>, allowing most of
+the code to be shared across platforms.</p>
+<p>The alternative of using <a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa363803%28VS.85%29.aspx">NTFS Change Journals</a> for Windows was
+considered, but appears to be more complicated and does not provide any
+additional functionality over the scanning approach described above.
+The Change Journal mechanism is also only available for NTFS filesystems,
+but FAT32 filesystems are still common in user installations of Windows.</p>
+<p>When we detect the creation of a new directory below the local Magic
+Folder directory, we create it in the Tahoe-LAFS filesystem, and also
+scan the new local directory for new files. This scan is necessary to
+avoid missing events for creation of files in a new directory before it
+can be watched, and to correctly handle cases where an existing directory
+is moved to be under the local Magic Folder directory.</p>
+<p><em>User interface</em></p>
+<p>The Magic Folder local filesystem integration will initially have a
+provisional configuration file-based interface that may not be ideal from
+a usability perspective. Creating our local filesystem integration in
+this manner will allow us to use and test it independently of the rest of
+the Magic Folder software components. We will focus greater attention on
+user interface design as a later milestone in our development roadmap.</p>
+<p>The configuration file, <code class="docutils literal notranslate"><span class="pre">tahoe.cfg</span></code>, must define a target local
+directory to be synchronized. Provisionally, this configuration will
+replace the current <code class="docutils literal notranslate"><span class="pre">[drop_upload]</span></code> section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">magic_folder</span><span class="p">]</span>
+<span class="n">enabled</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">local</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="s2">&quot;/home/human&quot;</span>
+</pre></div>
+</div>
+<p>When a filesystem directory is first configured for Magic Folder, the user
+needs to create the remote Tahoe-LAFS directory using <code class="docutils literal notranslate"><span class="pre">tahoe</span> <span class="pre">mkdir</span></code>,
+and configure the Magic-Folder-enabled node with its URI (e.g. by putting
+it in a file <code class="docutils literal notranslate"><span class="pre">private/magic_folder_dircap</span></code>). If there are existing
+files in the local directory, they will be uploaded as a result of the
+initial scan described earlier.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../leasedb.html"
+                        title="previous chapter">Lease database design</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="remote-to-local-sync.html"
+                        title="next chapter">Magic Folder design for remote-to-local sync</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/proposed/magic-folder/filesystem-integration.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="remote-to-local-sync.html" title="Magic Folder design for remote-to-local sync"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../leasedb.html" title="Lease database design"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Proposed Specifications</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

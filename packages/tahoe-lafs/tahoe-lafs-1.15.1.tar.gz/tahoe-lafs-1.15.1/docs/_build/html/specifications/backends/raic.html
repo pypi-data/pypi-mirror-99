@@ -1,0 +1,463 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Redundant Array of Independent Clouds: Share To Cloud Mapping &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Proposed Specifications" href="../../proposed/index.html" />
+    <link rel="prev" title="Servers of Happiness" href="../servers-of-happiness.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../proposed/index.html" title="Proposed Specifications"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../servers-of-happiness.html" title="Servers of Happiness"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Specifications</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="redundant-array-of-independent-clouds-share-to-cloud-mapping">
+<h1>Redundant Array of Independent Clouds: Share To Cloud Mapping<a class="headerlink" href="#redundant-array-of-independent-clouds-share-to-cloud-mapping" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This document describes a proposed design for the mapping of LAFS shares to
+objects in a cloud storage service. It also analyzes the costs for each of the
+functional requirements, including network, disk, storage and API usage costs.</p>
+</div>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em>LAFS share</em></dt>
+<dd>A Tahoe-LAFS share representing part of a file after encryption and
+erasure encoding.</dd>
+<dt><em>LAFS shareset</em></dt>
+<dd>The set of shares stored by a LAFS storage server for a given storage index.
+The shares within a shareset are numbered by a small integer.</dd>
+<dt><em>Cloud storage service</em></dt>
+<dd>A service such as Amazon S3 <a class="reference internal" href="#id1">²</a>, Rackspace Cloud Files <a class="reference internal" href="#id2">³</a>,
+Google Cloud Storage <a class="reference internal" href="#id3">⁴</a>, or Windows Azure <a class="reference internal" href="#id4">⁵</a>, that provides cloud storage.</dd>
+<dt><em>Cloud storage interface</em></dt>
+<dd>A protocol interface supported by a cloud storage service, such as the
+S3 interface <a class="reference internal" href="#id5">⁶</a>, the OpenStack Object Storage interface <a class="reference internal" href="#id6">⁷</a>, the
+Google Cloud Storage interface <a class="reference internal" href="#id7">⁸</a>, or the Azure interface <a class="reference internal" href="#id8">⁹</a>. There may be
+multiple services implementing a given cloud storage interface. In this design,
+only REST-based APIs <a class="reference internal" href="#id9">¹⁰</a> over HTTP will be used as interfaces.</dd>
+<dt><em>Store object</em></dt>
+<dd>A file-like abstraction provided by a cloud storage service, storing a
+sequence of bytes. Store objects are mutable in the sense that the contents
+and metadata of the store object with a given name in a given backend store
+can be replaced. Store objects are called “blobs” in the Azure interface,
+and “objects” in the other interfaces.</dd>
+<dt><em>Cloud backend store</em></dt>
+<dd>A container for store objects provided by a cloud service. Cloud backend
+stores are called “buckets” in the S3 and Google Cloud Storage interfaces,
+and “containers” in the Azure and OpenStack Storage interfaces.</dd>
+</dl>
+</div>
+<div class="section" id="functional-requirements">
+<h2>Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><em>Upload</em>: a LAFS share can be uploaded to an appropriately configured
+Tahoe-LAFS storage server and the data is stored to the cloud
+storage service.</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p class="first"><em>Scalable shares</em>: there is no hard limit on the size of LAFS share
+that can be uploaded.</p>
+<p>If the cloud storage interface offers scalable files, then this could be
+implemented by using that feature of the specific cloud storage
+interface. Alternately, it could be implemented by mapping from the LAFS
+abstraction of an unlimited-size immutable share to a set of size-limited
+store objects.</p>
+</li>
+<li><p class="first"><em>Streaming upload</em>: the size of the LAFS share that is uploaded
+can exceed the amount of RAM and even the amount of direct attached
+storage on the storage server. I.e., the storage server is required to
+stream the data directly to the ultimate cloud storage service while
+processing it, instead of to buffer the data until the client is finished
+uploading and then transfer the data to the cloud storage service.</p>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><em>Download</em>: a LAFS share can be downloaded from an appropriately
+configured Tahoe-LAFS storage server, and the data is loaded from the
+cloud storage service.</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><em>Streaming download</em>: the size of the LAFS share that is
+downloaded can exceed the amount of RAM and even the amount of direct
+attached storage on the storage server. I.e. the storage server is
+required to stream the data directly to the client while processing it,
+instead of to buffer the data until the cloud storage service is finished
+serving and then transfer the data to the client.</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><em>Modify</em>: a LAFS share can have part of its contents modified.</p>
+<p>If the cloud storage interface offers scalable mutable files, then this
+could be implemented by using that feature of the specific cloud storage
+interface. Alternately, it could be implemented by mapping from the LAFS
+abstraction of an unlimited-size mutable share to a set of size-limited
+store objects.</p>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><em>Efficient modify</em>: the size of the LAFS share being
+modified can exceed the amount of RAM and even the amount of direct
+attached storage on the storage server. I.e. the storage server is
+required to download, patch, and upload only the segment(s) of the share
+that are being modified, instead of to download, patch, and upload the
+entire share.</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><em>Tracking leases</em>: The Tahoe-LAFS storage server is required to track when
+each share has its lease renewed so that unused shares (shares whose lease
+has not been renewed within a time limit, e.g. 30 days) can be garbage
+collected. This does not necessarily require code specific to each cloud
+storage interface, because the lease tracking can be performed in the
+storage server’s generic component rather than in the component supporting
+each interface.</li>
+</ul>
+</div>
+<div class="section" id="mapping">
+<h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h2>
+<p>This section describes the mapping between LAFS shares and store objects.</p>
+<p>A LAFS share will be split into one or more “chunks” that are each stored in a
+store object. A LAFS share of size <cite>C</cite> bytes will be stored as <cite>ceiling(C / chunksize)</cite>
+chunks. The last chunk has a size between 1 and <cite>chunksize</cite> bytes inclusive.
+(It is not possible for <cite>C</cite> to be zero, because valid shares always have a header,
+so, there is at least one chunk for each share.)</p>
+<p>For an existing share, the chunk size is determined by the size of the first
+chunk. For a new share, it is a parameter that may depend on the storage
+interface. It is an error for any chunk to be larger than the first chunk, or
+for any chunk other than the last to be smaller than the first chunk.
+If a mutable share with total size less than the default chunk size for the
+storage interface is being modified, the new contents are split using the
+default chunk size.</p>
+<blockquote>
+<div><em>Rationale</em>: this design allows the <cite>chunksize</cite> parameter to be changed for
+new shares written via a particular storage interface, without breaking
+compatibility with existing stored shares. All cloud storage interfaces
+return the sizes of store objects with requests to list objects, and so
+the size of the first chunk can be determined without an additional request.</div></blockquote>
+<p>The name of the store object for chunk <cite>i</cite> &gt; 0 of a LAFS share with storage index
+<cite>STORAGEINDEX</cite> and share number <cite>SHNUM</cite>, will be</p>
+<blockquote>
+<div>shares/<cite>ST</cite>/<cite>STORAGEINDEX</cite>/<cite>SHNUM.i</cite></div></blockquote>
+<p>where <cite>ST</cite> is the first two characters of <cite>STORAGEINDEX</cite>. When <cite>i</cite> is 0, the
+<cite>.0</cite> is omitted.</p>
+<blockquote>
+<div><p><em>Rationale</em>: this layout maintains compatibility with data stored by the
+prototype S3 backend, for which Least Authority Enterprises has existing
+customers. This prototype always used a single store object to store each
+share, with name</p>
+<blockquote>
+<div>shares/<cite>ST</cite>/<cite>STORAGEINDEX</cite>/<cite>SHNUM</cite></div></blockquote>
+<p>By using the same prefix “shares/<cite>ST</cite>/<cite>STORAGEINDEX</cite>/” for old and new layouts,
+the storage server can obtain a list of store objects associated with a given
+shareset without having to know the layout in advance, and without having to
+make multiple API requests. This also simplifies sharing of test code between the
+disk and cloud backends.</p>
+</div></blockquote>
+<p>Mutable and immutable shares will be “chunked” in the same way.</p>
+<div class="section" id="rationale-for-chunking">
+<h3>Rationale for Chunking<a class="headerlink" href="#rationale-for-chunking" title="Permalink to this headline">¶</a></h3>
+<p>Limiting the amount of data received or sent in a single request has the
+following advantages:</p>
+<ul class="simple">
+<li>It is unnecessary to write separate code to take advantage of the
+“large object” features of each cloud storage interface, which differ
+significantly in their design.</li>
+<li>Data needed for each PUT request can be discarded after it completes.
+If a PUT request fails, it can be retried while only holding the data
+for that request in memory.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="costs">
+<h2>Costs<a class="headerlink" href="#costs" title="Permalink to this headline">¶</a></h2>
+<p>In this section we analyze the costs of the proposed design in terms of network,
+disk, memory, cloud storage, and API usage.</p>
+<div class="section" id="network-usagebandwidth-and-number-of-round-trips">
+<h3>Network usage—bandwidth and number-of-round-trips<a class="headerlink" href="#network-usagebandwidth-and-number-of-round-trips" title="Permalink to this headline">¶</a></h3>
+<p>When a Tahoe-LAFS storage client allocates a new share on a storage server,
+the backend will request a list of the existing store objects with the
+appropriate prefix. This takes one HTTP request in the common case, but may
+take more for the S3 interface, which has a limit of 1000 objects returned in
+a single “GET Bucket” request.</p>
+<p>If the share is to be read, the client will make a number of calls each
+specifying the offset and length of the required span of bytes. On the first
+request that overlaps a given chunk of the share, the server will make an
+HTTP GET request for that store object. The server may also speculatively
+make GET requests for store objects that are likely to be needed soon (which
+can be predicted since reads are normally sequential), in order to reduce
+latency.</p>
+<p>Each read will be satisfied as soon as the corresponding data is available,
+without waiting for the rest of the chunk, in order to minimize read latency.</p>
+<p>All four cloud storage interfaces support GET requests using the
+Range HTTP header. This could be used to optimize reads where the
+Tahoe-LAFS storage client requires only part of a share.</p>
+<p>If the share is to be written, the server will make an HTTP PUT request for
+each chunk that has been completed. Tahoe-LAFS clients only write immutable
+shares sequentially, and so we can rely on that property to simplify the
+implementation.</p>
+<p>When modifying shares of an existing mutable file, the storage server will
+be able to make PUT requests only for chunks that have changed.
+(Current Tahoe-LAFS v1.9 clients will not take advantage of this ability, but
+future versions will probably do so for MDMF files.)</p>
+<p>In some cases, it may be necessary to retry a request (see the <a class="reference internal" href="#structure-of-implementation">Structure of
+Implementation</a> section below). In the case of a PUT request, at the point
+at which a retry is needed, the new chunk contents to be stored will still be
+in memory and so this is not problematic.</p>
+<p>In the absence of retries, the maximum number of GET requests that will be made
+when downloading a file, or the maximum number of PUT requests when uploading
+or modifying a file, will be equal to the number of chunks in the file.</p>
+<p>If the new mutable share content has fewer chunks than the old content,
+then the remaining store objects for old chunks must be deleted (using one
+HTTP request each). When reading a share, the backend must tolerate the case
+where these store objects have not been deleted successfully.</p>
+<p>The last write to a share will be reported as successful only when all
+corresponding HTTP PUTs and DELETEs have completed successfully.</p>
+</div>
+<div class="section" id="disk-usage-local-to-the-storage-server">
+<h3>Disk usage (local to the storage server)<a class="headerlink" href="#disk-usage-local-to-the-storage-server" title="Permalink to this headline">¶</a></h3>
+<p>It is never necessary for the storage server to write the content of share
+chunks to local disk, either when they are read or when they are written. Each
+chunk is held only in memory.</p>
+<p>A proposed change to the Tahoe-LAFS storage server implementation uses a sqlite
+database to store metadata about shares. In that case the same database would
+be used for the cloud backend. This would enable lease tracking to be implemented
+in the same way for disk and cloud backends.</p>
+</div>
+<div class="section" id="memory-usage">
+<h3>Memory usage<a class="headerlink" href="#memory-usage" title="Permalink to this headline">¶</a></h3>
+<p>The use of chunking simplifies bounding the memory usage of the storage server
+when handling files that may be larger than memory. However, this depends on
+limiting the number of chunks that are simultaneously held in memory.
+Multiple chunks can be held in memory either because of pipelining of requests
+for a single share, or because multiple shares are being read or written
+(possibly by multiple clients).</p>
+<p>For immutable shares, the Tahoe-LAFS storage protocol requires the client to
+specify in advance the maximum amount of data it will write. Also, a cooperative
+client (including all existing released versions of the Tahoe-LAFS code) will
+limit the amount of data that is pipelined, currently to 50 KiB. Since the chunk
+size will be greater than that, it is possible to ensure that for each allocation,
+the maximum chunk data memory usage is the lesser of two chunks, and the allocation
+size. (There is some additional overhead but it is small compared to the chunk
+data.) If the maximum memory usage of a new allocation would exceed the memory
+available, the allocation can be delayed or possibly denied, so that the total
+memory usage is bounded.</p>
+<p>It is not clear that the existing protocol allows allocations for mutable
+shares to be bounded in general; this may be addressed in a future protocol change.</p>
+<p>The above discussion assumes that clients do not maliciously send large
+messages as a denial-of-service attack. Foolscap (the protocol layer underlying
+the Tahoe-LAFS storage protocol) does not attempt to resist denial of service.</p>
+</div>
+<div class="section" id="storage">
+<h3>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
+<p>The storage requirements, including not-yet-collected garbage shares, are
+the same as for the Tahoe-LAFS disk backend. That is, the total size of cloud
+objects stored is equal to the total size of shares that the disk backend
+would store.</p>
+<p>Erasure coding causes the size of shares for each file to be a
+factor <cite>shares.total</cite> / <cite>shares.needed</cite> times the file size, plus overhead
+that is logarithmic in the file size <a class="reference internal" href="#id10">¹¹</a>.</p>
+</div>
+<div class="section" id="api-usage">
+<h3>API usage<a class="headerlink" href="#api-usage" title="Permalink to this headline">¶</a></h3>
+<p>Cloud storage backends typically charge a small fee per API request. The number of
+requests to the cloud storage service for various operations is discussed under
+“network usage” above.</p>
+</div>
+</div>
+<div class="section" id="structure-of-implementation">
+<h2>Structure of Implementation<a class="headerlink" href="#structure-of-implementation" title="Permalink to this headline">¶</a></h2>
+<p>A generic “cloud backend”, based on the prototype S3 backend but with support
+for chunking as described above, will be written.</p>
+<p>An instance of the cloud backend can be attached to one of several
+“cloud interface adapters”, one for each cloud storage interface. These
+adapters will operate only on chunks, and need not distinguish between
+mutable and immutable shares. They will be a relatively “thin” abstraction
+layer over the HTTP APIs of each cloud storage interface, similar to the
+S3Bucket abstraction in the prototype.</p>
+<p>For some cloud storage services it may be necessary to transparently retry
+requests in order to recover from transient failures. (Although the erasure
+coding may enable a file to be retrieved even when shares are not stored by or
+not readable from all cloud storage services used in a Tahoe-LAFS grid, it may
+be desirable to retry cloud storage service requests in order to improve overall
+reliability.) Support for this will be implemented in the generic cloud backend,
+and used whenever a cloud storage adaptor reports a transient failure. Our
+experience with the prototype suggests that it is necessary to retry on transient
+failures for Amazon’s S3 service.</p>
+<p>There will also be a “mock” cloud interface adaptor, based on the prototype’s
+MockS3Bucket. This allows tests of the generic cloud backend to be run without
+a connection to a real cloud service. The mock adaptor will be able to simulate
+transient and non-transient failures.</p>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<p>This design worsens a known “write hole” issue in Tahoe-LAFS when updating
+the contents of mutable files. An update to a mutable file can require
+changing the contents of multiple chunks, and if the client fails or is
+disconnected during the operation the resulting state of the store objects
+for that share may be inconsistent—no longer containing all of the old version,
+but not yet containing all of the new version. A mutable share can be left in
+an inconsistent state even by the existing Tahoe-LAFS disk backend if it fails
+during a write, but that has a smaller chance of occurrence because the current
+client behavior leads to mutable shares being written to disk in a single
+system call.</p>
+<p>The best fix for this issue probably requires changing the Tahoe-LAFS storage
+protocol, perhaps by extending it to use a two-phase or three-phase commit
+(ticket #1755).</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>¹ omitted</p>
+<p id="id1">² “Amazon S3” Amazon (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://aws.amazon.com/s3/">https://aws.amazon.com/s3/</a></div></blockquote>
+<p id="id2">³ “Rackspace Cloud Files” Rackspace (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://www.rackspace.com/cloud/cloud_hosting_products/files/">https://www.rackspace.com/cloud/cloud_hosting_products/files/</a></div></blockquote>
+<p id="id3">⁴ “Google Cloud Storage” Google (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://developers.google.com/storage/">https://developers.google.com/storage/</a></div></blockquote>
+<p id="id4">⁵ “Windows Azure Storage” Microsoft (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://www.windowsazure.com/en-us/develop/net/fundamentals/cloud-storage/">https://www.windowsazure.com/en-us/develop/net/fundamentals/cloud-storage/</a></div></blockquote>
+<p id="id5">⁶ “Amazon Simple Storage Service (Amazon S3) API Reference: REST API” Amazon (2012)</p>
+<blockquote>
+<div><a class="reference external" href="http://docs.amazonwebservices.com/AmazonS3/latest/API/APIRest.html">http://docs.amazonwebservices.com/AmazonS3/latest/API/APIRest.html</a></div></blockquote>
+<p id="id6">⁷ “OpenStack Object Storage” openstack.org (2012)</p>
+<blockquote>
+<div><a class="reference external" href="http://openstack.org/projects/storage/">http://openstack.org/projects/storage/</a></div></blockquote>
+<p id="id7">⁸ “Google Cloud Storage Reference Guide” Google (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://developers.google.com/storage/docs/reference-guide">https://developers.google.com/storage/docs/reference-guide</a></div></blockquote>
+<p id="id8">⁹ “Windows Azure Storage Services REST API Reference” Microsoft (2012)</p>
+<blockquote>
+<div><a class="reference external" href="http://msdn.microsoft.com/en-us/library/windowsazure/dd179355.aspx">http://msdn.microsoft.com/en-us/library/windowsazure/dd179355.aspx</a></div></blockquote>
+<p id="id9">¹⁰ “Representational state transfer” English Wikipedia (2012)</p>
+<blockquote>
+<div><a class="reference external" href="https://en.wikipedia.org/wiki/Representational_state_transfer">https://en.wikipedia.org/wiki/Representational_state_transfer</a></div></blockquote>
+<p id="id10">¹¹ “Performance costs for some common operations” tahoe-lafs.org (2012)</p>
+<blockquote>
+<div><a class="reference internal" href="../../performance.html"><span class="doc">Performance costs for some common operations</span></a></div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Redundant Array of Independent Clouds: Share To Cloud Mapping</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#terminology">Terminology</a></li>
+<li><a class="reference internal" href="#functional-requirements">Functional Requirements</a></li>
+<li><a class="reference internal" href="#mapping">Mapping</a><ul>
+<li><a class="reference internal" href="#rationale-for-chunking">Rationale for Chunking</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#costs">Costs</a><ul>
+<li><a class="reference internal" href="#network-usagebandwidth-and-number-of-round-trips">Network usage—bandwidth and number-of-round-trips</a></li>
+<li><a class="reference internal" href="#disk-usage-local-to-the-storage-server">Disk usage (local to the storage server)</a></li>
+<li><a class="reference internal" href="#memory-usage">Memory usage</a></li>
+<li><a class="reference internal" href="#storage">Storage</a></li>
+<li><a class="reference internal" href="#api-usage">API usage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#structure-of-implementation">Structure of Implementation</a></li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../servers-of-happiness.html"
+                        title="previous chapter">Servers of Happiness</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../proposed/index.html"
+                        title="next chapter">Proposed Specifications</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/specifications/backends/raic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../proposed/index.html" title="Proposed Specifications"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../servers-of-happiness.html" title="Servers of Happiness"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Specifications</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

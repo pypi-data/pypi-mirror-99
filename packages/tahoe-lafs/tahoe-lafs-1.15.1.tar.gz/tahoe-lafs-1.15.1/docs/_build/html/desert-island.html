@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>How To Build Tahoe-LAFS On A Desert Island &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Debian and Ubuntu Support" href="debian.html" />
+    <link rel="prev" title="Tahoe Statistics" href="stats.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="debian.html" title="Debian and Ubuntu Support"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="stats.html" title="Tahoe Statistics"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-build-tahoe-lafs-on-a-desert-island">
+<h1>How To Build Tahoe-LAFS On A Desert Island<a class="headerlink" href="#how-to-build-tahoe-lafs-on-a-desert-island" title="Permalink to this headline">¶</a></h1>
+<p>(or an airplane, or anywhere else without internet connectivity)</p>
+<p>Here’s the story: you leave for the airport in an hour, you know you want to
+do some Tahoe hacking on the flight. What can you grab right now that will
+let you install the necessary dependencies later, when you are offline?</p>
+<p>Pip can help, with a technique described in the pip documentation
+<a class="reference external" href="https://pip.pypa.io/en/stable/user_guide/#installing-from-local-packages">https://pip.pypa.io/en/stable/user_guide/#installing-from-local-packages</a> .</p>
+<p>First, do two setup steps:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">~/.pip/wheels</span></code></li>
+<li>edit <code class="docutils literal notranslate"><span class="pre">~/.pip/pip.conf</span></code> to set <code class="docutils literal notranslate"><span class="pre">[global]</span> <span class="pre">find-links</span> <span class="pre">=</span> <span class="pre">~/.pip/wheels</span></code></li>
+</ul>
+<p>(the filename may vary on non-unix platforms: check the pip documentation for
+details)</p>
+<p>This instructs all <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> commands to look in your local directory
+for compiled wheels, in addition to asking PyPI and the normal wheel cache.</p>
+<p>Before you get shipwrecked (or leave the internet for a while), do this from
+your tahoe source tree (or any python source tree that you want to hack on):</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">wheel</span> <span class="pre">-w</span> <span class="pre">~/.pip/wheels</span> <span class="pre">.</span></code></li>
+</ul>
+<p>That command will require network and time: it will download and compile
+whatever is necessary right away. Schedule your shipwreck for <em>after</em> it
+completes.</p>
+<p>Specifically, it will get wheels for everything that the current project
+(“.”, i.e. tahoe) needs, and write them to the <code class="docutils literal notranslate"><span class="pre">~/.pip/wheels</span></code> directory.
+It will query PyPI to learn the current version of every dependency, then
+acquire wheels from the first source that has one:</p>
+<ul class="simple">
+<li>copy from our <code class="docutils literal notranslate"><span class="pre">~/.pip/wheels</span></code> directory</li>
+<li>copy from the local wheel cache (see below for where this lives)</li>
+<li>download a wheel from PyPI</li>
+<li>build a wheel from a tarball (cached or downloaded)</li>
+</ul>
+<p>Later, on the plane, do this:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">--no-download</span> <span class="pre">ve</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">ve/bin/activate</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--no-index</span> <span class="pre">--editable</span> <span class="pre">.</span></code></li>
+</ul>
+<p>That tells virtualenv/pip to not try to contact PyPI, and your <code class="docutils literal notranslate"><span class="pre">pip.conf</span></code>
+“find-links” tells them to use the wheels in <code class="docutils literal notranslate"><span class="pre">~/.pip/wheels/</span></code> instead.</p>
+<div class="section" id="how-this-works">
+<h2>How This Works<a class="headerlink" href="#how-this-works" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-pip-wheel-cache">
+<h3>The pip wheel cache<a class="headerlink" href="#the-pip-wheel-cache" title="Permalink to this headline">¶</a></h3>
+<p>Modern versions of pip and setuptools will, by default, cache both their HTTP
+downloads and their generated wheels. When pip is asked to install a package,
+it will first check with PyPI. If the PyPI index says it needs to download a
+newer version, but it can find a copy of the tarball/zipball/wheel in the
+HTTP cache, it will not actually download anything. Then it tries to build a
+wheel: if it already has one in the wheel cache (downloaded or built
+earlier), it will not actually build anything.</p>
+<p>If it cannot contact PyPI, it will fail. The <code class="docutils literal notranslate"><span class="pre">--no-index</span></code> above is to tell
+it to skip the PyPI step, but that leaves it with no source of packages. The
+<code class="docutils literal notranslate"><span class="pre">find-links</span></code> setting is what provides an alternate source of packages.</p>
+<p>The HTTP and wheel caches are not single flat directories: they use a
+hierarchy of subdirectories, named after a hash of the URL or name of the
+object being stored (this is to avoid filesystem limitations on the size of a
+directory). As a result, the wheel cache is not suitable for use as a
+<code class="docutils literal notranslate"><span class="pre">find-links</span></code> target (but see below).</p>
+<p>There is a command named <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">wheel</span></code> which only creates wheels (and stores
+them in <code class="docutils literal notranslate"><span class="pre">--wheel-dir=</span></code>, which defaults to the current directory). This
+command does not populate the wheel cache: it reads from (and writes to) the
+HTTP cache, and reads from the wheel cache, but will only save the generated
+wheels into the directory you specify with <code class="docutils literal notranslate"><span class="pre">--wheel-dir=</span></code>.</p>
+</div>
+<div class="section" id="where-does-the-cache-live">
+<h3>Where Does The Cache Live?<a class="headerlink" href="#where-does-the-cache-live" title="Permalink to this headline">¶</a></h3>
+<p>Pip’s cache location depends upon the platform. On linux, it defaults to
+~/.cache/pip/ (both http/ and wheels/). On OS-X (homebrew), it uses
+~/Library/Caches/pip/ . On Windows, try ~AppDataLocalpipcache .</p>
+<p>The location can be overridden by <code class="docutils literal notranslate"><span class="pre">pip.conf</span></code>. Look for the “wheel-dir”,
+“cache-dir”, and “find-links” options.</p>
+</div>
+<div class="section" id="how-can-i-tell-if-it-s-using-the-cache">
+<h3>How Can I Tell If It’s Using The Cache?<a class="headerlink" href="#how-can-i-tell-if-it-s-using-the-cache" title="Permalink to this headline">¶</a></h3>
+<p>When “pip install” has to download a source tarball (and build a wheel), it
+will say things like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Collecting zfec
+ Downloading zfec-1.4.24.tar.gz (175kB)
+Building wheels for collected packages: zfec
+ Running setup.py bdist_wheel for zfec ... done
+ Stored in directory: $CACHEDIR
+Successfully built zfec
+Installing collected packages: zfec
+Successfully installed zfec-1.4.24
+</pre></div>
+</div>
+<p>When “pip install” can use a cached downloaded tarball, but does not have a
+cached wheel, it will say:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Collecting zfec
+ Using cached zfec-1.4.24.tar.gz
+Building wheels for collected packages: zfec
+ Running setup.py bdist_wheel for zfec ... done
+ Stored in directory: $CACHEDIR
+Successfully built zfec
+Installing collected packages: zfec
+Successfully installed zfec-1.4.24
+</pre></div>
+</div>
+<p>When “pip install” can use a cached wheel, it will just say:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Collecting</span> <span class="n">zfec</span>
+<span class="n">Installed</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">zfec</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">zfec</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">24</span>
+</pre></div>
+</div>
+<p>Many packages publish pre-built wheels next to their source tarballs. This is
+common for non-platform-specific (pure-python) packages. It is also common
+for them to provide pre-compiled windows and OS-X wheel, so users do not have
+to have a compiler installed (pre-compiled Linux wheels are not common,
+because there are too many platform variations). When “pip install” can use a
+downloaded wheel like this, it will say:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Collecting</span> <span class="n">six</span>
+ <span class="n">Downloading</span> <span class="n">six</span><span class="o">-</span><span class="mf">1.10</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="nb">any</span><span class="o">.</span><span class="n">whl</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">six</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">six</span><span class="o">-</span><span class="mf">1.10</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Note that older versions of pip do not always use wheels, or the cache. Pip
+8.0.0 or newer should be ok. The version of setuptools may also be
+significant.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How To Build Tahoe-LAFS On A Desert Island</a><ul>
+<li><a class="reference internal" href="#how-this-works">How This Works</a><ul>
+<li><a class="reference internal" href="#the-pip-wheel-cache">The pip wheel cache</a></li>
+<li><a class="reference internal" href="#where-does-the-cache-live">Where Does The Cache Live?</a></li>
+<li><a class="reference internal" href="#how-can-i-tell-if-it-s-using-the-cache">How Can I Tell If It’s Using The Cache?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="stats.html"
+                        title="previous chapter">Tahoe Statistics</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="debian.html"
+                        title="next chapter">Debian and Ubuntu Support</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/desert-island.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="debian.html" title="Debian and Ubuntu Support"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="stats.html" title="Tahoe Statistics"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

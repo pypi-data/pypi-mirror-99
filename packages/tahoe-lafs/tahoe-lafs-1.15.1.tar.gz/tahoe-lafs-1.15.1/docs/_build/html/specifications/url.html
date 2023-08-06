@@ -1,0 +1,281 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>URLs &#8212; Tahoe-LAFS 1.x documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tahoe URIs" href="uri.html" />
+    <link rel="prev" title="Specification Document Outline" href="outline.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="uri.html" title="Tahoe URIs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="outline.html" title="Specification Document Outline"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Specifications</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="urls">
+<h1>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this document is to completely specify the construction and use of the URLs by Tahoe-LAFS for service location.
+This includes, but is not limited to, the original Foolscap-based URLs.
+These are not to be confused with the URI-like capabilities Tahoe-LAFS uses to refer to stored data.
+An attempt is also made to outline the rationale for certain choices about these URLs.
+The intended audience for this document is Tahoe-LAFS maintainers and other developers interested in interoperating with Tahoe-LAFS or these URLs.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Tahoe-LAFS first used <a class="reference external" href="https://github.com/warner/foolscap">Foolscap</a> for network communication.
+Foolscap connection setup takes as an input a Foolscap URL or a <em>fURL</em>.
+A fURL includes three components:</p>
+<ul class="simple">
+<li>the base32-encoded SHA1 hash of the DER form of an x509v3 certificate</li>
+<li>zero or more network addresses <a class="footnote-reference" href="#id3" id="id1">[1]</a></li>
+<li>an object identifier</li>
+</ul>
+<p>A Foolscap client tries to connect to each network address in turn.
+If a connection is established then TLS is negotiated.
+The server is authenticated by matching its certificate against the hash in the fURL.
+A matching certificate serves as proof that the handshaking peer is the correct server.
+This serves as the process by which the client authenticates the server.</p>
+<p>The client can then exercise further Foolscap functionality using the fURL’s object identifier.
+If the object identifier is an unguessable, secret string then it serves as a capability.
+This unguessable identifier is sometimes called a <a class="reference external" href="http://wiki.erights.org/wiki/Swiss_number">swiss number</a> (or swissnum).
+The client’s use of the swissnum is what allows the server to authorize the client.</p>
+</div>
+<div class="section" id="nurls">
+<h2>NURLs<a class="headerlink" href="#nurls" title="Permalink to this headline">¶</a></h2>
+<p>The authentication and authorization properties of fURLs are a good fit for Tahoe-LAFS’ requirements.
+These are not inherently tied to the Foolscap protocol itself.
+In particular they are beneficial to <a class="reference internal" href="../proposed/http-storage-node-protocol.html"><span class="doc">Storage Node Protocol (“Great Black Swamp”, “GBS”)</span></a> which uses HTTP instead of Foolscap.
+It is conceivable they will also be used with WebSockets at some point as well.</p>
+<p>Continuing to refer to these URLs as fURLs when they are being used for other protocols may cause confusion.
+Therefore,
+this document coins the name <strong>NURL</strong> for these URLs.
+This can be considered to expand to “<strong>N</strong>ew URLs” or “Authe<strong>N</strong>ticating URLs” or “Authorizi<strong>N</strong>g URLs” as the reader prefers.</p>
+<p>The anticipated use for a <strong>NURL</strong> will still be to establish a TLS connection to a peer.
+The protocol run over that TLS connection could be Foolscap though it is more likely to be an HTTP-based protocol (such as GBS).</p>
+</div>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The EBNF for a NURL is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nurl</span>         <span class="o">=</span> <span class="n">scheme</span><span class="p">,</span> <span class="nb">hash</span><span class="p">,</span> <span class="s2">&quot;@&quot;</span><span class="p">,</span> <span class="n">net</span><span class="o">-</span><span class="n">loc</span><span class="o">-</span><span class="nb">list</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">swiss</span><span class="o">-</span><span class="n">number</span><span class="p">,</span> <span class="p">[</span> <span class="n">version1</span> <span class="p">]</span>
+
+<span class="n">scheme</span>       <span class="o">=</span> <span class="s2">&quot;pb://&quot;</span>
+
+<span class="nb">hash</span>         <span class="o">=</span> <span class="n">unreserved</span>
+
+<span class="n">net</span><span class="o">-</span><span class="n">loc</span><span class="o">-</span><span class="nb">list</span> <span class="o">=</span> <span class="n">net</span><span class="o">-</span><span class="n">loc</span><span class="p">,</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">net</span><span class="o">-</span><span class="n">loc</span> <span class="p">}</span> <span class="p">]</span>
+<span class="n">net</span><span class="o">-</span><span class="n">loc</span>      <span class="o">=</span> <span class="n">tcp</span><span class="o">-</span><span class="n">loc</span> <span class="o">|</span> <span class="n">tor</span><span class="o">-</span><span class="n">loc</span> <span class="o">|</span> <span class="n">i2p</span><span class="o">-</span><span class="n">loc</span>
+
+<span class="n">tcp</span><span class="o">-</span><span class="n">loc</span>      <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;tcp:&quot;</span> <span class="p">],</span> <span class="n">hostname</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;:&quot;</span> <span class="n">port</span> <span class="p">]</span>
+<span class="n">tor</span><span class="o">-</span><span class="n">loc</span>      <span class="o">=</span> <span class="s2">&quot;tor:&quot;</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;:&quot;</span> <span class="n">port</span> <span class="p">]</span>
+<span class="n">i2p</span><span class="o">-</span><span class="n">loc</span>      <span class="o">=</span> <span class="s2">&quot;i2p:&quot;</span><span class="p">,</span> <span class="n">i2p</span><span class="o">-</span><span class="n">addr</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;:&quot;</span> <span class="n">port</span> <span class="p">]</span>
+
+<span class="n">i2p</span><span class="o">-</span><span class="n">addr</span>     <span class="o">=</span> <span class="p">{</span> <span class="n">unreserved</span> <span class="p">},</span> <span class="s2">&quot;.i2p&quot;</span>
+<span class="n">hostname</span>     <span class="o">=</span> <span class="n">domain</span> <span class="o">|</span> <span class="n">IPv4address</span> <span class="o">|</span> <span class="n">IPv6address</span>
+
+<span class="n">swiss</span><span class="o">-</span><span class="n">number</span> <span class="o">=</span> <span class="n">segment</span>
+
+<span class="n">version1</span>     <span class="o">=</span> <span class="s2">&quot;#v=1&quot;</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://tools.ietf.org/html/rfc3986#section-3.3">https://tools.ietf.org/html/rfc3986#section-3.3</a> for the definition of <code class="docutils literal notranslate"><span class="pre">segment</span></code>.
+See <a class="reference external" href="https://tools.ietf.org/html/rfc2396#appendix-A">https://tools.ietf.org/html/rfc2396#appendix-A</a> for the definition of <code class="docutils literal notranslate"><span class="pre">unreserved</span></code>.
+See <a class="reference external" href="https://tools.ietf.org/html/draft-main-ipaddr-text-rep-02#section-3.1">https://tools.ietf.org/html/draft-main-ipaddr-text-rep-02#section-3.1</a> for the definition of <code class="docutils literal notranslate"><span class="pre">IPv4address</span></code>.
+See <a class="reference external" href="https://tools.ietf.org/html/draft-main-ipaddr-text-rep-02#section-3.2">https://tools.ietf.org/html/draft-main-ipaddr-text-rep-02#section-3.2</a> for the definition of <code class="docutils literal notranslate"><span class="pre">IPv6address</span></code>.
+See <a class="reference external" href="https://tools.ietf.org/html/rfc1035#section-2.3.1">https://tools.ietf.org/html/rfc1035#section-2.3.1</a> for the definition of <code class="docutils literal notranslate"><span class="pre">domain</span></code>.</p>
+</div>
+<div class="section" id="versions">
+<h2>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h2>
+<p>Though all NURLs are syntactically compatible some semantic differences are allowed.
+These differences are separated into distinct versions.</p>
+</div>
+<div class="section" id="version-0">
+<h2>Version 0<a class="headerlink" href="#version-0" title="Permalink to this headline">¶</a></h2>
+<p>A Foolscap fURL is considered the canonical definition of a version 0 NURL.
+Notably,
+the hash component is defined as the base32-encoded SHA1 hash of the DER form of an x509v3 certificate.
+A version 0 NURL is identified by the absence of the <code class="docutils literal notranslate"><span class="pre">v=1</span></code> fragment.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pb://sisi4zenj7cxncgvdog7szg3yxbrnamy&#64;tcp:127.1:34399/xphmwz6lx24rh2nxlinni</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pb://2uxmzoqqimpdwowxr24q6w5ekmxcymby&#64;localhost:47877/riqhpojvzwxujhna5szkn</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-1">
+<h2>Version 1<a class="headerlink" href="#version-1" title="Permalink to this headline">¶</a></h2>
+<p>The hash component of a version 1 NURL differs in three ways from the prior version.</p>
+<ol class="arabic simple">
+<li>The hash function used is SHA3-224 instead of SHA1.
+The security of SHA1 <a class="reference external" href="https://en.wikipedia.org/wiki/SHA-1#Cryptanalysis_and_validation">continues to be eroded</a>.
+Contrariwise SHA3 is currently the most recent addition to the SHA family by NIST.
+The 224 bit instance is chosen to keep the output short and because it offers greater collision resistance than SHA1 was thought to offer even at its inception
+(prior to security research showing actual collision resistance is lower).</li>
+<li>The hash is computed over the certificate’s SPKI instead of the whole certificate.
+This allows certificate re-generation so long as the public key remains the same.
+This is useful to allow contact information to be updated or extension of validity period.
+Use of an SPKI hash has also been <a class="reference external" href="https://www.imperialviolet.org/2011/05/04/pinning.html">explored by the web community</a> during its flirtation with using it for HTTPS certificate pinning
+(though this is now largely abandoned).</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Only</em> the certificate’s keypair is pinned by the SPKI hash.
+The freedom to change every other part of the certificate is coupled with the fact that all other parts of the certificate contain arbitrary information set by the private key holder.
+It is neither guaranteed nor expected that a certificate-issuing authority has validated this information.
+Therefore,
+<em>all</em> certificate fields should be considered within the context of the relationship identified by the SPKI hash.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li>The hash is encoded using urlsafe-base64 (without padding) instead of base32.
+This provides a more compact representation and minimizes the usability impacts of switching from a 160 bit hash to a 224 bit hash.</li>
+</ol>
+<p>A version 1 NURL is identified by the presence of the <code class="docutils literal notranslate"><span class="pre">v=1</span></code> fragment.
+Though the length of the hash string (38 bytes) could also be used to differentiate it from a version 0 NURL,
+there is no guarantee that this will be effective in differentiating it from future versions so this approach should not be used.</p>
+<p>It is possible for a client to unilaterally upgrade a version 0 NURL to a version 1 NURL.
+After establishing and authenticating a connection the client will have received a copy of the server’s certificate.
+This is sufficient to compute the new hash and rewrite the NURL to upgrade it to version 1.
+This provides stronger authentication assurances for future uses but it is not required.</p>
+<div class="section" id="id2">
+<h3>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pb://1WUX44xKjKdpGLohmFcBNuIRN-8rlv1Iij_7rQ&#64;tcp:127.1:34399/jhjbc3bjbhk#v=1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pb://azEu8vlRpnEeYm0DySQDeNY3Z2iJXHC_bsbaAw&#64;localhost:47877/64i4aokv4ej#v=1</span></code></li>
+</ul>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><code class="docutils literal notranslate"><span class="pre">foolscap.furl.decode_furl</span></code> is taken as the canonical definition of the syntax of a fURL.
+The <strong>location hints</strong> part of the fURL,
+as it is referred to in Foolscap,
+is matched by the regular expression fragment <code class="docutils literal notranslate"><span class="pre">([^/]*)</span></code>.
+Since this matches the empty string,
+no network addresses are required to form a fURL.
+The supporting code around the regular expression also takes extra steps to allow an empty string to match here.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="open-questions">
+<h2>Open Questions<a class="headerlink" href="#open-questions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Should we make a hard recommendation that all certificate fields are ignored?
+The system makes no guarantees about validation of these fields.
+Is it just an unnecessary risk to let a user see them?</li>
+<li>Should the version specifier be a query-arg-alike or a fragment-alike?
+The value is only necessary on the client side which makes it similar to an HTTP URL fragment.
+The current Tahoe-LAFS configuration parsing code has special handling of the fragment character (<code class="docutils literal notranslate"><span class="pre">#</span></code>) which makes it unusable.
+However,
+the configuration parsing code is easily changed.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">URLs</a><ul>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#nurls">NURLs</a></li>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#versions">Versions</a></li>
+<li><a class="reference internal" href="#version-0">Version 0</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-1">Version 1</a><ul>
+<li><a class="reference internal" href="#id2">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#open-questions">Open Questions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="outline.html"
+                        title="previous chapter">Specification Document Outline</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="uri.html"
+                        title="next chapter">Tahoe URIs</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/specifications/url.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="uri.html" title="Tahoe URIs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="outline.html" title="Specification Document Outline"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tahoe-LAFS 1.x documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Specifications</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, The Tahoe-LAFS Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

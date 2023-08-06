@@ -1,0 +1,3 @@
+* select features/PRs for new release
+  - [ ] made sure they are tagged/labeled
+  - [ ] merged all release PRs
