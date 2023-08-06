@@ -1,0 +1,16 @@
+ChristisMongo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ChristisMongo/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ChristisMongo/core/collection.py,sha256=C3D_iYlnnoM1PQ0vHMEdRBYvUmtLw2uBJ5UgxmL5hrE,351
+ChristisMongo/core/config_parser.py,sha256=iFs85bHJNKnBusVi9KBikNuAG-FRe0y2JOlx7SDlumk,815
+ChristisMongo/core/connection.py,sha256=so__ioJ5ewGLr4Wkvt-HSitaxTXcjlUxzFMr4zEbp_s,1265
+ChristisMongo/core/db.py,sha256=1uCtanwK6Pr9gVUx8LmzW11erJD4rOfNeUYIogyK2po,533
+ChristisMongo/table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ChristisMongo/table/add.py,sha256=XtQHEISy1rvMlfQ_SfYZTrQnnAJcsBh9XZdNXZLywY8,1287
+ChristisMongo/table/delete.py,sha256=LK4mFy3HmXn2DLo7_mloxMsgozrLiRewwaJ5jQaxgAA,2328
+ChristisMongo/table/get.py,sha256=Xejxn_HaMHpipPxZGKNKodc0kEv7MmDRsMN4VXU3tTY,412
+ChristisMongo/table/move.py,sha256=1pA0egMRsH3V8lLdQgghTEXfTUdj8apBXpatWCTOF00,2115
+ChristisMongo/table/query.py,sha256=_-GGfBpn-19Uhcev5s3_ZmNKK0uvSeh73xBFVlTmlKI,1890
+ChristisMongo-0.21.dist-info/METADATA,sha256=yuFSfyT3gA3XkyREfDv0PHXS1qlpZbTGJ0JNKsfvSBI,656
+ChristisMongo-0.21.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ChristisMongo-0.21.dist-info/top_level.txt,sha256=L3ZcQ_fIbXRHeCV2N01Mf5r5RZALXrLmpCzxyFOSlWQ,14
+ChristisMongo-0.21.dist-info/RECORD,,
