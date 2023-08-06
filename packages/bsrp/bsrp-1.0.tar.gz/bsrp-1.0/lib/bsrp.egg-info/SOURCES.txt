@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+lib/bsrp/client.py
+lib/bsrp/constants.py
+lib/bsrp/server.py
+lib/bsrp/utils.py
+lib/bsrp.egg-info/PKG-INFO
+lib/bsrp.egg-info/SOURCES.txt
+lib/bsrp.egg-info/dependency_links.txt
+lib/bsrp.egg-info/top_level.txt
