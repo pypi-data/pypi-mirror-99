@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: django_dnoticias_services
+Version: 1.0.7.12
+Summary: UNKNOWN
+Home-page: https://www.dnoticias.pt/
+Author: Pedro Mendes
+Author-email: pedro.trabalho.uma@gmail.com
+License: MIT
+Description: # dnoticias_services
+        
+        ## Import:
+        
+        `from dnoticias_services.<module> import <function_name>`
+        
+        `eg:`
+        
+        `from dnoticias_services.mail import send_email`
+        
+        ## Modules:
+        * mail
+        * authentication
+        
+        ## Methods:
+        * Mail
+          - create_campaign
+          
+            `create_campaign(template_uuid, brand_group_uuid, newsletter_uuid, title, subject, context=dict(), from_email=None, from_name=None, track_opens=True, track_clicks=True, api_key=None)`
+          - send_campaign
+        
+            `send_campaign(template_uuid, brand_group_uuid, newsletter_uuid, title, subject, context=dict(), from_email=None, from_name=None, track_opens=True, track_clicks=True, api_key=None)`
+          - send_email
+        
+            `send_email(email, template_uuid, brand_group_uuid, subject, context=dict(), from_email=None, from_name=None, attachments=[], track_opens=True, track_clicks=True, api_key=None)`
+          - send_email_bulk()
+        
+            `send_email_bulk(emails=[], template_uuid=None, brand_group_uuid=None, subject="", context=list(), from_email=None, from_name=None, attachments=[], track_opens=True, track_clicks=True, api_key=None`
+        
+        ## Settings
+        * Mail
+            - SEND_EMAIL_API_URL (https://comunicacao.dnoticias.pt/api/send/mail/)
+            - SEND_EMAIL_BULK_API_URL (https://comunicacao.dnoticias.pt/api/send/mail/bulk/)
+            - SEND_CAMPAIGN_API_URL (https://comunicacao.dnoticias.pt/api/send/campaign/)
+            - CREATE_CAMPAIGN_API_URL (https://comunicacao.dnoticias.pt/api/send/create/campaign/)
+        
+            
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
