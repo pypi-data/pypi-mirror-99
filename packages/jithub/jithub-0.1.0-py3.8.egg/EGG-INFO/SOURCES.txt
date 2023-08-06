@@ -1,0 +1,6 @@
+README.md
+setup.py
+jithub.egg-info/PKG-INFO
+jithub.egg-info/SOURCES.txt
+jithub.egg-info/dependency_links.txt
+jithub.egg-info/top_level.txt
