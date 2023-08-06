@@ -1,0 +1,2 @@
+requests
+ecdsa>=0.16.1

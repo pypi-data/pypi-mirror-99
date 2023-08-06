@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+verisart-verify
+verisart_verify.egg-info/PKG-INFO
+verisart_verify.egg-info/SOURCES.txt
+verisart_verify.egg-info/dependency_links.txt
+verisart_verify.egg-info/requires.txt
+verisart_verify.egg-info/top_level.txt
+verisartverify/OtsCli.jar
+verisartverify/__init__.py
+verisartverify/utils.py
+verisartverify/verify.py
+verisartverify/verify_legacy.py
