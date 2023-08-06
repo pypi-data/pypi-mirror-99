@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Sivant
+Version: 0.0.3
+Summary: A Python package
+Home-page: https://github.com/sivant1361/sivant_hello
+Author: Sivant M
+Author-email: sivant1313@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+It is a demo package created for learning purpose.
+
+It contains a function named "hello" to display a message
+
