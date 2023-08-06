@@ -1,0 +1,14 @@
+dockernel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dockernel/__main__.py,sha256=kvYZtc39bggiL0Zo6Fgp3crLR_mD6Xd9wuoq1_Hrtcg,128
+dockernel/app.py,sha256=x5bQtxu_3-7tJXLW9ZFXzSqojCI4jx3hBKUBIe8qWas,195
+dockernel/kernelspec.py,sha256=P_dmVpzV8_TcLNIMbIyqhnAx3qgVOwb5HpnrW7mMzD4,5070
+dockernel/cli/__init__.py,sha256=FAFsnsAo8DTKBrsTHrpL0ubn_jaai0BU3RP_KhQpiYI,326
+dockernel/cli/install.py,sha256=vTrdgTecWNIKBMVFjqIAiGJP75DP-0Cag_o_6iI8a2Q,2654
+dockernel/cli/main.py,sha256=QDbSifx4mvHOmMLzAMWSrLI-IHm-p5IJSqEcrS0MI60,774
+dockernel/cli/start.py,sha256=uv3bZU5lLzv5L5ISkzW-A44FyQXUbIG57hJneeOvmDA,2394
+dockernel-1.0.2.dist-info/LICENSE,sha256=B1FDxO6Fzfa4SgkwATzUJKKmo8b1zXu0gkX4Iv9vFZU,1079
+dockernel-1.0.2.dist-info/METADATA,sha256=VISexRxTG9N0G7ISYalI2YiSTBgkLli5ZFj_FQ0ulUU,2482
+dockernel-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dockernel-1.0.2.dist-info/entry_points.txt,sha256=dr8iCJASs27sO5EpKcvTFLMgmWfOuaRz6tOiOoi72J4,55
+dockernel-1.0.2.dist-info/top_level.txt,sha256=v8vjxJKzdcjE9wkT6qmCSuzYaujuMbJo3pDW4jQFw_U,10
+dockernel-1.0.2.dist-info/RECORD,,
