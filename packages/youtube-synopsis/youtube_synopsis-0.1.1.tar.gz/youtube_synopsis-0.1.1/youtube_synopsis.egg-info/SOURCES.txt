@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+youtube_synopsis/__init__.py
+youtube_synopsis/synopsis.py
+youtube_synopsis/template_rectangle.png
+youtube_synopsis/template_square.png
+youtube_synopsis.egg-info/PKG-INFO
+youtube_synopsis.egg-info/SOURCES.txt
+youtube_synopsis.egg-info/dependency_links.txt
+youtube_synopsis.egg-info/requires.txt
+youtube_synopsis.egg-info/top_level.txt
