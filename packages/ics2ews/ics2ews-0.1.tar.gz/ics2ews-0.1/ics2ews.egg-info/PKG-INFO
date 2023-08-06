@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ics2ews
+Version: 0.1
+Summary: Synchronize ICS to Exchange
+Home-page: https://github.com/wallento/ics2ews
+Author: Stefan Wallentowitz
+Author-email: stefan.wallentowitz@hm.edu
+License: UNKNOWN
+Description: # Synchronize ICS to Exchange
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown

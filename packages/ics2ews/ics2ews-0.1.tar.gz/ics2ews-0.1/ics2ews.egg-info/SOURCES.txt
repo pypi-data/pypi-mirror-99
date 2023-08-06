@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+.github/workflows/python-publish.yml
+ics2ews/sync.py
+ics2ews/version.py
+ics2ews.egg-info/PKG-INFO
+ics2ews.egg-info/SOURCES.txt
+ics2ews.egg-info/dependency_links.txt
+ics2ews.egg-info/entry_points.txt
+ics2ews.egg-info/requires.txt
+ics2ews.egg-info/top_level.txt
