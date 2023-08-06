@@ -1,0 +1,3 @@
+[console_scripts]
+fedbiomed-node=fedbiomed_cli.utils.cli:main
+
