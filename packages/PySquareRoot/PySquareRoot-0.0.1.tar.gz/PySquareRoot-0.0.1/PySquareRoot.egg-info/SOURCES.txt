@@ -1,0 +1,7 @@
+setup.py
+PySquareRoot/__init__.py
+PySquareRoot/main.py
+PySquareRoot.egg-info/PKG-INFO
+PySquareRoot.egg-info/SOURCES.txt
+PySquareRoot.egg-info/dependency_links.txt
+PySquareRoot.egg-info/top_level.txt
