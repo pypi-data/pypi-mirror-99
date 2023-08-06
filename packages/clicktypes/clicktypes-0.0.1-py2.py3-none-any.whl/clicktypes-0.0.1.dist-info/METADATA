@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: clicktypes
+Version: 0.0.1
+Summary: Additional parameter types for the "click" module that I find useful.
+Home-page: https://github.com/python-modules/clicktypes
+Author: gbe0
+Author-email: python@gbe0.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+
+# clicktypes
+
+Additional types for the click module that I find useful.
+
+For a list of available types check the [README](clicktypes/README.md) file from the module.
+
+

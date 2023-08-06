@@ -1,0 +1,9 @@
+clicktypes/__init__.py,sha256=N3M1WRnsi8boN87UGDydNJTAJEYFHUcFTqwk4jhfNbU,145
+clicktypes/__version__.py,sha256=MU7CEIYCorX8NaBKa1RWPtAjfqB3_P4Ysh4o1Dh3-iE,308
+clicktypes/network/__init__.py,sha256=S7WVj0uLy9uP4OTW5L5C4rmaIytKbE_vHt8UA_ax2ig,122
+clicktypes/network/network.py,sha256=EAPoUE6eSxk6x4RZhFf0xydCTBXmXeCbfbia444mSgw,3972
+clicktypes-0.0.1.dist-info/LICENSE,sha256=VgkC_DIkNWQ68CqcDB6nLxcf9QSdtYSoVXnwmQ4JQ94,1060
+clicktypes-0.0.1.dist-info/METADATA,sha256=bQhjvyD6zSBscZTBljDyWC_bnc1Qtogi_50IlanCAek,895
+clicktypes-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+clicktypes-0.0.1.dist-info/top_level.txt,sha256=3V7c-bzxfAGQEHf1MnHy5sbLyHdIO-M-hZyrhmJJ5Lo,11
+clicktypes-0.0.1.dist-info/RECORD,,
