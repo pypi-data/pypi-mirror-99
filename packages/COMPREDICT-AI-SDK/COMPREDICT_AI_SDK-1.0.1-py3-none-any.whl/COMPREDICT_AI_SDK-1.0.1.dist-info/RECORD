@@ -1,0 +1,15 @@
+compredict/__init__.py,sha256=dJVRo6e0Ky_fE-MB9V1iBGNNLBYS7t9OFZ4L4DECj70,81
+compredict/client.py,sha256=CJAARBpqV0DDoTE6vMOHV7DVanNGeat7cn9S3epZ54c,17558
+compredict/connection.py,sha256=-519HfvwhzYg3QgKWZNifGHTQE_GeND17qt2seUuUPI,3446
+compredict/exceptions.py,sha256=B2H2yP0VYVMuWG43ck0g4mcLjLLW2gsSoT8xu6oMATA,799
+compredict/singleton.py,sha256=ARG6CtEI1MWieX9tBGZQfe0tBQLit3KGEEhHQewweRE,1429
+compredict/resources/__init__.py,sha256=pSEgi-Hc5iIHNGGjZ2Cty3bmuTXdss4AT9Aqbxc8DTY,139
+compredict/resources/base.py,sha256=DwOsRmhz4wKoBC9jo0DreaQkZIErOQeB8wVRjRZNn9I,538
+compredict/resources/resources.py,sha256=WaZrkrM_ydDwxbxde72YrPQ5bRAIPSGTh8b5wses650,4710
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/basic_ex.py,sha256=tsP-4wP2SLVxk5__8FxT5aRAJ4KxcJ1aX4DiwfB3Jz8,3264
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+COMPREDICT_AI_SDK-1.0.1.dist-info/METADATA,sha256=LWlr-XRDlAfrqdJcvi2cdX3ImJmsIfk8U3zxJYutZq8,506
+COMPREDICT_AI_SDK-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+COMPREDICT_AI_SDK-1.0.1.dist-info/top_level.txt,sha256=V0a061GyODpcPN9GxLcs3kmx8rtxdza-gbfOqb3U6_A,26
+COMPREDICT_AI_SDK-1.0.1.dist-info/RECORD,,
