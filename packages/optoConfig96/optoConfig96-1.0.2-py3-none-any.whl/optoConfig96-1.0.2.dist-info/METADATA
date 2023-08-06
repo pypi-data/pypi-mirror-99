@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: optoConfig96
+Version: 1.0.2
+Summary: A GUI tool to configure optoPlate96 experiments
+Home-page: https://github.com/WeberLab/optoPlate96
+Author: Oliver Thomas
+Author-email: oliver.thomas@sgbm.uni-freiburg.de
+License: UNKNOWN
+Keywords: biology optogenetics optoplate gui
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: traits (>=5.2.0)
+Requires-Dist: traitsui (>=6.1.3)
+Requires-Dist: PyQt5 (>=5.14.0)
+Requires-Dist: pygments (>=2.5.2)
+Requires-Dist: numpy (>=1.17.4)
+Requires-Dist: matplotlib (>=3.1.1)
+
+# optoConfig-96 - Interactive configuration of experiments using the optoPlate-96
+
+
+## Documentation
+
+optoConfig-96 lives on [GitHub](https://github.com/WeberSynBioLab/optoConfig-96/). You will find further instructions and documentation over there!
+
+If optoConfig-96 was useful to you, please consider citing the paper:
+
+Thomas, OS, Hörner, M & Weber, W: A graphical user interface to design high-throughput optogenetic experiments with the optoPlate-96. *Nat Protoc* (2020). https://doi.org/10.1038/s41596-020-0349-x
+
+
