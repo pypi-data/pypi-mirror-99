@@ -1,0 +1,5 @@
+galaxy-util
+requests
+
+[docker]
+docker
