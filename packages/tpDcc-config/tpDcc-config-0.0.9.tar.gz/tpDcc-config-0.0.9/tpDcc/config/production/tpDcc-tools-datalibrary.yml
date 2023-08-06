@@ -1,0 +1,12 @@
+# Defines where data library settings user data are stored
+settings_path: '{local}/tpDcc-tools-datalibrary/datalibrary.json'
+
+# Defines temporal location used for saving temporal data (such as item or thumbnails)
+temp_path: '{temp}/tpDcc-tools-datalibrary/{user}'
+
+
+# Indicates whether or not the DPI functionality is enabled. Useful when working with 4k monitors.
+dpi_enabled: True
+
+# List of custom classes to register
+extra_item_classes: []

@@ -1,0 +1,12 @@
+# Default database path
+database_path: '{root}/data.db'
+
+# Maximum walking depth from the root directory where files will be search
+recursive_search_depth: 8
+
+# List of paths to ignore when walking through root directory
+ignore_paths:
+  - '/.'
+
+# List of custom classes to register
+extra_item_classes: []
