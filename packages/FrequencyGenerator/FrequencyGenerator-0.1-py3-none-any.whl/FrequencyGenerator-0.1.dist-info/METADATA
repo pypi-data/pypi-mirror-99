@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: FrequencyGenerator
+Version: 0.1
+Summary: A small example package
+Home-page: https://github.com/engineer-ece/DSA
+Author: Gobal Krishnan V
+Author-email: dr.bot.engineer@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/engineer-ece/DSA
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Frequency Generator
+
+[Click here!!!](http://engineer-ece.github.io/Home)
+
+
+
+# in python terminal 
+
+run command code is below: 
+--------------------------
+
+from FrequencyGenerator.FreqGenarator import *
+
+
+
+
