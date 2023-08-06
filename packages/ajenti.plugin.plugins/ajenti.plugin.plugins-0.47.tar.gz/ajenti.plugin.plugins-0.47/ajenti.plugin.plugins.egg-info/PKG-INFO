@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.plugins
+Version: 0.47
+Summary: Plugins
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Plugins plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
