@@ -1,0 +1,3 @@
+[console_scripts]
+mangascraper = mangascraper.__main__:main
+
