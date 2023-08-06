@@ -1,0 +1,5 @@
+[console_scripts]
+wa = wolframalpha:main
+wa-cli = wolframalpha:main
+wolframalpha-cli = wolframalpha:main
+
