@@ -1,0 +1,10 @@
+README.md
+setup.py
+mcuser/__init__.py
+mcuser/get.py
+mcuser/module1.py
+mcuser/module2.py
+mcuser.egg-info/PKG-INFO
+mcuser.egg-info/SOURCES.txt
+mcuser.egg-info/dependency_links.txt
+mcuser.egg-info/top_level.txt
