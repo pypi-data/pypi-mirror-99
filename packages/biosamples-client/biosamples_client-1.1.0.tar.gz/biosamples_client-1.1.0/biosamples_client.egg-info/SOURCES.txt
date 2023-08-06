@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+biosamples_client.egg-info/PKG-INFO
+biosamples_client.egg-info/SOURCES.txt
+biosamples_client.egg-info/dependency_links.txt
+biosamples_client.egg-info/requires.txt
+biosamples_client.egg-info/top_level.txt
