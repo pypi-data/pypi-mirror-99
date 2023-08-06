@@ -1,0 +1,7 @@
+README.md
+setup.py
+pins/__init__.py
+pins.egg-info/PKG-INFO
+pins.egg-info/SOURCES.txt
+pins.egg-info/dependency_links.txt
+pins.egg-info/top_level.txt
