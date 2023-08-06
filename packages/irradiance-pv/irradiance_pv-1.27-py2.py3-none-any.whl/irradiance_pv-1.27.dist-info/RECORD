@@ -1,0 +1,8 @@
+irradiance_pv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+irradiance_pv/example.py,sha256=BlB9E4qKyhtE2tw_pxwYK5aRmiA4MNEUvkZJPwIlwCo,2290
+irradiance_pv/irradiance_pv.py,sha256=T5tKBkjD52yT-3Q3QVevkVYSIBSVrbGZEkMfhl80vQY,9042
+irradiance_pv/spa_sb.py,sha256=UTaH0ssKyn7lu3czSISxZX0nx1Ow5UALlijGGZQNRak,9576
+irradiance_pv-1.27.dist-info/license.txt,sha256=bOPanQ5eeYBNvJtXzJe12FvLHBm9YtSPsJslrCAqH40,1090
+irradiance_pv-1.27.dist-info/WHEEL,sha256=dqElwnlLMc7-lr24lzizalXwnuKWWcPA6D2n0jC3DJ8,87
+irradiance_pv-1.27.dist-info/METADATA,sha256=TNXtCj1hY4hCF70TubqqUHEEgp_plYb-Fx2cmaY4xqs,1558
+irradiance_pv-1.27.dist-info/RECORD,,

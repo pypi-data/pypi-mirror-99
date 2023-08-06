@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: irradiance-pv
+Version: 1.27
+Summary: "Calculate in plane irradiance for a surface"
+Home-page: https://github.com/sbadillo/irradiance-pv
+License: MIT
+Author: -sergiob
+Author-email: sbadilloworks@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Irradiance PV
+
+Irradiance is a simple implementation of solar position and irradiance models to calculate the incident in plane irradiance in PV Modules.
+
+The package works its way from an horizontal global irradince, calculating solar positions, then transforming the components into a 
+Plane-of-Array (POA) Irradiance, necessary for the modeling of photovoltaic energy yields.
+
+
+## Installation
+
+
+```console
+$ pip install irradiance-pv
+```
+
+## files
+
+### irradiance.py
+
+Contains the main classes to create and transform the irradiance components falling into a photovoltaic system, represented by a location and a surface.
+
+### spa_sb.py
+
+Contains an implementation of the solar positions algorithm developped by the Astronomical Applications Department of the US Naval Observatory.
+
