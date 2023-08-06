@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "sway-xkb-switcher"
+version = "0.3.0"
+description = "Keyboard layout switcher for sway windows"
+authors = ["Innokenty Lebedev", "Nikolay Mukhachev", "Peter Mukhachev"]
+maintainers = ["Nikolay Mukhachev"]
+repository = "https://github.com/nmukhachev/sway-xkb-switcher"
+readme = "README.md"
+license = "MIT"
+packages = [
+         { include = "sway_xkb_switcher"},
+         { include = "emacs_sway_xkb"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+i3ipc = "^2.1.1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.750"
+flake8 = "^3.7.9"
+flake8-adjustable-complexity = "^0.0.1"
+flake8-annotations-complexity = "^0.0.2"
+flake8-annotations-coverage = "^0.0.3"
+flake8-variables-names = "^0.0.3"
+flake8-class-attributes-order = "^0.0.7"
+flake8-import-order = "^0.18.1"
+flake8-builtins = "^1.4.1"
+flake8-logging-format = "^0.6.0"
+flake8-bandit = "^2.1.2"
+black = "^19.10b0"
+bump2version = "^0.5.11"
+
+[tool.poetry.scripts]
+sway-xkb-switcher = "sway_xkb_switcher.switcher:main"
+emacs-sway-xkb = "emacs_sway_xkb.emacs_sway_xkb:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
