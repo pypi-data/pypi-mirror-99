@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: speedtest-personal
+Version: 2.0
+Summary: A direct fork of speedtest-cli. Please use the original package as this is just for my personal use.
+Home-page: https://github.com/Aagam41/speedtest
+Author: Aagam Sheth
+Author-email: aagam.h.sheth@icloud.com
+License: MIT
+Download-URL: https://github.com/Aagam41/speedtest/archive/v_01.tar.gz
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# SpeedTest
+## _A direct fork of https://github.com/sivel/speedtest-cli_
+\
+This is a direct fork of https://github.com/sivel/speedtest-cli, Command line interface for testing internet 
+bandwidth using speedtest.net. 
+
+The reason for this duplication is to protect the current state of the source as I don't want anybody to 
+make any further improvements. If you want to use this i recommend https://github.com/sivel/speedtest-cli, 
+the original auther ang give him a star. To install `sivel's` `speedtest-cli` use the below command : 
+
+```
+pip install speedtest-cli
+```
+
+# Credits :
+### Original Author : https://github.com/sivel
+### Git repo : https://github.com/sivel/speedtest-cli
+### Pip site : https://pypi.org/project/speedtest-cli/
+
