@@ -1,0 +1,4 @@
+[pyimporters.plugins]
+csv=pyimporters_plugins.csv:CSVKnowledgeParser
+rdf=pyimporters_plugins.rdf:RDFKnowledgeParser
+
