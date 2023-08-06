@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requeriments.txt
+setup.py
+whatsappy/__init__.py
+whatsappy_py.egg-info/PKG-INFO
+whatsappy_py.egg-info/SOURCES.txt
+whatsappy_py.egg-info/dependency_links.txt
+whatsappy_py.egg-info/requires.txt
+whatsappy_py.egg-info/top_level.txt
