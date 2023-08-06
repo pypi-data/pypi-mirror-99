@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: xterm256-converter
+Version: 0.2.0
+Summary: This util can convert hex color code to nearest xterm 256 color.
+Home-page: UNKNOWN
+Author: averak
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
