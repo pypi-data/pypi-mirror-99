@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+pyfs_message/__init__.py
+pyfs_message/message.py
+pyfs_message.egg-info/PKG-INFO
+pyfs_message.egg-info/SOURCES.txt
+pyfs_message.egg-info/dependency_links.txt
+pyfs_message.egg-info/requires.txt
+pyfs_message.egg-info/top_level.txt
