@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tc-mailmanager
+Version: 1.5.0
+Summary: ToucanToco's cross-python-projects MailManager
+Home-page: https://github.com/toucantoco/tc_mailmanager
+Author: Toucan Toco
+Author-email: dev@toucantoco.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: sendgrid (<6,>=5)
+Requires-Dist: tctc-envelopes (==0.5)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest-pep8 ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+
+# tc_mailmanager
+ToucanToco's cross-python-projects MailManager
+
+## Installation
+
+```bash
+$ pip install tc_mailmanager
+```
+
+
