@@ -1,0 +1,8 @@
+flask
+flask_limiter
+matplotlib
+numpy
+pandas
+setuptools
+tatsu
+wheel
