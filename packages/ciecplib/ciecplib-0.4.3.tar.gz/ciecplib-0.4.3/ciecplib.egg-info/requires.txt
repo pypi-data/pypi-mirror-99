@@ -1,0 +1,19 @@
+M2Crypto
+pyOpenSSL
+requests
+requests-ecp
+
+[docs]
+sphinx
+sphinx-argparse
+sphinx_automodapi
+sphinx_rtd_theme
+sphinx_tabs
+
+[tests]
+pytest>=3.9.0
+pytest-cov
+requests-mock
+
+[tests:python_version < "3.8"]
+importlib-metadata
