@@ -1,0 +1,9 @@
+matplotlibqml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matplotlibqml/demoview.qml,sha256=YEFngptHG7mmbyWQ4f1AfucGIE5qH0Md55QJyLvTTkM,1758
+matplotlibqml/matplotlibqml.py,sha256=gwbXXvRQpQHopZ1BrhwIomXJdeQVeYKgxk2QCHKbeW8,47167
+matplotlibqml/widgetdemo.py,sha256=AlnYnNThspp2fSdfSlGmFXF_4sQ-Gr3e79ubiXwYORQ,2340
+matplotlibqml-0.92.1.dist-info/LICENSE,sha256=1Wb4DuLvQ-GrnSJQIXFVD2WQSFYDV-D85_7tQ0wBwAA,1063
+matplotlibqml-0.92.1.dist-info/METADATA,sha256=boJ_XL0C6fw8wzPeIGzBbPXLJxyWNPW3WLLAQ2iz77Y,1996
+matplotlibqml-0.92.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+matplotlibqml-0.92.1.dist-info/top_level.txt,sha256=12Rgsl8WJOjHJfWZN-LfHJ2cEXzE0rchXAJPHUiuSKA,14
+matplotlibqml-0.92.1.dist-info/RECORD,,
