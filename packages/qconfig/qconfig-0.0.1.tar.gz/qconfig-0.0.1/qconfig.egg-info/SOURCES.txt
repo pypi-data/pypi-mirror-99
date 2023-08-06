@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.py
+qconfig/__init__.py
+qconfig/qconfig.py
+qconfig.egg-info/PKG-INFO
+qconfig.egg-info/SOURCES.txt
+qconfig.egg-info/dependency_links.txt
+qconfig.egg-info/requires.txt
+qconfig.egg-info/top_level.txt
