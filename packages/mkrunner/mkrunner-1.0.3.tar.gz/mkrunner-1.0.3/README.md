@@ -1,0 +1,3 @@
+#基于httprunner封装
+
+集成allure报告，对allure报告进行分类整理，展示历史趋势数据
