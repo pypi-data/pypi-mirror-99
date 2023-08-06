@@ -1,0 +1,14 @@
+barracuda/__init__.py,sha256=V8QX8jSr__d-c1q25VdZsuz1iSqXr6sNYth5kwS26oA,262
+barracuda/activations.py,sha256=TZ2K_YwWSrWz8ybsUeaYh3Xi42IMaOESUjbB017qxMs,675
+barracuda/factory.py,sha256=xtJwCqqjscOLgvWdn5LAfzGJWlRUwvbLRg56LZgOJrg,2123
+barracuda/functions.py,sha256=yMxVvkrNlEBrNyT4Ry4JqsrsdfDq-5G9uq4kRDscIEY,389
+barracuda/losses.py,sha256=EeK2Npr_wZS0_KmBhVEKDnhTvjNhLNXGItZTOPSievY,407
+barracuda/models.py,sha256=klJqKU0V6EiEysv8iSrvPmiwSrvB2i6OV-6zeyxQ7eY,3600
+barracuda/network.py,sha256=gFoemcsmZHs_d6FBMQKzgsZlfMMqw1TIfjlxwBo2YpU,2869
+barracuda/neurons.py,sha256=38CBMfmu2adv7U_IBDHXredivMdj8aSDRCL7Y4hgp78,2187
+barracuda/neurontype.py,sha256=Kn1SZmEji0_j1vC71UPtuTWlPkWEavG8Ukz6S4blbwc,96
+pybarracuda-0.0.5.dist-info/LICENSE,sha256=ZHjLkNl3B5z8HJlMsJtFdRvzfzjOoHl2OX1xDrUnqoU,1072
+pybarracuda-0.0.5.dist-info/METADATA,sha256=rjGGO-pQldBzQtgAjTN2d4gc4LNLslXjnFNIsJi9vUs,742
+pybarracuda-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pybarracuda-0.0.5.dist-info/top_level.txt,sha256=TREt5hJxayBBw0AeE8zA8D1-xkI2-OSQGCN60XJCZYA,10
+pybarracuda-0.0.5.dist-info/RECORD,,
