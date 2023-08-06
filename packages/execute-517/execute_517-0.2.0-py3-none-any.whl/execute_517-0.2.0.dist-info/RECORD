@@ -1,0 +1,11 @@
+execute_517/__init__.py,sha256=BPROUiJMqBClexVpBsu5Mz__bQMd-m1CMI768RHzXeU,102
+execute_517/__main__.py,sha256=jy4Vvcq1LriiWhjxZL8Y4cdWGMofRg5xulEJP_p0bD0,1219
+execute_517/run.py,sha256=QPqoF_y7fagezlb4WOe6Ysf6SP1gtP-TSUUpFi2Z5uQ,2246
+execute_517/version.py,sha256=5cReA7H0cQ9R7WcaLMBn4i66Spsun7KssllyejxBfqQ,345
+execute_517/tests/__init__.py,sha256=W9JYSayCPwoTmtRpjYCkKnnbPQqpf26ANqXe52YASmk,44
+execute_517-0.2.0.dist-info/LICENSE.rst,sha256=2o-xfASR-1jvFqNtbTcNoS8693pfLxF4r5UB-R689v4,1486
+execute_517-0.2.0.dist-info/METADATA,sha256=p0Q3s_GEy8EWUsSVYDI5w5BYOft8CbumOGijFQqrrNc,1493
+execute_517-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+execute_517-0.2.0.dist-info/entry_points.txt,sha256=J47rgPXrICXcDHeiC-spbMXAhkgv1ekD6cjIFUiIrSc,65
+execute_517-0.2.0.dist-info/top_level.txt,sha256=SOjoBBy1QoYo13wdO1iolcHwDYlzkfB7fWUN3PWeVDE,12
+execute_517-0.2.0.dist-info/RECORD,,
