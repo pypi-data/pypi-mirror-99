@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: codex-engine-pyqt
+Version: 0.0.7
+Summary: A universal translator for serial devices.
+Home-page: https://github.com/Codex-Engine/codex-engine-pyqt
+Author: David Kincaid
+Author-email: dlkincaid0@gmail.com
+License: UNKNOWN
+Description: # Codex Engine for PyQt
+        
+        A universal translator for serial devices.
+        
+        # Description
+        
+        This is the reference implementation of Codex, a framework for managing serial communication with physical devices. 
+        
+        # Features
+        - serial port detection
+        - automatic handshaking
+        - device profiles as drop-in plugins
+        - supports many styles of serial communication
+        - extensible
+        
+        ## Requirements
+        - pyserial
+        - PyQt5 or PySide2
+        
+Keywords: codex,codex engine,serial
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
