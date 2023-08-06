@@ -1,0 +1,3 @@
+[console_scripts]
+vc2-make-quantisation-matrix = vc2_quantisation_matrices.cli_tool:main
+
