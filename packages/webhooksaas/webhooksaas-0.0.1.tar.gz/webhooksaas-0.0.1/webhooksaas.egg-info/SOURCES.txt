@@ -1,0 +1,8 @@
+README.md
+setup.py
+webhooksaas/__init__.py
+webhooksaas.egg-info/PKG-INFO
+webhooksaas.egg-info/SOURCES.txt
+webhooksaas.egg-info/dependency_links.txt
+webhooksaas.egg-info/top_level.txt
+webhooksaas/send_webhook/__init__.py

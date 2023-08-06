@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: webhooksaas
+Version: 0.0.1
+Summary: WebhooksaaS Python package
+Home-page: UNKNOWN
+Author: WebhooksaaS
+Author-email: usewebhooksaas@gmail.com
+License: UNKNOWN
+Description: Python package to interact with the WebhooksaaS API.
+Keywords: python,webhooksaas,webhooks,api
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
