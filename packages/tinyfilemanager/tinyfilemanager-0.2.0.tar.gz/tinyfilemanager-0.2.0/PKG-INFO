@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tinyfilemanager
+Version: 0.2.0
+Summary: Python Client / SDK for tinyfilemanager
+Keywords: tinyfilemanager
+Author: hexatester
+Author-email: hexatester@protonmail.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# tinyfilemanager
+
+[![tinyfilemanager - PyPi](https://img.shields.io/pypi/v/tinyfilemanager)](https://pypi.org/project/tinyfilemanager/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/tinyfilemanager)](https://pypi.org/project/tinyfilemanager/)
+[![LICENSE](https://img.shields.io/github/license/pentatester/tinyfilemanager)](https://github.com/pentatester/tinyfilemanager/blob/main/LICENSE)
+
+Python Client / SDK for tinyfilemanager
+
