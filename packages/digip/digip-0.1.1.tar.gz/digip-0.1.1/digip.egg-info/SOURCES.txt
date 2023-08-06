@@ -1,0 +1,10 @@
+README.md
+setup.py
+digip/__init__.py
+digip/cie_1931_standard_colorimetric_observer.py
+digip/digip.py
+digip/srgb_gamut.py
+digip.egg-info/PKG-INFO
+digip.egg-info/SOURCES.txt
+digip.egg-info/dependency_links.txt
+digip.egg-info/top_level.txt
