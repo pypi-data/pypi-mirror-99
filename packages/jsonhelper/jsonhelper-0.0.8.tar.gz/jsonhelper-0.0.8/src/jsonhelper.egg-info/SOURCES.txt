@@ -1,0 +1,9 @@
+MANIFEST.in
+README
+setup.cfg
+setup.py
+src/jsonhelper/__init__.py
+src/jsonhelper.egg-info/PKG-INFO
+src/jsonhelper.egg-info/SOURCES.txt
+src/jsonhelper.egg-info/dependency_links.txt
+src/jsonhelper.egg-info/top_level.txt
