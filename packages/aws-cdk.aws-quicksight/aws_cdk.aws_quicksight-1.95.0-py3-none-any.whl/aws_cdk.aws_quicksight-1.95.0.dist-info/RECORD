@@ -1,0 +1,10 @@
+aws_cdk/aws_quicksight/__init__.py,sha256=FV3nvcZ2fJtkrUgJTNmqeIIm0dXOH-gh-xyDHwzBIqk,190713
+aws_cdk/aws_quicksight/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_quicksight/_jsii/__init__.py,sha256=bUBvhHjVa8kmpabOljEJ30Wh8fZJla-zvavLTTu2ois,366
+aws_cdk/aws_quicksight/_jsii/aws-quicksight@1.95.0.jsii.tgz,sha256=sMum5pU-PkuEeXUfOf6aB0e0G5jUeIEKNWld16ow88A,71459
+aws_cdk.aws_quicksight-1.95.0.dist-info/LICENSE,sha256=PPdRlpoLCV1CRrCV1eKpp3m0lNjchFAP4a9zfc8tRLo,11391
+aws_cdk.aws_quicksight-1.95.0.dist-info/METADATA,sha256=6FHzdXeiq_aygEh7HYmqhkUDBo1_0V_LLztlsQnw66s,1668
+aws_cdk.aws_quicksight-1.95.0.dist-info/NOTICE,sha256=xo56krus2e5ShfXqz_B7vuvGcMn_D0F7TjjpfTz8YMw,113
+aws_cdk.aws_quicksight-1.95.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_cdk.aws_quicksight-1.95.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_quicksight-1.95.0.dist-info/RECORD,,
