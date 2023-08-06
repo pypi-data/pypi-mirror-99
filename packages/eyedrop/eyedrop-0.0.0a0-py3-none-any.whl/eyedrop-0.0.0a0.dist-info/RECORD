@@ -1,0 +1,11 @@
+eyedrop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eyedrop/docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eyedrop/src/__init__.py,sha256=D_DFQxIOK4-PvQwUAueVIl0AuTmzrtXd7H6z_1mGpJE,56
+eyedrop/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eyedrop/test/unit_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eyedrop/test/unit_test/test_everything.py,sha256=Bi4JDCTIPSCc56KEqph4dNsKFErPEfO9TrpPKTjE8lI,109
+eyedrop-0.0.0a0.dist-info/LICENSE,sha256=0NjorCHTPeS8p-I4ofxbCDUyG0VWh4tB2G3ljfMBLx4,1062
+eyedrop-0.0.0a0.dist-info/METADATA,sha256=7JdzCFjMTs2Fj8b5xVBExBL7Fe_JjoUZ5wK2Do1X5Js,1686
+eyedrop-0.0.0a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+eyedrop-0.0.0a0.dist-info/top_level.txt,sha256=NeaC4V7WOvYPOXLQvj9sDFG4L_cDrD13C_xfeoRfw_w,8
+eyedrop-0.0.0a0.dist-info/RECORD,,
