@@ -1,0 +1,13 @@
+korean_school/__init__.py,sha256=qLlIvjvmZwxVUFj7gr6dcVpuvMLH3sSINkCu-Ck9E6Q,1418
+korean_school/client.py,sha256=UgLl-jCJUP-OkqHEujOtPVs_Y3RmVEk-l4p3R59_O4o,4373
+korean_school/exception.py,sha256=HmlkXx9EeVKt0Gvpnms4_3GXtWtWM05DUDKDZJ_438g,2312
+korean_school/location.py,sha256=HNN0bDE3TUu-H_Qr_1NtXbAvSDy7veh05WMWhHp3wSI,3555
+korean_school/model.py,sha256=XQxlS9TYwtRT3alDeKBYZSh8jDPg4FMXCA9yjvydBPs,14197
+korean_school/request.py,sha256=EnrJI1cGT07xALVH8udzTS8tDrgDpvaZtBQB_4MubTw,4883
+korean_school/school.py,sha256=IcWNGcNT_Ic_6hmnFMhX7c1nPgdLURFaltmwCbWjNe4,16584
+korean_school/schooltype.py,sha256=o5gN-_EVYBf2eNHDAoKDoG4uwMciy03KvgScPDwrt8s,1581
+korean_school-1.0.dist-info/LICENSE,sha256=QFYmID039nY2kArGDfen4CuQDYIoUkgR2D2_O_kWY3A,1087
+korean_school-1.0.dist-info/METADATA,sha256=VCG3UP5ObNG4UK7hVXGsOoJbqv9td9iTtQLBHsW3FmA,3561
+korean_school-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+korean_school-1.0.dist-info/top_level.txt,sha256=yinVoRysK9jMwLWbF9xXauTlLsrd7Pi-CAZz_Um3XMQ,14
+korean_school-1.0.dist-info/RECORD,,
