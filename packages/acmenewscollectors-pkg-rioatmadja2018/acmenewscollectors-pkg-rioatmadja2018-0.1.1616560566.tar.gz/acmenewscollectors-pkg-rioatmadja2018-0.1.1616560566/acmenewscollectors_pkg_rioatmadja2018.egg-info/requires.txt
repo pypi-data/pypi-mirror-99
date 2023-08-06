@@ -1,0 +1,8 @@
+pandas
+numpy
+bs4
+joblib
+selenium
+pytest
+pymysql
+requests
