@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+biolinkml = ">=1.7.6"
+requests = "*"
+rdflib = ">=5.0.0"
+
+[dev-packages]
+rdflib-jsonld = ">=0.5.0"
+
+[requires]
+python_version = "3.8"
