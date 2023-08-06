@@ -1,0 +1,7 @@
+dask
+fastapi
+msgpack
+pydantic
+toolz
+typer
+uvicorn
