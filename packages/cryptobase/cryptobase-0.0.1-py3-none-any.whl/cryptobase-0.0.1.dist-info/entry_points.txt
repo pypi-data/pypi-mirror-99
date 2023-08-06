@@ -1,0 +1,3 @@
+[console_scripts]
+encrypt = firebase_encrypt.__main__:main
+

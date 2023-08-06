@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cryptobase
+Version: 0.0.1
+Summary: An implentation of Distributed Public Key using Firebase.
+Home-page: UNKNOWN
+Author: Rehan Guha
+Author-email: rehanguha29@gmail.com
+License: gpl-3.0
+Keywords: firebase,encryption
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: rsa
+Requires-Dist: Pyrebase4
+
+# FileEncrypter
+
+
