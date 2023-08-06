@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+peewee_ext/__init__.py
+peewee_ext/database.py
+peewee_ext/decorator.py
+peewee_ext/logger.py
+peewee_ext/model.py
+peewee_ext/version.py
+peewee_ext.egg-info/PKG-INFO
+peewee_ext.egg-info/SOURCES.txt
+peewee_ext.egg-info/dependency_links.txt
+peewee_ext.egg-info/requires.txt
+peewee_ext.egg-info/top_level.txt
+peewee_ext.egg-info/zip-safe
