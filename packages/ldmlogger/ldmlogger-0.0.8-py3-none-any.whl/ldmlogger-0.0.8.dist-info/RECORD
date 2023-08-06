@@ -1,0 +1,7 @@
+logger/LDMLogger.py,sha256=biJxnYsnD85k9Byp-m_0Dhuc_wM-0eTZ-EhV72ZxwU8,14061
+logger/__init__.py,sha256=xt7XadGm3-fI1819MLin0pW3jAwCd_4iHEJYCROgmJI,32
+ldmlogger-0.0.8.dist-info/LICENSE.txt,sha256=EIQk7YqhslqP5qjC2wy1Is7hmn4pp5Tl_uhUpSgbnPw,1060
+ldmlogger-0.0.8.dist-info/METADATA,sha256=cy_MCf0PBVkJ-3ONSo1K5wK5_6mBYLd36VsvMCWuXlk,2309
+ldmlogger-0.0.8.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+ldmlogger-0.0.8.dist-info/top_level.txt,sha256=4a72cfKcY8dIFCuJ02V62KKPPO_91UXAjcL0R5qkrHs,7
+ldmlogger-0.0.8.dist-info/RECORD,,
