@@ -1,0 +1,8 @@
+xialib_firestore/__init__.py,sha256=2VQiKHDU4X5G_cnAEQ4Xu1-kfDt8KhH73ZOOB1M2THc,218
+xialib_firestore/firestore_controller.py,sha256=aRj43NCOli-zOB_XC_tTAX04U_ukwgJTlIZ4YV0AFcY,6981
+xialib_firestore/firestore_depositor.py,sha256=SVVoFYWlqSWSC_jp_P1pgWHne_r3HB8aZzo4VBhjpfM,6941
+xialib_firestore-0.1.4.dist-info/LICENSE,sha256=2TxD2kvyzwXnWMY5ZsRTRaeR2p2usvR10NgKSOZ7MRs,34522
+xialib_firestore-0.1.4.dist-info/METADATA,sha256=sYZzx4u8JAhfVf7FbEg30w7gMBb9pjrxLz8M_Dnx6hk,1327
+xialib_firestore-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xialib_firestore-0.1.4.dist-info/top_level.txt,sha256=ep3FLhLz3EgTVTSSmUNoobSP1Vv8unsaWWz1st8PgTI,17
+xialib_firestore-0.1.4.dist-info/RECORD,,
