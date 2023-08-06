@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: errandpy
+Version: 0.4.4
+Summary: an automatical tool for extracting short-range force in NC-AFM data
+Home-page: UNKNOWN
+Author: ZHUO DIAO
+Author-email: enzian0515@gmail.com
+License: MIT
+Description: Errandpy 
+        ===================================
+        
+        an automatical tool for extracting short-range force in NC-AFM data
+        
+        Installation
+        -------
+        
+        this package runs in the environment of python 3.6:
+        
+        * `pip install errandpy`                              
+        
+        
+        Basic Usage
+        -------------
+        * first, let's run the test script, an example forcecurve is included in this package, 
+        see `errandpy.test.py`  
+        
+        ```python
+        
+            import errandpy.test as test
+            test.test_fitting()
+        ```
+        
+        * the most easy way to use this tool is call the function in handy.py, 
+        see `errandpy.handy.py`
+        
+        ```python
+        
+            import errandpy
+            z0, param = errandpy.tell_me_z0(x, y)  # your force curve
+        
+        ```
+        
+        * then, errandpy bring a z0 value to you, you can use this z0 value to fitting curve.
+        This tool use GSM to fitting. If you want to use it,
+        
+        ```python
+        
+            import errandpy
+            result_dictionary = errandpy.extract_short_range(x, y, z0)
+        
+        ```
+        
+        * fitting result of a, b, c, d and z0, ze are include in the result_dictionary.
+        
+        Citation
+        -------------
+        
+        We will be we will be appreciated if you can cite our work!
+        
+        Z. DIAO, D. Katsube, H. Yamashita, Y. Sugimoto, O. Custance, M. Abe, Appl. Phys. Lett. **117**, 033104 (2020); [https://doi.org/10.1063/5.0007754](https://doi.org/10.1063/5.0007754)
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

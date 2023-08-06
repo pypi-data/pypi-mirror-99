@@ -1,0 +1,16 @@
+MANIFEST.in
+README.MD
+setup.py
+errandpy/__init__.py
+errandpy/_global.py
+errandpy/agent.py
+errandpy/forcecurve.csv
+errandpy/handy.py
+errandpy/test.py
+errandpy/trainer.py
+errandpy/utility.py
+errandpy.egg-info/PKG-INFO
+errandpy.egg-info/SOURCES.txt
+errandpy.egg-info/dependency_links.txt
+errandpy.egg-info/requires.txt
+errandpy.egg-info/top_level.txt
