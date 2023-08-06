@@ -1,0 +1,10 @@
+README.md
+setup.py
+etext/__init__.py
+etext/etext.py
+etext/exceptions.py
+etext/providers.py
+etext.egg-info/PKG-INFO
+etext.egg-info/SOURCES.txt
+etext.egg-info/dependency_links.txt
+etext.egg-info/top_level.txt
