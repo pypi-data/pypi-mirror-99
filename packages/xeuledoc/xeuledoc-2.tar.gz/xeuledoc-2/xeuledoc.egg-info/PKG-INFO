@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: xeuledoc
+Version: 2
+Summary: Fetch information about a public Google document.
+Home-page: https://github.com/Malfrats/xeuledoc
+Author: Malfrats
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
