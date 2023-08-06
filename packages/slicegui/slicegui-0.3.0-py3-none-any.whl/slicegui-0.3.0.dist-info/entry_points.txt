@@ -1,0 +1,3 @@
+[console_scripts]
+slicegui = slice.__main__:main
+
