@@ -1,0 +1,207 @@
+{% extends "./base.html" %} {% load i18n %} {% load tz %}
+
+{% block "title" %}
+<title>{% trans "Transaction More Info" %}</title>
+{% endblock %}
+
+{% block "content" %}
+<section class="section receipt">
+    {% if instructions is not none %}
+    {# instructions came from Polaris' instructions_for_pending_deposit() #}
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "instructions" %}
+        </div>
+        <div class="field-value">
+            {{ instructions|safe }}
+        </div>
+    </div>
+    {% endif %}
+
+    {# Instructions, if present, came from the anchor's more_info extension #}
+    {# Note that the anchor's block must detect if instructions are necessary #}
+    {# The anchor must determine the appropriate instructions (or none) from their own context #}
+
+    {% block "instructions" %}
+    {% endblock %}
+
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "kind" %}
+        </div>
+        <div class="field-value">
+            {% if transaction.kind == "deposit" %}
+                {% trans "deposit" %}
+            {% else %}
+                {% trans "withdrawal" %}
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "ID" %}
+        </div>
+        <div class="field-value">
+            {{ transaction.id }}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% if transaction.status == "incomplete" or transaction.status == "pending_user_transfer_start" %}
+              {% trans "amount to be received" %}
+            {% else %}
+              {% trans "amount received" %}
+            {% endif %}
+        </div>
+        <div class="field-value">
+            {{ amount_in }}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "fee" %}
+        </div>
+        <div class="field-value">
+            {{ amount_fee }}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% if transaction.kind == "deposit" %}
+                {% trans "amount deposited" %}
+            {% else %}
+                {% trans "amount withdrawn" %}
+            {% endif %}
+        </div>
+        <div class="field-value">
+            {{ amount_out }}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "status" %}
+        </div>
+        <div class="field-value">
+            {{ transaction.message }}
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-label">
+            {% trans "start" %}
+        </div>
+        <div class="field-value">
+            {{ transaction.started_at|localtime }}
+        </div>
+    </div>
+
+    {% if transaction.status == "completed" %}
+        <div class="info-item">
+            <div class="info-label">
+                {% trans "completed" %}
+            </div>
+            <div class="field-value">
+                {{ transaction.completed_at|localtime }}
+            </div>
+        </div>
+    {% endif %}
+
+    <script type="text/javascript">
+        let txJSON = JSON.parse('{{ tx_json|safe }}');
+
+        let onChangeCallback = '{{ transaction.on_change_callback }}';
+        if (onChangeCallback === 'None')
+            onChangeCallback = '';
+        let url = new URL(window.location);
+        let currentStatus = '{{ transaction.status }}';
+        let isInitialLoad = url.searchParams.get('initialLoad');
+        let lastStatusChange = url.searchParams.get('lastStatusChange');
+        if (isInitialLoad || (lastStatusChange && lastStatusChange !== currentStatus)) {
+            if (onChangeCallback.toLowerCase() === 'postmessage') {
+                postMessageCallback({ onChange: true });
+            } else if (onChangeCallback && isInitialLoad) {
+                urlCallback({ onChange: true });
+            }
+        } else {
+            updateURLForOnChangeStatus();
+        }
+
+        let callback = '{{ callback|safe }}';
+        if (callback.toLowerCase() === 'postmessage') {
+            postMessageCallback({ onChange: false });
+        } else if (callback) {
+            urlCallback({ onChange: false });
+        }
+
+        // Callback function to post the serialized transaction to the wallet.
+        function postMessageCallback({ onChange }) {
+            let targetWindow;
+
+            if (window.opener != void 0) {
+                targetWindow = window.opener;
+            } else if (window.parent != void 0) {
+                targetWindow = window.parent;
+            } else {
+                return;
+            }
+
+            targetWindow.postMessage(txJSON, "*");
+            if (onChange) {
+                updateURLForOnChangeStatus();
+            } else {
+                updateURLWithCallbackSuccess();
+            }
+        }
+
+        // Callback function to post the serialized transaction to the callback URL
+        function urlCallback({ onChange }) {
+            let url = onChange ? onChangeCallback : callback;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(txJSON)
+            }).catch((e) => {
+                console.error(`POST request to ${url} failed.`, e);
+            }).then((response) => {
+                if (!response.ok) {
+                    console.error(`POST request to ${url} failed.`, response);
+                    return;
+                }
+                if (onChange) {
+                    updateURLForOnChangeStatus();
+                } else {
+                    updateURLWithCallbackSuccess();
+                }
+            });
+        }
+
+        function updateURLWithCallbackSuccess() {
+            let url = new URL(window.location);
+            url.searchParams.set("callback", "success");
+            if (isInitialLoad) {
+                url.searchParams.delete("initialLoad");
+            }
+            window.history.replaceState({}, '', url);
+        }
+
+        function updateURLForOnChangeStatus() {
+            let url = new URL(window.location);
+            if (isInitialLoad) {
+                url.searchParams.delete("initialLoad");
+                window.history.replaceState({}, '', url);
+            }
+            if (onChangeCallback.toLowerCase() === 'postmessage') {
+                url.searchParams.set("lastStatusChange", currentStatus);
+                window.history.replaceState({}, '', url);
+            }
+        }
+    </script>
+</section>
+{% endblock %}
