@@ -1,0 +1,3 @@
+[console_scripts]
+ardicsrtcollector = ardicsrtcollector:get_all_srt_mp3_files
+
