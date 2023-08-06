@@ -1,0 +1,8 @@
+bkmeans/__init__.py,sha256=D5H4g2ahhxYgF5whRHUtKD9VSSCpVzwhWbfbitcpEhE,29
+bkmeans/bkm_compact.py,sha256=VEtAr9_iF0TIisfwWwofYEkChiELc7j3PKR-8EVVHKA,4245
+bkmeans/bkmeans.py,sha256=pxcjZ5fO8ZTOsDAR5kxne9LJTwR2kio9ols-8NFqujQ,4875
+bkmeans-1.0.dist-info/LICENSE,sha256=HvmxMPG581O94Uq71pVWKdae-XQ4Pvh_8EZv1Xfg5Eo,1058
+bkmeans-1.0.dist-info/METADATA,sha256=QZMQKl8e7h_XvkCQvLl4lSSNFedNvi5r4YvvKnHqaTE,3548
+bkmeans-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bkmeans-1.0.dist-info/top_level.txt,sha256=eb5L0ArdYjIDNXFIG1dXsOl2WkAfzsqmQXdCTVB2Yok,8
+bkmeans-1.0.dist-info/RECORD,,
