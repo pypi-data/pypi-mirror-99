@@ -1,0 +1,11 @@
+numpy
+pandas
+spatialmath-python
+scipy
+matplotlib
+configparser
+cnspy_numpy_utils
+cnspy_trajectory
+cnspy_timestamp_association
+cnspy_spatial_csv_formats
+cnspy_csv2dataframe
