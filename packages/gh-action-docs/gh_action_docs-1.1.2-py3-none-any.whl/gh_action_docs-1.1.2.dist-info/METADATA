@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gh-action-docs
+Version: 1.1.2
+Summary: Generate markdown documentation for a Github Action
+Home-page: https://github.com/david-kirby/gh-action-docs
+License: MIT
+Author: david-kirby
+Author-email: 57732284+david-kirby@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Project-URL: Repository, https://github.com/david-kirby/gh-action-docs
