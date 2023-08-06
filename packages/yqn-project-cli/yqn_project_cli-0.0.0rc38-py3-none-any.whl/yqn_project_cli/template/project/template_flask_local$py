@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+# Author: ZKH
+# Date：2021/2/24
+import argparse
+from flask_cors import CORS
+from flask_compress import Compress
+from flask_restx.api import Api
+from config import (
+    ProjectConfig,
+    ApolloClientConfig,
+    MySQLConfig,
+    ODPSConfig,
+    local_conf_loader,
+)
+from config.app import Config
+from yqn_project_cli.utils.core.as_flask import (
+    DAFlask,
+    Plugin,
+    PluginTail,
+    Server,
+    JSONResponse
+)
+from yqn_project_cli.utils import host_ip
+from yqn_project_cli.utils.app import (
+    flask_restx_tail,
+    general_error_handler,
+)
+from yqn_project_cli.rpc.apollo.apollo_config import ApolloConfig
+from yqn_project_cli.rpc.mysql_ import MySQLClient
+from yqn_project_cli.rpc.odps_ import ODPSClient
+
+app = DAFlask(__name__,
+              project_config=ProjectConfig,
+              config_object=Config)
+
+# plugins
+app.register_plugins(
+    Plugin('flask_cors', CORS),
+    Plugin('flask_compress', Compress),
+    Plugin('flask_restx', Api, title=ProjectConfig.name, doc='/doc.html'),
+)
+
+# extra certain tail works from plugins to add by plugin's registered name
+app.register_plugin_tails(
+    PluginTail('flask_restx', flask_restx_tail),
+)
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='manual to this script')
+    parser.add_argument('--apollo_meta', type=str, default=ApolloClientConfig.apollo_meta_server_url)
+    parser.add_argument('--apollo_cluster', type=str, default=ApolloClientConfig.apollo_cluster)
+    parser.add_argument('--app_id', type=int, default=ApolloClientConfig.apollo_app_id)
+    parser.add_argument('--app_name', type=str, default=ApolloClientConfig.apollo_app_name)
+    parser.add_argument('--env', type=str, default=ApolloClientConfig.apollo_env)
+    user_args = parser.parse_args()
+
+
+    class ApolloClientConfig:
+        apollo_meta_server_url = local_conf_loader('APOLLO_META_SERVER_URL', user_args.apollo_meta)
+        apollo_cluster = local_conf_loader('APOLLO_CLUSTER', user_args.apollo_cluster)
+        apollo_app_id = int(local_conf_loader('APOLLO_APP_ID', user_args.app_id))
+        apollo_app_name = local_conf_loader('APOLLO_APP_NAME', user_args.app_name)
+        apollo_env = local_conf_loader('APOLLO_ENV', user_args.env)
+
+# register services such as apollo, mysql ...
+app.register_services(
+    Server('apollo', ApolloConfig, client_config=ApolloClientConfig, as_server_manager=True),
+    Server('mysql', MySQLClient, client_config=MySQLConfig, use_conf_management=True),
+    Server('odps', ODPSClient, client_config=ODPSConfig, use_conf_management=True),
+)
+
+# before_first_request(), before_request(), after_request(response), teardown_request(error)
+app.register_request_hooks(
+    # ('teardown_request', lambda e: None),
+)
+
+# register exception handlers
+app.register_error_handlers(
+    (Exception, general_error_handler),
+)
+
+if __name__ == '__main__':
+    app.run(host=host_ip(), port=ProjectConfig.id, debug=True, use_reloader=False)
