@@ -1,0 +1,3 @@
+[console_scripts]
+precision-recall-gain = precision_recall_gain.cli:main
+
