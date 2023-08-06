@@ -1,0 +1,20 @@
+dacite
+httpx
+
+[dev]
+pre-commit
+
+[docs]
+m2r2
+pydata_sphinx_theme
+sphinx
+
+[test]
+pytest
+pytest-asyncio
+pytest-cov
+pytest-httpx
+pytest-mock
+
+[test:python_version < "3.8"]
+asynctest
