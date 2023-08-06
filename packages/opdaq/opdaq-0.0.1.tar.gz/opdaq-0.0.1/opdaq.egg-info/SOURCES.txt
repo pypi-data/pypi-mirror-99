@@ -1,0 +1,6 @@
+README.md
+setup.py
+opdaq.egg-info/PKG-INFO
+opdaq.egg-info/SOURCES.txt
+opdaq.egg-info/dependency_links.txt
+opdaq.egg-info/top_level.txt
