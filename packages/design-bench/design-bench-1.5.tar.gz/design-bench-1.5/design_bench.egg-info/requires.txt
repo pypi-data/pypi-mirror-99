@@ -1,0 +1,11 @@
+numpy
+pandas
+requests
+scikit-learn
+tape_proteins
+keras
+tensorflow>=2.2
+
+[all]
+gym[mujoco]
+morphing-agents
