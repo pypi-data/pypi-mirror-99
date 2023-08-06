@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/bakura_pkg/__init__.py
+src/bakura_pkg/audio/__init__.py
+src/bakura_pkg/audio/wiring.py
+src/bakura_pkg/resources/__init__.py
+src/bakura_pkg_topsyi.egg-info/PKG-INFO
+src/bakura_pkg_topsyi.egg-info/SOURCES.txt
+src/bakura_pkg_topsyi.egg-info/dependency_links.txt
+src/bakura_pkg_topsyi.egg-info/top_level.txt
