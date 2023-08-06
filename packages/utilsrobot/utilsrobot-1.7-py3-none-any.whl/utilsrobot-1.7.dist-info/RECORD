@@ -1,0 +1,14 @@
+bot/__init__.py,sha256=JXRsrdSUsGjzbQyFzD4ZSvAlTvg0kJYL13BzRMV1Wyw,141
+bot/callbacks.py,sha256=s8N5jzPOQYlI39XKnbXoXOvLiGTFgOnUZvhKS6l2CFU,1283
+bot/config.py,sha256=W_yb5Y3UkgPW1dMjKCouMsx3VT29MycltngylC13PDQ,230
+bot/helptexts.py,sha256=vq8UTnM4YRA6lO-D5_ZgkhwJQhFwP6px-8rKfK_h3iE,3276
+bot/utilsbot.py,sha256=XUE7QuS20qh7oGmjWmU77TwsD8rew-ez0j7Lqxnu5Ec,7083
+bot/sql/__init__.py,sha256=oNQhL9AqrdSTP6YKebt39EXvKUDBCIs-S-pWWnoMKCk,722
+bot/sql/filtersql.py,sha256=TIJOG7WGdFUBvztsRd3kRKFte8eTRGVu6_tu-250T4E,2404
+bot/sql/notessql.py,sha256=jcCbXPZfyAhcLEm0YW90tA3Okw4Wes4UfPAp1tNl_78,2372
+bot/sql/welcomesql.py,sha256=BNHPmIXGUU_8a5wGgF6cVO7IZLlJP-AuwNdstHfsZtY,1807
+utilsrobot-1.7.dist-info/LICENSE,sha256=WGf1vqWoj19cREtwKL-v4wYxYMiXugIJgzla-dH3v5k,34523
+utilsrobot-1.7.dist-info/METADATA,sha256=Su_OFvyAcXNcsViHBCsv-5GjJR7hA04By-h163lef_Y,714
+utilsrobot-1.7.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+utilsrobot-1.7.dist-info/top_level.txt,sha256=BfGEUPXgtCpne5POfPQ8gBzacfrzBulmV45hd8vheOI,4
+utilsrobot-1.7.dist-info/RECORD,,
