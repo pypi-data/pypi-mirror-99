@@ -1,0 +1,3 @@
+[console_scripts]
+b2filt = b2filt:main
+

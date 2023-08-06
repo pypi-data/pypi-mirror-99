@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: b2filt
+Version: 0.1.1
+Summary: "Filter for output of B2 build tool from boost.org"
+Home-page: https://github.com/pypa/b2filt
+Author: "Hans Dembinski"
+Author-email: hans.dembinski@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/hdembinski/b2filt/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Boost Software License 1.0 (BSL-1.0)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# b2filt
+
+Filter for output of B2 build tool from boost.org.
+
+
