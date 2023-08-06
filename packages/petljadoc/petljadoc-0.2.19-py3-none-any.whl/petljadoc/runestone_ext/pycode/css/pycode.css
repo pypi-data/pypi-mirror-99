@@ -1,0 +1,154 @@
+.simanim{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.control-button-div {
+    max-width: 50%;
+    float: left;
+    border: 1px solid lightgray;
+    padding: 6px 10px;
+    height: 50px;
+}
+
+.control-btn {
+    border: none;
+    margin: 4px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 2px;
+    width: 100px;
+}
+
+.control-btn:disabled{
+    opacity: 0.7;
+}
+
+.sim-controls{
+    height: 50px;
+}
+
+.sim-modal-canvas{
+    width: min-content;
+    margin: auto;
+}
+
+.control-btn:hover:enabled {
+    background-color: rgb(140, 140, 140);
+}
+.modal-sim{
+    margin: auto;
+    width: min-content;
+}
+
+.modal-content-sim{
+    padding: 10px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    width: max-content;
+    min-width: 560px;
+}
+
+.sim-modal-variables {
+    float: right;
+    height: 50px;
+    border: 1px solid lightgray;
+    padding: 8px 10px;
+    margin-left: 20px;
+}
+
+.variable-label {
+    margin-left: 10px;
+}
+
+.variable-input {
+    width: 70px;
+    margin-left: 5px;
+}
+
+.variable-input::-webkit-inner-spin-button, 
+.variable-input::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+.sim-canvas {
+    border: 1px solid lightgray;
+    margin-top: 10px;
+}
+
+.modal-lg {
+    max-width: 80%;
+}
+
+.editor{
+    width:500px;
+    height: auto;
+}
+
+.btn-py{
+    margin:auto;
+    display: flex;
+    width: max-content;
+}
+.control-py{
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.out{
+    border: 1px solid #18bc9c;
+    margin-bottom: 15px;
+}
+
+.err{
+    border: 1px solid red;
+}
+.modal {
+    position: fixed !important; 
+    top: 0 !important;
+    left: 0!important;
+    z-index: 1050!important;
+    display: none!important;
+    width: 100%!important;
+    height: 100%!important;
+    overflow: hidden!important;
+    outline: 0!important;
+  }
+  .modal.fade .modal-dialog {
+    transition:-webkit-transform .3s ease-out!important;
+    transition:transform .3s ease-out!important;
+    transition:transform .3s ease-out,-webkit-transform .3s ease-out!important;
+    -webkit-transform:translate(0,-25%)!important;
+    transform:translate(0,-25%)!important
+   }
+   .modal.show .modal-dialog {
+    -webkit-transform:translate(0,0)!important;
+    transform:translate(0,0)!important
+   }
+   .modal-dialog-centered {
+    display:-webkit-box!important;
+    display:-ms-flexbox!important;
+    display:flex!important;
+    -webkit-box-align:center!important;
+    -ms-flex-align:center!important;
+    align-items:center!important;
+    min-height:calc(100% - (.5rem * 2))!important;
+   }
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
