@@ -1,0 +1,7 @@
+numpy>=1.19
+pybind11>=2.2
+
+[dev]
+pytest>=3.7
+numpy>=1.19
+flake8==3.8.4
