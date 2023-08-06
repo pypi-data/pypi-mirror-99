@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pyoppversion
+Version: 1.0.0
+Summary: Get the latest Open Peer Power version from various sources.
+Home-page: https://github.com/pcaston/pyoppversion
+Author: Paul Caston
+Author-email: paul@caston.id.au
+License: MIT license
+Keywords: openpeerpower,version,update
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (<4.0,>=3.6.1)
+Requires-Dist: async-timeout (<=3.0.1)
+Requires-Dist: awesomeversion (>=20.12.4)
+
+# pyoppversion
+[![codecov](https://codecov.io/gh/pcaston/pyoppversion/branch/main/graph/badge.svg)](https://codecov.io/gh/pcaston/pyoppversion)
+![python version](https://img.shields.io/badge/Python-3.8=><=3.10-blue.svg)
+[![PyPI](https://img.shields.io/pypi/v/pyoppversion)](https://pypi.org/project/pyoppversion)
+![Actions](https://github.com/pcaston/pyoppversion/workflows/Actions/badge.svg?branch=main)
+
+_Get the latest Open Peer Power version from various sources._
+
+## Installation
+
+```bash
+python3 -m pip install pyoppversion
+```
+
+Look at the file `example.py` for a usage example.
+
+

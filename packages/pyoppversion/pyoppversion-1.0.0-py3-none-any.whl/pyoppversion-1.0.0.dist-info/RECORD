@@ -1,0 +1,15 @@
+pyoppversion/__init__.py,sha256=e8mgjEcktOM-I05e7ozmnRcISeJEu8ut8i-wLvvHA-s,133
+pyoppversion/base.py,sha256=eU47aqO7Lb2vrdcHXZLvUldc4bZb9H2zgXpQy45sRw4,1721
+pyoppversion/consts.py,sha256=Hr2vT4DfpxN0JRYdhtq01Gfnm6VjOdpz-HmIF3vNiew,1605
+pyoppversion/docker.py,sha256=hh6__7PFSvV09MT66l1meu7bfgGDhlZWklxLWxA6-VE,2766
+pyoppversion/exceptions.py,sha256=tylemqIiab2MtV4nDtK_H3R8rkbR7CNAQcabGIETfSs,436
+pyoppversion/local.py,sha256=zbgd6nv7Ft0qBmPLtiONxJb_SUfNA2FJ6TbEjaG2Zgo,475
+pyoppversion/oppio.py,sha256=5Yq3mE3yKynJbm1gjXWq6VGD480meM4ZX7S8v21KFSk,1432
+pyoppversion/pypi.py,sha256=zOq6Q7rL5bF946uF6nl2kvWKibNZ14HIu_P-ANGDPLg,1578
+pyoppversion/supervised.py,sha256=WZglOtmpy1dQ2cgSe9iNPjdM8yfm54pJeq6sqBARMVI,1824
+pyoppversion/version.py,sha256=j5Nlr4VaYv5OkfpDbv5JjNFo14x2ZCWGnCrr6y5Pckg,3203
+pyoppversion-1.0.0.dist-info/LICENSE,sha256=SBz_tYBpEJ-rUyTnUVzqDABS273Jl999L-LDKJPTtKg,1068
+pyoppversion-1.0.0.dist-info/METADATA,sha256=HGW4SOkF5MxyUBGkVLJyyRuW1Yy9IxgEmSVCb9kBD0I,1488
+pyoppversion-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyoppversion-1.0.0.dist-info/top_level.txt,sha256=zsskNPeNymXj52CtrWCZLbJ2qKOJDgKudnPV6c1Et9U,13
+pyoppversion-1.0.0.dist-info/RECORD,,
