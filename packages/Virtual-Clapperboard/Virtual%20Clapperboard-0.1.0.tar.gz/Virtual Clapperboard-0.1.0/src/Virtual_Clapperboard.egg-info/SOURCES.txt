@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/Virtual_Clapperboard.egg-info/PKG-INFO
+src/Virtual_Clapperboard.egg-info/SOURCES.txt
+src/Virtual_Clapperboard.egg-info/dependency_links.txt
+src/Virtual_Clapperboard.egg-info/requires.txt
+src/Virtual_Clapperboard.egg-info/top_level.txt
+src/virtualclapperboard/__init__.py
+src/virtualclapperboard/__main__.py
