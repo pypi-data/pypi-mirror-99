@@ -1,0 +1,9 @@
+chainer
+chainerrl
+numpy
+Pillow
+gym
+gym[atari]
+cmake
+opencv-python
+tensorflow
