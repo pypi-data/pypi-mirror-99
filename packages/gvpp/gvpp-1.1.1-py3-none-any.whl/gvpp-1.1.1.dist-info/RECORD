@@ -1,0 +1,12 @@
+gvpp/__init__.py,sha256=Pw61XG1srobNREPq8lzuOqMnTIMhXFFKgFCfHBF58Zk,817
+gvpp/__main__.py,sha256=2bn5B8v0iNClt-gB89XtZ_-hT_p-j4sBe6ELTI7tUqc,1448
+gvpp/action.py,sha256=Pnr6sook1jLzMt0XX7Zf8TPiAtSDQbWlrA7evIFkphc,3466
+gvpp/animation.py,sha256=9Xe1mCahFwaJ0xespdvlSUmt0RQhSoUmm5wPFFyOh6M,4572
+gvpp/jupyter.py,sha256=1k7BQ48_jrJVuCAWxzh5nc6UcPfzh-mUjNRrWFUJJbA,1281
+gvpp/render.py,sha256=RYIqISaODacZ2XbL_3afArNu_TDhaPwFfg5EpxCJy4s,1695
+gvpp-1.1.1.dist-info/DESCRIPTION.rst,sha256=nLV2rhkqR862xdfKHq9afIWcgbl6QHQTvEhJCJswmQE,9
+gvpp-1.1.1.dist-info/METADATA,sha256=rxCSXAaRhZFQR5o7RA2hmqeF1TPlSt1j8L_xPc51XqY,656
+gvpp-1.1.1.dist-info/RECORD,,
+gvpp-1.1.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+gvpp-1.1.1.dist-info/metadata.json,sha256=tUrP0qzaO-eqak8gTmjLVYFrZUPG-2sh7xeuPJFzKNc,832
+gvpp-1.1.1.dist-info/top_level.txt,sha256=t1qNZRvxi9e4haoUYIfqs2hKUkxrWWFvuA-9lhmsn44,5

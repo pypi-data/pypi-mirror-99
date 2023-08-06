@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: gvpp
+Version: 1.1.1
+Summary: A tool to create animated graph visualizations, based on graphviz, based on legacy source code of gvanim - Massimo Santini
+Home-page: https://github.com/asinestrea/gvpp
+Author: Sinestrea
+Author-email: git.sinestrea@gmail.com
+License: GNU/GPLv3
+Keywords: drawing graph animation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+# gvpp
+
+
