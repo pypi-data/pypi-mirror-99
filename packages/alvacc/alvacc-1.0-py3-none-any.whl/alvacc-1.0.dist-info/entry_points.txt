@@ -1,0 +1,3 @@
+[console_scripts]
+alvacc = alvacc.__main__:main
+
