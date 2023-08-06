@@ -1,0 +1,9 @@
+lassonet/__init__.py,sha256=VWkF6AWEUIjoVW3dc4oyvz7Rk2zHMz3wcD9tvw9LGkc,113
+lassonet/interfaces.py,sha256=zopUthQ7CjAZxL1TVVxsb8pE1RQikNx37hg-Q1zqnYI,11469
+lassonet/model.py,sha256=RHD0HHIGVmELi7mAMA7tFq6Cq5cGIDW-TwUvTbIPnWQ,1632
+lassonet/prox.py,sha256=Gsjht5EDLwS_LVGsy8OVM2Jv0knk6zkQXjcLqMS3cZ8,1631
+lassonet-0.0.1.dist-info/LICENSE,sha256=qdpYCFuyvgO8DNNPHx2elI39aU_ejT8dEzKOtyml3wk,1069
+lassonet-0.0.1.dist-info/METADATA,sha256=oEssw0ThiSMSuHCQX0xzP0d2DbxL7KrsKRsqZ8CNs3M,1212
+lassonet-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lassonet-0.0.1.dist-info/top_level.txt,sha256=Zsyy0w_ik-FtpphBVJKmpMvknBEisrhUQnZbW5Dsjek,9
+lassonet-0.0.1.dist-info/RECORD,,
