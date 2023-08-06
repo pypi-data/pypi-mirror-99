@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: spotdlfork
+Version: 1.0.1
+Summary: Download your Spotify playlists and songs along with album art and metadata
+Home-page: https://github.com/spotDL/spotify-downloader
+Author: spotDL Team
+Author-email: spotdladmins@googlegroups.com
+License: MIT
+Download-URL: https://pypi.org/project/spotdl/
+Description: UNKNOWN
+Keywords: spotify downloader download music youtube mp3 album metadata
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
