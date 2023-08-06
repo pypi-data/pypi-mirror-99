@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Globals:
+  Function:
+    Timeout: 88
+Resources:
+  irisloudstackApi:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      FunctionName: lambda-irisloud-irisloudstackApi
+      Timeout: 88
+      MemorySize: 1024
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: any
+      Policies:
+      - S3ReadPolicy:
+          BucketName: irisloud
+      Environment:
+        Variables:
+          API_NAME: irisloudstackApi
+          S3_BUCKET: irisloud
+    Metadata:
+      Dockertag: latest
+      DockerContext: /Users/rohan.kothapalli/.clouderizer/lambda-dir
+      Dockerfile: Dockerfile
+Outputs:
+  S3Bucket:
+    Value: irisloud
+    Description: S3 Bucket for saving artifacts and lambda bundle
+  EndpointUrl:
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+    Description: URL for endpoint
