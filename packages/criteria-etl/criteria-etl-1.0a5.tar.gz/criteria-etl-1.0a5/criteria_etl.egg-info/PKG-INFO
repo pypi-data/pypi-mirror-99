@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: criteria-etl
+Version: 1.0a5
+Summary: A library for Criteria related data wrangling.
+Home-page: https://github.com/prosper-ia/covid-response-source
+Author: Prosperia Social
+Author-email: developers.etl@prosperia.ai
+Maintainer: Rodrigo Lara Molina
+Maintainer-email: rodrigo@prosperia.ai
+License: UNKNOWN
+Description: # Criteria-ETL
+        
+        This repository contains general tools for Extracting, Transforming and Loading data in Criteria projects.
+        
+        ## Structure of the package
+        
+        ### `transformers` module
+        
+        - `columns_base`: scikit-learn compatible classes which transform `pandas.DataFrame`'s along the columns axis.
+        - `rows_base`: scikit-learn compatible classes which transform `pandas.DataFrame`'s along the rows axis.
+        
+        ### `utils` module
+        
+        - `common_func`: miscellaneous functions which might be useful in any project.
+        - `config`: placeholder for setting-up global variables of the project, used for loading data.
+        - `dataload`: functions used for loading data. It imports global variables from `config` sub-module.
+        - `display`: functions used for displaying tables and plotting.
+        - `expansion_func`: functions designed for handling statistical sources which present an **expansion factor**. 
+        
+        ### `impute` module
+        
+        
+        - `model_based`: scikit-learn compatible classes for imputing observations based on predictive models.
+        
+        
+        ## Tests
+        
+        To run the test it is required to install ```pytest``` in your system. You can do it wiht
+        
+        ```bash
+        pip install pytest
+        ```
+        
+        Then, from the root directory you can run
+        
+        ```bash
+        pytest
+        ```
+        
+        And it will run every test in the ```tests``` directory.
+        
+        ## Issues and Pull Request conventions
+        
+        Issues are the way each user can report bugs, request new features, ask for help, and so on.
+        
+        When creating a new issue, please add at least one of this four possible tags: _bug, documentation, enhancement, or help wanted_.
+        
+        Pull request should reference an Issue in case the motivation for that PR was that Issue.
+        
+        Any member of the team has access to code reviews and issues. To be notified via e-mail, please click the watch
+        button in the top-right corner of the repository page.
+        
+        ## How to Contribute
+        
+        Code guidelines are taken from [PEP 8](https://www.python.org/dev/peps/pep-0008/) and docstring format used is [Numpy's](https://numpydoc.readthedocs.io/en/latest/format.html).
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
