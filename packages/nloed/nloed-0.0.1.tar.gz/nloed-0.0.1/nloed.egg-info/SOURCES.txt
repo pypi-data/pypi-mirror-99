@@ -1,0 +1,43 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+examples/paper_script.py
+examples/hill_function/hill_function.py
+examples/hill_function/scripts/N1_model_creation.py
+examples/hill_function/scripts/N2_optimizing_a_design.py
+examples/hill_function/scripts/N3_sampling_and_fitting.py
+examples/linear_regression/linear_regression.py
+examples/linear_regression/scripts/N1_model_creation.py
+examples/linear_regression/scripts/N2_design_optimization.py
+examples/linear_regression/scripts/N3_evaluating_designs.py
+examples/multi_in_out_nonnormal/mixed_distributions.py
+examples/multi_in_out_nonnormal/multiple_regression.py
+examples/nonlinear_ode/compartment2D_cvodes.py
+examples/nonlinear_ode/linear2D_ode.py
+examples/old demos/dyanmic_ex2.py
+examples/old demos/dynamic_ex1.py
+examples/old demos/mixed_culture_model.py
+examples/old demos/steady_state_ex1.py
+examples/old demos/steady_state_ex2.py
+examples/old demos/testing.py
+examples/old demos/thesis_script.py
+examples/skrap/stochastic_script1.py
+examples/skrap/stochastic_script2.py
+examples/skrap/taylor_script.py
+examples/skrap/taylor_script2.py
+examples/skrap/taylor_script3.py
+examples/skrap/taylor_script4.py
+examples/skrap/taylor_script5.py
+examples/skrap/taylor_script6.py
+nloed/__init__.py
+nloed/design.py
+nloed/model.py
+nloed.egg-info/PKG-INFO
+nloed.egg-info/SOURCES.txt
+nloed.egg-info/dependency_links.txt
+nloed.egg-info/requires.txt
+nloed.egg-info/top_level.txt
+tests/conftest.py
+tests/test_design.py
+tests/test_model.py
