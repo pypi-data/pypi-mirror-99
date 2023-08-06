@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pysyte
+Version: 0.7.50
+Summary: Pysyte extends Python
+Home-page: https://github.com/jalanb/pysyte
+Author: jalanb
+Author-email: github@al-got-rhythm.net
+License: MIT License
+Description: 
+        Pysyte extends Python
+        Available on github and pypi for ease of access
+Platform: any
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
