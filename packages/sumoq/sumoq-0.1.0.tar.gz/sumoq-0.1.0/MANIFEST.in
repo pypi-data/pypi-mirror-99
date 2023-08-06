@@ -1,0 +1,9 @@
+include requirements.txt
+include pyproject.toml
+include CHANGELOG.rst
+include LICENSE
+include VERSION
+include README.*
+include src/sumoq *.py
+include setup.*
+include sumoq.json
