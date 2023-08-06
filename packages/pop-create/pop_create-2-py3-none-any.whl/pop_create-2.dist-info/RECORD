@@ -1,0 +1,17 @@
+pop_create/conf.py,sha256=bEZrXapN1XBjnvPaN4YUcJ31WxHNLx-6aJrwKoQMb8A,1529
+pop_create/scripts.py,sha256=CUbHw5-8YSh40jGlw5rZ1m0HeZuIeHodqHZL5a7MfVE,151
+pop_create/version.py,sha256=D_zjI5ludg8PtseOAojdgttiQDXOZM27eVdKfoRRMVA,14
+pop_create/pop_create/init.py,sha256=GNPaEGWihmGUz1bX0Xg1K2zEo8SSVr9C0cI21Qn836w,4414
+pop_create/pop_create/cicd/init.py,sha256=RDVzxWhzK28N5a0fSvSENy_OsN_e2tAaFNHUBsIrdL4,38
+pop_create/pop_create/docs/init.py,sha256=93JCKnEG-RldEf9fe9H-djMHT6DGykFw-igfQIfY87I,204
+pop_create/pop_create/seed/init.py,sha256=8uKOBJ4vyfCKTRmaxUOHKJrMMxZ71itbulQQC_cSVxY,285
+pop_create/pop_create/seed/hooks/post_gen_project.py,sha256=oytDHAq2MZoJVag6bx-kwjE8gCSGeBCgfJTZyo2ij-U,649
+pop_create/pop_create/seed/hooks/pre_gen_project.py,sha256=ZoJmUIjaQ6ahF9zK2v__AydfrfbCIR8EQ5z06hqBQrY,320
+pop_create/pop_create/tests/init.py,sha256=RDVzxWhzK28N5a0fSvSENy_OsN_e2tAaFNHUBsIrdL4,38
+pop_create/pop_create/tests/hooks/post_gen_project.py,sha256=27PHXF65GssXSiqTHlSxvxopw7kUw_tuZQRmUby34VQ,911
+pop_create-2.dist-info/LICENSE,sha256=pZUC-Jz_OkbURD3ZSsQBh6u1Giu7OTkbeNF8oUembIY,11348
+pop_create-2.dist-info/METADATA,sha256=IpF7_qWnfSudFJWoj3fqK-T99ldqLldWwIzWFUA6QDY,2663
+pop_create-2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pop_create-2.dist-info/entry_points.txt,sha256=5jdL3RL7Xby2_PXg7QkdPyJVhN5tapsBV6Ktg5WVrGo,57
+pop_create-2.dist-info/top_level.txt,sha256=Fp5JWQ8vPKDjuI78TAno112_fgW7OqNNDoaryBDR62Q,11
+pop_create-2.dist-info/RECORD,,
