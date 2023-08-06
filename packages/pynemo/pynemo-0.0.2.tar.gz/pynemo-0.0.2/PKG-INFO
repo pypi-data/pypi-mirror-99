@@ -1,0 +1,59 @@
+Metadata-Version: 1.2
+Name: pynemo
+Version: 0.0.2
+Summary: Pythonic Neo4j Modelling. Coming soon.
+Home-page: https://github.com/SSripilaipong/pynemo
+Author: SSripilaipong
+Author-email: SHSnail@mail.com
+License: MIT
+Project-URL: Documentation, https://github.com/SSripilaipong/pynemo
+Project-URL: Source Code, https://github.com/SSripilaipong/pynemo
+Description: Pythonic Neo4j Modelling
+        ========================
+        
+        |PyPi Version| |Supported Python Versions| |License|
+        
+        Overview
+        ========
+        
+        Pythonic Neo4j Modelling. Coming soon.
+        
+        Requirements
+        ============
+        
+        -  Python 3.7+
+        -  Works on Linux, Windows, macOS, BSD
+        
+        Installation
+        ============
+        
+        using pip:
+        
+        ::
+        
+            pip install pynemo
+        
+        .. |PyPi Version| image:: https://img.shields.io/pypi/v/pynemo
+           :target: https://pypi.org/project/pynemo/
+        .. |Supported Python Versions| image:: https://img.shields.io/pypi/pyversions/pynemo.svg
+           :target: https://pypi.org/project/pynemo/
+        .. |License| image:: https://img.shields.io/github/license/ssripilaipong/pynemo
+           :target: https://github.com/SSripilaipong/pynemo/blob/master/LICENSE.md
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
