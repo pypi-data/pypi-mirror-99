@@ -1,0 +1,11 @@
+nexgen/CopyNexusStructure.py,sha256=RpEtquXuANKhsbTyi7tHekP6JGb5Bn0Vypxg8_iIO_s,4690
+nexgen/__init__.py,sha256=5p21S8Cem1jbrUJrmBQEgfEjOoNz3qOj4aNbs6X4ObU,254
+nexgen/create_nexus.py,sha256=Uhee5yjOWHlk82T5DZZZ4zVD9N4owd8M4H8A3XTcDis,3967
+nexgen/geometry_phil.py,sha256=v5tYei0nTaJrema1HHPrKy_gqJo9BaqK3y11cygQnIM,5895
+nexgen/writer.py,sha256=Px6-ChH4EOWc6Xqbo_ydxGmNz7UL0ugmVV_VKdo6Skw,19244
+nexgen-0.4.0.dist-info/LICENSE,sha256=UmIrzlJcBAyHzx-JjhjPhyHFf9TKLIUrVxRVxTMKRzc,1528
+nexgen-0.4.0.dist-info/METADATA,sha256=L7LzcUW7IYXDVnPmX4vWgyiyxkQ29GmCo1xph5YGQ8M,2159
+nexgen-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nexgen-0.4.0.dist-info/entry_points.txt,sha256=iTDX_y6DR1aE6zkfTrV_2wcnKujp1regZPf0PdIig04,36
+nexgen-0.4.0.dist-info/top_level.txt,sha256=oQYO-CI6_8mVvLTfrWfsAqz9VludilAlUMREUFF_scc,7
+nexgen-0.4.0.dist-info/RECORD,,
