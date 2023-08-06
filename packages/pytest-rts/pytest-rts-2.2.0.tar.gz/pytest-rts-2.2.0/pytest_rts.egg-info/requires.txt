@@ -1,0 +1,16 @@
+coverage
+pytest
+pytest-cov
+pydriller
+
+[dev]
+pytest-socket
+tox
+python-semantic-release
+black
+mypy
+pylint
+safety
+wheel
+twine
+xenon
