@@ -1,0 +1,17 @@
+chex/__init__.py,sha256=l2QfjTzxEeKYMdjDLkoDrNg0Zm3kMZUk26oDAtvpthY,5153
+chex/chex_test.py,sha256=AzZHJzBmtZdXJqKGu_mKEytxkq8-C8ZpuwNu5EmCRVM,1002
+chex/_src/asserts.py,sha256=xl0e3wI3iCc-rpml-wGvBAttwyClNJe5YVQ5p02Ile0,29786
+chex/_src/asserts_test.py,sha256=9IuCzwJOeqz6TG_ac63IWHmsyOxuAlKUknSZXpAszj0,32214
+chex/_src/dataclass.py,sha256=nuoe2nojRdhVbKR2qR49yy3z2Av4gQpRBhUA-xbl8PQ,6720
+chex/_src/dataclass_test.py,sha256=U--W38wKSufT33udACQv6s1tpUCm9GERY0z9-kNPSlg,11112
+chex/_src/fake.py,sha256=q3p0xdHbmVrij_pBij_TKAM9R8PMliZM2Mk3F8Ks-mA,7796
+chex/_src/fake_set_n_cpu_devices_test.py,sha256=KNojYZBU3MN8SFtn9bkcpT96aKM_kFRqv0ZaBTwbVEY,1780
+chex/_src/fake_test.py,sha256=tHfPsNvrmQ4v4opGoRXnVsQpHz7SmTNEW3RuFsC0fV4,9520
+chex/_src/pytypes.py,sha256=8SW9EO8x1jFh6W2PNmi1LSE3PjYmk3yRblT1cmfWy78,1835
+chex/_src/variants.py,sha256=cFmd6N7TwcW6Wv3OYpaSr1uCJ4dD3nK82o_90K2j6js,19176
+chex/_src/variants_test.py,sha256=IMWD9mnhmBcjkFmL-c8l25K3f4FJP_q4ui6SAzHHWcE,31011
+chex-0.0.5.dist-info/LICENSE,sha256=ohNXr5R7z6MRKzH3N9mScG41zM8LLHtc1RwVcMRAum0,11426
+chex-0.0.5.dist-info/METADATA,sha256=g43htwaM1M4PBwLRGRMzZfg9z1PQChoReDyaFNh5g7g,14082
+chex-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chex-0.0.5.dist-info/top_level.txt,sha256=Qoy4gIeGEblqtVjo5aiJVjWPkzp3oren5y3qzqC8VYk,5
+chex-0.0.5.dist-info/RECORD,,
