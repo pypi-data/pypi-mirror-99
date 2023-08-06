@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/vk_slaves/__init__.py
+src/vk_slaves/slaves.py
+src/vk_slaves.egg-info/PKG-INFO
+src/vk_slaves.egg-info/SOURCES.txt
+src/vk_slaves.egg-info/dependency_links.txt
+src/vk_slaves.egg-info/requires.txt
+src/vk_slaves.egg-info/top_level.txt
