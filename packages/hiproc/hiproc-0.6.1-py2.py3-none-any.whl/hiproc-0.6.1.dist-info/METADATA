@@ -1,0 +1,201 @@
+Metadata-Version: 2.1
+Name: hiproc
+Version: 0.6.1
+Summary: A library to help process HiRISE EDRs with ISIS.
+Home-page: https://github.com/rbeyer/hiproc
+Author: attr:hiproc.__version__
+Author-email: rbeyer@seti.org
+License: UNKNOWN
+Keywords: HiRISE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Requires-Dist: gdal (>=3.0.1)
+Requires-Dist: kalasiris (>=1.8.0)
+Requires-Dist: matplotlib (>=3.2.1)
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: pvl (>=1.0.1)
+Requires-Dist: scipy (>=1.4.1)
+
+======
+hiproc
+======
+
+
+A library to help process HiRISE EDRs with ISIS.
+
+
+* Free software: Apache 2 License
+
+.. * Documentation: https://hiproc.readthedocs.io.
+.. * `PlanetaryPy`_ Affiliate Package (someday).
+
+
+Features
+--------
+
+* TODO: Complete testing against Perl Pipelines.
+
+
+External Dependencies
+---------------------
+These programs use as much 'vanilla' Python 3 as possible.
+
+However, it does depend on the following:
+
+- pvl library (https://pvl.readthedocs.io)
+- kalasiris library (https://kalasiris.readthedocs.io)
+- gdal
+- numpy
+- scipy
+- matplotlib
+
+The HiJACK program also requires the ``resolveJitter`` program that
+is still buggy, and is not working reliably.
+
+Warning !
+---------
+
+The algorithms based on the HiRISE Processing Pipelines were emulated
+and tested locally, but the results of each pipeline **have not**
+been tested directly against the results of the HiRISE Processing
+Pipelines, and this warning will remain until I have done so.  As
+a result, I would not particularly 'trust' anything produced by
+these programs at this time, and consider these algorithms a
+work-in-progress.
+
+These programs have been tested against their upstream Perl counterparts:
+
+- EDR_Stats: Verified!
+    Really just runs ``hi2isis`` so no surprise here.
+
+- HiCal: Verified. (if ``HiGainFx()`` enabled)
+    Upstream is undergoing change.  HiGainFx really shouldn't be
+    applied, so it is commented out here.  We're also working
+    to integrate the bitflip cleaning into the upstream Perl,
+    so this is in flux.
+
+
+Contributing
+------------
+
+Feedback, issues, and contributions are always gratefully welcomed. See the
+contributing guide for details on how to help and setup a development
+environment.
+
+
+Naming
+------
+
+The ISIS software has a number of processing or "proc" programs
+(`mocproc`, `thmproc`, etc.) that are meant to be run to process
+raw images to higher-level, more usable versions.  Naming this
+library `hiproc` is an echo to that. There is a `hiproc` program
+that is available after installation that provides a streamlined
+one-stop-program, but this package provides a great deal more.
+
+
+.. _PlanetaryPy: https://github.com/planetarypy
+
+=========
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_,
+and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
+
+When updating this file, please add an entry for your change under
+Unreleased_ and one of the following headings:
+
+- Added - for new features.
+- Changed - for changes in existing functionality.
+- Deprecated - for soon-to-be removed features.
+- Removed - for now removed features.
+- Fixed - for any bug fixes.
+- Security - in case of vulnerabilities.
+
+If the heading does not yet exist under Unreleased_, then add it
+as a 3rd level heading, underlined with pluses (see examples below).
+
+When preparing for a public release add a new 2nd level heading,
+underlined with dashes under Unreleased_ with the version number
+and the release date, in year-month-day format (see examples below).
+
+
+Unreleased
+----------
+
+0.6.1 (2021-03-23)
+------------------
+
+Added
++++++
+- lisfix will return a non-zero exit code if it chooses not to fix the input cube.
+
+Changed
++++++++
+- Updated documentation in various places.
+
+
+0.6.0 (2021-03-18)
+------------------
+
+Added
++++++
+- More complete documentation for the programs and their parameters.
+
+Changed
++++++++
+- Implemented better handling for configuration files so that they
+  will get distributed with the package.
+
+
+0.5.0 (2021-03-05)
+------------------
+
+Added
++++++
+* lisfix: Added the lisfix module.
+* bitflips: Sometimes the very end of the histogram (although not a formal minima) is the
+  appropriate choice, and is now considered.
+* bitflips: Added capability to ignore minor maxima at the ends of the histogram to "roll down"
+  to a better solution.
+
+Changed
++++++++
+* name change of project from pyrise to hiproc.
+* bitflips: Changed the default medstd_limit from 300 to 400 DN.
+
+Fixed
++++++
+* bitflips: There were a variety of edge cases that resulted in errors.  The appropriate guardrails, handlers,
+  and recovery logic has now been added.
+* HiStitch: The equalize and balance parameters cannot both be true.
+
+0.4.0 (2020-09-22)
+------------------
+* Tremendous amount of re-working in bitflips to improve
+  performance.
+* Format cleanup
+
+0.3.0 (2020-05-16)
+------------------
+* Confirmed that EDR_Stats and HiCal produce identical output cubes.
+
+0.2.0 (2020-05-06)
+------------------
+* Updated with bit-flip correction.
+
+0.1.0 2020-03-21
+----------------
+* First shared on GitHub
+
+
