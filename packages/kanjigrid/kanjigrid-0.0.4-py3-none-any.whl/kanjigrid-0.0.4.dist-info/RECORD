@@ -1,0 +1,8 @@
+kanjigrid/__init__.py,sha256=ZDr5xgTuLSTvFAdovaUzNUND1f9jCOfp9ZNqbCkyNKg,80
+kanjigrid/gradings.py,sha256=2rqzZICZDe7jQXOo6xh_SCPo4-KBEMOTkJzU-NBGQok,37077
+kanjigrid/kanjigrid.py,sha256=pf-3NJCvWsTDWBfKF-odzv0h6tFKX9Z3c3XkeqL08Qc,12860
+kanjigrid-0.0.4.dist-info/entry_points.txt,sha256=8f4m1hNryEQwyzXq9uE6F6pjW-K2l0PEyQkb443jPtQ,51
+kanjigrid-0.0.4.dist-info/LICENSE,sha256=25J486urRJaHaGDj83pJXmIlwE3V7wl5qw5oo8GhwMk,1083
+kanjigrid-0.0.4.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+kanjigrid-0.0.4.dist-info/METADATA,sha256=i8U_H6tJnO3L625qJk3Lq4-H-uf_tzifT0owGlJx-0I,844
+kanjigrid-0.0.4.dist-info/RECORD,,

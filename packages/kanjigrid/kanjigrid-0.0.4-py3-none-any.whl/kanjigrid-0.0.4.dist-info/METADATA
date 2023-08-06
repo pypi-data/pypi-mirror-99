@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: kanjigrid
+Version: 0.0.4
+Summary: Create Kanji Grids out of Text
+Home-page: https://github.com/exc4l/kanjigrid
+Keywords: japanese,kanji
+Author: exc4l
+Author-email: cps0537@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: Japanese
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: Pillow (>=8.1.2,<9.0.0)
+Project-URL: Repository, https://github.com/exc4l/kanjigrid
+Description-Content-Type: text/markdown
+
+# kanjigrid
+Create Kanji Grids out of Text
+
