@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+cfs/__init__.py
+cfs/__main__.py
+cfs/check_md5.py
+cfs/dataset.py
+cfs/md5sums.txt
+cfs/profusion.py
+cfs/resources.py
+cfs/version.py
+cleveland_family_study.egg-info/PKG-INFO
+cleveland_family_study.egg-info/SOURCES.txt
+cleveland_family_study.egg-info/dependency_links.txt
+cleveland_family_study.egg-info/requires.txt
+cleveland_family_study.egg-info/top_level.txt
