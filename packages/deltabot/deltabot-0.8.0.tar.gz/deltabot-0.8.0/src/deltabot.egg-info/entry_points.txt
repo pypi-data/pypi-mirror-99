@@ -1,0 +1,6 @@
+
+            [console_scripts]
+            deltabot=deltabot.main:main
+            [pytest11]
+            deltabot.pytestplugin=deltabot.pytestplugin
+        

@@ -1,0 +1,2 @@
+deltachat>=1.40.1
+py
