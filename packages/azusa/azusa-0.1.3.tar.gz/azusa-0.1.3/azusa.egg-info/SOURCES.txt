@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+azusa/__init__.py
+azusa/__main__.py
+azusa/curve_probabilities.py
+azusa/mana_producers.py
+azusa/parse.py
+azusa/util.py
+azusa.egg-info/PKG-INFO
+azusa.egg-info/SOURCES.txt
+azusa.egg-info/dependency_links.txt
+azusa.egg-info/requires.txt
+azusa.egg-info/top_level.txt
