@@ -1,0 +1,34 @@
+
+Vue.component('editables-list', {
+    mixins: [
+        itemListMixin
+    ],
+    data: function() {
+        return {
+            url: this.$urls.pages.api_content,
+            params: {
+                o: '-created_at'
+            }
+        }
+    },
+
+    mounted: function(){
+        this.get()
+    }
+});
+
+
+Vue.component('editables-detail', {
+    mixins: [
+        itemMixin
+    ],
+    data: function() {
+        return {
+            url: this.$urls.pages.api_content,
+        }
+    },
+
+    mounted: function(){
+        this.get()
+    }
+});
