@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: program-9ef5
+Version: 0.0.2
+Summary: A program that writes programs.
+Home-page: https://github.com/phfrohring/python
+Author: Pierre-Henry Fröhring
+Author-email: contact@phfrohring.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/phfrohring/python/issues
+Description: README
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
