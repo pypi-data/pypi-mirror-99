@@ -1,0 +1,7 @@
+pyjwt
+
+[dev]
+check-manifest
+
+[test]
+coverage
