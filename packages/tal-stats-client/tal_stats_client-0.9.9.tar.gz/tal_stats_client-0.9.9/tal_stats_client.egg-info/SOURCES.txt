@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+tal_stats_client.egg-info/PKG-INFO
+tal_stats_client.egg-info/SOURCES.txt
+tal_stats_client.egg-info/dependency_links.txt
+tal_stats_client.egg-info/top_level.txt
