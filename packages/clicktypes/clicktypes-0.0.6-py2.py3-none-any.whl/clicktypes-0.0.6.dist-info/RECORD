@@ -1,0 +1,15 @@
+clicktypes/__init__.py,sha256=N3M1WRnsi8boN87UGDydNJTAJEYFHUcFTqwk4jhfNbU,145
+clicktypes/__version__.py,sha256=IhdqK7eLyiVvJIrB2RzI-V1lh7UxIVTYUP7mbrScM8o,308
+clicktypes/network/__init__.py,sha256=P_-X148Uc1OowYFzuYTb5NSNcjAD2rXbw_T73CCIgmU,420
+clicktypes/network/address.py,sha256=nxHqvzQDbZOPDETM35ONu9y_ROeoSAB-uT1qGKYc27k,7041
+clicktypes/network/network.py,sha256=KOpMw-dctb4DFo7HsOd_9RL93W1ayCVwQY88pbD5uRw,8773
+clicktypes/network/resolve.py,sha256=Ub026ewIQ61tIhGhw5f2WYcLIR2eBWDCVq5bzjtIx3I,2802
+clicktypes/web/__init__.py,sha256=gJOXaRWpuHaQelrLCepfoPlnqwjAreomsCye7uMLkRc,206
+clicktypes/web/domain.py,sha256=UHBJlhkLM6AjTRiLLnxfYZ8nETX26POsmB9dYL8fNDQ,901
+clicktypes/web/email.py,sha256=KjrD_rn_tADjiVlSzYYNfkeBZhN5av2Nlyt88NMYNas,948
+clicktypes/web/url.py,sha256=UPZ5kqMq_JTOA6MMICKSO_ZbZHxi2HhgyZ_uhL7_koQ,778
+clicktypes-0.0.6.dist-info/LICENSE,sha256=VgkC_DIkNWQ68CqcDB6nLxcf9QSdtYSoVXnwmQ4JQ94,1060
+clicktypes-0.0.6.dist-info/METADATA,sha256=NwCyZfAmchSpf8UswLfK_up2tbCBgIGb-L-K-1mnOhc,1963
+clicktypes-0.0.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+clicktypes-0.0.6.dist-info/top_level.txt,sha256=3V7c-bzxfAGQEHf1MnHy5sbLyHdIO-M-hZyrhmJJ5Lo,11
+clicktypes-0.0.6.dist-info/RECORD,,
