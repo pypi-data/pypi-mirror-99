@@ -1,0 +1,4 @@
+[console_scripts]
+command_one=ma3xcli/one:main
+command_two=ma3xcli/two:main
+
