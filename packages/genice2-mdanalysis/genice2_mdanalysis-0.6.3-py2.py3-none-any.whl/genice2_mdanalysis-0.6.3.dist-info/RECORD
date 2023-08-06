@@ -1,0 +1,8 @@
+genice2_mdanalysis/__init__.py,sha256=gi2PuNRKOvT0Pw-g07MhU0RG0RTn1c2lgdCk0w_rtS4,93
+genice2_mdanalysis/formats/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+genice2_mdanalysis/formats/mdanalysis.py,sha256=gD9EteDJTO-C487iHOlpi9luSM0qptcNoL1Pt1Ansxo,3100
+genice2_mdanalysis-0.6.3.dist-info/METADATA,sha256=DqD--MKcY5JNzNuLTNxOi75EMRQUpP9ISPUTW33ljc8,1903
+genice2_mdanalysis-0.6.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+genice2_mdanalysis-0.6.3.dist-info/entry_points.txt,sha256=6hxnjqAXSJUrBE1MgFjvuehKhj-rPUsmazFFSCFlgWo,69
+genice2_mdanalysis-0.6.3.dist-info/top_level.txt,sha256=d19bttv-K95BGngImu79JKXoezcX7QhRo8lU-ohNiWk,19
+genice2_mdanalysis-0.6.3.dist-info/RECORD,,
