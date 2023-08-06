@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+deprecate/__init__.py
+deprecate/deprecation.py
+pyDeprecate.egg-info/PKG-INFO
+pyDeprecate.egg-info/SOURCES.txt
+pyDeprecate.egg-info/dependency_links.txt
+pyDeprecate.egg-info/not-zip-safe
+pyDeprecate.egg-info/top_level.txt
