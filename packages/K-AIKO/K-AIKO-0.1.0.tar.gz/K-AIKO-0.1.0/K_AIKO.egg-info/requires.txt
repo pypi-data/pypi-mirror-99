@@ -1,0 +1,9 @@
+lark
+numpy
+scipy
+audioread
+pyaudio
+wcwidth
+
+[:python_version < "3.7"]
+dataclasses
