@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: generate-bes-from-template
+Version: 0.0.2
+Summary: A python module for generating BigFix content
+Home-page: https://github.com/jgstew/generate_bes_from_template
+Author: JGStew
+Author-email: noreply@jgstew.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jgstew/generate_bes_from_template/issues
+Description: # generate-bes-from-template
+        Generate BigFix Content From a Template
+        
+        
+        ## Related:
+        - https://github.com/jgstew/generate_prefetch
+        - https://github.com/jgstew/tools/blob/master/Python/url_to_prefetch.py
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
