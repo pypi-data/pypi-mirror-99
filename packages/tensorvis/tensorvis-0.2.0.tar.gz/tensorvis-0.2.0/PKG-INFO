@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tensorvis
+Version: 0.2.0
+Summary: Visualisation tool to support my PhD automating the process of gathering data and plotting it
+Home-page: https://github.com/npitsillos/tensorplot.git
+Author: Nikolas Pitsillos
+Author-email: npitsillos@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: pandas (>=1.1.4,<2.0.0)
+Requires-Dist: seaborn (>=0.11.1,<0.12.0)
+Requires-Dist: tensorboard (>=2.4.0,<3.0.0)
+Project-URL: Repository, https://github.com/npitsillos/tensorplot.git
+Description-Content-Type: text/markdown
+
+# Tensorplot
+A visualisation tool to automate the process of grabbing tensorboard events
+data and visualising them.  This allows for faster result analysis in my work.
+
+## Features
+* Upload experiments logged with PyTorch's SummaryWriter to tensorboard.dev and creates a log of uploaded experiments.
+* 
+
+## Notes
+This is still in its early stages so if a problem arises don't forget to create an issue!
+
+## Contributing
+If anyone wants to contribute in any way then feel free to open a PR or an issue and we can discuss it.
+
+## Benefits
+1. Faster result analysis
+2. Less code writting
+3. Separate experiments from analysis
+4. Allows for more research tim
+
