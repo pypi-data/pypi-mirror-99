@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+listconfig/__init__.py
+listconfig/__main__.py
+listconfig.egg-info/PKG-INFO
+listconfig.egg-info/SOURCES.txt
+listconfig.egg-info/dependency_links.txt
+listconfig.egg-info/entry_points.txt
+listconfig.egg-info/requires.txt
+listconfig.egg-info/top_level.txt
