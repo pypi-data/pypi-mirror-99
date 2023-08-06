@@ -1,0 +1,5 @@
+blake2b_py-0.1.3_alpha_15.dist-info/METADATA,sha256=91OzKdI45NA5LOoEF28U0S4AQYsvydnp17kQCObFZK0,223
+blake2b_py-0.1.3_alpha_15.dist-info/WHEEL,sha256=zDARl5jq98TZD47cJund2mgq-4ha3E1mo2VY7XPgOB0,94
+blake2b/__init__.py,sha256=-XyhQXVr1qcv3WbU55uN_2ieXGJTi6jd-FlLyAZvZ10,7092
+blake2b/blake2b.cp39-win_amd64.pyd,sha256=zBF-qlFW-222uXgPduIYqI-vBzSFcJ-uV87uUdwwNE8,201216
+blake2b_py-0.1.3_alpha_15.dist-info/RECORD,,
