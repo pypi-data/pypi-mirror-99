@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/juungle.egg-info/PKG-INFO
+src/juungle.egg-info/SOURCES.txt
+src/juungle.egg-info/dependency_links.txt
+src/juungle.egg-info/top_level.txt
