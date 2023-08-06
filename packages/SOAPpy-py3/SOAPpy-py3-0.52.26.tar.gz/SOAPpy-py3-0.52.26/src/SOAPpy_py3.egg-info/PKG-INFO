@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: SOAPpy-py3
+Version: 0.52.26
+Summary: SOAP Services for Python
+Home-page: https://github.com/Synerty/SOAPpy-py3
+Maintainer: Synerty
+Maintainer-email: contact@synerty.com
+License: UNKNOWN
+Description: SOAPpy-py3 provides tools for building SOAP clients and servers.  For more information see https://github.com/Synerty/SOAPpy-py3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP
+Provides: SOAPpy
