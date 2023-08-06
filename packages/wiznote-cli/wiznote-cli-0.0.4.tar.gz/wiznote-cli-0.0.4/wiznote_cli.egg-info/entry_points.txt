@@ -1,0 +1,3 @@
+[console_scripts]
+wiznote-cli = wiz_cli.main:main
+
