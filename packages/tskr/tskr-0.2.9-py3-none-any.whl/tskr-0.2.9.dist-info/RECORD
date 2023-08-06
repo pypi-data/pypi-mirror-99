@@ -1,0 +1,8 @@
+tskr/__init__.py,sha256=atkxos6AED72tXiE4N4BWkacWKfM9zzwpgSrMccJV0E,5924
+tskr/test.py,sha256=HvKNUfG0zvyrS5UOkOYe_FCEnVh4ksH4x4o_fYI03E0,129
+tskr/parts/AES_crypt.py,sha256=eUCzUQ82wRaUzih1Nbj7Z9-oS0fJlkS0WxK_imjsLt8,1790
+tskr-0.2.9.dist-info/METADATA,sha256=KXeShy-bycTHMB3JyPi0epqamnPIaymh_vSmPS-a45w,532
+tskr-0.2.9.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+tskr-0.2.9.dist-info/entry_points.txt,sha256=sbmYDOj6XW6rbcApvy82B4D0lK_ruQIbQR_iNOGvwjE,44
+tskr-0.2.9.dist-info/top_level.txt,sha256=2nOOfSHSj6n7G-Y3dRQJOWt9me1OORxD4N1EPzJN6UQ,16
+tskr-0.2.9.dist-info/RECORD,,
