@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+django_test_signals/__init__.py
+django_test_signals/signalconnectiontestcase.py
+django_test_signals.egg-info/PKG-INFO
+django_test_signals.egg-info/SOURCES.txt
+django_test_signals.egg-info/dependency_links.txt
+django_test_signals.egg-info/requires.txt
+django_test_signals.egg-info/top_level.txt
+test/test_signalconnectiontestcase.py
