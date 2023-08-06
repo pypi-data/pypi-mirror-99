@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: game-theory-optimal-poker
+Version: 0.0.1
+Summary: Play heads-up Texas Holdem Poker against an AI in your browser
+Home-page: UNKNOWN
+Author: Ted Petrou
+Author-email: ted@dunderdata.com
+License: BSD 3-Clause License
+Keywords: poker,AI,flask,web
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: flask
+Requires-Dist: flask-socketio
+Requires-Dist: eventlet
+Requires-Dist: gunicorn ; platform_system != "Windows"
+Requires-Dist: waitress ; platform_system == "Windows"
+
+UNKNOWN
+
+

@@ -1,0 +1,209 @@
+{% macro create_card_row(kind, n) -%}
+    <div class="card-row" id="{{ kind }}-cards">
+      {% for i in range(n) %}
+        <div class="playing-card {{ kind }}" id="{{ kind }}-card{{ i + 1 }}">
+          <span class="card-rank" id="{{ kind }}-rank{{ i + 1 }}"></span>
+          <span class="card-suit" id="{{ kind }}-suit{{ i + 1 }}"></span>
+        </div>
+      {% endfor %}
+    </div>
+{%- endmacro %}
+
+{% macro create_left_of_cards(kind) -%}
+  <div class="left-of-cards" id="{{ kind }}-left">
+    <div class="bet-block">
+      Bet: &nbsp;<span id="{{ kind }}-bet"></span>
+    </div>
+  </div>
+{%- endmacro %}
+
+{% macro create_right_of_cards(kind) -%}
+  <div class="right-of-cards" id="{{ kind }}-right">
+    <div class="chips-block">
+      Chips: &nbsp;<span id="{{ kind }}-chips"></span>
+    </div>
+    <img src="{{ url_for('static', filename='dealer.png') }}" class="dealer-button" id="{{ kind }}-dealer-button" hidden>
+  </div>
+{%- endmacro %}
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+      var socket = io();
+      var button_names = {
+        "fold": "check-fold-button",
+        "check": "check-fold-button",
+        "call": "bet-call-button",
+        "bet": "bet-call-button",
+        "raise": "raise-button",
+      }
+      
+      socket.on('connect', function() {
+          socket.emit('my event', {data: 'Connected!'});
+      });
+
+      socket.on('new_hand', function(data) {
+        $('.dealer-button').hide();
+        $(`#${data.turn}-dealer-button`).show();
+        $('#hand-num').text(data.hand_num);
+        show_cards(data.cards, "player", 1);
+      });
+
+      socket.on('computer_action', function(data) {
+        $("#computer-message").text(data.output).animate({
+                fontSize: "35px"
+            }, 500,  function(){
+              socket.emit('get_user_choices', data.choice)
+            });
+      });
+
+      socket.on('update_user_choices', function(data){
+        update_choices(data.choices)
+      })
+
+      socket.on('new_round', function(data) {
+        $("#computer-message").text('').css('font-size', '20px');
+        if (data.round == 2){
+          start = 1
+        }
+        else if (data.round == 3){
+          start = 4
+        }
+        else {
+          start = 5
+        }
+        show_cards_animate(data.cards, "community", 0, start, data.turn, 1000)
+        });
+
+      socket.on('winner_show', function(data) {
+        start_next_hand(data.winner_string);
+        show_cards(data.cards, "computer", 1);
+      });
+
+      socket.on('winner_fold', function(data) {
+        start_next_hand(data.winner_string);
+      });
+
+      socket.on('update_bets', function(data) {
+        $('#pot').text(data.pot)
+        $('#computer-bet').text(data.computer_bet)
+        $('#player-bet').text(data.player_bet)
+        $('#computer-chips').text(data.computer_chips)
+        $('#player-chips').text(data.player_chips)
+      });
+
+      function start_next_hand(winner_string){
+        $('#computer-message').text(winner_string).css('font-size', "35px");
+        $('#bet-call-button').text("Next Hand").attr("value", "next").show();
+      }
+
+      function show_cards(cards, kind, start) {
+        var rank, suit, color;
+        for (i=0; i < cards.length; i++){
+          [rank, suit, color] = cards[i];
+          $(`#${kind}-rank${start + i}`).text(rank).css("color", color);
+          $(`#${kind}-suit${start + i}`).text(suit).css("color", color);
+        }
+      }
+
+      function show_cards_animate(cards, kind, i, start, turn, delay){
+        show_cards([cards[i]], kind, start + i);
+        var v = $(`#${kind}-card${start + i}`).offset(); 
+        $(`#${kind}-card${start + i}`).css({"top": -v.top + "px", "left": -v.left + "px"}); 
+        $(`#${kind}-card${start + i}`).animate({top:0, left:0}, delay, function() {
+          
+        if (i < cards.length - 1){
+          return show_cards_animate(cards, kind, i + 1, start, turn, delay)
+        }
+        else {
+          if (turn == 0) {
+            socket.emit("get_user_choices", "")
+          }
+          else {
+            socket.emit("get_computer_action")
+          }
+        }
+        });
+      }
+
+      function start_game(){
+        $('#start-button').hide();
+        socket.emit('new_hand')
+      }
+
+      function update_choices(choices){
+        var button_name, text
+        Object.entries(choices).forEach(([key, value]) => {
+          button_name = button_names[key]
+          text = key
+          if (key == "raise"){
+            text = text + " to " + value
+          }
+          else if (key == "call" || key == "bet"){
+            text = text + " " + value
+          }
+          $('#' + button_name).text(text).show().attr("value", key);
+        });
+      }
+
+      $(document).ready(function() { 
+        $(".user-action-button").click( function(){
+          $(".user-action-button").hide();
+          $("#computer-message").text('').css('font-size', '20px');
+          if (this.value == "next"){
+            $('.playing-card').children('span').text('');
+            socket.emit('new_hand');
+          }
+          else {
+            socket.emit('user_action', this.value);
+          }
+        });
+      });
+  </script>
+</head>
+
+<body>
+<h1 id="title-header">Limit Texas Hold'em Poker</h1>
+  {% if g.user %}
+    <button id="start-button" onclick="start_game()">Begin Playing</button>
+    <div id="board">
+      <div class="single-row" id="computer-row">
+        {{ create_left_of_cards("computer") }}
+        {{ create_card_row("computer", 2) }}
+        {{ create_right_of_cards("computer") }}
+      </div>
+
+      <div id="computer-message"></div>
+
+      <div class="single-row" id="community-row">
+        <div id="community-left"><div id="hand-div">Hand # <span id="hand-num"></span></div></div>
+        {{ create_card_row("community", 5) }}
+        <div id="community-right">Pot: <span id="pot"></span></div>
+      </div>
+
+      <div class="single-row" id="player-row">
+        {{ create_left_of_cards("player") }}
+        {{ create_card_row("player", 2) }}
+        {{ create_right_of_cards("player") }}
+      </div>
+
+      <div id="action-buttons">
+        <button class="user-action-button" id="check-fold-button" hidden></button>
+        <button class="user-action-button" id="bet-call-button" hidden></button>
+        <button class="user-action-button" id="raise-button" hidden></button>
+      </div>
+    </div>
+
+    <ul>
+      <li><span>{{ g.user['username'] }}</span></li>
+      <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+    </ul>
+    {% else %}
+      <ul>
+        <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+      </ul>
+    {% endif %}
+</body>
