@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmonization field names &#8212; intelmq 3.0.0.alpha.1 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Release procedure" href="release-procedure.html" />
+    <link rel="prev" title="Developers Guide" href="guide.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="harmonization-field-names">
+<h1>Harmonization field names<a class="headerlink" href="#harmonization-field-names" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="harmonization-types">
+<h2>Harmonization types<a class="headerlink" href="#harmonization-types" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="asn">
+<span id="id1"></span><h2>ASN<a class="headerlink" href="#asn" title="Permalink to this headline">¶</a></h2>
+<p>ASN type. Derived from Integer with forbidden values.</p>
+<p>Only valid are: 0 &lt; asn &lt;= 4294967295
+See <a class="reference external" href="https://en.wikipedia.org/wiki/Autonomous_system_(Internet">https://en.wikipedia.org/wiki/Autonomous_system_(Internet</a>)
+&gt; The first and last ASNs of the original 16-bit integers, namely 0 and
+&gt; 65,535, and the last ASN of the 32-bit numbers, namely 4,294,967,295 are
+&gt; reserved and should not be used by operators.</p>
+</div>
+<div class="section" id="accuracy">
+<span id="id2"></span><h2>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this headline">¶</a></h2>
+<p>Accuracy type. A Float between 0 and 100.</p>
+</div>
+<div class="section" id="base64">
+<span id="id3"></span><h2>Base64<a class="headerlink" href="#base64" title="Permalink to this headline">¶</a></h2>
+<p>Base64 type. Always gives unicode strings.</p>
+<p>Sanitation encodes to base64 and accepts binary and unicode strings.</p>
+</div>
+<div class="section" id="boolean">
+<span id="id4"></span><h2>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h2>
+<p>Boolean type. Without sanitation only python bool is accepted.</p>
+<p>Sanitation accepts string ‘true’ and ‘false’ and integers 0 and 1.</p>
+</div>
+<div class="section" id="classificationtaxonomy">
+<span id="id5"></span><h2>ClassificationTaxonomy<a class="headerlink" href="#classificationtaxonomy" title="Permalink to this headline">¶</a></h2>
+<p><cite>classification.taxonomy</cite> type.</p>
+<p>The mapping follows
+Reference Security Incident Taxonomy Working Group – RSIT WG
+<a class="reference external" href="https://github.com/enisaeu/Reference-Security-Incident-Taxonomy-Task-Force/">https://github.com/enisaeu/Reference-Security-Incident-Taxonomy-Task-Force/</a></p>
+<dl class="simple">
+<dt>These old values are automatically mapped to the new ones:</dt><dd><p>‘abusive content’ -&gt; ‘abusive-content’
+‘information gathering’ -&gt; ‘information-gathering’
+‘intrusion attempts’ -&gt; ‘intrusion-attempts’
+‘malicious code’ -&gt; ‘malicious-code’</p>
+</dd>
+<dt>Allowed values are:</dt><dd><ul class="simple">
+<li><p>abusive-content</p></li>
+<li><p>availability</p></li>
+<li><p>fraud</p></li>
+<li><p>information-content-security</p></li>
+<li><p>information-gathering</p></li>
+<li><p>intrusion-attempts</p></li>
+<li><p>intrusions</p></li>
+<li><p>malicious-code</p></li>
+<li><p>other</p></li>
+<li><p>test</p></li>
+<li><p>vulnerable</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="classificationtype">
+<span id="id6"></span><h2>ClassificationType<a class="headerlink" href="#classificationtype" title="Permalink to this headline">¶</a></h2>
+<p><cite>classification.type</cite> type.</p>
+<p>The mapping follows
+Reference Security Incident Taxonomy Working Group – RSIT WG
+<a class="reference external" href="https://github.com/enisaeu/Reference-Security-Incident-Taxonomy-Task-Force/">https://github.com/enisaeu/Reference-Security-Incident-Taxonomy-Task-Force/</a>
+with extensions.</p>
+<dl class="simple">
+<dt>These old values are automatically mapped to the new ones:</dt><dd><p>‘botnet drone’ -&gt; ‘infected-system’
+‘ids alert’ -&gt; ‘ids-alert’
+‘c&amp;c’ -&gt; ‘c2-server’
+‘c2server’ -&gt; ‘c2-server’
+‘infected system’ -&gt; ‘infected-system’
+‘malware configuration’ -&gt; ‘malware-configuration’
+‘Unauthorised-information-access’ -&gt; ‘unauthorised-information-access’
+‘leak’ -&gt; ‘data-leak’
+‘vulnerable client’ -&gt; ‘vulnerable-system’
+‘vulnerable service’ -&gt; ‘vulnerable-system’
+‘ransomware’ -&gt; ‘infected-system’
+‘unknown’ -&gt; ‘undetermined’</p>
+</dd>
+<dt>These old values can not be automatically mapped as they are ambiguous:</dt><dd><p>‘malware’: Either ‘infected-system’ or ‘malware-distribution’</p>
+</dd>
+<dt>Allowed values are:</dt><dd><ul class="simple">
+<li><p>application-compromise</p></li>
+<li><p>backdoor</p></li>
+<li><p>blacklist</p></li>
+<li><p>brute-force</p></li>
+<li><p>burglary</p></li>
+<li><p>c2-server</p></li>
+<li><p>compromised</p></li>
+<li><p>copyright</p></li>
+<li><p>data-loss</p></li>
+<li><p>ddos</p></li>
+<li><p>ddos-amplifier</p></li>
+<li><p>defacement</p></li>
+<li><p>dga domain</p></li>
+<li><p>dos</p></li>
+<li><p>dropzone</p></li>
+<li><p>exploit</p></li>
+<li><p>harmful-speech</p></li>
+<li><p>ids-alert</p></li>
+<li><p>infected-system</p></li>
+<li><p>information-disclosure</p></li>
+<li><p>data-leak</p></li>
+<li><p>malware-configuration</p></li>
+<li><p>malware-distribution</p></li>
+<li><p>masquerade</p></li>
+<li><p>misconfiguration</p></li>
+<li><p>other</p></li>
+<li><p>outage</p></li>
+<li><p>phishing</p></li>
+<li><p>potentially-unwanted-accessible</p></li>
+<li><p>privileged-account-compromise</p></li>
+<li><p>proxy</p></li>
+<li><p>sabotage</p></li>
+<li><p>scanner</p></li>
+<li><p>sniffing</p></li>
+<li><p>social-engineering</p></li>
+<li><p>spam</p></li>
+<li><p>test</p></li>
+<li><p>tor</p></li>
+<li><p>unauthorised-information-access</p></li>
+<li><p>unauthorised-information-modification</p></li>
+<li><p>unauthorized-command</p></li>
+<li><p>unauthorized-login</p></li>
+<li><p>unauthorized-use-of-resources</p></li>
+<li><p>unprivileged-account-compromise</p></li>
+<li><p>violence</p></li>
+<li><p>vulnerable-system</p></li>
+<li><p>weak-crypto</p></li>
+<li><p>undetermined</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="datetime">
+<span id="id7"></span><h2>DateTime<a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h2>
+<p>Date and time type for timestamps.</p>
+<p>Valid values are timestamps with time zone and in the format ‘%Y-%m-%dT%H:%M:%S+00:00’.
+Invalid are missing times and missing timezone information (UTC).
+Microseconds are also allowed.</p>
+<p>Sanitation normalizes the timezone to UTC, which is the only allowed timezone.</p>
+<p>The following additional conversions are available with the convert function:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>timestamp</p></li>
+<li><p>windows_nt: From Windows NT / AD / LDAP</p></li>
+<li><p>epoch_millis: From Milliseconds since Epoch</p></li>
+<li><p>from_format: From a given format, eg. ‘from_format|%H %M %S %m %d %Y %Z’</p></li>
+<li><p>from_format_midnight: Date from a given format and assume midnight, e.g. ‘from_format_midnight|%d-%m-%Y’</p></li>
+<li><p>utc_isoformat: Parse date generated by datetime.isoformat()</p></li>
+<li><p>fuzzy (or None): Use dateutils’ fuzzy parser, default if no specific parser is given</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="fqdn">
+<span id="id8"></span><h2>FQDN<a class="headerlink" href="#fqdn" title="Permalink to this headline">¶</a></h2>
+<p>Fully qualified domain name type.</p>
+<p>All valid lowercase domains are accepted, no IP addresses or URLs. Trailing
+dot is not allowed.</p>
+<p>To prevent values like ‘10.0.0.1:8080’ (#1235), we check for the
+non-existence of ‘:’.</p>
+</div>
+<div class="section" id="float">
+<span id="id9"></span><h2>Float<a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h2>
+<p>Float type. Without sanitation only python float/integer/long is
+accepted. Boolean is explicitly denied.</p>
+<p>Sanitation accepts strings and everything float() accepts.</p>
+</div>
+<div class="section" id="ipaddress">
+<span id="id10"></span><h2>IPAddress<a class="headerlink" href="#ipaddress" title="Permalink to this headline">¶</a></h2>
+<p>Type for IP addresses, all families. Uses the ipaddress module.</p>
+<p>Sanitation accepts integers, strings and objects of ipaddress.IPv4Address and ipaddress.IPv6Address.</p>
+<p>Valid values are only strings. 0.0.0.0 is explicitly not allowed.</p>
+</div>
+<div class="section" id="ipnetwork">
+<span id="id11"></span><h2>IPNetwork<a class="headerlink" href="#ipnetwork" title="Permalink to this headline">¶</a></h2>
+<p>Type for IP networks, all families. Uses the ipaddress module.</p>
+<p>Sanitation accepts strings and objects of ipaddress.IPv4Network and ipaddress.IPv6Network.
+If host bits in strings are set, they will be ignored (e.g 127.0.0.1/32).</p>
+<p>Valid values are only strings.</p>
+</div>
+<div class="section" id="integer">
+<span id="id12"></span><h2>Integer<a class="headerlink" href="#integer" title="Permalink to this headline">¶</a></h2>
+<p>Integer type. Without sanitation only python integer/long is accepted.
+Bool is explicitly denied.</p>
+<p>Sanitation accepts strings and everything int() accepts.</p>
+</div>
+<div class="section" id="json">
+<span id="id13"></span><h2>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p>JSON type.</p>
+<p>Sanitation accepts any valid JSON objects.</p>
+<p>Valid values are only unicode strings with JSON objects.</p>
+</div>
+<div class="section" id="jsondict">
+<span id="id14"></span><h2>JSONDict<a class="headerlink" href="#jsondict" title="Permalink to this headline">¶</a></h2>
+<p>JSONDict type.</p>
+<p>Sanitation accepts pythons dictionaries and JSON strings.</p>
+<p>Valid values are only unicode strings with JSON dictionaries.</p>
+</div>
+<div class="section" id="lowercasestring">
+<span id="id15"></span><h2>LowercaseString<a class="headerlink" href="#lowercasestring" title="Permalink to this headline">¶</a></h2>
+<p>Like string, but only allows lower case characters.</p>
+<p>Sanitation lowers all characters.</p>
+</div>
+<div class="section" id="registry">
+<span id="id16"></span><h2>Registry<a class="headerlink" href="#registry" title="Permalink to this headline">¶</a></h2>
+<p>Registry type. Derived from UppercaseString.</p>
+<p>Only valid values: AFRINIC, APNIC, ARIN, LACNIC, RIPE.
+RIPE-NCC and RIPENCC are normalized to RIPE.</p>
+</div>
+<div class="section" id="string">
+<span id="id17"></span><h2>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
+<p>Any non-empty string without leading or trailing whitespace.</p>
+</div>
+<div class="section" id="tlp">
+<span id="id18"></span><h2>TLP<a class="headerlink" href="#tlp" title="Permalink to this headline">¶</a></h2>
+<p>TLP level type. Derived from UppercaseString.</p>
+<p>Only valid values: WHITE, GREEN, AMBER, RED.</p>
+<p>Accepted for sanitation are different cases and the prefix ‘tlp:’.</p>
+</div>
+<div class="section" id="url">
+<span id="id19"></span><h2>URL<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
+<p>URI type. Local and remote.</p>
+<p>Sanitation converts hxxp and hxxps to http and https.
+For local URIs (file) a missing host is replaced by localhost.</p>
+<p>Valid values must have the host (network location part).</p>
+</div>
+<div class="section" id="uppercasestring">
+<span id="id20"></span><h2>UppercaseString<a class="headerlink" href="#uppercasestring" title="Permalink to this headline">¶</a></h2>
+<p>Like string, but only allows upper case characters.</p>
+<p>Sanitation uppers all characters.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/Logo_Intel_MQ.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">IntelMQ is a solution for IT security teams for collecting and processing security feeds using a message queuing protocol.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=certtools&repo=intelmq&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/upgrade.html">Upgrade instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/configuration-management.html">Configuration and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/bots.html">Bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/intelmqctl.html">intelmqctl documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/feeds.html">Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/FAQ.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/intelmq-api.html">IntelMQ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/intelmq-manager.html">IntelMQ Manager</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/ecosystem.html">IntelMQ Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/ELK-Stack.html">ELK Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/MISP-Integrations.html">MISP integrations in IntelMQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/n6-integrations.html">IntelMQ - n6 Integration</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Developers Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Harmonization field names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-procedure.html">Release procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feeds-wishlist.html">Feeds wishlist</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="guide.html" title="previous chapter">Developers Guide</a></li>
+      <li>Next: <a href="release-procedure.html" title="next chapter">Release procedure</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, cert.at.
+      
+      |
+      <a href="../_sources/dev/harmonization-fields.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
