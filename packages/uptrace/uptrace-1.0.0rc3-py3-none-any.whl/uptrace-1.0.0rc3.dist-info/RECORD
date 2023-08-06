@@ -1,0 +1,15 @@
+uptrace/__init__.py,sha256=V-Fcg6Yvvr8cE_IwXnLMfEnakRyGrLJVXyM1ukekutU,236
+uptrace/client.py,sha256=CEHBdZTXyV5UsSkPLWhU30DEb5MXpeuBjhaRsU51O3c,1257
+uptrace/distro.py,sha256=aM9R2nzcmjaT7IzTu5ad4X7nq7xDwxkU0Ru4fwxbdCc,252
+uptrace/dsn.py,sha256=5Pht_UR_KlI0b_BB14GJgQ7UUI2WhyVUBdoOv135wbg,891
+uptrace/uptrace.py,sha256=Pm4CkTjYeo7k0BELCUNaTHDstcaLGSSMVqSZDtV9ZBY,4047
+uptrace/util.py,sha256=2-lurjvgPACnTSivmJFKPbVQmRuUkt963r2X87tKfTw,106
+uptrace/version.py,sha256=81Yie_OeVG4ULzsktZVNgEaAqVIWpkPrcU9O9AQ3AKY,57
+uptrace/spanexp/__init__.py,sha256=NK7-UzIfuCuwEcGUj6Mkus5y_sHDh3iLw7YpZ5YOR1c,102
+uptrace/spanexp/exporter.py,sha256=ETlpPOiIMpbajLsyX5fpdSVaDG--oDT-qifDiAU3jrw,4114
+uptrace-1.0.0rc3.dist-info/LICENSE,sha256=9ASsiRLBhYb4CCkqvP4owwWtsfgyHVHsybkbT0BLMIU,1322
+uptrace-1.0.0rc3.dist-info/METADATA,sha256=sJVT7zbBkUKdCj0gPD0iSYwS4a7vTaOa-4Gff_AA3Sk,2468
+uptrace-1.0.0rc3.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+uptrace-1.0.0rc3.dist-info/entry_points.txt,sha256=oRmakVWJJ_WC46oBV5IFynXxE-hvo2PUSQQvEPjmzOA,70
+uptrace-1.0.0rc3.dist-info/top_level.txt,sha256=V7vEFLI5v0UMz3M4yZLlTsQqj0KoWsvNEFAyXX2mXoA,8
+uptrace-1.0.0rc3.dist-info/RECORD,,
