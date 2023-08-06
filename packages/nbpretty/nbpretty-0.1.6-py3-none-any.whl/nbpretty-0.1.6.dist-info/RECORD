@@ -1,0 +1,11 @@
+nbpretty/__init__.py,sha256=1F9aZ6s3c1ut4Cvh4itvFrJ7C18XN7l13CJ1PZaO5aA,4207
+nbpretty/course.tpl,sha256=Y7UAtU9rQWFrVpVObjK-8g9eyaOPvXgs9R6chGqz2po,2033
+nbpretty/custom.css,sha256=LHfRrZmRh9S94KshrDkkvGltcgD1khmfoi7v6hZ0PtY,1727
+nbpretty/preprocessors.py,sha256=7YwYSEbmqGEqJ7UCBWyWAse0wXCtP5bmXxVIdgpKYVc,7429
+nbpretty/toc.py,sha256=3XOoABH8Mnp_j8asAc4lxzoZVaeKjBsweaqummRPvig,4132
+nbpretty/utils.py,sha256=_xVNXovHCHXfupWHTdinA9K1ucayma0C9KvG-kIF5Rw,584
+nbpretty-0.1.6.dist-info/entry_points.txt,sha256=GmpNwzLWSF5ZMjNmSQRRiasY9eCpVqXC1D4TUalNM80,42
+nbpretty-0.1.6.dist-info/LICENSE,sha256=4rpwTZssoBfDVKTm6PKfKI25ysoRoBORShbxy3EAdjc,1070
+nbpretty-0.1.6.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+nbpretty-0.1.6.dist-info/METADATA,sha256=2-K3MUIkFVdmoWyVzje2B8KqvuCrKBWx0APOA4ioCCM,1053
+nbpretty-0.1.6.dist-info/RECORD,,
