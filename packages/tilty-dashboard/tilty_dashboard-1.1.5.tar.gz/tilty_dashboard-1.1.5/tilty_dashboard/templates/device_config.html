@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+          var socket = io.connect('http://' + document.domain + ':' + location.port + '/');
+          var start_time;
+          window.setInterval(function() {
+              start_time = (new Date).getTime();
+              socket.emit('refresh');
+          }, 2000);
+          $('form#device-config').submit(function(event) {
+              socket.emit(
+                'save device config',
+                {
+                  data: {
+                    config: $('textarea#device-config').val()
+                  }
+                }
+              );
+              window.location = "/";
+              return false;
+          });
+      });
+    </script>
+{% endblock %}
+{% block content %}
+        <div class="container" id="config">
+          <h2>Tilt Config</h2>
+          <form id="device-config" method="POST" action='#'>
+            <div class="form-group">
+              <div class="form-group">
+                <label for="device-config">Config Reference <a href="https://github.com/myoung34/tilty#usage">here</a></label>
+                <textarea class="form-control" id="device-config" rows="20">{{ tilty_config }}</textarea>
+              </div>
+            <button type="submit" class="btn btn-default" value="save">Save</button>
+          </form>
+        </div>
+{% endblock %}
