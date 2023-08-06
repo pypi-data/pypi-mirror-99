@@ -1,0 +1,3 @@
+Ce dossier contient les fichiers templates.
+
+Il est possible d'écraser le template en gardant le même nom avec les mêmes structures...
