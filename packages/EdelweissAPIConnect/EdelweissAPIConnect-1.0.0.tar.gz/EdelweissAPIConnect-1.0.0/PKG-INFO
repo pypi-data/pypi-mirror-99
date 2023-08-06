@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: EdelweissAPIConnect
+Version: 1.0.0
+Summary: APIs to trade from Edelweiss
+Home-page: https://www.edelweiss.in/
+Author: Edelweiss
+Author-email: support@edelweissfin.com
+License: MIT
+Download-URL: https://emtuat.edelweiss.in/exe/app/library/EdelweissAPIConnect.tar.gz
+Description: UNKNOWN
+Keywords: Edelweiss,Open API,Trade,Edelweiss Python Library
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
