@@ -1,0 +1,18 @@
+Quickstart
+**********
+
+TODO
+
+spec_hostname.py
+
+   from moonspec.api import *
+
+
+   @capture(roles=['server'])
+   def capture_hostname():
+       return api.host.name()
+
+
+   @spec(roles=['server'])
+   def it_has_expected_hostname():
+       fact('hostname').should_equal('some_hostname')
