@@ -1,0 +1,11 @@
+remedy_py/RemedyAPIClient.py,sha256=Kpbsl0UR2trFAS2aCJlRaiJHlmpcEMHE8f_RJreNh4g,9208
+remedy_py/RemedyConstants.py,sha256=jpFvzUpcBA3MsetTpbtsHT0eSbFyXHu_PrwkvzYDdAE,1371
+remedy_py/__init__.py,sha256=M0NZuQ7-112l8K2h1eayVvSmvQrufrOcD5AYKgIf_Is,1
+remedy_py/test.py,sha256=8yVdpLGT_ClkuLPOQBMiW0tQ5d4OaXg3kSjaL_AOA3g,1816
+remedy_py/interface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remedy_py/interface/remedy_api.py,sha256=Iy4dCMC1sqwxmkuL5x3_58Mn4ljI5q5mmVYK7OAul0I,2714
+remedy_py-1.0.0.dist-info/LICENSE.txt,sha256=s7kXjGSYD1P8fVQ2STzmy8FszPW4AGbPUusLVbXna9k,1062
+remedy_py-1.0.0.dist-info/METADATA,sha256=uTDZ3LTWduT-GgefZOEwXFiV6xY6HCPy_vsZHE3ZSmo,2887
+remedy_py-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+remedy_py-1.0.0.dist-info/top_level.txt,sha256=pjiJ5L4CMf88l2UfXPZsfBjPn35c11suoUjHsmSFh_M,10
+remedy_py-1.0.0.dist-info/RECORD,,
