@@ -1,0 +1,78 @@
+<!---
+# Modifications © 2020 Hashmap, Inc
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+
+# Servz
+##  Machine Learning Model Serving
+
+This library is a pre-alpha right now
+
+The intent of this package is to provide a machine learning deplpoyment layer for model predictions.
+
+## Features
+* pipeline driven  
+*  deployment via task runner
+*  deployment via flask or other endpoint
+*  MLFlow based deployment
+*  Seldon deployment (in progress)
+
+## Pipeline formats
+
+### Pipeline Composer
+Appends all the pipelines from the yaml file(s)
+
+```buildoutcfg
+"pipelines": self._pipelines
+
+return [self.__build_flow(pipeline) for pipeline in flows['pipelines']]
+
+self._pipelines.append(pipeline)
+```
+
+### Artifact Builder
+
+```buildoutcfg
+"artifact": self._workflows
+
+_res = self._build(pipelines=kwargs.get('packager'))
+
+results = [self._compile_workflow(pipe) for pipe in pipelines]
+        self._workflows = pipelines
+
+for task in pipe['workflow']:
+    do stuff
+success = self.__build_prefect_flow()
+return {
+            'success': success,
+        }
+```
+
+### Endpoint Appender
+
+### Packager
+
+### Package Publisher
+
+## structure
+````
+/core - core files for servz
+/orchestration_artifact_builder - artifact packager
+/orchestration_artifact_deployer - deployment runner
+/packager - manifest packager
+/pipeline - loading and validation of serving pipeline
+/server_templates - artifacts for artifact builder to construct endpoints
+/tests - unit tests and e2e tests
+
+```
