@@ -1,0 +1,384 @@
+# Getting Started with MdNotes
+
+## Getting Started
+
+### Introduction
+
+API for Markdown Notes app.
+
+### Install the Package
+
+The package is compatible with Python versions `2 >=2.7.9` and `3 >=3.4`.
+Install the package from PyPi using the following pip command:
+
+```python
+pip install Md-Notes-api==1.0.0
+```
+
+You can also view the package at:
+https://pypi.python.org/pypi/Md-Notes-api
+
+### Initialize the API Client
+
+The following parameters are configurable for the API Client:
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `o_auth_client_id` | `string` | OAuth 2 Client ID |
+| `o_auth_redirect_uri` | `string` | OAuth 2 Redirection endpoint or Callback Uri |
+| `environment` | Environment | The API environment. <br> **Default: `Environment.PRODUCTION`** |
+| `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
+| `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 3** |
+| `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 0** |
+
+The API client can be initialized as follows:
+
+```python
+from mdnotes.mdnotes_client import MdnotesClient
+from mdnotes.configuration import Environment
+
+client = MdnotesClient(
+    o_auth_client_id='OAuthClientId',
+    o_auth_redirect_uri='OAuthRedirectUri',
+    environment = Environment.PRODUCTION,)
+```
+
+You must now authorize the client.
+
+### Authorization
+
+Your application must obtain user authorization before it can execute an endpoint call. The SDK uses *OAuth 2.0 Implicit Grant* to obtain a user's consent to perform an API request on user's behalf.
+
+This process requires the presence of a client-side JavaScript code on the redirect URI page to receive the *access token* after the consent step is completed.
+
+#### 1- Obtain user consent
+
+To obtain user's consent, you must redirect the user to the authorization page. The `get_authorization_url()` method creates the URL to the authorization page.
+
+```python
+auth_url = client.auth.get_authorization_url()
+```
+
+#### 2- Handle the OAuth server response
+
+Once the user responds to the consent request, the OAuth 2.0 server responds to your application's access request by redirecting the user to the redirect URI specified set in `Configuration`.
+
+The redirect URI will receive the *access token* as the `token` argument in the URL fragment.
+
+```
+https://example.com/oauth/callback#token=XXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+The access token must be extracted by the client-side JavaScript code. The access token can be used to authorize any further endpoint calls by the JavaScript code.
+
+## Client Class Documentation
+
+### MdNotes Client
+
+The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
+
+### Controllers
+
+| Name | Description |
+|  --- | --- |
+| service | Gets ServiceController |
+| user | Gets UserController |
+
+## API Reference
+
+### List of APIs
+
+* [Service](#service)
+* [User](#user)
+
+### Service
+
+#### Overview
+
+##### Get instance
+
+An instance of the `ServiceController` class can be accessed from the API Client.
+
+```
+service_controller = client.service
+```
+
+#### Get Status
+
+```python
+def get_status(self)
+```
+
+##### Response Type
+
+[`ServiceStatus`](#service-status)
+
+##### Example Usage
+
+```python
+result = service_controller.get_status()
+```
+
+### User
+
+#### Overview
+
+##### Get instance
+
+An instance of the `UserController` class can be accessed from the API Client.
+
+```
+user_controller = client.user
+```
+
+#### Get User
+
+```python
+def get_user(self)
+```
+
+##### Response Type
+
+[`User`](#user-1)
+
+##### Example Usage
+
+```python
+result = user_controller.get_user()
+```
+
+## Model Reference
+
+### Structures
+
+* [Note](#note)
+* [User](#user-1)
+* [Service Status](#service-status)
+* [O Auth Token](#o-auth-token)
+
+#### Note
+
+##### Class Name
+
+`Note`
+
+##### Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `long|int` | Required | - |
+| `title` | `string` | Required | - |
+| `body` | `string` | Required | - |
+| `user_id` | `long|int` | Required | - |
+| `created_at` | `string` | Required | - |
+| `updated_at` | `string` | Required | - |
+
+##### Example (as JSON)
+
+```json
+{
+  "id": 112,
+  "title": "title4",
+  "body": "body6",
+  "user_id": 208,
+  "created_at": "created_at2",
+  "updated_at": "updated_at4"
+}
+```
+
+#### User
+
+##### Class Name
+
+`User`
+
+##### Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `int` | Required | - |
+| `name` | `string` | Required | - |
+| `email` | `string` | Required | - |
+| `created_at` | `string` | Required | - |
+| `updated_at` | `string` | Required | - |
+
+##### Example (as JSON)
+
+```json
+{
+  "id": 112,
+  "name": "name0",
+  "email": "email6",
+  "created_at": "created_at2",
+  "updated_at": "updated_at4"
+}
+```
+
+#### Service Status
+
+##### Class Name
+
+`ServiceStatus`
+
+##### Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `app` | `string` | Required | - |
+| `moto` | `string` | Required | - |
+| `notes` | `int` | Required | - |
+| `users` | `int` | Required | - |
+| `time` | `string` | Required | - |
+| `os` | `string` | Required | - |
+| `php_version` | `string` | Required | - |
+| `status` | `string` | Required | - |
+
+##### Example (as JSON)
+
+```json
+{
+  "app": "app2",
+  "moto": "moto8",
+  "notes": 134,
+  "users": 202,
+  "time": "time0",
+  "os": "os8",
+  "php_version": "php_version4",
+  "status": "status8"
+}
+```
+
+#### O Auth Token
+
+OAuth 2 Authorization endpoint response
+
+##### Class Name
+
+`OAuthToken`
+
+##### Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `access_token` | `string` | Required | Access token |
+| `token_type` | `string` | Required | Type of access token |
+| `expires_in` | `long|int` | Optional | Time in seconds before the access token expires |
+| `scope` | `string` | Optional | List of scopes granted<br>This is a space-delimited list of strings. |
+| `expiry` | `long|int` | Optional | Time of token expiry as unix timestamp (UTC) |
+
+##### Example (as JSON)
+
+```json
+{
+  "access_token": "access_token8",
+  "token_type": "token_type2",
+  "expires_in": null,
+  "scope": null,
+  "expiry": null
+}
+```
+
+### Enumerations
+
+* [O Auth Provider Error](#o-auth-provider-error)
+
+#### O Auth Provider Error
+
+OAuth 2 Authorization error codes
+
+##### Class Name
+
+`OAuthProviderErrorEnum`
+
+##### Fields
+
+| Name | Description |
+|  --- | --- |
+| `INVALID_REQUEST` | The request is missing a required parameter, includes an unsupported parameter value (other than grant type), repeats a parameter, includes multiple credentials, utilizes more than one mechanism for authenticating the client, or is otherwise malformed. |
+| `INVALID_CLIENT` | Client authentication failed (e.g., unknown client, no client authentication included, or unsupported authentication method). |
+| `INVALID_GRANT` | The provided authorization grant (e.g., authorization code, resource owner credentials) or refresh token is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client. |
+| `UNAUTHORIZED_CLIENT` | The authenticated client is not authorized to use this authorization grant type. |
+| `UNSUPPORTED_GRANT_TYPE` | The authorization grant type is not supported by the authorization server. |
+| `INVALID_SCOPE` | The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner. |
+
+### Exceptions
+
+* [O Auth Provider](#o-auth-provider)
+
+#### O Auth Provider
+
+OAuth 2 Authorization endpoint exception
+
+##### Class Name
+
+`OAuthProviderException`
+
+##### Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `error` | [`OAuthProviderErrorEnum`](#o-auth-provider-error) | Required | Error code |
+| `error_description` | `string` | Optional | Human-readable text providing additional information on error.<br>Used to assist the client developer in understanding the error that occurred. |
+| `error_uri` | `string` | Optional | A URI identifying a human-readable web page with information about the error, used to provide the client developer with additional information about the error |
+
+##### Example (as JSON)
+
+```json
+{
+  "error": "invalid_request",
+  "error_description": null,
+  "error_uri": null
+}
+```
+
+## Utility Classes Documentation
+
+### ApiHelper
+
+A utility class for processing API Calls. Also contains classes for supporting standard datetime formats.
+
+#### Methods
+
+| Name | Description |
+|  --- | --- |
+| json_deserialize | Deserializes a JSON string to a Python dictionary. |
+
+#### Classes
+
+| Name | Description |
+|  --- | --- |
+| HttpDateTime | A wrapper for datetime to support HTTP date format. |
+| UnixDateTime | A wrapper for datetime to support Unix date format. |
+| RFC3339DateTime | A wrapper for datetime to support RFC3339 format. |
+
+## Common Code Documentation
+
+### HttpResponse
+
+Http response received.
+
+#### Parameters
+
+| Name | Type | Description |
+|  --- | --- | --- |
+| status_code | int | The status code returned by the server. |
+| reason_phrase | str | The reason phrase returned by the server. |
+| headers | dict | Response headers. |
+| text | str | Response body. |
+| request | HttpRequest | The request that resulted in this response. |
+
+### HttpRequest
+
+Represents a single Http Request.
+
+#### Parameters
+
+| Name | Type | Tag | Description |
+|  --- | --- | --- | --- |
+| http_method | HttpMethodEnum |  | The HTTP method of the request. |
+| query_url | str |  | The endpoint URL for the API request. |
+| headers | dict | optional | Request headers. |
+| query_parameters | dict | optional | Query parameters to add in the URL. |
+| parameters | dict &#124; str | optional | Request body, either as a serialized string or else a list of parameters to form encode. |
+| files | dict | optional | Files to be sent with the request. |
+
