@@ -1,0 +1,15 @@
+six
+sqlalchemy
+
+[:python_version < "3"]
+pathlib
+
+[maria]
+pymysql
+
+[pendulum]
+pendulum
+relativedelta
+
+[pg]
+psycopg2
