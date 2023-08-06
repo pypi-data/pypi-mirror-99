@@ -1,0 +1,8 @@
+README.md
+setup.py
+masksemi/__init__.py
+masksemi/masksemi.py
+masksemi.egg-info/PKG-INFO
+masksemi.egg-info/SOURCES.txt
+masksemi.egg-info/dependency_links.txt
+masksemi.egg-info/top_level.txt
