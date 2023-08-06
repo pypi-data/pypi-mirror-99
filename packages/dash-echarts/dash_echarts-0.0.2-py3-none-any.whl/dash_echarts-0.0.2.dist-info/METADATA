@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dash-echarts
+Version: 0.0.2
+Summary: echarts for dash
+Home-page: UNKNOWN
+Author: dameng <pingf0@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+Requires-Dist: dash
+
+UNKNOWN
+
+
