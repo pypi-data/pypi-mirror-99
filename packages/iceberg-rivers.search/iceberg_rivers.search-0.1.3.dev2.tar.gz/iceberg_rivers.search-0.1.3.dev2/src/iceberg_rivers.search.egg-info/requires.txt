@@ -1,0 +1,11 @@
+numpy
+scipy
+tifffile
+keras==2.2.0
+tensorflow-gpu==1.7.0
+opencv-python
+rasterio
+affine
+gdal==3.0.4
+scikit-image
+scikit-learn
