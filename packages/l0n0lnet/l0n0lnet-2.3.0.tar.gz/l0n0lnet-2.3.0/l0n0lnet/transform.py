@@ -1,0 +1,91 @@
+from l0n0lnet.tcp import base_client, base_server
+from l0n0lnet.tcp import session_read_size, close_tcp, get_ip_port
+from l0n0lnet.stream_parser import stream_parser
+
+class trans_server(base_server):
+    def __init__(self, ip: bytes, port: int, tip: bytes, tport: int, key: bytes, role: str):
+        super().__init__(ip, port)
+        self.tip = tip
+        self.tport = tport
+        self.key = key
+        self.clients = {}
+        self.role = role
+        self.counter = 1000
+        self.parser = stream_parser()
+        self.parser.set_password(key)
+
+    def on_session_connected(self, session_id):
+        self.clients[session_id] = trans_server_client(
+            self, self.tip, self.tport, session_id)
+
+    def on_session_disconnected(self, session_id):
+        client: trans_server_client = self.clients.get(session_id)
+        if not client:
+            return
+        client.on_session_disconnected()
+
+    def on_session_read(self, session_id, data, size):
+        client: trans_server_client = self.clients.get(session_id)
+        if not client:
+            return
+        if self.role == "client":
+            self.parser.encrypt(data)
+        elif self.role == "server":
+            self.parser.decrypt(data)
+        client.on_request(data)
+
+    def on_response(self, session_id, data):
+        if self.role == "client":
+            self.parser.decrypt(data)
+        elif self.role == "server":
+            self.parser.encrypt(data)
+        self.send_msg(session_id, data)
+
+    def on_client_disconnected(self, session_id):
+        del self.clients[session_id]
+        close_tcp(session_id)
+
+    def on_client_connect_failed(self, session_id):
+        del self.clients[session_id]
+        close_tcp(session_id)
+
+
+class trans_server_client(base_client):
+    def __init__(self, owner: trans_server, ip: bytes, port: int, session_id: int):
+        super().__init__(ip, port)
+        self.owner = owner
+        self.session_id = session_id
+        self.connected = False
+        self.cache = b''
+
+    def on_connected(self):
+        self.connected = True
+        if len(self.cache) > 0:
+            self.send_msg(self.cache)
+            self.cache = b''
+
+    def on_connect_failed(self):
+        if not self.owner:
+            return
+        self.owner.on_client_connect_failed(self.session_id)
+
+    def on_disconnected(self):
+        if not self.owner:
+            return
+        self.owner.on_client_disconnected(self.session_id)
+
+    def on_read(self, data, size):
+        if not self.owner:
+            return
+        self.owner.on_response(self.session_id, data)
+
+    def on_request(self, data):
+        if not self.connected:
+            self.cache += data
+            return
+        self.send_msg(data)
+
+    def on_session_disconnected(self):
+        self.close()
+        self.owner = None
+        self.session_id = None
