@@ -1,0 +1,67 @@
+Config.MISC = {
+    'tilers': [
+        'Vertical',
+        'Horizontal',
+        'HorizontalRows',
+        'Maximal',
+        'Cascade'
+    ],
+    'global_tiling': True,
+    'timeout': 0.1,
+    'decorations': True,
+    'original_decor': True,
+}
+
+Config.KEYMAP = {
+    'Super-A': 'tile.default',
+    'Super-U': 'untile',
+    'Super-Z': 'cycle_tiler',
+    'Super-R': 'reload',
+    'Super-Down': 'master_decrease',
+    'Super-Up': 'master_increase',
+    'Super-plus': 'add_master',
+    'Super-minus': 'remove_master',
+    'Super-Right': 'switch_previous',
+    'Super-Left': 'switch_next',
+}
+
+Config.FILTER = [
+    'gmrun', 'gimp', 'download',
+]
+
+Config.LAYOUT = {
+    'Vertical': {
+        'width_factor': 0.5,
+        'margin': 24,
+        'internal_margin': 12
+    },
+
+    'Horizontal': {
+        'height_factor': 0.5,
+        'margin': 24,
+        'internal_margin': 12
+    },
+
+    'Maximal': {
+        'margin': 24
+    },
+
+    'Cascade': {
+        'decoration_height': 25,
+        'width_factor': 1.0,
+        'height_factor': 1.0,
+        'push_over': 0,
+        'horz_align': 'left',
+    },
+
+    'HorizontalRows': {
+        'height_factor': 0.5,
+        'row_size': 2,
+        'margin': 24,
+        'internal_margin': 12
+    },
+}
+
+Config.TILING = {
+    'default': 'Vertical',
+}
