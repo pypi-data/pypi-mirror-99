@@ -1,0 +1,5 @@
+[console_scripts]
+changelogparser = deptools.changelogparser:main
+deploy = deptools.deploy:main
+runclangformat = deptools.runclangformat:main
+
