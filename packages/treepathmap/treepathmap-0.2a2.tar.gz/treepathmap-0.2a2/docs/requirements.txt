@@ -1,0 +1,6 @@
+sphinx>=1.4
+pandas
+treenodedefinition
+doctestprinter
+trashpanda
+sphinxcontrib-plantuml
