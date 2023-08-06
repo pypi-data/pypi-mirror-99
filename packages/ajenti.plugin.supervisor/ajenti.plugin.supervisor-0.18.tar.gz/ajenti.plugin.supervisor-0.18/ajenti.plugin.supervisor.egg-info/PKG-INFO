@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.supervisor
+Version: 0.18
+Summary: Supervisor
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Supervisor plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
