@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyswEOS
+Version: 0.2.2
+Summary: Python API of swEOS library which is designed to calculate EOS and thermal dynamic properties of H2O-NaCl system, usually called salt water.
+Home-page: https://www.sweos.info
+Author: Zhikui Guo
+Author-email: zguo@geomar.de
+Maintainer: Zhikui Guo
+Maintainer-email: zguo@geomar.de
+License: UNKNOWN
+Keywords: NaCl H2O IAPWS Hydrothermal seawater
+Platform: UNKNOWN
+Requires-Python: ==3.8
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: argparse
+Requires-Dist: colored
+
+pyswEOS
+============
+
+    A Python interface for swEOS - Salt-Water (H2O-NaCl) Equation of State.
+
+`Documentation (development version) <https://www.sweos.info/doxygen>`__ |
+`Contact <https://www.sweos.info>`__ |
+`Try Online <https://mybinder.org/v2/gh/zguoch/saltwatereos.git/HEAD>`__
+
+
+.. placeholder-for-doc-index
+
+.. image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/zguoch/saltwatereos.git/HEAD
+
