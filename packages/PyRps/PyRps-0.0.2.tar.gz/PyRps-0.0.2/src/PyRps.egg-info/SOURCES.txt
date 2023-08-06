@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+src/Core/Match.py
+src/Core/RpsCore.py
+src/Core/__init__.py
+src/Core/Types/Card.py
+src/Core/Types/Player.py
+src/Core/Types/__init__.py
+src/PyRps.egg-info/PKG-INFO
+src/PyRps.egg-info/SOURCES.txt
+src/PyRps.egg-info/dependency_links.txt
+src/PyRps.egg-info/top_level.txt
