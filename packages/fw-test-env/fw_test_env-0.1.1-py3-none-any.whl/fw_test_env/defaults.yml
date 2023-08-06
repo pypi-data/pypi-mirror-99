@@ -1,0 +1,179 @@
+# yamllint disable-file
+_references:
+  password: guest
+  password_hash: &password_hash $argon2id$v=19$m=102400,t=2,p=8$eSlfc73dYp0SjbxZpVigXw$tihzCqzzsqaMKw8cwJlxPA
+  drone_secret: &drone_secret change-me
+  storage_provider_id: &storage_provider_id !ObjectId
+  compute_provider_id: &compute_provider_id !ObjectId
+  admin_role_id: &admin_role_id !ObjectId
+  read_write_role_id: &read_write_role_id !ObjectId
+  read_only_role_id: &read_only_role_id !ObjectId
+  device_id: &device_id !ObjectId
+  admin_uid: &admin_uid admin@flywheel.test
+  dev_uid: &dev_uid dev@flywheel.test
+  user_uid: &user_uid user@flywheel.test
+  device_apikey: &device_apikey device-apikey
+  admin_apikey: &admin_apikey admin-apikey
+  dev_apikey: &dev_apikey dev-apikey
+  user_apikey: &user_apikey user-apikey
+  group_id: &group_id group
+  group_perms: &group_perms
+    - {_id: *admin_uid, access: admin}
+    - {_id: *dev_uid, access: rw}
+    - {_id: *user_uid, access: ro}
+  project_id: &project_id !ObjectId
+  subject_id: &subject_id !ObjectId
+  session_id: &session_id !ObjectId
+  acquisition_id: &acquisition_id !ObjectId
+  container_perms: &container_perms
+    - {_id: *admin_uid, role_ids: [*admin_role_id]}
+    - {_id: *dev_uid, role_ids: [*read_write_role_id]}
+    - {_id: *user_uid, role_ids: [*read_only_role_id]}
+
+singletons:
+  - _id: site
+    providers: {compute: *compute_provider_id, storage: *storage_provider_id}
+  - _id: config
+    core: {drone_secret: *drone_secret, access_log_enabled: False}
+    site: {}
+    auth: {basic: {}}
+    features: {unsafe_login: true}
+    persistent: {elasticsearch_host: "elasticsearch:9200"}
+
+providers:
+  - _id: *storage_provider_id
+    label: Primary Storage
+    provider_class: storage
+  - _id: *compute_provider_id
+    label: Static Compute
+    provider_class: compute
+    provider_type: static
+
+roles:
+  - _id: *admin_role_id
+    label: admin
+    default_flywheel_role: admin
+    actions: !split analyses_create_job analyses_create_sdk analyses_delete analyses_modify_metadata analyses_view_metadata containers_create_hierarchy containers_delete_hierarchy containers_delete_project containers_modify_metadata containers_view_metadata data_views_manage data_views_view files_create_upload files_delete_device_data files_delete_non_device_data files_download files_modify_metadata files_view_contents files_view_metadata gear_rules_manage gear_rules_view jobs_cancel_any jobs_run_cancel jobs_view notes_manage notes_view project_permissions_manage project_permissions_view session_templates_manage session_templates_view tags_manage tags_view
+  - _id: *read_write_role_id
+    label: read_write
+    default_flywheel_role: rw
+    actions: !split analyses_create_job analyses_create_sdk analyses_delete analyses_modify_metadata analyses_view_metadata containers_create_hierarchy containers_delete_hierarchy containers_modify_metadata containers_view_metadata data_views_manage data_views_view files_create_upload files_delete_device_data files_delete_non_device_data files_download files_modify_metadata files_view_contents files_view_metadata gear_rules_view jobs_run_cancel jobs_view notes_manage notes_view project_permissions_view session_templates_manage session_templates_view tags_manage tags_view
+  - _id: *read_only_role_id
+    label: read_only
+    default_flywheel_role: ro
+    actions: !split analyses_view_metadata containers_view_metadata data_views_view files_download files_view_contents files_view_metadata gear_rules_view jobs_view notes_view project_permissions_view session_templates_view tags_view
+
+modalities:
+  - _id: MR
+    description: Magnetic Resonance
+    classification:
+      Features: !split Quantitative Multi-Shell Multi-Echo Multi-Flip Multi-Band Steady-State 3D Compressed-Sensing Eddy-Current-Corrected Fieldmap-Corrected Gradient-Unwarped Motion-Corrected Physio-Corrected Derived In-Plane Phase Magnitude 2D AAscout Spin-Echo Gradient-Echo EPI WASSR FAIR FAIREST PASL EPISTAR PICORE pCASL MPRAGE MP2RAGE FLAIR SWI QSM RMS DTI DSI DKI HARDI NODDI Water-Reference Transmit-Reference SBRef Uniform Singlerep QC TRACE FA MIP Navigator Contrast-Agent Phase-Contrast TOF VASO iVASO DSC DCE Task Resting-State PRESS STEAM M0 Phase-Reversed Spiral SPGR Control Label
+      Intent: !split Localizer Shim Calibration Fieldmap Structural Functional Screenshot Non-Image Spectroscopy
+      Measurement: !split B0 B1 T1 T2 T2* PD MT Perfusion Diffusion Susceptibility Fingerprinting MRA CEST T1rho SVS CSI EPSI BOLD Phoenix
+  - {_id: CT, description: Computed Tomography}
+  - {_id: PET}
+  - {_id: US, description: Ultrasound}
+  - {_id: EEG}
+  - {_id: iEEG}
+  - {_id: X-ray}
+  - {_id: ECG, description: Electrocardiography}
+  - {_id: MEG}
+  - {_id: NIRS}
+  - {_id: AR, description: Autorefraction}
+  - {_id: ASMT, description: Content Assessment Results}
+  - {_id: AU, description: Audio}
+  - {_id: BDUS, description: Bone Densitometry (ultrasound)}
+  - {_id: BI, description: Biomagnetic imaging}
+  - {_id: BMD, description: Bone Densitometry (X-Ray)}
+  - {_id: CR, description: Computed Radiography}
+  - {_id: CTPROTOCOL, description: CT Protocol (Performed)}
+  - {_id: DG, description: Diaphanography}
+  - {_id: DOC, description: Document}
+  - {_id: DX, description: Digital Radiography}
+  - {_id: EPS, description: Cardiac Electrophysiology}
+  - {_id: ES, description: Endoscopy}
+  - {_id: FID, description: Fiducials}
+  - {_id: GM, description: General Microscopy}
+  - {_id: HC, description: Hard Copy}
+  - {_id: HD, description: Hemodynamic Waveform}
+  - {_id: IO, description: Intra-Oral Radiography}
+  - {_id: IOL, description: Intraocular Lens Data}
+  - {_id: IVOCT, description: Intravascular Optical Coherence Tomography}
+  - {_id: IVUS, description: Intravascular Ultrasound}
+  - {_id: KER, description: Keratometry}
+  - {_id: KO, description: Key Object Selection}
+  - {_id: LEN, description: Lensometry}
+  - {_id: LS, description: Laser surface scan}
+  - {_id: MG, description: Mammography}
+  - {_id: NM, description: Nuclear Medicine}
+  - {_id: OAM, description: Ophthalmic Axial Measurements}
+  - {_id: OCT, description: Optical Coherence Tomography (non-Ophthalmic)}
+  - {_id: OP, description: Ophthalmic Photography}
+  - {_id: OPM, description: Ophthalmic Mapping}
+  - {_id: OPT, description: Ophthalmic Tomography}
+  - {_id: OPV, description: Ophthalmic Visual Field}
+  - {_id: OSS, description: Optical Surface Scan}
+  - {_id: OT, description: Other}
+  - {_id: PLAN, description: Plan}
+  - {_id: PR, description: Presentation State}
+  - {_id: PT, description: Positron emission tomography (PET)}
+  - {_id: PX, description: Panoramic X-Ray}
+  - {_id: REG, description: Registration}
+  - {_id: RESP, description: Respiratory Waveform}
+  - {_id: RF, description: Radio Fluoroscopy}
+  - {_id: RG, description: Radiographic imaging (conventional film/screen)}
+  - {_id: RTDOSE, description: Radiotherapy Dose}
+  - {_id: RTIMAGE, description: Radiotherapy Image}
+  - {_id: RTPLAN, description: Radiotherapy Plan}
+  - {_id: RTRECORD, description: RT Treatment Record}
+  - {_id: RTSTRUCT, description: Radiotherapy Structure Set}
+  - {_id: RWV, description: Real World Value Map}
+  - {_id: SEG, description: Segmentation}
+  - {_id: SM, description: Slide Microscopy}
+  - {_id: SMR, description: Stereometric Relationship}
+  - {_id: SR, description: SR Document}
+  - {_id: SRF, description: Subjective Refraction}
+  - {_id: STAIN, description: Automated Slide Stainer}
+  - {_id: TG, description: Thermography}
+  - {_id: VA, description: Visual Acuity}
+  - {_id: XA, description: X-Ray Angiography}
+  - {_id: XC, description: External-camera Photography}
+  - {_id: AS, description: Angioscopy, active: false}
+  - {_id: CD, description: Color flow Doppler, active: false}
+  - {_id: CF, description: Cinefluorography, active: false}
+  - {_id: CP, description: Culposcopy, active: false}
+  - {_id: CS, description: Cystoscopy, active: false}
+  - {_id: DD, description: Duplex Doppler, active: false}
+  - {_id: DF, description: Digital fluoroscopy, active: false}
+  - {_id: DM, description: Digital microscopy, active: false}
+  - {_id: DS, description: Digital Subtraction Angiography, active: false}
+  - {_id: EC, description: Echocardiography, active: false}
+  - {_id: FA, description: Fluorescein angiography, active: false}
+  - {_id: FS, description: Fundoscopy, active: false}
+  - {_id: LP, description: Laparoscopy, active: false}
+  - {_id: MA, description: Magnetic resonance angiography, active: false}
+  - {_id: MS, description: Magnetic resonance spectroscopy, active: false}
+  - {_id: OPR, description: Ophthalmic Refraction, active: false}
+  - {_id: ST, description: Single-photon emission computed tomography (SPECT), active: false}
+  - {_id: VF, description: Videofluorography, active: false}
+
+devices: [{_id: *device_id, label: device, type: device, name: device}]
+
+users:
+  - {_id: *admin_uid, roles: [site_admin], password_hash: *password_hash}
+  - {_id: *dev_uid, roles: [developer], password_hash: *password_hash}
+  - {_id: *user_uid, roles: [user], password_hash: *password_hash}
+
+apikeys:
+  - {_id: *device_apikey, type: device, origin: {type: device, id: *device_id}}
+  - {_id: *admin_apikey, origin: {type: user, id: *admin_uid}}
+  - {_id: *dev_apikey, origin: {type: user, id: *dev_uid}}
+  - {_id: *user_apikey, origin: {type: user, id: *user_uid}}
+
+groups:
+  - {_id: unknown, label: Unknown, permissions: []}
+  - {_id: *group_id, label: group, permissions: *group_perms}
+projects: [{_id: *project_id, label: project, permissions: *container_perms}]
+subjects: [{_id: *subject_id, label: subject, permissions: *container_perms}]
+sessions: [{_id: *session_id, label: session, permissions: *container_perms}]
+acquisitions: [{_id: *acquisition_id, label: acquisition, permissions: *container_perms}]
