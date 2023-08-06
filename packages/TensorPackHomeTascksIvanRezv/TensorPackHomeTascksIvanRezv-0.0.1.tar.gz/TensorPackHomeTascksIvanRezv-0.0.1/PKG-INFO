@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TensorPackHomeTascksIvanRezv
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/IvanRezv/HT_T
+Author: Ivan Rezvetsov
+Author-email: ivanrezv@icloud.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/IvanRezv/HT_Ts
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

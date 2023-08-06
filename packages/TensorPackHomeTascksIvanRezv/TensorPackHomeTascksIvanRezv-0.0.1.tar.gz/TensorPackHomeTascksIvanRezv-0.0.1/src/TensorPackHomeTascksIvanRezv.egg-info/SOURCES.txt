@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/TensorPackHomeTascksIvanRezv.egg-info/PKG-INFO
+src/TensorPackHomeTascksIvanRezv.egg-info/SOURCES.txt
+src/TensorPackHomeTascksIvanRezv.egg-info/dependency_links.txt
+src/TensorPackHomeTascksIvanRezv.egg-info/top_level.txt
+src/example_pkg/__init__.py
+src/example_pkg/main.py
