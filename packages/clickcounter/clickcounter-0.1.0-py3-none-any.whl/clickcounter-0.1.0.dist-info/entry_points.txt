@@ -1,0 +1,3 @@
+[console_scripts]
+clickcounter=clickcounter._cli:cli
+
