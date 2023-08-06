@@ -1,0 +1,9 @@
+click
+pandas
+pycurl
+statsmodels
+scipy
+seaborn
+sqlalchemy
+nbformat
+nbconvert
