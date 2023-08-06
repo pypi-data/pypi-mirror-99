@@ -1,0 +1,9 @@
+README
+setup.py
+quicklock3/__init__.py
+quicklock3/quicklock3.py
+quicklock3.egg-info/PKG-INFO
+quicklock3.egg-info/SOURCES.txt
+quicklock3.egg-info/dependency_links.txt
+quicklock3.egg-info/requires.txt
+quicklock3.egg-info/top_level.txt
