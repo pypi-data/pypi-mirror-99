@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aliopts
+Version: 0.0.2
+Summary: A hyperparameter optimization framework
+Home-page: UNKNOWN
+Author: Ora Yang
+Author-email: victor.xsyang@gmail.com
+License: UNKNOWN
+Description: Opts 测试版本
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
