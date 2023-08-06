@@ -1,0 +1,8 @@
+README.md
+sbmsdp.py
+setup.py
+sbmsdp.egg-info/PKG-INFO
+sbmsdp.egg-info/SOURCES.txt
+sbmsdp.egg-info/dependency_links.txt
+sbmsdp.egg-info/requires.txt
+sbmsdp.egg-info/top_level.txt

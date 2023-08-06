@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: sbmsdp
+Version: 0.1
+Summary: semi-definite programming for the recovery of stochastic block model
+Home-page: https://github.com/zhaofeng-shu33/sbmsdp2
+Author: zhaofeng-shu33
+Author-email: 616545598@qq.com
+Maintainer: zhaofeng-shu33
+Maintainer-email: 616545598@qq.com
+License: Apache License Version 2.0
+Description: # SBMSDP2
+        This repository uses semi-definite programming to recover labels of stochastic block model.
+        
+        ## Note
+        The code in this repository can only recover symmetric SBM with two underlining communities.
+        Symmetric SBM means that the two communities have equal size.
+        
+        The SBM generator is $\textrm{SBM}(n, \frac{a \log n}{n}, \frac{b \log n}{n})$.
+        
+        ## Sample code
+        ```Python
+        from sbmsdp import sbm2, sdp2
+        G = sbm2(100, 16, 4)
+        X = sdp2(G)
+        print(X)
+        ```
+        
+        ## Reference
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
