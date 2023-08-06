@@ -1,0 +1,9 @@
+alitra/__init__.py,sha256=thBpJp8jIbngLQStI-oYTnHCeLdnqsxZwPvzBXt7X10,1489
+alitra/align_frames.py,sha256=B_npMgP5gm-FdlEmaBAL--5oQw135z6IM5qS2cospbs,6655
+alitra/frame_dataclasses.py,sha256=FaVoU74DlCCahm3N37A4pArTVp6LlsnQFNFB_BRh36A,4227
+alitra/frame_transform.py,sha256=mu0DqlhFQEprbiqQ_6NUTeGdivRklxbyqY858KV3dRU,2301
+alitra-1.0.0.dist-info/LICENSE,sha256=oUtO2eiWmRx_SAYHHlfGnTHlxD9TaU5U-pCIYkGOTiU,1064
+alitra-1.0.0.dist-info/METADATA,sha256=SXokg0IuJIC64qfMwPOSmRSEHnugGHKUSF_EVEegCs0,1921
+alitra-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+alitra-1.0.0.dist-info/top_level.txt,sha256=R8ji6wmvkGdVCZVPy2Y4j56FhFtmDOw2RmxwzR40EfY,7
+alitra-1.0.0.dist-info/RECORD,,
