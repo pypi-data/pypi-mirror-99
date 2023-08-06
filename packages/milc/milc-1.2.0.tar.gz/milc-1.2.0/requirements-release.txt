@@ -1,0 +1,8 @@
+bumpversion
+flake8
+hjson
+nose2
+pydoc-markdown
+semver
+twine
+yapf

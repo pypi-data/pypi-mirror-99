@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Example MILC program that shows off many features.
+
+PYTHON_ARGCOMPLETE_OK
+"""
+import os
+
+# Uncomment these to customize your config file location
+#os.environ['MILC_APP_NAME'] = 'example'
+#os.environ['MILC_APP_AUTHOR'] = 'MILC'
+
+from milc import cli
+from milc.subcommand import config
+
+
+@cli.argument('-n', '--name', help='Name to greet', default='World')
+@cli.entrypoint('Greet a user.')
+def main(cli):
+    cli.log.info('No subcommand specified!')
+    cli.print_usage()
+
+
+@cli.argument('--print-usage', action='store_true', help='Show a usage summary')
+@cli.argument('--print-help', action='store_true', help='Alias for --help')
+@cli.argument('--comma', help='comma in output', action='store_boolean', default=True)
+@cli.subcommand('Say hello.')
+def hello(cli):
+    """Say hello.
+    """
+    # print_usage and print_help are here to help us test.
+    if cli.config.hello.print_usage:
+        cli.print_usage()
+        return True
+
+    if cli.config.hello.print_help:
+        cli.print_help()
+        return True
+
+    comma = ',' if cli.config.hello.comma else ''
+    cli.echo('{fg_green}Hello%s %s!', comma, cli.config.general.name)
+
+
+@cli.argument('-f', '--flag', help='Write it in a flag', action='store_true')
+@cli.subcommand('Say goodbye.')
+def goodbye(cli):
+    if cli.config.goodbye.flag:
+        cli.log.debug('Drawing a flag.')
+        colors = ('{bg_red}', '{bg_lightred_ex}', '{bg_lightyellow_ex}', '{bg_green}', '{bg_blue}', '{bg_magenta}')
+        string = 'Goodbye, %s!' % cli.config.general.name
+        for i, letter in enumerate(string):
+            color = colors[i % len(colors)]
+            cli.echo(color + letter + ' '*39)
+    else:
+        cli.log.warning('Parting is such sweet sorrow.')
+        cli.echo('{fg_blue}Goodbye, %s!', cli.config.general.name)
+
+
+if __name__ == '__main__':
+    cli()
