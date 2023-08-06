@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: package-fib
+Version: 1.0.0
+Summary: Fibonacci calculation
+Home-page: UNKNOWN
+Author: Pablo Henrique
+Author-email: ph.info.cont@rede.ulbra.br
+License: MIT
+Keywords: dev
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
