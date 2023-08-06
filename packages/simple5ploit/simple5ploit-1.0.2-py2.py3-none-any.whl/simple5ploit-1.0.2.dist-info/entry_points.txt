@@ -1,0 +1,3 @@
+[console_scripts]
+simple5ploit=simple5ploit.__main__:main
+
