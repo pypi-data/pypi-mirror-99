@@ -1,0 +1,10 @@
+clicktypes/__init__.py,sha256=N3M1WRnsi8boN87UGDydNJTAJEYFHUcFTqwk4jhfNbU,145
+clicktypes/__version__.py,sha256=bvtV58uKC6L0PqW8yvKpSSORA_uG4kCiH1jhlI1XAT8,308
+clicktypes/network/__init__.py,sha256=s1QtzUaU8GOnELRjkO_x8bh2RI5lW5O3SYVyqiU9T3c,242
+clicktypes/network/address.py,sha256=FF1Ss3N984IA4_Gge_i_J_h0hH9DHQl5LEH78itKoB0,3348
+clicktypes/network/network.py,sha256=EAPoUE6eSxk6x4RZhFf0xydCTBXmXeCbfbia444mSgw,3972
+clicktypes-0.0.2.dist-info/LICENSE,sha256=VgkC_DIkNWQ68CqcDB6nLxcf9QSdtYSoVXnwmQ4JQ94,1060
+clicktypes-0.0.2.dist-info/METADATA,sha256=8wMzrInXRdvV-1XQZiTP_fHl4rExRQO1Hc0wiUsbz0w,1542
+clicktypes-0.0.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+clicktypes-0.0.2.dist-info/top_level.txt,sha256=3V7c-bzxfAGQEHf1MnHy5sbLyHdIO-M-hZyrhmJJ5Lo,11
+clicktypes-0.0.2.dist-info/RECORD,,
