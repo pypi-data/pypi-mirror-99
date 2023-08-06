@@ -1,0 +1,12 @@
+h5py==2.9.0
+requests<3.0,>=2.0
+urllib3==1.26.4
+retry<1.0.0,>=0.9.0
+boto3==1.17.22
+psycopg2==2.8.6
+ibm-db==3.0.3
+ibm-cloud-sdk-core==3.3.4
+ibm-watson-openscale>=3.0.4
+ibm-watson-machine-learning>=1.0.45
+pandas==1.0.5
+pyJWT==2.0.1
