@@ -1,0 +1,10 @@
+README.md
+setup.py
+xeuledoc/__init__.py
+xeuledoc/core.py
+xeuledoc.egg-info/PKG-INFO
+xeuledoc.egg-info/SOURCES.txt
+xeuledoc.egg-info/dependency_links.txt
+xeuledoc.egg-info/entry_points.txt
+xeuledoc.egg-info/requires.txt
+xeuledoc.egg-info/top_level.txt
