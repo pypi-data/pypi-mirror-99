@@ -1,0 +1,17 @@
+README.md
+setup.py
+deepsig/__init__.py
+deepsig/aso.py
+deepsig/bootstrap.py
+deepsig/conversion.py
+deepsig/correction.py
+deepsig/permutation.py
+deepsig.egg-info/PKG-INFO
+deepsig.egg-info/SOURCES.txt
+deepsig.egg-info/dependency_links.txt
+deepsig.egg-info/top_level.txt
+deepsig/tests/__init__.py
+deepsig/tests/test_aso.py
+deepsig/tests/test_bootstrap_permutation.py
+deepsig/tests/test_conversion.py
+deepsig/tests/test_correction.py
