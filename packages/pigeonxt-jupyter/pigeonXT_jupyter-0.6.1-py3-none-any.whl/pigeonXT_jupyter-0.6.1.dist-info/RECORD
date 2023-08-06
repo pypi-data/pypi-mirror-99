@@ -1,0 +1,9 @@
+pigeonXT/__init__.py,sha256=WKzqqaumOUdujNMxUG2fcxwl-wOlS46tgSz36K9vy6s,47
+pigeonXT/__version__.py,sha256=pXaXo90l6L20Don8X5OXObh-GNUsPlqh9F62pPESN4I,297
+pigeonXT/analyse.py,sha256=qEY87OSGWN_ZchgzX0uBgXPqi6TA4Oi5XwLzhs2fUUM,583
+pigeonXT/annotate.py,sha256=JTSSgJovV59Ekmb7G0SE4XyCLAbEMVBscOGFYdJAgrI,13396
+pigeonXT_jupyter-0.6.1.dist-info/LICENSE,sha256=SXBgepzEvomBCWdQGw2_xKRpnwWaAdxuA0b3_EX3kds,11551
+pigeonXT_jupyter-0.6.1.dist-info/METADATA,sha256=kR3dBvujE7olO9S8yln-KhqtQIxXzlFzWeT4Pwh7wOs,8627
+pigeonXT_jupyter-0.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pigeonXT_jupyter-0.6.1.dist-info/top_level.txt,sha256=4kGoaFmbMcQahhaLdfv_TKcdL9Ngu0872zQYkokFcBc,9
+pigeonXT_jupyter-0.6.1.dist-info/RECORD,,
