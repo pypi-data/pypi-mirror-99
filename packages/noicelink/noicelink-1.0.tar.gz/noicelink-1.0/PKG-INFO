@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: noicelink
+Version: 1.0
+Summary: A simple and easy to use Python wrapper for the noice.link API
+Home-page: https://github.com/JohnjiRomanji/noicelink
+Author: JohnjiRomanji
+License: MIT
+Project-URL: Documentation, https://JohnjiRomanji.github.io/noicelink
+Project-URL: Source, https://github.com/JohnjiRomanji/nocielink
+Project-URL: Tracker, https://github.com/JohnjiRomanji/noicelink/issues
+Description: # Noicelink.py
+        ## The simple, easy to use python wrapper for [noice.link](http://noice.link)
+        
+        
+        #### Quickstart
+        
+        In your ternimal, with pip installed, run the following command to install: 
+        ```
+        pip install noicepy
+        ```
+        
+        Or with git: 
+        ```
+        pip install git+https://github.com/JohnjiRomanji/noicepy.git
+        ```
+        
+        After that you should be good to import noicepy and use it like in the docs. 
+        ```py
+        import noicepy
+        ```
+        
+        #### LOOK AT THE DOCS 
+        ##### PLEASE LOOK AT THE DOCS
+        
+        **https://johnjiromanji.github.io/noicepy**
+        
+        [Questions, Problems, or Suggestions? Report them to the noice.link discord server](https://discord.com/invite/879kJMUgGP)
+        
+        
+Keywords: noice.link noicelink noice py link
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/markdown
