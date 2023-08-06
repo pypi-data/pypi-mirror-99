@@ -1,0 +1,10 @@
+spinsfast.libs/libfftw3-c8dcb815.so.3.2.4,sha256=MtjL3aJKdmJy6spvtlWAqqXi5kc1vGlBdR8Pz9uX6_Y,1079192
+spinsfast-104.2021.3.22.15.7.51.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+spinsfast-104.2021.3.22.15.7.51.dist-info/WHEEL,sha256=0Vd6cxlV5TZlE7uGgyOGjwpg-p5IzYEi-X4Iz0QWim8,139
+spinsfast-104.2021.3.22.15.7.51.dist-info/top_level.txt,sha256=19x_G4jehzLSzGDR4A145MnHS4kM8yBbThPSAgJh1lE,10
+spinsfast-104.2021.3.22.15.7.51.dist-info/RECORD,,
+spinsfast-104.2021.3.22.15.7.51.dist-info/METADATA,sha256=GTThK4fAR4kfRfsilb2qeyM_sxKzssqdX5om2BB9zqo,525
+spinsfast-104.2021.3.22.15.7.51.dist-info/LICENSE,sha256=EqxQR_KvBSLwZ5ixWJ_8RZm8KckflU14dOAyBjTnd8A,35122
+spinsfast/__init__.py,sha256=T_KfpeIvtwHIvjzcV9Qk_8aXIrE5jgNXmtnVX2qVDPk,11775
+spinsfast/_version.py,sha256=zuVMykZQsyd9_LLPeAuBUjm4DyYPRNu5N6ZdtN6Jquo,37
+spinsfast/cextension.cpython-39-x86_64-linux-gnu.so,sha256=bnmTa9amj0uFv_Z7jyW6mKU2lyURbiUdGeITQmPOVj4,223632
