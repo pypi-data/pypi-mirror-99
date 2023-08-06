@@ -1,0 +1,11 @@
+certifi
+Click>=6.0
+geopy
+requests
+metar
+
+[test]
+flake8
+pytest
+pytest-cov
+vcrpy

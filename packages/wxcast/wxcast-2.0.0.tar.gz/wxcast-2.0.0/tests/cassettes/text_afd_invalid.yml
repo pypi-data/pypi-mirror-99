@@ -1,0 +1,28 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: ['wxcast app. https://github.com/smarlowucf/wxcast']
+    method: GET
+    uri: https://api.weather.gov/products/types/AFD/locations/FAKE
+  response:
+    body: {string: "{\n    \"@context\": null,\n    \"@graph\": []\n}"}
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['public, max-age=900, s-maxage=120']
+      Connection: [keep-alive]
+      Content-Length: ['42']
+      Content-Type: [application/ld+json]
+      Date: ['Sat, 16 Jun 2018 03:09:47 GMT']
+      Expires: ['Sat, 16 Jun 2018 03:24:47 GMT']
+      Server: [nginx/1.10.2]
+      Strict-Transport-Security: [max-age=31536000 ; includeSubDomains ; preload]
+      Vary: [Accept]
+      X-Correlation-ID: [18a36b0f-2e04-4c07-8811-9e1d8ff69ce3]
+      X-Request-ID: [18a36b0f-2e04-4c07-8811-9e1d8ff69ce3]
+      X-Server-ID: [vm-lnx-nids-apiapp10.ncep.noaa.gov]
+    status: {code: 200, message: OK}
+version: 1

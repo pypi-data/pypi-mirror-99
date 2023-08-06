@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: ['wxcast app. https://github.com/smarlowucf/wxcast']
+    method: GET
+    uri: https://api.weather.gov/products/locations/BOU/types
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAK2W30/bMBDH3/dXWN0LSEA3kCbB0yqyUCTSZknUbkx7uCZHai3xZY7T0SH+911S
+        GiptkplLH6LKse/jy33vx8Mbwb/Bx5SUwXszuBAP3cpmdUUpLHhtsDSmqi+GQ6jkyS8Es0R9ktNq
+        yKeooHz9dtCdejx6MpdrqJZ88Ftv7Nlst6PSlDWpuaQMW/sj3xsc/XPHBMrNDo0gfNKYQm2EJ+u0
+        qWtJatCfejx6IexyFFpgl1SWpMSoQG2kykWoyVBKhQPMu0osME9Tky+NuFZ3pEsw7JSIDRgsURkH
+        4qfYtxD9gigTIRkGSCjEtDG88sOB5XvXNpbUKDxQOWr2MJMp1i6cuc2niBoOFYqON78XfsoyOZhL
+        sxy2D34rPhy/f8dXWW/9PXS6yI3lIjegMhGAgrwLYK9ZN7cDCy3gRMCiAIXU1E/Ob/KzFW270wk7
+        eUlUt6AJGXkn0065TrTp/9Cmixr1yh0WW2BxU1Uau9rSx84BNA5sQhmNw1h84W0OxqPIYnz7tTgt
+        VNZULgxrWMbwG3TW6q6PjXMhmcY22rQjxI2+gxR3VeCSWKFvS6yQ5E7yckIb7Vi7wolNcmGzKGT6
+        ag0g8ue2YomZ8AvIxRy04gbnAolObfJYZ5qOA+RuDQZEhBVpI0Lgx6kT8MwdeOYEPHcHnjsBbUIZ
+        j7y4Y7lYT2xTT4Q5S4/ngQDuh4FUIsGyEm07CzkLZCXNRpsJLAp0uEEcWmtvxRy+wLae7JMFcXRl
+        oxHodrq7amQGKnVyKflsdYl2ykiEPxt06ifxzFbyY1wh98lkyRUfdW24luyR3/HMGqwN71Vi9dU2
+        cPTa7HFrRVUtXQpyMrO15kTDCnn4r/eZAGa+bfJPUJeydWqE/EJTic9KOUhG/qGYod5ntLr1bTl/
+        S2oH+vfI2P37/ubxDz6liu8oDgAA
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      Cache-Control: ['max-age=120, public, s-maxage=120']
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Length: ['705']
+      Content-Type: [application/ld+json]
+      Date: ['Sat, 16 Jun 2018 03:02:30 GMT']
+      Server: [nginx/1.10.2]
+      Strict-Transport-Security: [max-age=31536000 ; includeSubDomains ; preload]
+      Vary: [Accept-Encoding, Accept]
+      X-Correlation-ID: [3d14886b-eb7d-4469-97c6-9222f2c69edc]
+      X-Request-ID: [3d14886b-eb7d-4469-97c6-9222f2c69edc]
+      X-Server-ID: [vm-lnx-nids-apiapp34.ncep.noaa.gov]
+    status: {code: 200, message: OK}
+version: 1
