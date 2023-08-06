@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rekishikon"
+version = "0.3.0"
+description = "A simple Language Detection Library"
+authors = ["K-Molloy <kieran.b.molloy@outlook.com>"]
+readme = 'README.rst'
+homepage = "https://github.com/K-Molloy/rekishikon"
+repository = "https://github.com/K-Molloy/rekishikon"
+keywords = ["Language Detection", "Language Classifier", "Classifier", "Multi-Language", "n-gram"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Education",
+    "License :: Free For Educational Use",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: Unix"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
