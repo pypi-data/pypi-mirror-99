@@ -1,0 +1,3 @@
+[console_scripts]
+spotdlfork = spotdlfork:console_entry_point
+
