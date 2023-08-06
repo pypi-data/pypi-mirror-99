@@ -1,0 +1,4 @@
+aiohttp
+async_timeout<=3.0.1
+pytest-runner
+semantic_version

@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pyoppversion/__init__.py
+pyoppversion/consts.py
+pyoppversion.egg-info/PKG-INFO
+pyoppversion.egg-info/SOURCES.txt
+pyoppversion.egg-info/dependency_links.txt
+pyoppversion.egg-info/requires.txt
+pyoppversion.egg-info/top_level.txt
