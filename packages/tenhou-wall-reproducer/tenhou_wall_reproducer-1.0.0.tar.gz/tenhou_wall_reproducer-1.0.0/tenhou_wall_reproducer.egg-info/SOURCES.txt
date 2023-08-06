@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+tenhou_wall_reproducer.egg-info/PKG-INFO
+tenhou_wall_reproducer.egg-info/SOURCES.txt
+tenhou_wall_reproducer.egg-info/dependency_links.txt
+tenhou_wall_reproducer.egg-info/not-zip-safe
+tenhou_wall_reproducer.egg-info/top_level.txt
