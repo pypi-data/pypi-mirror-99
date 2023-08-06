@@ -1,0 +1,8 @@
+meter_digits_recognizer/__init__.py,sha256=WPG5sYv1x-HngZEiK2a-rG4ZoD4y-ddr_aqKVbRnoII,108
+meter_digits_recognizer/_meter_digits_recognizer.py,sha256=dA3VoGiMUyHxHgGwUrU6X7pEACxg1tpi6m4HNutFLLM,983
+meter_digits_recognizer/_net.py,sha256=xsAr8ul4C9R0gvlTfwNj8ayFiDosRsfPYh0qidYs910,1458
+meter_digits_recognizer/model_weights.pt,sha256=ZJL53HpfvDtsOkQJTmfpvMkco8WrKWOKMUrceYlIpUk,1303591
+meter_digits_recognizer-0.1.1.dist-info/METADATA,sha256=nIcesWynRWK7YmhUIdt2ESayr1YcYC4oLHiex1CBdvY,298
+meter_digits_recognizer-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+meter_digits_recognizer-0.1.1.dist-info/top_level.txt,sha256=QmngFX9ZLCiea6GzURlNi7tGhNoxRHmUPxScLPgjZ18,24
+meter_digits_recognizer-0.1.1.dist-info/RECORD,,
