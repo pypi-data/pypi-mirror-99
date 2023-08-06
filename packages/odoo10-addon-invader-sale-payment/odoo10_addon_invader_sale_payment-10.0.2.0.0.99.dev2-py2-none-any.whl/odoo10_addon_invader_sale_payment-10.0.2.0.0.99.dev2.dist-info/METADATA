@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: odoo10-addon-invader-sale-payment
+Version: 10.0.2.0.0.99.dev2
+Summary: Backport the model definition between payment.transaction and sale.order
+Home-page: https://github.com/shopinvader/odoo-shopinvader-payment
+Author: ACSONE SA/NV
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: ~=2.7
+Requires-Dist: odoo (<10.1dev,>=10.0)
+
+UNKNOWN
+
+

@@ -1,0 +1,13 @@
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/invader_sale_payment/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/invader_sale_payment/__manifest__.py,sha256=dT3OrPYoLzg3bkVxBc-REaJ2GdPBBQK0BuJA-XE-aVs,577
+odoo/addons/invader_sale_payment/models/__init__.py,sha256=pu7w5KPUoAB2R49n2cjuo60KMSNRaNi915MLTXZuIQU,59
+odoo/addons/invader_sale_payment/models/payment_transaction.py,sha256=oGw9LvrpOU5BvPwAnf4Jl9e1SQf3a0CJhU4s8es34yc,2799
+odoo/addons/invader_sale_payment/models/sale_order.py,sha256=tkf9GGGMExsyU49_aX7CExTWHG3Addv_jgcE2ueLQF4,1916
+odoo/addons/invader_sale_payment/views/payment_transaction.xml,sha256=rm_MbryvRViqBhTFCvwbupn7NE05vSmyyMJgAPCouOY,1039
+odoo/addons/invader_sale_payment/views/sale_order.xml,sha256=RzFd8F39TD-TMXDZcDF4nfVprFIM-YvTeV1FyS-QXHA,869
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2.dist-info/METADATA,sha256=7epBNSEUXp6HKpdYztcQuFtONXx0XlPVhEnf0e33T9k,515
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_invader_sale_payment-10.0.2.0.0.99.dev2.dist-info/RECORD,,
