@@ -1,0 +1,12 @@
+README.md
+setup.py
+pypassmanager.egg-info/PKG-INFO
+pypassmanager.egg-info/SOURCES.txt
+pypassmanager.egg-info/dependency_links.txt
+pypassmanager.egg-info/entry_points.txt
+pypassmanager.egg-info/requires.txt
+pypassmanager.egg-info/top_level.txt
+src/__init__.py
+src/password_manager.py
+src/password_safe.py
+src/text_wrappers.py

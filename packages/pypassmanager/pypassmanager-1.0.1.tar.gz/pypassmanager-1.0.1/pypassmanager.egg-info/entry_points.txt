@@ -1,0 +1,3 @@
+[console_scripts]
+pypassmanager = pypassmanager.password_manager:main
+
