@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+fastai_ulmfit/__init__.py
+fastai_ulmfit/_nbdev.py
+fastai_ulmfit/pretrained.py
+fastai_ulmfit.egg-info/PKG-INFO
+fastai_ulmfit.egg-info/SOURCES.txt
+fastai_ulmfit.egg-info/dependency_links.txt
+fastai_ulmfit.egg-info/entry_points.txt
+fastai_ulmfit.egg-info/not-zip-safe
+fastai_ulmfit.egg-info/top_level.txt
