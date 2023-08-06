@@ -1,0 +1,11 @@
+polybiblioglot/__init__.py,sha256=Igh1-NOOH0cNSe0E7jHo8Nn-xkB2lPTfAMzWPgQDTMo,124
+polybiblioglot/components/__init__.py,sha256=W4cr6d6sP_Qf-ca3IlGwPFLJ3cAol8XqHYGkid1Y790,320
+polybiblioglot/components/converter.py,sha256=2W9RSlSxqroD-4ZZIFQrNME_EXIE78DizHHeXQHLqQA,3125
+polybiblioglot/components/translator.py,sha256=KcekfM4ennsifLU17b3DRV1EMbAJLpKGNLojF1orhzo,3564
+polybiblioglot/lang/__init__.py,sha256=AkiEjtSCFye1a6m-nE7JY3LXDOp0cn9V30SVy_QDDEU,79
+polybiblioglot/lang/languages.py,sha256=SCMTvLLgN9K063rwjEQyzzZam1MYIi2iAg296vtXplg,3962
+polybiblioglot/polybiblioglot.py,sha256=oU19fI_6_tNC_cyA_wmWWVyLANWqis3a8xcCwwX5KQ8,16191
+polybiblioglot-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+polybiblioglot-0.1.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+polybiblioglot-0.1.1.dist-info/METADATA,sha256=gkaiG_fCXnhlcQ_rkEftqYrHL5m9sbckr6HMRjGHMwY,649
+polybiblioglot-0.1.1.dist-info/RECORD,,

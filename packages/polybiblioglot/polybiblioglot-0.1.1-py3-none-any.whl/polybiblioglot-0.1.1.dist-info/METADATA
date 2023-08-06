@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: polybiblioglot
+Version: 0.1.1
+Summary: A tool to translate scanned books
+License: GPLv3
+Author: Bruno Robert
+Author-email: bruno.jeanluke@icloud.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=8.1.2,<9.0.0)
+Requires-Dist: dearpygui (==0.6.123)
+Requires-Dist: pdf2image (>=1.14.0,<2.0.0)
+Requires-Dist: pytesseract (>=0.3.7,<0.4.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: translate (>=3.5.0,<4.0.0)
