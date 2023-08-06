@@ -1,0 +1,14 @@
+README.md
+setup.py
+ezpip/__init__.py
+ezpip/test.py
+ezpip.egg-info/PKG-INFO
+ezpip.egg-info/SOURCES.txt
+ezpip.egg-info/dependency_links.txt
+ezpip.egg-info/requires.txt
+ezpip.egg-info/top_level.txt
+ezpip/parts/config.py
+ezpip/parts/dummy_python_file.py
+ezpip/parts/load_develop.py
+ezpip/parts/import_test_field/test.py
+ezpip/parts/import_test_field/hoge_module/__init__.py
