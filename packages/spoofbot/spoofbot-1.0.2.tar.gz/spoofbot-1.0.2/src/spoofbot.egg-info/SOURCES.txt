@@ -1,0 +1,17 @@
+src/spoofbot/__init__.py
+src/spoofbot/browser.py
+src/spoofbot/operating_system.py
+src/spoofbot/tag.py
+src/spoofbot.egg-info/PKG-INFO
+src/spoofbot.egg-info/SOURCES.txt
+src/spoofbot.egg-info/dependency_links.txt
+src/spoofbot.egg-info/requires.txt
+src/spoofbot.egg-info/top_level.txt
+src/spoofbot/adapter/__init__.py
+src/spoofbot/adapter/file.py
+src/spoofbot/adapter/har.py
+src/spoofbot/util/__init__.py
+src/spoofbot/util/common.py
+src/spoofbot/util/file.py
+src/spoofbot/util/har.py
+src/spoofbot/util/http.py
