@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyscilog
+Version: 0.1.1
+Summary: the Python scientific logger
+Home-page: https://github.com/gijzelaerr/pyscilog/
+Author: Gijs Molenaar
+Author-email: gijs@pythonic.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: psutil
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: pycodestyle ; extra == 'test'
+Requires-Dist: data-science-types ; extra == 'test'
+
+# Pyscilog 🍄
+
+Pyscilog, the Python scientific logger, is a companion for the standard Python logging library. It supports the
+reporting of various metrics, such as memory usage and system load. This library is typically useful in high performance
+and scientific software development settings.
+
+# installation
+
+```
+pip install pyscilog
+```
+
+
