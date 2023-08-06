@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: agileutil
+Version: 0.0.3
+Summary: Python3 RPC Framework
+Home-page: UNKNOWN
+Author: tank
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: agileutil
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
