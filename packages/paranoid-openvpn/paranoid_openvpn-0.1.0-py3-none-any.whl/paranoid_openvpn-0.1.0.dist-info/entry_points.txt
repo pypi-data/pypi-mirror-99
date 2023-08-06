@@ -1,0 +1,3 @@
+[console_scripts]
+paranoid_openvpn=paranoid_openvpn.cli:cli
+
