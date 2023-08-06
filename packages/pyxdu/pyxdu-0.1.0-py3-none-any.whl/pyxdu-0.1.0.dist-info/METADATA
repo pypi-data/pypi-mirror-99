@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyxdu
+Version: 0.1.0
+Summary: Display the output of "du" in a window.
+License: MIT
+Author: Andrey Vlasovskikh
+Author-email: andrey.vlasovskikh@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
