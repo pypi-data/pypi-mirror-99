@@ -1,0 +1,10 @@
+pyxtensor/__init__.py,sha256=Xcj39_NfQkbLR05LYi9F4MCCrXYiL10jx5LQ7nQ4Cb0,13915
+pyxtensor-0.2.0.data/headers/pybind11_xarray.hpp,sha256=o0XTpHlZE0YHvjcmbMf8bir8lwuFVG86CboMI4N7oTs,2964
+pyxtensor-0.2.0.data/headers/pybind11_xtensor.hpp,sha256=ktPHU2LOISE26jPV82m1zxRWogvzPVrsfemLpxSmCvc,2935
+pyxtensor-0.2.0.data/headers/pybind11_xtensor_fixed.hpp,sha256=IA7ohlWqkxBSAGSJMMz0IvuqfHBqLGFpAWZDwpnkiC4,3384
+pyxtensor-0.2.0.data/headers/pyxtensor.hpp,sha256=gXjIg2nvHpB9QJ4bhr5LG0RxotIYP0_Im8c9nitpSBo,937
+pyxtensor-0.2.0.dist-info/LICENSE,sha256=soeK0OGYn9HuCCFM4gj9iFLZ7koHNf9srXMqOp5-j3w,1068
+pyxtensor-0.2.0.dist-info/METADATA,sha256=abC_OyweS0J7EpkKtut3ukKiC1n25QxDfrTfk9U5M5Q,840
+pyxtensor-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyxtensor-0.2.0.dist-info/top_level.txt,sha256=Hu3jcI-nTtza5OrxWeBKYoH21tKcpTSPI7xJ74KYPvA,10
+pyxtensor-0.2.0.dist-info/RECORD,,
