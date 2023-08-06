@@ -1,0 +1,10 @@
+README.md
+setup.py
+compatibility/__init__.py
+compatibility/__main__.py
+compatibility/_version.py
+compatibility/messages.py
+compatibility.egg-info/PKG-INFO
+compatibility.egg-info/SOURCES.txt
+compatibility.egg-info/dependency_links.txt
+compatibility.egg-info/top_level.txt
