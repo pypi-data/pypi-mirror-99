@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: deep3d
+Version: 0.0.1
+Summary: deep learning for 3d
+Home-page: https://github.com/deep3dkr/deep3d
+Author: deep3d
+Author-email: deep3dkr@gamil.com
+License: UNKNOWN
+Download-URL: https://github.com/deep3dkr/deep3d/archive/master.zip
+Keywords: pypi deploy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+
+# Deep3D
+3D 를 위한 딥러닝
+
