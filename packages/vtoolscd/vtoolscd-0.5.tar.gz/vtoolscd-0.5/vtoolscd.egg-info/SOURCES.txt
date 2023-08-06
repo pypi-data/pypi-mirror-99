@@ -1,0 +1,8 @@
+setup.py
+vtools/__init__.py
+vtoolscd.egg-info/PKG-INFO
+vtoolscd.egg-info/SOURCES.txt
+vtoolscd.egg-info/dependency_links.txt
+vtoolscd.egg-info/requires.txt
+vtoolscd.egg-info/top_level.txt
+vtoolscd.egg-info/zip-safe
