@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: extra-boolean
+Version: 0.1.7
+Summary: Boolean data type has two possible truth values to represent logic.
+Home-page: https://python3f.github.io/extra-boolean/
+Author: Subhajit Sahu
+Author-email: wolfram77@gmail.com
+License: MIT License
+Project-URL: Source, https://github.com/python3f/extra-boolean/
+Project-URL: Documentation, https://python3f.github.io/extra-boolean/
+Description: [Boolean] data type has two possible truth values to represent logic.<br>
+        :package: [GoDev](https://pkg.go.dev/github.com/golangf/extra-boolean),
+        :newspaper: [GoDoc](https://pkg.go.dev/github.com/golangf/extra-boolean#section-documentation),
+        :blue_book: [Wiki](https://github.com/golangf/extra-boolean/wiki).
+        
+        Here is my implementation of digital logic gates in software. That includes
+        the basic gates [Not], [And], [Or], [Xor]; their complements [Nand], [Nor],
+        [Xnor]; and 2 propositional logic (taught in discrete mathematics) gates
+        [Imply], [Eq]; and their complements [Nimply], [Neq]. There is also a
+        multiplexer, called [Select], and a `true` counter, called [Count]. [Count]
+        can help you make custom gates, such as an *alternate* concept of **xnor**
+        which returns `true` only if all inputs are the same (standard [Xnor] returns
+        `true` if even inputs are `true`). All of them can handle upto 8 inputs.
+        
+        [Parse] is influenced by ["boolean"] package, and is quite good at translating
+        `string` to `boolean`. It can also handle double negatives, eg. `not inactive`.
+        You know the [And] of 2-inputs, but what of 1-input? What of 0? And what of
+        the other gates? I answer them here.
+        
+        > Stability: Experimental.
+        
+        <br>
+        
+        ```javascript
+        import (
+          boolean "github.com/golangf/extra-boolean"
+        )
+        
+        boolean.Parse("1")
+        boolean.Parse("truthy")
+        boolean.Parse("not off")
+        // true
+        
+        boolean.Parse("not true")
+        boolean.Parse("inactive")
+        boolean.Parse("disabled")
+        // false
+        
+        boolean.Imply(true, false)
+        // false
+        
+        boolean.Eq(false, false)
+        // true
+        
+        boolean.Xor3(true, true, true)
+        // true
+        
+        boolean.Select3(1, true, false, true)
+        // false                   ^
+        
+        boolean.Count3(true, false, true)
+        // 2            ^            ^
+        ```
+        
+        <br>
+        <br>
+        
+        
+        ## Index
+        
+        | Name     | Action                                     |
+        | -------- | ------------------------------------------ |
+        | [Parse]  | Converts string to boolean.                |
+        | [Not]    | Checks if value is false.                  |
+        | [And]    | Checks if all values are true.             |
+        | [Or]     | Checks if any value is true.               |
+        | [Xor]    | Checks if odd no. of values are true.      |
+        | [Nand]   | Checks if any value is false.              |
+        | [Nor]    | Checks if all values are false.            |
+        | [Xnor]   | Checks if even no. of values are true.     |
+        | [Eq]     | Checks if antecedent ⇔ consequent (a ⇔ b). |
+        | [Neq]    | Checks if antecedent ⇎ consequent (a ⇎ b). |
+        | [Imply]  | Checks if antecedent ⇒ consequent (a ⇒ b). |
+        | [Nimply] | Checks if antecedent ⇏ consequent (a ⇏ b). |
+        | [Select] | Checks if ith value is true.               |
+        | [Count]  | Counts no. of true values.                 |
+        
+        <br>
+        <br>
+        
+        
+        ## References
+        
+        - [GoDoc add newline character](https://stackoverflow.com/q/51641640/1413259)
+        - [Indentation is replaced with tabs from spaces on save ...](https://github.com/microsoft/vscode-go/issues/1930)
+        - [Testable Examples in Go](https://blog.golang.org/examples)
+        - [Godoc: documenting Go code](https://blog.golang.org/godoc)
+        - [Optional Parameters in Go?](https://stackoverflow.com/q/2032149/1413259)
+        - [Publishing Go Modules](https://blog.golang.org/publishing-go-modules)
+        - [Developing and publishing modules](https://golang.org/doc/modules/developing)
+        - [Using Go Modules](https://blog.golang.org/using-go-modules)
+        - [Naming Conventions in Go: Short but Descriptive](https://betterprogramming.pub/naming-conventions-in-go-short-but-descriptive-1fa7c6d2f32a)
+        - [Effective Go](https://golang.org/doc/effective_go)
+        - [How to Write Go Code](https://golang.org/doc/code)
+        - [Batch Rename](https://marketplace.visualstudio.com/items?itemName=JannisX11.batch-rename-extension)
+        
+        <br>
+        <br>
+        
+        [![](https://img.youtube.com/vi/6mMK6iSZsAs/maxresdefault.jpg)](https://www.youtube.com/watch?v=6mMK6iSZsAs)
+        
+        [Boolean]: https://pkg.go.dev/builtin#bool
+        ["boolean"]: https://www.npmjs.com/package/boolean
+        [Parse]: https://github.com/golangf/extra-boolean/wiki/Parse
+        [Xor]: https://github.com/golangf/extra-boolean/wiki/Xor
+        [Not]: https://github.com/golangf/extra-boolean/wiki/Not
+        [And]: https://github.com/golangf/extra-boolean/wiki/And
+        [Or]: https://github.com/golangf/extra-boolean/wiki/Or
+        [Nand]: https://github.com/golangf/extra-boolean/wiki/Nand
+        [Nor]: https://github.com/golangf/extra-boolean/wiki/Nor
+        [Xnor]: https://github.com/golangf/extra-boolean/wiki/Xnor
+        [Eq]: https://github.com/golangf/extra-boolean/wiki/Eq
+        [Imply]: https://github.com/golangf/extra-boolean/wiki/Imply
+        [Nimply]: https://github.com/golangf/extra-boolean/wiki/Nimply
+        [Select]: https://github.com/golangf/extra-boolean/wiki/Select
+        [Count]: https://github.com/golangf/extra-boolean/wiki/Count
+        [Neq]: https://github.com/golangf/extra-boolean/wiki/Neq
+        
+Keywords: extra,boolean,algebra,logic,parse,not,eq,neq,imply,nimply,and,or,xor,count,nand,nor,xnor,select
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.5
+Description-Content-Type: text/markdown
