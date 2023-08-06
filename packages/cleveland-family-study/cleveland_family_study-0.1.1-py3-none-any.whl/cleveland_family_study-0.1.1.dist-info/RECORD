@@ -1,0 +1,13 @@
+cfs/__init__.py,sha256=VXZ2iXqvmhLga-LpLKQlDEGFaQEMIfDMfkZYLMSegFQ,43
+cfs/__main__.py,sha256=nlQP5gKIhGpuYSMozxAeEKqAj2eAF1_gvzyK-OAdNkw,102
+cfs/check_md5.py,sha256=wxvYPkPtAss-tz6P-MRWYxyhyBJkXTB494las-IgL_k,2204
+cfs/dataset.py,sha256=mhtt5xgDoukKSnCPgxq-FAP90_RgEiJxOhOC8Z9TZoI,3593
+cfs/md5sums.txt,sha256=D0ddjC6JGYxAgdiJC6yUVlfhoOAKt_fKhRGS23SgkzI,211042
+cfs/profusion.py,sha256=G3xe8YPk1ccNisp8ohJsXaBAr5xmztD4Ei1p4v_U_0M,1064
+cfs/resources.py,sha256=rf_145zJ5pOFKLcsqoc84Zpa6aNl9FAYWswv56jSPdY,470
+cfs/version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+cleveland_family_study-0.1.1.dist-info/LICENSE,sha256=DDcqa8QcTbGghNvocR4RAYnWNUHu47jpTKxjxIRqyhE,1074
+cleveland_family_study-0.1.1.dist-info/METADATA,sha256=EuY-3M1mrI5BxhWOq89z_RyH9YpUv4146IMxNp2UneY,854
+cleveland_family_study-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cleveland_family_study-0.1.1.dist-info/top_level.txt,sha256=NDExSwzyMzD1FTvK9O96aALBARgPxiKNyheGb9x4LAg,4
+cleveland_family_study-0.1.1.dist-info/RECORD,,
