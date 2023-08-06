@@ -1,0 +1,7 @@
+setup.py
+htdllib/__init__.py
+htdllib/hcprint.py
+htdllib.egg-info/PKG-INFO
+htdllib.egg-info/SOURCES.txt
+htdllib.egg-info/dependency_links.txt
+htdllib.egg-info/top_level.txt
