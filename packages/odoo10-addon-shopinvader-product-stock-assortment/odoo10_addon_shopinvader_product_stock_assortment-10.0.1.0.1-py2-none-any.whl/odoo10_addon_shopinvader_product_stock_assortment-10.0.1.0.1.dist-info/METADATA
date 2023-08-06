@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo10-addon-shopinvader-product-stock-assortment
+Version: 10.0.1.0.1
+Summary: This module is used to let the Shopinvader product assortment use the stock context in Shopinvader product stock.
+Home-page: https://github.com/shopinvader/odoo-shopinvader
+Author: ACSONE SA/NV
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: ~=2.7
+Requires-Dist: odoo10-addon-shopinvader-assortment
+Requires-Dist: odoo10-addon-shopinvader-product-stock
+Requires-Dist: odoo (<10.1dev,>=10.0)
+
+UNKNOWN
+
+

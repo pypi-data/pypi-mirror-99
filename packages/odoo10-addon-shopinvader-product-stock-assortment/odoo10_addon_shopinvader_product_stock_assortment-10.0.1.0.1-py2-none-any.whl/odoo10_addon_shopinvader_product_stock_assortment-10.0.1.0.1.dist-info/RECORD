@@ -1,0 +1,12 @@
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1-py3.8-nspkg.pth,sha256=3hYKiD3YF7y9FeWjACJq1b9R_GVRzuQo9SAZlvZgumg,1672
+odoo/addons/shopinvader_product_stock_assortment/__init__.py,sha256=DO2fLplLzYAZaqzizHSXaOLvuxZ3frz5QBNJfaCAyvQ,141
+odoo/addons/shopinvader_product_stock_assortment/__manifest__.py,sha256=0dWa8HhnzusJ1pi3AUrzSsCj9ekJnSRgAzlFeJ2ub6c,649
+odoo/addons/shopinvader_product_stock_assortment/models/__init__.py,sha256=_KWZTWJgUMJYTi8mkmYSEWpvR6ltChT9BHXpseod-5I,178
+odoo/addons/shopinvader_product_stock_assortment/models/shopinvader_backend.py,sha256=i3VcJtSgeKYbtxdvBAc8_inR58bnKT4EuMKV98-WPSM,873
+odoo/addons/shopinvader_product_stock_assortment/tests/__init__.py,sha256=fwrswWfzAyfTjB5ZBJdB9bD1JSNNeMUYEZ1A_D2kTX4,181
+odoo/addons/shopinvader_product_stock_assortment/tests/test_product_auto_bind.py,sha256=Y3i1Z1RKpskdUZ4ESwSqLsJEPIxyJUMhd5Z3s-iuEGE,4463
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1.dist-info/METADATA,sha256=JYbCbaCS-ZE2DODzMX3_rB6h-b0hlPgbUuWXxEKHFvQ,661
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo10_addon_shopinvader_product_stock_assortment-10.0.1.0.1.dist-info/RECORD,,
