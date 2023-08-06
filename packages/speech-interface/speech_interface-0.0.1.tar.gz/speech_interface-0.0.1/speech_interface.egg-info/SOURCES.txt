@@ -1,0 +1,17 @@
+README.md
+setup.py
+speech_interface/__init__.py
+speech_interface/encoders.py
+speech_interface/utils.py
+speech_interface.egg-info/PKG-INFO
+speech_interface.egg-info/SOURCES.txt
+speech_interface.egg-info/dependency_links.txt
+speech_interface.egg-info/requires.txt
+speech_interface.egg-info/top_level.txt
+speech_interface/interfaces/__init__.py
+speech_interface/interfaces/hifi_gan.py
+speech_interface/interfaces/mel_gan.py
+speech_interface/interfaces/waveglow.py
+speech_interface/models/__init__.py
+speech_interface/models/glow.py
+speech_interface/models/hifi_gan.py
