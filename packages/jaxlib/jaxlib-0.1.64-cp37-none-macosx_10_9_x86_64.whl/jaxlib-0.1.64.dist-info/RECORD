@@ -1,0 +1,15 @@
+jaxlib/__init__.py,sha256=g50SbF5N_APhdjZocrbedw8bfp1x-9p0co0x4jptaaA,630
+jaxlib/_pocketfft.so,sha256=ok8yjPdjqYh4xFVrqcIs4ajhxlseTZS0Ovsscrs2UnQ,545276
+jaxlib/lapack.so,sha256=NzM4hJZ2UlH1av9Jbes761ZW4mvBwWy7zq3CCEr1VPY,623224
+jaxlib/pocketfft.py,sha256=Wy2D491H_glerMhZ8zQ6rB0QYjBsjqk7Vq_ETPrhVXg,5217
+jaxlib/pocketfft_flatbuffers_py_generated.py,sha256=r3IX0g_CCFFdEHdOu0bC1Bdv59QM5WesZWLQeI0l0m8,12485
+jaxlib/tpu_client.py,sha256=afLTqAZUMIfev4yZktp203q5Ail-kyyAcPb4tVQQuos,2359
+jaxlib/tpu_client_extension.so,sha256=CGatx_rJGV8NiKECs57s39d5RRZdyDEMkLLtsDX1-p8,21804060
+jaxlib/version.py,sha256=VeqHKLxQ99nygknZr5NQsZM0BsodtFMupolwSHudOz8,719
+jaxlib/xla_client.py,sha256=NTUh9Hb64hHapr94dPVCp_DK-x2_oDU0AoiO_TZpFaw,24323
+jaxlib/xla_extension.so,sha256=UNkYjcIaK_KNrIfC59iso0rsTNCwwX0OTeglsc7CG_M,140268496
+jaxlib-0.1.64.dist-info/LICENSE.txt,sha256=c3QkD3tIC1VK4TWYLW-0RWhoJJdXlKEOlmtTXRBVRnw,240909
+jaxlib-0.1.64.dist-info/METADATA,sha256=eImzNq_6OQaiJFYmVAxWGCll3exp5M6lmAAtC0SEDM0,344
+jaxlib-0.1.64.dist-info/WHEEL,sha256=sd-e7rUYPe2kyX__31oi4Ce6sM1mj7lrR8BDbUupQgE,108
+jaxlib-0.1.64.dist-info/top_level.txt,sha256=CI2zJo00KhS7K9sB-iBQXkCb4HWO44Q-xte8CXUhKD0,7
+jaxlib-0.1.64.dist-info/RECORD,,
