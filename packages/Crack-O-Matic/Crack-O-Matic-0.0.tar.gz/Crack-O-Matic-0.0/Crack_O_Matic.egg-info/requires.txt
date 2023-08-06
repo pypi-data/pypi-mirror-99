@@ -1,0 +1,17 @@
+flask
+flask-login
+flask-wtf
+flask-migrate
+gevent
+sqlalchemy
+matplotlib
+wtforms
+ldap3
+argon2-cffi
+babel
+
+[tests]
+pytest
+pytest-dotenv
+python-dotenv
+python-ldap
