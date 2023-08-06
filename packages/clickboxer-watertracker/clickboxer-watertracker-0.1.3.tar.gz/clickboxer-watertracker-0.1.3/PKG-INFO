@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: clickboxer-watertracker
+Version: 0.1.3
+Summary: An API server for the watertracker app
+Home-page: https://github.com/dotslashbin/py-waterlogger-api
+Author: Joshua Fuentes
+Author-email: joshuarpf@gmail.com
+License: MIT
+Description: # py-waterlogger-api
+        blah blah
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
