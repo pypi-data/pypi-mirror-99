@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: brutefit
+Version: 0.1.0
+Summary: Tools for finding an arbitrary multivariate polynomial that best fits some data.
+Home-page: https://github.com/oscarbranson/brutefit
+Author: Oscar Branson
+Author-email: oscarbranson@gmail.com
+License: MIT
+Keywords: science,data,empiricism
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Requires-Dist: pandas
+Requires-Dist: sympy
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
