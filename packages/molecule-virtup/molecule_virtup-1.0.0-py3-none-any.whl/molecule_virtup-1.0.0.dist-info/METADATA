@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: molecule-virtup
+Version: 1.0.0
+Summary: virt-up Molecule Plugin :: run molecule tests using virt-up
+Home-page: https://github.com/meffie/molecule-virtup
+Author: Michael Meffie
+Author-email: mmeffie@sinenomine.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: molecule (>=3.2.0)
+Requires-Dist: pyyaml (<6,>=5.1)
+
+***********************
+Molecule Virt-Up Plugin
+***********************
+
+Molecule Virt-Up is designed to allow use of `virt-builder` and associated
+programs for provisioning of test guests on `libvirt`.
+
+The `libvirt` hypervisor may be running locally or remotely.
+
+Documentation
+=============
+
+To use this plugin, you'll need to set the ``driver`` and ``platform``
+variables in your ``molecule.yml``. Here's a simple example using the
+``generic-centos-8`` template:
+
+.. code-block:: yaml
+
+   driver:
+     name: virtup
+
+   platforms:
+     - name: instance
+       template: generic-centos-8
+       memory: 512
+       cpus: 1
+
+Authors
+=======
+
+Molecule Virt-Up Plugin was created by Michael Meffie based on code from
+Molecule.
+
+.. _license:
+
+License
+=======
+
+The `MIT`_ License.
+
+.. _`MIT`: https://github.com/ansible/molecule/blob/master/LICENSE
+
+
