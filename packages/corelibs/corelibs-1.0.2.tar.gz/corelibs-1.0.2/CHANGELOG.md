@@ -1,0 +1,6 @@
+* V1.0.2
+    - pysimplegui downgraded to 4.33.0
+* V1.0.1
+    - Fixed UI Minors bugs
+* V1.0.0
+    - Initial release
