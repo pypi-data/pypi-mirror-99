@@ -1,0 +1,49 @@
+Metadata-Version: 1.1
+Name: timeshade
+Version: 21.0.1
+Summary: Shade nighttime of time-series
+Home-page: https://github.com/justinshenk/timeshade
+Author: Justin Shenk
+Author-email: shenkjustin@gmail.com
+License: MIT
+Description: Nightshade
+        ==========
+        
+        Shade nighttime dark on plots
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        Install
+        ~~~~~~~
+        
+        ``pip install timeshade``
+        
+        Usage
+        ~~~~~
+        
+        .. code:: python
+        
+           import timeshade; import pandas as pd
+        
+           # create timeseries
+           idx = pd.date_range("2018-01-01", periods=100, freq="H")
+           ts = pd.Series(range(len(idx)), index=idx)
+        
+           # shade
+           import timeshade
+           timeshade.shade(ts)
+        
+           # plot
+           import matplotlib.pyplot as plt
+           plt.show()
+        
+        |timeshade|
+        
+        .. |timeshade| image:: timeshade.png
+        
+Keywords: plot,shade,nighttime,dark,time series
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6

@@ -1,0 +1,11 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+timeshade/__init__.py
+timeshade.egg-info/PKG-INFO
+timeshade.egg-info/SOURCES.txt
+timeshade.egg-info/dependency_links.txt
+timeshade.egg-info/not-zip-safe
+timeshade.egg-info/requires.txt
+timeshade.egg-info/top_level.txt
