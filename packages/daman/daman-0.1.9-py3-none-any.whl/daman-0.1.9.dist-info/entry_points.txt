@@ -1,0 +1,8 @@
+[console_scripts]
+dm_aws = daman.commands:configure_aws_command
+dm_clear = daman.commands:clear_command
+dm_configure = daman.commands:configure_command
+dm_delete = daman.commands:delete_command
+dm_pull = daman.commands:download_command
+dm_summary = daman.commands:summary_command
+
