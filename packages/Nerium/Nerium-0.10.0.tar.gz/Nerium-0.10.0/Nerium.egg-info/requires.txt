@@ -1,0 +1,14 @@
+Flask>=1.1.2
+flask-cors
+gitpython
+marshmallow
+pyyaml
+requests
+sqla-raw==1.0.0rc.1
+sqlparse
+
+[mysql]
+PyMySQL
+
+[pg]
+psycopg2
