@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: passyunk
+Version: 1.0
+Summary: address parser for City of Philadelphia addresses
+Home-page: UNKNOWN
+Author: tom.swanson
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: fuzzywuzzy
+
+UNKNOWN
+
+
