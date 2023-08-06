@@ -1,0 +1,4 @@
+pyramid>=1.9
+passlib
+sqlalchemy
+pyramid_services
