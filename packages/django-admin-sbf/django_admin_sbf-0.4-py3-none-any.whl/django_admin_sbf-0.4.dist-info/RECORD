@@ -1,0 +1,14 @@
+django_admin_sbf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_admin_sbf/admin.py,sha256=UGxDkcCwO_xkSvLTQa2ttbPEBk3spiGKf0_ilny8eS0,2842
+django_admin_sbf/admin_forms.py,sha256=Y1JPX5AtQy0s6fn3gGUrTe5FajcE_6EyzacINJbYZ6c,2316
+django_admin_sbf/apps.py,sha256=RDMNUj5ysfJXubvHxYXjiQ7Mkm7-KAwmPO1h8Umns-k,108
+django_admin_sbf/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_admin_sbf/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_admin_sbf/templates/admin/custom_change_list.html,sha256=OxwBUI2GQ_YiM7p4yUCpVvrF1NmmwNmjrIYfzmz1SbI,132
+django_admin_sbf/templates/admin/custom_search_form.html,sha256=YpFaG_2wpYSTPTTbxlEl-MUHCe2M5kGxCGTLlVyldTU,1377
+django_admin_sbf/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_admin_sbf/templatetags/custom_search_form.py,sha256=vqQ_kEcvcPdJhae62oglkcuS54fhtZzVyNbECvx8t7s,431
+django_admin_sbf-0.4.dist-info/METADATA,sha256=_YbvaJWB6WyP_f13tQfd3INR76ALZ1LpdmsaeG8wB7c,1784
+django_admin_sbf-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_admin_sbf-0.4.dist-info/top_level.txt,sha256=Yj3qTmJAGA2SJl6aAmUg96QfpB9TFenOIRkdsuMMGxw,17
+django_admin_sbf-0.4.dist-info/RECORD,,
