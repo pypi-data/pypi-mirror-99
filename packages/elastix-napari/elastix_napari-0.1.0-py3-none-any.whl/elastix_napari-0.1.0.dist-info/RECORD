@@ -1,0 +1,10 @@
+elastix_napari/__init__.py,sha256=6SXecHakef3pLYuWjLEr5xL1zrm-Jm1JPmcXZsigJB4,224
+elastix_napari/elastix_registration.py,sha256=4IUXn2jYwWILtDwinZdIOVn91zkLpAlsgoLMCqAcJGg,3182
+elastix_napari/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elastix_napari/_tests/test_function.py,sha256=ieszB0ifA9ct_AZKzfq630crmbpH6OSzETq0kbyfIcY,125
+elastix_napari-0.1.0.dist-info/LICENSE,sha256=CUvt2ilcBwKAfRAnoA4RNPTLcdUj3En21LPK9YkFMGg,11358
+elastix_napari-0.1.0.dist-info/METADATA,sha256=0xPNs34xaSpnV0luSE0dW26EiRb9z9npDSP5S9wAIt4,3522
+elastix_napari-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+elastix_napari-0.1.0.dist-info/entry_points.txt,sha256=PIzOKhTdGosZsbOp9QaNmvO6eOi6S4a8-BdjZVFE9ik,53
+elastix_napari-0.1.0.dist-info/top_level.txt,sha256=ianPpk64CKghsNPpj1C7zKB50-XGdRS-CD9HHqZDxw8,15
+elastix_napari-0.1.0.dist-info/RECORD,,
