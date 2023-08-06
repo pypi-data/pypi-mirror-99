@@ -1,0 +1,5 @@
+pip
+packaging
+fastai>=2.2.7
+kornia>=0.5.0
+timm>=0.4.5
