@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pbar-parallel
+Version: 0.0.1
+Summary: Provides a Wrapper arround joblibs Parallel object for displaying a progress bar
+Home-page: UNKNOWN
+Author: Mats L. Richter
+Author-email: matrichter@uos.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: attrs
+Requires-Dist: joblib
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
