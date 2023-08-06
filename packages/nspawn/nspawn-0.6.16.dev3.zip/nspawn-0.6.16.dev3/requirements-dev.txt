@@ -1,0 +1,6 @@
+
+devrepo
+
+pypirepo
+
+pytest

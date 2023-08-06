@@ -1,0 +1,6 @@
+[console_scripts]
+nspawn-build = nspawn.app.engine.build:main
+nspawn-enter = nspawn.app.nsenter.main:main
+nspawn-hatch = nspawn.app.hatcher.main:main
+nspawn-setup = nspawn.app.engine.setup:main
+
