@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    tap-test-data-generator=tap_test_data_generator:main
+    
