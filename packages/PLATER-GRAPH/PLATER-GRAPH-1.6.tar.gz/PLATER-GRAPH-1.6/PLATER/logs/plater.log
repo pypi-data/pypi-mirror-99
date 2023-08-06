@@ -1,0 +1,29 @@
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 21:58:51,956: [x] Pinging redis
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 21:59:28,770: [x] Pinging redis
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 21:59:28,865: [x] Got response...True
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 21:59:32,737: RUNNING TRAPI QUERY: 
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 21:59:32,738: MATCH (n0 {`id`: 'NCBIGene:15'}) WHERE 'biolink:Gene' in n0.category OR 'gene' in n0.category
+WITH n0 AS n0
+RETURN n0,labels(n0) AS type__n0
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:01:08,709: RUNNING TRAPI QUERY: 
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:01:08,710: MATCH (n0 {`id`: 'NCBIGene:15'})-[e0]-(n1 {}) 
+WHERE ('biolink:Gene' in n0.category OR 'gene' in n0.category)
+AND ('biolink:NamedThing' in n1.category OR 'named_thing' in n1.category)
+WITH n1 AS n1, n0 AS n0, collect(e0) AS e0
+RETURN n1,n0,e0,labels(n1) AS type__n1,labels(n0) AS type__n0,[edge in e0 | type(edge)] AS type__e0,[edge in e0 | [startNode(edge).id, endNode(edge).id]] AS id_pairs__e0
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 22:04:12,449: [x] Pinging redis
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 22:04:12,542: [x] Got response...True
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:04:20,219: RUNNING TRAPI QUERY: 
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:04:20,220: MATCH (n0 {`id`: 'NCBIGene:15'})-[e0]-(n1 {}) 
+WHERE ('biolink:Gene' in n0.category OR 'gene' in n0.category)
+AND ('biolink:NamedThing' in n1.category OR 'named_thing' in n1.category)
+WITH n0 AS n0, n1 AS n1, collect(e0) AS e0
+RETURN n0,n1,e0,labels(n0) AS type__n0,labels(n1) AS type__n1,[edge in e0 | type(edge)] AS type__e0,[edge in e0 | [startNode(edge).id, endNode(edge).id]] AS id_pairs__e0
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 22:17:18,806: [x] Pinging redis
+[PLATER.services.util.drivers.redis_driver.ping_redis] - 2021-03-23 22:17:18,906: [x] Got response...True
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:17:21,843: RUNNING TRAPI QUERY: 
+[PLATER.services.util.drivers.redis_driver.answer_TRAPI_question] - 2021-03-23 22:17:21,844: MATCH (n0 {`id`: 'NCBIGene:15'})-[e0]-(n1 {}) 
+WHERE ('biolink:Gene' in n0.category OR 'gene' in n0.category)
+AND ('biolink:NamedThing' in n1.category OR 'named_thing' in n1.category)
+WITH n0 AS n0, n1 AS n1, collect(e0) AS e0
+RETURN n0,n1,e0,labels(n0) AS type__n0,labels(n1) AS type__n1,[edge in e0 | type(edge)] AS type__e0,[edge in e0 | [startNode(edge).id, endNode(edge).id]] AS id_pairs__e0
