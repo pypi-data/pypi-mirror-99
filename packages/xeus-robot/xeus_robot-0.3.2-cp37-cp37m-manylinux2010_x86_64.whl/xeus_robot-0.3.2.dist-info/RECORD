@@ -1,0 +1,12 @@
+xrobot_launcher.py,sha256=B-_Eij8uDu7k1FjPnn8se0qIPX9gpa0GHnOIPVbhSv8,395
+xeus_robot-0.3.2.dist-info/WHEEL,sha256=qNJuWbX2sl6mKHj8liL8DQmRViepgMTeylhZLazDvDo,106
+xeus_robot-0.3.2.dist-info/top_level.txt,sha256=eCayGuYoAWEttG3xSrfLGMUf19rYUfsBTEquzT-eWNk,23
+xeus_robot-0.3.2.dist-info/RECORD,,
+xeus_robot-0.3.2.dist-info/METADATA,sha256=lHL2Qo4b2IlaI2ojNsL8XjzpIeti48exh0E7LUrTMXI,424
+xeus_robot-0.3.2.dist-info/LICENSE,sha256=WvdF-7mGwDyzMvBMaZQHGbNiSAlWm1n4fhmQyyvB_MM,1552
+xrobot/__init__.py,sha256=78BBoDLxbRbfn4OsKfskhPHileg8teJR4uJVFXlhCnw,37
+xrobot/xrobot_extension.cpython-37m-x86_64-linux-gnu.so,sha256=NHbm0VORh5ico5AdHiFB9S4_3JjiRjuAPjtBzt8YKso,5226712
+xeus_robot-0.3.2.data/data/share/jupyter/kernels/xrobot/logo-64x64.png,sha256=aCeFdZFOfd-O39sFiM0SfQ5nKK2ep_CICpcSaclupGc,1137
+xeus_robot-0.3.2.data/data/share/jupyter/kernels/xrobot/logo-32x32.png,sha256=JLjEWDaPoEV_JXmzSuRhbmeP6cWHrODqXUTwqZqPWDI,642
+xeus_robot-0.3.2.data/data/share/jupyter/kernels/xrobot/kernel.js,sha256=OLqfxRkHRaOw-seQezU9IUH5bAhmjZ_8CNJQaUwF9GI,22658
+xeus_robot-0.3.2.data/data/share/jupyter/kernels/xrobot/kernel.json,sha256=eCdg-sCMuDekMrMSTEB3GF6R1VHDMcBzY-kqXm28Fg0,266
