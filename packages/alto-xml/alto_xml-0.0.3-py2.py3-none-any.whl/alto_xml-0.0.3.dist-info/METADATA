@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: alto-xml
+Version: 0.0.3
+Summary: A Python parser for alto XML files, for handling OCR outputs
+Home-page: https://github.com/envinorma/alto
+Author: Rémi Delbouys
+Author-email: remi.delbouys@laposte.net
+License: MIT license
+Keywords: alto
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'all'
+Requires-Dist: black (>=19.10b0) ; extra == 'all'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'all'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'all'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'all'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'all'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'all'
+Requires-Dist: isort (>=5.7.0) ; extra == 'all'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'all'
+Requires-Dist: coverage (>=5.1) ; extra == 'all'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'all'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'all'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'all'
+Requires-Dist: tox (>=3.15.2) ; extra == 'all'
+Requires-Dist: twine (>=3.1.1) ; extra == 'all'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'dev'
+Requires-Dist: black (>=19.10b0) ; extra == 'dev'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'dev'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'dev'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'dev'
+Requires-Dist: isort (>=5.7.0) ; extra == 'dev'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'dev'
+Requires-Dist: coverage (>=5.1) ; extra == 'dev'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'dev'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'dev'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'dev'
+Requires-Dist: tox (>=3.15.2) ; extra == 'dev'
+Requires-Dist: twine (>=3.1.1) ; extra == 'dev'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'dev'
+Provides-Extra: setup
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'setup'
+Provides-Extra: test
+Requires-Dist: black (>=19.10b0) ; extra == 'test'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'test'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'test'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'test'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'test'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'test'
+Requires-Dist: isort (>=5.7.0) ; extra == 'test'
+
+# Alto
+
+[![Build Status](https://github.com/envinorma/alto/workflows/Build%20Main/badge.svg)](https://github.com/envinorma/alto/actions)
+[![Documentation](https://github.com/envinorma/alto/workflows/Documentation/badge.svg)](https://envinorma.github.io/alto/)
+[![Code Coverage](https://codecov.io/gh/envinorma/alto/branch/main/graph/badge.svg)](https://codecov.io/gh/envinorma/alto)
+
+A Python parser for alto XML files, for handling OCR outputs
+
+---
+
+## Example usage
+
+```python
+from alto import parse_file
+
+alto = parse_file('path/to/alto/file.xml')
+print(alto.extract_words())
+```
+
+## Installation
+
+**Stable Release:** `pip install alto_xml`<br>
+**Development Head:** `pip install git+https://github.com/envinorma/alto.git`
+
+## Documentation
+
+For full package documentation please visit [envinorma.github.io/alto](https://envinorma.github.io/alto).
+
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to development.
+
+**MIT license**
+
+
