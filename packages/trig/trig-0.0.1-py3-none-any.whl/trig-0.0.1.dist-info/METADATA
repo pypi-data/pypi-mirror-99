@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: trig
+Version: 0.0.1
+Summary: Many trigonometric functions
+Home-page: https://gitlab.com/Tom_Fryers/trig
+Author: Tom Fryers
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Trig
+
+`trig` is a package that provides a variety of common and lesser-known
+trigonometric functions.
+
+
+
