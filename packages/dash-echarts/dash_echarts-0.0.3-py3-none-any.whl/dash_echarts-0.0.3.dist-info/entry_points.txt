@@ -1,0 +1,3 @@
+[console_scripts]
+echarts_line = dash_echarts.examples.line:main
+
