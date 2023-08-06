@@ -1,0 +1,8 @@
+README.md
+setup.py
+TreeBuilder/__init__.py
+TreeBuilder/builder.py
+data2tree.egg-info/PKG-INFO
+data2tree.egg-info/SOURCES.txt
+data2tree.egg-info/dependency_links.txt
+data2tree.egg-info/top_level.txt
