@@ -1,0 +1,10 @@
+mutable_primitives/__init__.py,sha256=nCVhiw-NEJYByvu5Ccpah42bMSfqcd_fXH1DzKTSDcI,202
+mutable_primitives/base.py,sha256=C66LDjTDlTE3unLYiBngTcIayJWeNI1qvjbrwa8nIWg,744
+mutable_primitives/bool.py,sha256=yDgc04t2EEh3hsYjARMrcUCx4F-8X_KmOpT83KaMFLk,1248
+mutable_primitives/float.py,sha256=QK983xE8hEVSani9nrT4mYiejZdyDsUh6aw9GRak3Oc,2733
+mutable_primitives/int.py,sha256=WBrHELNlhh8OCYkVaWn6PE4NLoDwvFRmnCD1s1avpWM,2719
+mutable_primitives-0.0.6.dist-info/LICENSE,sha256=0NBicIZOUfxrPWctjpVx6Sw1yoy8Ilod8NeI8vsMpFU,1065
+mutable_primitives-0.0.6.dist-info/METADATA,sha256=CGQa3l_OWb5eCa7pCSK8cBu-7nenXoE5FZ3hOMO8fFI,3003
+mutable_primitives-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mutable_primitives-0.0.6.dist-info/top_level.txt,sha256=OQTQJKAGocf0-vNN9aBTU8_cXGqkB7ipjNLPxnxGCoU,19
+mutable_primitives-0.0.6.dist-info/RECORD,,
