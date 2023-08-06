@@ -1,0 +1,11 @@
+sugarplot/__init__.py,sha256=ASR1PGPIDfBKKnl1gzpWwfzsQhtrGrG9iXn1Yecyx88,90
+sugarplot/conftest.py,sha256=G0yMHDAWYOhJ2_3QeNlClAbJ6KUKCj0C71KgNpa1Ajs,234
+sugarplot/examples/examples.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sugarplot/source/some_module.py,sha256=zmrDrpikrRSp-hRuiWARf454FhlNMTNmuvAceWkF63k,68
+sugarplot/test/shorthand.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sugarplot/test/test_something.py,sha256=hgEXbz258yysCquzgG5DJquIjwJBR-lidYOE4nmcSPQ,146
+sugarplot-0.1.3.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+sugarplot-0.1.3.dist-info/METADATA,sha256=CqBQQtbWjslfq6o21QOgmNe-6JtKvdJgqTUKDzfCpgM,5846
+sugarplot-0.1.3.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+sugarplot-0.1.3.dist-info/top_level.txt,sha256=7GPgLkpwTUIQOlk5Vf2yJ-gxPb1Ory49lmCcuD9X9EQ,10
+sugarplot-0.1.3.dist-info/RECORD,,
