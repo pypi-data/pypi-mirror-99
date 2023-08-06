@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: container2dict
+Version: 0.0.1
+Summary: two container to dictionary
+Home-page: https://pypi.org/
+Author: derek
+Author-email: derektmq@gmail.com
+License: MIT Licence
+Description: two container to dictionary
+Keywords: pip,Bwaaah
+Platform: any

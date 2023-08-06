@@ -1,0 +1,7 @@
+setup.py
+container2dict/__init__.py
+container2dict/container2dict.py
+container2dict.egg-info/PKG-INFO
+container2dict.egg-info/SOURCES.txt
+container2dict.egg-info/dependency_links.txt
+container2dict.egg-info/top_level.txt
