@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+pkg/__init__.py
+vuln_instrumentation.egg-info/PKG-INFO
+vuln_instrumentation.egg-info/SOURCES.txt
+vuln_instrumentation.egg-info/dependency_links.txt
+vuln_instrumentation.egg-info/top_level.txt
