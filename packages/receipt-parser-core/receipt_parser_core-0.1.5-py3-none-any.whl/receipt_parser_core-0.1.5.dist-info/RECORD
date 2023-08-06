@@ -1,0 +1,11 @@
+receipt_parser_core/__init__.py,sha256=iz9NsUFcTSJ7Nl5j0uT3PdHEpCfRD0C98UTam4KASIw,228
+receipt_parser_core/config.py,sha256=SLsV-F2g6z8cWvHGsLN9rUsJ0RChfXWeAqS08IJuCPs,411
+receipt_parser_core/enhancer.py,sha256=i5r5JRBGkWP6zRJWqFKmmYyPGIIjVuxNbfmfl1Ts0tc,7352
+receipt_parser_core/objectview.py,sha256=9J3BLraLA7st1h47YDyvtPjiiFM5aXndgmMKPHyYfHo,787
+receipt_parser_core/parse.py,sha256=KFiXATfy7oN7I2jQ1TERY9nCwNTpyZBRAkN40dtqnb4,3951
+receipt_parser_core/receipt.py,sha256=LKthhregUcnM9VDo_rNmew6ojT-JGcmiTi91ktr0Fvo,5254
+receipt_parser_core-0.1.5.dist-info/entry_points.txt,sha256=bgbw7gvVhtYidUdWcUSUbUEWI3O8ozdoOVY8Awwq0MM,48
+receipt_parser_core-0.1.5.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+receipt_parser_core-0.1.5.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+receipt_parser_core-0.1.5.dist-info/METADATA,sha256=gjcTfxfG3EUmAeTwaTZeNqOcsBDouuNDBajo82SoNoo,895
+receipt_parser_core-0.1.5.dist-info/RECORD,,
