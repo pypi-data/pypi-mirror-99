@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: trifacta
+Version: 3.0.0
+Summary: Python SDK for Trifacta
+Home-page: https://www.trifacta.com
+Author: Trifacta Inc
+Author-email: support@trifacta.com
+License: UNKNOWN
+Keywords: dataprep preparation wrangle wrangling wrangler trifacta
+Platform: UNKNOWN
+Requires-Python: >3.6, < 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (==1.1.2)
+Requires-Dist: numpy (==1.17.0)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: regex (==2020.10.11)
+Requires-Dist: python-slugify (==4.0.1)
+Requires-Dist: tqdm (==4.55.1)
+Requires-Dist: boto3 (~=1.17.25)
+Requires-Dist: ipywidgets (~=7.6.3)
+Requires-Dist: ijson (~=3.1.4)
+Requires-Dist: simplejson (~=3.16.0)
+Requires-Dist: pywebhdfs (~=0.4.1)
+
+# Python SDK for Trifacta
+
+Lets user integrate their python centric environment with Trifacta.
+
+## Getting Started
+
+### Installation
+
+- Install `trifacta` using pip.
+  ```
+  pip install trifacta
+  ```
+
+## How to use
+
+### Configuration and Prerequisites
+
+#### Enable access to your trifacta workspace
+
+- Click on `Generate new token` to create a new token. Copy the token by clicking on `Copy token to clipboard` before
+  closing modal.
+- Keep this token somewhere safe and accessible as this would be required in steps below.
+
+#### Configure trifacta package
+
+`Python SDK for Trifacta` requires small configuration before it could be used to interact with a Trifacta environment.
+
+- Create a new configuration file in your home directory name it `.trifacta.py.conf`.
+- Open the file in editor and add following configuration to it
+  ```
+  [CONFIGURATION]
+  username = <username_for_trifacta_account>  # example: test-user@gmail.com
+  endpoint = <uri_for_your_trifacta_worskapce>  # example: https://test-workspace.saas-latest-dev.trifacta.net
+  token = <copied_token_from_steps_above>
+  ```
+- Save the file.
+
+### Upload and flow generation
+
+- Create new python3 notebook and import the `trifacta` module.
+  ```
+  import trifacta as tf
+  ```
+  Now, you have a handler to interact with your Trifacta workspace.
+- Next, try to wrangle/transform a CSV dataset using Trifacta.
+  ```
+  import pandas as pd
+  df = pd.read_csv(<path_to_csv_dataset>)
+  wf = tf.wrangle(df)
+  ```
+  `wrangle` function lets you upload a dataset to Trifacta and create a flow for it, which then can be used to
+  wrangle/transform the dataset from Trifacta's user-interface. It also returns a handle for the created flow with which
+  you can perform other operations on your dataset.
+
+### Trifacta in browser launch
+
+- Once the upload completes, execute below statement to open Trifacta in a browser window.
+  ```
+  wf.open()
+  ```
+- In the Trifacta window, navigate to the flow created for you. Create a recipe to prepare your dataset, by applying
+  certain transformation on Transformer UI of Trifacta. Once done with data preparation, go back to the notebook window.
+
+### Pandas code generation
+
+- To use `get_pandas()` functionality, `Wrangle to Python Conversion` setting must be enabled by the Administrator of
+  your Trifacta workspace, through Workspace Admin Settings page.
+- Get pandas code for the transform recipe created in Trifacta, such that you can use it transform
+  your `Pandas DataFrame`.
+  ```
+  column_names = df.columns.to_list()
+  wf.get_pandas(column_names, add_to_next_cell=True)
+  ```
+  `get_pandas` will translate Trifacta's transform recipe into pandas code and `add_to_next_cell` set to `True` will
+  make sure that the generated code is added to next cell of notebook.
+- Execute the generated code in next cell, then in a new cell perform following actions to transform the dataframe using
+  above generated Pandas code.
+  ```
+  wrangled_df = run_transforms(df)
+  wrangled_df
+  ```
+  This will return the output of cleansed/transformed pandas dataframe.
+
+### Data Profiling
+
+The SDK offers data profiling features for Trifacta's `flow`.
+
+- `summary()` - gives a table of summary statistics per column
+- `dqBars()` - provides the valid/invalid/missing ratio per column
+- `colTypes()` - simply lists the induced data type for each column
+- `barsDfList()` - gives a list of dataframes, one per column, representing a bar-chart for that column
+- `pdfProfile()` - produces a snazzy pdf report with all the statistics
+
+
+
+
+
+
