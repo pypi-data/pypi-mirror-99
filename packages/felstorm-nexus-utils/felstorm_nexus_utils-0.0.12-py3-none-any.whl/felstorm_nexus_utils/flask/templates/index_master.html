@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self';
+  script-src * 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data">
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/
+     v2.0 | 20110126
+     License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    //-webkit-user-select: none;
+    //-moz-user-select: none;
+    //-ms-user-select: none;
+    //-o-user-select: none;
+    //user-select: none;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    button:hover {
+    cursor: pointer
+    }
+    /* --- after reset -- */
+    html {
+      --accent: #00FF73;
+      --border-primary: rgb(38, 50, 59);
+      --text-normal: #FFF;
+      --text-jaded: #C5D1DA;
+      --text-muted: #6E7E8C;
+      --background-primary: 22, 38, 51;
+      --background-secondary: 18, 29, 39;
+      --background-tertiary: 25, 42, 52;
+      --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+    body, html {
+      font-family: var(--font-family);
+      color: var(--text-normal);
+      padding: 15px;
+      margin: 0;
+      background: rgba(var(--background-primary), 1)
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      flex-direction: column;
+      max-width: 480px;
+      min-width: 400px;
+      padding: 40px;
+      background: rgba(var(--background-primary), 1);
+    }
+
+    #nexus_menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(var(--background-secondary), 1);
+      width: 100%;
+      margin: 0 0 3rem;
+    }
+
+    #nexus_menu a.btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: .75rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a.active {
+      font-weight: 600;
+      background: var(--accent);
+      color: rgba(var(--background-secondary), 1);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    hr {
+      background: var(--border-primary);
+      height: 1px;
+      border: none;
+      margin: 2rem 0;
+    }
+
+    a.home-icon {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      background: var(--accent);
+      color: rgba(var(--background-secondary), 1);
+      padding: .25rem
+    }
+
+  </style>
+</head>
+<body>
+<div id="container">
+  <a href="/" class="home-icon">home</a>
+  <div id="nexus_menu">
+    <a href="/{{nexus}}/form" class="btn {% if section == 'form' %}active{% endif %}">
+      nexus form
+    </a>
+    <a href="/{{nexus}}/" class="btn {% if section == 'render' %}active{% endif %}">
+      nexus rendered
+    </a>
+  </div>
+  <div>
+    {% if section == 'main' %}
+    {% elif section == 'form' %}
+      {{form_html|safe}}
+    {% else %}
+      {% include 'index.html' %}
+    {% endif %}
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+
+  function getMaxHeight() {
+    var body = document.body
+    var html = document.documentElement
+    return Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    )
+  }
+
+  function getMaxWidth() {
+    var body = document.body
+    var html = document.documentElement
+    return Math.max(
+      body.scrollWidth,
+      body.offsetWidth,
+      html.clientWidth,
+      html.scrollWidth,
+      html.offsetWidth
+    )
+  }
+
+  function sendDimensions() {
+    const width = getMaxWidth()
+    const height = getMaxHeight()
+    console.log(width, 'x', height)
+    window.top.postMessage(
+      JSON.stringify({
+        error: false,
+        nexus: true,
+        message: "Hello from Nexus Engine App!",
+        width: width,
+        height: height
+      }),
+      '*'
+    );
+  }
+  //window.onload = sendDimensions()
+
+  window.addEventListener('load', function () {
+    sendDimensions()
+  })
+
+  window.addEventListener('message', message => {
+    try {
+      const data = JSON.parse(message.data)
+      if(data.hasOwnProperty('nexus')) {
+        const htmlEl = document.querySelector('html')
+        Object.entries(data.cssProperties).map((key, val) => {
+          htmlEl.style.setProperty(key[0], key[1])
+        })
+      }
+    } catch {}
+  });
+
+</script>
+</html>
