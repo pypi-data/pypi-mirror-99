@@ -1,0 +1,7 @@
+pynewton/__init__.py,sha256=pOR6GpEp97XpYc_IOvJf4yCy0yNFCkP-074S4OL6xDQ,139
+pynewton/extensions.py,sha256=MjArbV2Ijwemt5LVFrFFiP3qGf5uI2tOuF11sg7r448,448
+pynewton/extensions.pyi,sha256=3hlCHNWDA2FTEbSceDjfckkBMkXkH3wXo7npgFdxSeQ,858
+pynewton/wrapper.py,sha256=OsP_IoZW7-N8foTI4ggOvSZOn-1_8FsLkD7O-feAfDU,1631
+pynewton-1.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pynewton-1.1.0.dist-info/METADATA,sha256=XTeQfzNMl37M8KpGjbz9CyMFQ2E5ePot6ddfcdvKJBU,1321
+pynewton-1.1.0.dist-info/RECORD,,
