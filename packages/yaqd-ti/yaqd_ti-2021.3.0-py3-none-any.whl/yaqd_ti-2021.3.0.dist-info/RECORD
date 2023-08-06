@@ -1,0 +1,11 @@
+yaqd_ti/VERSION,sha256=68jdD-Jk60j5c7zpSITyk_Sgh0Q8o0SexpnB-8zIoTk,9
+yaqd_ti/__init__.py,sha256=PURbgkzsZGcU1ehHTZDIyS0RSsk9Eduare3j-94G95o,106
+yaqd_ti/__version__.py,sha256=aIq6BYZ2Vu4z6qhpulwJjQVwfXWBRNlRKwBX_hECB00,493
+yaqd_ti/_ads1115.py,sha256=GUgR5SaAkEG9Z-R4Fu2rO72MK_GVl5j_9bIwlgf7vEo,3106
+yaqd_ti/ads1115.avpr,sha256=kmsFF6m2KASacGgcNk5e51nGrFmI8w_-UoRllYyTlW0,9127
+yaqd_ti/ads1115.toml,sha256=17xrC3OP7TY1qTu6aVEw9yOS0AQp0liitYf1swQ14MY,907
+yaqd_ti-2021.3.0.dist-info/entry_points.txt,sha256=Y9vYkjn5e7plTcgJmjQ289lDH4PeN45cLvDs9pUd2hQ,62
+yaqd_ti-2021.3.0.dist-info/LICENSE,sha256=gQ0onXQnjXJoTSbNwqxcuw8B8tGCEvORxsRGc5mnrdU,7633
+yaqd_ti-2021.3.0.dist-info/WHEEL,sha256=rg7OlU52oY2dGF9P6-vT77byVLtCIN4joChV1HjAybU,81
+yaqd_ti-2021.3.0.dist-info/METADATA,sha256=r3_aZj6l3pNmJRbnOE8fnsH48ofLrcCSDQNmZH3gSNQ,1729
+yaqd_ti-2021.3.0.dist-info/RECORD,,
