@@ -1,0 +1,11 @@
+cubituskinematics/Bezier.py,sha256=yYGNNwrmM1WylD7wDMO0Q88BMK0Aoi-5iKnhKJB9lOA,2562
+cubituskinematics/Core.py,sha256=NoYwEb17IEne3HJfRJjWszhDomOWc-MpSTyx80JY0FE,25440
+cubituskinematics/Kinematics.py,sha256=3OieyP_TmvR4DU5CzSEFWHhVWiP1MMRdNnZVjD5rpBg,9626
+cubituskinematics/Mathematics.py,sha256=Z5-A8qvcScclMVimDJoGhQAjRF6kOXKd-gccRst3Xy8,1420
+cubituskinematics/__init__.py,sha256=csmUj_N675OrPML696bbS5bXc98wDY2lpeP_wG9My48,8866
+cubituskinematics/cubitus.xml,sha256=cmG5OaRyviYc02lej7oKj10PNR_uJFB0SGmTR6gSuxU,1549
+cubituskinematics-0.0.8.dist-info/LICENSE.txt,sha256=Pk1YUu8yJyD99eCK-XDcL2JUAJZkFCIm4cEYQ9zp2D4,1093
+cubituskinematics-0.0.8.dist-info/METADATA,sha256=ZJheSIjuBzgVjtXiikEIgmikF9N9LivbfjWkfD-gSKA,6963
+cubituskinematics-0.0.8.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+cubituskinematics-0.0.8.dist-info/top_level.txt,sha256=MUHUbiIYEFrGWGSwEtzswywDGZVV9TJ971Cw2Z4gMi8,18
+cubituskinematics-0.0.8.dist-info/RECORD,,
