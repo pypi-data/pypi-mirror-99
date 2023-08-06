@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: apollon
+Version: 0.1.2.1
+Summary: Feature extraction frame work for content-based music analysis.
+Home-page: UNKNOWN
+Author: Michael Blaß
+Author-email: mblass@posteo.net
+License: BSD 3-Clause License
+Project-URL: Source code, https://gitlab.rrz.uni-hamburg.de/bal7668/apollon
+Project-URL: Bug Tracker, https://gitlab.rrz.uni-hamburg.de/bal7668/apollon/-/issues
+Description: # Apollon
+        Apollon is a Python framework for audio feature extraction and music similarity estimation. It 
+        includes subpackages for
+        
+        * Audio feature extraction
+        * Hidden Markov Models
+        * Self-Organizing Map
+        
+        ## 1. Installation
+        ### 1.1 Install from PyPi
+        The latest version of apollon is available on PyPi. 
+        Download apollon or clone this repository. Navigate the package's root directory
+        and install apollon using pip.
+        ```
+        cd path/to/apollon_repo
+        pip install .
+        ```
+        Note that the period on the end of the last line is necessary.
+        
+        ## 2. Documentation
+        Full [documentation](https://apollon.readthedocs.io) is available on readthedocs.
+        
+Keywords: music,analysis,feature extraction
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: BSD License
