@@ -1,0 +1,7 @@
+deepcov/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepcov/cli.py,sha256=qAX2iNPNSJJRtd9rM7Id2uVG0Sb373553XGJruteIfA,4033
+deepcov/pytest_plugin.py,sha256=TxcPlVRsx-DAlIdW_zS_HxdIEUjbqRRx0bmuwEn3Qvs,1376
+deepcov-0.0.1.dist-info/entry_points.txt,sha256=Q92lXB7GJUHu-OWzjdk-FjwvmPzsxNt2eJCzx7NxQxM,85
+deepcov-0.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+deepcov-0.0.1.dist-info/METADATA,sha256=RCCrvVhioK-71UWH34ZyRe-c-kIhQpWol9tMMTd-EsY,718
+deepcov-0.0.1.dist-info/RECORD,,
