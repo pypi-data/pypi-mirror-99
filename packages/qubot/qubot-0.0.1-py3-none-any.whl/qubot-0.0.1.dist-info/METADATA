@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: qubot
+Version: 0.0.1
+Summary: Qubot automated testing framework.
+Home-page: https://github.com/anthonykrivonos/qubot
+Author: anthonykrivonos, kenkenchuen
+Author-email: ak4483@columbia.edu, kc3334@columbia.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: numpy (>=1.20.1)
+Requires-Dist: gym (>=0.18.0)
+Requires-Dist: selenium (>=3.141.0)
+Requires-Dist: Pillow (==6.2.2)
+
+# Qubot
+
+An autonomous exploratory testing library for Python.
+
+
+
+It's a work in progress. See [experiments.ipynb](experiments.ipynb) for the experiment
+mentioned in "Qubot" paper.
+
+Hours of painstaking work have been put into this project thus far, but I hope this
+library finds actual use in the field of autonomous software testing.
+
+The Q-learning agent has been tested on [https://upmed-starmen.web.app/](https://upmed-starmen.web.app/),
+but feel free to use the sample code either in [experiments.ipynb](experiments.ipynb) or [qubot/scripts/test.py](./qubot/scripts/test.py)
+to test the agent out on your own software under test (SUT).
+
+### Author
+
+<b>Anthony Krivonos</b> <br/>
+[Portfolio](https://anthonykrivonos.com) | [GitHub](https://github.com/anthonykrivonos)
+
+
