@@ -1,0 +1,8 @@
+include README
+include LICENSE
+include VERSION
+include requirements.txt
+include sumogsuitealertscollector/gsuitealertcenter.yaml
+exclude sumogsuitealertscollector/common/__pycache__
+exclude sumogsuitealertscollector/omnistorage/__pycache__
+exclude sumogsuitealertscollector/sumoclient/__pycache__
