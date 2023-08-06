@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mdformat_footnote
+Version: 0.0.2
+Summary: An mdformat plugin for parsing/validating footnotes
+Home-page: https://github.com/gaige/mdformat-footnote
+Author: Gaige B. Paulsen
+Author-email: gaige@cluetrust.com
