@@ -1,0 +1,13 @@
+from checkov.graph.terraform.checks_infra.solvers.filter_solvers.base_filter_solver import BaseFilterSolver
+
+
+class WithinFilterSolver(BaseFilterSolver):
+    operator = 'within'
+
+    def __init__(self, resource_types, query_attribute, query_value):
+        super().__init__(resource_types=resource_types,
+                         query_attribute=query_attribute, query_value=query_value)
+
+    def get_operation(self, **kwargs):
+        # TODO
+        raise NotImplementedError
