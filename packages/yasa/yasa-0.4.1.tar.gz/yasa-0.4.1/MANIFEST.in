@@ -1,0 +1,10 @@
+# Add README, LICENSE and requirements :
+include README.rst
+include LICENSE
+include requirements.txt
+
+# Add trained classifiers
+include yasa/classifiers/clf_eeg_lgb_0.4.0.joblib
+include yasa/classifiers/clf_eeg+eog_lgb_0.4.0.joblib
+include yasa/classifiers/clf_eeg+eog+emg_lgb_0.4.0.joblib
+include yasa/classifiers/clf_eeg+eog+emg+demo_lgb_0.4.0.joblib
