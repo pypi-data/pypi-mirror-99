@@ -1,0 +1,3 @@
+[console_scripts]
+cassandra-row-estimator = row_estimator_for_apache_cassandra.__main__:main
+
