@@ -1,0 +1,25 @@
+scil/Preprocessing.py,sha256=-vWuEoqt_66sH5OGCGC7pLSgRmnR71wDrAXhCiCyKak,3002
+scil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scil/scil.py,sha256=fKufK_0LaAs98xanHyI-gSBKhPcphFmxo_VLHMsQZwo,2243
+scil/topic extraction.py,sha256=CO5X9qccPPAUhdkiQLFGaTFSzgJ3PSnoz4FLDmpxf6M,8386
+scil/services/__init__.py,sha256=5H9ZLtCax8naA-2pCC3uqY33oLc9QF0VYmGQnaYSYBU,269
+scil/services/_agreement.py,sha256=sM1vos57v1QPoUriFWahHuThrpWkPj26ifjXvew7GSg,5258
+scil/services/_argumentDiversity.py,sha256=nGyED7rkb4e2KTdf9RrPBwrR2SKLnz-CyJMYF4Z0klk,5140
+scil/services/_disagreement.py,sha256=A0Amx9dxAjuviWuZf5DczaVYYE1i0ytTfqAR2HHMS9s,5381
+scil/services/_emotiveLanguageUse.py,sha256=1FoApG-B6fc4TntF6EpiCBjENGkBWYPWFNniVh47sxE,4020
+scil/services/_involvement.py,sha256=7fVkwUwoigHLp_kD2-Cx33sD0SPneH0Z0AmTruywyxs,12195
+scil/services/_networkCentrality.py,sha256=wlU-UCEZbeq0XDMLBV0V6Oza8IbDoUmKPDIkqOXHRxU,5001
+scil/services/_preprocessing.py,sha256=REELp_Vggt20PRHxD3fuBhyCWoxmaXDRDBjhAEXSttM,6019
+scil/services/_sociability.py,sha256=8TUC7XJvrC5Habrsd3tU6o040QtPUlQLmBuTIQoS_F8,10226
+scil/services/_socialPositioning.py,sha256=tKuepVHNEPsmQQHBCYARtTp763J1KmpXbSIjJbR-g5I,4441
+scil/services/_socialRoles.py,sha256=-tJl7RKhiVjyzd5qt-y9VlhnhmIebQnUWUfRV4_aJtI,11103
+scil/services/_taskControl.py,sha256=EtJ2DMAuOgbPkOnhORnCJVEDDKJDMgP9GrXE92NxG7c,7820
+scil/services/_taskFocus.py,sha256=4Mvycin7b8ttAryKXmUpS-Ig1Q5YqzszacMX2gYCgEY,6585
+scil/services/_tensionFocus.py,sha256=IZCX8ACVwpTA-ZoZ5gYik7RuFgepcr0SUkURtfZyKs4,7177
+scil/services/_topicControl.py,sha256=1lgrn8u2kpmDAdHvFBZlQcyTngF507iogPEFQl_DXJM,8794
+scil/services/_topicalPositioning.py,sha256=iTkdxpBlW9Cdkrb3QNqNDFiKjyqVnTziNgcISVKjuaQ,12319
+pySCIL-0.0.3.dist-info/LICENSE,sha256=4qNHnxFkn51Nf0bAYSY63A1Y6ywjfJBf5yuBuKCCbKU,1065
+pySCIL-0.0.3.dist-info/METADATA,sha256=KNci-QGWRtePFDNhzEQuptTaHgiaCNthkjnGyuWPiS4,2956
+pySCIL-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pySCIL-0.0.3.dist-info/top_level.txt,sha256=_5SViOCMNbl9xa88pnoK2JJjAoobkeDqdb0B4hpXHPs,5
+pySCIL-0.0.3.dist-info/RECORD,,
