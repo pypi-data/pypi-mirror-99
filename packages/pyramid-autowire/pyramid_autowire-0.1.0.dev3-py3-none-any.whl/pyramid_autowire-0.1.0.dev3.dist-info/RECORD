@@ -1,0 +1,8 @@
+pyramid_autowire/__init__.py,sha256=dhRNJlnCcz2B9DRyN3n_zW1x-lRCljfjnSVnMAdt8EY,392
+pyramid_autowire/autowired_view.py,sha256=FKSg5IFOacJF5u6LEa5hj1WykwtFzqFK6AR4lGf2Xqw,1793
+pyramid_autowire/dependency_injection.py,sha256=JxqhIObHK905wlFKBOWvXyrJP31iDJzUwY3HhQJVZFM,1446
+pyramid_autowire/matchdict_injection.py,sha256=vOEEtswgZAHy3OXnnvyJTnV-CRk8LOrIn75wJ5XQZcA,296
+pyramid_autowire-0.1.0.dev3.dist-info/LICENSE,sha256=togAUGFuOddWsqX_1GAVDaKD3i_9M81XBnmsu4v8Fs0,1093
+pyramid_autowire-0.1.0.dev3.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pyramid_autowire-0.1.0.dev3.dist-info/METADATA,sha256=ngCRnXLWzFEGvUP7tOxUwzn-aTos7B4-YnMerivXiWY,2176
+pyramid_autowire-0.1.0.dev3.dist-info/RECORD,,
