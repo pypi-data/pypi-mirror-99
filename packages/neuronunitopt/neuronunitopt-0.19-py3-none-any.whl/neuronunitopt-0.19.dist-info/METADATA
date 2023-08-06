@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: neuronunitopt
+Version: 0.19
+Summary: A SciUnit library for data-driven testing of single-neuron physiology models.
+Home-page: http://github.com/russelljjarvis/neuronunit
+Author: Russell Jarvis
+Author-email: russelljarvis@protonmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: dask
+Requires-Dist: lxml (==4.4.1)
+Requires-Dist: elephant (==0.4.1)
+Requires-Dist: mock (==3.0.5)
+Requires-Dist: tqdm (==4.48.2)
+Requires-Dist: neo (==0.5.2)
+Requires-Dist: plotly (==4.5.2)
+Requires-Dist: simplejson (==3.17.0)
+Requires-Dist: future (==0.17.1)
+Requires-Dist: streamlit
+Requires-Dist: pandas (==1.1.0)
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: quantities (==0.12.4)
+Requires-Dist: Jinja2 (==2.10.3)
+Requires-Dist: Pebble (==4.5.3)
+Requires-Dist: backports.statistics (==0.1.0)
+Requires-Dist: python-dateutil
+Requires-Dist: scikit-learn (==0.23.2)
+Requires-Dist: frozendict (==1.2)
+Requires-Dist: numba
+Requires-Dist: allensdk (==0.16.3)
+Requires-Dist: natsort (==7.0.1)
+Requires-Dist: nbformat (==4.4.0)
+Requires-Dist: fsspec (>=0.3.3)
+Requires-Dist: efel
+Requires-Dist: pyneuroml
+Provides-Extra: morphology
+Requires-Dist: pylmeasure ; extra == 'morphology'
+
+UNKNOWN
+
+
