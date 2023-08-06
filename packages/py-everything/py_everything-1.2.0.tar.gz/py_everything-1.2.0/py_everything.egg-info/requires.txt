@@ -1,0 +1,6 @@
+requests
+pytube
+playsound
+setuptools
+wheel
+pip
