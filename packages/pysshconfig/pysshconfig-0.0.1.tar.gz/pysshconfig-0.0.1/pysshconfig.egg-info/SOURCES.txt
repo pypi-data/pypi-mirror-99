@@ -1,0 +1,12 @@
+COPYING
+COPYING.LESSER
+MANIFEST.in
+README.md
+pyproject.toml
+pysshconfig.py
+setup.cfg
+test_pysshconfig.py
+pysshconfig.egg-info/PKG-INFO
+pysshconfig.egg-info/SOURCES.txt
+pysshconfig.egg-info/dependency_links.txt
+pysshconfig.egg-info/top_level.txt
