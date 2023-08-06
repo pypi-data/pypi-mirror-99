@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: geo-com-cal
+Version: 0.0.0
+Summary: 基于python3.5+pyside2-5.15.1实现的大地测量综合计算
+Home-page: https://github.com
+Author: pby
+Author-email: 2567469480@qq.com
+License: LGPL
+Description: 基于python3.5+pyside2-5.15.1实现的大地测量综合计算，使用LGPL 3.0协议，开放了geo和task类，Task类包含一个ui和Geo计算类，可以用方法show()出一个UI界面.对于高斯投影部分，对CRS75,CRS80以及克拉索夫斯基三个椭球精度达到0.001，对其他椭球，误差可至个位数，可以查带值公式重求X,Bf计算。
+Platform: any
+Requires-Python: >=2.7

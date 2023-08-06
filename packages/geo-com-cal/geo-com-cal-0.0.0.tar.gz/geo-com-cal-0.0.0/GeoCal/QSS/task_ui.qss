@@ -1,0 +1,258 @@
+/*按钮*/
+QPushButton{
+color:white;
+padding:0 0 0 0;
+  background-color:rgb(0, 155,219);
+
+border:0px;
+border-radius:3px
+}
+
+QPushButton:hover:pressed {
+      background-color:rgb(1, 108, 153);
+  }
+
+QPushButton:hover{
+background-color:rgb(0, 139, 197)
+}
+/*按钮做标签类型*/
+QPushButton[enabled="false"]{
+background-color:transparent;
+text-align: left;
+color:black;
+}
+
+/*警告标签*/
+QLabel#warning{
+color:red;
+background-color:transparent;
+border-radius:2;
+}
+
+/*提示*/
+QToolTip {
+    border: 2px solid darkkhaki;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 200;
+}
+
+/* 组合框 */
+QComboBox {
+    border:1px solid rgb(0, 155, 219);
+     border-radius: 5px;
+padding: 0 0 0 5;
+background: white;
+ }
+
+QComboBox::down-arrow {
+image:url(:/down-arrow.png)
+}
+
+QComboBox QAbstractItemView {
+     border: 2px solid rgb(0, 155, 219);
+     selection-background-color: rgb(0, 155, 219);
+     background:#fff0f5;
+ }
+
+QComboBox:!enabled {
+border:1px solid rgb(0, 155, 100);
+ border-radius: 5px;
+padding: 0 0 0 5;
+background: red;
+}
+
+QComboBox::drop-down {
+     subcontrol-origin: 15;
+     subcontrol-position: right;
+     width:15px;
+color:red;
+border-bottom-right-radius: 5px;
+ }
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+image:url(:/up-arrow.png)
+ }
+
+
+
+/*线编辑框*/
+QLineEdit{
+border:1px solid  rgb(0,155, 219);
+border-radius:5px
+}
+
+QLineEdit:!enabled{
+border:1px solid  lightgray;
+border-radius:5px;
+background-color:rgb(245,245,245);
+color:rgb(138,43,226) ;
+}
+/*待求X Y Z L B H x y y假定 样式*/
+QLineEdit#x1LEdit, #y1LEdit, #z1LEdit:!enabled,
+#l2LEdit:!enabled, #b2LEdit:!enabled, #h2LEdit:!enabled,
+#x3LEdit:!enabled, #y3LEdit:!enabled, #y3fLEdit:!enabled{
+border:1px solid  rgb(0,155, 219);
+border-radius:5px;
+background-color:white;
+color:black;
+}
+
+
+/*窗框*/
+QFrame{
+        border-radius:10px;
+        background-color:rgb(255,245,225);
+}
+
+
+/*表*/
+QTableWidget {
+border:1px solid rgb(210,145,175);
+border-radius:10px;
+     background-color:red;
+     alternate-background-color: yellow;
+     show-decoration-selected: 1; /* make the selection span the entire width of the view */
+ }
+ QTableWidget QFrame{
+         border-radius:0;
+          border: 0;
+          background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1,
+          stop:0 #616161, stop: 0.5 #505050,
+          stop: 0.6 #434343, stop:1 #656565);
+ }
+QTableWidget  QTableCornerButton::section {
+background:qlineargradient(x1:0, y1:0, x2:0, y2:1,
+stop:0 #616161, stop: 0.5 #505050,
+stop: 0.6 #434343, stop:1 #656565);
+border: 0px;
+}
+
+QTableWidget QHeaderView::section {
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #616161, stop: 0.5 #505050,
+                                       stop: 0.6 #434343, stop:1 #656565);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #6c6c6c;
+ }
+
+ QTableWidget QHeaderView::section:checked
+ {
+     background-color:#6a6ea9;
+ }
+
+QTableWidget::item{
+    border: 1px solid white;
+}
+
+ QTableWidget::item:alternate {
+     background: #EEEEEE;
+ }
+
+ QTableWidget::item:selected {
+     border: 1px solid #6a6ea9;
+ }
+
+ QTableWidget::item:selected:!active {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #ABAFE5, stop: 1 #8588B2);
+ }
+
+ QTableWidget::item:selected:active {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #6a6ea9, stop: 1 #888dd9);
+ }
+
+QTableWidget::item:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+ }
+
+/*列表视图*/
+QAbstractItemView {
+                        background:rgb(235, 245, 239);
+            border:1px solid rgb(0, 155, 219);
+            border-radius:0;
+}
+QAbstractItemView {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+QAbstractItemView::item:hover {
+                    background:rgb(65,153,215);
+color:black;
+}
+QAbstractItemView::!active {
+  background:rgb(243,249,252);
+ }
+QAbstractItemView::item:!hover {
+                     background:rgb(243,249,252);
+color:black;
+}
+
+
+/*滚动栏*/
+QScrollBar:vertical {
+background:transparent;
+width: 10px;
+ border-radius:3;
+}
+QScrollBar:horizontal {
+background:transparent;
+height: 10px;
+ border-radius:3;
+}
+QScrollBar::handle:vertical {
+background:#bec2c8;
+min-height: 20px;
+max-height:200px;
+ border-radius:3;
+}
+QScrollBar::handle:horizontal{
+background:#bec2c8;
+min-height: 20px;
+max-height:200px;
+ border-radius:3;
+}
+QScrollBar::handle:hover {
+background:#77797c;
+}
+QScrollBar::handle:pressed {
+ background:#d6dae0;
+}
+QScrollBar::add-page, QScrollBar::sub-page {
+      background: none;
+  }
+QScrollBar::add-line {
+    background: transparent;
+    width: 0px;
+height:0;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line {
+                         background: transparent;
+                         width: 0px;
+                     height:0;
+                         subcontrol-position: bottom;
+subcontrol-origin: margin;
+                     }
+
+
+/*进度条*/
+QProgressBar {
+border: 2px solid grey;
+
+border-radius: 5px;
+
+background-color: #FFFFFF;
+
+text-align: center;
+color: rgb(255, 85, 0);
+}
+
+QProgressBar::chunk {
+background-color:#8470FF;
+
+}
+
