@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: clearml-serving
+Version: 0.0.0a0
+Summary: clearml-serving - temporary placeholder
+Home-page: https://github.com/allegroai/trains
+Author: Allegroai
+Author-email: trains@allegro.ai
+License: Apache License 2.0
+Keywords: clearml-serving trains development machine deep learning version control machine-learning machinelearning deeplearning deep-learning experiment-manager experimentmanager
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: System :: Monitoring
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+
+placeholder
+
+
