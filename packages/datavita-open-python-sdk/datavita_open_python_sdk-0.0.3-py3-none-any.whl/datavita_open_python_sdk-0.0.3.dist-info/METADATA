@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: datavita-open-python-sdk
+Version: 0.0.3
+Summary: DataVita Open Python SDK
+Home-page: https://www.datavita.com.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.24.0)
+Requires-Dist: urllib3 (>=1.25.11)
+Requires-Dist: pycryptodome (>=3.10.1)
+
+# 华创证券VitaX Python 工具套件
+
+
+欢迎使用华创证券开发者工具套件（SDK）。
+
+## 环境准备
+
+要使用VitaX Python SDK ，您需要联系华创证券金融科技部工作人员申请获取 `Access Key ID`和`Access Key Secret`。 
+
+## SDK 获取和安装
+
+### 使用 pip 安装(推荐)
+
+```bash
+pip install datavita-open-python-sdk # 安装华创DataVita开放Python SDK
+
+```
+
+## 开始调用
+
+以下这个代码示例向您展示了调用阿里云 Python SDK 的3个主要步骤：
+
+1. 创建 Client 实例
+2. 获取所需数据
+3. 发起请求并处理异常
+
+
+```python
+# -*- coding: utf8 -*-
+from datavita.andes.andes_data import AndesData
+from datavita.core.auth import Auth
+
+# 创建 AcsClient 实例
+access_key_id = "1"
+access_secret = "1"
+auth = Auth(access_key_id, access_secret)
+ad = AndesData(auth=auth, timeout=1, max_retries=1)
+df = ad.ind_data_list(ind_code='xxxx')
+print(df)
+```
+
+在创建 Auth 实例时，您需要填写 2 个参数：Access Key ID 和 Access Secret。Access Key ID 和 Access Secret 申请获取；
+
+
+
