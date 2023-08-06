@@ -1,0 +1,17 @@
+from prefect import Task, Flow
+from prefect.tasks.shell import ShellTask
+
+#  task classes
+{{classes}}
+
+# Imperative Flow
+flow = Flow('Servz Flow')
+
+# class instances
+{{instances}}
+
+# flow DAG
+{{edges}}
+
+# execution
+flow.run
