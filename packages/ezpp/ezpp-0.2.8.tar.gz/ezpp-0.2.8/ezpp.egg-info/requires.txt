@@ -1,0 +1,7 @@
+Pillow
+ezutils
+aggdraw
+imgcat
+freetype-py
+pydash
+pyaml
