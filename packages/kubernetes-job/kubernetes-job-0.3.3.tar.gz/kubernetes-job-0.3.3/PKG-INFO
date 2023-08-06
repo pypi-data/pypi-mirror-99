@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: kubernetes-job
+Version: 0.3.3
+Summary: Simple Kubernetes job creation; a Python library for starting a Kubernetes batch job as a normal Python function call.
+Home-page: https://gitlab.com/roemer/kubernetes-job
+Author: Roemer Claasen
+Author-email: roemer.claasen@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://kubernetes-job.readthedocs.io
+Description: # Kubernetes-job: simple Kubernetes job creation 
+        
+        A library for starting a Kubernetes batch job as a normal Python function call. 
+        
+        For source code and tickets, see our [project page](https://gitlab.com/roemer/kubernetes-job) on [Gitlab](https://gitlab.com/roemer/kubernetes-job).
+        The documentation is hosted on [ReadTheDocs](https://kubernetes-job.readthedocs.io/).  
+        Kubernetes-job can be found on [Pypi](https://pypi.org/project/kubernetes-job) for easy installation with `pip`. 
+        
+        ## Installation
+        
+        Installation with Pip:
+        
+        ```bash
+        pip install kubernetes-job
+        ```
+        
+        ## Quick start
+        
+        ```python
+        from kubernetes_job import JobManager
+        
+        
+        def add(a, b):
+            return a + b
+        
+        
+        manager = JobManager(k8s_client=k8s_client, k8s_job_spec='job.yaml', namespace='default')
+        job = manager.create_job(add, 1, 2)
+        ```
+        
+        The `JobManager` will now create a Kubernetes job using the basic job specification in the `job.yaml` file. 
+        The call to `add` is then passed on to the new job node, where the function is subsequently executed.   
+        
+        The `job.yaml` file should be adjusted to your needs. 
+        This is the place to put Kubernetes node selectors, Docker base images, etc. etc. 
+        Please refer to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/job/) for details. 
+        
+        **Please note: this is a very silly example, for two obvious reasons.** 
+        
+        First, *`add` will take a very short time to complete*, and is therefore not a function 
+        you would want to spawn a Kubernetes job for. 
+        A job should be created for a task that is not easily performed on the calling machine. 
+        A good example would be training Machine Learning models on a heavy CUDA node, 
+        started from a web server node with modest resources.
+        
+        Second, *Kubernetes jobs do not return values!* This means the result of this addition will be lost. 
+        In a Kubernetes job, it is up to the job to save its work. 
+        In this case, the result of `(1 + 2)` will be lost for humanity.   
+        
+        **Please see the [examples](examples.rst) and the `test/` directory.**
+        
+        ## API usage
+        
+        ### Initializing the JobManager
+        
+        The `JobManager` must be supplied a `yaml template file` (see above) and the Kubernetes client.
+        
+        ```python
+        from pathlib import Path
+        from kubernetes_job import JobManager
+        
+        # Path to worker configuration
+        yaml_spec = Path(__file__).parent / 'job.yml'
+        
+        # initialize the job manager
+        manager = JobManager(k8s_client=k8s_client, k8s_job_spec=yaml_spec, namespace='default')
+        ```
+        
+        **The `k8s_job_spec` may be a path to a file, or a `dict` instance.** 
+        The latter is handy for generating configuration on the fly!  
+        
+        `JobManager` also needs a Kubernetes client. 
+        More information about [how to connect to Kubernetes](kubernetes.md) can be found [here](kubernetes.md).  
+        
+        ### Creating a new job
+        A job can be started by invoking `create_job` on the `JobManager` instance:
+        
+        ```python
+        # function to pass to the job
+        def add(a, b):
+            result = a + b
+            print(result)
+            return result
+        
+        # create a new job
+        job = manager.create_job(add, 123, 456)
+        ```
+        
+        `create_job` takes a *function pointer*. This function pointer and all arguments 
+        (`*args` and `**kwargs`) are then "pickled", and merged in the [job template](kubernetes.md).
+        
+        Our job is now running on the Kubernetes cluster!
+        
+        ### Listing jobs 
+        
+        ```python
+        # list all jobs
+        for job in manager.list_jobs():
+            print(f"Found: {job.metadata.name}")
+        ```
+        
+        ### Retrieving job status
+        
+        ```python
+        from kubernetes_job import is_active, is_succeeded, is_failed, is_completed, job_status 
+        
+        # get the status of a job
+        job = manager.read_job(name)
+        
+        print(f"Status: {job_status(job)}")
+        print(f"Running: {is_active(job)} Completed: {is_completed(job)}")
+        print(f"Succeeded: {is_succeeded(job)} Failed: {is_failed(job)}")
+        ```
+        
+        ### Cleaning up finished jobs
+        ```python
+        # cleaning up finished jobs
+        manager.cleanup_jobs()
+        ```
+        
+        ### Deleting jobs
+        ```python
+        # delete a job
+        manager.delete_job(name)
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
