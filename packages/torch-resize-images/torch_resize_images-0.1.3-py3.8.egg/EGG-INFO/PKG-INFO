@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: torch-resize-images
+Version: 0.1.3
+Summary: A Python library to resize images using PyTorch
+Home-page: https://github.com/NilsHendrikLukas/torch-resize-images
+Author: Nils Lukas
+Author-email: nlukas@uwaterloo.ca
+License: MIT
+Description: UNKNOWN
+Keywords: resize image pytorch
+Platform: UNKNOWN
