@@ -1,0 +1,11 @@
+snakeeyes/__init__.py,sha256=hq4tdip8pYPk8XZZxiFPH2Vcgcq4ypxcco-B6dUtZNE,425
+snakeeyes/dice_logic.py,sha256=nmz-uz5GE82MgFWs4r45PVWfB8eDgj5RtgyE-kCjaYQ,5412
+snakeeyes/elements.py,sha256=dVN7ZN0-_w04LMQkfR9bSNT9Xpikw5MKKJYstJC4QlA,7549
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dice_logic_test.py,sha256=LHVR_7fiMJAwKts-Gmd2DpsfD0CDwOqDpmiSglgvsXc,2963
+tests/elements_test.py,sha256=eezSJgjyNN2UxSlZSa-_Rjoz1e9Q13s1VGz3Dbs5SpM,271
+snakeeyes_spaceprius-0.4.0.dist-info/LICENSE.md,sha256=Er2peIBPo2YJOcpf0QwJ9_3_8t7gBpm--_2fYGrPLOE,1083
+snakeeyes_spaceprius-0.4.0.dist-info/METADATA,sha256=2s-Ha1Mz2Q7b0bazsRKY-l8iXgnLXi1Z3t3NVCVR5OI,2030
+snakeeyes_spaceprius-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+snakeeyes_spaceprius-0.4.0.dist-info/top_level.txt,sha256=Y3yCQImH7mfLM8tmBSb_gZHfLhd4jCr0qStGsq1cRc4,16
+snakeeyes_spaceprius-0.4.0.dist-info/RECORD,,
