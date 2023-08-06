@@ -1,0 +1,11 @@
+README.md
+setup.py
+tesseract/__init__.py
+tesseract/api.py
+tesseract/middleware.py
+tesseract/response.py
+tesseract_pk.egg-info/PKG-INFO
+tesseract_pk.egg-info/SOURCES.txt
+tesseract_pk.egg-info/dependency_links.txt
+tesseract_pk.egg-info/requires.txt
+tesseract_pk.egg-info/top_level.txt
