@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: christis
+Version: 0.1.0
+Summary: 
+Author: armin
+Author-email: rmin.aminian@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ChristisMongo (>=0.21,<0.22)
+Requires-Dist: ChristisRequestor (>=0.12,<0.13)
+Requires-Dist: PyYAML (>=5.3.1,<6.0.0)
+Requires-Dist: artifacts-keyring (>=0.3.1,<0.4.0)
+Requires-Dist: keyring (>=21.8.0,<22.0.0)
+Requires-Dist: pathlib (>=1.0.1,<2.0.0)
+Requires-Dist: pymongo (>=3.11.2,<4.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: tabulate (>=0.8.7,<0.9.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Description-Content-Type: text/markdown
+
+Christis is a CLI tool that helps to manage users on the Kubernetes cluster.
