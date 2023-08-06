@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bigdatafilter"
+version = "0.1.2"
+description = "Easily map functions to big datasets"
+authors = ["Andy Jackson <amjack100@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+tqdm = "^4.59.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

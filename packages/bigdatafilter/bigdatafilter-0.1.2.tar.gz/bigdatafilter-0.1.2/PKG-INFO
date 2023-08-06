@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bigdatafilter
+Version: 0.1.2
+Summary: Easily map functions to big datasets
+License: MIT
+Author: Andy Jackson
+Author-email: amjack100@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: tqdm (>=4.59.0,<5.0.0)
