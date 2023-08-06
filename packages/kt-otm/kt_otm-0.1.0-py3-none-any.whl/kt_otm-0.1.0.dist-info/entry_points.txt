@@ -1,0 +1,3 @@
+[console_scripts]
+otm=kt_otm.cli:cli
+
