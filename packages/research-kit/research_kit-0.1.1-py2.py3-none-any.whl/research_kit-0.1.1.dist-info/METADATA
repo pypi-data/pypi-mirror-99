@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: research-kit
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/darienmorrow/research_kit
+Author: Darien Morrow
+Author-email: darienmorrow@gmail.com
+License: MIT
+Keywords: photophysics spectroscopy science
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: WrightTools
+Requires-Dist: tidy-headers
+
+UNKNOWN
+
+
