@@ -1,0 +1,7 @@
+setup.py
+alvacc.egg-info/PKG-INFO
+alvacc.egg-info/SOURCES.txt
+alvacc.egg-info/dependency_links.txt
+alvacc.egg-info/entry_points.txt
+alvacc.egg-info/requires.txt
+alvacc.egg-info/top_level.txt
