@@ -1,0 +1,14 @@
+libsnark/alt_bn128.py,sha256=Znqw6H3rdK2Z9EzL7DvL60S-mJRs5U9Xq-EDpCWWFvg,35666
+libsnark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libsnark/_alt_bn128.cpython-38-x86_64-linux-gnu.so,sha256=uyI53J60ZS5Wf8HJo_prXh4gGLWlAuIrNfJ-ZsEUGIQ,11705808
+libsnark/setup-win32.py,sha256=cMHr_Let3lkUXQbqjWcH5qWTjhJg6RRki2DBSFjBY18,1583
+python_libsnark.libs/libboost_iostreams-758e0eb7.so.1.53.0,sha256=l4O2LPXN4X6jm0SbIX4gsru2iE1kawC6rl3UHhoEiBw,223096
+python_libsnark.libs/libgmpxx-2c7d730e.so.4.6.1,sha256=UKcaeyTjjQxMdHPFEIj7HMKKK8IUJfOi2z9bo-8DemY,59696
+python_libsnark.libs/libgmp-817999ae.so.10.4.1,sha256=hW2avLX03TRjTK6sPJLb6_Kh-zzq78OULFhhYNJA9E0,552672
+python_libsnark.libs/libz-745e0a09.so.1.2.7,sha256=qQL6_XYFNzGpn7FbxE6MCwxM96dzN4Ik8FXfgl_vPR8,96272
+python_libsnark.libs/libbz2-a273e504.so.1.0.6,sha256=rG90qT6zByoD_7GEoC9BGhcYmz84nAlVGMxs0ts9bqw,70992
+python_libsnark-0.3.3.dist-info/LICENSE,sha256=kKVTfmne7kQ6vVdlb7A6piL0xsBK_V5zbqBEOChlWbs,1073
+python_libsnark-0.3.3.dist-info/top_level.txt,sha256=WEseiWNa04nzcv2tV7Qvm2uwoSRTJh4v__mNOmdJ8NI,9
+python_libsnark-0.3.3.dist-info/WHEEL,sha256=CdtkbqNu7DBs9FjP8gJdY-3OlUWCYZ9daXyZrkB77RQ,111
+python_libsnark-0.3.3.dist-info/METADATA,sha256=piu1WjCfKwyuwru1f_Lgee7aszkKHbTWJcXwQS7w1dA,271
+python_libsnark-0.3.3.dist-info/RECORD,,
