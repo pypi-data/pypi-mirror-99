@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: athenautility
+Version: 1.0
+Summary: Athena Utility
+Home-page: UNKNOWN
+Author: KnowledgeLens
+Author-email: karthik.madhamanchi@knowledgelens.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pyathena
+Requires-Dist: pandas
+
+AWS Athena client based on PyAthena
+
+
