@@ -1,0 +1,17 @@
+sanskrit_util/__init__.py,sha256=odDG03cjKNCzaD6iqaOfKWrMkx0GVtn21eFWTUkKAW4,144
+sanskrit_util/analyze.py,sha256=w6LXM_xj6laOeV5XVUpp97p2Ntk4ecUYvGXKv3VQXQA,5544
+sanskrit_util/context.py,sha256=TTwHjdwq-l3epSTgjrd-ZJTCAA7FxtEEyWa0VXICtLw,6421
+sanskrit_util/generate.py,sha256=jtm08cqCiNjwyrhory0VOafWCJ_n82wHOiRC3gmNGH4,2489
+sanskrit_util/models.py,sha256=GDZBuZgjoHHU1BIf_QlxO0ttXT9OgKYFEuyPnYDDW48,1923
+sanskrit_util/query.py,sha256=J2tgBPU815t6JhEQuY5o9I5SM37znAz48DHCKCExJbY,6047
+sanskrit_util/sandhi.py,sha256=8j35TSFKVWWcj7TFjTZZb3RTFrEGWkPdAPeoBxdJHsU,6986
+sanskrit_util/schema.py,sha256=fXjAiISwAOzFCshQg7RSJSqdOYkbxCoLcteNiq74hr8,17833
+sanskrit_util/setup.py,sha256=iQFzhdb6wescIeBSHIpxKgopmjvRE0XMhP3I5Vzm9Ac,14319
+sanskrit_util/shell.py,sha256=s_ZzgNvrnfcnRAg0X1H2JGIY3jKY3I2O0LMLNaqJzzc,4898
+sanskrit_util/sounds.py,sha256=xY_fjlF-8hSRswArszRfQSfBzk1R9om91zpjlbINuj0,6789
+sanskrit_util/tagger.py,sha256=Q18dz-zaDtunrpEB2uW_NTcNVVjzJaFddz4CjxLltR8,6360
+sanskrit_util-0.1.1.dev5.dist-info/LICENSE,sha256=0ecuga9Rf1TfRQJV1279Xd8dUfiOExBtdBgykf0YoDM,1074
+sanskrit_util-0.1.1.dev5.dist-info/METADATA,sha256=4yAR0VwE730LRO-USCjDUrWfoslcsLC0k3Li5Dx8Gew,1573
+sanskrit_util-0.1.1.dev5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sanskrit_util-0.1.1.dev5.dist-info/top_level.txt,sha256=yFbb2KZ2GRejzYo7DVOvodexAwzxmloF-3Pv7MLjvlg,14
+sanskrit_util-0.1.1.dev5.dist-info/RECORD,,
