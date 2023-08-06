@@ -1,0 +1,6 @@
+[console_scripts]
+deepcov=deepcov.cli:run
+
+[pytest11]
+deepcov=deepcov.pytest_plugin
+
