@@ -1,0 +1,6 @@
+[console_scripts]
+GithubStat = GithubStat.__init__:main
+Gitstat = GithubStat.__init__:main
+githubstat = GithubStat.__init__:main
+gitstat = GithubStat.__init__:main
+
