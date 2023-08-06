@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: PikaTgBot
+Version: 1.3.95
+Summary: A Secure and Optimized Python-Telethon Based Library For Pikachu UserBot aka Pikabot.
+Home-page: https://github.com/ItzSjDude/PikachuUserbot
+Author: ItzSjDude
+Author-email: Support@ItzSjDude.in
+License: GNU AFFERO GENERAL PUBLIC LICENSE (v3)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: Pillow (>=5.3.0)
+Requires-Dist: PyGithub
+Requires-Dist: aiofiles
+Requires-Dist: pylast
+Requires-Dist: aiohttp
+Requires-Dist: async-generator
+Requires-Dist: beautifulsoup4
+Requires-Dist: bs4
+Requires-Dist: cfscrape
+Requires-Dist: coffeehouse
+Requires-Dist: cowpy
+Requires-Dist: cryptg
+Requires-Dist: dnspython
+Requires-Dist: emoji (==1.0.1)
+Requires-Dist: geopy
+Requires-Dist: gTTS-token (>=1.1.3)
+Requires-Dist: gTTS (>=2.0.1)
+Requires-Dist: gitpython
+Requires-Dist: google-api-python-client (==1.8.0)
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: google-images-download (>=2.7.1)
+Requires-Dist: googletrans (==4.0.0rc1)
+Requires-Dist: gsearch
+Requires-Dist: hachoir
+Requires-Dist: heroku3
+Requires-Dist: httplib2 (>=0.18.0)
+Requires-Dist: humanize
+Requires-Dist: lxml
+Requires-Dist: oauth2client
+Requires-Dist: psycopg2
+Requires-Dist: psycopg2-binary
+Requires-Dist: pySmartDL
+Requires-Dist: pybase64 (>=0.4.0)
+Requires-Dist: pyfiglet
+Requires-Dist: pymongo
+Requires-Dist: python-barcode
+Requires-Dist: youtube-search-python
+Requires-Dist: python-dotenv
+Requires-Dist: python-magic
+Requires-Dist: pytube
+Requires-Dist: pytz
+Requires-Dist: qrcode
+Requires-Dist: regex
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: search-engine-parser (>=0.4.2)
+Requires-Dist: selenium
+Requires-Dist: speedtest-cli (>=2.0.2)
+Requires-Dist: sqlalchemy (==1.2)
+Requires-Dist: telegraph
+Requires-Dist: asyncurban
+Requires-Dist: urbandict
+Requires-Dist: wikipedia (>=1.4.0)
+Requires-Dist: youtube-dl
+Requires-Dist: jikanpy
+Requires-Dist: psutil
+Requires-Dist: pyLyrics
+Requires-Dist: uvloop
+Requires-Dist: wheel
+Requires-Dist: cairosvg
+Requires-Dist: lottie
+Requires-Dist: glitch-this
+Requires-Dist: pygments
+
+UNKNOWN
+
+
