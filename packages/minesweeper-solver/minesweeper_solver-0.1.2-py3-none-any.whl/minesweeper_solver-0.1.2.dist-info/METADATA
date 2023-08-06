@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: minesweeper-solver
+Version: 0.1.2
+Summary: 
+License: MIT
+Author: Thomas Lee
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# minesweeper-solver
+
+![PyPI](https://img.shields.io/pypi/v/minesweeper-solver?color=blue&style=for-the-badge)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/minesweeper-solver?color=blue&style=for-the-badge)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/minesweeper-solver?style=for-the-badge)
+
+A working example of the solver if you run `python solver.py`
+
+![1](images/1.png)
+
+![2](images/2.png)
+
+# PyPi Install
+
+```bash
+pip install minesweeper-solver
+minesweeper_solver
+```
+
