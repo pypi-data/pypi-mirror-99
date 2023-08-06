@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gymagent
+Version: 0.0.0
+Summary: gymagent
+Home-page: http://github.com/gymagent/gymagent/
+Author: Zhiqing Xiao
+Author-email: xzq.xiaozhiqing@gmail.com
+License: UNKNOWN
+Description: gymagent: Agents for OpenAI Gym
+        =======================
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
