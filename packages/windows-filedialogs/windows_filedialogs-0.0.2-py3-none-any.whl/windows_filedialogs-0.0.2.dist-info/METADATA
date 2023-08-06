@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: windows-filedialogs
+Version: 0.0.2
+Summary: Simple Windows file dialogs.
+Home-page: https://github.com/MrThearMan/filedialogs
+Author: Matti Lamppu
+Author-email: lamppu.matti.akseli@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/MrThearMan/filedialogs/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# File dialogs for windows
+
+```
+pip install windows_filedialogs
+```
+
+Implements easy windows file dialog functions. Requires the [pywin32](https://pypi.org/project/pywin32/) module.
+
+```
+from filedialogs import save_file_dialog, open_file_dialog, open_folder_dialog
+
+openpath = open_file_dialog()
+if openpath:
+    with open(openpath, "r") as f:
+        ...
+
+savepath = save_file_dialog()
+if savepath:
+    with open(savepath, "w") as f:
+        ...
+
+openfolder = open_folder_dialog()
+if openfolder:
+    with open(os.path.join(openfolder, ...), "w") as f:
+        ...
+```
+
+
