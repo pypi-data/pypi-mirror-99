@@ -1,0 +1,35 @@
+[requires]
+python_version = "3.7"
+
+[packages]
+astropy = "*"
+dataclasses = "*"
+flatdict = "*"
+h5py = "*"
+nptyping = "*"
+numpy = "*"
+scikit-learn = "*"
+scipy = "*"
+toml = ">=0.10.1"
+tqdm = "*"
+extinction = ">=0.4.2"
+
+[dev-packages]
+black = "*"
+coveralls = "*"
+flake8 = "*"
+ipython = "*"
+mypy = "*"
+nbsphinx = "*"
+pytest = "*"
+pytest-cov = "*"
+rope = "*"
+sphinx = "*"
+sphinx-bootstrap-theme = "*"
+pytest-benchmark = "*"
+sphinx-autodoc-typehints = "*"
+pre-commit = "*"
+pytest-black = "*"
+
+[pipenv]
+allow_prereleases = true
