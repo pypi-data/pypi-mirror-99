@@ -1,0 +1,11 @@
+slacki/__init__.py,sha256=Zp8KDM8bJjPkbfC7OXEEjlGyJeSKKWnxlCMPThaPwiE,1141
+slacki/examples.py,sha256=4hCte85-gja7igSAy2lUTwcIhPPVDj1T5LE1wKI3d9g,1358
+slacki/slacki.py,sha256=N8csxQrSZFIg3UmQzaGOMtouZDuVkgTc9vBlE_5O0U4,20324
+slacki/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slacki/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slacki/utils/check_connection.py,sha256=h0pa281S6swLNeAwDHy9koF5uNhz-A9les2RulDzgsA,2020
+slacki-1.1.0.dist-info/LICENSE,sha256=Poj7BLtuxKDp-l5M5DD0cDK0NilXZFF39wQ4huXL5uU,1119
+slacki-1.1.0.dist-info/METADATA,sha256=-6DoNkmm5ahsLWd9m5crU--GBlc3UWDKR_9FNz3Kpys,3287
+slacki-1.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+slacki-1.1.0.dist-info/top_level.txt,sha256=-aqrCp__CpjPhvdWuLuXngSg86V3GgBu99CKkH5zxZI,7
+slacki-1.1.0.dist-info/RECORD,,
