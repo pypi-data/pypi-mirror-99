@@ -1,0 +1,13 @@
+decorator
+future
+gspread
+numpy
+oauth2client
+pandas
+
+[dev]
+coverage
+nose
+pypi-publisher
+sphinx
+sphinx_rtd_theme
