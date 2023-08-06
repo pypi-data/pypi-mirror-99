@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: TouchPortal-API
+Version: 1.0
+Summary: Touch Portal API for Python
+Home-page: https://github.com/KillerBOSS2019/TouchPortal-API
+Author: Damien
+Author-email: DamienWeiFen@gmail.com
+License: MIT
+Description: This is TouchPortal API made for easily create TouchPortal Plugin
+        
+        Change Log
+        ==========
+        
+        1.0 (3/23/2021)
+        -------------------
+        # Feautres
+        - Easy to use
+        - createState
+        - removeState
+        - choice Update
+        - choice Update Specific
+        - setting Update
+        - state Update
+        - State Update Many
+        - Converting image to base64
+        - Update check
+        
+Keywords: TouchPortal API
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

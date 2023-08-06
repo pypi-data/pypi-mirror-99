@@ -1,0 +1,16 @@
+Change Log
+==========
+
+1.0 (3/23/2021)
+-------------------
+# Feautres
+- Easy to use
+- createState
+- removeState
+- choice Update
+- choice Update Specific
+- setting Update
+- state Update
+- State Update Many
+- Converting image to base64
+- Update check
