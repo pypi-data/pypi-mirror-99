@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AutoETS &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>AutoETS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="autoets">
+<h1>AutoETS<a class="headerlink" href="#autoets" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.forecasting.ets.AutoETS">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.ets.</code><code class="sig-name descname">AutoETS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">error</span><span class="o">=</span><span class="default_value">'add'</span></em>, <em class="sig-param"><span class="n">trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">damped_trend</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">seasonal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">initialization_method</span><span class="o">=</span><span class="default_value">'estimated'</span></em>, <em class="sig-param"><span class="n">initial_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_seasonal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">freq</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">missing</span><span class="o">=</span><span class="default_value">'none'</span></em>, <em class="sig-param"><span class="n">start_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">full_output</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">disp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">return_params</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">auto</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">information_criterion</span><span class="o">=</span><span class="default_value">'aic'</span></em>, <em class="sig-param"><span class="n">allow_multiplicative_trend</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">restrict</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">additive_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/ets.py#L12-L337"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.ets.AutoETS" title="Permalink to this definition">¶</a></dt>
+<dd><p>ETS models with both manual and automatic fitting capabilities.</p>
+<p>Manual fitting is adapted from statsmodels’ version,
+while automatic fitting is adapted from R version of ets.</p>
+<p>The first few parameters are the same as the ones on statsmodels
+(from <code class="docutils literal notranslate"><span class="pre">error</span></code> to <code class="docutils literal notranslate"><span class="pre">return_params</span></code>, link:
+<a class="reference external" href="https://www.statsmodels.org/stable/_modules/statsmodels/tsa/exponential_smoothing/ets.html#ETSModel">https://www.statsmodels.org/stable/_modules/statsmodels/tsa/exponential_smoothing/ets.html#ETSModel</a>).</p>
+<p>The next few parameters are adapted from the ones on R
+(<code class="docutils literal notranslate"><span class="pre">auto</span></code> to <code class="docutils literal notranslate"><span class="pre">additive_only</span></code>, link:
+<a class="reference external" href="https://www.rdocumentation.org/packages/forecast/versions/8.12/topics/ets">https://www.rdocumentation.org/packages/forecast/versions/8.12/topics/ets</a>),
+and are used for automatic model selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The error model. “add” (default) or “mul”.</p></li>
+<li><p><strong>trend</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – The trend component model. “add”, “mul”, or None (default).</p></li>
+<li><p><strong>damped_trend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether or not an included trend component is damped. Default is
+False.</p></li>
+<li><p><strong>seasonal</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – The seasonality model. “add”, “mul”, or None (default).</p></li>
+<li><p><strong>sp</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of periods in a complete seasonal cycle for seasonal
+(Holt-Winters) models. For example, 4 for quarterly data with an
+annual cycle or 7 for daily data with a weekly cycle. Required if
+<cite>seasonal</cite> is not None. Default is <cite>1</cite>.</p></li>
+<li><p><strong>initialization_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – <p>Method for initialization of the state space model. One of:</p>
+<ul>
+<li><p>’estimated’ (default)</p></li>
+<li><p>’heuristic’</p></li>
+<li><p>’known’</p></li>
+</ul>
+<p>If ‘known’ initialization is used, then <cite>initial_level</cite> must be
+passed, as well as <cite>initial_trend</cite> and <cite>initial_seasonal</cite> if
+applicable.
+‘heuristic’ uses a heuristic based on the data to estimate initial
+level, trend, and seasonal state. ‘estimated’ uses the same heuristic
+as initial guesses, but then estimates the initial states as part of
+the fitting process.  Default is ‘estimated’.</p>
+</p></li>
+<li><p><strong>initial_level</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The initial level component. Only used if initialization is ‘known’.</p></li>
+<li><p><strong>initial_trend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – The initial trend component. Only used if initialization is ‘known’.</p></li>
+<li><p><strong>initial_seasonal</strong> (<em>array_like</em><em>, </em><em>optional</em>) – The initial seasonal component. An array of length <cite>seasonal_periods</cite>.
+Only used if initialization is ‘known’.</p></li>
+<li><p><strong>bounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – <p>A dictionary with parameter names as keys and the respective bounds
+intervals as values (lists/tuples/arrays).
+The available parameter names are, depending on the model and
+initialization method:</p>
+<ul>
+<li><p>”smoothing_level”</p></li>
+<li><p>”smoothing_trend”</p></li>
+<li><p>”smoothing_seasonal”</p></li>
+<li><p>”damping_trend”</p></li>
+<li><p>”initial_level”</p></li>
+<li><p>”initial_trend”</p></li>
+<li><p>”initial_seasonal.0”, …, “initial_seasonal.&lt;m-1&gt;”</p></li>
+</ul>
+<p>The default option is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the traditional
+(nonlinear) bounds as described in <a href="#id4"><span class="problematic" id="id1">[1]_</span></a> are used.</p>
+</p></li>
+<li><p><strong>start_params</strong> (<em>array_like</em><em>, </em><em>optional</em>) – <p>Initial values for parameters that will be optimized. If this is
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, default values will be used.
+The length of this depends on the chosen model. This should contain
+the parameters in the following order, skipping parameters that do
+not exist in the chosen model.</p>
+<ul>
+<li><p><cite>smoothing_level</cite> (alpha)</p></li>
+<li><p><cite>smoothing_trend</cite> (beta)</p></li>
+<li><p><cite>smoothing_seasonal</cite> (gamma)</p></li>
+<li><p><cite>damping_trend</cite> (phi)</p></li>
+</ul>
+<p>If <code class="docutils literal notranslate"><span class="pre">initialization_method</span></code> was set to <code class="docutils literal notranslate"><span class="pre">'estimated'</span></code> (the
+default), additionally, the parameters</p>
+<ul>
+<li><p><cite>initial_level</cite> (<span class="math notranslate nohighlight">\(l_{-1}\)</span>)</p></li>
+<li><p><cite>initial_trend</cite> (<span class="math notranslate nohighlight">\(l_{-1}\)</span>)</p></li>
+<li><p><cite>initial_seasonal.0</cite> (<span class="math notranslate nohighlight">\(s_{-1}\)</span>)</p></li>
+<li><p>…</p></li>
+<li><p><cite>initial_seasonal.&lt;m-1&gt;</cite> (<span class="math notranslate nohighlight">\(s_{-m}\)</span>)</p></li>
+</ul>
+<p>also have to be specified.</p>
+</p></li>
+<li><p><strong>maxiter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The maximum number of iterations to perform.</p></li>
+<li><p><strong>full_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Set to True to have all available output in the Results object’s
+mle_retvals attribute. The output is dependent on the solver.
+See LikelihoodModelResults notes section for more information.</p></li>
+<li><p><strong>disp</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Set to True to print convergence messages.</p></li>
+<li><p><strong>callback</strong> (<em>callable callback</em><em>(</em><em>xk</em><em>)</em><em>, </em><em>optional</em>) – Called after each iteration, as callback(xk), where xk is the
+current parameter vector.</p></li>
+<li><p><strong>return_params</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether or not to return only the array of maximizing parameters.
+Default is False.</p></li>
+<li><p><strong>auto</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Set True to enable automatic model selection.
+Default is False.</p></li>
+<li><p><strong>information_criterion</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – <p>Information criterion to be used in model selection. One of:</p>
+<ul>
+<li><p>”aic”</p></li>
+<li><p>”bic”</p></li>
+<li><p>”aicc”</p></li>
+</ul>
+<p>Default is “aic”.</p>
+</p></li>
+<li><p><strong>allow_multiplicative_trend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, models with multiplicative trend are allowed when
+searching for a model. Otherwise, the model space excludes them.
+Default is False.</p></li>
+<li><p><strong>restrict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, the models with infinite variance will not be allowed.
+Default is True.</p></li>
+<li><p><strong>additive_only</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, will only consider additive models.
+Default is False.</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of jobs to run in parallel for automatic model fitting.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="simple">
+<dt>[1] Hyndman, R.J., &amp; Athanasopoulos, G. (2019) <a href="#id2"><span class="problematic" id="id3">*</span></a>Forecasting:</dt><dd><p>principles and practice*, 3rd edition, OTexts: Melbourne,
+Australia. OTexts.com/fpp3. Accessed on April 19th 2020.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="sktime.forecasting.ets.AutoETS.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">error</span><span class="o">=</span><span class="default_value">'add'</span></em>, <em class="sig-param"><span class="n">trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">damped_trend</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">seasonal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sp</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">initialization_method</span><span class="o">=</span><span class="default_value">'estimated'</span></em>, <em class="sig-param"><span class="n">initial_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_seasonal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">freq</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">missing</span><span class="o">=</span><span class="default_value">'none'</span></em>, <em class="sig-param"><span class="n">start_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">full_output</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">disp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">return_params</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">auto</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">information_criterion</span><span class="o">=</span><span class="default_value">'aic'</span></em>, <em class="sig-param"><span class="n">allow_multiplicative_trend</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">restrict</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">additive_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/ets.py#L150-L209"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.ets.AutoETS.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

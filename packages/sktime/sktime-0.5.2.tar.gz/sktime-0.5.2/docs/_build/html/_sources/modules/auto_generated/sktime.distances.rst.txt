@@ -1,0 +1,20 @@
+sktime.distances
+----------------
+
+.. automodule:: sktime.distances
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+
+   sktime.distances.elastic
+   sktime.distances.elastic_cython
+   sktime.distances.elastic_cython
+   sktime.distances.elastic_cython
+   sktime.distances.elastic_cython
+   sktime.distances.mpdist
+   sktime.distances.setup

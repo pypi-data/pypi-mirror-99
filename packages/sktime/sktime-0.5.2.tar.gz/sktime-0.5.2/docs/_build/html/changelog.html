@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Contribute" href="contributing.html" />
+    <link rel="prev" title="API Reference" href="api_reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">[0.5.3] - 2021-02-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added">Added</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">[0.5.2] - 2021-01-13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">[0.5.1] - 2020-12-29</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">[0.5.0] - 2020-12-19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removed">Removed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">[0.4.3] - 2020-10-20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">[0.4.2] - 2020-10-01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">[0.4.1] - 2020-07-09</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">[0.4.0] - 2020-06-05</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">Removed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">Fixed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Changelog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="changelog">
+<span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>All notable changes to this project will be documented in this file. We keep track of changes in this file since v0.4.0. The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and we adhere to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>. The source code for all <a class="reference external" href="https://github.com/alan-turing-institute/sktime/releases">releases</a> is available on GitHub.</p>
+<div class="section" id="id2">
+<h2>[0.5.3] - 2021-02-06<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix reduced regression forecaster reference (#658) &#64;mloning</p></li>
+<li><p>Address Bug #640 (#642) &#64;patrickzib</p></li>
+<li><p>Ed knn (#638) &#64;TonyBagnall</p></li>
+<li><p>Euclidean distance for KNNs (#636) &#64;goastler</p></li>
+</ul>
+</div>
+<div class="section" id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Pin NumPy 1.19 (#643) &#64;mloning</p></li>
+<li><p>Update CoC committee (#614) &#64;mloning</p></li>
+<li><p>Benchmarking issue141 (#492) &#64;ViktorKaz</p></li>
+<li><p>Catch22 Refactor &amp; Multithreading (#615) &#64;MatthewMiddlehurst</p></li>
+</ul>
+</div>
+<div class="section" id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Create new factory method for forecasting via reduction (#635) &#64;Lovkush-A</p></li>
+<li><p>Feature ForecastingRandomizedSearchCV (#634) &#64;pabworks</p></li>
+<li><p>Added Imputer for missing values (#637) &#64;aiwalter</p></li>
+<li><p>Add expanding window splitter (#627) &#64;koralturkk</p></li>
+<li><p>Forecasting User Guide (#595) &#64;Lovkush-A</p></li>
+<li><p>Add data processing functionality to convert between data formats (#553) &#64;RNKuhns</p></li>
+<li><p>Add basic parallel support for <cite>ElasticEnsemble</cite> (#546) &#64;xuyxu</p></li>
+</ul>
+<p>All contributors: &#64;Lovkush-A, &#64;MatthewMiddlehurst, &#64;RNKuhns, &#64;TonyBagnall, &#64;ViktorKaz, &#64;aiwalter, &#64;goastler, &#64;koralturkk, &#64;mloning, &#64;pabworks, &#64;patrickzib and &#64;xuyxu</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>[0.5.2] - 2021-01-13<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix ModuleNotFoundError issue (#613) &#64;Hephaest</p></li>
+<li><p>Fixes _fit(X) in KNN (#610) &#64;TonyBagnall</p></li>
+<li><p>UEA TSC module improvements 2 (#599) &#64;TonyBagnall</p></li>
+<li><p>Fix sktime.classification.frequency_based not found error (#606) &#64;Hephaest</p></li>
+<li><p>UEA TSC module improvements 1 (#579) &#64;TonyBagnall</p></li>
+<li><p>Relax numba pinning (#593) &#64;dhirschfeld</p></li>
+<li><p>Fix fh.to_relative() bug for DatetimeIndex (#582) &#64;aiwalter</p></li>
+</ul>
+<p>All contributors: &#64;Hephaest, &#64;MatthewMiddlehurst, &#64;TonyBagnall, &#64;aiwalter and &#64;dhirschfeld</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>[0.5.1] - 2020-12-29<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add ARIMA (#559) &#64;HYang1996</p></li>
+<li><p>Add fbprophet wrapper (#515) &#64;aiwalter</p></li>
+<li><p>Add MiniRocket and MiniRocketMultivariate (#542) &#64;angus924</p></li>
+<li><p>Add Cosine, ACF and PACF transformers (#509) &#64;afzal442</p></li>
+<li><p>Add example notebook Window Splitters (#555) &#64;juanitorduz</p></li>
+<li><p>Add SlidingWindowSplitter visualization on doctrings (#554) &#64;juanitorduz</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Fixed<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Pin pandas version to fix pandas-related AutoETS error on Linux  (#581) &#64;mloning</p></li>
+<li><p>Fixed default argument in docstring in SlidingWindowSplitter (#556) &#64;ngupta23</p></li>
+</ul>
+<p>All contributors: &#64;HYang1996, &#64;TonyBagnall, &#64;afzal442, &#64;aiwalter, &#64;angus924, &#64;juanitorduz, &#64;mloning and &#64;ngupta23</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>[0.5.0] - 2020-12-19<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>Added<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add tests for forecasting with exogenous variables (#547) &#64;mloning</p></li>
+<li><p>Add HCrystalBall wrapper (#485) &#64;MichalChromcak</p></li>
+<li><p>Tbats (#527) &#64;aiwalter</p></li>
+<li><p>Added matrix profile using stumpy  (#471) &#64;utsavcoding</p></li>
+<li><p>User guide (#377) &#64;mloning</p></li>
+<li><p>Add GitHub workflow for building and testing on macOS (#505) &#64;mloning</p></li>
+<li><p>[DOC] Add dtaidistance (#502) &#64;mloning</p></li>
+<li><p>Implement the <cite>feature_importances_</cite> property for RISE (#497) &#64;AaronX121</p></li>
+<li><p>Add scikit-fda to the list of related software (#495) &#64;vnmabus</p></li>
+<li><p>[DOC] Add roadmap to docs (#467) &#64;mloning</p></li>
+<li><p>Add parallelization for <cite>RandomIntervalSpectralForest</cite> (#482) &#64;AaronX121</p></li>
+<li><p>New Ensemble Forecasting Methods  (#333) &#64;magittan</p></li>
+<li><p>CI run black formatter on notebooks as well as Python scripts (#437) &#64;MarcoGorelli</p></li>
+<li><p>Implementation of catch22 transformer, CIF classifier and dictionary based clean-up (#453) &#64;MatthewMiddlehurst</p></li>
+<li><p>Added write dataset to ts file functionality (#438) &#64;whackteachers</p></li>
+<li><p>Added ability to load from csv containing long-formatted data (#442) &#64;AidenRushbrooke</p></li>
+<li><p>Transform typing (#420) &#64;mloning</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Changed<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Refactoring utils and transformer module (#538) &#64;mloning</p></li>
+<li><p>Update README (#454) &#64;mloning</p></li>
+<li><p>Clean up example notebooks (#548) &#64;mloning</p></li>
+<li><p>Update README.rst (#536) &#64;aiwalter</p></li>
+<li><p>[Doc]Updated load_data.py (#496) &#64;Afzal-Ind</p></li>
+<li><p>Update forecasting.py (#487) &#64;raishubham1</p></li>
+<li><p>update basic motion description (#475) &#64;vollmersj</p></li>
+<li><p>[DOC] Update docs in benchmarking/data.py (#489) &#64;Afzal-Ind</p></li>
+<li><p>Edit Jupyter Notebook 01_forecasting (#486) &#64;bmurdata</p></li>
+<li><p>Feature &amp; Performance improvements of SFA/WEASEL (#457) &#64;patrickzib</p></li>
+<li><p>Moved related software from wiki to docs (#439) &#64;mloning</p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>Fixed<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed issue outlined in issue 522 (#537) &#64;ngupta23</p></li>
+<li><p>Fix plot-series (#533) &#64;gracewgao</p></li>
+<li><p>added mape_loss and cosmetic fixes to notebooks (removed kernel) (#500) &#64;tch</p></li>
+<li><p>Fix azure pipelines (#506) &#64;mloning</p></li>
+<li><p>[DOC] Fix broken docstrings of <cite>RandomIntervalSpectralForest</cite> (#473) &#64;AaronX121</p></li>
+<li><p>Add back missing bibtex reference to classifiers (#468) &#64;whackteachers</p></li>
+<li><p>Avoid seaborn warning (#472) &#64;davidbp</p></li>
+<li><p>Bump pre-commit versions, run again on notebooks (#469) &#64;MarcoGorelli</p></li>
+<li><p>Fix series validation (#463) &#64;mloning</p></li>
+<li><p>Fix soft dependency imports (#446) &#64;mloning</p></li>
+<li><p>Fix bug in AutoETS (#445) &#64;HYang1996</p></li>
+<li><p>Add ForecastingHorizon class to docs (#444) &#64;mloning</p></li>
+</ul>
+</div>
+<div class="section" id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove manylinux1 (#458) &#64;mloning</p></li>
+</ul>
+<p>All contributors: &#64;AaronX121, &#64;Afzal-Ind, &#64;AidenRushbrooke, &#64;HYang1996, &#64;MarcoGorelli, &#64;MatthewMiddlehurst, &#64;MichalChromcak, &#64;TonyBagnall, &#64;aiwalter, &#64;bmurdata, &#64;davidbp, &#64;gracewgao, &#64;magittan, &#64;mloning, &#64;ngupta23, &#64;patrickzib, &#64;raishubham1, &#64;tch, &#64;utsavcoding, &#64;vnmabus, &#64;vollmersj and &#64;whackteachers</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>[0.4.3] - 2020-10-20<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Added<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for 3d numpy array (#405) &#64;mloning</p></li>
+<li><p>Support for downloading dataset from UCR UEA time series classification data set repository (#430) &#64;Emiliathewolf</p></li>
+<li><p>Univariate time series regression example to TSFresh notebook (#428) &#64;evanmiller29</p></li>
+<li><p>Parallelized TimeSeriesForest using joblib. (#408) &#64;kkoziara</p></li>
+<li><p>Unit test for multi-processing (#414) &#64;kkoziara</p></li>
+<li><p>Add date-time support for forecasting framework (#392) &#64;mloning</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>Changed<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Performance improvements of dictionary classifiers (#398) &#64;patrickzib</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Fixed<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix links in Readthedocs and Binder launch button (#416)</p></li>
+</ul>
+<p>&#64;mloning
+* Fixed small bug in performance metrics (#422) &#64;krumeto
+* Resolved warnings in notebook examples (#418) &#64;alwinw
+* Resolves #325 ModuleNotFoundError for soft dependencies (#410) &#64;alwinw</p>
+<p>All contributors: &#64;Emiliathewolf, &#64;alwinw, &#64;evanmiller29, &#64;kkoziara, &#64;krumeto, &#64;mloning and &#64;patrickzib</p>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>[0.4.2] - 2020-10-01<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Added<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ETSModel with auto-fitting capability (#393) &#64;HYang1996</p></li>
+<li><p>WEASEL classifier (#391) &#64;patrickzib</p></li>
+<li><p>Full support for exogenous data in forecasting framework (#382) &#64;mloning, (#380) &#64;mloning</p></li>
+<li><p>Multivariate dataset for US consumption over time (#385) &#64;SebasKoel</p></li>
+<li><p>Governance document (#324) &#64;mloning, &#64;fkiraly</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>Fixed<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Documentation fixes (#400) &#64;brettkoonce, (#399) &#64;akanz1, (#404) &#64;alwinw</p></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>Changed<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Move documentation to ReadTheDocs with support for versioned documentation (#395) &#64;mloning</p></li>
+<li><p>Refactored SFA implementation (additional features and speed improvements) (#389) &#64;patrickzib</p></li>
+<li><p>Move prediction interval API to base classes in forecasting framework (#387) &#64;big-o</p></li>
+<li><p>Documentation improvements (#364) &#64;mloning</p></li>
+<li><p>Update CI and maintenance tools (#394) &#64;mloning</p></li>
+</ul>
+<p>All contributors: &#64;HYang1996, &#64;SebasKoel, &#64;fkiraly, &#64;akanz1, &#64;alwinw, &#64;big-o, &#64;brettkoonce, &#64;mloning, &#64;patrickzib</p>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>[0.4.1] - 2020-07-09<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h3>Added<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>New sktime logo &#64;mloning</p></li>
+<li><p>TemporalDictionaryEnsemble (#292) &#64;MatthewMiddlehurst</p></li>
+<li><p>ShapeDTW (#287) &#64;Multivin12</p></li>
+<li><p>Updated sktime artwork (logo) &#64;mloning</p></li>
+<li><p>Truncation transformer (#315) &#64;ABostrom</p></li>
+<li><p>Padding transformer (#316) &#64;ABostrom</p></li>
+<li><p>Example notebook with feature importance graph for time series forest (#319) &#64;HYang1996</p></li>
+<li><p>ACSF1 data set (#314) &#64;BandaSaiTejaReddy</p></li>
+<li><p>Data conversion function from 3d numpy array to nested pandas dataframe (#304) &#64;vedazeren</p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>Changed<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Replaced gunpoint dataset in tutorials, added OSULeaf dataset (#295) &#64;marielledado</p></li>
+<li><p>Updated macOS advanced install instructions (#306) (#308) &#64;sophijka</p></li>
+<li><p>Updated contributing guidelines (#301) &#64;Ayushmaanseth</p></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>Fixed<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Typos (#293) &#64;Mo-Saif, (#285) &#64;Pangoraw, (#305) &#64;hiqbal2</p></li>
+<li><p>Manylinux wheel building (#286) &#64;mloning</p></li>
+<li><p>KNN compatibility with sklearn (#310) &#64;Cheukting</p></li>
+<li><p>Docstrings for AutoARIMA (#307) &#64;btrtts</p></li>
+</ul>
+<p>All contributors: &#64;Ayushmaanseth, &#64;Mo-Saif, &#64;Pangoraw, &#64;marielledado,
+&#64;mloning, &#64;sophijka, &#64;Cheukting, &#64;MatthewMiddlehurst, &#64;Multivin12,
+&#64;ABostrom, &#64;HYang1996, &#64;BandaSaiTejaReddy, &#64;vedazeren, &#64;hiqbal2, &#64;btrtts</p>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>[0.4.0] - 2020-06-05<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h3>Added<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Forecasting framework, including: forecasting algorithms (forecasters),
+tools for composite model building (meta-forecasters), tuning and model
+evaluation</p></li>
+<li><p>Consistent unit testing of all estimators</p></li>
+<li><p>Consistent input checks</p></li>
+<li><p>Enforced PEP8 linting via flake8</p></li>
+<li><p>Changelog</p></li>
+<li><p>Support for Python 3.8</p></li>
+<li><p>Support for manylinux wheels</p></li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h3>Changed<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Revised all estimators to comply with common interface and to ensure scikit-learn compatibility</p></li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h3>Removed<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A few redundant classes for the series-as-features setting in favour of scikit-learn’s implementations: <code class="code docutils literal notranslate"><span class="pre">Pipeline</span></code> and <code class="code docutils literal notranslate"><span class="pre">GridSearchCV</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">HomogeneousColumnEnsembleClassifier</span></code> in favour of more flexible <code class="code docutils literal notranslate"><span class="pre">ColumnEnsembleClassifier</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h3>Fixed<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Deprecation and future warnings from scikit-learn</p></li>
+<li><p>User warnings from statsmodels</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

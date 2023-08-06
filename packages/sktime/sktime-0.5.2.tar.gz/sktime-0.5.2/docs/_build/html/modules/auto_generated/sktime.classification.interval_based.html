@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.classification.interval_based &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.classification.interval_based</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime.classification.interval_based">
+<span id="sktime-classification-interval-based"></span><h1>sktime.classification.interval_based<a class="headerlink" href="#module-sktime.classification.interval_based" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.interval_based.</code><code class="sig-name descname">RandomIntervalSpectralForest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_estimators</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">min_interval</span><span class="o">=</span><span class="default_value">16</span></em>, <em class="sig-param"><span class="n">acf_lag</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">acf_min_values</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_rise.py#L78-L322"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.ensemble._forest.ForestClassifier</span></code>, <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Random Interval Spectral Forest (RISE) from [1]</p>
+<p>Overview:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Input: n series length m
+for each tree
+    sample a random intervals
+    take the ACF and PS over this interval, and concatenate features
+    build tree on new features
+ensemble the trees through averaging probabilities.
+</pre></div>
+</div>
+<p>Need to have a minimum interval for each tree
+This is from the python github.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_estimators</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=200</em><em>)</em>) – The number of trees in the forest.</p></li>
+<li><p><strong>min_interval</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=16</em><em>)</em>) – The minimum width of an interval.</p></li>
+<li><p><strong>acf_lag</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=100</em><em>)</em>) – The maximum number of autocorrelation terms to use.</p></li>
+<li><p><strong>acf_min_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=4</em><em>)</em>) – Never use fewer than this number of terms to find a correlation.</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The number of jobs to run in parallel for both <cite>fit</cite> and <cite>predict</cite>.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> means 1 unless in a <code class="xref py py-obj docutils literal notranslate"><span class="pre">joblib.parallel_backend</span></code> context.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.</p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>RandomState instance</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.n_classes">
+<code class="sig-name descname">n_classes</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.n_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of classes, extracted from the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.classifiers">
+<code class="sig-name descname">classifiers</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.classifiers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of shape = [n_estimators] of DecisionTree classifiers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.intervals">
+<code class="sig-name descname">intervals</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.intervals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores indexes of start and end points for all classifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of shape = [n_estimators][2]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>..[1] Jason Lines, Sarah Taylor and Anthony Bagnall, “Time Series Classification
+with HIVE-COTE: The Hierarchical Vote Collective of Transformation-Based Ensembles”,</p>
+<blockquote>
+<div><p>ACM Transactions on Knowledge and Data Engineering, 12(5): 2018</p>
+</div></blockquote>
+<p><a class="reference external" href="https://dl.acm.org/doi/10.1145/3182382">https://dl.acm.org/doi/10.1145/3182382</a>
+Java implementation
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/tsml/</a>
+classifiers/frequency_based/RISE.java</p>
+<dl class="py attribute">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': False, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.feature_importances_">
+<em class="property">property </em><code class="sig-name descname">feature_importances_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.feature_importances_" title="Permalink to this definition">¶</a></dt>
+<dd><p>The impurity-based feature importances.</p>
+<p>The higher, the more important the feature.
+The importance of a feature is computed as the (normalized)
+total reduction of the criterion brought by that feature.  It is also
+known as the Gini importance.</p>
+<p>Warning: impurity-based feature importances can be misleading for
+high cardinality features (many unique values). See
+<code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.inspection.permutation_importance()</span></code> as an alternative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>feature_importances_</strong> – The values of this array sum to 1, unless all trees are single node
+trees consisting of only the root node, in which case it will be an
+array of zeros.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ndarray of shape (n_features,)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_rise.py#L179-L251"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a forest of trees from the training set (X, y) using random
+intervals and spectral features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em><em> or </em><em>sparse matrix of shape =</em><em> [</em><em>n_instances</em><em>,</em>) – </p></li>
+<li><p><strong>or shape =</strong><strong> [</strong><strong>n_instances</strong> (<em>series_length</em><em>]</em>) – The training input samples. If a Pandas data frame is passed it
+must have a single column (i.e., univariate classification).
+RISE has no bespoke method for multivariate classification as yet.</p></li>
+<li><p><strong>n_columns</strong><strong>]</strong> – The training input samples. If a Pandas data frame is passed it
+must have a single column (i.e., univariate classification).
+RISE has no bespoke method for multivariate classification as yet.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em> [</em><em>n_instances</em><em>]</em>) – The class labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_rise.py#L253-L270"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find predictions for all cases in X. Built on top of <cite>predict_proba</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>array-like</em><em> or </em><em>sparse matrix of shape =</em><em> [</em><em>n_instances</em><em>, </em><em>n_columns</em><em>]</em>) – The input samples. If a Pandas data frame is passed it must have a
+single column (i.e., univariate classification). RISE has no
+bespoke method for multivariate classification as yet.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – The predicted classes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of shape = [n_instances]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.RandomIntervalSpectralForest.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_rise.py#L272-L322"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.RandomIntervalSpectralForest.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find probability estimates for each class for all cases in X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em><em> or </em><em>sparse matrix of shape =</em><em> [</em><em>n_instances</em><em>, </em><em>n_columns</em><em>]</em>) – The input samples. If a Pandas data frame is passed it must have a
+single column (i.e., univariate classification). RISE has no
+bespoke method for multivariate classification as yet.</p></li>
+<li><p><strong>variables</strong> (<em>Local</em>) – </p></li>
+<li><p><strong>---------------</strong> – </p></li>
+<li><p><strong>n_instances</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of cases to classify.</p></li>
+<li><p><strong>n_columns</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of attributes in X, must match <cite>series_length</cite> determined
+in <cite>fit</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – The class probabilities of all cases.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array of shape = [n_instances, n_classes]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.interval_based.SupervisedTimeSeriesForest">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.interval_based.</code><code class="sig-name descname">SupervisedTimeSeriesForest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_estimators</span><span class="o">=</span><span class="default_value">500</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_stsf.py#L27-L403"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.SupervisedTimeSeriesForest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.ensemble._forest.ForestClassifier</span></code>, <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Supervised Time Series Forest (STSF) classifier as described in [1].</p>
+<p>A time series forest is an ensemble of decision trees built on intervals selected
+through a supervised process.</p>
+<blockquote>
+<div><p>Overview: Input n series length m
+for each tree</p>
+<blockquote>
+<div><p>sample X using class-balanced bagging
+sample intervals for all 3 representations and 7 features using supervised
+method
+find mean, median, std, slope, iqr, min and max using their corresponding
+interval for each rperesentation, concatenate to form new data set
+build decision tree on new data set</p>
+</div></blockquote>
+<p>ensemble the trees with averaged probability estimates</p>
+<p>n_estimators    : int, ensemble size, optional (default = 200)
+n_jobs          : int, optional (default=1)
+The number of jobs to run in parallel for both <cite>fit</cite> and <cite>predict</cite>.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.
+random_state    : int, seed for random, optional (default = none)</p>
+<p>n_classes    : int, extracted from the data
+classifiers  : array of shape = [n_estimators] of DecisionTree
+classifiers
+intervals    : array of shape = [n_estimators][3][7][n_intervals][2] stores
+indexes of all start and end points for all classifiers for each representaion
+and feature</p>
+<p>..[1] Cabello, Nestor, et al. “Fast and Accurate Time Series Classification
+Through Supervised Interval Search.” IEEE ICDM 2020</p>
+<p>Java implementation
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/</a>
+java/tsml/classifiers/interval_based/STSF.java</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt id="sktime.classification.interval_based.SupervisedTimeSeriesForest.capabilities">
+<code class="sig-name descname">capabilities</code><em class="property"> = {'missing_values': False, 'multivariate': False, 'unequal_length': False}</em><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.SupervisedTimeSeriesForest.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.SupervisedTimeSeriesForest.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_stsf.py#L103-L166"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.SupervisedTimeSeriesForest.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a forest of trees from the training set (X, y) using supervised
+intervals and summary features
+:param X:
+:type X: array-like or sparse matrix of shape = [n_instances,
+:param series_length] or shape = [n_instances: The training input samples.  If a Pandas data frame is passed it</p>
+<blockquote>
+<div><p>must have a single column (i.e. univariate
+classification. STSF has no bespoke method for multivariate
+classification as yet.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_columns</strong><strong>]</strong> – The training input samples.  If a Pandas data frame is passed it
+must have a single column (i.e. univariate
+classification. STSF has no bespoke method for multivariate
+classification as yet.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em><em>, </em><em>shape =</em><em>  [</em><em>n_instances</em><em>]    </em><em>The class labels.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>self</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)">object</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.SupervisedTimeSeriesForest.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_stsf.py#L168-L184"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.SupervisedTimeSeriesForest.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find predictions for all cases in X. Built on top of predict_proba
+:param X:
+:type X: The training input samples. array-like or pandas data frame.
+:param If a Pandas data frame is passed:
+:param a check is performed that it only:
+:param has one column.:
+:param If not:
+:param an exception is thrown:
+:param since this classifier does not yet have:
+:param multivariate capability.:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>output</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>array of shape = [n_test_instances]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.classification.interval_based.SupervisedTimeSeriesForest.predict_proba">
+<code class="sig-name descname">predict_proba</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_stsf.py#L186-L225"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.SupervisedTimeSeriesForest.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find probability estimates for each class for all cases in X.
+:param X:
+:type X: The training input samples. array-like or sparse matrix of shape
+:param = [n_test_instances: If a Pandas data frame is passed (sktime format) a check is</p>
+<blockquote>
+<div><p>performed that it only has one column.
+If not, an exception is thrown, since this classifier does not
+yet have
+multivariate capability.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>series_length</strong><strong>]</strong> – If a Pandas data frame is passed (sktime format) a check is
+performed that it only has one column.
+If not, an exception is thrown, since this classifier does not
+yet have
+multivariate capability.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – Predicted probabilities</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nd.array of shape = (n_instances, n_classes)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.classification.interval_based.TimeSeriesForestClassifier">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.interval_based.</code><code class="sig-name descname">TimeSeriesForestClassifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min_interval</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">n_estimators</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/interval_based/_tsf.py#L18-L64"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.interval_based.TimeSeriesForestClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.series_as_features.base.estimators.interval_based._tsf.BaseTimeSeriesForest</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.ensemble._forest.ForestClassifier</span></code>, <a class="reference internal" href="sktime.classification.base.html#sktime.classification.base.BaseClassifier" title="sktime.classification.base.BaseClassifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.classification.base.BaseClassifier</span></code></a></p>
+<p>Time series forest classifier.</p>
+<dl>
+<dt>A time series forest is an ensemble of decision trees built on random intervals.</dt><dd><p>Overview: Input n series length m.
+For each tree</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>sample sqrt(m) intervals,</p></li>
+<li><p>find mean, std and slope for each interval, concatenate to form new</p></li>
+</ul>
+<p>data set,
+- build decision tree on new data set.</p>
+</div></blockquote>
+<p>Ensemble the trees with averaged probability estimates.</p>
+<p>This implementation deviates from the original in minor ways. It samples
+intervals with replacement and does not use the splitting criteria tiny
+refinement described in [1]. This is an intentionally stripped down, non
+configurable version for use as a hive-cote component. For a configurable
+tree based ensemble, see sktime.classifiers.ensemble.TimeSeriesForestClassifier</p>
+<p>n_estimators    : int, ensemble size, optional (default = 200)
+min_interval    : int, minimum width of an interval, optional (default
+to 3)
+n_jobs          : int, optional (default=1)</p>
+<blockquote>
+<div><p>The number of jobs to run in parallel for both <cite>fit</cite> and <cite>predict</cite>.
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> means using all processors.</p>
+</div></blockquote>
+<p>random_state    : int, seed for random, optional (default = none)</p>
+<p>n_classes    : int
+n_intervals  : int
+<a href="#id2"><span class="problematic" id="id3">classes_</span></a>    : List of classes for a given problem</p>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span></dt>
+<dd><p>H.Deng, G.Runger, E.Tuv and M.Vladimir, “A time series forest for</p>
+</dd>
+</dl>
+<p>classification and feature extraction”,Information Sciences, 239, 2013
+Java implementation
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/</a>
+java/tsml/classifiers/interval_based/TSF.java
+Arxiv version of the paper: <a class="reference external" href="https://arxiv.org/abs/1302.2277">https://arxiv.org/abs/1302.2277</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

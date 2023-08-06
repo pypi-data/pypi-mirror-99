@@ -1,0 +1,14 @@
+sktime.forecasting.base
+-----------------------
+
+.. automodule:: sktime.forecasting.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+   sktime.forecasting.base.adapters

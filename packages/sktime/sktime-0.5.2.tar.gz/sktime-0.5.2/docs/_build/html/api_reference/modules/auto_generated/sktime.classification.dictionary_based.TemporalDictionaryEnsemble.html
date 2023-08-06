@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TemporalDictionaryEnsemble &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>TemporalDictionaryEnsemble</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="temporaldictionaryensemble">
+<h1>TemporalDictionaryEnsemble<a class="headerlink" href="#temporaldictionaryensemble" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.classification.dictionary_based.</code><code class="sig-name descname">TemporalDictionaryEnsemble</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_parameter_samples</span><span class="o">=</span><span class="default_value">250</span></em>, <em class="sig-param"><span class="n">max_ensemble_size</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">time_limit</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">max_win_len_prop</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_window</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">randomly_selected_params</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dim_threshold</span><span class="o">=</span><span class="default_value">0.85</span></em>, <em class="sig-param"><span class="n">max_dims</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L26-L401"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporal Dictionary Ensemble (TDE) as described in [1].</p>
+<p>Overview: Input n series length m with d dimensions
+TDE searches k parameter values selected using a Gaussian processes
+regressor, evaluating each with a LOOCV. It then retains s
+ensemble members.
+There are six primary parameters for individual classifiers:</p>
+<blockquote>
+<div><p>alpha: alphabet size
+w: window length
+l: word length
+p: normalise/no normalise
+h: levels
+b: MCB/IGB</p>
+</div></blockquote>
+<p>for any combination, an individual TDE classifier slides a window of
+length w along the series. The w length window is shortened to
+an l length word through taking a Fourier transform and keeping the
+first l/2 complex coefficients. These lcoefficients are then discretised
+into alpha possible values, to form a word length l using breakpoints
+found using b. A histogram of words for each series is formed and stored,
+using a spatial pyramid of h levels. For multivariate series, accuracy
+from a reduced histogram is used to select dimensions.</p>
+<p>fit involves finding n histograms.
+predict uses 1 nearest neighbour with a the histogram intersection
+distance function.</p>
+<p>For the original Java version, see
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/</a>
+tsml/classifiers/dictionary_based/TDE.java</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_parameter_samples</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>number of parameter combos to try</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=250</strong><strong>)</strong> – </p></li>
+<li><p><strong>max_ensemble_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>maximum number of classifiers</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=50</strong><strong>)</strong> – </p></li>
+<li><p><strong>time_limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>time contract to limit build time in</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=0</strong> (<em>minutes</em>) – </p></li>
+<li><p><strong>limit</strong><strong>)</strong> (<em>no</em>) – </p></li>
+<li><p><strong>max_win_len_prop</strong> (<em>float between 0 and 1</em><em>, </em><em>maximum window length</em>) – </p></li>
+<li><p><strong>a proportion of series length</strong><strong> (</strong><strong>default=1</strong><strong>)</strong> (<em>as</em>) – </p></li>
+<li><p><strong>min_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>minimum window size</em><em> (</em><em>default=10</em><em>)</em>) – </p></li>
+<li><p><strong>randomly_selected_params</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>number of parameters randomly selected</em>) – </p></li>
+<li><p><strong>GP is used</strong><strong> (</strong><strong>default=50</strong><strong>)</strong> (<em>before</em>) – </p></li>
+<li><p><strong>bigrams</strong> (<em>boolean</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>whether to use bigrams</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=None</strong> – </p></li>
+<li><p><strong>for univariate</strong> (<em>true</em>) – </p></li>
+<li><p><strong>for multivariate</strong><strong>)</strong> (<em>false</em>) – </p></li>
+<li><p><strong>dim_threshold</strong> (<em>float between 0 and 1</em><em>, </em><em>dimension accuracy</em>) – </p></li>
+<li><p><strong>for multivariate</strong><strong> (</strong><strong>default=0.85</strong><strong>)</strong> (<em>threshold</em>) – </p></li>
+<li><p><strong>max_dims</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>max number of dimensions for multivariate</em>) – </p></li>
+<li><p><strong>(</strong><strong>default=20</strong><strong>)</strong> – </p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=1</em><em>)</em>) – </p></li>
+<li><p><strong>number of jobs to run in parallel for both fit and predict.</strong> (<em>The</em>) – </p></li>
+<li><p><strong>means using all processors.</strong> (<em>-1</em>) – </p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>seed for random</em><em>, </em><em>integer</em><em>,</em>) – </p></li>
+<li><p><strong>(</strong><strong>default to no seed</strong><strong>)</strong> (<em>optional</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_classes">
+<code class="sig-name descname">n_classes</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_classes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_instances">
+<code class="sig-name descname">n_instances</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_instances" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_dims">
+<code class="sig-name descname">n_dims</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_dims" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>extracted from the data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_estimators">
+<code class="sig-name descname">n_estimators</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.n_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The final number of classifiers used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">(&lt;=max_ensemble_size)</code></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.series_length">
+<code class="sig-name descname">series_length</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.series_length" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>length of all series (assumed equal)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.classifiers">
+<code class="sig-name descname">classifiers</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.classifiers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of IndividualTDE classifiers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weights">
+<code class="sig-name descname">weights</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weights" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>weight of each classifier in the ensemble</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weight_sum">
+<code class="sig-name descname">weight_sum</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.weight_sum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>sum of all weights</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_x">
+<code class="sig-name descname">prev_parameters_x</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_x" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>parameter value of previous classifiers for GP</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_y">
+<code class="sig-name descname">prev_parameters_y</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.prev_parameters_y" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>accuracy of previous classifiers for GP</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<dl>
+<dt>..[1] Matthew Middlehurst, James Large, Gavin Cawley and Anthony Bagnall</dt><dd><p>“The Temporal Dictionary Ensemble (TDE) Classifier for Time Series
+Classification”,</p>
+<blockquote>
+<div><p>in proceedings of the European Conference on Machine Learning and
+Principles and Practice of Knowledge Discovery in Databases, 2020</p>
+</div></blockquote>
+<p><a class="reference external" href="https://ueaeprints.uea.ac.uk/id/eprint/75490/">https://ueaeprints.uea.ac.uk/id/eprint/75490/</a></p>
+</dd>
+</dl>
+<p>Java version
+<a class="reference external" href="https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/">https://github.com/uea-machine-learning/tsml/blob/master/src/main/java/</a>
+tsml/classifiers/dictionary_based/TDE.java</p>
+<dl class="py method">
+<dt id="sktime.classification.dictionary_based.TemporalDictionaryEnsemble.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_parameter_samples</span><span class="o">=</span><span class="default_value">250</span></em>, <em class="sig-param"><span class="n">max_ensemble_size</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">time_limit</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">max_win_len_prop</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_window</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">randomly_selected_params</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">bigrams</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dim_threshold</span><span class="o">=</span><span class="default_value">0.85</span></em>, <em class="sig-param"><span class="n">max_dims</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/classification/dictionary_based/_tde.py#L120-L167"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.classification.dictionary_based.TemporalDictionaryEnsemble.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

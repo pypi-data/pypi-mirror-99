@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.utils: Utility function &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.utils: Utility function</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="sktime-utils-utility-function">
+<span id="utils-ref"></span><h1>sktime.utils: Utility function<a class="headerlink" href="#sktime-utils-utility-function" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference internal" href="../modules/auto_generated/sktime.utils.html#module-sktime.utils" title="sktime.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sktime.utils</span></code></a> module contains utility functions.</p>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.plotting.html#sktime.utils.plotting.plot_series" title="sktime.utils.plotting.plot_series"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_series</span></code></a>(*series[, labels, markers])</p></td>
+<td><p>Plot one or more time series</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="data-processing">
+<h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.are_columns_nested" title="sktime.utils.data_processing.are_columns_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">are_columns_nested</span></code></a>(X)</p></td>
+<td><p>Checks whether any cells have nested structure in each DataFrame column.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.is_nested_dataframe" title="sktime.utils.data_processing.is_nested_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_nested_dataframe</span></code></a>(X)</p></td>
+<td><p>Checks whether the input is a nested DataFrame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_nested_to_2d_array" title="sktime.utils.data_processing.from_nested_to_2d_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_nested_to_2d_array</span></code></a>(X[, return_numpy])</p></td>
+<td><p>Convert nested pandas DataFrame or Series with NumPy arrays or pandas Series in cells into tabular pandas DataFrame with primitives in cells, i.e. a data frame with the same number of rows as the input data and as many columns as there are observations in the nested series.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_2d_array_to_nested" title="sktime.utils.data_processing.from_2d_array_to_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_2d_array_to_nested</span></code></a>(X[, index, columns, …])</p></td>
+<td><p>Convert tabular pandas DataFrame with only primitives in cells into nested pandas DataFrame with a single column.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_3d_numpy_to_2d_array" title="sktime.utils.data_processing.from_3d_numpy_to_2d_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_3d_numpy_to_2d_array</span></code></a>(X)</p></td>
+<td><p>Converts 3d NumPy array (n_instances, n_columns, n_timepoints) to a 2d NumPy array with shape (n_instances, n_columns*n_timepoints)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_3d_numpy_to_nested" title="sktime.utils.data_processing.from_3d_numpy_to_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_3d_numpy_to_nested</span></code></a>(X[, column_names, …])</p></td>
+<td><p>Convert NumPy ndarray with shape (n_instances, n_columns, n_timepoints) into nested pandas DataFrame (with time series as pandas Series in cells)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_nested_to_3d_numpy" title="sktime.utils.data_processing.from_nested_to_3d_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_nested_to_3d_numpy</span></code></a>(X)</p></td>
+<td><p>Convert nested pandas DataFrame (with time series as pandas Series in cells) into NumPy ndarray with shape (n_instances, n_columns, n_timepoints).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_multi_index_to_3d_numpy" title="sktime.utils.data_processing.from_multi_index_to_3d_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_multi_index_to_3d_numpy</span></code></a>(X[, …])</p></td>
+<td><p>Convert panel data stored as pandas multi-index DataFrame to Numpy 3-dimensional NumPy array (n_instances, n_columns, n_timepoints).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_3d_numpy_to_multi_index" title="sktime.utils.data_processing.from_3d_numpy_to_multi_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_3d_numpy_to_multi_index</span></code></a>(X[, …])</p></td>
+<td><p>Convert 3-dimensional NumPy array (n_instances, n_columns, n_timepoints) to panel data stored as pandas multi-indexed DataFrame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_multi_index_to_nested" title="sktime.utils.data_processing.from_multi_index_to_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_multi_index_to_nested</span></code></a>(multi_ind_dataframe)</p></td>
+<td><p>Converts a pandas DataFrame witha multi-index to a nested DataFrame</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_nested_to_multi_index" title="sktime.utils.data_processing.from_nested_to_multi_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_nested_to_multi_index</span></code></a>(X[, …])</p></td>
+<td><p>Converts nested pandas DataFrame (with time series as pandas Series or NumPy array in cells) into multi-indexed pandas DataFrame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_nested_to_long" title="sktime.utils.data_processing.from_nested_to_long"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_nested_to_long</span></code></a>(X[, …])</p></td>
+<td><p>Convert nested DataFrame to long DataFrame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../modules/auto_generated/sktime.utils.data_processing.html#sktime.utils.data_processing.from_long_to_nested" title="sktime.utils.data_processing.from_long_to_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_long_to_nested</span></code></a>(X_long[, …])</p></td>
+<td><p>Convert long DataFrame to a nested DataFrame.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

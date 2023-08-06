@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime">
+<span id="sktime"></span><h1>sktime<a class="headerlink" href="#module-sktime" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="sktime.show_versions">
+<code class="sig-prename descclassname">sktime.</code><code class="sig-name descname">show_versions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/utils/_maint/_show_versions.py#L79-L91"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.show_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print useful debugging information</p>
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h1>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sktime.base.html">sktime.base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.benchmarking.html">sktime.benchmarking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.benchmarking.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.base.html">sktime.benchmarking.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.data.html">sktime.benchmarking.data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.evaluation.html">sktime.benchmarking.evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.metrics.html">sktime.benchmarking.metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.orchestration.html">sktime.benchmarking.orchestration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.results.html">sktime.benchmarking.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.strategies.html">sktime.benchmarking.strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.benchmarking.tasks.html">sktime.benchmarking.tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.classification.html">sktime.classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.classification.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.compose.html">sktime.classification.compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.dictionary_based.html">sktime.classification.dictionary_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.distance_based.html">sktime.classification.distance_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.hybrid.html">sktime.classification.hybrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.interval_based.html">sktime.classification.interval_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.shapelet_based.html">sktime.classification.shapelet_based</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.shapelet_based.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.html">sktime.classification.shapelet_based.mrseql</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.mrseql.html">sktime.classification.shapelet_based.mrseql.mrseql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.mrseql.html">sktime.classification.shapelet_based.mrseql.mrseql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.mrseql.html">sktime.classification.shapelet_based.mrseql.mrseql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sktime.classification.shapelet_based.mrseql.setup.html">sktime.classification.shapelet_based.mrseql.setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.classification.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.classification.base.html">sktime.classification.base</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.datasets.html">sktime.datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.datasets.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.datasets.base.html">sktime.datasets.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.datasets.setup.html">sktime.datasets.setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.datasets.tsc_dataset_names.html">sktime.datasets.tsc_dataset_names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.distances.html">sktime.distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.distances.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.elastic.html">sktime.distances.elastic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.elastic_cython.html">sktime.distances.elastic_cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.elastic_cython.html">sktime.distances.elastic_cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.elastic_cython.html">sktime.distances.elastic_cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.elastic_cython.html">sktime.distances.elastic_cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.mpdist.html">sktime.distances.mpdist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.distances.setup.html">sktime.distances.setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.forecasting.html">sktime.forecasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.forecasting.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.base.html">sktime.forecasting.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.base.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.forecasting.base.adapters.html">sktime.forecasting.base.adapters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.compose.html">sktime.forecasting.compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.model_evaluation.html">sktime.forecasting.model_evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.model_selection.html">sktime.forecasting.model_selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.online_learning.html">sktime.forecasting.online_learning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.forecasting.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.arima.html">sktime.forecasting.arima</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.bats.html">sktime.forecasting.bats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.ets.html">sktime.forecasting.ets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.exp_smoothing.html">sktime.forecasting.exp_smoothing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.fbprophet.html">sktime.forecasting.fbprophet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.naive.html">sktime.forecasting.naive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.tbats.html">sktime.forecasting.tbats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.theta.html">sktime.forecasting.theta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.forecasting.trend.html">sktime.forecasting.trend</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.performance_metrics.html">sktime.performance_metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.performance_metrics.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.performance_metrics.forecasting.html">sktime.performance_metrics.forecasting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.regression.html">sktime.regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.regression.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.regression.compose.html">sktime.regression.compose</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.regression.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.regression.base.html">sktime.regression.base</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.series_as_features.html">sktime.series_as_features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.series_as_features.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.series_as_features.base.html">sktime.series_as_features.base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.series_as_features.base.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.series_as_features.base.estimators.html">sktime.series_as_features.base.estimators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.series_as_features.base.estimators.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sktime.series_as_features.base.estimators.interval_based.html">sktime.series_as_features.base.estimators.interval_based</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.series_as_features.compose.html">sktime.series_as_features.compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.series_as_features.model_selection.html">sktime.series_as_features.model_selection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.transformations.html">sktime.transformations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.transformations.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.panel.html">sktime.transformations.panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.panel.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.dictionary_based.html">sktime.transformations.panel.dictionary_based</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.rocket.html">sktime.transformations.panel.rocket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.summarize.html">sktime.transformations.panel.summarize</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.panel.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.catch22_features.html">sktime.transformations.panel.catch22_features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.compose.html">sktime.transformations.panel.compose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.dwt.html">sktime.transformations.panel.dwt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.hog1d.html">sktime.transformations.panel.hog1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.interpolate.html">sktime.transformations.panel.interpolate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.matrix_profile.html">sktime.transformations.panel.matrix_profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.padder.html">sktime.transformations.panel.padder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.pca.html">sktime.transformations.panel.pca</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.reduce.html">sktime.transformations.panel.reduce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.segment.html">sktime.transformations.panel.segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.shapelets.html">sktime.transformations.panel.shapelets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.slope.html">sktime.transformations.panel.slope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.truncation.html">sktime.transformations.panel.truncation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.panel.tsfresh.html">sktime.transformations.panel.tsfresh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.series.html">sktime.transformations.series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.series.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.detrend.html">sktime.transformations.series.detrend</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.series.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.acf.html">sktime.transformations.series.acf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.adapt.html">sktime.transformations.series.adapt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.boxcox.html">sktime.transformations.series.boxcox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.cos.html">sktime.transformations.series.cos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.impute.html">sktime.transformations.series.impute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.matrix_profile.html">sktime.transformations.series.matrix_profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.outlier_detection.html">sktime.transformations.series.outlier_detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.transformations.series.summarize.html">sktime.transformations.series.summarize</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.transformations.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.transformations.base.html">sktime.transformations.base</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.utils.html">sktime.utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.utils.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.validation.html">sktime.utils.validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.validation.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sktime.utils.validation.forecasting.html">sktime.utils.validation.forecasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.utils.validation.panel.html">sktime.utils.validation.panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sktime.utils.validation.series.html">sktime.utils.validation.series</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.utils.html#submodules">Submodules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.data_io.html">sktime.utils.data_io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.data_processing.html">sktime.utils.data_processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.datetime.html">sktime.utils.datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.plotting.html">sktime.utils.plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.seasonality.html">sktime.utils.seasonality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sktime.utils.slope_and_trend.html">sktime.utils.slope_and_trend</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h1>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sktime.exceptions.html">sktime.exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sktime.setup.html">sktime.setup</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

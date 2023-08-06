@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sktime.forecasting.model_selection &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>sktime.forecasting.model_selection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-sktime.forecasting.model_selection">
+<span id="sktime-forecasting-model-selection"></span><h1>sktime.forecasting.model_selection<a class="headerlink" href="#module-sktime.forecasting.model_selection" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.CutoffSplitter">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">CutoffSplitter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cutoffs</span></em>, <em class="sig-param"><span class="n">fh</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">window_length</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L92-L131"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.CutoffSplitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._split.BaseSplitter</span></code></p>
+<p>Manual window splitter to split time series at given cutoff points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cutoffs</strong> (<em>np.array</em>) – cutoff points, positive and integer-index like, usable with pandas
+.iloc[] indexing</p></li>
+<li><p><strong>fh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><em>np.array</em>) – </p></li>
+<li><p><strong>window_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="sktime.forecasting.model_selection.CutoffSplitter.get_cutoffs">
+<code class="sig-name descname">get_cutoffs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L129-L131"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.CutoffSplitter.get_cutoffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cutoff points</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.forecasting.model_selection.CutoffSplitter.get_n_splits">
+<code class="sig-name descname">get_n_splits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L125-L127"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.CutoffSplitter.get_n_splits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of splits</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.ExpandingWindowSplitter">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">ExpandingWindowSplitter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fh</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">window_length</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">step_length</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">initial_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_with_window</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L290-L346"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ExpandingWindowSplitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._split.BaseWindowSplitter</span></code></p>
+<p>Expanding window splitter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><em>np.array</em>) – Forecasting horizon</p></li>
+<li><p><strong>window_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>step_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>initial_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>start_with_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For example for <cite>window_length = 5</cite>, <cite>step_length = 1</cite> and <cite>fh = 3</cite>
+here is a representation of the folds:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|-----------------------|</span>
+<span class="o">|</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">|</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code> = training fold.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> = test fold.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">ForecastingGridSearchCV</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">forecaster</span></em>, <em class="sig-param"><span class="n">cv</span></em>, <em class="sig-param"><span class="n">param_grid</span></em>, <em class="sig-param"><span class="n">scoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">pre_dispatch</span><span class="o">=</span><span class="default_value">'2*n_jobs'</span></em>, <em class="sig-param"><span class="n">error_score</span><span class="o">=</span><span class="default_value">nan</span></em>, <em class="sig-param"><span class="n">return_train_score</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_tune.py#L491-L578"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._tune.BaseGridSearch</span></code></p>
+<p>Performs grid-search cross-validation to find optimal model parameters.
+The forecaster is fit on the initial window and then temporal
+cross-validation is used to find the optimal parameter</p>
+<p>Grid-search cross-validation is performed based on a cross-validation
+iterator encoding the cross-validation scheme, the parameter grid to
+search over, and (optionally) the evaluation metric for comparing model
+performance. As in scikit-learn, tuning works through the common
+hyper-parameter interface which allows to repeatedly fit and evaluate
+the same forecaster with different hyper-parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>forecaster</strong> (<em>estimator object</em>) – The estimator should implement the sktime or scikit-learn estimator
+interface. Either the estimator must contain a “score” function,
+or a scoring function must be passed.</p></li>
+<li><p><strong>cv</strong> (<em>cross-validation generator</em><em> or </em><em>an iterable</em>) – e.g. SlidingWindowSplitter()</p></li>
+<li><p><strong>param_grid</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a><em> or </em><em>list of dictionaries</em>) – Model tuning parameters of the forecaster to evaluate</p></li>
+<li><p><strong>scoring</strong> (<em>function</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Function to score models for evaluation of optimal parameters</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Number of jobs to run in parallel.
+None means 1 unless in a joblib.parallel_backend context.
+-1 means using all processors.</p></li>
+<li><p><strong>refit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=True</em><em>)</em>) – Refit the forecaster with the best parameters on all the data</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – </p></li>
+<li><p><strong>pre_dispatch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em><em> (</em><em>default='2*n_jobs'</em><em>)</em>) – </p></li>
+<li><p><strong>error_score</strong> (<em>numeric value</em><em> or </em><em>the str 'raise'</em><em>, </em><em>optional</em><em> (</em><em>default=np.nan</em><em>)</em>) – The test score returned when a forecaster fails to be fitted.</p></li>
+<li><p><strong>return_train_score</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.best_index_">
+<code class="sig-name descname">best_index_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.best_index_" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.best_score_">
+<code class="sig-name descname">best_score_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.best_score_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Score of the best model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.best_params_">
+<code class="sig-name descname">best_params_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.best_params_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Best parameter values across the parameter grid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.best_forecaster_">
+<code class="sig-name descname">best_forecaster_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.best_forecaster_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fitted estimator with the best parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>estimator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.cv_results_">
+<code class="sig-name descname">cv_results_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.cv_results_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Results from grid search cross validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.n_splits_">
+<code class="sig-name descname">n_splits_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.n_splits_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of splits in the data for cross validation}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.refit_time_">
+<code class="sig-name descname">refit_time_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.refit_time_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time (seconds) to refit the best forecaster</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingGridSearchCV.scorer_">
+<code class="sig-name descname">scorer_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingGridSearchCV.scorer_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to score model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">ForecastingRandomizedSearchCV</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">forecaster</span></em>, <em class="sig-param"><span class="n">cv</span></em>, <em class="sig-param"><span class="n">param_distributions</span></em>, <em class="sig-param"><span class="n">n_iter</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">scoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">random_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pre_dispatch</span><span class="o">=</span><span class="default_value">'2*n_jobs'</span></em>, <em class="sig-param"><span class="n">error_score</span><span class="o">=</span><span class="default_value">nan</span></em>, <em class="sig-param"><span class="n">return_train_score</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_tune.py#L581-L688"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._tune.BaseGridSearch</span></code></p>
+<p>Performs randomized-search cross-validation to find optimal model parameters.
+The forecaster is fit on the initial window and then temporal
+cross-validation is used to find the optimal parameter</p>
+<p>Randomized cross-validation is performed based on a cross-validation
+iterator encoding the cross-validation scheme, the parameter distributions to
+search over, and (optionally) the evaluation metric for comparing model
+performance. As in scikit-learn, tuning works through the common
+hyper-parameter interface which allows to repeatedly fit and evaluate
+the same forecaster with different hyper-parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>forecaster</strong> (<em>estimator object</em>) – The estimator should implement the sktime or scikit-learn estimator
+interface. Either the estimator must contain a “score” function,
+or a scoring function must be passed.</p></li>
+<li><p><strong>cv</strong> (<em>cross-validation generator</em><em> or </em><em>an iterable</em>) – e.g. SlidingWindowSplitter()</p></li>
+<li><p><strong>param_distributions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a><em> or </em><em>list of dicts</em>) – Dictionary with parameters names (<cite>str</cite>) as keys and distributions
+or lists of parameters to try. Distributions must provide a <code class="docutils literal notranslate"><span class="pre">rvs</span></code>
+method for sampling (such as those from scipy.stats.distributions).
+If a list is given, it is sampled uniformly.
+If a list of dicts is given, first a dict is sampled uniformly, and
+then a parameter is sampled using that dict as above.</p></li>
+<li><p><strong>n_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>default=10</em>) – Number of parameter settings that are sampled. n_iter trades
+off runtime vs quality of the solution.</p></li>
+<li><p><strong>scoring</strong> (<em>function</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Function to score models for evaluation of optimal parameters</p></li>
+<li><p><strong>n_jobs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Number of jobs to run in parallel.
+None means 1 unless in a joblib.parallel_backend context.
+-1 means using all processors.</p></li>
+<li><p><strong>refit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=True</em><em>)</em>) – Refit the forecaster with the best parameters on all the data</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – </p></li>
+<li><p><strong>random_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>RandomState instance</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>default=None</em>) – Pseudo random number generator state used for random uniform sampling
+from lists of possible values instead of scipy.stats distributions.
+Pass an int for reproducible output across multiple
+function calls.</p></li>
+<li><p><strong>pre_dispatch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em><em> (</em><em>default='2*n_jobs'</em><em>)</em>) – </p></li>
+<li><p><strong>error_score</strong> (<em>numeric value</em><em> or </em><em>the str 'raise'</em><em>, </em><em>optional</em><em> (</em><em>default=np.nan</em><em>)</em>) – The test score returned when a forecaster fails to be fitted.</p></li>
+<li><p><strong>return_train_score</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_index_">
+<code class="sig-name descname">best_index_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_index_" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_score_">
+<code class="sig-name descname">best_score_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_score_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Score of the best model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_params_">
+<code class="sig-name descname">best_params_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_params_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Best parameter values across the parameter grid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_forecaster_">
+<code class="sig-name descname">best_forecaster_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.best_forecaster_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fitted estimator with the best parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>estimator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.cv_results_">
+<code class="sig-name descname">cv_results_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.cv_results_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Results from grid search cross validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.n_splits_">
+<code class="sig-name descname">n_splits_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.n_splits_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of splits in the data for cross validation}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.refit_time_">
+<code class="sig-name descname">refit_time_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.refit_time_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time (seconds) to refit the best forecaster</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.scorer_">
+<code class="sig-name descname">scorer_</code><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.ForecastingRandomizedSearchCV.scorer_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to score model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.SingleWindowSplitter">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">SingleWindowSplitter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fh</span></em>, <em class="sig-param"><span class="n">window_length</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L349-L423"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.SingleWindowSplitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._split.BaseWindowSplitter</span></code></p>
+<p>Single window splitter</p>
+<p>Split time series once into a training and test window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><em>np.array</em>) – </p></li>
+<li><p><strong>window_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="sktime.forecasting.model_selection.SingleWindowSplitter.get_cutoffs">
+<code class="sig-name descname">get_cutoffs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L386-L402"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.SingleWindowSplitter.get_cutoffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the cutoff time points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>y</strong> (<em>pd.Series</em><em> or </em><em>pd.Index</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cutoffs</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.forecasting.model_selection.SingleWindowSplitter.get_n_splits">
+<code class="sig-name descname">get_n_splits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L373-L384"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.SingleWindowSplitter.get_n_splits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of splits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>y</strong> (<em>pd.Series</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>n_splits</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="sktime.forecasting.model_selection.SingleWindowSplitter.split_initial">
+<code class="sig-name descname">split_initial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L404-L423"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.SingleWindowSplitter.split_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split initial window</p>
+<p>This is useful during forecasting model selection where we want to
+fit the forecaster on some part of the
+data first before doing temporal cross-validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>y</strong> (<em>pd.Series</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>intial_training_window</strong> (<em>np.array</em>)</p></li>
+<li><p><strong>initial_test_window</strong> (<em>np.array</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="sktime.forecasting.model_selection.SlidingWindowSplitter">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">SlidingWindowSplitter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fh</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">window_length</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">step_length</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">initial_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_with_window</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L234-L287"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.SlidingWindowSplitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sktime.forecasting.model_selection._split.BaseWindowSplitter</span></code></p>
+<p>Sliding window splitter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><em>np.array</em>) – Forecasting horizon</p></li>
+<li><p><strong>window_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>step_length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>initial_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – </p></li>
+<li><p><strong>start_with_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>For example for <cite>window_length = 5</cite>, <cite>step_length = 1</cite> and <cite>fh = 3</cite>
+here is a representation of the folds:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|-----------------------|</span>
+<span class="o">|</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">-</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">-</span> <span class="o">-</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">-</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">x</span> <span class="n">x</span> <span class="n">x</span> <span class="o">|</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code> = training fold.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> = test fold.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sktime.forecasting.model_selection.temporal_train_test_split">
+<code class="sig-prename descclassname">sktime.forecasting.model_selection.</code><code class="sig-name descname">temporal_train_test_split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">X</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">test_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fh</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/model_selection/_split.py#L426-L472"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.model_selection.temporal_train_test_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split arrays or matrices into sequential train and test subsets
+Creates train/test splits over endogenous arrays an optional exogenous
+arrays. This is a wrapper of scikit-learn’s <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> that
+does not shuffle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*series</strong> (<em>sequence of pd.Series with same length / shape</em><em>[</em><em>0</em><em>]</em>) – </p></li>
+<li><p><strong>test_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – If float, should be between 0.0 and 1.0 and represent the proportion
+of the dataset to include in the test split. If int, represents the
+relative number of test samples. If None, the value is set to the
+complement of the train size. If <code class="docutils literal notranslate"><span class="pre">train_size</span></code> is also None, it will
+be set to 0.25.</p></li>
+<li><p><strong>train_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>(</em><em>default=None</em><em>)</em>) – If float, should be between 0.0 and 1.0 and represent the
+proportion of the dataset to include in the train split. If
+int, represents the relative number of train samples. If None,
+the value is automatically set to the complement of the test size.</p></li>
+<li><p><strong>fh</strong> (<a class="reference internal" href="sktime.forecasting.base.html#sktime.forecasting.base.ForecastingHorizon" title="sktime.forecasting.base.ForecastingHorizon"><em>ForecastingHorizon</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>splitting</strong> – List containing train-test split of inputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)">list</a>, length=2 * len(arrays)</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>..[1]  adapted from <a class="reference external" href="https://github.com/alkaline-ml/pmdarima/">https://github.com/alkaline-ml/pmdarima/</a></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

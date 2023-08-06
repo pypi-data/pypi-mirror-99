@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ARIMA &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ARIMA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="arima">
+<h1>ARIMA<a class="headerlink" href="#arima" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.forecasting.arima.ARIMA">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.arima.</code><code class="sig-name descname">ARIMA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">1, 0, 0</span></em>, <em class="sig-param"><span class="n">seasonal_order</span><span class="o">=</span><span class="default_value">0, 0, 0, 0</span></em>, <em class="sig-param"><span class="n">start_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'lbfgs'</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">suppress_warnings</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">out_of_sample_size</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">scoring</span><span class="o">=</span><span class="default_value">'mse'</span></em>, <em class="sig-param"><span class="n">scoring_args</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_intercept</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">sarimax_kwargs</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/arima.py#L347-L553"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.arima.ARIMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>An ARIMA estimator.</p>
+<p>An ARIMA, or autoregressive integrated moving average, is a
+generalization of an autoregressive moving average (ARMA) and is fitted to
+time-series data in an effort to forecast future points. ARIMA models can
+be especially efficacious in cases where data shows evidence of
+non-stationarity.</p>
+<p>The “AR” part of ARIMA indicates that the evolving variable of interest is
+regressed on its own lagged (i.e., prior observed) values. The “MA” part
+indicates that the regression error is actually a linear combination of
+error terms whose values occurred contemporaneously and at various times
+in the past. The “I” (for “integrated”) indicates that the data values
+have been replaced with the difference between their values and the
+previous values (and this differencing process may have been performed
+more than once). The purpose of each of these features is to make the model
+fit the data as well as possible.</p>
+<p>Non-seasonal ARIMA models are generally denoted <code class="docutils literal notranslate"><span class="pre">ARIMA(p,d,q)</span></code> where
+parameters <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code>, and <code class="docutils literal notranslate"><span class="pre">q</span></code> are non-negative integers, <code class="docutils literal notranslate"><span class="pre">p</span></code> is the
+order (number of time lags) of the autoregressive model, <code class="docutils literal notranslate"><span class="pre">d</span></code> is the
+degree of differencing (the number of times the data have had past values
+subtracted), and <code class="docutils literal notranslate"><span class="pre">q</span></code> is the order of the moving-average model. Seasonal
+ARIMA models are usually denoted <code class="docutils literal notranslate"><span class="pre">ARIMA(p,d,q)(P,D,Q)m</span></code>, where <code class="docutils literal notranslate"><span class="pre">m</span></code>
+refers to the number of periods in each season, and the uppercase <code class="docutils literal notranslate"><span class="pre">P</span></code>,
+<code class="docutils literal notranslate"><span class="pre">D</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code> refer to the autoregressive, differencing, and moving average
+terms for the seasonal part of the ARIMA model.</p>
+<p>When two out of the three terms are zeros, the model may be referred to
+based on the non-zero parameter, dropping “AR”, “I” or “MA” from the
+acronym describing the model. For example, <code class="docutils literal notranslate"><span class="pre">ARIMA(1,0,0)</span></code> is <code class="docutils literal notranslate"><span class="pre">AR(1)</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ARIMA(0,1,0)</span></code> is <code class="docutils literal notranslate"><span class="pre">I(1)</span></code>, and <code class="docutils literal notranslate"><span class="pre">ARIMA(0,0,1)</span></code> is <code class="docutils literal notranslate"><span class="pre">MA(1)</span></code>. [1]
+See notes for more practical information on the <code class="docutils literal notranslate"><span class="pre">ARIMA</span></code> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order</strong> (<em>iterable</em><em> or </em><em>array-like</em><em>, </em><em>shape=</em><em>(</em><em>3</em><em>,</em><em>)</em><em>, </em><em>optional</em><em> (</em><em>default=</em><em>(</em><em>1</em><em>, </em><em>0</em><em>, </em><em>0</em><em>)</em><em>)</em>) – The (p,d,q) order of the model for the number of AR parameters,
+differences, and MA parameters to use. <code class="docutils literal notranslate"><span class="pre">p</span></code> is the order (number of
+time lags) of the auto-regressive model, and is a non-negative integer.
+<code class="docutils literal notranslate"><span class="pre">d</span></code> is the degree of differencing (the number of times the data have
+had past values subtracted), and is a non-negative integer. <code class="docutils literal notranslate"><span class="pre">q</span></code> is
+the order of the moving-average model, and is a non-negative integer.
+Default is an AR(1) model: (1,0,0).</p></li>
+<li><p><strong>seasonal_order</strong> (<em>array-like</em><em>, </em><em>shape=</em><em>(</em><em>4</em><em>,</em><em>)</em><em>, </em><em>optional</em><em> (</em><em>default=</em><em>(</em><em>0</em><em>, </em><em>0</em><em>, </em><em>0</em><em>, </em><em>0</em><em>)</em><em>)</em>) – The (P,D,Q,s) order of the seasonal component of the model for the
+AR parameters, differences, MA parameters, and periodicity. <code class="docutils literal notranslate"><span class="pre">D</span></code> must
+be an integer indicating the integration order of the process, while
+<code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> may either be an integers indicating the AR and MA
+orders (so that all lags up to those orders are included) or else
+iterables giving specific AR and / or MA lags to include. <code class="docutils literal notranslate"><span class="pre">S</span></code> is an
+integer giving the periodicity (number of periods in season), often it
+is 4 for quarterly data or 12 for monthly data. Default is no seasonal
+effect.</p></li>
+<li><p><strong>start_params</strong> (<em>array-like</em><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – Starting parameters for <code class="docutils literal notranslate"><span class="pre">ARMA(p,q)</span></code>.  If None, the default is given
+by <code class="docutils literal notranslate"><span class="pre">ARMA._fit_start_params</span></code>.</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em><em> (</em><em>default='lbfgs'</em><em>)</em>) – The <code class="docutils literal notranslate"><span class="pre">method</span></code> determines which solver from <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code>
+is used, and it can be chosen from among the following strings:
+- ‘newton’ for Newton-Raphson
+- ‘nm’ for Nelder-Mead
+- ‘bfgs’ for Broyden-Fletcher-Goldfarb-Shanno (BFGS)
+- ‘lbfgs’ for limited-memory BFGS with optional box constraints
+- ‘powell’ for modified Powell’s method
+- ‘cg’ for conjugate gradient
+- ‘ncg’ for Newton-conjugate gradient
+- ‘basinhopping’ for global basin-hopping solver
+The explicit arguments in <code class="docutils literal notranslate"><span class="pre">fit</span></code> are passed to the solver,
+with the exception of the basin-hopping solver. Each
+solver has several optional arguments that are not the same across
+solvers. These can be passed as <a href="#id1"><span class="problematic" id="id2">**</span></a>fit_kwargs</p></li>
+<li><p><strong>maxiter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=50</em><em>)</em>) – The maximum number of function evaluations. Default is 50</p></li>
+<li><p><strong>suppress_warnings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=False</em><em>)</em>) – Many warnings might be thrown inside of statsmodels. If
+<code class="docutils literal notranslate"><span class="pre">suppress_warnings</span></code> is True, all of these warnings will be squelched.</p></li>
+<li><p><strong>out_of_sample_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em><em> (</em><em>default=0</em><em>)</em>) – <p>The number of examples from the tail of the time series to hold out
+and use as validation examples. The model will not be fit on these
+samples, but the observations will be added into the model’s <code class="docutils literal notranslate"><span class="pre">endog</span></code>
+and <code class="docutils literal notranslate"><span class="pre">exog</span></code> arrays so that future forecast values originate from the
+end of the endogenous vector. See <code class="xref py py-func docutils literal notranslate"><span class="pre">update()</span></code>.
+For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">out_of_sample_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;</span> <span class="n">Fit</span> <span class="n">on</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="n">Score</span> <span class="n">on</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="n">Append</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="n">to</span> <span class="n">end</span> <span class="n">of</span> <span class="bp">self</span><span class="o">.</span><span class="n">arima_res_</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">endog</span> <span class="n">values</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>scoring</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><em>callable</em><em>, </em><em>optional</em><em> (</em><em>default='mse'</em><em>)</em>) – <p>If performing validation (i.e., if <code class="docutils literal notranslate"><span class="pre">out_of_sample_size</span></code> &gt; 0), the
+metric to use for scoring the out-of-sample data:</p>
+<blockquote>
+<div><ul>
+<li><p>If a string, must be a valid metric name importable from
+<code class="docutils literal notranslate"><span class="pre">sklearn.metrics</span></code>.</p></li>
+<li><p>If a callable, must adhere to the function signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo_loss</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<p>Note that models are selected by <em>minimizing</em> loss. If using a
+maximizing metric (such as <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.r2_score</span></code>), it is the
+user’s responsibility to wrap the function such that it returns a
+negative value for minimizing.</p>
+</p></li>
+<li><p><strong>scoring_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – A dictionary of key-word arguments to be passed to the
+<code class="docutils literal notranslate"><span class="pre">scoring</span></code> metric.</p></li>
+<li><p><strong>trend</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em><em> (</em><em>default=None</em><em>)</em>) – The trend parameter. If <code class="docutils literal notranslate"><span class="pre">with_intercept</span></code> is True, <code class="docutils literal notranslate"><span class="pre">trend</span></code> will be
+used. If <code class="docutils literal notranslate"><span class="pre">with_intercept</span></code> is False, the trend will be set to a no-
+intercept value. If None and <code class="docutils literal notranslate"><span class="pre">with_intercept</span></code>, ‘c’ will be used as
+a default.</p></li>
+<li><p><strong>with_intercept</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em><em> (</em><em>default=True</em><em>)</em>) – Whether to include an intercept term. Default is True.</p></li>
+<li><p><strong>**sarimax_kwargs</strong> (<em>keyword args</em><em>, </em><em>optional</em>) – <p>Optional arguments to pass to the SARIMAX constructor.
+Examples of potentially valuable kwargs:</p>
+<blockquote>
+<div><ul>
+<li><p>time_varying_regression : boolean
+Whether or not coefficients on the exogenous regressors are allowed
+to vary over time.</p></li>
+<li><p>enforce_stationarity : boolean
+Whether or not to transform the AR parameters to enforce
+stationarity in the auto-regressive component of the model.</p></li>
+<li><p>enforce_invertibility : boolean
+Whether or not to transform the MA parameters to enforce
+invertibility in the moving average component of the model.</p></li>
+<li><p>simple_differencing : boolean
+Whether or not to use partially conditional maximum likelihood
+estimation for seasonal ARIMA models. If True, differencing is
+performed prior to estimation, which discards the first
+<span class="math notranslate nohighlight">\(s D + d\)</span> initial rows but results in a smaller
+state-space formulation. If False, the full SARIMAX model is
+put in state-space form so that all datapoints can be used in
+estimation. Default is False.</p></li>
+<li><p>measurement_error: boolean
+Whether or not to assume the endogenous observations endog were
+measured with error. Default is False.</p></li>
+<li><p>mle_regression : boolean
+Whether or not to use estimate the regression coefficients for the
+exogenous variables as part of maximum likelihood estimation or
+through the Kalman filter (i.e. recursive least squares). If
+time_varying_regression is True, this must be set to False.
+Default is True.</p></li>
+<li><p>hamilton_representation : boolean
+Whether or not to use the Hamilton representation of an ARMA
+process (if True) or the Harvey representation (if False).
+Default is False.</p></li>
+<li><p>concentrate_scale : boolean
+Whether or not to concentrate the scale (variance of the error
+term) out of the likelihood. This reduces the number of parameters
+estimated by maximum likelihood by one, but standard errors will
+then not be available for the scale parameter.</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p><a class="reference external" href="https://alkaline-ml.com/pmdarima/modules/generated/pmdarima.arima.ARIMA.html">https://alkaline-ml.com/pmdarima/modules/generated/pmdarima.arima.ARIMA.html</a>
+<a class="reference external" href="https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html">https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html</a></p>
+<dl class="py method">
+<dt id="sktime.forecasting.arima.ARIMA.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">1, 0, 0</span></em>, <em class="sig-param"><span class="n">seasonal_order</span><span class="o">=</span><span class="default_value">0, 0, 0, 0</span></em>, <em class="sig-param"><span class="n">start_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'lbfgs'</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">suppress_warnings</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">out_of_sample_size</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">scoring</span><span class="o">=</span><span class="default_value">'mse'</span></em>, <em class="sig-param"><span class="n">scoring_args</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_intercept</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">sarimax_kwargs</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/arima.py#L506-L534"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.arima.ARIMA.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

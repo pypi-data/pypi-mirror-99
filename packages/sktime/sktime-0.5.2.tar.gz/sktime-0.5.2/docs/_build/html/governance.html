@@ -1,0 +1,782 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Governance &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About us" href="about.html" />
+    <link rel="prev" title="Code of Conduct" href="code_of_conduct.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Governance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#roles">Roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contributors">Contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-maintainers">Algorithm maintainers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rights-and-responsibilities">Rights and responsibilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appointment">Appointment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#core-developers">Core developers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rights-and-responsibilities-1">Rights and responsibilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appointment-1">Appointment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#coc-committee-members">CoC committee members</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rights-and-responsibilities-2">Rights and responsibilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appointment-2">Appointment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cc-members">CC members</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rights-and-responsibilities-3">Rights and responsibilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#appointment-3">Appointment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#communications">Communications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#decision-making">Decision making</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stage-1-lazy-consensus-with-veto-right">Stage 1: lazy consensus with veto right</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-2-voting">Stage 2: voting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-3-conflict-resolution">Stage 3: conflict resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sktime-enhancement-proposal">sktime enhancement proposal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-inclusion-guidelines">Algorithm inclusion guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledging-contributions">Acknowledging contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#outlook">Outlook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Governance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="governance">
+<span id="id1"></span><h1>Governance<a class="headerlink" href="#governance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>sktime is a consensus-based community project. Anyone with an interest in the project can join the community, contribute to the project, and participate in the governance process. This document describes how that participation takes place, which roles we have in our community, how we make decisions, and how we acknowledge contributions.</p>
+<p>We are particularly motivated to support new and/or anxious contributors, people who are looking to learn and develop their skills, and anyone who has experienced discrimination in the past. Go to our <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CONTRIBUTING.rst">contributing guide</a> for more details.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Section</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#code-of-conduct"><span class="std std-ref">Code of Conduct</span></a></p></td>
+<td><p>How we expect all members of the sktime community to interact</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#roles"><span class="std std-ref">Roles</span></a></p></td>
+<td><p>What roles we have in sktime’s community and what rights and responsibilities they have</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#decision-making"><span class="std std-ref">Decision making</span></a></p></td>
+<td><p>How and by whom decisions are made</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#acknowledging-contributions"><span class="std std-ref">Acknowledging contributions</span></a></p></td>
+<td><p>How we acknowledge contributions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#outlook"><span class="std std-ref">Outlook</span></a></p></td>
+<td><p>What we may change in the future</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="code-of-conduct">
+<span id="id2"></span><h2>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h2>
+<p>We value the participation of every member of our community and want to
+ensure an that every contributor has an enjoyable and fulfilling
+experience. Accordingly, everyone who participates in the sktime project
+is expected to show respect and courtesy to other community members at
+all times.</p>
+<p>We ask all members of the community to conform to our <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CODE_OF_CONDUCT.rst">Code of
+Conduct</a>.</p>
+</div>
+<div class="section" id="roles">
+<span id="id3"></span><h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<p>We distinguish between the following key roles that community members
+may exercise. For each role, we describe their rights and
+responsibilities, and appointment process in more detail below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Rights/responsibilities</p></th>
+<th class="head"><p>Appointment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#contributors"><span class="std std-ref">Contributors</span></a></p></td>
+<td><p>-</p></td>
+<td><p>Concrete contribution</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#algorithm-maintainers"><span class="std std-ref">Algorithm maintainers</span></a></p></td>
+<td><p>Algorithm maintenance, voting and veto right for changes to their algorithm</p></td>
+<td><p>Algorithm contribution or appointment by current maintainer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core-developers"><span class="std std-ref">Core developers</span></a></p></td>
+<td><p>Direct write access, issue/PR management, veto right, voting, nomination</p></td>
+<td><p>Nomination by core developers, vote by core developers, 2/3 majority</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#coc-committee-members"><span class="std std-ref">CoC committee members</span></a></p></td>
+<td><p>CoC maintenance, investigation and enforcement</p></td>
+<td><p>Nomination by core developers, vote by core developers, 2/3 majority and simple CoC majority</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cc-members"><span class="std std-ref">CC members</span></a></p></td>
+<td><p>Conflict resolution, technical leadership, project management</p></td>
+<td><p>Nomination by core developers, vote by core developers, 2/3 majority and simple CC majority</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="contributors">
+<span id="id4"></span><h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
+<p>Contributors are community members who have contributed in concrete ways
+to the project. Anyone can become a contributor, and contributions can
+take many forms – not only code – as detailed in the <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CONTRIBUTING.rst">contributing
+guide</a>.</p>
+<p>For more details on how we acknowledge contributions, see <a class="reference internal" href="#acknowledging-contributions"><span class="std std-ref">Acknowledging contributions</span></a> below.</p>
+<p>All contributors are listed in <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CONTRIBUTORS.md">CONTRIBUTORS.md</a>.</p>
+</div>
+<div class="section" id="algorithm-maintainers">
+<span id="id5"></span><h3>Algorithm maintainers<a class="headerlink" href="#algorithm-maintainers" title="Permalink to this headline">¶</a></h3>
+<p>Algorithm maintainers are contributors who have contributed an
+algorithm. They have the same voting rights as core developers with
+regard to their algorithm.</p>
+<p>In sktime, algorithms are encapsulated in classes with specific
+interface requirements and are called estimators. To faciliate
+maintainership questions, we try to write algorithms in separate files
+when possible.</p>
+<div class="section" id="rights-and-responsibilities">
+<h4>Rights and responsibilities<a class="headerlink" href="#rights-and-responsibilities" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Right/responsibility</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Decision making with respect to their algorithm</p></td>
+<td><p>Algorithm maintainers can partipate in the decision making process by vetoing changes and casting votes with regard to proposed changes to their algorithm. This does not extend to proposed changes to the common framework and API.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maintenance</p></td>
+<td><p>They are responsible for maintaining the code and documentation for their algorithm, including bug fixes, unit testing, coding style, compliance with the common API, docstrings, documentation and tutorials notebooks.</p></td>
+</tr>
+<tr class="row-even"><td><p>Support</p></td>
+<td><p>They are the first point of contact for users and other contributors for all questions, issues and proposals regarding their algorithm.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appointment">
+<h4>Appointment<a class="headerlink" href="#appointment" title="Permalink to this headline">¶</a></h4>
+<p>The contributor who contributes an algorithm is automatically appointed
+as its first maintainer. If they can no longer fulfil their maintenance
+responsibilities, maintainers are expected to resign.</p>
+<p>When the maintainer resigns, they can appoint another contributor as the
+new maintainer. No vote is required.</p>
+<p>Maintainers are listed in the <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CODEOWNERS">CODEOWNERS</a> file.</p>
+</div>
+</div>
+<div class="section" id="core-developers">
+<span id="id6"></span><h3>Core developers<a class="headerlink" href="#core-developers" title="Permalink to this headline">¶</a></h3>
+<p>Core developers are contributors who have shown that they are dedicated
+to the continued development of the project through ongoing engagement
+with the community.</p>
+<p>Current core developers are listed in the <a class="reference external" href="https://github.com/orgs/sktime/teams/core-developers/members">core-developers
+team</a>
+within the sktime organisation on GitHub.</p>
+<div class="section" id="rights-and-responsibilities-1">
+<span id="id7"></span><h4>Rights and responsibilities<a class="headerlink" href="#rights-and-responsibilities-1" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Right/responsibility</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Direct access</p></td>
+<td><p>Being a core developer allows contributors to more easily carry on with their project related activities by giving them direct access to the project’s repository.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Issue/PR management</p></td>
+<td><p>Core developers are responsible for reviewing and managing issues and pull requests. This includes commenting on issues, reviewing code contributions, merging approved pull requests, and closing issues once resolved.</p></td>
+</tr>
+<tr class="row-even"><td><p>Decision making</p></td>
+<td><p>They can participate in the decision making process by vetoing changes and casting votes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nomination</p></td>
+<td><p>They can nominate new core developers, CoC committee members and CC members.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appointment-1">
+<span id="id8"></span><h4>Appointment<a class="headerlink" href="#appointment-1" title="Permalink to this headline">¶</a></h4>
+<p>New core developers can be nominated by any current core developer. Once
+they have been nominated, there will be a vote by the current core
+developers.</p>
+<p>Voting on appointments is one of the few activities that takes
+place on the project’s private communication channels. The vote will be
+anonymous.</p>
+<p>While it is expected that most votes will be unanimous, a 2/3 majority of
+the cast votes is enough. The vote needs to be open for five days excluding
+weekends.</p>
+<p>Core developers that have not contributed to the project (commits or
+GitHub comments) in the past 12 months will automatically become <em>inactive</em>
+and give up their rights and responsibilities. When they become active
+again, they can retake their role without having to be appointed.</p>
+</div>
+</div>
+<div class="section" id="coc-committee-members">
+<span id="id9"></span><h3>CoC committee members<a class="headerlink" href="#coc-committee-members" title="Permalink to this headline">¶</a></h3>
+<p>CoC members are contributors with special rights and responsibilities.
+The current members of the CoC committee are listed in the
+<a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CODE_OF_CONDUCT.rst">CoC</a>.</p>
+<div class="section" id="rights-and-responsibilities-2">
+<span id="id10"></span><h4>Rights and responsibilities<a class="headerlink" href="#rights-and-responsibilities-2" title="Permalink to this headline">¶</a></h4>
+<p>CoC committee members are responsible for investigating potential CoC
+incidents and enforcing the CoC.
+They are the point of contact for reporting potential CoC incidents.</p>
+<p>In addition, they are responsible for maintaining and improving the CoC.</p>
+</div>
+<div class="section" id="appointment-2">
+<span id="id11"></span><h4>Appointment<a class="headerlink" href="#appointment-2" title="Permalink to this headline">¶</a></h4>
+<p>Membership of the CC is by nomination by a core developer and a vote by
+all core developers. A nomination will result in discussion which will stay
+open for 5 days excluding weekends and then a vote by the core
+developers which will stay open for 5 days excluding weekends. CoC committee
+membership votes are subject to:</p>
+<ul class="simple">
+<li><p>a 2/3 majority of all cast votes, and</p></li>
+<li><p>a simple majority approval of all the current CoC committee members.</p></li>
+</ul>
+<p>The vote will take place in private communication channels and will be
+anonymous.</p>
+<p>To avoid deadlocks if there is an even number of CoC committee members, one
+of them will have a tie breaking privilege.</p>
+</div>
+</div>
+<div class="section" id="cc-members">
+<span id="id12"></span><h3>CC members<a class="headerlink" href="#cc-members" title="Permalink to this headline">¶</a></h3>
+<p>CC (community council) members are core developers with additional rights and
+responsibilities to avoid deadlocks and ensure a smooth progress of the
+project.</p>
+<p>Current CC members are listed in the <a class="reference external" href="https://github.com/orgs/sktime/teams/community-council/members">community-council
+team</a>
+within the sktime organisation on GitHub.</p>
+<div class="section" id="rights-and-responsibilities-3">
+<span id="id13"></span><h4>Rights and responsibilities<a class="headerlink" href="#rights-and-responsibilities-3" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Right/responsibility</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Decision making: conflict resolution</p></td>
+<td><p>see <a class="reference internal" href="#stage-3"><span class="std std-ref">Stage 3: conflict resolution</span></a> below</p></td>
+</tr>
+<tr class="row-odd"><td><p>Technical direction</p></td>
+<td><p>Strategic planning, development roadmap</p></td>
+</tr>
+<tr class="row-even"><td><p>Project management</p></td>
+<td><p>Funding, collaborations with external organisations, community infrastructure (chat server, GitHub repositories, continuous integration accounts, social media accounts)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appointment-3">
+<span id="id14"></span><h4>Appointment<a class="headerlink" href="#appointment-3" title="Permalink to this headline">¶</a></h4>
+<p>Membership of the CC is by nomination by a core developer and a vote by
+all core developers. A nomination will result in discussion which stay open
+for 5 days excluding weekends and then a vote by core developers which will
+stay open for 5 days excluding weekends. CC membership votes are subject to:</p>
+<ul class="simple">
+<li><p>a 2/3 majority of all cast votes, and</p></li>
+<li><p>a simple majority approval of all the current CC members.</p></li>
+</ul>
+<p>The vote will take place in private communication channels and will be
+anonymous.</p>
+<p>To avoid deadlocks if there is an even number of CC members, one of them
+will have a tie breaking privilege.</p>
+<p>CC members who do not actively engage with the CC responsibilities are
+expected to resign.</p>
+</div>
+<div class="section" id="communications">
+<h4>Communications<a class="headerlink" href="#communications" title="Permalink to this headline">¶</a></h4>
+<p>The CC has regular public meetings that the full community is welcome to attend.</p>
+<p>For more details about our meetings, please go to our <a class="reference external" href="https://github.com/sktime/community-council/">community-council repository</a>.</p>
+<p>To contact the CC directly, please send an email to <a class="reference external" href="mailto:info&#37;&#52;&#48;sktime&#46;org">info<span>&#64;</span>sktime<span>&#46;</span>org</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="decision-making">
+<span id="id15"></span><h2>Decision making<a class="headerlink" href="#decision-making" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of this section is to formalize the decision-making process
+used by the sktime project. We clarify:</p>
+<ul class="simple">
+<li><p>what types of changes we make decision on,</p></li>
+<li><p>how decisions are made, and</p></li>
+<li><p>who participates in the decision making.</p></li>
+</ul>
+<p>sktime’s decision-making process is designed to take into account
+feedback from all community members and strives to find consensus, while
+avoiding deadlocks when no consensus can be found.</p>
+<p>All discussion and votes takes place on the project’s <a class="reference external" href="https://github.com/alan-turing-institute/sktime/issues">issue
+tracker</a>,
+<a class="reference external" href="https://github.com/alan-turing-institute/sktime/pulls">pull requests</a> or an <a class="reference internal" href="#steps"><span class="std std-ref">sktime enhancement proposal</span></a>. Some
+sensitive discussions and appointment votes occur on private chats.</p>
+<p>The CC reserves the right to overrule decisions.</p>
+<p>We distinguish between the following types of proposed changes. The
+corresponding decision making process is described in more detail below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type of change</p></th>
+<th class="head"><p>Decision making process</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Code additions, such as new algorithms</p></td>
+<td><p>Lazy consensus, supported by the <a class="reference internal" href="#algorithm-inclusion-guidelines"><span class="std std-ref">Algorithm inclusion guidelines</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Minor documentation changes, such as typo fixes, or addition/correction of a sentence</p></td>
+<td><p>Lazy consensus</p></td>
+</tr>
+<tr class="row-even"><td><p>Code changes and major documentation changes</p></td>
+<td><p>Lazy consensus</p></td>
+</tr>
+<tr class="row-odd"><td><p>Changes to the API design, hard dependencies, or supported versions</p></td>
+<td><p>Lazy consensus based on an <a class="reference internal" href="#steps"><span class="std std-ref">sktime enhancement proposal</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Changes to sktime’s governance (this document and the CoC)</p></td>
+<td><p>Lazy consensus based on an <a class="reference internal" href="#steps"><span class="std std-ref">sktime enhancement proposal</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Appointment</p></td>
+<td><p>Voting</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="stage-1-lazy-consensus-with-veto-right">
+<span id="stage-1"></span><h3>Stage 1: lazy consensus with veto right<a class="headerlink" href="#stage-1-lazy-consensus-with-veto-right" title="Permalink to this headline">¶</a></h3>
+<p>sktime uses a “consensus seeking” process for making decisions. The
+community tries to find a resolution that has no open objections among
+core developers.</p>
+<ul class="simple">
+<li><p>To accept proposed changes, we require approval by one core developer
+(lazy consensus) and no rejection by a core developer (veto right).</p></li>
+<li><p>Approvals and rejections can be expressed as +1 and -1 comments,
+respectively.</p></li>
+<li><p>Core developers are expected to give reasonable time to others to
+give their opinion on the pull request if they’re not confident
+others would agree.</p></li>
+<li><p>More important changes that impact the full project require a more
+detailed analysis and a consensus that is both explicit and informed.
+These changes require an <a class="reference internal" href="#steps"><span class="std std-ref">sktime enhancement proposal</span></a>.</p></li>
+</ul>
+<p>When no consensus can be found, the decision is escaled to <a class="reference internal" href="#stage-2"><span class="std std-ref">Stage 2: voting</span></a>.</p>
+</div>
+<div class="section" id="stage-2-voting">
+<span id="stage-2"></span><h3>Stage 2: voting<a class="headerlink" href="#stage-2-voting" title="Permalink to this headline">¶</a></h3>
+<p>When no consensus can be found, any core developer can call for a vote
+at any point during the discussion.</p>
+<ul class="simple">
+<li><p>The vote will conclude 5 days excluding weekends from the call for the vote.</p></li>
+<li><p>Votes are voluntary. Abstentions are allowed. You can
+abstain by simply not casting a vote.</p></li>
+<li><p>All votes are a binary vote: for or against accepting the proposed
+changes.</p></li>
+<li><p>Votes are casts as comments: +1 (approval) or -1 (rejection).</p></li>
+</ul>
+<p>For all types of changes, except appointments, votes take place on the
+related public issue or pull request. The winning condition is a 2/3
+majority of the votes casts by core developers including CC members. If the
+proposed change cannot gather a 2/3 majority of the votes cast by core
+developers, the decision is escalated to the <a class="reference internal" href="#stage-3"><span class="std std-ref">Stage 3: conflict resolution</span></a>.</p>
+<p>For appointments, votes take place in private communication channels
+and are anonymous. The winning conditions vary depending on the role as
+described in <a class="reference internal" href="#roles"><span class="std std-ref">Roles</span></a> above. Appointment decisions are not escalated to
+the CC. If a nomination cannot gather sufficient support, the nomination is
+rejected.</p>
+</div>
+<div class="section" id="stage-3-conflict-resolution">
+<span id="stage-3"></span><h3>Stage 3: conflict resolution<a class="headerlink" href="#stage-3-conflict-resolution" title="Permalink to this headline">¶</a></h3>
+<p>If the proposed change cannot gather a 2/3 majority of the votes cast,
+the CC tries to resolve the deadlock.</p>
+<ul class="simple">
+<li><p>The CC will use consensus seeking.</p></li>
+<li><p>If no consensus can be found within a month, the decision is made
+through a simple majority vote (with tie breaking) among the CC
+members.</p></li>
+<li><p>Any CC decision must be supported by an <a class="reference internal" href="#steps"><span class="std std-ref">sktime enhancement proposal</span></a>, which has been made public and discussed before the vote.</p></li>
+</ul>
+</div>
+<div class="section" id="sktime-enhancement-proposal">
+<span id="steps"></span><h3>sktime enhancement proposal<a class="headerlink" href="#sktime-enhancement-proposal" title="Permalink to this headline">¶</a></h3>
+<p>For all decision of the CC, an sktime enhancement proposal (STEP) must have been made
+public and discussed before the vote.</p>
+<p>An sktime enhancement proposal is a consolidated document, with a concise
+problem statement, a clear description of the proposed solution and a
+comparison with alternative solutions, as outlined in our
+<a class="reference external" href="https://github.com/sktime/enhancement-proposals/blob/master/TEMPLATE.md">template</a>.</p>
+<p>We collect and discuss proposals in sktime’s <a class="reference external" href="https://github.com/sktime/enhancement-proposals">repository for
+enhancement-proposals</a>.</p>
+</div>
+<div class="section" id="algorithm-inclusion-guidelines">
+<span id="id16"></span><h3>Algorithm inclusion guidelines<a class="headerlink" href="#algorithm-inclusion-guidelines" title="Permalink to this headline">¶</a></h3>
+<p>Curation is about how we select contributions, which criteria we use in
+order to decide which contributions to include, and in which cases we
+deprecate and remove contributions.</p>
+<p>We have the following guidelines:</p>
+<ul class="simple">
+<li><p>We only consider published algorithms which have been shown to be
+competitive in comparative benchmarking studies or practically useful
+in applied projects. A technique that provides a clear-cut
+improvement (e.g. an enhanced data structure or a more efficient
+approximation technique) on a widely-used method will also be
+considered for inclusion.</p></li>
+<li><p>From the algorithms or techniques that meet the above criteria, only
+those which fit well within the current API of sktime are accepted.
+For algorithms that do not fit well into the current API, the API
+will have to be extended first. For extending current API, see the
+<a class="reference external" href="#Decision-making">decision making process</a> for major changes.</p></li>
+<li><p>The contributor should support the importance of the proposed
+addition with research papers and/or implementations in other similar
+packages, demonstrate its usefulness via common
+use-cases/applications and corroborate performance improvements, if
+any, with benchmarks and/or plots. It is expected that the proposed
+algorithm should outperform the methods that are already implemented
+in sktime in at least some areas.</p></li>
+<li><p>We strive to consolidate existing functionality if helps to improve
+the usability and maintainability of the project. For example, when
+there are multiple techniques for the same purpose, we prefer to
+combine them into a single class and make case distinctions based on
+hyper-parameters.</p></li>
+</ul>
+<p>Note that your implementation need not be in sktime to be used together
+with sktime tools. You can implement your favorite algorithm in a sktime
+compatible way in one of <a class="reference external" href="https://github.com/sktime">our companion
+repositories</a> on GitHub. We will be happy
+to list it under <a class="reference external" href="https://github.com/alan-turing-institute/sktime/wiki/related-software">related
+software</a>.</p>
+<p>If algorithms require major dependencies, we encourage to create a
+separate companion repository. For example, for deep learning techniques
+based on TensorFlow and Keras, we have
+<a class="reference external" href="https://github.com/sktime/sktime-dl">sktime-dl</a>. For smaller
+dependencies which are limited to a few files, we encourage to use soft
+dependencies, which are only required for particular modules, but not
+for most of sktime’s functionality and not for installing sktime.</p>
+</div>
+</div>
+<div class="section" id="acknowledging-contributions">
+<span id="id17"></span><h2>Acknowledging contributions<a class="headerlink" href="#acknowledging-contributions" title="Permalink to this headline">¶</a></h2>
+<p>sktime is collaboratively developed by its diverse community of
+developers, users, educators, and other stakeholders. We value all kinds
+of contributions and are committed to recognising each of them fairly.</p>
+<p>We follow the <a class="reference external" href="https://allcontributors.org">all-contributors</a>
+specification to recognise all contributors, including those that don’t
+contribute code. Please see <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/CONTRIBUTORS.md">our list of all
+contributors</a>.</p>
+<p>If you think, we’ve missed anything, please let us know or open a PR
+with the appropriate changes to
+<a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/.all-contributorsrc">sktime/.all-contributorsrc</a>.</p>
+<p>Note that contributors do not own their contributions. sktime is an
+open-source project, and all code is contributed under <a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/master/LICENSE">our open-source
+license</a>.
+All contributors acknowledge that they have all the rights to the code
+they contribute to make it available under this license.</p>
+<p>The project belongs to the sktime community, and all parts of it are
+always considered “work in progress” so that they can evolve over time
+with newer contributions.</p>
+</div>
+<div class="section" id="outlook">
+<span id="id18"></span><h2>Outlook<a class="headerlink" href="#outlook" title="Permalink to this headline">¶</a></h2>
+<p>We are open to improvement suggestions for our governance model. Once
+the community grows more and sktime’s code base becomes more
+consolidated, we will consider the following changes:</p>
+<ul class="simple">
+<li><p>Allow for more time to discuss changes, and more time to cast vote
+when no consensus can be found,</p></li>
+<li><p>Require more positive votes (less lazy consensus) to accept changes
+during consensus seeking stage,</p></li>
+<li><p>Reduce time for maintainers to reply to issues</p></li>
+</ul>
+<p>In addition, we plan to add more roles for managing/coordinating
+specific project:</p>
+<ul class="simple">
+<li><p>Community manager (mentorship, outreach, social media, etc),</p></li>
+<li><p>Sub-councils for project-specific technical leadership (e.g.  for documentation, learning tasks, continuous integration)</p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<span id="id19"></span><h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Our governance model is inspired by various existing governance
+structures. In particular, we’d like to acknowledge:</p>
+<ul class="simple">
+<li><p>scikit-learn’s <a class="reference external" href="https://www.sktime.org/en/latest/governance.html">governance model</a></p></li>
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way">The Turing Way</a> project</p></li>
+<li><p><a class="reference external" href="https://www.jonobacon.com/books/artofcommunity/">The Art of Community</a> by Jono Bacon</p></li>
+<li><p>The <a class="reference external" href="https://www.astropy.org">astropy</a> project</p></li>
+<li><p>The <a class="reference external" href="https://nipy.org">nipy</a> project</p></li>
+<li><p>The <a class="reference external" href="https://scikit-hep.org">scikit-hep</a> project</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

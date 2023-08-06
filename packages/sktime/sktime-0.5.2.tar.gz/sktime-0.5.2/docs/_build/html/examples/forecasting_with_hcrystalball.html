@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Forecasting with HCrystalBall forecaster &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dictionary based time series classification in sktime" href="dictionary_based_classification.html" />
+    <link rel="prev" title="Loading and working with data in sktime" href="loading_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_forecasting.html">Forecasting with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_classification_univariate.html">Univariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_classification_multivariate.html">Multivariate time series classification with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_benchmarking.html">Benchmarking with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature_extraction_with_tsfresh.html">Feature extraction with tsfresh transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shapelet_transform.html">Shapelets and the Shapelet Transform with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interval_based_classification.html">Interval based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="catch22.html">The Canonical Time-series Characteristics (catch22) transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mrseql.html">Time series classification with Mr-SEQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocket.html">Demo of ROCKET transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plateau_finder.html">Demo of the PlateauFinder transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_data.html">Loading and working with data in sktime</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Forecasting with HCrystalBall forecaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Usage-in-sktime">Usage in sktime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Main-Functionality">Main Functionality</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#HolidayTransformer">HolidayTransformer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#SeasonalityTransformer">SeasonalityTransformer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ProphetWrapper">ProphetWrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#StackingEnsemble">StackingEnsemble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#SklearnWrapper">SklearnWrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#TBATSWrapper">TBATSWrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Performance">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary_based_classification.html">Dictionary based time series classification in sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html">Time series interpolating with sktime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation.html#Now-the-interpolator-enters">Now the interpolator enters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Forecasting with HCrystalBall forecaster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/alan-turing-institute/sktime/v0.5.3?filepath=examples/forecasting_with_hcrystalball.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="Forecasting-with-HCrystalBall-forecaster">
+<h1>Forecasting with HCrystalBall forecaster<a class="headerlink" href="#Forecasting-with-HCrystalBall-forecaster" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows, how to use <a class="reference external" href="https://github.com/heidelbergcement/hcrystalball">HCrystalBall</a>’s compliant estimator within <code class="docutils literal notranslate"><span class="pre">sktime</span></code> eco-system for the time-series forecasting.</p>
+<p>There is an existing <a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/">documentation</a> containing full set of features (also with <a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/examples/02_tutorial.html">tutorial</a>), so the main goal of this notebook is highlighting differences and additions to <code class="docutils literal notranslate"><span class="pre">sktime</span></code> possibilites.</p>
+<div class="section" id="Setup">
+<h2>Setup<a class="headerlink" href="#Setup" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">hcrystalball</span></code> is a soft dependency, that you would need to install with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">hcrystalball</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">hcrystalball</span></code></p>
+</div>
+<div class="section" id="Usage-in-sktime">
+<h2>Usage in sktime<a class="headerlink" href="#Usage-in-sktime" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">simplefilter</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sktime.datasets</span> <span class="kn">import</span> <span class="n">load_airline</span>
+<span class="kn">from</span> <span class="nn">sktime.forecasting.model_selection</span> <span class="kn">import</span> <span class="n">temporal_train_test_split</span>
+<span class="kn">from</span> <span class="nn">sktime.performance_metrics.forecasting</span> <span class="kn">import</span> <span class="n">smape_loss</span>
+<span class="kn">from</span> <span class="nn">sktime.utils.plotting</span> <span class="kn">import</span> <span class="n">plot_series</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">load_airline</span><span class="p">()</span>
+<span class="c1"># our HCrystalball wrapper currently only supports pd.DatetimeIndex types</span>
+<span class="n">y</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+<span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">temporal_train_test_split</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+108 36
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">hcrystalball.ensemble</span> <span class="kn">import</span> <span class="n">SimpleEnsemble</span>
+<span class="kn">from</span> <span class="nn">hcrystalball.wrappers</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ExponentialSmoothingWrapper</span><span class="p">,</span>
+    <span class="n">SarimaxWrapper</span><span class="p">,</span>
+    <span class="n">get_sklearn_wrapper</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">ElasticNet</span>
+
+<span class="kn">from</span> <span class="nn">sktime.forecasting.hcrystalball</span> <span class="kn">import</span> <span class="n">HCrystalBallForecaster</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;sarimax&quot;</span><span class="p">:</span> <span class="n">SarimaxWrapper</span><span class="p">(</span><span class="n">init_with_autoarima</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoarima_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">}),</span>
+    <span class="s2">&quot;smoothing&quot;</span><span class="p">:</span> <span class="n">ExponentialSmoothingWrapper</span><span class="p">(</span>
+        <span class="n">trend</span><span class="o">=</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="s2">&quot;multiplicative&quot;</span><span class="p">,</span> <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">12</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;sklearn_linear&quot;</span><span class="p">:</span> <span class="n">get_sklearn_wrapper</span><span class="p">(</span><span class="n">ElasticNet</span><span class="p">),</span>
+    <span class="s2">&quot;sklearn_forest&quot;</span><span class="p">:</span> <span class="n">get_sklearn_wrapper</span><span class="p">(</span><span class="n">RandomForestRegressor</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span>
+    <span class="s2">&quot;avg_ensemble&quot;</span><span class="p">:</span> <span class="n">SimpleEnsemble</span><span class="p">(</span>
+        <span class="n">base_learners</span><span class="o">=</span><span class="p">[</span>
+            <span class="n">get_sklearn_wrapper</span><span class="p">(</span><span class="n">ElasticNet</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sklearn_linear&quot;</span><span class="p">),</span>
+            <span class="n">ExponentialSmoothingWrapper</span><span class="p">(</span>
+                <span class="n">trend</span><span class="o">=</span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+                <span class="n">seasonal</span><span class="o">=</span><span class="s2">&quot;multiplicative&quot;</span><span class="p">,</span>
+                <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;smoothing&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">],</span>
+        <span class="n">ensemble_func</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># from hcrystalball.feature_extraction import HolidayTransformer, SeasonalityTransformer</span>
+<span class="c1"># from hcrystalball.wrappers import ProphetWrapper</span>
+
+<span class="c1"># other_models = {</span>
+<span class="c1">#     # needs fbprophet with its dependencies installed</span>
+<span class="c1">#     &quot;prophet&quot;: ProphetWrapper(),</span>
+<span class="c1">#     # works only with daily data frequency</span>
+<span class="c1">#     &quot;sklearn_forest_holiday&quot;: Pipeline(</span>
+<span class="c1">#         [</span>
+<span class="c1">#             (&quot;seasonality&quot;, SeasonalityTransformer(freq=&quot;M&quot;)),</span>
+<span class="c1">#             (</span>
+<span class="c1">#                 &quot;holiday&quot;,</span>
+<span class="c1">#                 HolidayTransformer(</span>
+<span class="c1">#                     country_code=&quot;DE&quot;, days_before=2, days_after=1, bridge_days=True</span>
+<span class="c1">#                 ),</span>
+<span class="c1">#             )(&quot;model&quot;, get_sklearn_wrapper(RandomForestRegressor)),</span>
+<span class="c1">#         ]</span>
+<span class="c1">#     ),</span>
+<span class="c1"># }</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">forecaster</span> <span class="o">=</span> <span class="n">HCrystalBallForecaster</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="c1"># if provided in the data, exogenous variables are supported over X_train, X_pred</span>
+    <span class="n">forecaster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+    <span class="n">plot_series</span><span class="p">(</span>
+        <span class="n">y_train</span><span class="p">,</span>
+        <span class="n">y_test</span><span class="p">,</span>
+        <span class="n">y_pred</span><span class="p">,</span>
+        <span class="n">labels</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;y_train&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;y_test&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;y_pred_</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">[smape_loss:</span><span class="si">{</span><span class="n">smape_loss</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span><span class="si">:</span><span class="s2">.3</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_forecasting_with_hcrystalball_10_0.png" src="../_images/examples_forecasting_with_hcrystalball_10_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_forecasting_with_hcrystalball_10_1.png" src="../_images/examples_forecasting_with_hcrystalball_10_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_forecasting_with_hcrystalball_10_2.png" src="../_images/examples_forecasting_with_hcrystalball_10_2.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_forecasting_with_hcrystalball_10_3.png" src="../_images/examples_forecasting_with_hcrystalball_10_3.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_forecasting_with_hcrystalball_10_4.png" src="../_images/examples_forecasting_with_hcrystalball_10_4.png" />
+</div>
+</div>
+<p><em>Note: As we see, the ``RandomForestRegressor`` does not cope well with trended data (cannot predict value from before unseen range). Adding detrender and other features might be used here.</em></p>
+</div>
+<div class="section" id="Main-Functionality">
+<h2>Main Functionality<a class="headerlink" href="#Main-Functionality" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="HolidayTransformer">
+<h3>HolidayTransformer<a class="headerlink" href="#HolidayTransformer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>create feature for <strong>holidays</strong> given county ISO code (optionally also region, e.g. DE-NW) from the <strong>day</strong> (data need to have <strong>daily frequency</strong>)</p></li>
+<li><p>allows simple modelling of <strong>before and after holidays effects</strong> (use-case: “Our company does not sell much in the <strong>Christmas time period</strong>”)</p></li>
+<li><p>allows usage of <strong>multiple holiday codes</strong> (use-case: “Our company is located at the borders, having sales influenced by holidays in <strong>Germany and France</strong>”)</p></li>
+<li><p><a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/examples/tutorial/wrappers/04_seasonalities_and_holidays.html">see examples</a></p></li>
+</ul>
+</div>
+<div class="section" id="SeasonalityTransformer">
+<h3>SeasonalityTransformer<a class="headerlink" href="#SeasonalityTransformer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>create features for day of the week and similar</p></li>
+<li><p>can be automatically inferred from the data frequency</p></li>
+</ul>
+</div>
+<div class="section" id="ProphetWrapper">
+<h3>ProphetWrapper<a class="headerlink" href="#ProphetWrapper" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>wrapper for <a class="reference external" href="https://facebook.github.io/prophet/">fbprophet</a> library</p></li>
+<li><p><a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/examples/tutorial/wrappers/06_advanced_prophet.html">learn more on the usage</a></p></li>
+</ul>
+<blockquote>
+<div><p><em>Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing data and shifts in the trend, and typically handles outliers well.</em></p>
+<p><em>Taylor SJ, Letham B. 2017.</em><a class="reference external" href="https://doi.org/10.7287/peerj.preprints.3190v2">Forecasting at scale</a><em>. PeerJ Preprints 5:e3190v2 https://doi.org/10.7287/peerj.preprints.3190v2</em></p>
+</div></blockquote>
+</div>
+<div class="section" id="StackingEnsemble">
+<h3>StackingEnsemble<a class="headerlink" href="#StackingEnsemble" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>own implementation of stacked ensemble</p></li>
+<li><p>meta model allows for having (apart from predictions from base models) features for weekday and horizon</p></li>
+<li><p>(use-case: <strong>exponential smoothing is better in modelling short horizon, while sklearn for long ones, meta model might pick that information</strong>)</p></li>
+<li><p><a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/examples/tutorial/wrappers/08_ensembles.html#Stacking-Ensembles">learn more</a></p></li>
+</ul>
+</div>
+<div class="section" id="SklearnWrapper">
+<h3>SklearnWrapper<a class="headerlink" href="#SklearnWrapper" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>own implementation of sklearn compatible regressors -&gt; to time-series forecasters</p></li>
+<li><p>uses lags depending on the forecasting horizon, that needs to be know already at the fitting time</p></li>
+<li><p><a class="reference external" href="https://hcrystalball.readthedocs.io/en/latest/examples/tutorial/wrappers/02_ar_modelling_in_sklearn.html">learn more</a></p></li>
+</ul>
+</div>
+<div class="section" id="TBATSWrapper">
+<h3>TBATSWrapper<a class="headerlink" href="#TBATSWrapper" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>wrapper for <a class="reference external" href="https://github.com/intive-DataScience/tbats">tbats</a> library</p></li>
+<li><p>python implementation of methods for complex seasonal patterns</p></li>
+</ul>
+<blockquote>
+<div><p><em>De Livera, A.M., Hyndman, R.J., &amp; Snyder, R. D. (2011), Forecasting time series with complex seasonal patterns using exponential sm_oothing, Journal of the American Statistical Association, 106(496), 1513-1527.</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="Performance">
+<h2>Performance<a class="headerlink" href="#Performance" title="Permalink to this headline">¶</a></h2>
+<p>Depending on the dataset (frequency, additonal features, trend, seasonality, …), there are certain things that (dis)allow for usage of different techinques. Take a look at the <a class="reference external" href="(https://hcrystalball.readthedocs.io/en/latest/examples/02_tutorial.html)">HCrystalBall docs</a> to see performance on the <strong>daily data</strong> with <strong>exogenous variables</strong> and <strong>holiday</strong> information (domain HCrystalBall was mainly developed against)</p>
+</div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>. The Jupyter notebook can be found <a class="reference external" href="https://github.com/alan-turing-institute/sktime/tree/v0.5.3/examples/forecasting_with_hcrystalball.ipynb">here</a>.</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

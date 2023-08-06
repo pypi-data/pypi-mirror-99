@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Prophet &mdash; sktime  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/fields.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/sktime-favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> sktime
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Development Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentorship Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_of_conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../governance.html">Governance</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_software.html">Related Software</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">sktime</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Prophet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="prophet">
+<h1>Prophet<a class="headerlink" href="#prophet" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="sktime.forecasting.fbprophet.Prophet">
+<em class="property">class </em><code class="sig-prename descclassname">sktime.forecasting.fbprophet.</code><code class="sig-name descname">Prophet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">freq</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_seasonality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_country_holidays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">growth</span><span class="o">=</span><span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">changepoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_changepoints</span><span class="o">=</span><span class="default_value">25</span></em>, <em class="sig-param"><span class="n">changepoint_range</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">yearly_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">weekly_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">daily_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">holidays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seasonality_mode</span><span class="o">=</span><span class="default_value">'additive'</span></em>, <em class="sig-param"><span class="n">seasonality_prior_scale</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">holidays_prior_scale</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">changepoint_prior_scale</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">mcmc_samples</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">uncertainty_samples</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">stan_backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/fbprophet.py#L15-L160"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.fbprophet.Prophet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prophet forecaster by wrapping fbprophet.
+:param freq: <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html</a></p>
+<blockquote>
+<div><p>#timeseries-offset-aliases</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>add_seasonality</strong> (<em>Dict with args for Prophet.add_seasonality</em><em>(</em><em>)</em><em></em>) – <dl class="simple">
+<dt>Dict can have the following keys/values:</dt><dd><p>name: string name of the seasonality component.
+period: float number of days in one period.
+fourier_order: int number of Fourier components to use.
+prior_scale: optional float prior scale for this component.
+mode: optional ‘additive’ or ‘multiplicative’
+condition_name: string name of the seasonality condition.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>add_country_holidays</strong> (<em>Dict with args for Prophet.add_country_holidays</em><em>(</em><em>)</em><em></em>) – <dl class="simple">
+<dt>Dict can have the following keys/values:</dt><dd><p>country_name: Name of the country, like ‘UnitedStates’ or ‘US’</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>growth</strong> (<em>String 'linear'</em><em> or </em><em>'logistic' to specify a linear</em><em> or </em><em>logistic</em>) – trend.</p></li>
+<li><p><strong>changepoints</strong> (<em>List of dates at which to include potential changepoints. If</em>) – not specified, potential changepoints are selected automatically.</p></li>
+<li><p><strong>n_changepoints</strong> (<em>Number of potential changepoints to include. Not used</em>) – if input <cite>changepoints</cite> is supplied. If <cite>changepoints</cite> is not supplied,
+then n_changepoints potential changepoints are selected uniformly from
+the first <cite>changepoint_range</cite> proportion of the history.</p></li>
+<li><p><strong>changepoint_range</strong> (<em>Proportion of history in which trend changepoints will</em>) – be estimated. Defaults to 0.8 for the first 80%. Not used if
+<cite>changepoints</cite> is specified.</p></li>
+<li><p><strong>yearly_seasonality</strong> (<em>Fit yearly seasonality.</em>) – Can be ‘auto’, True, False, or a number of Fourier terms to generate.</p></li>
+<li><p><strong>weekly_seasonality</strong> (<em>Fit weekly seasonality.</em>) – Can be ‘auto’, True, False, or a number of Fourier terms to generate.</p></li>
+<li><p><strong>daily_seasonality</strong> (<em>Fit daily seasonality.</em>) – Can be ‘auto’, True, False, or a number of Fourier terms to generate.</p></li>
+<li><p><strong>holidays</strong> (<em>pd.DataFrame with columns holiday</em><em> (</em><em>string</em><em>) </em><em>and ds</em><em> (</em><em>date type</em><em>)</em>) – and optionally columns lower_window and upper_window which specify a
+range of days around the date to be included as holidays.
+lower_window=-2 will include 2 days prior to the date as holidays. Also
+optionally can have a column prior_scale specifying the prior scale for
+that holiday.</p></li>
+<li><p><strong>seasonality_mode</strong> (<em>'additive'</em><em> (</em><em>default</em><em>) or </em><em>'multiplicative'.</em>) – </p></li>
+<li><p><strong>seasonality_prior_scale</strong> (<em>Parameter modulating the strength of the</em>) – seasonality model. Larger values allow the model to fit larger seasonal
+fluctuations, smaller values dampen the seasonality. Can be specified
+for individual seasonalities using add_seasonality.</p></li>
+<li><p><strong>holidays_prior_scale</strong> (<em>Parameter modulating the strength of the holiday</em>) – components model, unless overridden in the holidays input.</p></li>
+<li><p><strong>changepoint_prior_scale</strong> (<em>Parameter modulating the flexibility of the</em>) – automatic changepoint selection. Large values will allow many
+changepoints, small values will allow few changepoints.</p></li>
+<li><p><strong>mcmc_samples</strong> (<em>Integer</em><em>, </em><em>if greater than 0</em><em>, </em><em>will do full Bayesian inference</em>) – with the specified number of MCMC samples. If 0, will do MAP
+estimation.</p></li>
+<li><p><strong>alpha</strong> (<em>Float</em><em>, </em><em>width of the uncertainty intervals provided</em>) – for the forecast. If mcmc_samples=0, this will be only the uncertainty
+in the trend using the MAP estimate of the extrapolated generative
+model. If mcmc.samples&gt;0, this will be integrated over all model
+parameters, which will include uncertainty in seasonality.</p></li>
+<li><p><strong>uncertainty_samples</strong> (<em>Number of simulated draws used to estimate</em>) – uncertainty intervals. Settings this value to 0 or False will disable
+uncertainty estimation and speed up the calculation.</p></li>
+<li><p><strong>stan_backend</strong> (<em>str as defined in StanBackendEnum default: None - will try to</em>) – iterate over all available backends and find the working one</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p><a class="reference external" href="https://facebook.github.io/prophet">https://facebook.github.io/prophet</a>
+<a class="reference external" href="https://github.com/facebook/prophet">https://github.com/facebook/prophet</a></p>
+<dl class="py method">
+<dt id="sktime.forecasting.fbprophet.Prophet.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">freq</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_seasonality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_country_holidays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">growth</span><span class="o">=</span><span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">changepoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_changepoints</span><span class="o">=</span><span class="default_value">25</span></em>, <em class="sig-param"><span class="n">changepoint_range</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">yearly_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">weekly_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">daily_seasonality</span><span class="o">=</span><span class="default_value">'auto'</span></em>, <em class="sig-param"><span class="n">holidays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seasonality_mode</span><span class="o">=</span><span class="default_value">'additive'</span></em>, <em class="sig-param"><span class="n">seasonality_prior_scale</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">holidays_prior_scale</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">changepoint_prior_scale</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">mcmc_samples</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">uncertainty_samples</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">stan_backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/alan-turing-institute/sktime/blob/v0.5.3/sktime/forecasting/fbprophet.py#L87-L139"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sktime.forecasting.fbprophet.Prophet.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019 - 2020 (BSD-3-Clause License)
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
