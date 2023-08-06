@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <ul>
+  {% for course in courses %}
+  <li><a href="{% url 'checker:new_course_view' course %}">{{ course.uid }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
