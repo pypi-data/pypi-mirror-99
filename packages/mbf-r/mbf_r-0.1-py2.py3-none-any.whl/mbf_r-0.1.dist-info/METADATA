@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mbf-r
+Version: 0.1
+Summary: R interface code
+Home-page: https://github.com/TyberiusPrime/mbf_r
+Author: Florian Finkernagel
+Author-email: finkernagel@imt.uni-marburg.de
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: doc
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-bootstrap-theme ; extra == 'doc'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-icdiff ; extra == 'testing'
+Requires-Dist: requests-mock ; extra == 'testing'
+
+# mbf_r
+
+
+Python to R glue code
+
+Part of the mbf_* suite from https://github.com/IMTMarburg
+
+
