@@ -1,0 +1,8 @@
+README.md
+releasemon
+setup.py
+releasemon.egg-info/PKG-INFO
+releasemon.egg-info/SOURCES.txt
+releasemon.egg-info/dependency_links.txt
+releasemon.egg-info/requires.txt
+releasemon.egg-info/top_level.txt

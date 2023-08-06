@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: releasemon
+Version: 1.0.0
+Summary: Supervisor plugin to watch a build version file and restart programs on update
+Home-page: https://github.com/blueworldmedia/releasemon
+Author: James Cundle
+Author-email: james@blueworldmedia.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
