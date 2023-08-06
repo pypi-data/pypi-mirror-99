@@ -1,0 +1,4 @@
+include *.py
+global-exclude *.pyc
+recursive-include pyramid_sqlassist *.py *.dbtmako
+recursive-include tests *.py *.mako
