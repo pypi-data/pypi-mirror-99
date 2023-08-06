@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: system-slash
+Version: 0.0.2
+Summary: It will find operating system and then generate slash as per system required.
+Home-page: https://github.com/sujitmandal/system-slash
+Author: Sujit Mandal
+Author-email: mandals974@gmail.com
+License: MIT
+Description: ## system-slash
+        [![Build Status](https://travis-ci.org/sujitmandal/system-slash.svg?branch=main)](https://travis-ci.org/sujitmandal/system-slash)[![GitHub license](https://img.shields.io/github/license/sujitmandal/system-slash)](https://github.com/sujitmandal/system-slash/blob/main/LICENSE)
+        
+        
+        It will find operating system and then generate slash as per system required.
+        
+        
+        ## Package Installation :
+        
+        ```
+        pip install system-slash
+        ```
+        [Package Link](https://pypi.org/project/system-slash/)
+        
+        
+        ## How to import the module:
+        ```
+        from SystemSlash.SystemSlash import slash
+        
+        system = slash()
+        
+        print(system)
+        ```
+        
+        
+        
+        ## License:
+        MIT Licensed
+        
+        ## Author:
+        Sujit Mandal
+        
+        [GitHub](https://github.com/sujitmandal)
+        
+        [PyPi](https://pypi.org/user/sujitmandal/)
+        
+        [LinkedIn](https://www.linkedin.com/in/sujit-mandal-91215013a/)
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
