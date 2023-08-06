@@ -1,0 +1,9 @@
+{% block form_fields %}
+  {% for field in form %}
+    <div>
+      {{ field.label() }}
+      {{ field() }}
+    </div>
+    <br />
+  {% endfor %}
+{% endblock form_fields %}
