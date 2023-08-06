@@ -1,0 +1,5 @@
+simplebot>=1.0.1
+howdoi>=2.0.14
+
+[test]
+pytest>=6.1.2
