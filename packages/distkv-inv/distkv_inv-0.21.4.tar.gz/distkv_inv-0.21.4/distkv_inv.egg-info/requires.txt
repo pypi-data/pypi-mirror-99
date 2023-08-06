@@ -1,0 +1,2 @@
+distkv>=0.55
+netifaces
