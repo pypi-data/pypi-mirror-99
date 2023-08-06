@@ -1,0 +1,9 @@
+PyYAML
+boto3>=1.17.33
+botocore>=1.20.33
+click>=1.2.2
+clickclick>=0.10
+pyperclip
+requests
+sshpubkeys>=3.1.0
+stups-zign>=1.1.26
