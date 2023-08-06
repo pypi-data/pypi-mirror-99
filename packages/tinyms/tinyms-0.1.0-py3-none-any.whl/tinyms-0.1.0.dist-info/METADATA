@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: tinyms
+Version: 0.1.0
+Summary: TinyMS is an Easy-to-Use deep learning development toolkit.
+Home-page: https://tinyms.readthedocs.io/en/latest/
+Author: The TinyMS Authors
+Author-email: wanghui71leon@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/tinyms-ai/tinyms/tags
+Project-URL: Sources, https://github.com/tinyms-ai/tinyms
+Project-URL: Issue Tracker, https://github.com/tinyms-ai/tinyms/issues
+Keywords: machine learning toolkit
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: easydict (>=1.9)
+Requires-Dist: scipy (>=1.5.3)
+Requires-Dist: mindspore (==1.1.1)
+Requires-Dist: matplotlib (>=3.1.1)
+Requires-Dist: Pillow (>=6.2.0)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: flask (>=1.1.1)
+Requires-Dist: wheel (>=0.32.0)
+Requires-Dist: setuptools (>=40.8.0)
+
+# TinyMS
+
+[![Pypi](https://img.shields.io/pypi/v/tinyms.svg)](https://pypi.org/project/tinyms)
+[![Python](https://img.shields.io/pypi/pyversions/tinyms.svg)](https://pypi.org/project/tinyms)
+[![Build Status](https://travis-ci.org/tinyms-ai/tinyms.svg?branch=main)](https://travis-ci.org/tinyms-ai/tinyms)
+[![Documentation Status](https://readthedocs.org/projects/tinyms/badge/?versoin=latest)](https://readthedocs.org/projects/tinyms)
+[![Releases](https://img.shields.io/github/release/tinyms-ai/tinyms/all.svg?style=flat-square)](https://github.com/tinyms-ai/tinyms/releases)
+[![LICENSE](https://img.shields.io/github/license/tinyms-ai/tinyms.svg?style=flat-square)](https://github.com/tinyms-ai/tinyms/blob/main/LICENSE)
+
+English | [查看中文](./README_CN.md)
+
+TinyMS is an Easy-to-Use deep learning development toolkit based on [MindSpore](https://www.mindspore.cn/en/), designed to providing quick-start guidelines for machine learning beginners.
+
+## Installation
+
+Please checkout the [install document](https://tinyms.readthedocs.io/en/latest/quickstart/install.html) to quickly install or upgrade TinyMS project.
+
+## Quick start
+
+Have no idea what to do with TinyMS❓ See the [Quick Start](https://tinyms.readthedocs.io/en/latest/quickstart/quickstart_in_one_minute.html) to implement the image classification application in one minutes❗
+
+Besides, here are some use cases listed to demonstrate how TinyMS simplifies the code flow for users.
+
+### Data loading and preprocess
+
+<table>
+<tr>
+<td>
+
+```python
+from tinyms.data import MnistDataset, download_dataset
+from tinyms.vision import mnist_transform
+
+data_path = download_dataset('mnist')
+mnist_ds = MnistDataset(data_path, shuffle=True)
+mnist_ds = mnist_transform.apply_ds(mnist_ds)
+```
+
+</td>
+</tr>
+</table>
+
+### Network construction
+
+<table>
+<tr>
+<td>
+
+```python
+from tinyms.model import lenet5
+
+net = lenet5(class_num=10)
+```
+
+</td>
+</tr>
+</table>
+
+### Model train/evaluation
+
+<table>
+<tr>
+<td>
+
+```python
+from tinyms.model import Model
+
+model = Model(net)
+model.compile(loss_fn=net_loss, optimizer=net_opt, metrics=net_metrics)
+model.train(epoch_size, train_dataset)
+model.save_checkpoint('./checkpoint_lenet.ckpt')
+···
+model.load_checkpoint('./checkpoint_lenet.ckpt')
+model.eval(eval_dataset)
+```
+
+</td>
+</tr>
+</table>
+
+### Model prediction
+
+<table>
+<tr>
+<td>
+
+```python
+from PIL import Image
+import tinyms as ts
+from tinyms.model import Model, lenet5
+from tinyms.vision import mnist_transform
+
+img = Image.open(img_path)
+img = mnist_transform(img)
+
+net = lenet5(class_num=10)
+model = Model(net)
+model.load_checkpoint('./checkpoint_lenet.ckpt')
+
+input = ts.expand_dims(ts.array(img), 0)
+res = model.predict(input).asnumpy()
+print("The label is:", mnist_transform.postprocess(res))
+```
+
+</td>
+</tr>
+</table>
+
+## API documentation
+
+If you are interested in learning TinyMS API, please find TinyMS Python API in [API Documentation](https://tinyms.readthedocs.io/en/latest/tinyms/tinyms.html).
+
+## Community
+
+For any developers who are not familiar with how TinyMS community works, please find the [Contributing Guidelines](https://tinyms.readthedocs.io/en/latest/community/contributing.html) to get started.
+
+## Release Notes
+
+The release notes, see our [RELEASE](https://github.com/tinyms-ai/tinyms/blob/main/RELEASE.md).
+
+## License
+
+This work is licensed under [Apache License 2.0](https://github.com/tinyms-ai/tinyms/blob/main/LICENSE).
+
+
