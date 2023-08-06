@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: SFLvault-client
+Version: 0.9.2
+Summary: Networked credentials store and authentication manager - Client
+Home-page: https://www.sflvault.org
+Author: Savoir-faire Linux
+Author-email: contact@savoirfairelinux.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: SFLvault-common (~=0.9)
+Requires-Dist: keyring (~=1.6)
+Requires-Dist: pycrypto
+Requires-Dist: decorator
+Requires-Dist: urwid (>=0.9.8.1)
+Requires-Dist: pexpect (>=2.5)
+
+UNKNOWN
+
+
