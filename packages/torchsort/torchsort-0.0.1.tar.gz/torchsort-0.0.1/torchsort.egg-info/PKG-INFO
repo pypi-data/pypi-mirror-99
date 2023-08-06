@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: torchsort
+Version: 0.0.1
+Summary: Differentiable sorting and ranking in PyTorch
+Home-page: https://github.com/teddykoker/torchsort
+Author: Teddy Koker
+License: Apache
+Description: # Torchsort
+        
+        Pure PyTorch implementation of [Fast Differentiable Sorting and
+        Ranking](https://arxiv.org/abs/2002.08871) (Blondel et al.). Much of the code is
+        copied from the original Numpy implementation at
+        [google-research/fast-soft-sort](https://github.com/google-research/fast-soft-sort),
+        with the Isotonic regression solver rewritten as a PyTorch C++ Extension.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: testing
