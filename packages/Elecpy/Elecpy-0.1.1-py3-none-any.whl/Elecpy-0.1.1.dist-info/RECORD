@@ -1,0 +1,17 @@
+Elecpy/Backup.py,sha256=RPucG7akyBbEzlZGNRXQaFKnF0ZsTMEw9-9RhUbq_9E,4155
+Elecpy/Calculation.py,sha256=xcc1S08r4BRl8gvnqwZ8QuIz89II7xym-ySWCd4HcN8,53093
+Elecpy/Default.py,sha256=4psDnOVGGhLsWYEwVlSxk6S57wiudXGcrQzfVo2nW2Y,10331
+Elecpy/Diagram.py,sha256=oVUS8x7gy4cmZnVgLLMi0mfMXlB4gkky08mv-PxemRU,41858
+Elecpy/File.py,sha256=xGDaGkoDGdLi5BZvjNHDMrC--zWxWvWmQISCCxUsMyI,9139
+Elecpy/Formula.py,sha256=on6HTRP5KWd9bWKXp-5raRaF2hy8sukQU-lq9wOlO_o,2561
+Elecpy/GUIElements.py,sha256=dFA73xp96uoTWalDI3UZ64TqVurPCv_dtQvRH5P6lZI,62467
+Elecpy/Graph.py,sha256=9u_vRx5sgCDzwq11Qmajk--jzMhnCFJP8hJ6Wfo6k9s,123955
+Elecpy/Platform.py,sha256=YFYDf_YNkYmX2TO7uluOMx___BPGnaUQn92xlULFlNQ,153009
+Elecpy/Templates.py,sha256=S_1ZdwFAkdPmZM1f1Oc5GZC2vwAnHhor1Qx7R2Y9fOU,84678
+Elecpy/Test.py,sha256=p6pcQ3dp0N9JpPIhhRyRJ-iiYgWzD_KNmI4zsk58J-I,355
+Elecpy/Tools.py,sha256=3G4LLdBKvGXfJt3gzVV2FjVhlVTibBk2HcldnsvLKn4,7707
+Elecpy/__init__.py,sha256=6ofoXLVUwO5FZtOtAZYhp-k8M2uyfV7fqOtsU0qlXHY,652
+Elecpy-0.1.1.dist-info/METADATA,sha256=jESJEXsu46S9nSzci_yIf0AfqIQL2irjXR68GkL2zYY,1187
+Elecpy-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Elecpy-0.1.1.dist-info/top_level.txt,sha256=WAanwmB_A30lrTpDf-ia8dtdeUZuNB2Jzpf2aholuGU,7
+Elecpy-0.1.1.dist-info/RECORD,,

@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: Elecpy
+Version: 0.1.1
+Summary: Used for electric analysis
+Home-page: https://github.com/pypa/sampleproject
+Author: Ai Qingyao
+Author-email: Aiqy2021@163.com
+License: GNU General Public License v3 (GPLv3)
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires: Numpy
+Requires: Matplotlib
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Elecpy(Electric python)
+Elecpy project is used for electric simulation.
+
+It has multipurpose:	
+   *assist the students of electric engineering major and other similar majors to learn the courses.
+   *assist the teachers of electric engineering major and other similar majors to tearch the courses.
+   *assist the researchers solve paractical problems through simulation.
+
+
