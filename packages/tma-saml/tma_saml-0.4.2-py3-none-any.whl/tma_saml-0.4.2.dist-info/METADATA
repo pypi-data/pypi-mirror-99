@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tma-saml
+Version: 0.4.2
+Summary: TMA SAML processing package
+Home-page: https://git.data.amsterdam.nl/datapunt/tma_saml
+Author: DataPunt
+Author-email: datapunt.ois@amsterdam.nl
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Flask (>=1.1.1)
+Requires-Dist: lxml (>=4.3.4)
+Requires-Dist: python-dateutil
+Requires-Dist: signxml (>=2.6.0)
+
+UNKNOWN
+
+
