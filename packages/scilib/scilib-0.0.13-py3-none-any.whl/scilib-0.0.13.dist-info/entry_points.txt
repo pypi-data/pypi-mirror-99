@@ -1,0 +1,4 @@
+[console_scripts]
+scilib-gender-benchmark=scilib.gender.benchmark.benchmark:run
+scilib-wos-import=scilib.scripts.wos_import:run
+
