@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: apkleaks
+Version: 2.2.0
+Summary: Scanning APK file for URIs, endpoints & secrets.
+Home-page: https://github.com/dwisiswant0/apkleaks/
+Author: dwisiswant0
+Author-email: me@dw1.io
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: English
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
