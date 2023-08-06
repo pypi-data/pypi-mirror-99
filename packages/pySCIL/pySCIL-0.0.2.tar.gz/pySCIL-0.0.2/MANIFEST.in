@@ -1,0 +1,2 @@
+include scil/stanford-postagger-full-2015-04-20/*
+include scil/emotive_words.pickle
