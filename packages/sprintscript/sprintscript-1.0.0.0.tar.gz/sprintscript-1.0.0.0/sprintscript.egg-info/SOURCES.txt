@@ -1,0 +1,8 @@
+README.md
+setup.py
+./run
+sprintscript.egg-info/PKG-INFO
+sprintscript.egg-info/SOURCES.txt
+sprintscript.egg-info/dependency_links.txt
+sprintscript.egg-info/requires.txt
+sprintscript.egg-info/top_level.txt
