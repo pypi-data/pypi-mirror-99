@@ -1,0 +1,8 @@
+Qt.py
+tpDcc-core
+
+[dev]
+wheel
+
+[test]
+pytest
