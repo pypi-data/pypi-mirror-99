@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements-setup.txt
+requirements.txt
+setup.py
+rei/__init__.py
+rei.egg-info/PKG-INFO
+rei.egg-info/SOURCES.txt
+rei.egg-info/dependency_links.txt
+rei.egg-info/not-zip-safe
+rei.egg-info/top_level.txt
+src/main.cpp
