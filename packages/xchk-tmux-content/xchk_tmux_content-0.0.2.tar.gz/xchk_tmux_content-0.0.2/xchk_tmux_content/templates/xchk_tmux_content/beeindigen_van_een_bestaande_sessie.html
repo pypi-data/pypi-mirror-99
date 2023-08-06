@@ -1,0 +1,14 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>
+<code>tmux kill-session -t <sessienaam></code><ul>
+<li>kan ook met niet-named sessions, hebben automatisch index gekregen</li>
+</ul>
+</li>
+<li>kan ook zonder <code>-t</code> binnenin de sessie</li>
+</ul>
+
+{% endblock course_content %}

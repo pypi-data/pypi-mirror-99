@@ -1,0 +1,24 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>
+kan verschillende stukjes info op status line plaatsen door template variabelen in te vullen<ul>
+<li>bv. <code>#H</code> voor local hostname</li>
+<li>
+<code>#(shell-command)</code> voor de eerste regel uitvoer van een command<ul>
+<li>kan bv. battery life of gebruik van resources tonen...</li>
+</ul>
+</li>
+<li>
+attributen kunnen aangepast worden via <code>#[]</code><ul>
+<li>bv. <code>set -g status-right "#[fg=red]#T"</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>er is een ingesteld interval om deze waarden te refreshen, dus shell commands,... voeren telkens opnieuw uit</li>
+</ul>
+
+{% endblock course_content %}

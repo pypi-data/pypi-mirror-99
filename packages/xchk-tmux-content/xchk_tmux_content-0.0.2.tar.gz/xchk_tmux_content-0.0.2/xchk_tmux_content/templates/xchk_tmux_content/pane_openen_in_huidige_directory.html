@@ -1,0 +1,11 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>default: pane opent op plaats waar tmux gestart is</li>
+<li>vaak nuttig: na navigeren naar andere directory extra pane in die directory aanmaken</li>
+<li>can door <code>split-window</code> op te roepen met optie <code>-c "#{pane_current_path}"</code></li>
+</ul>
+
+{% endblock course_content %}

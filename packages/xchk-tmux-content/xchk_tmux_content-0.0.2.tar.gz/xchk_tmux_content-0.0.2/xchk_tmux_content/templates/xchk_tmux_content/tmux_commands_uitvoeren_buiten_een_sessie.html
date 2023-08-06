@@ -1,0 +1,20 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>mogelijk te werken in een sessie zonder in die sessie te zitten</li>
+<li>
+voorbeelden:<ul>
+<li><code>tmux split-window -h -t ...</code></li>
+<li>
+<code>tmux send-keys -t ... <keys></code><ul>
+<li><code>enter</code> sturen: <code>C-m</code> (hoofdletter <code>C</code>, dus ctrl)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>toepassing: een bash script maken dat een sessie opzet</li>
+</ul>
+
+{% endblock course_content %}

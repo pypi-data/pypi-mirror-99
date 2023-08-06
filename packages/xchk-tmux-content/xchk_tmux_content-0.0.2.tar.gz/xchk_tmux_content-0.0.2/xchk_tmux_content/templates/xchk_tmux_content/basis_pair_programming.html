@@ -1,0 +1,26 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>veel goedkoper dan screen sharing</li>
+<li>
+twee benaderingen om users te koppelen<ul>
+<li>gedeelde user account voor alle users aanmaken met eigen tmux configuratie</li>
+<li>eigen user account gebruiken, andere user laten connecteren op gewone tmux via socket</li>
+<li><strong>beide onveilig</strong></li>
+<li>fix: goedkope VPS of VM gebruiken en daarop pair programmen</li>
+</ul>
+</li>
+<li>inloggen via SSH</li>
+<li>tmux opstarten</li>
+<li>tweede persoon die aanmeldt, kan gewoon <code>tmux attach -t <naam-van-de-sessie></code> doen</li>
+<li>
+<strong>let wel op: dit maakt dat zelfde gebeurt op beide schermen</strong><ul>
+<li>als een auto met twee stuurwielen...</li>
+</ul>
+</li>
+<li>TODO: mee experimenteren en effecten tonen via animatie, nog niet helemaal duidelijk</li>
+</ul>
+
+{% endblock course_content %}

@@ -1,0 +1,21 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>moet soms ver kunnen terugscrollen in programma-output</li>
+<li>gebeurt via copy mode</li>
+<li>default binding: <code>prefix [</code></li>
+<li>
+default navigatie:<ul>
+<li>arrow keys per regel</li>
+<li><code>ctrl-b</code> voor page up</li>
+<li><code>ctrl-f</code> voor page down</li>
+<li><code>g</code> voor begin</li>
+<li><code>G</code> voor eind</li>
+</ul>
+</li>
+<li><strong>naast normal mode en copy mode heeft tmux geen verdere modes</strong></li>
+</ul>
+
+{% endblock course_content %}

@@ -1,0 +1,12 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>TPM = tmux plugin manager</li>
+<li>regel <code>set -g @plugin 'tmux-plugins/tpm'</code> in config file lijst TPM op (eigenlijk is dit louter declaratieve configuratie, plaatst TPM in een lijststructuur)</li>
+<li>regel <code>run '~/.tmux/plugins/tpm/tpm'</code> laadt TPM</li>
+<li><code>prefix-I</code> installeert (binding is standaard voor TPM)</li>
+</ul>
+
+{% endblock course_content %}

@@ -1,0 +1,21 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>fork van tmux specifiek gemaakt voor terminal sharing</li>
+<li>compatibel met bestaande configuratie en ondersteunende tools (bv. tmuxinator)</li>
+<li>
+genereert bij startup meteen een adres dat collega kan gebruiken om in te loggen op de sessie<ul>
+<li>kan ook voor read-only adres kiezen</li>
+</ul>
+</li>
+<li>
+maakt overbodig SSH keys op te zetten,...<ul>
+<li>maar geeft nog altijd toegang tot development machine!</li>
+<li>heeft nog zelfde nadeel als shared account!</li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

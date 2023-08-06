@@ -1,0 +1,22 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>meerdere users toevoegen aan groep tmux</li>
+<li>folder voor tmux sessies aanmaken (bv. <code>/var/tmux</code>)</li>
+<li>
+folder en files daarin toegankelijk maken voor heel de groep<ul>
+<li><code>+ws</code> wordt gebruikt in referentie, niet zeker uit man page of de <code>s</code> noodzakelijk is</li>
+</ul>
+</li>
+<li>tmux opstarten met specifiek socket (bv. via <code>tmux -S /var/tmux/pairing</code>)</li>
+<li>pairen via <code>tmux -S /var/tmux/pairing attach</code></li>
+<li>
+tmux loopt met de instellingen van de <code>.tmux.conf</code> die gebruikt is om op te starten<ul>
+<li><strong>niet zo dat elke account eigen configuratie gebruikt</strong></li>
+</ul>
+</li>
+</ul>
+
+{% endblock course_content %}

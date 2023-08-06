@@ -1,0 +1,20 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>meerdere "vensters" tegelijk kunnen zien?</li>
+<li>panes gebruiken!</li>
+<li>niet genummerd</li>
+<li>navigatie is visueel</li>
+<li>
+default split met verticale scheidingslijn: <code>prefix-%</code><ul>
+<li>bewuste woordkeuze: "horizontaal" of "verticaal" alleen is onduidelijk want verticale scheidingslijn betekent horizontale richting vensters</li>
+</ul>
+</li>
+<li>default split met horizontale scheidingslijn: <code>prefix-"</code></li>
+<li><code>prefix-o</code> is cycle doorheen vensters</li>
+<li><code>prefix-<arrow keys></code> gaat ook</li>
+</ul>
+
+{% endblock course_content %}

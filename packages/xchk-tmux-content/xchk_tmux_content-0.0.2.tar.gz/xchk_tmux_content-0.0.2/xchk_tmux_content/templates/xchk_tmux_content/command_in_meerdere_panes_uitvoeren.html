@@ -1,0 +1,16 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<ul>
+<li>
+mogelijk om zelfde inputs naar meedere <strong>panes</strong> te sturen<ul>
+<li>gaat niet over verschillende windows!</li>
+<li>is ook niet specifiek voor commando's, maar <strong>inputs</strong> (zie animatie: overal echo, niet alleen na uitvoering)</li>
+</ul>
+</li>
+<li>toggle voor dit gedrag: <code>set-window- option synchronize-panes</code> gevolgd door <code>on</code> of <code>off</code> (of niet gevolgd om gewoon te togglen)</li>
+<li><img src="{% static "xchk_tmux_content/images/baa7717e80e04fb2ae411e159fe4be0d" %}" alt="synchronize-panes.gif"></img></li>
+</ul>
+
+{% endblock course_content %}
