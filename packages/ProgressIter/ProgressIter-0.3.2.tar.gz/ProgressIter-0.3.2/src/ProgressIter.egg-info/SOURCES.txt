@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+setup.py
+src/ProgressIter/__init__.py
+src/ProgressIter.egg-info/PKG-INFO
+src/ProgressIter.egg-info/SOURCES.txt
+src/ProgressIter.egg-info/dependency_links.txt
+src/ProgressIter.egg-info/top_level.txt
