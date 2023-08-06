@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+maqal/__init__.py
+maqal/maqal.py
+maqal.egg-info/PKG-INFO
+maqal.egg-info/SOURCES.txt
+maqal.egg-info/dependency_links.txt
+maqal.egg-info/top_level.txt
+maqal/storage/uyghur-maqal-temsilliri.db
+maqal/storage/uyghur-maqal-temsilliri.json
+maqal/storage/uyghur-maqal-temsilliri.txt
