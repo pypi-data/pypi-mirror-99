@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: ndu-gateway
+Version: 2.6.3
+Summary: Thingsboard Gateway for IoT devices. Modified By Netcad for NDU
+Home-page: https://github.com/netcadlabs/ndu-gateway
+Author: Thingsboard & Netcad Innovation Labs
+Author-email: netcadinnovationlabs@gmail.com
+License: Apache Software License (Apache Software License 2.0)
+Download-URL: https://github.com/netcadlabs/ndu-gateway/archive/2.6.3.tar.gz
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: jsonpath-rw
+Requires-Dist: regex
+Requires-Dist: pip
+Requires-Dist: paho-mqtt
+Requires-Dist: PyYAML
+Requires-Dist: simplejson
+Requires-Dist: requests
+Requires-Dist: zmq
+
+# NDU IoT Gateway  
+
+The NDU **IoT Gateway** is an open-source solution that allows you to integrate devices connected to legacy and third-party systems with NDU. 
+
+This project is forked from [Thingsboard IoT Gateway](https://github.com/thingsboard/thingsboard-gateway)
+
+## Building & Publishing Module
+
+To build ndu version of the gateway module, run the following script.
+
+```
+ make_pypi_dist-ndu_gateway.ps1
+```
+
+Publish ndu-gateway module (use netcadlabs pypi credentials)
+
+```
+ python -m twine upload dist/*
+```
+
+## Installing ndu-gateway module
+
+To install from source code, run the following script.
+
+
+```
+ TODO - 
+```
+
+Install using pip
+
+```
+ pip install ndu-gateway
+```
+
+## Licenses
+
+This project is released under [Apache 2.0 License](./LICENSE).
+
+
