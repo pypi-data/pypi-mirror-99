@@ -1,0 +1,13 @@
+pimpmydb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pimpmydb/columns/__init__.py,sha256=rV627rddBR9vXiOZupxoGkJ9mfDiaYXj9nNV53Wo1UI,61
+pimpmydb/columns/column.py,sha256=VGmbQzHOL5piHqThb76IOTQ1SVx4HnyYXmHqXEW5OvI,2771
+pimpmydb/columns/int_column.py,sha256=y2FMwNwacw_c703l3BUbnjEEc9aTKRJNBjUxESf6AuI,336
+pimpmydb/columns/varchar_column.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pimpmydb/database/__init__.py,sha256=K5Rj6f1PTKI19Wcr-3gEQPUheKQoAKq8DvMh5lNNAZE,30
+pimpmydb/database/database.py,sha256=mbI-Hv-hkvEuqTwi51sM1JdFb6hA19kbYwNUMRb9dYU,482
+pimpmydb-0.0.3.dev1.dist-info/LICENSE,sha256=CBuJIUQanOn-A6gVQuw8AD_CFZ6RSXQpuVLgRHcf1hY,1085
+pimpmydb-0.0.3.dev1.dist-info/METADATA,sha256=K2_vAhIX7FfpnddfZJ1KW5IHAGztdnz9KOrVFpynO1w,649
+pimpmydb-0.0.3.dev1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pimpmydb-0.0.3.dev1.dist-info/top_level.txt,sha256=nuyoformT7sd15-b_sKytGxmYvvqm9D3njvpsCIBh10,9
+pimpmydb-0.0.3.dev1.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pimpmydb-0.0.3.dev1.dist-info/RECORD,,
