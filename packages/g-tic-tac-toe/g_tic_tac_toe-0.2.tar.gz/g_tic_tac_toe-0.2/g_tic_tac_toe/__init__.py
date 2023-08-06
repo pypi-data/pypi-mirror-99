@@ -1,0 +1,1 @@
+from .g_tic_tak_toe import game
