@@ -1,0 +1,122 @@
+# History
+
+## v0.4.1
+*2021-03-19*
+
+First open source release.
+No code change compared to v0.4.0
+
+## Unreleased
+
+## v0.4.0
+*2020-11-09*
+
+- Changed
+    - Rename pyoccad.types into pyoccad.typing
+    - Update projects AUTHORS, LICENSE files
+    
+## v0.4.0.dev4
+*2020-09-08*
+
+- Changed
+    - fix camera_position not configurable in 2d pythreejs renderer
+    
+## v0.4.0.dev3
+*2020-09-08*
+
+- Changed
+    - pythreejs is now an optional dependency for pyoccad.render module
+    
+## v0.4.0.dev2
+*2020-09-04*
+
+- Added
+    - build the documentation using Sphinx
+    
+- Changed
+    - use pythonocc-core instead of pyoccad-core to take benefit of occt 7.4.0
+    - minor internal changes to fit pyoccad-core 7.4.0
+        
+## v0.4.0.dev1
+*2020-09-01*
+
+- Changed
+    - major performance improvement of ThreeJS renderer for Jupyter
+    - refactoring (includes major API changes)
+    - improve code coverage    
+    
+## v0.4.0.dev0
+*2020-07-30*
+
+- Changed
+    - major refactoring and API changes (add tests, create factories, add docstrings)
+    
+## v0.3.0rc1
+*2020-02-05*
+
+- Changed
+    - fix dependency and tests errors on renderer
+
+## v0.3.0rc0
+*2020-02-05*
+
+- Added
+    - various helpers for point, line, curve, surface, transformation
+    - docstrings and unit tests for cpp and python code
+
+## v0.2.5
+*2020-01-17*
+
+- Fixed
+    - lattice in jupyter renderer
+
+## v0.2.4
+*2020-01-17*
+
+- Changed
+    - improved geometry viewer with more customization, docs and tests
+
+## v0.2.3
+*2019-12-10*
+
+- Changed
+    - fix pythreejs renderers due to import error
+    - add capability to disable automatic renderThreeJsPy show as a class constructor argument
+
+## v0.2.2
+*2019-12-10*
+
+- Changed
+    - fix pythreejs renderers due to import collision in renderThreeJsPy (remove import *)
+
+## v0.2.1
+*2019-12-10*
+
+- Changed
+    - fix import error on cpp helper on poly explore (imported name not consistent with binaries)
+
+## v0.2.0
+*2019-11-27*
+
+- Added
+    - rolling ball (bi-tangent circle) algorithm
+    - Gordon surface algorithm
+    - refactoring and API changes in the `create` toolbox
+
+- Changed
+    - improve and unify the docstring documentation
+
+## v0.1.0.dev1
+*2019-10-17*
+
+- Added
+    - 1d interpolation
+    - sewing capability in healing toolbox
+    - notebook examples on casings
+    - docstrings
+
+## v0.1.0.dev0
+*2019-09-18*
+
+- Added
+    - package creation by importing/refactoring helpers from archived `pyocc` package and adding new helpers

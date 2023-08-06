@@ -1,0 +1,11 @@
+include AUTHORS.md
+include README.md
+include HISTORY.md
+include LICENSE
+include requirements.txt
+
+exclude pyoccad/doc/*
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
