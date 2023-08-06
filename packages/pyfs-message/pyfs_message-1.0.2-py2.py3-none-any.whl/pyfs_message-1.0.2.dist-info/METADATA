@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pyfs-message
+Version: 1.0.2
+Summary: Feishu Message Module for Python.
+Home-page: https://github.com/feishu-sdk-python/pyfs-message.git
+Author: Hackathon
+Author-email: kimi.huang@brightcells.com
+License: UNKNOWN
+Keywords: Feishu Message
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pyfs-base (>=1.0.3)
+Requires-Dist: pywe-exception
+Requires-Dist: pywe-storage
+
+============
+pyfs-message
+============
+
+Feishu Message Module for Python.
+
+Installation
+============
+
+::
+
+    pip install pyfs-message
+
+
+
