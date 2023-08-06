@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrovat slu\u017eby", "Manager": "Spr\u00e1vce", "Service": "Slu\u017eba", "Services": "Slu\u017eby", "Manage system services": "Spr\u00e1va syst\u00e9mov\u00fdch slu\u017eeb", "Service operation failed": "", "Done": ""}

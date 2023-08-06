@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtr us\u0142ug", "Manager": "Mened\u017cer", "Service": "Us\u0142uga", "Services": "", "Manage system services": "", "Service operation failed": "", "Done": ""}

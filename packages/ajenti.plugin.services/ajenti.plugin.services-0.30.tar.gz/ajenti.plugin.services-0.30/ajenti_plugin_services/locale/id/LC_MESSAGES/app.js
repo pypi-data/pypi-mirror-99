@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Layanan filter", "Manager": "Manajer", "Service": "Layanan", "Services": "Layanan", "Manage system services": "Mengelola layanan sistem", "Service operation failed": "", "Done": ""}

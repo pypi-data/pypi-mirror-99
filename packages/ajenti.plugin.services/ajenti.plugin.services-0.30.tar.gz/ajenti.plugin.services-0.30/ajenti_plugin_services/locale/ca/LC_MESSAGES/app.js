@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtre de serveis", "Manager": "Gestor", "Service": "", "Services": "", "Manage system services": "Gestionar els serveis del sistema", "Service operation failed": "", "Done": ""}

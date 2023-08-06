@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Sz\u0171r\u0151 szolg\u00e1ltat\u00e1sok", "Manager": "Kezel\u00e9s", "Service": "Szolg\u00e1ltat\u00e1s", "Services": "Szolg\u00e1ltat\u00e1sok", "Manage system services": "Rendszerszolg\u00e1ltat\u00e1sok kezel\u00e9se", "Service operation failed": "", "Done": ""}

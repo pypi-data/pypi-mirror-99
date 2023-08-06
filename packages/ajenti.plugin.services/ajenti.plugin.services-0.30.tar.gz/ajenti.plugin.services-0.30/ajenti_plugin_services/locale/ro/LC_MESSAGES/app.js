@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrul serciciilor", "Manager": "Manager", "Service": "Serviciu", "Services": "Servicii", "Manage system services": "Gestionarea serviciilor de sistem", "Service operation failed": "", "Done": ""}

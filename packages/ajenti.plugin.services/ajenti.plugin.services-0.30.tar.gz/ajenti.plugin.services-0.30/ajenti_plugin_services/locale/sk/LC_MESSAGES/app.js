@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrova\u0165 slu\u017eby", "Manager": "Spr\u00e1vca", "Service": "Slu\u017eba", "Services": "Slu\u017eby", "Manage system services": "Spravova\u0165 syst\u00e9mov\u00e9 slu\u017eby", "Service operation failed": "", "Done": ""}

@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtriraj servise", "Manager": "", "Service": "Servis", "Services": "Servisi", "Manage system services": "Urejanje sistemskih servisov", "Service operation failed": "", "Done": ""}

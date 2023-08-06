@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrar servicios", "Manager": "Administrador", "Service": "Servicio", "Services": "Servicios", "Manage system services": "Administrar los servicios del sistema", "Service operation failed": "", "Done": ""}

@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrera tj\u00e4nster", "Manager": "Hanterare", "Service": "Tj\u00e4nst", "Services": "Tj\u00e4nster", "Manage system services": "Hantera systemtj\u00e4nster", "Service operation failed": "\u00c5tg\u00e4rden misslyckades", "Done": "Klar"}

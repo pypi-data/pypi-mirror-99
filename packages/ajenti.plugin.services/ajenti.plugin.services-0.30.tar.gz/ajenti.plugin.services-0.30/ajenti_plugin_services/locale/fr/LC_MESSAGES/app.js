@@ -1,0 +1,1 @@
+{"": "", "Filter services": "Filtrer les services", "Manager": "Gestionnaire", "Service": "Service", "Services": "Services", "Manage system services": "G\u00e9rer les services syst\u00e8me", "Service operation failed": "L'op\u00e9ration de service a \u00e9chou\u00e9", "Done": "Fait"}
