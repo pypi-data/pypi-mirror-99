@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+versioneer.py
+versioneer_518.egg-info/PKG-INFO
+versioneer_518.egg-info/SOURCES.txt
+versioneer_518.egg-info/dependency_links.txt
+versioneer_518.egg-info/top_level.txt
