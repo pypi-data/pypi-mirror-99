@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pytest-api
+Version: 0.0.1
+Summary: PyTest-API Python Web Framework built for testing purposes.
+Home-page: UNKNOWN
+Author: Andrew Sturza
+Author-email: sturzaam@gmail.com
+License: MIT
+Description: PyTest-API Python Web Framework built for testing purposes.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
