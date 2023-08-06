@@ -1,0 +1,23 @@
+2021/03/19 08:50:14 - root - DEBUG - Arguments are compatible. 
+
+2021/03/19 08:50:14 - graphviz.files - DEBUG - write 48640 bytes to './Diagram'
+2021/03/19 08:50:14 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram']
+2021/03/19 08:50:14 - graphviz.backend - DEBUG - view: 'Diagram.svg'
+2021/03/19 08:50:14 - graphviz.files - DEBUG - write 13556 bytes to './Diagram-subdiagrams/Diagram_group1'
+2021/03/19 08:50:15 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group1']
+2021/03/19 08:50:15 - graphviz.files - DEBUG - write 29246 bytes to './Diagram-subdiagrams/Diagram_group2'
+2021/03/19 08:50:15 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group2']
+2021/03/19 08:50:15 - graphviz.files - DEBUG - write 14529 bytes to './Diagram-subdiagrams/Diagram_group4'
+2021/03/19 08:50:15 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group4']
+2021/03/19 08:50:16 - graphviz.files - DEBUG - write 10006 bytes to './Diagram-subdiagrams/Diagram_group5'
+2021/03/19 08:50:16 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group5']
+2021/03/19 08:50:16 - graphviz.files - DEBUG - write 10008 bytes to './Diagram-subdiagrams/Diagram_group6'
+2021/03/19 08:50:16 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group6']
+2021/03/19 08:50:16 - graphviz.files - DEBUG - write 10014 bytes to './Diagram-subdiagrams/Diagram_group7'
+2021/03/19 08:50:16 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group7']
+2021/03/19 08:50:16 - graphviz.files - DEBUG - write 10008 bytes to './Diagram-subdiagrams/Diagram_group8'
+2021/03/19 08:50:16 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group8']
+2021/03/19 08:50:16 - graphviz.files - DEBUG - write 10016 bytes to './Diagram-subdiagrams/Diagram_group9'
+2021/03/19 08:50:16 - graphviz.backend - DEBUG - run ['dot', '-Kdot', '-Tsvg', '-O', 'Diagram_group9']
+2021/03/19 08:50:16 - root - INFO - Diagram successfully created 
+
