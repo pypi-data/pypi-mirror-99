@@ -1,0 +1,8 @@
+yahoo_fantasy_api>=2.4.1
+baseball_scraper>=0.4.9
+docopt
+yahoo_oauth
+nhl_scraper>=0.0.3
+baseball_id>=0.0.6
+progressbar
+jinja2
