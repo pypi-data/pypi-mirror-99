@@ -1,0 +1,16 @@
+teamverify/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+teamverify/competitivePokedex.csv,sha256=WXW8NZGTufQc2mJ-tvR14QYc-B9kRc4v9iELyZfqzyw,23861
+teamverify/geckodriver.exe,sha256=JVydNXHIaEEhP0mybRdqatRAvoxyDjwtkiYHat9PYD0,3566280
+teamverify/pokemonBase.owl,sha256=Z6bQ3fUiXz95T9awyojFkyCjIgnNF_53VwXmgmbCyPY,178616
+teamverify/pokemonprod.owl,sha256=WgzTgtQcTBcmMyEJLkpBA2VLFN31l5oekYfgNtx0Y5w,225523
+teamverify/prepareOntology.py,sha256=Nsa4l3yYV9wgiUkHR2-RzXIZOeCNNQAzU6_1vZGKaUQ,1492
+teamverify/readTeamSyntax.py,sha256=NPLKHtrj8JOG3no3QffvKm72QOJYuHElyXZ5b9q4bvY,4376
+teamverify/reasonertest.py,sha256=gtuHFh0gSXg7reC1DJQtrwCY2Q1hoqjnyEjuTgMARgg,805
+teamverify/scrapePokedex.py,sha256=PRrcIHXkTjow1pMpJWBdoZnCLNPqdy2-kS9tWjJHjB4,2438
+teamverify/teambuilder.py,sha256=fEWu11crlUT8a4TLuO2D-zygEHslFnukjwdytOU-U54,14157
+teamverify-0.0.1.dist-info/LICENSE,sha256=vH9uhLI-dDHj_hOEgc6RQXQpFX9aqO3RiPhqSEzuaHE,1088
+teamverify-0.0.1.dist-info/METADATA,sha256=ofiVORyVjf35LFcaw3VmJM6HGAPW_gFUsIIVSlpXhPo,1947
+teamverify-0.0.1.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+teamverify-0.0.1.dist-info/entry_points.txt,sha256=T-x1oGl1UvIWftrFK5mIAMHSJXzVfVCF-2Tzq66Vs-g,109
+teamverify-0.0.1.dist-info/top_level.txt,sha256=gaFuhDriHxKIlbQaWpE8KmnVInzpNIJM0fbakauSUm8,11
+teamverify-0.0.1.dist-info/RECORD,,
