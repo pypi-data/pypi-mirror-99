@@ -1,0 +1,14 @@
+ctoybox-0.5.0.dist-info/METADATA,sha256=GNUKgoKjhhmphIlvEX8jP3_i55KhBgl-jz2Fbziu1aU,1139
+ctoybox-0.5.0.dist-info/WHEEL,sha256=zsENzKACuMk2AimAV5ELc5C8dRtzkGWbsbaF8iEDXik,104
+ctoybox/ffi.py,sha256=XIvKn06P2nY1FF4QpgX1ilvoSr02AJOVMI4JwKF_TcM,19828
+ctoybox/__init__.py,sha256=35I1EQmIsAy-ngom01TrVFk3eI3ZcHCQocUV-8-_40k,67
+ctoybox/input.py,sha256=igB4knqT-cFAvg2kwyWqpiR2F_9Q6Zl3WCf3DwwUUuA,3024
+ctoybox/__pycache__/__init__.cpython-38.pyc,sha256=BLAzhPAaPCklWpQCE6iTLnUX9gpmQL_d-ZerXwxhhBE,251
+ctoybox/__pycache__/input.cpython-38.pyc,sha256=-bqHDKFgiApmpVcU1dGdj6fg42mgEtAURA-ElzAYooo,2366
+ctoybox/__pycache__/ffi.cpython-38.pyc,sha256=KaTkaPstQV1SZ_lUD8AdDz-I9Ne18w6x0MIExGNcNN4,21297
+ctoybox/human_play.py,sha256=rOkkpGW9b9oSbE5yAeuV2uawhSu6sJiYl4YA3YFuJZ4,3274
+ctoybox/json_schema.py,sha256=X-FGt5udcT08eVLlc80shOo4y8ywc2660g7kU_NuGtc,695
+ctoybox/ctoybox/__init__.py,sha256=fAua8dQbFJlLpwheN-qdKEbbyLPRoS-P40C4XkthPaQ,142
+ctoybox/ctoybox/ffi.py,sha256=sC35qNYOd2RRYFB9j_77Bq5tj6o68xHsBL16tNacwTg,2573
+ctoybox/ctoybox/native.so,sha256=yznjt7pQGVVJAG4hHqONThuGJyM_fdYAYNlLYBQko3w,2246800
+ctoybox-0.5.0.dist-info/RECORD,,
