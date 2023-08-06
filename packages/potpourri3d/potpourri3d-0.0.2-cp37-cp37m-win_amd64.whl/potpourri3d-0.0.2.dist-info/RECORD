@@ -1,0 +1,11 @@
+potpourri3d_bindings.cp37-win_amd64.pyd,sha256=e7hg9bOdc-9o3wpWmBgZUmIyId_zfLUQs8dEDIDwjsM,857088
+potpourri3d/__init__.py,sha256=N2PfxzSZpS4fuWYd9cUrgAKHBAiT0MAnw9tinrLRXvE,133
+potpourri3d/core.py,sha256=m4XjnvYNymgmIGvsc8zPst1SPGss6A311VV-whpiPKs,933
+potpourri3d/io.py,sha256=c54PygvJRhi3YdYwy2LiyvUiQx2poJV3WWdjftDSTd0,576
+potpourri3d/mesh.py,sha256=VZaflsMcLdCvU8jc1_Pwx6nztV08lqtafaTXhjL3ii4,4007
+potpourri3d/point_cloud.py,sha256=TekVE4n6aNaobEvAtsc6PchFxghia_BiQcmL7VauMz4,1438
+potpourri3d-0.0.2.dist-info/LICENSE,sha256=ASZSy0Ozv_-8Pdp0Ymx_PECA3DoMRT__Hf69Yf6GrzE,1092
+potpourri3d-0.0.2.dist-info/METADATA,sha256=JuInipvviL161LJM8z41iS0EngiFWzBdIQ2dtMAl9yU,11024
+potpourri3d-0.0.2.dist-info/WHEEL,sha256=zMRqF9ZfHGxBPfvcWwE-LxcVkdB1hhr8hy4cOfZGPZU,101
+potpourri3d-0.0.2.dist-info/top_level.txt,sha256=JjO7UYG-IxWEI6CWxLcLiO_6u2EKVKfx_JyT_vMFwrI,13
+potpourri3d-0.0.2.dist-info/RECORD,,
