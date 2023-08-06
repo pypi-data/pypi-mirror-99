@@ -1,0 +1,8 @@
+__author__ = 'tangwei'
+__author_email__ = 'tangwei@300624.cn'
+__maintainer_email__ = 'tangwei@300624.cn'
+__license__ = 'GNU GPLv2'
+__url__ = 'https://github.com/kylebebak/py-geohash-any'
+__version__ = '0.0.2'
+__title__ = 'PDFSDKForPython'
+__description__ = 'project describe'

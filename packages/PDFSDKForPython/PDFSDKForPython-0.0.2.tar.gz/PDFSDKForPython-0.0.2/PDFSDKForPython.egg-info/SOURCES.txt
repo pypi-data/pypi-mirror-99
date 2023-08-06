@@ -1,0 +1,9 @@
+README.rst
+setup.py
+PDFSDKForPython/__init__.py
+PDFSDKForPython/__version__.py
+PDFSDKForPython.egg-info/PKG-INFO
+PDFSDKForPython.egg-info/SOURCES.txt
+PDFSDKForPython.egg-info/dependency_links.txt
+PDFSDKForPython.egg-info/not-zip-safe
+PDFSDKForPython.egg-info/top_level.txt
