@@ -1,0 +1,12 @@
+*~
+.\#*
+\#*
+
+__pycache__
+*.c
+build/
+eudist*so
+/eudist.cpp
+/eudist.egg-info/
+/dist/
+/.eggs/
