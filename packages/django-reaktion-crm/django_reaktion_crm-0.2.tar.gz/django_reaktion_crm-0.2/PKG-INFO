@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: django_reaktion_crm
+Version: 0.2
+Summary: A Django app to manage Reaktion's tracking system.
+Home-page: https://www.reaktion.se
+Author: Lukasz Oleksak
+Author-email: lukasz.oleksak@reaktion.se
+License: BSD-3-Clause
+Description: ================================
+        Reaktion's CRM plugin for Django
+        ================================
+        
+        Reaktion CMS is a Django app is simple CRM connected to tracking system.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add ``django_reaktion_crm`` to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'django_reaktion_crm',
+            ]
+        
+        
+        2. To create the polls models run::
+        
+            python manage.py migrate
+        
+        
+        3. Set up ``MONGO_CONN`` and ``DOMAIN_ID`` env
+        
+        4. Import contacts from .csv file ::
+        
+            python manage.py import_csv filename <filename>
+        
+        5. Import tracking ::
+        
+            python manage.py import_tracking delta <hours>
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

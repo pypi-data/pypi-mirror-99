@@ -1,0 +1,107 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+
+<!-- Override extrahead to add Chart.js -->
+{% block extrahead %}
+    {{ block.super }}
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            // Sample data
+            const chartData = [
+                {"date": "2021-02-24T00:00:00Z", "y": 4},
+                {"date": "2021-02-23T00:00:00Z", "y": 0},
+                {"date": "2021-02-22T00:00:00Z", "y": 5},
+                {"date": "2021-02-21T00:00:00Z", "y": 4},
+                {"date": "2021-02-20T00:00:00Z", "y": 2},
+                {"date": "2021-02-19T00:00:00Z", "y": 10},
+                {"date": "2021-02-18T00:00:00Z", "y": 3},
+                {"date": "2021-02-17T00:00:00Z", "y": 2},
+            ];
+
+            // Parse the dates to JS
+            chartData.forEach((d) => {
+                d.x = new Date(d.date);
+            });
+
+            // Render the chart
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Antal besök',
+                            data: chartData,
+                            backgroundColor: 'rgba(220,120,10,0.75)',
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        xAxes: [
+                            {
+                                type: 'time',
+                                time: {
+                                    unit: 'day',
+                                    round: 'day',
+                                    displayFormats: {
+                                        day: 'MMM D',
+                                    },
+                                },
+                            },
+                        ],
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
+                    },
+                },
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    <!--
+    <div style="width: 49%; display: inline-block; vertical-align: top">
+        <canvas style="margin-bottom: 80px; width: 100%; height: 300px; " id="myChart"></canvas>
+    </div> -->
+    <div style="margin-bottom: 20px; width: 95%; display: inline-block; vertical-align: top; margin-top: -20px; height: 280px; overflow: hidden; overflow-y: scroll">
+    <h4>Besökta sidor</h4>
+        <ul>
+            {% for item in urls %}
+                <li>
+                    <em>{{ item.created_at }}</em>
+                    <br/>
+                    {{ item.url }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <style>
+        ul li {
+            padding: 0 0 10px 0;
+            font-size: 14px;
+        }
+        em {
+            margin-bottom: 5px
+        }
+        h4 {
+            font-size: 18px
+        }
+    </style>
+    <!-- Render the rest of the ChangeList view -->
+    {{ block.super }}
+{% endblock %}
