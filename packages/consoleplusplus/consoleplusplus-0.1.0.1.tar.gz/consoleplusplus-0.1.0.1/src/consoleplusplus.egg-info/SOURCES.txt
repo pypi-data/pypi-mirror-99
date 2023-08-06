@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/consoleplusplus/__init__.py
+src/consoleplusplus.egg-info/PKG-INFO
+src/consoleplusplus.egg-info/SOURCES.txt
+src/consoleplusplus.egg-info/dependency_links.txt
+src/consoleplusplus.egg-info/top_level.txt
