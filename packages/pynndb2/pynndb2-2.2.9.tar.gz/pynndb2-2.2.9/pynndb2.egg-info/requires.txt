@@ -1,0 +1,5 @@
+Pipfile
+importlib-metadata==1.7.0
+lmdb
+posix-ipc
+pytest
