@@ -1,0 +1,30 @@
+CHANGES
+*******
+
+0.3.5 (2021-03-19)
+==================
+
+- Patch issue about square cropping.
+
+0.3.4 (2019-07-03)
+==================
+
+- Update to https://github.com/CrackerakiUA/ngImgCropFullExtended/ - supports rectangle with aspect ratio
+
+- Fixed issue where cropping added white bars to result image.
+
+- *Upstream is no longer maintenained.*
+
+
+0.3.3 (2019-04-23)
+==================
+
+- Fix issue where "Take Photo" in portrait mode results in canvas without height.
+
+- *Upstream is no longer maintenained.*
+
+
+0.3.2 (2015-04-15)
+==================
+
+- Initial release.
