@@ -1,0 +1,9 @@
+pytest_docker_db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_docker_db/plugin.py,sha256=_2uo9Vn1QP_39XJwh-MyIHvMqQm-60-YPKpsn67blI8,12495
+pytest_docker_db/util.py,sha256=jJW1E2BG0ip-1lnexa18qb2g2HMt8480l8euueDvS60,3838
+pytest_docker_db-1.1.0.dist-info/LICENSE,sha256=eBRVPN8nYqkTYj9YEoSfI0v9pmP498tGbbqYgdatn3E,1080
+pytest_docker_db-1.1.0.dist-info/METADATA,sha256=vi_2R-ifmXzkpKvrUPbBuzs0L3B2HbKMgB5aelgg0vE,6374
+pytest_docker_db-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_docker_db-1.1.0.dist-info/entry_points.txt,sha256=DEbFdlE8HjZNu9oYl6679F69biNK33BCR3QctvaUrOM,48
+pytest_docker_db-1.1.0.dist-info/top_level.txt,sha256=YufvL7x8dShyGMrCPEOGf6HRsq4oive4XCBVmXwyriA,17
+pytest_docker_db-1.1.0.dist-info/RECORD,,
