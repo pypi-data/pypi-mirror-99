@@ -1,0 +1,8 @@
+README.md
+setup.py
+env_settings2.egg-info/PKG-INFO
+env_settings2.egg-info/SOURCES.txt
+env_settings2.egg-info/dependency_links.txt
+env_settings2.egg-info/requires.txt
+env_settings2.egg-info/top_level.txt
+ilens_env_settings/__init__.py
