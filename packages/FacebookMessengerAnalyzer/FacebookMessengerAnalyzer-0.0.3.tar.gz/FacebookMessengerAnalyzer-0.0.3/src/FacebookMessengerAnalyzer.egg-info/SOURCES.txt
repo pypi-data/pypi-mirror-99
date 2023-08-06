@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/FacebookMessengerAnalyzer/FacebookMessengerAnalyzer.py
+src/FacebookMessengerAnalyzer/__init__.py
+src/FacebookMessengerAnalyzer.egg-info/PKG-INFO
+src/FacebookMessengerAnalyzer.egg-info/SOURCES.txt
+src/FacebookMessengerAnalyzer.egg-info/dependency_links.txt
+src/FacebookMessengerAnalyzer.egg-info/not-zip-safe
+src/FacebookMessengerAnalyzer.egg-info/requires.txt
+src/FacebookMessengerAnalyzer.egg-info/top_level.txt
