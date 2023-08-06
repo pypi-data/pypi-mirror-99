@@ -1,0 +1,11 @@
+README.rst
+pauseonlock.py
+pyproject.toml
+setup.cfg
+setup.py
+pauseonlock.egg-info/PKG-INFO
+pauseonlock.egg-info/SOURCES.txt
+pauseonlock.egg-info/dependency_links.txt
+pauseonlock.egg-info/entry_points.txt
+pauseonlock.egg-info/requires.txt
+pauseonlock.egg-info/top_level.txt
