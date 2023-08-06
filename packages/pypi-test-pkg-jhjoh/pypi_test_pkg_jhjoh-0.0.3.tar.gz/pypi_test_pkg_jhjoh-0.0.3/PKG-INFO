@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pypi_test_pkg_jhjoh
+Version: 0.0.3
+Summary: Test package by jhjoh
+Home-page: https://github.com/JoakimJohansen/pypi-package-test
+Author: Joakim Johansen
+Author-email: jhjoh@equinor.com
+License: MIT
+Download-URL: https://github.com/JoakimJohansen/pypi-package-test/archive/refs/tags/v_003.tar.gz
+Description: # Example package
+        
+        Offering amazing functionality.
+        Maybe the best in the world. 
+Keywords: TEST,PYPI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
