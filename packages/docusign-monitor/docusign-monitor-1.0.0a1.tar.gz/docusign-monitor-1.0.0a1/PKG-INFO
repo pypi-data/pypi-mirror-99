@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: docusign-monitor
+Version: 1.0.0a1
+Summary: DocuSign Monitor API - v2
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: devcenter@docusign.com
+License: UNKNOWN
+Description:     An API for an integrator to access the features of DocuSign Monitor  # noqa: E501
+            
+Keywords: Swagger,DocuSign Monitor API - v2
+Platform: UNKNOWN
