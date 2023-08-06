@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+
+from lona.run_server import run_server
+
+run_server(sys.argv[1:])
