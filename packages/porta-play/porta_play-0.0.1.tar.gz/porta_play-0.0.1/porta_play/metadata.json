@@ -1,0 +1,149 @@
+{
+  "src/lib/components/PortaPlay.react.js": {
+    "description": "ExampleComponent is an example component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "displayName": "PortaPlay",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this compnent in Dash callbacks"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+      },
+      "url": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The url of a video or song to play\r\nCan be an array or MediaStream object"
+      },
+      "playing": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true or false to pause or play the media"
+      },
+      "loop": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true or false to loop the media"
+      },
+      "controls": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set to true or false to display native player controls\r\nVimeo, Twitch and Wistia player will always display controls"
+      },
+      "volume": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Set the volume of the player, between 0 and 1\r\nnull uses default volume on all players"
+      },
+      "muted": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Mutes the player\r\nOnly works if volume is set"
+      },
+      "playbackRate": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Set the playback rate of the player\r\nOnly supported by YouTube, Wistia, and file paths"
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Set the width of the player"
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Set the height of the player"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Add inline styles to the root element"
+      },
+      "playsinline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Applies the html5 playsinline attribute where supported, which allows\r\nvideos to be played inline and will not automatically enter fullscreen\r\nmode when playback begins (for iOS)."
+      },
+      "currentTime": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Returns the number of seconds that have been played"
+      },
+      "secondsLoaded": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Returns the number of seconds that have been loaded"
+      },
+      "duration": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Returns the duration (in seconds) of the currently playing media"
+      },
+      "intervalCurrentTime": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Interval in milliseconds at which currenTtime prop is updated."
+      },
+      "intervalSecondsLoaded": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Interval in milliseconds at which secondsLoaded prop is updated."
+      },
+      "intervalDuration": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Interval in milliseconds at which duration prop is updated."
+      },
+      "seekTo": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Seek to the given number of seconds, or fraction if amount is between 0 and 1"
+      }
+    }
+  }
+}

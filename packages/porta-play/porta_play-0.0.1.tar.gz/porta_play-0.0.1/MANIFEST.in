@@ -1,0 +1,7 @@
+include porta_play/porta_play.min.js
+include porta_play/porta_play.min.js.map
+include porta_play/metadata.json
+include porta_play/package-info.json
+include README.md
+include LICENSE
+include package.json

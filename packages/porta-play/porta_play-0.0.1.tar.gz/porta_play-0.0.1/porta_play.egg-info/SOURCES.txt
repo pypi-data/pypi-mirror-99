@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+porta_play/PortaPlay.py
+porta_play/__init__.py
+porta_play/_imports_.py
+porta_play/metadata.json
+porta_play/package-info.json
+porta_play/porta_play.min.js
+porta_play/porta_play.min.js.map
+porta_play.egg-info/PKG-INFO
+porta_play.egg-info/SOURCES.txt
+porta_play.egg-info/dependency_links.txt
+porta_play.egg-info/top_level.txt
