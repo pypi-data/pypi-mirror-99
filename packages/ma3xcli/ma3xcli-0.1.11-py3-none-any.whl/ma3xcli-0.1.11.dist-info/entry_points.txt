@@ -1,0 +1,4 @@
+[console_scripts]
+init-pyenv=ma3xcli.init_pyenv:main
+two=ma3xcli.two:main
+
