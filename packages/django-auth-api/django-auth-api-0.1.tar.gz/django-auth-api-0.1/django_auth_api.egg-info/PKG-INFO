@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: django-auth-api
+Version: 0.1
+Summary: A Django  app  to manage authentication backend api with integrated doc.
+Home-page: https://www.example.com/
+Author: Mardochee KIKIGBAGBAN
+Author-email: kgmardochee@gmail.com
+License: BSD-3-Clause  # Example license
+Description: =====
+        api
+        =====
+        
+        Django-authapi is a app that provide all urls four your authentication in your backend api.
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "api" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'api',
+            ]
+        
+        2. Include the api URLconf in your project urls.py like this::
+        
+            path('api/', include('api.urls')),
+        
+        4. Run `python manage.py makemigrations api` to make migrations for this app .
+        
+        
+        3. Run `python manage.py migrate` to create the api models.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to see docs (you'll need the Admin app enabled).
+        
+        5. Visit http://127.0.0.1:8000/api/ to participate all urls related to authentication backend api.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
