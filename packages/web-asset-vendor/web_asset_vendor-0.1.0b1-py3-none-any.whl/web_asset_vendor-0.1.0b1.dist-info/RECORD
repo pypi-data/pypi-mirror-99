@@ -1,0 +1,13 @@
+web_asset_vendor/__init__.py,sha256=qUf7WvXifcja04JW33ppVlpzD-hP27tHXy-W9VySxtY,404
+web_asset_vendor/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_asset_vendor/models/asset.py,sha256=Zc2-hJ-92khWGMVt9JQXUOO3u4_59S8_hnYMR0JnFIw,843
+web_asset_vendor/models/fetcher.py,sha256=d752LXfuBlq0BazMpylcfZRyo1Az3IBXcvCJx0u4lGA,2367
+web_asset_vendor/models/resolver.py,sha256=NH37wZkDn8G433HrHvFBRB7tL-TxAV6KDxHIegdoErA,1504
+web_asset_vendor/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_asset_vendor/utils/exceptions.py,sha256=ykw_1Z_acXq1THjkssLvsmHqNUNemSVsF_ZXKUMToPY,152
+web_asset_vendor/utils/exceptions_runtime.py,sha256=NmEVpXeIA696EIUymxzYl91VJTWa7p78BEhgpk3u1uo,223
+web_asset_vendor/utils/regex.py,sha256=Ybn50lOmMhuZEgNv0LttsfqpUY-n4X0AceDTjCgGAvg,61
+web_asset_vendor-0.1.0b1.dist-info/METADATA,sha256=Orj_yxjfOpZeUhH82dMElktxwG7llPfHR1GWBqA-FD4,2376
+web_asset_vendor-0.1.0b1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+web_asset_vendor-0.1.0b1.dist-info/top_level.txt,sha256=JBqTjMCkZ7QegvYKF64IQwaOT6iP9Wf3P5K18a1P7UE,17
+web_asset_vendor-0.1.0b1.dist-info/RECORD,,
