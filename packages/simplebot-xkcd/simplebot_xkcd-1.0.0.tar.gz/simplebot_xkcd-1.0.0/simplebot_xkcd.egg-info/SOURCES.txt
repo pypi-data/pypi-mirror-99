@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+simplebot_xkcd.py
+simplebot_xkcd.egg-info/PKG-INFO
+simplebot_xkcd.egg-info/SOURCES.txt
+simplebot_xkcd.egg-info/dependency_links.txt
+simplebot_xkcd.egg-info/entry_points.txt
+simplebot_xkcd.egg-info/not-zip-safe
+simplebot_xkcd.egg-info/requires.txt
+simplebot_xkcd.egg-info/top_level.txt
