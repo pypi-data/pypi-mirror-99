@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: woss.contracts
+Version: 0.0.3
+Summary: Implementação de contratos em Python
+Author: Anderson Carlos Woss
+Author-email: acwoss@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
