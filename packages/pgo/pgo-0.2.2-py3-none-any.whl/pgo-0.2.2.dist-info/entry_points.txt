@@ -1,0 +1,3 @@
+[distutils.setup_keywords]
+pgo = pgo.setuptools.extend:pgo
+
