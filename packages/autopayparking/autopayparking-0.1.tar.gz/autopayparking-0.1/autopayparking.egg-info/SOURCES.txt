@@ -1,0 +1,8 @@
+README.md
+setup.py
+autopayparking.egg-info/PKG-INFO
+autopayparking.egg-info/SOURCES.txt
+autopayparking.egg-info/dependency_links.txt
+autopayparking.egg-info/entry_points.txt
+autopayparking.egg-info/requires.txt
+autopayparking.egg-info/top_level.txt
