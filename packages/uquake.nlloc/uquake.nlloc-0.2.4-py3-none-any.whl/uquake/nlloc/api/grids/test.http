@@ -1,0 +1,16 @@
+POST http://localhost:8000/create_layered_velocity/
+Content-Type: application/json
+
+{
+  "model_name": "test",
+  "project": "test",
+  "network": "test",
+  "origin": [650200, 4766170, -500],
+  "dimensions": [100, 101, 68],
+  "spacing": [25, 25, 25],
+  "z": [1168, 459, -300, -500],
+  "vp": [4533, 5337, 5836, 5836],
+  "vs": [2306, 2885, 3524, 3524]
+}
+###
+
