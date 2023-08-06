@@ -1,0 +1,12 @@
+litmusTest_backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+litmusTest_backend/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+litmusTest_backend/apps.py,sha256=PA6ZZSQ4g9HNFCRE0VJJ3veHicyaivJfnhHhKPv_kss,110
+litmusTest_backend/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+litmusTest_backend/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+litmusTest_backend/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+litmusTest_backend/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+litmusTest_backend_app-1.0.0.dist-info/LICENSE,sha256=JaYGXZ4zlaGrZsQOy_G5DHcXMdtKcOB7TQ9mHtppdqI,34
+litmusTest_backend_app-1.0.0.dist-info/METADATA,sha256=WST1ZaozLCTsCAmn3fp79OPafg30HyJ2qqzd50yWpOQ,714
+litmusTest_backend_app-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+litmusTest_backend_app-1.0.0.dist-info/top_level.txt,sha256=rAtULGoXvuI4uZIBX-71AvyJTapCAxiLlnfS_OBsGQs,19
+litmusTest_backend_app-1.0.0.dist-info/RECORD,,

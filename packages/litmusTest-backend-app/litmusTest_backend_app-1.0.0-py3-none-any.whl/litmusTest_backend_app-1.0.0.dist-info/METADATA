@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: litmusTest-backend-app
+Version: 1.0.0
+Summary: App used for litmusTest platform
+Home-page: https://github.com/nasimfatimaa/litmus_test_backend_temp
+Author: litmusTest
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+
+UNKNOWN
+
+
