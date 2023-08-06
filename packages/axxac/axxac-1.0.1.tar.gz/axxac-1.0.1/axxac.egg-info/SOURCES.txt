@@ -1,0 +1,10 @@
+MANIFEST.in
+README.txt
+setup.py
+axxac/itest_template.json
+axxac.egg-info/PKG-INFO
+axxac.egg-info/SOURCES.txt
+axxac.egg-info/dependency_links.txt
+axxac.egg-info/entry_points.txt
+axxac.egg-info/requires.txt
+axxac.egg-info/top_level.txt
