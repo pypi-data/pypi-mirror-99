@@ -1,0 +1,9 @@
+print2d/__init__.py,sha256=PUHVxVXWPgwHyvs-EVwGf4XPKjsOYbA_W1xh5lINuXU,2079
+print2d/_print2d_list.py,sha256=4qe9N_wNK36oaW3APP1nP8YM_uzv0mlddelVwYd2nls,3235
+print2d/_print2d_np.py,sha256=aUglXItFUa7y3ZiYWSxw9FLdF5DK4h5UTZq_5rMnz7c,1049
+print2d/_print2d_torch.py,sha256=RHu_oFulf0EOU9NHJWDVzoOqgUXrlg9pYnEARsg2d6o,1066
+print2d-0.2.1.dist-info/LICENSE,sha256=ERL6utQ6MV-prdZuOsaAaJCA4cOzW6V07MuWu1z6W34,1066
+print2d-0.2.1.dist-info/METADATA,sha256=yEXLafhCzS-Fp61Rokn6HNUIUW8jdT29G_IExvTWq9s,2133
+print2d-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+print2d-0.2.1.dist-info/top_level.txt,sha256=JiK0CX_6wCE0FXJCHorhn_X9SxSZYtY7HIxfRVJ8vfI,8
+print2d-0.2.1.dist-info/RECORD,,
