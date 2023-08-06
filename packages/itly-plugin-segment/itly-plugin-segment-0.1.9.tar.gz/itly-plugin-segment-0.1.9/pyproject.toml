@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "itly-plugin-segment"
+version = "0.1.9"
+description = "Iteratively Analytics SDK - Segment Plugin"
+readme="README.md"
+authors = ["Iteratively"]
+license = "MIT"
+packages = [
+    { include = "itly_plugin_segment" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+analytics-python = "^1.2.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0.1"
+pytest-httpserver = "^0.3.5"
+itly-sdk = { path="../sdk", develop=true }
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
