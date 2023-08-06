@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+main.py
+setup.py
+jznsearch/__init__.py
+jznsearch/version.py
+jznsearch.egg-info/PKG-INFO
+jznsearch.egg-info/SOURCES.txt
+jznsearch.egg-info/dependency_links.txt
+jznsearch.egg-info/entry_points.txt
+jznsearch.egg-info/top_level.txt
