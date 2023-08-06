@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: asciiplot
+Version: 0.0.3
+Summary: Package enabling asciiized sequence plotting in terminal across platforms
+Home-page: https://github.com/w2sv/asciiplot
+Author: W2SV
+Author-email: zangenbergjanek@googlemail.com
+License: MIT
+Keywords: plotting,terminal,console,ascii,gui,data,visualization
+Platform: Linux
+Platform: Windows
+Platform: MacOS
+Requires-Python: >=3.6
+Requires-Dist: colored (==1.4.2)
+
+UNKNOWN
+
+
