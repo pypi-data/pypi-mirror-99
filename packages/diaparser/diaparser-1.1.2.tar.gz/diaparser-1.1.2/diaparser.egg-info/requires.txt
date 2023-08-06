@@ -1,0 +1,5 @@
+torch>=1.6
+transformers
+nltk
+stanza
+numpy==1.19.4
