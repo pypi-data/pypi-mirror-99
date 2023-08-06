@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pypi_test_pkg/pypi_test_pkg_jhjoh.egg-info/PKG-INFO
+pypi_test_pkg/pypi_test_pkg_jhjoh.egg-info/SOURCES.txt
+pypi_test_pkg/pypi_test_pkg_jhjoh.egg-info/dependency_links.txt
+pypi_test_pkg/pypi_test_pkg_jhjoh.egg-info/requires.txt
+pypi_test_pkg/pypi_test_pkg_jhjoh.egg-info/top_level.txt
