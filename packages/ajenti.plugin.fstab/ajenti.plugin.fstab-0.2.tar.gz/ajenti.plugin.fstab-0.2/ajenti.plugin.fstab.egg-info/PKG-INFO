@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.fstab
+Version: 0.2
+Summary: fstab
+Home-page: https://ajenti.org
+Author: Arnaud Kientz
+Author-email: arnaud@unpeud.info
+License: UNKNOWN
+Description: A fstab plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3

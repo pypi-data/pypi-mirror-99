@@ -1,0 +1,7 @@
+
+recursive-include ajenti_plugin_fstab * *.*
+recursive-exclude ajenti_plugin_fstab *.pyc
+include ajenti_plugin_fstab/plugin.yml
+include MANIFEST.in
+include requirements.txt
+    
