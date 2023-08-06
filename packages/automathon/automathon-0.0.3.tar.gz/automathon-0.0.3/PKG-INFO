@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: automathon
+Version: 0.0.3
+Summary: A Python library for simulating finite automata
+Home-page: https://github.com/rohaquinlop/automathon
+Author: Robin Hafid Quintero Lopez
+Author-email: rohaquinlop301@gmail.com
+License: GNU General Public License v2.0
+Download-URL: https://github.com/rohaquinlop/automathon/archive/refs/tags/v0.0.3.tar.gz
+Description: # Automathon
+        
+        Created by: Robin Hafid Quintero Lopez
+        
+        [![Build Status](https://travis-ci.com/rohaquinlop/automathon.svg?branch=main)](https://travis-ci.com/rohaquinlop/automathon)
+        
+        A Python library for simulating finite automata
+        
+        ## Links
+        - GitHub repository: https://github.com/rohaquinlop/automathon
+        - PyPI: https://pypi.org/project/automathon/
+        - Twitter: https://twitter.com/RobinHafid
+        - Contact: rohaquinlop301@gmail.com
+        
+        ## Installation
+        
+        ### PyPI
+        ```Python
+        pip install automathon
+        ```
+        
+        ## Basic Example
+        
+        ![](https://upload.wikimedia.org/wikipedia/commons/9/94/DFA_example_multiplies_of_3.svg)
+        Self-made, Public domain, via Wikimedia Commons
+        
+        ##### Representing the previous automata
+        
+        ```Python
+        from automathon import DFA
+        Q = {'q0', 'q1', 'q2'}
+        sigma = {'0', '1'}
+        delta = { 'q0' : {'0' : 'q0', '1' : 'q1'},
+                  'q1' : {'0' : 'q2', '1' : 'q0'},
+                  'q2' : {'0' : 'q1', '1' : 'q2'}
+                }
+        initialState = 'q0'
+        F = {'q0'}
+        
+        automata1 = DFA(Q, sigma, delta, initialState, F)
+        ## This is an example about creating a DFA with the library
+        ```
+        
+        ###### Verify if the automata is valid
+        
+        ```Python
+        automata1.isValid()   #True
+        ```
+        
+        ###### Verify if the automata accept a string
+        
+        ```Python
+        automata1.accept("001001")   #True
+        automata1.accept("00100")    #False
+        ```
+        
+Keywords: python,automata,automata,automathon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
