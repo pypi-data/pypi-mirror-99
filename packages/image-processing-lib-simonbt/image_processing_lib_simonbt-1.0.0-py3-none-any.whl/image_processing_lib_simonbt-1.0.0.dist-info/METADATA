@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: image-processing-lib-simonbt
+Version: 1.0.0
+Summary: Image processing library compatible with OpenCV 1.2 and Python 3.9
+Home-page: https://github.com/simonbt6/image-processing-lib
+Author: Simon Brisebois-Therrien
+Author-email: simonbt6@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/simonbt6/image-processing-lib/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
