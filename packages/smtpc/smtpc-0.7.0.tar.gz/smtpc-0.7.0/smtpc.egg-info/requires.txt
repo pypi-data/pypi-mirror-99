@@ -1,0 +1,7 @@
+structlog
+fileperms
+toml
+
+[extended]
+Jinja2
+colorama
