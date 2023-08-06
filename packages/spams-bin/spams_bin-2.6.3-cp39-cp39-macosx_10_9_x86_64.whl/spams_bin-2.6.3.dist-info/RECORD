@@ -1,0 +1,15 @@
+spams/__init__.py,sha256=xHcMde31B_Zgi9MrSloYNaeuMyQBh9yrXGWijCauIo4,60
+spams/spams.py,sha256=fOBSfKbuVDQA5ufp7PB7-c9dRKlRSGCGsK5DAvDyk4g,28699
+spams_wrap/_spams_wrap.cpython-39-darwin.so,sha256=c5S7FQUd-qM7pUtL4iDF-51YFy9vLjTjZzkiixiWe8I,2315328
+spams_wrap/__init__.py,sha256=YIHCmH1R55dbX1L6wKGc-mLQwkKnCyWDT0zkxpRX3c0,65
+spams_wrap/spams_wrap.py,sha256=ufik-VPhUbtVhg7JBf_PO2uP4MVSU-KL5cEy-PvRY_0,2316
+spams_wrap/.dylibs/libopenblasp-r0.3.13.dylib,sha256=x2a47qnr_QJtKk8gQoisDCEK8Umcc8jTs66FG-Botj0,61547424
+spams_wrap/.dylibs/libgfortran.5.dylib,sha256=NRh86sThDVK7sMAAPIWBQ5LajFVijTydeAfktqWUnxg,3305048
+spams_wrap/.dylibs/libquadmath.0.dylib,sha256=9Y-Um_bnv80bjYLI9kKYSYNMkRDWaLqAl-H2Ce0LWpw,343240
+spams_wrap/.dylibs/libgcc_s.1.dylib,sha256=jSssSHbd1r4Dw0KFpjirJvUJE4XqfGPvA0-MzDE-E5U,169040
+spams_wrap/.dylibs/libgomp.1.dylib,sha256=a2bv75vJsPX-W3o3EwWYVdFbnJ3k4zRHIQr5OS5__8g,373352
+spams_bin-2.6.3.dist-info/RECORD,,
+spams_bin-2.6.3.dist-info/LICENSE,sha256=EqxQR_KvBSLwZ5ixWJ_8RZm8KckflU14dOAyBjTnd8A,35122
+spams_bin-2.6.3.dist-info/WHEEL,sha256=bRe_g_g-vZInZP5wOdewl-4AeWx8E2_UC3Ffr2csPyk,109
+spams_bin-2.6.3.dist-info/top_level.txt,sha256=3eyGfMfOg3p44Y3heb4Yn7k-YKwYThwTKPfbIfqS2Yc,17
+spams_bin-2.6.3.dist-info/METADATA,sha256=lrmoI-0e8q8wT7xKQXrVISUsgmAkdxawgXlGdQ7txoo,893
