@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: software-retina
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/hanl00/software-retina
+Author: hanl00
+Author-email: nloo33755@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/hanl00/software-retina/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Intro
+
+## Purpose
+
+To optimise the existing retina generation and sampling methods
+
+
+### Sources:
+* https://github.com/georgeKillick90/Retina
+* https://github.com/Pozimek/RetinaVision
+
