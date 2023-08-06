@@ -1,0 +1,3 @@
+[console_scripts]
+ngmaster = ngmaster.run_ngmaster:main
+
