@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: modelpyxl
+Version: 0.0.8
+Summary: Python package for creation model of excel documents based on a workbook template.
+Home-page: https://github.com/pborisenko/modelpyxl/
+Author: Petr Borisenko
+Author-email: borisenko.petr.a@gmail.com
+License: UNKNOWN
+Description: # modelpyxl
+        Python package for creation model of excel documents based on a workbook template.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
