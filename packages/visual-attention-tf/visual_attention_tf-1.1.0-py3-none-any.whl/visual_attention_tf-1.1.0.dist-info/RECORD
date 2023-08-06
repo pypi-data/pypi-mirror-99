@@ -1,0 +1,8 @@
+visual_attention/__init__.py,sha256=5MPTqOlo3ig8Z0DzZqkfpABs18pIOUXDZl3aQvICBPA,127
+visual_attention/channel_attention.py,sha256=u4HGWXZNzaeCOuttbxyJ7M15j6WLURxPw_QaDOEQ8kE,1784
+visual_attention/pixel_attention.py,sha256=Y4sq-iFJHXYBLDRZH7HM78NCLmkWZd6_k940-EAdsco,1595
+visual_attention_tf-1.1.0.dist-info/LICENSE,sha256=uB783eANF7kcDI6jBIlJoQi6mGP1vmT-OGkmE_pUtTM,1071
+visual_attention_tf-1.1.0.dist-info/METADATA,sha256=dZKgZ1lJqoXHuJo_zkWM-mnNfeWMm0Wf6tH9bmkNEN8,2253
+visual_attention_tf-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+visual_attention_tf-1.1.0.dist-info/top_level.txt,sha256=i8TjFL0kOD8qHxV47_IumXR1oh9ZaVVCCatesEZgyEg,17
+visual_attention_tf-1.1.0.dist-info/RECORD,,
