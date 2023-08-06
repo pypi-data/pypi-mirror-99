@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements-dev.txt
+requirements.txt
+setup.py
+coords_transformer.egg-info/PKG-INFO
+coords_transformer.egg-info/SOURCES.txt
+coords_transformer.egg-info/dependency_links.txt
+coords_transformer.egg-info/requires.txt
+coords_transformer.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_coords_transformer.py
+tests/test_create_point_from_centerpoint_size_zoom.py

@@ -1,0 +1,11 @@
+attrs
+dataclasses
+importlib-metadata
+iniconfig
+packaging
+pluggy
+py
+pyparsing
+toml
+typing-extensions
+zipp

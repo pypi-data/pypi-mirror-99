@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: coords-transformer
+Version: 0.0.1
+Summary: Transform pixel coordinates to tile coordinates
+Home-page: https://github.com/sagri-tokyo/coordinates-transformer
+Author: tsurutan
+Author-email: tsurutan.android@gmail.com
+License: MIT
+Description: # coords-transformer
+        
+        coords-transformer is a library to transform pixel coordinates to latitude and longitude coordinates, and vise versa.
+        
+Keywords: coordinates transformer
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
