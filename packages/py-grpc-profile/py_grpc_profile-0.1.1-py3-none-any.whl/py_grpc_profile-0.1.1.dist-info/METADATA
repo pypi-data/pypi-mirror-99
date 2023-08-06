@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-grpc-profile
+Version: 0.1.1
+Summary: profile the grpc server
+License: Apache-2.0
+Author: Yoshiyuki HINO
+Author-email: yhinoz@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: grpcio (>=1.34.1,<2.0.0)
+Requires-Dist: importlib-metadata (>=0.12); python_version < "3.8"
+Requires-Dist: pytest-asyncio (>=0.14.0,<0.15.0)
+Requires-Dist: pytest-grpc (>=0.8.0,<0.9.0)
