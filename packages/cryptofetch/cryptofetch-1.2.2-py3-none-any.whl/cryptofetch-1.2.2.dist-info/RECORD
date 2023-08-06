@@ -1,0 +1,9 @@
+cryptofetch/__init__.py,sha256=dl2_2ag1SKUm7o-hWx7h2ztZMaVZPZYicZl-2gmtQRw,66
+cryptofetch/__main__.py,sha256=OR_qdNnr8LM5gLJ6qHdcTtOjT4DG22jvVpje1-1eb5k,3763
+cryptofetch/fetcher.py,sha256=L4o28llFK6mXWJ6IeUNWjTElHs4WYIGoA0hnIBfnWG4,3659
+cryptofetch-1.2.2.dist-info/LICENSE,sha256=ZKjpm3Vtjzxp7l799Cmyx4GcaLzLUwsJ0pD7VceweyA,1072
+cryptofetch-1.2.2.dist-info/METADATA,sha256=XMPADhZAL3UyKq4oEG56quSVLFlZ9qqLaIAeatc0I7E,1668
+cryptofetch-1.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cryptofetch-1.2.2.dist-info/entry_points.txt,sha256=5bhCgDTigvxbVlwW6wO4jpZ_CW-0nX7yXCNU4akd2sk,50
+cryptofetch-1.2.2.dist-info/top_level.txt,sha256=9YK_o6I-SJcQmnNCUZrd34QEcoyTuFD2e6eeLYoBI9c,12
+cryptofetch-1.2.2.dist-info/RECORD,,
