@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: worker
+metadata:
+  name: lintwork
+spec:
+  aosp:
+    lint:
+      - --check Correctness,Correctness:Messages,Security,Compliance,Performance,Performance:Application Size,Usability:Typography,Usability:Icons,Usability,Productivity,Accessibility,Internationalization,Internationalization:Bidirectional Text
+      - --disable LintError
+      - --nolines
+      - --quiet
+    strings:
+  cpp:
+    cpplint:
+  java:
+    checkstyle:
+      - -jar ~/opt/checkstyle/lib/checkstyle.jar
+      - -c=~/opt/checkstyle/etc/google_checks.xml
+  linux:
+    checkpatch:
+      - --no-summary
+      - --no-tree
+      - --terse
+  python:
+    flake8:
+  shell:
+    shellcheck:
+      - --format=gcc
