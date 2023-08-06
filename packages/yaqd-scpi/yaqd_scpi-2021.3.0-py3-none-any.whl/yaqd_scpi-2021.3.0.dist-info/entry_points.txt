@@ -1,0 +1,5 @@
+[console_scripts]
+yaqd-scpi-sensor=yaqd_scpi._scpi_sensor:SCPISensor.main
+yaqd-scpi-set-continuous=yaqd_scpi._scpi_set_continuous:SCPISetContinuous.main
+yaqd-scpi-set-discrete=yaqd_scpi._scpi_set_discrete:SCPISetDiscrete.main
+

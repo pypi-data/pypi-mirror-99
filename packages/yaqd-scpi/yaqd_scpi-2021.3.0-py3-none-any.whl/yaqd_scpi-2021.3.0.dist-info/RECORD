@@ -1,0 +1,17 @@
+yaqd_scpi/VERSION,sha256=alMRlnnIvI8EgXIZxI0Ei2pX1Q8C0TyBh5jMt6ARGss,10
+yaqd_scpi/__init__.py,sha256=giIKOGOoAmirJ90DOXceFzm4xRRFFcJjIhvVD7nPWTU,67
+yaqd_scpi/__version__.py,sha256=RrpizLBELZvkvGMZGJSBVPSrcq70-n8leWLGJ1aRnjk,521
+yaqd_scpi/_scpi_sensor.py,sha256=NzNwgXIwRgrD--CPjxa_uv39oRXAeg8HP92QCEdE_uY,1054
+yaqd_scpi/_scpi_set_continuous.py,sha256=8Kbstb83CtNogEsUdq1FpKBHksWvLxEVCPlLkG3F1Lg,1354
+yaqd_scpi/_scpi_set_discrete.py,sha256=ZDmvpIoUWc0KlWT7sb7ZIK8EeZJnX62cCBPvuB97kTs,1614
+yaqd_scpi/scpi-sensor.avpr,sha256=v_lA8meDrcFyGdXeLdblSqhECP5S_9eaCD4O5Yyz-iU,8293
+yaqd_scpi/scpi-sensor.toml,sha256=dB-4MKdtNGogZyeazWv2zwHVq-FTuHy5q3JIw3aG94c,793
+yaqd_scpi/scpi-set-continuous.avpr,sha256=TFAep-bEY9-aTEqLIgTX7ZhlIdrcBNBDiSf06UtvWak,9882
+yaqd_scpi/scpi-set-continuous.toml,sha256=BIbF7J26vG4-7YuEXsH2XnYyLVdSrPqC5LHIgehjwNU,723
+yaqd_scpi/scpi-set-discrete.avpr,sha256=YpiuNa0rcdx2N5fBE3Ge40uS2pgsyI4LpOHjeRLkabE,9830
+yaqd_scpi/scpi-set-discrete.toml,sha256=huDdqDZ4ELGa99wGDF6zijphX-ibfpn8OhxvqAYMxyc,624
+yaqd_scpi-2021.3.0.dist-info/entry_points.txt,sha256=Q4pwGy58OK_C2ZynnMSNfqnd-gR4xWCwjduol9cEqZo,227
+yaqd_scpi-2021.3.0.dist-info/LICENSE,sha256=myG90K5zGxGTZne5oXgME7a95Rih22rkB0yPAYH69P8,7799
+yaqd_scpi-2021.3.0.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+yaqd_scpi-2021.3.0.dist-info/METADATA,sha256=v7xXHTnaRSaUV3KT8g0iS59YMr3HkByuIbk-krv2Jlk,1760
+yaqd_scpi-2021.3.0.dist-info/RECORD,,
