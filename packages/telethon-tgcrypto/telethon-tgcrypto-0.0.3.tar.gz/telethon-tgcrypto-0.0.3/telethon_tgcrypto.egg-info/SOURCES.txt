@@ -1,0 +1,8 @@
+README.rst
+setup.py
+cryptg/__init__.py
+telethon_tgcrypto.egg-info/PKG-INFO
+telethon_tgcrypto.egg-info/SOURCES.txt
+telethon_tgcrypto.egg-info/dependency_links.txt
+telethon_tgcrypto.egg-info/requires.txt
+telethon_tgcrypto.egg-info/top_level.txt
