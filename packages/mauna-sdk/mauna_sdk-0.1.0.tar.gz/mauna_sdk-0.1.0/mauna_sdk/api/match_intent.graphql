@@ -1,0 +1,22 @@
+query matchIntent(
+  $input: String!
+  $intent: [String!]!
+  $threshold: Float! = 0.7
+) {
+  callMatchIntent(
+    input: $input
+    possible_intents: $intent
+    similarity_threshold: $threshold
+  ) {
+    matches {
+      intent: matched_intent
+      confidence: similarity
+      slots: word_matches {
+        slot
+        value: extracted_word
+        match_type
+        confidence: similarity
+      }
+    }
+  }
+}

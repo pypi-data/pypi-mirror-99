@@ -1,0 +1,19 @@
+query toVec($text: String!) {
+  callNlpDoc(text: $text) {
+    has_vector
+    vector
+    vector_norm
+    sentences: sents {
+      has_vector
+      vector_norm
+      vector
+      text
+    }
+    entities: ents {
+      text
+      has_vector
+      vector_norm
+      vector
+    }
+  }
+}
