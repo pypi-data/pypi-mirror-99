@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/main/web_asset_vendor/__init__.py
+src/main/web_asset_vendor.egg-info/PKG-INFO
+src/main/web_asset_vendor.egg-info/SOURCES.txt
+src/main/web_asset_vendor.egg-info/dependency_links.txt
+src/main/web_asset_vendor.egg-info/requires.txt
+src/main/web_asset_vendor.egg-info/top_level.txt
+src/main/web_asset_vendor/models/__init__.py
+src/main/web_asset_vendor/models/asset.py
+src/main/web_asset_vendor/models/fetcher.py
+src/main/web_asset_vendor/models/resolver.py
+src/main/web_asset_vendor/utils/__init__.py
+src/main/web_asset_vendor/utils/exceptions.py
+src/main/web_asset_vendor/utils/exceptions_runtime.py
+src/main/web_asset_vendor/utils/regex.py

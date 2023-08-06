@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: web-asset-vendor
+Version: 0.1.0b1
+Summary: Downloading assets from the web in a reproducible way
+Home-page: https://github.com/funkykay
+Author: Kay Donner
+Author-email: web-asset-vendor@kaydonner.de
+Maintainer: Kay Donner
+Maintainer-email: web-asset-vendor@kaydonner.de
+License: Apache-2.0
+Description: # web-asset-vendor
+        
+        Downloading assets from the web in a reproducible way.
+        
+        Intentionally this was used to fetch web-dev assets like .js ans .css files from cdn's but the generic resolver pattern allows you to download everything you want (images, binarys, ...).
+        
+        ## Example Usage
+        
+        ### `main.py`
+        ```python
+        from web_asset_vendor import Fetcher
+        fetcher = Fetcher.from_yaml("dependencies.yaml")
+        fetcher.fetch()
+        ```
+        Note: Optionally one will not simply initialize Fetcher with a yaml file. Instead, one would use the Constructor.
+        
+        ### `dependencies.yaml`
+        ```yaml
+        config:
+          output: vendor/
+          fixiation: True  # WIP
+          resolvers:
+        
+            # CLOUDFLARE
+            - url: https://cdnjs.cloudflare.com/ajax/libs/${author}/${version}/js/${package}.min.js
+            - url: https://cdnjs.cloudflare.com/ajax/libs/${author}/${version}/css/${package}.min.css
+              tags: [ css ]
+        
+            # UNPKG
+            - url: https://unpkg.com/${package}@${version}/dist/${package}.min.js
+            - url: https://unpkg.com/${package}@${version}/dist/css/${package}.min.css
+              tags: [ css ]
+        
+        assets:
+          bootstrap.min.css:
+            folder: css/bootstrap
+            resolveWith: [ css ]
+            resolvedBy:
+              author: twitter-bootstrap
+              version: 4.6.0
+              package: bootstrap
+        
+          bootstrap.min.js:
+            folder: js/bootstrap
+            resolvedBy:
+              author: twitter-bootstrap
+              version: 4.6.0
+              package: bootstrap
+        
+          jquery.min.js:
+            resolvedBy:
+              version: 3.6.0
+              package: jquery
+        ```
+        
+        ### example output:
+        ```
+        .
+        +-- vendor
+        |   +-- css
+        |   |   +-- bootstrap
+        |   |   |   +-- bootstrap.min.css
+        |   +-- js
+        |   |   +-- bootstrap
+        |   |   |   +-- bootstrap.min.js
+        |   +-- uncategorized
+        |   |   +-- jquery.min.css
+        ```
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
