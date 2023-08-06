@@ -1,0 +1,106 @@
+"""Run scripts from the command_line
+
+This module was a simplifying proxy to stdlib's sys.exit()
+    but it's grown since then
+"""
+
+import sys
+from dataclasses import dataclass
+
+
+from pysyte.cli import arguments
+from pysyte.cli.config import load_configs
+from pysyte.types.paths import makepath
+from pysyte.types.methods import Callable
+from pysyte.types.methods import Method
+
+
+class MainMethod(Method):
+    def __init__(self, method):
+        super().__init__(method)
+        self.doc = self.doc if self.doc else self.module.__doc__
+        self.in_main_module = self.module.__name__ == "__main__"
+        self.needs_args = self.argcount > 0
+        self.needs_one_arg = self.argcount == 1
+
+    def __call__(self, *args_, **kwargs):
+        return self.method(*args_, **kwargs)
+
+
+@dataclass
+class CallerData:
+    method: MainMethod
+    add_args: Callable
+
+
+def run(
+    main_method,
+    add_args=None,
+    post_parse=None,
+    usage=None,
+    epilog=None,
+    config_name=None,
+):
+    """Run a main_method from command line, parsing arguments
+
+    if add_args(parser) is given it should add arguments to the parser
+    if add_args(make_parser, description, epilog, usage) is given
+        it can adjust help texts before making the parser
+    if pre_parse() is given then call it instead of sys.argv
+    if post_parse(args) is given then it is called with parsed args
+        and should return them after any adjustments
+        if config_name is given:
+            if it is a string then find configs for that
+            otherwise use the main_method's script's name
+        read config_name, as yaml, to data
+        call main_method(args, data)
+    else
+        call main_method(args)
+    """
+
+    class Caller(CallerData):
+        def arg_parser(self):
+            try:
+                return self.add_args(arguments.parser, self.method.doc, usage, epilog)
+            except TypeError:
+                try:
+                    return self.add_args(
+                        arguments.parser(self.method.doc, usage, epilog)
+                    )
+                except TypeError:
+                    raise NotImplementedError("Unknown signature for add_args()")
+
+        def parse_args(self):
+            if self.add_args:
+                parser = self.arg_parser()
+                assert parser  # Dont trust callers' coder to return the parser
+                return parser.parse_args(post_parser=post_parse)
+            assert self.method.needs_one_arg
+            return sys.argv[1:]
+
+        def config_name(self, name):
+            if not isinstance(name, str):
+                return makepath(self.method).name
+            p = makepath(name)
+            return p.name if p else name
+
+        def config(self):
+            return load_configs(self.config_name(config_name))
+
+        def main(self, argument_handler):
+            if self.method.needs_args:
+                global args  # leave parsed args available from this module
+                args = self.args = self.parse_args()
+            if config_name:
+                return self.method(args, self.config())
+            if self.method.needs_args:
+                return self.method(args)
+            return self.method()
+
+    caller = Caller(MainMethod(main_method), add_args)
+    if caller.method.in_main_module:
+        handler = arguments.ArgumentHandler()
+        sys.exit(handler.run(caller))
+
+
+args = {}
