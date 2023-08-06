@@ -1,0 +1,11 @@
+pgpgram/__init__.py,sha256=We4mfhuw7ojuq9x4HUy18uiapvNKrxGLzJTn0_jsRoA,37720
+pgpgram/color.py,sha256=ROKvkOPYQHqo_KbrQoporYYo_USdujVLvCdz-TdAaNo,1212
+pgpgram/config.py,sha256=0zp3E8cdiULHzt1sniaQydlCmvVhE9DCe9g8XCTD4Qg,2440
+pgpgram/libtdjson_Linux_x86_64.so,sha256=G1ndJk7mKeHPpz3pkRf29a7-lfqlVsZZqpZP3bKB310,22339696
+pgpgram/td.py,sha256=SGokpcTFD3gugYMxXQuhG2WSkGR_a2UDD9F7vNlWa3k,15157
+PGPgram-0.4.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+PGPgram-0.4.dist-info/METADATA,sha256=eQMeVjWltXAIjmqMu2-C9XPbDJoOPtvmIg9zAPbPDCY,6899
+PGPgram-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PGPgram-0.4.dist-info/entry_points.txt,sha256=lbX072mv6VTIQAu1wGeOPFQ5uD2r9PkWY2Wmd53gqWk,42
+PGPgram-0.4.dist-info/top_level.txt,sha256=55VM-7Bs4p4BI2aXvcbbV3uRZ5YHNMmW_6pN30inGa8,8
+PGPgram-0.4.dist-info/RECORD,,
