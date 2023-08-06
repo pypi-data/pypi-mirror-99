@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: agentpolis
+Version: 0.1.2
+Summary: service scripts for agentpolis simulation framework
+Home-page: https://github.com/aicenter/agentpolis
+Author: David Fiedler
+Author-email: david.fido.fiedler@gmail.com
+License: LGPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

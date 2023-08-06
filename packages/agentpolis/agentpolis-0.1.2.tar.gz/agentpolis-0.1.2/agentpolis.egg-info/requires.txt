@@ -1,0 +1,4 @@
+roadmaptools==4.1.0
+fconfig
+tqdm
+typing
