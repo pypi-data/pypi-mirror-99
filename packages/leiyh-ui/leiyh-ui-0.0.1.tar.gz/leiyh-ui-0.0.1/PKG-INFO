@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: leiyh-ui
+Version: 0.0.1
+Summary: 雷阳洪UI依赖包
+Home-page: https://gitee.com/lei-yanghong/leiyh-ui-test.git
+Author: leiyh
+Author-email: leiyh0802@126.com
+License: MIT Licence
+Description: 雷阳洪UI自动化依赖包和脚手架脚本
+Keywords: init,auto-ui-test
+Platform: UNKNOWN
