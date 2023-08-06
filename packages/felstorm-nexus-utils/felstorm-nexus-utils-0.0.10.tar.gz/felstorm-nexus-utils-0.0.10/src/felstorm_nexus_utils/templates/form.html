@@ -1,0 +1,28 @@
+(default form)
+
+<hr />
+
+{% if form.errors %}
+    <ul class="errors">
+        {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+            {% for error in field_errors %}
+                <li>{{ form[field_name].label }}: {{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    <hr />
+{% endif %}
+
+<form action="/{{nexus}}/form/" method="POST">
+ {% for field in form %}
+    <div>
+      {{ field.label() }}
+      {{ field() }}
+    </div>
+    <br />
+ {% endfor %}
+
+ <hr />
+ {% if form.errors %}^^ error ^^<hr />{% endif %}
+ <button type="submit">Submit</button>
+</form>
