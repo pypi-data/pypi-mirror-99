@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/Example/__init__.py
+src/MyLibrary_Jorge_Lopez.egg-info/PKG-INFO
+src/MyLibrary_Jorge_Lopez.egg-info/SOURCES.txt
+src/MyLibrary_Jorge_Lopez.egg-info/dependency_links.txt
+src/MyLibrary_Jorge_Lopez.egg-info/top_level.txt
