@@ -1,0 +1,53 @@
+
+[tool.poetry]
+name = "quick_zip"
+version = "v0.1.7"
+description = ""
+authors = ["hay-kot <hay-kot@pm.me>"]
+exclude = ["config.toml"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://hay-kot.github.io/quick-zip-cli/"
+documentation = "https://hay-kot.github.io/quick-zip-cli/"
+repository = "https://github.com/hay-kot/quick-zip-cli/"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=quick_zip"
+python_files = 'test_*'
+python_classes = '*Tests'
+python_functions = 'test_*'
+testpaths = [
+    "tests",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^1.8.1"
+typer = "^0.3.2"
+rich = "^9.13.0"
+requests = "^2.25.1"
+python-slugify = "^4.0.1"
+python-dotenv = "^0.15.0"
+pyzipper = "^0.3.4"
+toml = "0.10.2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+pylint = "^2.7.2"
+mkdocs-material = "^7.0.6"
+mkdocstrings = "^0.15.0"
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+
+[tool.poetry.scripts]
+qz = "quick_zip.main:main"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+ 
