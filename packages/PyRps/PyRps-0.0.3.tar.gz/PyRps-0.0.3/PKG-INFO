@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: PyRps
+Version: 0.0.3
+Summary: A gaming package for python
+Home-page: https://github.com/immmdreza/PyRps
+Author: immmdreza
+Author-email: ir310022@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/immmdreza/PyRps/issues
+Description: # RPS ( Rock - Paper - Scissors )
+        A game package!
+        
+        ## What's it?
+        It's Rock - Paper - Scissors  2 game with much more Card.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
