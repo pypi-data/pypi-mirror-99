@@ -1,0 +1,482 @@
+Metadata-Version: 2.1
+Name: truedata-ws
+Version: 3.0.1
+Summary: Truedata's Official Python Package
+Home-page: https://github.com/kapilmar/truedata-ws
+Author: Kapil Marwaha
+Author-email: kapil@truedata.in
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: websocket-client (>=0.57.0)
+Requires-Dist: colorama (>=0.4.3)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: pandas (>=1.0.3)
+Requires-Dist: setuptools (>=50.3.2)
+Requires-Dist: requests (>=2.25.0)
+
+# Official Python reposiory for TrueData (Market Data APIs)
+----
+This Python library attempts to make it easy for you to connect to TrueData Market Data Apis, thereby allowing you to concentrate on startegy development, while this library works to get you all the data you need from the TrueData backend both for Real Time & Historical.
+
+Please make sure you follow us on our Telegram channel where we push a lot of information with regards to API updates, implementation ideas, tips & tricks to use this library & raw feed, etc...
+* [TrueData Market Data API - Telegram Channel](https://t.me/truedata_ws_api)
+* [TrueData Market Data APIs - Website](https://www.truedata.in/api)
+
+We have also built a sandbox environmemt for testing the raw feed. Please feel free to use this environment to check/test/compare your results with the raw data feed (real time & historical).
+* [TrueData Market Data API - Sandbox Environemtn](https://wstest.truedata.in)
+
+We are trying to improve this library continuously and feedback for the same is welcome. 
+
+## What have we covered so far ?
+----
+
+**WebSocket APIs**
+
+  *  Live data (Streaming Ticks) - Enabled by Default
+  *  Live Data (Streaming 1 min bars) - Needs to be enabled from our backend
+  *  Live Data (Streaming 5 min bars) - Needs to be enabled from our backend
+  *  Historical APIs (Deprecated) - Removed from this library
+
+**REST APIs**
+  *  Historical Data
+
+### Getting Started 
+----
+**For beginners**
+
+* Installing the truedata-ws library from PyPi
+```shell script
+python3 -m pip install truedata_ws
+```
+or
+```shell script
+pip3 install truedata_ws
+```
+
+**Minimum Requirements**
+
+The minimum required versions are:-
+```
+- Python >= 3.7
+```
+Dependancies:-
+
+>All these dependancies should get installed automatically when you install the truedata_ws library. In case of an issue, make sure you meet the requirements as mentioned below.
+```
+- websocket-client>=0.57.0
+- colorama>=0.4.3
+- python-dateutil>=2.8.1
+- pandas>=1.0.3
+- setuptools>=50.3.2
+- requests>=2.25.0
+```
+
+**Connecting / Logging in**
+* Connecting / Logging in (Both Real time & Historical data feed subscriptions)
+```python
+from truedata_ws.websocket.TD import TD
+td_obj = TD('<enter_your_login_id>', '<enter_your_password>')
+# This connects you to the default real time port which is 8082 & the REST History feed. 
+# If you have been authourised on another live port please enter another parameter
+# Example
+# td_obj = TD('<enter_your_login_id>', '<enter_your_password>', live_port=8084)
+```
+* Connecting / Logging in (For Historical Data Subscription Only)
+```python
+from truedata_ws.websocket.TD import TD
+td_obj = TD('<enter_your_login_id>', '<enter_your_password>', live_port=None)
+```
+* Connecting / Logging in (For Real time Data Subscription Only)
+```python
+from truedata_ws.websocket.TD import TD
+td_obj = TD('<enter_your_login_id>', '<enter_your_password>', historical_port=None)
+# There is no historical_port as such. We continue to use this argument for the time being.
+# This needs to be None if you are not subscribed to the Historical data feed.
+```
+## Real Time Data Streaming (Live)
+----
+>Please note that you can use the same code as below for both Tick (Defauly) & Bar streaming, depending upon what is activted from the backend. 
+* Starting Live Data For a Single Symbol
+```python
+req_ids = td_obj.start_live_data(['<enter_symbol>'])
+# Example:
+# req_id = start_live_data(['CRUDEOIL-I'])
+# This returns a single element list that can be used later to reference the data
+```
+* Starting Live Data For Multiple symbols
+
+
+```python
+req_ids = td_obj.start_live_data(['<symbol_1>', '<symbol_2>', '<symbol_3>', ...])
+# Example:
+# req_ids = td_obj.start_live_data(['CRUDEOIL-I', 'BANKNIFTY-I', 'RELIANCE', 'ITC'])
+# This returns a list that can be used to reference data later
+```
+
+* Accessing Touchline Data 
+
+>The touchline data is useful post market hours as this provides the last updates / settlement updates / snap quotes. 
+
+>Please note that it is not recommended to use this during market hours as all the fields of the touchline data already form a part of the real time market data feed.
+
+```python
+import time
+time.sleep(1)
+# You need to wait until for 1 sec for all of the touchline data to populate
+for req_id in req_ids:
+    print(td_obj.touchline_data[req_id])
+```
+
+* Sample code for testing Real Time Live Market Data
+
+>The Real Time Market data stream contains all the fields from the raw feed and does calculations to provide additional fields like "change", "change %"", "oi change" & "oi change %". 
+
+```python
+from copy import deepcopy
+import time
+
+symbols = ['CRUDEOIL-I', 'BANKNIFTY-I', 'RELIANCE', 'ITC']
+req_ids = td_obj.start_live_data(symbols)
+live_data_objs = {}
+time.sleep(1)
+for req_id in req_ids:    
+    live_data_objs[req_id] = deepcopy(td_obj.live_data[req_id])
+
+while True:
+    for req_id in req_ids:
+        if live_data_objs[req_id] != td_obj.live_data[req_id]:
+            print(td_obj.live_data[req_id])
+            live_data_objs[req_id] = deepcopy(td_obj.live_data[req_id])
+```
+**Tips for Beginners - Sample code to get any field in Real Time**
+
+> Everything is an object
+> You can get any data field you need from this object...
+> Say, you only need the LTP in Real time,  then just use '.ltp', like so...
+```
+td_app.live_data[req_id].ltp
+```
+> Here is a sample code to get the real time data in the following format:-
+
+Symbol > LTP > Change
+
+> Try this code to understand how to use it better in your code. 
+```Python
+req_ids = td_app.start_live_data(symbols)
+live_data_objs = {}
+
+time.sleep(1)
+
+for req_id in req_ids:
+    live_data_objs[req_id] = deepcopy(td_app.live_data[req_id])
+
+while True:
+    for req_id in req_ids:
+        if not td_app.live_data[req_id] == live_data_objs[req_id]:
+            print(td_app.live_data[req_id].symbol, '>',
+                  td_app.live_data[req_id].ltp,'>',
+                  f'{td_app.live_data[req_id].change:.2f}')
+            live_data_objs[req_id] = deepcopy(td_app.live_data[req_id])
+```            
+* Stopping live data
+```python
+td_obj.stop_live_data(['<symbol_1>', '<symbol_2>', '<symbol_3>', ...])
+```
+* Disconnect from the WebSocket service
+```python
+td_obj.disconnect()
+```
+
+### Getting Historical data
+----
+>Historical Data is provided over REST (from the backend) using Start time, End time or Duration 
+
+* Using no parameters
+```python
+hist_data_1 = td_obj.get_historic_data('BANKNIFTY-I')
+# This returns 1 minute bars from the start of the present day until current time
+```
+
+* Using a given duration (For available duration options, please read the limitations section)
+```python
+hist_data_2 = td_obj.get_historic_data('BANKNIFTY-I', duration='3 D')
+```
+* Using a specified bar_size (For available bar_size options, please read the limitations section)
+```python
+hist_data_3 = td_obj.get_historic_data('BANKNIFTY-I', bar_size='30 mins')
+```
+* Using start time INSTEAD of duration
+```python
+from dateutil.relativedelta import relativedelta
+hist_data_4 = td_obj.get_historic_data('BANKNIFTY-I', start_time=datetime.now()-relativedelta(days=3))
+```
+* Using a specific ending time
+```python
+from datetime import datetime
+hist_data_5 = td_obj.get_historic_data('BANKNIFTY-I', end_time=datetime(2021, 3, 5, 12, 30))
+# Any time can be given here
+```
+* Enabling / Disabling Bid Ask data with Tick Data History
+
+ >  If you have subscribed for Historical Bid Ask (Not activated by Default), you can control the visibility of this data depending upon your needs by using bidask = True. 
+
+>   Default is  bidask=False > BidAsk data will not come in this case.
+```python
+hist_data_6 = td_app.get_historic_data(symbol, duration='1 D', bar_size='tick', bidask=True)
+```
+**IMPORTANT NOTE:**
+> Now that we have covered the basic parameters, you can mix and match the parameters as you please... If a parameter is not specified, the defaults are as follows
+```python
+end_time = datetime.now()
+duration = "1 D"
+bar_size = "1 min"
+```
+
+* Example of mix and match
+```python
+hist_data_7 = td_obj.get_historic_data('BANKNIFTY-I', duration='3 D', bar_size='15 mins')
+```
+
+*On a side note: You can convert historical data to **Pandas DataFrames** with a single line*
+```python
+import pandas as pd
+df = pd.DataFrame(hist_data_1)
+```
+**Get Bhavcopy**
+
+This function enables you to get the NSE & MCX bhavcopies for the day / date. 
+```python
+hist_data_8 = td_app.get_bhavcopy('EQ')
+# hist_data_9 = td_app.get_bhavcopy('FO')
+# hist_data_10 = td_app.get_bhavcopy('MCX')
+```
+>When the request is sent the function checkes if the latest completed bhavcopy has arrived for that segment and if arrived automatically provides the data. 
+
+>In case it has not arrived it provides the date and time of the last bhavcopy available which can also be pulled by provideing the bhavcopy date
+```
+*No complete bhavcopy found for requested date. Last available for 2021-03-19 16:46:00.*
+```
+>In this case, if you need the bhavcopy of the date provided, you can get it by giving the date for which the bhavcopy is required as shown below..
+```python
+hist_data_11 = td_app.get_bhavcopy('EQ', date=datetime.datetime(2021, 3, 19))
+```
+**Limitations and caveats for historical data**
+
+1) If you provide both duration and start time, duration will be used and start time will be ignored.
+2) If you provide neither duration nor start time, duration = "1 D" will be used
+3) If you donot provide the bar size bar_size = "1 min" will be used
+4) The following BAR_SIZES are available:
+
+    - tick
+    - 1 min
+    - 2 mins
+    - 3 mins
+    - 5 mins
+    - 10 mins
+    - 15 mins
+    - 30 mins
+    - 60 mins
+    - EOD
+
+5) The following annotation can be used for DURATION:-
+
+    - D = Days
+    - W = Weeks
+    - M = Months
+    - Y = Years
+
+## Sample Code & Tests
+----
+**Running tests to ensure everything is in order** 
+```shell script
+python3.7 -m truedata_ws run_all_tests <enter_your_login_id> <enter_your_password>
+```
+
+**Sample Code - Historical & Real time data**
+
+1) Please copy this code and paste > run it in your python environment.
+2) You need to enter your login id & password to make this code works
+3) This code first downloads Historical data in 9 different ways and also shows you the commands used to get that data 
+4) The Historical data is then put into a pandas Dataframe also.
+5) Please note that if the market is closed on the test day, you will get 'No Data Exists for <symbol>' returns for the current day's data tests.
+6) Real time Live Data tests come towards the end and include printing of the touchline data followed by the live real time data stream.
+
+```python
+from truedata_ws.websocket.TD import TD
+from copy import deepcopy
+from time import sleep
+import pandas as pd
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+from colorama import Style, Fore
+
+username = '<enter_your_username>'
+password = '<enter_your_password>'
+
+symbols = ['NIFTY-I', 'RELIANCE', 'BANKNIFTY-I']
+
+# ------- In this sample, we use the first of the above given symbols for historical data
+symbol = symbols[0]
+test_time = datetime.today()
+
+#  Creating our object
+td_obj = TD(username, password, live_port=8082)
+
+print('Please wait.. Beginning Historical Data Test !')
+
+# ------- Beginning historical data test...
+hist_data_1 = td_obj.get_historic_data(f'{symbol}')
+hist_data_2 = td_obj.get_historic_data(f'{symbol}', duration='3 D')
+hist_data_3 = td_obj.get_historic_data(f'{symbol}', duration='3 D', bar_size='15 mins')
+hist_data_4 = td_obj.get_historic_data(f'{symbol}', bar_size='30 mins')
+hist_data_5 = td_obj.get_historic_data(f'{symbol}', bar_size='30 mins', start_time=test_time - relativedelta(days=3))
+hist_data_6 = td_obj.get_historic_data(f'{symbol}', bar_size='EOD', duration='1 M')
+
+# Testing tick historical data
+tick_hist_data_1 = td_obj.get_historic_data(f'{symbol}', bar_size='tick')
+tick_hist_data_2 = td_obj.get_historic_data(f'{symbol}', bar_size='tick', duration='3 D')
+tick_hist_data_3 = td_obj.get_historic_data(f'{symbol}', bar_size='tick', start_time=test_time - relativedelta(days=3))
+
+# Printing out the results
+print(f'{Style.BRIGHT}{Fore.BLUE}------------- HIST BAR DATA TEST RESULTS -------------{Style.RESET_ALL}')
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 1...\n"
+      f"\tCommand used -> hist_data_1 = td_app.get_historic_data('{symbol}')\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_1)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_1[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 2...\n"
+      f"\tCommand used -> hist_data_2 = td_app.get_historic_data('{symbol}', duration='3 D')\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_2)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_2[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 3...\n"
+      f"\tCommand used -> hist_data_3 = td_app.get_historic_data('{symbol}', duration='3 D', bar_size='15 mins')\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_3)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_3[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 4...\n"
+      f"\tCommand used -> hist_data_4 = td_app.get_historic_data('{symbol}', bar_size='30 mins')\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_4)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_4[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 5...\n"
+      f"\tCommand used -> hist_data_5 = td_app.get_historic_data('{symbol}', bar_size='30 mins', start_time=datetime({(test_time - relativedelta(days=3)).strftime('%Y, %m, %d, %H, %M, %S').replace(' 0', ' ')}))\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_5)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_5[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}HISTDATA 6...\n"
+      f"\tCommand used -> hist_data_6 = td_obj.get_historic_data(f'{symbol}', bar_size='EOD', duration='1 M'))\n"
+      f"\tLENGTH OF RESULT = {len(hist_data_6)}{Style.RESET_ALL}")
+
+for hist_point in hist_data_6[-20:]:
+    print(hist_point)
+print()
+print()
+print(f'{Style.BRIGHT}{Fore.BLUE}------------- HIST TICK DATA TEST RESULTS -------------{Style.RESET_ALL}')
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}TICKDATA 1...\n"
+      f"\tCommand used -> tick_data_1 = td_app.get_historic_data('{symbol}', bar_size='tick')\n"
+      f"\tLENGTH OF RESULT = {len(tick_hist_data_1)}{Style.RESET_ALL}")
+
+for hist_point in tick_hist_data_1[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}TICKDATA 2...\n"
+      f"\tCommand used -> tick_data_2 = td_app.get_historic_data('{symbol}', bar_size='tick', duration='3 D')\n"
+      f"\tLENGTH OF RESULT = {len(tick_hist_data_2)}{Style.RESET_ALL}")
+
+for hist_point in tick_hist_data_2[-20:]:
+    print(hist_point)
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}TICKDATA 3...\n"
+      f"\tCommand used -> tick_data_3 = td_app.get_historic_data('{symbol}', bar_size='tick', start_time=datetime({(test_time - relativedelta(days=3)).strftime('%Y, %m, %d, %H, %M, %S').replace(' 0', ' ')}))\n"
+      f"\tLENGTH OF RESULT = {len(tick_hist_data_3)}{Style.RESET_ALL}")
+
+for hist_point in tick_hist_data_3[-20:]:
+    print(hist_point)
+
+# Testing conversion to pandas dataframe
+print(f'{Style.BRIGHT}{Fore.BLUE}Converting HISTDATA 1 to a Pandas DataFrame{Style.RESET_ALL}')
+print(f'Command used -> df = pd.DataFrame(hist_data_1)')
+df = pd.DataFrame(hist_data_1)
+print(df)
+
+print(f'{Style.BRIGHT}{Fore.BLUE}Converting TICKDATA 1 to a Pandas DataFrame{Style.RESET_ALL}')
+print(f'Command used -> df = pd.DataFrame(tick_hist_data_1)')
+df = pd.DataFrame(tick_hist_data_1)
+print(df)
+
+# ------- Beginning live data test...
+req_ids = td_obj.start_live_data(symbols)
+sleep(3)  # This is here just to give the touchline data some time to populate... (Generally takes less than 1 sec)
+print(f"{Style.BRIGHT}{Fore.BLUE}Here's the touchline data...{Style.RESET_ALL}")
+
+for req_id in req_ids:
+    print(td_obj.touchline_data[req_id])
+print()
+print(f"{Style.BRIGHT}{Fore.BLUE}Here's the LIVE stream... Stop code execution to exit...{Style.RESET_ALL}")
+sleep(2)  # This is here just to give the user time to read the instructions...
+live_data_objs = {}
+
+for req_id in req_ids:    
+    live_data_objs[req_id] = deepcopy(td_obj.live_data[req_id])
+while True:
+    try:
+        for req_id in req_ids:
+            if live_data_objs[req_id] != td_obj.live_data[req_id]:
+                print(td_obj.live_data[req_id])
+                live_data_objs[req_id] = deepcopy(td_obj.live_data[req_id])
+    except KeyboardInterrupt:
+        td_obj.stop_live_data(symbols)
+        td_obj.disconnect()
+        exit()
+
+```
+
+# Release Notes
+----
+Version 3.0.1
+* Historical feed via Websocket - Deprecated
+* Historical feed via REST - Added 
+* More time frames have been added
+* ```get_bhavcopy``` added
+* Code cleaned up to improve dependancy handling (eg. for websocket-client)
+
+Version 0.3.11
+* Refactored ```query_time``` to ```end_time``` in ```td_obj.get_historic_data()``` function.
+* Refactored ```truedata_id``` to ```symbol_id``` in ```td_obj.touchline_data``` objects.
+* Filled missing values in ```td_obj.live_data``` objects upon initialization.
+* Added better debugging information for error reporting.
+* Cleaned up the code base.
+
+### Stay Updated with the latest on this API
+>Please make sure you follow us on our Telegram channel where we push a lot of information with regards to API updates, implementation ideas, tips & tricks to use this library & raw feed, etc...
+* [TrueData Market Data API - Telegram Channel](https://t.me/truedata_ws_api)
+* [TrueData Market Data APIs - Website](https://www.truedata.in/api)
+
+### Sandbox Environment
+>We have also built a sandbox environmemt for testing the raw feed. Please feel free to use this environment to check/test/compare your results with the raw data feed (real time & historical).
+* [TrueData Market Data API - Sandbox Environemtn](https://wstest.truedata.in)
+
+We are trying to improve this library continuously and feedback for the same is welcome. 
+
+:D
+
+
