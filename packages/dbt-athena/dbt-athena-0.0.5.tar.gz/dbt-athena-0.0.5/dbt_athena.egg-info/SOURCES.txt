@@ -1,0 +1,16 @@
+README.md
+setup.py
+dbt/__init__.py
+dbt/adapters/__init__.py
+dbt/adapters/athena/__init__.py
+dbt/adapters/athena/connections.py
+dbt/adapters/athena/impl.py
+dbt/adapters/athena/relation.py
+dbt/include/__init__.py
+dbt/include/athena/__init__.py
+dbt_athena.egg-info/PKG-INFO
+dbt_athena.egg-info/SOURCES.txt
+dbt_athena.egg-info/dependency_links.txt
+dbt_athena.egg-info/not-zip-safe
+dbt_athena.egg-info/requires.txt
+dbt_athena.egg-info/top_level.txt
