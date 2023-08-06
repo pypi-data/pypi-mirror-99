@@ -1,0 +1,10 @@
+README.md
+setup.py
+nestedarchive/__init__.py
+nestedarchive/get.py
+nestedarchive/remote.py
+nestedarchive.egg-info/PKG-INFO
+nestedarchive.egg-info/SOURCES.txt
+nestedarchive.egg-info/dependency_links.txt
+nestedarchive.egg-info/requires.txt
+nestedarchive.egg-info/top_level.txt
