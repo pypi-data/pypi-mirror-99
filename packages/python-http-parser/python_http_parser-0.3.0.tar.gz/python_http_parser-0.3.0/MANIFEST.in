@@ -1,0 +1,18 @@
+include CHANGELOG.rst
+include LICENSE
+include README.rst
+
+include Makefile
+
+include pyproject.toml
+include setup.cfg
+include setup.py
+include .rstcheck.cfg
+
+exclude python_http_parser/stream_parser.**
+
+graft requirements
+graft tests
+graft docs
+
+global-exclude *.pyc
