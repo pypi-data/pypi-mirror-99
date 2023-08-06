@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: urlscan
+Version: 0.9.6
+Summary: View/select the URLs in an email message or file
+Home-page: https://github.com/firecat53/urlscan
+Author: Scott Hansen
+Author-email: firecat4153@gmail.com
+License: GPLv2
+Download-URL: https://github.com/firecat53/urlscan/archive/0.9.6.zip
+Description: UNKNOWN
+Keywords: urlscan urlview email mutt tmux
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Console :: Curses
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
