@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""
+regview
+"""
+
+import argparse
+import re
+import sys
+
+from concurrent.futures import ThreadPoolExecutor
+from getpass import getpass
+from shutil import get_terminal_size
+
+from _regview.docker_registry import DockerRegistry
+from _regview.utils import pretty_date, pretty_size
+from _regview import __version__
+
+
+class DockerRegistryInfo(DockerRegistry):
+    """
+    Subclass of DockerRegistry
+    """
+    def get_info(self, repo, tag):
+        """
+        Get info from manifest v2
+        """
+        manifest = self.get_manifest(repo, tag)
+        if not manifest:
+            return None
+        info = {
+            'Digest': tag if tag.startswith("sha256:") else manifest['docker-content-digest'],
+            'CompressedSize': sum([_['size'] for _ in manifest['layers']]),
+            'ID': manifest['config']['digest']}
+        return info
+
+    def print_fat(self, repo, tag="latest"):
+        """
+        Print fat manifest
+        """
+        fat_manifest = self.get_manifest(repo, tag, fat=True)
+        if fat_manifest is None:
+            sys.exit(1)
+        elif fat_manifest['schemaVersion'] == 1:
+            # Docker distribution may send a v1 when asked for a fat v2 that doesn't exist
+            self.print_fullinfo(repo, tag)
+            return
+        for item in fat_manifest['manifests']:
+            info = self.get_info(repo, tag)
+            keys = ('architecture', 'os', 'variant')
+            info.update({key: item['platform'][key] for key in keys if key in item['platform']})
+            keys = ('features', 'os.features')
+            info.update({key: ",".join(info[key]) for key in keys if key in info})
+            for key, value in sorted(info.items()):
+                print(f"{key:<20}\t{value}")
+            print()
+
+    def print_fullinfo(self, repo, tag="latest"):
+        """
+        Print full info about image
+        """
+        info = self.get_info(repo, tag)
+        if info is None:
+            return
+        info.update(self.get_blob(repo, info['ID']).json())
+        if not opts.raw:
+            info['created'] = pretty_date(info['created'])
+            info['CompressedSize'] = pretty_size(info['CompressedSize'])
+        keys = (
+            'architecture', 'author', 'created', 'docker_version', 'os',
+            'CompressedSize', 'ID', 'Digest')
+        data = {key: info[key] for key in keys if info.get(key)}
+        keys = (
+            'Cmd', 'Entrypoint', 'Env', 'ExposedPorts',
+            'Healthcheck', 'Labels', 'OnBuild', 'Shell',
+            'StopSignal', 'User', 'Volumes', 'WorkingDir')
+        if opts.verbose:
+            data.update({key: info['config'][key] for key in keys if info['config'].get(key)})
+        for key in sorted(data, key=str.casefold):
+            print(f"{key:<20}\t{data[key]}")
+        if opts.verbose:
+            self.print_history(info['history'])
+
+    @staticmethod
+    def print_history(history):
+        """
+        Print image history
+        """
+        for i, item in enumerate(history):
+            print(f"History[{i}]\t\t{item['created_by']}")
+
+    @staticmethod
+    def print_info(repo, tag, info, fmt):
+        """
+        Print info about image
+        """
+        docker_id = info['ID']
+        if not opts.no_trunc:
+            docker_id = docker_id[len("sha256:"):len("sha256:") + 12]
+        values = [f"{repo}:{tag}", docker_id]
+        if opts.digests:
+            values.insert(1, info['Digest'])
+        if opts.verbose:
+            created = info['created']
+            if not opts.raw:
+                created = pretty_date(created)
+            values.append(created)
+        print(fmt % tuple(values))
+
+    def get_images(self, repos, pattern_tag=None):
+        """
+        Get images"
+        """
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            yield from executor.map(lambda r: (r, self.get_tags(r, pattern_tag)), repos)
+
+    def print_all(self, glob_repo, glob_tag):
+        """
+        Print all
+        """
+        repos = self.get_repos(glob_repo)
+        if not repos:
+            sys.exit(0)
+        keys = ["REPOSITORY:TAG", "IMAGE ID"]
+        if opts.digests:
+            keys.insert(1, "DIGEST")
+        if opts.verbose:
+            keys.append("CREATED ON")
+        image_width = min(
+            int(get_terminal_size().columns / 2),
+            max(len(repo) for repo in repos) + 20)
+        fmt = f"%-{image_width}s"
+        if opts.digests:
+            fmt += "  %-72s"
+        fmt += "  %-72s" if opts.no_trunc else "  %-12s"
+        if opts.verbose:
+            fmt += "  %s"
+        print(fmt % tuple(keys))
+        with ThreadPoolExecutor() as executor:
+            for repo, tags in self.get_images(repos, glob_tag):
+                if tags is None:
+                    continue
+                infos = list(executor.map(lambda t, r=repo: self.get_info(r, t), tags))
+                if opts.verbose:
+                    digests = dict(
+                        executor.map(
+                            lambda d, r=repo: (d, self.get_blob(r, d).json()),
+                            {_['ID'] for _ in infos if _}))
+                for tag, info in zip(tags, infos):
+                    if info is None:
+                        continue
+                    if opts.verbose:
+                        info.update(digests[info['ID']])
+                    self.print_info(repo, tag, info, fmt)
+
+
+def parse_opts():
+    """
+    Parse options and arguments
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-a', '--all', action='store_true',
+        help="Print information for all architectures")
+    parser.add_argument(
+        '-c', '--cert',
+        help="Client certificate filename (may contain unencrypted key)")
+    parser.add_argument(
+        '-k', '--key',
+        help="Client private key filename (unencrypted)")
+    parser.add_argument(
+        '-C', '--cacert',
+        help="CA certificate for server")
+    parser.add_argument(
+        '--debug', action='store_true',
+        help="Enable debug")
+    parser.add_argument(
+        '--digests', action='store_true',
+        help="Show digests")
+    parser.add_argument(
+        '--insecure', action='store_true',
+        help="Allow insecure server connections")
+    parser.add_argument(
+        '--no-trunc', action='store_true',
+        help="Don't truncate output")
+    parser.add_argument(
+        '--raw', action='store_true',
+        help="Raw values for date and size")
+    parser.add_argument(
+        '-u', '--username',
+        help="Username for authentication")
+    parser.add_argument(
+        '-p', '--password',
+        help="Password for authentication")
+    parser.add_argument(
+        '-v', '--verbose', action='store_true',
+        help="Show more information")
+    parser.add_argument(
+        '-V', '--version', action='store_true',
+        help="Show version and exit")
+    parser.add_argument('image', nargs='?', help="REGISTRY[/REPOSITORY[:TAG|@DIGEST]]")
+    return parser.parse_args()
+
+
+def main():
+    """
+    Main function
+    """
+    if opts.version:
+        print(__version__)
+        sys.exit(0)
+    if not opts.image:
+        print(f"Usage: {sys.argv[0]} [OPTIONS] REGISTRY[/REPOSITORY[:TAG|@DIGEST]]")
+        sys.exit(1)
+    if opts.username and not opts.password:
+        opts.password = getpass("Password: ")
+    match = re.match(r'((?:https?://)?[^:/]+(?::[0-9]+)?)/*(.*)', opts.image)
+    registry, image = match.group(1), match.group(2)
+    glob_repo = glob_tag = None
+    if '@' not in image and re.search(r"\*|\?|\[", image):
+        glob_repo, glob_tag = image.split(':', 1) if ':' in image else (image, None)
+    with DockerRegistryInfo(
+            registry,
+            auth=(opts.username, opts.password) if opts.username else None,
+            cert=(opts.cert, opts.key) if opts.cert and opts.key else opts.cert,
+            headers={'User-Agent': f"regview/{__version__}"},
+            verify=opts.cacert if opts.cacert else not opts.insecure,
+            debug=opts.debug) as reg:
+        if image and not glob_repo:
+            sep = '@' if '@' in image else ':'
+            if opts.all and sep != '@':
+                reg.print_fat(*image.split(sep, 1))
+            else:
+                reg.print_fullinfo(*image.split(sep, 1))
+            return
+        reg.print_all(glob_repo, glob_tag)
+
+
+if __name__ == "__main__":
+    try:
+        opts = parse_opts()
+        main()
+    except KeyboardInterrupt:
+        sys.exit(1)
