@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/socpipe/__init__.py
+src/socpipe/socpipe.py
+src/socpipe.egg-info/PKG-INFO
+src/socpipe.egg-info/SOURCES.txt
+src/socpipe.egg-info/dependency_links.txt
+src/socpipe.egg-info/top_level.txt
