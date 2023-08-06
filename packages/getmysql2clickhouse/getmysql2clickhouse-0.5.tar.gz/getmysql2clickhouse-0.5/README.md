@@ -1,0 +1,1 @@
+# getmysql2clickhouse

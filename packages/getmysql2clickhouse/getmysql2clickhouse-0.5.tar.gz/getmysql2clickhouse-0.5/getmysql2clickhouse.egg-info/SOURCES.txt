@@ -1,0 +1,8 @@
+README.md
+setup.py
+getmysql2clickhouse/__init__.py
+getmysql2clickhouse.egg-info/PKG-INFO
+getmysql2clickhouse.egg-info/SOURCES.txt
+getmysql2clickhouse.egg-info/dependency_links.txt
+getmysql2clickhouse.egg-info/requires.txt
+getmysql2clickhouse.egg-info/top_level.txt
