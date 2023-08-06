@@ -1,0 +1,41 @@
+diff --git a/mpc_controller/locomotion_controller_example.py b/mpc_controller/locomotion_controller_example.py
+index a57038d..d565af5 100644
+--- a/mpc_controller/locomotion_controller_example.py
++++ b/mpc_controller/locomotion_controller_example.py
+@@ -35,10 +35,10 @@ FLAGS = flags.FLAGS
+ _NUM_SIMULATION_ITERATION_STEPS = 300
+ _BODY_HEIGHT = 0.42
+ _STANCE_DURATION_SECONDS = [
+-    0.3
++    0.5
+ ] * 4  # For faster trotting (v > 1.5 ms reduce this to 0.13s).
+-_DUTY_FACTOR = [0.6] * 4
+-_INIT_PHASE_FULL_CYCLE = [0.9, 0, 0, 0.9]
++_DUTY_FACTOR = [0.8] * 4
++_INIT_PHASE_FULL_CYCLE = [0.5, 0.0, 0.25, 0.75]
+ _MAX_TIME_SECONDS = 25
+ _MOTOR_KD = [1.0, 2.0, 2.0] * 4
+ 
+@@ -52,9 +52,9 @@ LAIKAGO_STANDING = (
+ 
+ def _generate_example_linear_angular_speed(t):
+   """Creates an example speed profile based on time for demo purpose."""
+-  vx = 0.6
+-  vy = 0.2
+-  wz = 0.8
++  vx = 0.3
++  vy = 0.05
++  wz = 0.5
+   time_points = (0, 5, 10, 15, 20, 25,30)
+   speed_points = ((0, 0, 0, 0), (0, 0, 0, wz), (vx, 0, 0, 0), (0, 0, 0, -wz), (0, -vy, 0, 0),
+                   (0, 0, 0, 0), (0, 0, 0, wz))
+@@ -79,7 +79,8 @@ def _setup_controller(robot):
+       robot,
+       stance_duration=_STANCE_DURATION_SECONDS,
+       duty_factor=_DUTY_FACTOR,
+-      initial_leg_phase=_INIT_PHASE_FULL_CYCLE)
++      initial_leg_phase=_INIT_PHASE_FULL_CYCLE,
++      initial_leg_state = LAIKAGO_STANDING)
+   state_estimator = com_velocity_estimator.COMVelocityEstimator(robot)
+   sw_controller = raibert_swing_leg_controller.RaibertSwingLegController(
+       robot,
