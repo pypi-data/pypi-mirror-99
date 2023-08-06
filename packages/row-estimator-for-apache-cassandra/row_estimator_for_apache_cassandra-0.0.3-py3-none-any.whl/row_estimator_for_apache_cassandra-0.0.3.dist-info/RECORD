@@ -1,0 +1,10 @@
+row_estimator_for_apache_cassandra/__init__.py,sha256=xRwh3R63SzFwdaMlg3nwYHZiz_ZZ96cYK8pbavMPT7I,641
+row_estimator_for_apache_cassandra/__main__.py,sha256=d16X3PJkY28KboAhOy8tO_NvHAiaIhkoKxTIigKJgFw,6976
+row_estimator_for_apache_cassandra/estimator.py,sha256=Sw_eMhOlqkTr40hf9K376k__QODEl7jW3ENpdKiKPRM,10002
+row_estimator_for_apache_cassandra-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+row_estimator_for_apache_cassandra-0.0.3.dist-info/METADATA,sha256=4vZdAbbBy5G_kJTzXQ-MDsuVWORp9cV_049aAyJJ-fs,5525
+row_estimator_for_apache_cassandra-0.0.3.dist-info/NOTICE.txt,sha256=RxmBXNKCNIf9vnEb1F_xssX89bsYT5HZrrOt6vb21ec,107
+row_estimator_for_apache_cassandra-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+row_estimator_for_apache_cassandra-0.0.3.dist-info/entry_points.txt,sha256=0DYsCMDZDtD6CDQQhm1BcWGm0CtYcQCB-d7oIBuraAo,94
+row_estimator_for_apache_cassandra-0.0.3.dist-info/top_level.txt,sha256=qP1B2k61io99Mlw_9s7QPu6e8PNehE0VPgb-HALcj5U,35
+row_estimator_for_apache_cassandra-0.0.3.dist-info/RECORD,,
