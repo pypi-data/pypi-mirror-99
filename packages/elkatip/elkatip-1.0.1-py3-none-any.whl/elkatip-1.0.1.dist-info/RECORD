@@ -1,0 +1,13 @@
+elkatip/__init__.py,sha256=Ka222lfz4RKBsl24rxCpHDcLjDDzU_r7NSgEBcV64ek,57
+elkatip/api.py,sha256=qaremCvWay8DPB07NZMkA_OBYZGK5mohvX7COYTq3Ys,9205
+elkatip/elkatip.py,sha256=EhNDhItZdXW-hGLcGz99Es2Qv9-w9vus3nQNNFKunSk,1099
+elkatip/gui.py,sha256=Z4ZEtaOx-YyPrF9MWCJcGngcY2QkRxeWciW_B4CShg0,4776
+elkatip/storage/ui.png,sha256=neVIn2NWBvtPefjVNTrMkT2-PI5lvA1e1rGPZGQpirY,23825
+elkatip/storage/uyghur-alphabet-map.json,sha256=q0tF9SdK7yDmWKDk4Mc0AiIUDee_yZZNtAqUU_eL3QQ,1716
+elkatip/storage/uyghur-frinedly-list.json,sha256=aBC1sihBY1F1GPe2hm-mmYoqPEvlhRrxkWPbKTnWNxY,220
+elkatip/storage/uyghur-other-map.json,sha256=aBC1sihBY1F1GPe2hm-mmYoqPEvlhRrxkWPbKTnWNxY,220
+elkatip-1.0.1.dist-info/LICENSE,sha256=n0jOmVDtIx7QlPiCr9tbQHMQHrZUtfgT4Xk0uv8hhVo,1086
+elkatip-1.0.1.dist-info/METADATA,sha256=9v7n9wnTW-OqlZ77BAFQDiJlRBC4jLfIS7mHHKKSrNE,2998
+elkatip-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+elkatip-1.0.1.dist-info/top_level.txt,sha256=b1T6wOOi5DgJ6d4GCP6NoC6D3JTKOT52LHWKapE_TJE,8
+elkatip-1.0.1.dist-info/RECORD,,
