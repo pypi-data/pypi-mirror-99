@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: docusign-monitor
+Version: 1.0.0a1
+Summary: DocuSign Monitor API - v2
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: devcenter@docusign.com
+License: UNKNOWN
+Keywords: Swagger,DocuSign Monitor API - v2
+Platform: UNKNOWN
+Requires-Dist: certifi (>=2017.4.17)
+Requires-Dist: python-dateutil (>=2.1)
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.23)
+
+An API for an integrator to access the features of DocuSign Monitor  # noqa: E501
+
+
