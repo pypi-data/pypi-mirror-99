@@ -1,0 +1,3 @@
+[console_scripts]
+devpod=devpod.console:cli
+
