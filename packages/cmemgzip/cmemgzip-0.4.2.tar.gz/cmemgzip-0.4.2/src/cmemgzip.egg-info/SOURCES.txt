@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/cmemgzip/__init__.py
+src/cmemgzip/cmemgzip.py
+src/cmemgzip.egg-info/PKG-INFO
+src/cmemgzip.egg-info/SOURCES.txt
+src/cmemgzip.egg-info/dependency_links.txt
+src/cmemgzip.egg-info/top_level.txt
