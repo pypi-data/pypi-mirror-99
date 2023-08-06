@@ -1,0 +1,13 @@
+dug/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dug/annotate.py,sha256=WrJ3tNRHBJaIQFyd76QoGbR119DdZqpo33v7FH_Zy24,24463
+dug/api.py,sha256=hRw_e7y8k3pxuKEMB8knRy0mj9ElZ_6iT37o38FshUA,8663
+dug/config.py,sha256=-rwd_GLBFCASZE7Sse4I8rHWNiwxVCYgbz4AEDjp-NE,2467
+dug/core.py,sha256=DVLkp2kGnFao3Y5GK3l86hXm1CSo8fhoFayLZkPrQBE,24351
+dug/parsers.py,sha256=gPgTeMlxgsuQ2Km3pqg3PD0E3BtyVDFhsUFSEltUzOk,9823
+dug/tranql.py,sha256=C9710WmSm-r2f_58Q1BvxwAJc22ri_BSQhPjIOOSAHo,7607
+dug/utils.py,sha256=vXC_JWHGMP_PQNq4eFcjhSZxLi4Gqmv98fTW3eGFq3M,1369
+dug_test-1.0.8.dist-info/LICENSE,sha256=N82f8Apy3nd8t0gQD7N09T-OE5yuwrpn_TX24dHzUlA,1096
+dug_test-1.0.8.dist-info/METADATA,sha256=1Gg0Zl387K_vYELwDtpCBj1rZ7aZyFzNDt2a6pr9sEs,20603
+dug_test-1.0.8.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+dug_test-1.0.8.dist-info/top_level.txt,sha256=UNms1b98Us0NouPeu_d6Ct27h_fIA2dGd7S06LTopCM,4
+dug_test-1.0.8.dist-info/RECORD,,
