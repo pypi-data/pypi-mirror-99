@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/hiding/__init__.py
+src/hiding.egg-info/PKG-INFO
+src/hiding.egg-info/SOURCES.txt
+src/hiding.egg-info/dependency_links.txt
+src/hiding.egg-info/top_level.txt
