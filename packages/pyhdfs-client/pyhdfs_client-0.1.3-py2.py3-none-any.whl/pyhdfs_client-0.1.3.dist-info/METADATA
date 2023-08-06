@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: pyhdfs-client
+Version: 0.1.3
+Summary: A py4j based hdfs client for python for native hdfs CLI performance.
+Home-page: https://github.com/gupta-paras/pyhdfs_client
+Author: Paras Gupta
+Author-email: paras_gupta@outlook.com
+License: MIT license
+Keywords: pyhdfs_client
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: py4j
+Requires-Dist: psutil
+
+# pyhdfs-client : Powerful HDFS Client for python
+
+[![https://pypi.python.org/pypi/pyhdfs_client](https://img.shields.io/pypi/v/pyhdfs_client.svg)](https://pypi.org/project/pyhdfs-client)
+
+## Why it's fast powerful?
+
+Native hdfs client offers much better performance than webhdfs clients. However calling native client for hadoop operations have an additional overhead of starting jvm. pyhdfs-client brings the performance of native hdfs client without any overhead of starting jvm on every command execution.
+<br>
+<br>
+
+
+## Features<hr>
+- HDFS client for python
+- Easy to integrate with python applications
+- Better Performance than webhdfs clients
+- Provide native hadoop client performance without any overhead
+- Support both UNIX and Windows<br><br>
+
+## Whats new in 0.1.3?
+- Multiple instances of HDFS client enabled.
+- [fix] Temporary folder deletion
+- [fix] Java process shutdown issues on UNIX
+
+
+<br>
+
+## Installation
+```
+pip install pyhdfs-client
+```
+ Requirements:  hadoop binaries and py4j installed<br><br>
+## Sample Usage<hr>
+```
+>>> from pyhdfs_client.pyhdfs_client import HDFSClient
+>>> hdfs_client = HDFSClient()
+>>> ret, out, err = hdfs_client.run(['-ls', '/'])
+>>> print(out)
+Found 1 items
+drwxr-xr-x   - gp supergroup          0 2021-03-21 01:10 /f1
+>>> hdfs_client.stop() # to terminate hdfs client
+```
+
+
+
+## Contribution 
+- Any contribution for enhancements and bug fixes is welcome.
+
+
+## Credits<hr>
+- This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
+
+## History<hr>
+- 0.1.2 (2021-03-23)
+    - added UNIX Support 
+- 0.1.1 (2021-03-22)
+    - First release on PyPI.
+
+
