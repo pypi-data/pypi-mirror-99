@@ -1,0 +1,3 @@
+[console_scripts]
+speaker_verification = speaker_verification:main
+
