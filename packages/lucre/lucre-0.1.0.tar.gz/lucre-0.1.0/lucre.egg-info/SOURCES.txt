@@ -1,0 +1,7 @@
+README.md
+setup.py
+lucre/__init__.py
+lucre.egg-info/PKG-INFO
+lucre.egg-info/SOURCES.txt
+lucre.egg-info/dependency_links.txt
+lucre.egg-info/top_level.txt

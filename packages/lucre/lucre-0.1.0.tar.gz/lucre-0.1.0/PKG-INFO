@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lucre
+Version: 0.1.0
+Summary: Plain Text Accounting
+Home-page: https://github.com/stevemccartney/lucre
+Author: Steve McCartney
+Author-email: python+lucre@reconvergent.com
+License: Apache-2.0
+Description: # Lucre
+        
+        Plain Text Accounting (PTA).
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
