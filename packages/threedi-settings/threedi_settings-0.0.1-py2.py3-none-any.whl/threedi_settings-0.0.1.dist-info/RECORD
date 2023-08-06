@@ -1,0 +1,17 @@
+threedi_settings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threedi_settings/import_simulation_settings.py,sha256=FaDJ5eNRNY8KpBxr5yqN9YkcUrzORB-ZRbyqzxEJ1QM,827
+threedi_settings/mappings.py,sha256=6XZaecixSVLBEsRs3eu-f5HRZ7idw7eDhEt8MJGU5O0,5900
+threedi_settings/models.py,sha256=NBZSEHzOR-Wasb79D3K7TT4TEdgEZLcLQg77TBG2x48,1684
+threedi_settings/threedimodel_config.py,sha256=ITsWrriOdIm2PGHZi9pBu8uXI-wnYGkA5SMW884BTNg,2665
+threedi_settings/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threedi_settings/commands/import_simulation_settings.py,sha256=3GTCmmdmcvMS54p5jiPNZhuK7jGS06Od0QWA4SnSG4c,1470
+threedi_settings/http/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threedi_settings/http/api_models.py,sha256=XlNY_JmKQAL5GglWOcvX68Cj5tIvqrhwIM6FsOsSLFw,11473
+threedi_settings/plain/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threedi_settings/plain/output.py,sha256=kyqx1FJjcpT_bM21SVteMYI03iZyDzgb-81_5vJzikg,2710
+threedi_settings-0.0.1.dist-info/AUTHORS.rst,sha256=kmr2BeQV8Fdm0IOCZyj_QFs0BP1BNpHFl5u6iuIIbSo,172
+threedi_settings-0.0.1.dist-info/LICENSE,sha256=_yWPGkkXSP1FxAF4HvzeioI5rvvBVZperSdCb195AhU,1072
+threedi_settings-0.0.1.dist-info/METADATA,sha256=Z2uDj0QF6XRLr4VBn4RCg5kaY9pGKBgO2wg2PjEHSSI,1414
+threedi_settings-0.0.1.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+threedi_settings-0.0.1.dist-info/top_level.txt,sha256=oD_qbp8KYWKRYo-DAeoM49-aHgoIr-H6xZQc2RniOj8,17
+threedi_settings-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: threedi-settings
+Version: 0.0.1
+Summary: Convert l
+Home-page: https://github.com/nens/threedi-settings
+Author: Lars Claussen
+Author-email: claussen.lars@nelen-schuurmans.nl
+License: MIT license
+Keywords: threedi_settings
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Provides-Extra: api
+Requires-Dist: threedi-api-client (>3.0.23) ; extra == 'api'
+Provides-Extra: cmd
+Requires-Dist: typer (>=0.3.2) ; extra == 'cmd'
+
+================
+threedi-settings
+================
+
+
+Convert legacy model ini settings files to API V3 resources.
+
+
+* Free software: MIT license
+* Documentation: https://threedi-settings.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.0.1 (2021-03-18)
+------------------
+
+* First release on PyPI.
+
+
