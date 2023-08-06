@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/cfile/__init__.py
+src/cfile.egg-info/PKG-INFO
+src/cfile.egg-info/SOURCES.txt
+src/cfile.egg-info/dependency_links.txt
+src/cfile.egg-info/top_level.txt
