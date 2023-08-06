@@ -1,0 +1,3 @@
+[console_scripts]
+prestoweb-run=server.run:main
+
