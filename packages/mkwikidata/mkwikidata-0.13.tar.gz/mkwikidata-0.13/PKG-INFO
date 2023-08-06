@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mkwikidata
+Version: 0.13
+Summary: Utility functions for working with Wikidata
+Home-page: https://github.com/maxim75/mkwikidata
+Author: Maksym Kozlenko
+Author-email: max@kozlenko.info
