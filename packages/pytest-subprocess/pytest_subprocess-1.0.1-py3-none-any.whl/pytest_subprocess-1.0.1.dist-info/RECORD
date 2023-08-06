@@ -1,0 +1,13 @@
+pytest_subprocess/__init__.py,sha256=GuHU0p-4uQpsce1dmE2yspH2B-tDKl6ymETdp75FtfU,212
+pytest_subprocess/core.py,sha256=magYXD-xB7BzF5yEeAyADwsbccMJwjURXj09N4gwRJw,13897
+pytest_subprocess/core.pyi,sha256=20k8UMwUcSDGMt3k0a2qyHCofzwJ-VsLXf0lKyNu3us,5250
+pytest_subprocess/fixtures.py,sha256=5cGpkpxXDnkTLhqkpuh_-mHWsKs2cb7ISDaKHbb7b_g,140
+pytest_subprocess/fixtures.pyi,sha256=nJU0YGVr97sryMOGg-rbmMZ7cnzymJBChqb6NKMzx_o,125
+pytest_subprocess/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_subprocess/utils.py,sha256=Tz_miH5sugaQ-sMmffR1IGpkZzW_GRAjZnRV9LdTfSE,3624
+pytest_subprocess-1.0.1.dist-info/LICENSE,sha256=l0BKzvm_sxxf4T0ZFxjEt8RU51hZmM6-PW3RprlRPBA,1084
+pytest_subprocess-1.0.1.dist-info/METADATA,sha256=8CePb_UbpEFI-o1AGeyIWut768CdfkKxxmL9Kq7gijM,19607
+pytest_subprocess-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_subprocess-1.0.1.dist-info/entry_points.txt,sha256=O95avX6Nqv4CawVMVNUE91T9Wl4FTzPldIGp3h9n4dg,52
+pytest_subprocess-1.0.1.dist-info/top_level.txt,sha256=INhXR0R592KmpNAi9EQwfv5au3XONO5uRsxD0_IJMtE,18
+pytest_subprocess-1.0.1.dist-info/RECORD,,
