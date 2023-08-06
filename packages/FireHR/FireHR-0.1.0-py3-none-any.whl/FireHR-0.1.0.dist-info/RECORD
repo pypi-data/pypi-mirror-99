@@ -1,0 +1,12 @@
+FireHR/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+FireHR/_nbdev.py,sha256=O7cEsaeSnK0uVocABIn_ffm9VkmObjtOwEqFrAe4xeg,1170
+FireHR/cli.py,sha256=Ud5fCqjCaGypiqMWM7UOXgYOdt807eGDgaFPRkfH_mQ,1679
+FireHR/data.py,sha256=IsGIbCCz7jjB34YXteIpQeEB9aK6JMrVL6KEesHisYc,19204
+FireHR/models.py,sha256=UvTfcgmevNpyyyeqg0jjbayCJYirTccqFZTFK1T_je8,2014
+FireHR/predict.py,sha256=Y09C1DkCLjUljX8ktKdP4N6tWEdNuTaBVQdKS7YQguE,1672
+FireHR-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+FireHR-0.1.0.dist-info/METADATA,sha256=ubDwljLeqsu_SKcM9Y8njbzKBT4TdjEyGkdUWDy7kdk,2289
+FireHR-0.1.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+FireHR-0.1.0.dist-info/entry_points.txt,sha256=1_RQoxftHfxDIXkGeCQCXmah6VzCowJLhiy39vK6ghw,82
+FireHR-0.1.0.dist-info/top_level.txt,sha256=jnuA1UQT3KvyByNirvRp1wQF0YihXxsYVSHJgGSny6U,7
+FireHR-0.1.0.dist-info/RECORD,,

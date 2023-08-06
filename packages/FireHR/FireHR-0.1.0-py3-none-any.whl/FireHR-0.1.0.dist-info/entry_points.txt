@@ -1,0 +1,3 @@
+[console_scripts]
+firehr_from_banet_events = FireHR.cli:firehr_from_banet_events
+
