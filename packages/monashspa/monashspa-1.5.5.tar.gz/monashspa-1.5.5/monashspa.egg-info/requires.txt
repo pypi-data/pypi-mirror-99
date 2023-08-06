@@ -1,0 +1,15 @@
+numpy>=1.15
+lmfit<2,>=1.0
+requests<3,>=2.21.0
+colorama<1,>=0.4.1
+pandas<2,>=1.0
+scipy==1.4.1
+six
+piradon
+matplotlib
+h5py
+
+[PHS3302]
+tensorflow==2.2.0
+keras
+sklearn
