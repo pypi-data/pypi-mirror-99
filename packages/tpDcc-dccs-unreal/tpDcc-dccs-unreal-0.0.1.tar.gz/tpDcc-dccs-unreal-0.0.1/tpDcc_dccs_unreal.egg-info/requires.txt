@@ -1,0 +1,15 @@
+tpDcc-libs-python
+tpDcc-core
+tpDcc-libs-qt
+
+[:python_version < "3"]
+natsort==6.2.1
+
+[:python_version >= "3"]
+natsort==7.1.0
+
+[dev]
+wheel
+
+[test]
+pytest
