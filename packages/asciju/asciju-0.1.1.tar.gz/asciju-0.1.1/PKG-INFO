@@ -1,0 +1,76 @@
+Metadata-Version: 1.2
+Name: asciju
+Version: 0.1.1
+Summary: Python package that converts image to ascii
+Home-page: https://github.com/aju100/asciju
+Author: Aju Tamang
+Author-email: ajutamang10@outlook.com
+License: MIT license
+Description: ======
+        asciju
+        ======
+        
+        
+        .. image:: https://img.shields.io/pypi/v/asciju.svg
+                :target: https://pypi.python.org/pypi/asciju
+        
+        .. image:: https://img.shields.io/travis/aju100/asciju.svg
+                :target: https://travis-ci.com/aju100/asciju
+        
+        .. image:: https://readthedocs.org/projects/asciju/badge/?version=latest
+                :target: https://asciju.readthedocs.io/en/latest/?version=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Python package that converts image to ascii
+        
+        
+        * Free software: MIT license
+        * Documentation: https://asciju.readthedocs.io.
+        
+        
+        
+        Features
+        --------
+        
+        * Conversion image to ASCII art
+        
+        Roadmap
+        --------
+        
+        * Text ASCII art
+        * Video conversion on ASCII Art
+        * Fix CLI argument parser
+        * Improved Documentation
+        * Unit Test
+        
+        
+        
+        =======
+        History
+        =======
+        
+        
+        0.1.1 (2021-03-21)
+        ------------------
+        * Improved docs
+        
+        0.1.0 (2021-03-21)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: asciju
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
