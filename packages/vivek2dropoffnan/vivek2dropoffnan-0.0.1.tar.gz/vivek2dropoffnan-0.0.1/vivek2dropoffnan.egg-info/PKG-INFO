@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: vivek2dropoffnan
+Version: 0.0.1
+Summary: A simple package to perform basic data cleaning in EDA
+Home-page: UNKNOWN
+Author: Vivek Suresh Raj
+Author-email: vivek.sureshraj@ucalgary.ca
+License: UNKNOWN
+Description: This is a simple library module with two functions to perform basic EDA steps including visualization of null values in each column and function to drop rows containing null values.
+        
+        Change log
+        ==========
+        
+        0.0.1 (22/03/2021)
+        ------------------
+        - First Release
+Keywords: data cleaning
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Intended Audience :: Education

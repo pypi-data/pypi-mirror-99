@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+vivek2dropoffnan/__init__.py
+vivek2dropoffnan.egg-info/PKG-INFO
+vivek2dropoffnan.egg-info/SOURCES.txt
+vivek2dropoffnan.egg-info/dependency_links.txt
+vivek2dropoffnan.egg-info/top_level.txt

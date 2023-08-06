@@ -1,0 +1,1 @@
+This is a simple library module with two functions to perform basic EDA steps including visualization of null values in each column and function to drop rows containing null values.
