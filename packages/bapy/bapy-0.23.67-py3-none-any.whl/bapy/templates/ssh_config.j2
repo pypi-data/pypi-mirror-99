@@ -1,0 +1,22 @@
+Host *
+  AddressFamily inet
+  BatchMode yes
+  CheckHostIP no
+  ControlMaster auto
+  ControlPath /tmp/ssh-%h-%r-%p
+  ControlPersist 20m
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_rsa
+  LogLevel QUIET
+  StrictHostKeyChecking no
+  User {{ user }}
+  UserKnownHostsFile /dev/null
+
+Host {{ github }}
+  HostName {{ github }}
+  User {{ GITHUB_ORGANIZATION_ID }}
+
+Host {{ github }}.{{ GITHUB_USERNAME }}
+  HostName {{ github }}
+  User {{ GITHUB_USERNAME }}
+  IdentityFile ~/.ssh/{{ GITHUB_USERNAME }}
