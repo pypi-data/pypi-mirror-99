@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: dash_dthree
+Version: 0.0.2
+Summary: a d3 module to be used visualizing animation polylines in dash
+Home-page: UNKNOWN
+Author: fusoyo <fengchuyao20@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Dash
