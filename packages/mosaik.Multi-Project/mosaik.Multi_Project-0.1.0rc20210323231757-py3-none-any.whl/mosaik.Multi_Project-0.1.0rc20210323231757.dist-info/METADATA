@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mosaik.Multi-Project
+Version: 0.1.0rc20210323231757
+Summary: Manage multiple mosaik projects with using common tooling.
+Home-page: https://gitlab.com/offis.energy/mosaik/mosaik.multi-project
+Author: Bengt Lüers
+Author-email: bengt.lueers@gmail.com
+Maintainer: Bengt Lüers
+Maintainer-email: bengt.lueers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click (>=7.0)
+
+# mosaik.Multi-Project
+
+Tooling for setting up and maintaining multiple (mosaik) projects.
+
+## Motivation
+
+[mosaik](https://mosaik.offis.de/) scenarios often contain multiple simulators.
+Sometimes, additional packages need to be developed alongside of them.
+Managing such a set of loosely coupled *projects* becomes laborious easily.
+This project provides tooling for some common *operations* on projects.
+These operations range from cloning the repository to building a docker image. 
+Operations can be run in parallel on projects, enabling quite some automation.
+
+## Status
+
+The code of this project was largely in operation in the Designetz project.
+
+## One-line Execution
+
+mosaik.Multi-Project can be run as a container directly from GitLab.com:
+
+    docker run registry.gitlab.com/offis.energy/mosaik/mosaik.multi-project:latest --help
+
+## Prerequisites
+
+-   Python 3.6+
+-   git
+
+
