@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sparksrepeater
+Version: 0.0.1
+Summary: Repeater to use in messages
+Home-page: UNKNOWN
+Author: Sourya Sparks
+Author-email: vzoid8@gmail.com
+License: UNKNOWN
+Keywords: python,repeater
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+Repeater that can repeat a word so many times
+
+
