@@ -1,0 +1,99 @@
+Metadata-Version: 1.1
+Name: django-groupadmin-users
+Version: 0.3.4
+Summary: Edit users in group from the Group add and edit pages
+Home-page: http://github.com/microdisseny/django-groupadmin-users
+Author: Manel Clos
+Author-email: manelclos@gmail.com
+License: BSD License
+Description: Django GroupAdmin Users
+        =======================
+        
+        |Build Status| |Coverage Status| |PyPI version|
+        
+        Edit users in group from the Group add and edit pages.
+        
+        Credit goes to this `Stack Overflow
+        answer <https://stackoverflow.com/a/39648244/593907>`__
+        
+        Installation
+        ------------
+        
+        Works with Django version 1.8 to 3.1.
+        
+        Tested with Django-supported Python versions.
+        
+        Install with:
+        
+        ::
+        
+            pip install django-groupadmin-users
+        
+        
+        Usage
+        -----
+        
+        Add ''groupadmin\_users'' to INSTALLED\_APPS after
+        ''django.contrib.auth''. That's it.
+        
+        Alternatively, don't add ''groupadmin\_users'' to INSTALLED\_APPS, but
+        use and further customize this code:
+        
+        .. code-block:: python
+        
+            from django.contrib import admin
+            from django.contrib.auth.models import Group
+        
+            from groupadmin_users.forms import GroupAdminForm
+        
+        
+            # Unregister the original Group admin.
+            admin.site.unregister(Group)
+        
+        
+            # Create a new Group admin.
+            class GroupAdmin(admin.ModelAdmin):
+                # Use our custom form.
+                form = GroupAdminForm
+                # Filter permissions horizontal as well.
+                filter_horizontal = ['permissions']
+        
+            # Register the new Group ModelAdmin.
+            admin.site.register(Group, GroupAdmin)
+        
+        Demo
+        ----
+        
+        Example image from Stack Overflow answer:
+        
+        .. figure:: example.png?raw=true
+           :alt: Example image
+        
+        .. |Build Status| image:: https://travis-ci.org/Microdisseny/django-groupadmin-users.svg?branch=master
+            :target: https://travis-ci.org/Microdisseny/django-groupadmin-users
+        .. |Coverage Status| image:: https://coveralls.io/repos/github/Microdisseny/django-groupadmin-users/badge.svg?branch=master
+            :target: https://coveralls.io/github/Microdisseny/django-groupadmin-users?branch=master
+        .. |PyPI version| image:: https://badge.fury.io/py/django-groupadmin-users.svg
+            :target: https://badge.fury.io/py/django-groupadmin-users
+        
+Platform: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
