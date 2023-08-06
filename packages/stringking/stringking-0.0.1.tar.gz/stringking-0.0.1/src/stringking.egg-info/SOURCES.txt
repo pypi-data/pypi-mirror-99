@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/stringking/__init__.py
+src/stringking.egg-info/PKG-INFO
+src/stringking.egg-info/SOURCES.txt
+src/stringking.egg-info/dependency_links.txt
+src/stringking.egg-info/top_level.txt
