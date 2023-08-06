@@ -1,0 +1,17 @@
+coursera_autograder/__init__.py,sha256=YIxk2H7L_RMBBR6_jV9T9wVQhsNWP0iFZsAboxMJM6Y,47
+coursera_autograder/main.py,sha256=6CZsrroQxiygVKDkKDQgQzEoiyMOTw1dNbL9ARNSx8w,3786
+coursera_autograder/utils.py,sha256=ne2721s7LcOoXf45HeQGYlonTgWWjQRUOMp5t5F3y8E,5484
+coursera_autograder/commands/__init__.py,sha256=f8KeJguz3LONuLTOWGmx_irl8KaEsGzj4tk6-LhbI_g,207
+coursera_autograder/commands/common.py,sha256=R7sEDGQz5ChSmQ-x74j6N0h-LXc6TFO9U7et1jQUBHs,2295
+coursera_autograder/commands/config.py,sha256=zVm3ymW3w9go4dN5gG1vdU_AAtKKxaIX1IbRvOl_rTM,3985
+coursera_autograder/commands/get_resource_limits.py,sha256=_Q5M7kIPvCTUnS3ntUBn1GcPs1k0nHdrarSNO3Jq6U4,4598
+coursera_autograder/commands/grade.py,sha256=ezAVY0FOO0atLR4VkckKFtnwWo3FAORjOoxPo2afhuc,8738
+coursera_autograder/commands/oauth2.py,sha256=HbP-SWCfPmOcERbNDvimsZJFG9KpdKxOfSWFc4EZ2Ho,17355
+coursera_autograder/commands/update_resource_limits.py,sha256=Eq48udnUHNpFPrGgaAhTDtS1F5riqyddPPgK0YefbOc,5494
+coursera_autograder/commands/upload.py,sha256=IdNuppajU9LKtaU0-1gSGck071S4Rnsdkiw3moS5aCo,17769
+coursera_autograder-0.1.1.dist-info/LICENSE.txt,sha256=EzJATB6fWaEqZvrCYio70NSf1DWGJsj1MD4h3uTzODI,11337
+coursera_autograder-0.1.1.dist-info/METADATA,sha256=-hnxyARxIlYU-Hgoj6m7-oiGp84mRptwCwvpOmcHx5I,12272
+coursera_autograder-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coursera_autograder-0.1.1.dist-info/entry_points.txt,sha256=fHZ-_VDCWCIa46pfx1TwricBmllzUriw7Dbf0qF0ybw,71
+coursera_autograder-0.1.1.dist-info/top_level.txt,sha256=WaNCe54j2MIAAnne_QYcxAlfDrshR9_kJhOSWaA4iMY,20
+coursera_autograder-0.1.1.dist-info/RECORD,,
