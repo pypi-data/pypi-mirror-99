@@ -1,0 +1,13 @@
+crystal_bases/__init__.py,sha256=_3e6Hjb6ae2g1mXxjEBlK1GMvMDL3IkuUj_BacLF3Ms,266
+crystal_bases/crystal/__init__.py,sha256=SX639cbLsjXFNUcV7OnNnO_RHIAQSvhRwAOShKvMS-A,143
+crystal_bases/crystal/add_graph.py,sha256=I86kk_tIDx0Vvdw-D3s8J3WWgOgRUjdrhvnMWfFJH_A,2915
+crystal_bases/crystal/crystal_graph.py,sha256=JhhTx2N-qnZMoH5VznAM7sD0GEZPEp6vghGUs4sJzmo,3910
+crystal_bases/crystal/crystal_structure.py,sha256=P56YBoQlF2YFmZeOHIXf8vXxx1J1DUj6D_W394q_7Xg,6842
+crystal_bases/crystal/highest_weight_crystal.py,sha256=z1dpjztmY5iddm7VnPWt46Rl2k2UPca5Ujp6oonb7KE,496
+crystal_bases/young/__init__.py,sha256=4qqOU1Iiq9vT_7gaSquAh8VYfrZnSkfnjh0x_B5Mdrs,121
+crystal_bases/young/jeu_de_taquin.py,sha256=m7oksiYJmJgWQ3hZkrXNmwvPkHj5aWe33gzigvBoPhU,2911
+crystal_bases/young/pr.py,sha256=bE4ZT1bpti2PVklTbLSfq0hrPfMGW-U_cHQs-2xoBV4,2132
+crystal_bases/young/tableau.py,sha256=GJ4q5ZfwjITb_u0qzt0OiedQll3b2gDPCs7VARJNb-Q,1488
+crystal_bases-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+crystal_bases-0.1.0.dist-info/METADATA,sha256=LmlDaF52y2K-EqoU0SkO5-3JkbQAE79thwlWkWFZPqA,502
+crystal_bases-0.1.0.dist-info/RECORD,,
