@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: awakeai-protobuf-py
+Version: 0.0.1
+Summary: Package name reserved for Awake.AI
+Home-page: https://www.awake.ai/
+Author: Awake.AI
+Author-email: pypi-admin@awake.ai
+License: UNKNOWN
+Description: # awakeai-protobuf-py
+        
+        Package name reserved for [Awake.AI](https://www.awake.ai/).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

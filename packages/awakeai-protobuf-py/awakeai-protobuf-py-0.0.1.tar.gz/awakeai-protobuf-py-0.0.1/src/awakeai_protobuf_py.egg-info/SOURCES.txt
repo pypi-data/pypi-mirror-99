@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/awakeai_protobuf/__init__.py
+src/awakeai_protobuf_py.egg-info/PKG-INFO
+src/awakeai_protobuf_py.egg-info/SOURCES.txt
+src/awakeai_protobuf_py.egg-info/dependency_links.txt
+src/awakeai_protobuf_py.egg-info/top_level.txt
