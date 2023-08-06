@@ -1,0 +1,9 @@
+README.md
+setup.py
+WikipediaCategoryResolver/WikipediaCategoryResolver.py
+WikipediaCategoryResolver/__init__.py
+WikipediaCategoryResolver.egg-info/PKG-INFO
+WikipediaCategoryResolver.egg-info/SOURCES.txt
+WikipediaCategoryResolver.egg-info/dependency_links.txt
+WikipediaCategoryResolver.egg-info/not-zip-safe
+WikipediaCategoryResolver.egg-info/top_level.txt
