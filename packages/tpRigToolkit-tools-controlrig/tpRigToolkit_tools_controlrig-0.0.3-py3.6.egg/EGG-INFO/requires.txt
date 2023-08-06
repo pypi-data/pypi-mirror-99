@@ -1,0 +1,9 @@
+Qt.py
+tpRigToolkit-core
+tpRigToolkit-libs-controlrig
+
+[dev]
+wheel
+
+[test]
+pytest
