@@ -1,0 +1,5 @@
+ipykernel>=4.6
+qtconsole>=4.3
+
+[:python_version >= "3"]
+qasync
