@@ -1,0 +1,6 @@
+setup.py
+evdev_prepared.egg-info/PKG-INFO
+evdev_prepared.egg-info/SOURCES.txt
+evdev_prepared.egg-info/dependency_links.txt
+evdev_prepared.egg-info/requires.txt
+evdev_prepared.egg-info/top_level.txt

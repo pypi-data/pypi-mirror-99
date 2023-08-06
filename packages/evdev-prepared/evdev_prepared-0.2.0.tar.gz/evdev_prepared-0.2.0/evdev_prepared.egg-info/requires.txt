@@ -1,0 +1,2 @@
+setuptools>=45
+evdev>=1.4.0
