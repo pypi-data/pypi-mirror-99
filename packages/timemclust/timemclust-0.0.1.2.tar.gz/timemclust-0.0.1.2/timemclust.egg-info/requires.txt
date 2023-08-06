@@ -1,0 +1,4 @@
+ticks
+scipy
+numpy
+matplotlib
