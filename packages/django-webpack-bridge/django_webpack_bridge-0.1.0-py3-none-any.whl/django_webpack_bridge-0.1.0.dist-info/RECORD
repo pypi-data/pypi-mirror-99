@@ -1,0 +1,16 @@
+webpack_bridge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webpack_bridge/apps.py,sha256=bxEjMwwFI9Oar1cOkbGrb7jIxtY6OKOOfOMBkqSpWds,190
+webpack_bridge/errors.py,sha256=_FMToHkSZR3D0dK7aJhs4AGIj9S545a9B25LouNRbcg,1301
+webpack_bridge/manifest.py,sha256=u03z9VRu3zCNmWDxKEaew013endlvogAfHvFpbGiUlk,6474
+webpack_bridge/settings.py,sha256=Ku12XZ0LO4UoO1XUtGKHKzksBVPmeNGljGdCjwBHqTM,1477
+webpack_bridge/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webpack_bridge/templatetags/webpack_bridge.py,sha256=kkJmVJvnbFAjuCTJfidEJqqkx9sApckraFYEOhuqhNY,1059
+webpack_bridge/tests/__init__.py,sha256=XJiBKtikbVpcuMOEByAufZkuLJB5zOpE8UgSVE6giOY,290
+webpack_bridge/tests/entrypoint_resolver.py,sha256=HYmEkIUwnsNQIPMcLfuuCyzO-UL9ERPAhWyiZWfyn-o,3453
+webpack_bridge/tests/tag_translater.py,sha256=jmRRtzlYNB5o-bwA0r15B3wLKhMlCEhF-mfh4qPlx5g,1826
+webpack_bridge/tests/template_tags.py,sha256=wLEcnJS6r3lnJWs-lVfWXeLG3077KggdTM-47cEraIU,1055
+webpack_bridge/tests/utils.py,sha256=EPMGJJ2FFosgts0M-INkFp52fSvK2IKlwIewJaJARq4,637
+webpack_bridge/tests/webpack_manifest.py,sha256=NoQxk50VxqH9y5V3nZDKQkyG1XNBbhjxQM5gduKlynk,4347
+django_webpack_bridge-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+django_webpack_bridge-0.1.0.dist-info/METADATA,sha256=a7ayI28QnafTSI8-nwpqBoK03QqgiYBc5h4aqQmSN7Q,4001
+django_webpack_bridge-0.1.0.dist-info/RECORD,,
