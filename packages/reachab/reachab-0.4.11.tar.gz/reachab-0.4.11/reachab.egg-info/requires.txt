@@ -1,0 +1,6 @@
+scipy
+numpy
+matplotlib
+argparse
+logging
+shapely
