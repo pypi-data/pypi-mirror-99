@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pytorch-hyperlight
+Version: 0.3.0
+Summary: PyTorch Hyperlight is ML micro-framework built as a thin wrapper around PyTorch-Lightning and Ray Tune frameworks to push the boundaries of simplicity even further.
+Home-page: https://github.com/pgagarinov/pytorch-hyperlight.git
+Author: Peter Gagarinov
+Author-email: Peter Gagarinov <pgagarinov@gmail.com>
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pytorch-lightning (==1.2.*,>=1.2.4)
+Requires-Dist: tabulate
+Requires-Dist: hyperopt
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: wandb
+Requires-Dist: transformers
+Requires-Dist: ray[tune]
+Requires-Dist: requests
+Requires-Dist: torchvision
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Requires-Dist: validators
+Requires-Dist: boto3
+Requires-Dist: torch
+Requires-Dist: kaggle
+Requires-Dist: albumentations
+Requires-Dist: papermill
+Requires-Dist: numpy
+
+UNKNOWN
+
+
