@@ -1,0 +1,7 @@
+PyYAML
+argparse
+tipset
+filelock
+awscli
+boto3
+paramiko
