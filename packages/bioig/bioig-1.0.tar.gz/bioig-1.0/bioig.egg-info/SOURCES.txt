@@ -1,0 +1,8 @@
+README.md
+setup.py
+bioig.egg-info/PKG-INFO
+bioig.egg-info/SOURCES.txt
+bioig.egg-info/dependency_links.txt
+bioig.egg-info/entry_points.txt
+bioig.egg-info/requires.txt
+bioig.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: bioig
+Version: 1.0
+Summary: BioAnalyzer is a module that allows you to extract personnals informations from an instagram profile bio such as : Religion, Hobbies, Ethnicity, Emails, Paypal.me/, Snapchat, Twitter, Best Friends, Age, Location, Love Relationship, Love Relationship date, Facebooks, Astrologic Sign, Sexuality.
+Home-page: https://github.com/dalunacrobate/BioIG
+Author: Dalunacrobate
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
