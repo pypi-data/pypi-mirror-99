@@ -1,0 +1,10 @@
+BlueWhale3>=3.25.0
+scikit-learn
+pandas
+scipy>=0.17
+shapely
+simplejson
+Pillow
+
+[test]
+coverage
