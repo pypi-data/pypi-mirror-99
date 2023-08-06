@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: devsnets
+Version: 1.9.6
+Summary: Devsnets
+Home-page: https://devsnets.com
+Author: devsnets
+Author-email: contact@devsnets.com
+License: Other/Proprietary License
+Keywords: devsnets
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: utilsrama (==0.0.4)
+Requires-Dist: GPUtil (==1.4.0)
+Requires-Dist: httprama (==0.0.2)
+Requires-Dist: requests (==2.25.0)
+Requires-Dist: mixpanel (==4.7.0)
+Requires-Dist: docker (==4.3.1)
+Requires-Dist: opencv-python (==4.4.0.44)
+Requires-Dist: distro (==1.5.0)
+Requires-Dist: matplotlib (==3.2.0)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: yaspin (==1.1.0)
+Requires-Dist: tqdm (==4.48.0)
+Requires-Dist: Flask-SocketIO (==5.0.1)
+Requires-Dist: SQLAlchemy (==1.3.22)
+Requires-Dist: websockets (==8.1)
+Requires-Dist: PyYAML (==5.4.1)
+Provides-Extra: sdk
+Requires-Dist: redis (==3.5.3) ; extra == 'sdk'
+Requires-Dist: celery (==5.0.0) ; extra == 'sdk'
+Requires-Dist: gevent-websocket (==0.10.1) ; extra == 'sdk'
+
+UNKNOWN
+
+
