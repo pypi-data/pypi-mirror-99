@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pensa/__init__.py
+pensa.egg-info/PKG-INFO
+pensa.egg-info/SOURCES.txt
+pensa.egg-info/dependency_links.txt
+pensa.egg-info/not-zip-safe
+pensa.egg-info/requires.txt
+pensa.egg-info/top_level.txt
