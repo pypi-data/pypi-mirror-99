@@ -1,0 +1,6 @@
+[console_scripts]
+csv-reconcile=csv_reconcile:main
+
+[csv_reconcile.scorers]
+dice=csv_reconcile_dice
+
