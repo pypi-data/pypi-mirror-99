@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "myt"
+version = "0.2.0"
+description = "Time, zones"
+authors = ["datadavev <605409+datadavev@users.noreply.github.com>"]
+license = "Apache 2.0"
+homepage = "https://github.com/datadavev/t"
+repository = "https://github.com/datadavev/t"
+keywords = ["time", "timezones", "utility"]
+packages = [
+    {include = "t"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+dateparser = "^1.0.0"
+click = "^7.1.2"
+pytz = "^2021.1"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+t = "t.__main__:main"
