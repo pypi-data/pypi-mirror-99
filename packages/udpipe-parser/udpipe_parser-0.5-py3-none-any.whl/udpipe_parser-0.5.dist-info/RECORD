@@ -1,0 +1,10 @@
+udpipe_parser/__init__.py,sha256=JCFYkq72ZWhmq4I_toxq2QI02ilS82mzhWM0rWbdrbM,195
+udpipe_parser/dicts.py,sha256=e_17MnOZbbo3-xfhz66SQ3JbUTNYov0Ib8bbjHuzlnc,1500
+udpipe_parser/main.py,sha256=OmyP7HoqGCsE8oh5UygUlapDRQdA6y4lTyh0YWesmic,192
+udpipe_parser/text_preprocessor.py,sha256=BP-CtS-9JbPBaHU9EcmX3T7-UWXwQlBDlNh4VQJ8TSo,12629
+udpipe_parser/udpipe_parser.py,sha256=QkMmyYKdiOS9EECR8I9uUodMyeo0wnQi7vLXWRTgPJA,29098
+udpipe_parser/utilities.py,sha256=_4q8sjUcjMmb7dtd7tt3kfewkfL9nWPVQ-CuiNQZjRI,8804
+udpipe_parser-0.5.dist-info/METADATA,sha256=ni4iNkWY10a_L_RtfPDfmboQqEfgz5S273ZgS1Lzz98,605
+udpipe_parser-0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+udpipe_parser-0.5.dist-info/top_level.txt,sha256=XXXfFJaUR03-eY3MUKPErRm6EsvIwITDefI7TvjmOcU,14
+udpipe_parser-0.5.dist-info/RECORD,,
