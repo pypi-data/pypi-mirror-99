@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: automation-api-deffets
+Version: 0.0.11
+Summary: Python API for the automation server database
+Home-page: https://gitlab.com/deffets/automation/
+Author: Sylvain Deffet
+License: apache-2.0
+Description: 
+        # Python API for the automation server database
+        
+        ## Example
+        ```python
+          from api.api import DB
+        
+          db = DB(dbName='automation3', host="3.123.139.xxx", user="username", password=None, key="/home/username/.ssh/id_rsa", uri=None, port=22, to_host='127.0.0.1', to_port=27017)
+        
+          print(db.getUsers())
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
