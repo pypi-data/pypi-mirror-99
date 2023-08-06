@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+          var socket = io.connect('http://' + document.domain + ':' + location.port + '/');
+          var start_time;
+          window.setInterval(function() {
+              start_time = (new Date).getTime();
+              socket.emit('refresh');
+          }, 2000);
+          var gauges = {}
+          function convertSg(value, scale) {
+            if (scale == undefined) {
+              return value;
+            }
+            offsetValue = value + {{ gravity_offset }}
+            if (scale.toLowerCase() == "brix") {
+              brix = (((182.4601 * offsetValue -775.6821) * offsetValue +1262.7794) * offsetValue -669.5622)
+              return Math.round(brix * 10)/10;
+            }
+            if (scale.toLowerCase() == "plato") {
+              plato = (-1 * 616.868) + (1111.14 * offsetValue) - (630.272 * offsetValue * offsetValue) + (135.997 * offsetValue * offsetValue * offsetValue)
+              return Math.round(plato * 10)/10;
+            }
+
+            return Math.round(offsetValue * 1000)/1000;
+          }
+          function convertTemp(value, scale) {
+            if (scale == undefined) {
+              return value;
+            }
+            if (scale.toLowerCase() == "celsius") {
+              return Math.round((( value - 32) * 5 / 9) * 10) / 10;
+            }
+            return value;
+          }
+          socket.on('refresh', function(msg) {
+            for (data in msg.data) {
+              var gaugeData = [
+                `<div id="${msg.data[data].mac}" class="canvas">`,
+                `	<canvas id="${msg.data[data].mac}-canvas-preview"></canvas>`,
+                `	<div id="${msg.data[data].mac}-preview-textfield" class="preview-textfield"></div>`,
+                `	<div id="${msg.data[data].mac}-preview-datafield" class="preview-datafield"></div>`,
+                '</div>',
+              ].join("\n");
+              if(
+                $('#container').find(`[id*="${msg.data[data].mac}"]`).length == 0
+              ) {
+                $('#container').append(gaugeData);
+                var target = document.getElementById(`${msg.data[data].mac}-canvas-preview`);
+                var gauge = new Gauge(target).setOptions({
+                  angle: 0, // The span of the gauge arc
+                  lineWidth: 0.34, // The line thickness
+                  radiusScale: 1, // Relative radius
+                  pointer: { //disable
+                    length: 0,
+                    strokeWidth: 0,
+                  },
+                  colorStart: msg.data[data].color,
+                  highDpiSupport: true,
+                });
+                gauge.maxValue = 1.08; // set max gauge value
+                gauge.setMinValue(1.00);  // Prefer setter over gauge.minValue = 0
+                gauges[msg.data[data].mac] = gauge
+              }
+
+              gauges[msg.data[data].mac].set(msg.data[data].gravity, '{{ gravity_meas }}');
+              document.getElementById(`${msg.data[data].mac}-preview-textfield`).innerHTML = msg.data[data].color + '(' + msg.data[data].mac + ')';
+              document.getElementById(`${msg.data[data].mac}-preview-datafield`).innerHTML = convertSg(msg.data[data].gravity, '{{ gravity_meas }}') + '(' + convertTemp(msg.data[data].temp, '{{ temp_meas }}') + '&deg;)';
+            };
+          });
+      });
+    </script>
+{% endblock %}
+{% block content %}
+        <div class="container" id="container"/>
+{% endblock %}
