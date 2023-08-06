@@ -1,0 +1,7 @@
+setup.py
+foxTemplateEngine/__init__.py
+foxTemplateEngine/template_engine.py
+foxTemplateEngine.egg-info/PKG-INFO
+foxTemplateEngine.egg-info/SOURCES.txt
+foxTemplateEngine.egg-info/dependency_links.txt
+foxTemplateEngine.egg-info/top_level.txt
