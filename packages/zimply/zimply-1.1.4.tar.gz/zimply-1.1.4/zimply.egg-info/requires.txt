@@ -1,0 +1,4 @@
+gevent>=1.1.1
+falcon>=1.0.0
+mako>=1.0.3
+zstandard>=0.14.1
