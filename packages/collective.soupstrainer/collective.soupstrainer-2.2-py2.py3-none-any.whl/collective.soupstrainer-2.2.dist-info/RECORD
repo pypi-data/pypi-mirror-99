@@ -1,0 +1,9 @@
+collective.soupstrainer-2.2-py3.7-nspkg.pth,sha256=i6xUrA2XwWgxJ31EmKS8F0wCvv6o3Db_2POBVx1bZDM,559
+collective/soupstrainer/__init__.py,sha256=Mo_WO45h1-tvY7hzn6gdwptsN2ACSQfTcnph_d8RWvw,3125
+collective/soupstrainer/tests.py,sha256=fYQusNnatCtXwzu9N8XIt6Vbnx4LklwWTguBrcTZtxY,2750
+collective.soupstrainer-2.2.dist-info/METADATA,sha256=V70ZKDVsc4E6P5KvWUuHdrFWjfzXJko7Kxfr_4zHCeM,3739
+collective.soupstrainer-2.2.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+collective.soupstrainer-2.2.dist-info/entry_points.txt,sha256=q8wFlaGEViz60wt3WmaLDP7kb3CZCzxBqljNIz9Yiv8,63
+collective.soupstrainer-2.2.dist-info/namespace_packages.txt,sha256=FyC0xnd95fkjCaKazR3nfIgNqhWMpB0mYBlzALyXKTg,11
+collective.soupstrainer-2.2.dist-info/top_level.txt,sha256=FyC0xnd95fkjCaKazR3nfIgNqhWMpB0mYBlzALyXKTg,11
+collective.soupstrainer-2.2.dist-info/RECORD,,
