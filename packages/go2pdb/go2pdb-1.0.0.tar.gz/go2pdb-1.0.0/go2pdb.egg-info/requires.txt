@@ -1,0 +1,6 @@
+requests
+biopython
+pandas
+openpyxl
+numpy
+mmcif_pdbx
