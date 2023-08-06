@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tofimaging
+Version: 0.0.4
+Summary: Library for neutron ToF imaging
+Home-page: https://github.com/neutronimaging/ToFImaging
+Author: Matteo Busi
+Author-email: mbusi2691@gmail.com
+License: BSD
+Keywords: edge fitting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: numpy
+Requires-Dist: pyfits
+Requires-Dist: pillow
+Requires-Dist: lmfit
+Requires-Dist: tqdm
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+
+UNKNOWN
+
+
