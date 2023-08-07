@@ -1,0 +1,12 @@
+wsimple/__init__.py,sha256=DAU4lV5ETu9ZAWsE8VnCXQloM0KxyZkKaGDYWOVCYAA,308
+wsimple/api/__init__.py,sha256=w0P19rYHrMl0HQEEG_McHL9oa4eVn14H7GXxcKFVFwo,313
+wsimple/api/api.py,sha256=lvc_Mz_Fu0RwVF6htZj_30D_uh_F-cdlgN1AOK5i0tc,53187
+wsimple/api/endpoints.py,sha256=sI1QgWyb6pRdImJY6wYQoiPUFtCdP_dZippDPxPi0eY,3855
+wsimple/api/errors.py,sha256=DY3ns7T0fKR-CnwJJBrKeJ2AHGCS8uJXQjVFo7HqdXc,2684
+wsimple/api/requestor.py,sha256=nYnFClPV5UcKKGbHd92hpdHS-0_HJjqOtELUFpHA_gs,1173
+wsimple/api/tokens.py,sha256=h1dSZ6RHsC4cHaU0pEYA9xr70Q3sdiFa4k3m7F2Gsjo,490
+wsimple-2.0.3.dist-info/LICENSE,sha256=VWOX9UAS16L3ysn9jZgkSBNgZMoclNhWhRsDnncw2Us,1069
+wsimple-2.0.3.dist-info/METADATA,sha256=AGAXZXA9cxdJ37MtgXzRT9P8m-n04lMOteFB_DOvplc,5818
+wsimple-2.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wsimple-2.0.3.dist-info/top_level.txt,sha256=cVJzpL5AZ7HINF8OOzkZEkIQXyPPQBx6tagVG4DmT3o,8
+wsimple-2.0.3.dist-info/RECORD,,
