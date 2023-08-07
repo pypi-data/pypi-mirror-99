@@ -1,0 +1,3 @@
+[console_scripts]
+workflow = git_workflow.__main__:main
+
