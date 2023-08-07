@@ -1,0 +1,3 @@
+[console_scripts]
+read_env_9830 = read_env_9830.__main__:main
+
