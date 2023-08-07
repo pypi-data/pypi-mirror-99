@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: ardicsrtcollector
+Version: 1.0.7
+Summary: Generates a dataset for the Turkish speech recognition.
+Home-page: https://github.com/IoT-Ignite/ArdicSrtCollector
+Author: ARDIC R&D
+Author-email: yavuz.erzurumlu@ardictech.com
+License: MIT
+Keywords: dataset,speech recognition,srt,youtube srt
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: youtube-channel-transcript-api
+Requires-Dist: youtube-dl
+
+# ArdicSrtCollector
+ArdicSrtCollector has been developed to generate the Turkish speech recognition dataset. As a parameter, it takes a txt file consisting of the links of these Youtube videos and a folder name to store the files to be created. For each youtube video URL, it downloads the audio file,  extracts subtitles, and saves as two new files to the disk. Then it cropped the audio file according to the start and end time of each subtitle and creates a new audio file, and at the same time saves the current subtitle as a new txt file. 
+
+
+### Installation
+
+1. Install [ffmpeg](https://www.ffmpeg.org/).
+2. Run `pip install ardicsrtcollector`.
+
+### Usage
+
+### From the terminal
+```$ ardicsrtcollector -h
+ardicsrtcollector [-h] [-sv SAVE_PATH] -ufp URL_FILE_PATH
+
+To convert the Youtube URL to mp3 and srt file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -sv SAVE_PATH, --save_path SAVE_PATH
+                        Path to save converted files (default: downloads_convert)
+  -ufp URL_FILE_PATH, --url_file_path URL_FILE_PATH
+                        A file which contains youtube URLs
+
+```
+
+### Examples:
+1. Run on terminal :```ardicsrtcollector -ufp urls.txt```
+2. Using it by importing it as a package like the one below. 
+
+``` 
+from ardicsrtcollector.youtube_srt_mp3 import YoutubeSrtMp3
+
+YoutubeSrtMp3(urls_file_path="urls.txt", save_dir="save_path").convert()
+```
+
+### The content of the file containing the URLs should be as follows.  
+
+```
+https://www.youtube.com/watch?v=ENwtC8LgPcw
+https://www.youtube.com/watch?v=ENwtC8LgPcw
+...
+````
+
+## License
+
+[MIT](LICENSE)
+
+
