@@ -1,0 +1,10 @@
+target_mako/__init__.py,sha256=rGguY5YPRrfyujNQwrULqUuQfi79ZOCtG4-oHzl98oc,14651
+target_mako/formatting_functions.py,sha256=XjcXRDGqZMAxqNMyMesAMQOU6m4NZaBU-DRAm4kzaM0,1600
+tests/__init__.py,sha256=eA7w4_M3mQ33GyNwNzS2Ox0Q9b3dAxneI01lLPsxj3c,21695
+tests/formatting_functions.py,sha256=OMU5DE0RH2Iy9UD28qOYf5Iesti0O-59OCBNVkvHdmQ,7469
+target_mako-0.1.0.dist-info/LICENSE,sha256=6WQzcut4WJpD9BFStKmUFLG2wzyZeoNPWWz_cI-6XCg,33003
+target_mako-0.1.0.dist-info/METADATA,sha256=Ssu8LsVOz6-FUACLXd22qcNch1tqhMCOVErLajkEGxw,7965
+target_mako-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+target_mako-0.1.0.dist-info/entry_points.txt,sha256=WvZFvYnCUgNJ2KYhgjwSw3xVJgF2FTF6rjGx3JVk_KU,60
+target_mako-0.1.0.dist-info/top_level.txt,sha256=DMwvWOJfz6mxeGE00Lyhu2E7ZGk0Wi7YKXEbpz8Dye8,18
+target_mako-0.1.0.dist-info/RECORD,,

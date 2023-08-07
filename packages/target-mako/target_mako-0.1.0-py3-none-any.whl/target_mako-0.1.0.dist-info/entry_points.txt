@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    target-mako=target_mako:main
+    
