@@ -1,0 +1,3 @@
+[console_scripts]
+bootstrap_9add = bootstrap_9add.__main__:main
+
