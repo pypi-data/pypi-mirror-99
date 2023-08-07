@@ -1,0 +1,7 @@
+setuptools
+numpy
+scipy
+numdifftools
+
+[reST]
+Sphinx
