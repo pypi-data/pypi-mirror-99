@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: pyebur128
+Version: 0.1.0
+Summary: A Cython implementation of the libebur128 library for measuring audio loudness.
+Home-page: https://github.com/jodhus/pyebur128/
+Author: Josh Washburne
+Author-email: josh@jodh.us
+Maintainer: Josh Washburne
+License: MIT
+Project-URL: Documentation, https://github.com/jodhus/pyebur128/
+Project-URL: Source, https://github.com/jodhus/pyebur128/
+Project-URL: Bug Tracker, https://github.com/jodhus/pyebur128/issues/
+Keywords: audio loudness,loudness range,loudness units,true peak,sample peak,relative threshold,ebu r128,itu r bs 1770
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: cython ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: numpy ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: SoundFile ; extra == 'tests'
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jodhus/pyebur128/Run%20tests)
+[![codecov](https://codecov.io/gh/jodhus/pyebur128/branch/master/graph/badge.svg?token=TLA2NXMEF4)](https://codecov.io/gh/jodhus/pyebur128)
+![GitHub](https://img.shields.io/github/license/jodhus/pyebur128)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyebur128)
+![PyPI](https://img.shields.io/pypi/v/pyebur128)
+
+
+# pyebur128
+A Cython implementation of the [libebur128](https://github.com/jiixyj/libebur128) library for audio loudness in media files.
+
+## Requirements
+
+* Operating Systems: Linux, macOS, or Windows
+* Python: 3.6+
+* Dependencies: None!
+
+## Installation
+
+### PyPI
+
+```
+pip install pyebur128
+```
+
+### From Source
+
+```
+git clone --recurse-submodules https://github.com/jodhus/pyebur128
+cd pyebur128
+pip install .
+```
+
+## TODO
+* Working on getting official documentation written/uploaded. In the meantime, all definitions are documented in within their docstrings.
+

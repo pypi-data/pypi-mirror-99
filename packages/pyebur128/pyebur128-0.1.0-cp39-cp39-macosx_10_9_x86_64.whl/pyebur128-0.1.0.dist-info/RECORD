@@ -1,0 +1,12 @@
+pyebur128/__init__.py,sha256=ScHIkrOny93tCDw63Dqw_iTfee1SgKLHxNDK45v7TdM,497
+pyebur128/pyebur128.c,sha256=j61i6rm4t7l71D8hVK-pjnon3cPqYOUkv6gSafI2NHQ,1208379
+pyebur128/pyebur128.cpython-39-darwin.so,sha256=OaL39SZ6r_kYnDdwG_oTtt3IRdDHNZG8RMpH5rZSxPM,355656
+pyebur128/pyebur128.pxd,sha256=BEThLfzziWynEE1ak26GCyObViCVwzPenCzYR2RZNnI,4959
+pyebur128/pyebur128.pyx,sha256=qk9jXnUm5-q2EFKKkTZEhnvh9xacgENW80RmeDYHBcU,24067
+pyebur128/version.py,sha256=xwUxqNB1me5mfO6PXPXd-gWwNTAl_-Idf0ktsITBEpU,142
+pyebur128-0.1.0.dist-info/LICENSE,sha256=Tyj0LwLjQ64v6bjT3C8j9V8Y4ImtsYHKTuN2MeU1PAI,1076
+pyebur128-0.1.0.dist-info/METADATA,sha256=qEgi_rFSv2caaZILDdcryorfsYXV64AVAMHgY0cvaKI,2898
+pyebur128-0.1.0.dist-info/WHEEL,sha256=bRe_g_g-vZInZP5wOdewl-4AeWx8E2_UC3Ffr2csPyk,109
+pyebur128-0.1.0.dist-info/top_level.txt,sha256=Ggu1djtaVuD3KLH3xZVsTUUyyceYjo7cB3EGKwDcABQ,10
+pyebur128-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pyebur128-0.1.0.dist-info/RECORD,,
