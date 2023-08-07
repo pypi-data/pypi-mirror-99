@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: PyPowerStore
+Version: 1.2.0.0
+Summary: Python Library for Dell EMC PowerStore
+Home-page: https://github.com/dell/python-powerstore
+Author: Ansible Team at Dell EMC
+Author-email: ansible.team@dell.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
