@@ -1,0 +1,6 @@
+metodo_FZI.py
+setup.py
+metodo_FZI_dawer_y_pasto.egg-info/PKG-INFO
+metodo_FZI_dawer_y_pasto.egg-info/SOURCES.txt
+metodo_FZI_dawer_y_pasto.egg-info/dependency_links.txt
+metodo_FZI_dawer_y_pasto.egg-info/top_level.txt
