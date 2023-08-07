@@ -1,0 +1,2 @@
+percentile>=1.0.3
+handycsv>=4.0.0
