@@ -1,0 +1,3 @@
+
+def entry():
+    print('beep')
