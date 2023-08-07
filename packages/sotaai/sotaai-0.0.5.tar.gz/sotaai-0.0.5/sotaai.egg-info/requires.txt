@@ -1,0 +1,17 @@
+
+[cv]
+tensorflow
+tensorflow-datasets
+torchvision
+torch
+transformers
+scikit-image
+opencv-python==4.5.1.48
+
+[neuro]
+
+[nlp]
+datasets
+
+[rl]
+gym
