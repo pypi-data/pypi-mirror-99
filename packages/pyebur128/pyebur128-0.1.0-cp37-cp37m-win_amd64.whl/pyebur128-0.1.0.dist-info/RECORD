@@ -1,0 +1,12 @@
+pyebur128/__init__.py,sha256=_qzJPnAgQ4fadNX5XPRmUDTsDxJYLF9hzVfNhDH_270,511
+pyebur128/pyebur128.c,sha256=QggGBRpMqZqiyj38BdCtYcfDWSJImKt90RZsCoa5Olw,1208510
+pyebur128/pyebur128.cp37-win_amd64.pyd,sha256=XQSRDmPS-fWqr6dxdNF8My2Vmo5QVwWBtCcIBPeshaw,268288
+pyebur128/pyebur128.pxd,sha256=k7SUTJOEO_qGMbmCJPdZVgWTUpKlQ7-KRnD744opmlg,5099
+pyebur128/pyebur128.pyx,sha256=Q_4WRVrwPijTnaxme23NFbpZnvryeA9AP7JApyzfCAI,24777
+pyebur128/version.py,sha256=pPI3BGuGllxhhB2WE1snTKQDetAhYd0zSWxNwVjOJ5s,147
+pyebur128-0.1.0.dist-info/LICENSE,sha256=c_J9F1FdqiiNYMTFlEnbJ6aQXR2Ux7A0QYlbaFpj8Wg,1097
+pyebur128-0.1.0.dist-info/METADATA,sha256=qEgi_rFSv2caaZILDdcryorfsYXV64AVAMHgY0cvaKI,2898
+pyebur128-0.1.0.dist-info/WHEEL,sha256=zMRqF9ZfHGxBPfvcWwE-LxcVkdB1hhr8hy4cOfZGPZU,101
+pyebur128-0.1.0.dist-info/top_level.txt,sha256=Ggu1djtaVuD3KLH3xZVsTUUyyceYjo7cB3EGKwDcABQ,10
+pyebur128-0.1.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyebur128-0.1.0.dist-info/RECORD,,
