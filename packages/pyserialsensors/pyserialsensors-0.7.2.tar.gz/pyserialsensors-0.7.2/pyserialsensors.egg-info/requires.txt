@@ -1,0 +1,3 @@
+pyserialsensors
+pyftdi==0.50.1
+timeout-decorator==0.4.1
