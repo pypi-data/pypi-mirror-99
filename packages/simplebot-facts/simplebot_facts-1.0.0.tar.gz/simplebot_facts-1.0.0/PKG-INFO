@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: simplebot_facts
+Version: 1.0.0
+Summary: Get random facts in Delta Chat (SimpleBot plugin)
+Home-page: https://github.com/simplebot-org/simplebot_facts
+Author: The SimpleBot Contributors
+Author-email: adbenitez@nauta.cu
+License: MPL
+Description: Facts
+        =====
+        
+        .. image:: https://img.shields.io/pypi/v/simplebot_facts.svg
+           :target: https://pypi.org/project/simplebot_facts
+        
+        .. image:: https://img.shields.io/pypi/pyversions/simplebot_facts.svg
+           :target: https://pypi.org/project/simplebot_facts
+        
+        .. image:: https://pepy.tech/badge/simplebot_facts
+           :target: https://pepy.tech/project/simplebot_facts
+        
+        .. image:: https://img.shields.io/pypi/l/simplebot_facts.svg
+           :target: https://pypi.org/project/simplebot_facts
+        
+        .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+           :target: https://github.com/psf/black
+        
+        A `SimpleBot`_ plugin that allows users to get random facts from https://dailyfacts.org
+        
+        Install
+        -------
+        
+        To install run::
+        
+          pip install simplebot-facts
+        
+        
+        .. _SimpleBot: https://github.com/simplebot-org/simplebot
+        
+        Changelog
+        =========
+        
+        1.0.0
+        -----
+        
+        - initial release
+        
+        
+Keywords: simplebot plugin deltachat
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+Provides-Extra: test
