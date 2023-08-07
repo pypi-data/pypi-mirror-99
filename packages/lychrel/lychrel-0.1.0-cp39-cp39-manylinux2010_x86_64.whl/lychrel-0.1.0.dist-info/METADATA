@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lychrel
+Version: 0.1.0
+Classifiers: Intended Audience :: Education
+Classifiers: Intended Audience :: Science/Research
+Classifiers: Programming Language :: Python :: 3
+Classifiers: Programming Language :: Python :: Implementation :: CPython
+Classifiers: Programming Language :: Rust
+Classifiers: Topic :: Scientific/Engineering :: Mathematics
+Summary: A collection of functions to play with Lychrel numbers and other funny mathematical problems
+Home-Page: https://github.com/alesanfra/lychrel
+Author: Alessio Sanfratello <sanfra90@gmail.com>
+Author-Email: Alessio Sanfratello <sanfra90@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Lychrel
+
+This is a collection of python functions which implements famous mathematical problems, 
+and it is named after the [lychrel numbers](https://en.wikipedia.org/wiki/Lychrel_number).
+
+Under the hood lychrel is implemented in rust thanks to [PyO3](https://github.com/PyO3/pyo3).
+
+Any contribution is welcome!
+
