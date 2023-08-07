@@ -1,0 +1,9 @@
+ariadne==0.11.0
+
+[test]
+pytest-cov
+pytest
+pylint
+pytest-runner
+black==19.3b0
+coveralls
