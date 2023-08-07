@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: schemagen
+Version: 1.0.0
+Summary: A Command line tool for generating Python GraphQL implementations(with Graphene) from GraphQL schema files
+Home-page: https://github.com/GoZaddy/SchemaGen
+Author: Faruq Yusuff
+Author-email: faruqyusuff437@gmail.com
+License: MIT
+Description: # SchemaGen
+        Schema Gen is a simple CLI tool that generates Python GraphQL implementations(using Graphene) from a Graphql Schema file.
+        
+        # Installation
+        ```shell
+        pip install schemagen
+        ```
+        
+        # Usage
+        As a CLI tool:
+        ```shell
+        schemagen parse test.graphql -o test.py
+        ```
+        As a Python Package:
+        ```python
+        from schema_gen import SDLParser
+        
+        sdl_parser = SDLParser(
+            input_file='test.graphql',
+            output_file='test.py'
+        )
+        
+        # parse input file
+        sdl_parser()
+        ```
+        
+        # Notes
+        SchemaGen is currently in its first version so there are some things you need to know:
+        * GraphQL type declarations in your schema file **must be ordered**. 
+          
+          Because of the way Python and SchemaGen works, you cannot use a GraphQL type
+          before declaring it. For example, the following graphql schema definition would be invalid because we are using the **Url** scalar in our **User** type before declaring it:
+          ```graphql
+            type User {
+                id: ID!
+                username: String
+                avatar_url: Url
+            }
+          
+            scalar Url    
+          ```
+          The correct version of the above code is:
+            ```graphql
+            scalar Url 
+             
+            type User {
+                id: ID!
+                username: String
+                avatar_url: Url
+            }
+          ```
+        
+        * Using a GraphQL SDL keyword as an object field name in your schema will throw an error.
+        
+          For example, doing this:
+          ```graphql
+          enum UserType {
+            Example
+          }
+          
+          type User{
+            name: String
+            type: UserType
+          }
+          ```
+          will throw an error.
+          
+          Do this instead:
+          ```graphql
+          enum UserType {
+            Example
+          }
+          
+          type User{
+            name: String
+            user_type: UserType
+          }
+          ```
+          
+        We plan to fix these issues in the future. Pull requests are welcome!
+          
+        
+        
+        
+Keywords: graphql parser codegen
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

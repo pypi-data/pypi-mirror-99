@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+env/__init__.py
+env/lib/__init__.py
+schema_gen/__init__.py
+schema_gen/__main__.py
+schema_gen/codegen/__init__.py
+schema_gen/errors/__init__.py
+schema_gen/utils/__init__.py
+schemagen.egg-info/PKG-INFO
+schemagen.egg-info/SOURCES.txt
+schemagen.egg-info/dependency_links.txt
+schemagen.egg-info/requires.txt
+schemagen.egg-info/top_level.txt
