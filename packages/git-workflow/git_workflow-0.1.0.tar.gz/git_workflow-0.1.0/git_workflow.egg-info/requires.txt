@@ -1,0 +1,7 @@
+GitPython<3.2,>=3.1
+blessings<1.8,>=1.7
+
+[dev]
+Jinja2<2.12,>=2.11
+build
+vermin
