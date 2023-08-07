@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: mannavirus
+Version: 1.0
+Summary: password changer for windows
+Home-page: UNKNOWN
+Author: neelanjan manna
+Author-email: igi.manna@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: virus and ransomwares
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
