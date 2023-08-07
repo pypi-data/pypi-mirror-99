@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: everstone
+Version: 0.1.0
+Summary: Simple Database Query Generator
+License: MIT
+Author: scragly
+Author-email: 29337040+scragly@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: asyncpg (>=0.22.0,<0.23.0)
+Requires-Dist: sqlparse (>=0.4.1,<0.5.0)
