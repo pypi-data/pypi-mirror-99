@@ -1,0 +1,67 @@
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[project]
+# PEP 621 project metadata
+# See https://www.python.org/dev/peps/pep-0621/
+name = "flake8-tabs"
+description = "Tab (or Spaces) indentation style checker for flake"
+version = "2.3.0"
+license = "LGPL-3.0-or-later"
+readme = "README.md"
+authors = [
+	{ name = "Alexander Schlarb", email = "alexander@ninetailed.ninja" },
+]
+
+requires-python = ">=3.6"
+dependencies = [
+	"flake8 ~= 3.0",
+	"editorconfig ~= 0.12.0",
+]
+dev-dependencies = [
+	"flake8-isort",
+	"pytest",
+	"pytest-cov",
+]
+
+classifiers = [
+	"Framework :: Flake8",
+	"Intended Audience :: Developers",
+	"Development Status :: 4 - Beta",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Software Development :: Quality Assurance",
+	"Operating System :: OS Independent",
+]
+
+dynamic = ["classifiers", "version"]
+
+[project.optional-dependencies]
+doc = ["sphinx"]
+
+[project.urls]
+"repository" = "https://gitlab.com/ntninja/flake8-tabs/-/tree/master/"
+"Issue Tracker" = "https://gitlab.com/ntninja/flake8-tabs/issues/"
+
+[project.entry-points."flake8.extension"]
+"tabs.core"        = "flake8_tabs:Config"
+"tabs.blank-lines" = "flake8_tabs:BlankLinesChecker"
+"tabs.indentation" = "flake8_tabs:IndentationChecker"
+
+[tool.isort]
+# CLI options
+atomic = true
+color_output = true
+
+# Style options
+lines_after_imports = 2
+force_single_line = true
+remove_redundant_aliases = true
+
+# PEP-582 support (GH/PyCQA/isort#1697 – fixed in 5.9)
+skip_glob = [
+	"__pypackages__/**",
+]
+
+[tool.pdm.scripts]
+lint = "flake8"
