@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: nickffs-example-pkg
+Version: 0.0.5
+Summary: A template to create other PyPi packages.
+Home-page: https://github.com/Bhavnicksm/pypi-packaging-template
+Author: bhavnicksm
+Author-email: bhavnicksm@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Bhavnicksm/pypi-packaging-template/issues
+Description: # pypi-packaging-template
+        [Badge](https://img.shields.io/docker/v/Bhavnicksm/pypi-packaging-template/0.0.1)
+        
+        This is a basic template that I keep updated with PyPi packaging best practices in an effort to speed up the process of packaging my python based git repositories. I hope you find these of use to you. 
+        
+        This README.md file is also made as a general template so as to be useful for other projects.   
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install example-pkg.
+        
+        ```bash
+        pip install nickffs-example-pkg
+        ```
+        
+        ## Usage
+        
+        ```python
+        from helloworld import hello_world
+        hello_world()
+        ```
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## References
+        
+        *  [Python's Official Packaging Tutorial](https://packaging.python.org/tutorials/packaging-projects/): A tutorial on how to get your own PyPi package.
+        *  [Choose a license](https://choosealicense.com/): A site that explains all the different Licenses out there and which you need to choose for you project.
+        *  [Make a ReadMe](https://www.makeareadme.com/): Another really helpful site explaining what are READMEs and how to make them. 
+        
+        
+        ## License
+        [MIT](https://choosealicense.com/licenses/mit/)
+Keywords: template
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
