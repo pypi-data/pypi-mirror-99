@@ -1,0 +1,3 @@
+[console_scripts]
+plantuml = plantuml_local_client:run_plantuml
+
