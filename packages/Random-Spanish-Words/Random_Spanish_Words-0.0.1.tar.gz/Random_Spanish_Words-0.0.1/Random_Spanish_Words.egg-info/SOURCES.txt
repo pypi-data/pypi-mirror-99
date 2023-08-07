@@ -1,0 +1,8 @@
+README.md
+setup.py
+Random_Spanish_Words.egg-info/PKG-INFO
+Random_Spanish_Words.egg-info/SOURCES.txt
+Random_Spanish_Words.egg-info/dependency_links.txt
+Random_Spanish_Words.egg-info/top_level.txt
+random_spanish_words/Random_Spanish_Words.py
+random_spanish_words/__init__.py
