@@ -1,0 +1,8 @@
+README.md
+setup.py
+py_steamcmd_wrapper.egg-info/PKG-INFO
+py_steamcmd_wrapper.egg-info/SOURCES.txt
+py_steamcmd_wrapper.egg-info/dependency_links.txt
+py_steamcmd_wrapper.egg-info/requires.txt
+py_steamcmd_wrapper.egg-info/top_level.txt
+pysteamcmdwrapper/__init__.py
