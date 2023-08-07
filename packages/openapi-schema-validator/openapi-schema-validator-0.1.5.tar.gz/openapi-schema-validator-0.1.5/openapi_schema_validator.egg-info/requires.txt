@@ -1,0 +1,12 @@
+isodate
+jsonschema>=3.0.0
+six
+
+[isodate]
+isodate
+
+[rfc3339_validator]
+rfc3339-validator
+
+[strict_rfc3339]
+strict-rfc3339
