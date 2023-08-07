@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_facts = simplebot_facts
+
