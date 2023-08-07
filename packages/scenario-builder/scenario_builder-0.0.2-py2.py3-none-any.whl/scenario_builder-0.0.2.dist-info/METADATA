@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: scenario-builder
+Version: 0.0.2
+Summary: Tools to build scenario inputs from historical data or future assumptions
+Home-page: https://github.com/reegis/scenario_builder
+Author: reegis
+Author-email: krien@uni-bremen.de
+License: MIT
+Project-URL: Documentation, https://scenario_builder.readthedocs.io/
+Project-URL: Changelog, https://scenario_builder.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/reegis/scenario_builder/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: pandas
+Provides-Extra: reegis
+Requires-Dist: reegis ; extra == 'reegis'
+
+========
+Overview
+========
+
+
+
+Tools to build scenario inputs from historical data or future assumptions
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install scenario-builder
+
+You can also install the in-development version with::
+
+    pip install https://github.com/reegis/scenario_builder/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://scenario_builder.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+v0.0.2 (2021-03-25)
+-------------------
+
+* Add scenario builder for deflex
+
+v0.0.1 (2020-08-06)
+-------------------
+
+* First release on PyPI.
+
+
