@@ -1,0 +1,10 @@
+README.md
+setup.py
+strudra/__init__.py
+strudra/strudra.py
+strudra.egg-info/PKG-INFO
+strudra.egg-info/SOURCES.txt
+strudra.egg-info/dependency_links.txt
+strudra.egg-info/not-zip-safe
+strudra.egg-info/requires.txt
+strudra.egg-info/top_level.txt
