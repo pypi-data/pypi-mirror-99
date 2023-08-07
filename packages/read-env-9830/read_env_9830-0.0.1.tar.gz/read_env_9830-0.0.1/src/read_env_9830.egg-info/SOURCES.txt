@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/read_env_9830/__init__.py
+src/read_env_9830/__main__.py
+src/read_env_9830/impl.py
+src/read_env_9830.egg-info/PKG-INFO
+src/read_env_9830.egg-info/SOURCES.txt
+src/read_env_9830.egg-info/dependency_links.txt
+src/read_env_9830.egg-info/entry_points.txt
+src/read_env_9830.egg-info/top_level.txt
