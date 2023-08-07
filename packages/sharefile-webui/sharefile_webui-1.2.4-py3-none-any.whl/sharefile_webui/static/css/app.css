@@ -1,0 +1,123 @@
+body{
+    font-family: monospace;
+}
+a {
+    color: black;
+    font-weight: bold;  
+}
+
+.app-header {
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.app-header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-header-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#dir-context {
+    height: 32px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-image: url(../img/folder-open-regular.svg);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    padding: 16px 0 0 40px;
+}
+
+#disk-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+div#disk-info>div {
+    color: #aaa;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.dir-container {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    background-image: url(../img/folder-regular.svg);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-top: 4px;
+}
+
+.dir-container:hover {
+    background-color: #eee;
+}
+
+
+.dir {
+    padding: 2px 20px 2px 20px;
+}
+
+.file-container, .file-container-token {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    background-image: url(../img/file-regular.svg);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-top: 4px;
+}
+
+.file-container-token {
+    background-image: url(../img/file-download-solid.svg);
+}
+
+.file-container:hover {
+    background-color: #eee;
+}
+
+.file, .filesize {
+    padding: 2px 20px 2px 0;
+    display: inline;
+}
+.file {
+    padding: 2px 20px 2px 28px;
+}
+
+.filesize {
+    color: gray;
+}
+
+#fileupload {
+    margin-top: 10px;
+}
+
+/* Buttons */
+.img-buttons button {
+    width: 24px;
+    height: 24px;
+    position:relative;
+}
+
+.img-buttons button>img {
+    width: 16px;
+    height: 16px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-8px;
+    margin-top:-8px;
+}
