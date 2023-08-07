@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+npx/__about__.py
+npx/__init__.py
+npx/_krylov.py
+npx/_main.py
+npx.egg-info/PKG-INFO
+npx.egg-info/SOURCES.txt
+npx.egg-info/dependency_links.txt
+npx.egg-info/entry_points.txt
+npx.egg-info/requires.txt
+npx.egg-info/top_level.txt
+test/test_krylov.py
+test/test_npx.py
