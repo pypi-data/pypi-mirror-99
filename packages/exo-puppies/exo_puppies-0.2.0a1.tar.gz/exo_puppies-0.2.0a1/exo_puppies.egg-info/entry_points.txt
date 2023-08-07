@@ -1,0 +1,3 @@
+[console_scripts]
+pup = puppies.__main__:main
+
