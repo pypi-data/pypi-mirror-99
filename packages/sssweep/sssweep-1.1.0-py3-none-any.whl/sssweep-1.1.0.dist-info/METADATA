@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sssweep
+Version: 1.1.0
+Summary: Automatic task generation for SuperSim sweeps and plot web viewer
+Home-page: http://github.com/ssnetsim/sssweep
+Author: Nic McDonald
+Author-email: n.mcdonald83@gmail.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: taskrun (>=4.0.0)
+Requires-Dist: ssplot (>=1.2.0)
+
+UNKNOWN
+
+
