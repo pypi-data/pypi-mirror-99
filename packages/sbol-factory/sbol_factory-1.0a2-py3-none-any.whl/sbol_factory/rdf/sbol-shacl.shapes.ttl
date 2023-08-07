@@ -1,0 +1,21 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shacl: <http://sbols.org/v3/shacl#> .
+@prefix sbol: <http://sbols.org/v3#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sbols.org/v3> sh:declare sbol:PrefixDeclaration .
+
+sbol:PrefixDeclaration
+  a sh:PrefixDeclaration ;
+  sh:namespace "http://sbols.org/v3#"^^xsd:anyURI ;
+  sh:prefix "sbol" ;
+.
+
+shacl:ComponentHasFeatureShape
+	a sh:NodeShape ;
+	sh:targetClass sbol:Component ;
+	sh:property [
+		sh:path sbol:hasFeature ;
+		sh:class sbol:Feature ;
+	] ;
+.
