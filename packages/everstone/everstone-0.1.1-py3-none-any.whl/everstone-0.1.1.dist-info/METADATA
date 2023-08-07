@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: everstone
+Version: 0.1.1
+Summary: Simple Database Query Generator
+Home-page: https://github.com/scragly/everstone
+License: MIT
+Keywords: sql,query,generator,simple
+Author: scragly
+Author-email: 29337040+scragly@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Dist: asyncpg (>=0.22.0,<0.23.0)
+Requires-Dist: sqlparse (>=0.4.1,<0.5.0)
+Project-URL: Repository, https://github.com/scragly/everstone
+Description-Content-Type: text/markdown
+
+# everstone
+
+The simple database query generator.
+
