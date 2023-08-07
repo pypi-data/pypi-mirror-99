@@ -1,0 +1,5 @@
+sunpy[net]>=2.1
+
+[tests]
+pytest
+pytest-cov
