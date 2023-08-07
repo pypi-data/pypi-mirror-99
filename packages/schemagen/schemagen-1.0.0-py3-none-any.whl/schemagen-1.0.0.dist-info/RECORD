@@ -1,0 +1,12 @@
+env/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+env/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+schema_gen/__init__.py,sha256=qDBnRwCesbp1i8cw44OZqQLbNR3ttr0ODKgWyEnAhF0,18411
+schema_gen/__main__.py,sha256=NE3ZuTV2GAOmoQZrjZYix8FVpQIpFJGQqtrtbaguUas,744
+schema_gen/codegen/__init__.py,sha256=tpBHPVNyaOwAusgUeGl24iLMUsGJWyk4k3bXqVlTBvw,13837
+schema_gen/errors/__init__.py,sha256=PH8L_pRoAquHaKscCuQD32jwd0xeXqs1_-Vy1SXheIs,499
+schema_gen/utils/__init__.py,sha256=EVUsCsOWamu5yALkQ7Y2r8pzQzp_FWehodhxeRH88_A,2745
+schemagen-1.0.0.dist-info/LICENSE,sha256=nKqQCuPWN99_dZernpdhOCx67AmvJsi-MFy9rQNH5Sk,1069
+schemagen-1.0.0.dist-info/METADATA,sha256=qN_9-S7lhzLWsDB7zv2ekqQfdSS62hexcNVb-ZpcSUU,2258
+schemagen-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+schemagen-1.0.0.dist-info/top_level.txt,sha256=X42ewC-vGb0DZNFIAb2yYosB-roPyYPXIbxYJo1XW24,15
+schemagen-1.0.0.dist-info/RECORD,,
