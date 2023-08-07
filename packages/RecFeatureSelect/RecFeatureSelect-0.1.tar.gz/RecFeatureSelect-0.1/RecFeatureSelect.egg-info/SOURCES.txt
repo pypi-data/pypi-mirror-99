@@ -1,0 +1,10 @@
+README.md
+setup.py
+RecFeatureSelect/__init__.py
+RecFeatureSelect/_main.py
+RecFeatureSelect.egg-info/PKG-INFO
+RecFeatureSelect.egg-info/SOURCES.txt
+RecFeatureSelect.egg-info/dependency_links.txt
+RecFeatureSelect.egg-info/requires.txt
+RecFeatureSelect.egg-info/top_level.txt
+test/test_operations.py
