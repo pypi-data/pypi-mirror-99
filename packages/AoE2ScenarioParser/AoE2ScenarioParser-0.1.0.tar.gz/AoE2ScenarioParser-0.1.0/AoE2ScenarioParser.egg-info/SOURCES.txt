@@ -1,0 +1,7 @@
+README.md
+setup.py
+AoE2ScenarioParser.egg-info/PKG-INFO
+AoE2ScenarioParser.egg-info/SOURCES.txt
+AoE2ScenarioParser.egg-info/dependency_links.txt
+AoE2ScenarioParser.egg-info/requires.txt
+AoE2ScenarioParser.egg-info/top_level.txt
