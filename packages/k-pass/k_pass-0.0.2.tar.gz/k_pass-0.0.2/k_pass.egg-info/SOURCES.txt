@@ -1,0 +1,8 @@
+README.md
+setup.py
+k_pass/__init__.py
+k_pass/random_password.py
+k_pass.egg-info/PKG-INFO
+k_pass.egg-info/SOURCES.txt
+k_pass.egg-info/dependency_links.txt
+k_pass.egg-info/top_level.txt
