@@ -1,0 +1,35 @@
+# pypi-packaging-template
+[Badge](https://img.shields.io/docker/v/Bhavnicksm/pypi-packaging-template/0.0.1)
+
+This is a basic template that I keep updated with PyPi packaging best practices in an effort to speed up the process of packaging my python based git repositories. I hope you find these of use to you. 
+
+This README.md file is also made as a general template so as to be useful for other projects.   
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install example-pkg.
+
+```bash
+pip install example-pkg
+```
+
+## Usage
+
+```python
+# this is some python code.
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## References
+
+*  [Python's Official Packaging Tutorial](https://packaging.python.org/tutorials/packaging-projects/): A tutorial on how to get your own PyPi package.
+*  [Choose a license](https://choosealicense.com/): A site that explains all the different Licenses out there and which you need to choose for you project.
+*  [Make a ReadMe](https://www.makeareadme.com/): Another really helpful site explaining what are READMEs and how to make them. 
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
