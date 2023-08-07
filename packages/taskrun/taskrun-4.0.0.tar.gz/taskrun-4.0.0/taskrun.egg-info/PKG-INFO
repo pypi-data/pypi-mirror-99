@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: taskrun
+Version: 4.0.0
+Summary: Parallel task management with dependencies
+Home-page: http://github.com/nicmcd/taskrun
+Author: Nic McDonald
+Author-email: n.mcdonald83@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
