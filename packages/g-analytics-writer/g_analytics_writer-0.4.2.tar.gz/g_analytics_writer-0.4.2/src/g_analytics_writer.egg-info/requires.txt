@@ -1,0 +1,7 @@
+metadata_utils>=0.1.0
+six
+
+[testing]
+pyramid
+webob
+pytest
