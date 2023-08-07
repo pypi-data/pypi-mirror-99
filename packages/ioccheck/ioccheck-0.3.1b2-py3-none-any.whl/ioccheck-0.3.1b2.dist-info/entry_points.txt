@@ -1,0 +1,3 @@
+[console_scripts]
+ioccheck=ioccheck.cli:run
+
