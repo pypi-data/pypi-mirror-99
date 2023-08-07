@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/program_9ef5/__init__.py
+src/program_9ef5/impl.py
+src/program_9ef5.egg-info/PKG-INFO
+src/program_9ef5.egg-info/SOURCES.txt
+src/program_9ef5.egg-info/dependency_links.txt
+src/program_9ef5.egg-info/entry_points.txt
+src/program_9ef5.egg-info/requires.txt
+src/program_9ef5.egg-info/top_level.txt
