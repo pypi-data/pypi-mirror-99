@@ -1,0 +1,11 @@
+patiencediff-0.2.2.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+patiencediff-0.2.2.dist-info/AUTHORS,sha256=agJIh_FY3QLkFOEg4NqMFWDHaChcJLMsJUM2T7ZYiJQ,151
+patiencediff-0.2.2.dist-info/top_level.txt,sha256=9Mncbfd7xqQjLxxMRuzuByMuXkSf-4b5BeoGu4nBOgM,13
+patiencediff-0.2.2.dist-info/RECORD,,
+patiencediff-0.2.2.dist-info/WHEEL,sha256=FiqQlAjJaNkTzEQ83WucMQt92I9UvESk2-_9bkh9S1s,112
+patiencediff-0.2.2.dist-info/METADATA,sha256=De7q0fZucPZd2MDpadbraMUO1ijZYDUl3Y0eGQVtgsU,2009
+patiencediff/_patiencediff_py.py,sha256=OyPy-XOvRoYF4H1GiyEgTefP-s20WQ_eP3ZhtNLJp_Q,9170
+patiencediff/__init__.py,sha256=SZh7Tuei1EBr_i0sjhEntV7MjGGp5SUywVFp0_YbaKo,5001
+patiencediff/_patiencediff_c.cpython-39-aarch64-linux-gnu.so,sha256=5X5J_hDfvDugJA1HMrb6g8lJ5BWnmTqhUjBOAEB72Q0,151616
+patiencediff/__main__.py,sha256=JzZhEPHNyvDGIVrC5CDM64QAXAXrpOUdk2Q8OkrLlz0,1851
+patiencediff/test_patiencediff.py,sha256=aQbemfIlYNx0d1eMFp1DdwHeeW24ak9ghJk4ZVm7lJw,22975
