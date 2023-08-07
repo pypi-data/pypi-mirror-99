@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: random-standup
+Version: 0.1.0
+Summary: Standup Randomizer
+License: BSD 3-Clause License
+Author: jidicula
+Author-email: johanan@forcepush.tech
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: tomlkit (>=0.7.0,<0.8.0)
