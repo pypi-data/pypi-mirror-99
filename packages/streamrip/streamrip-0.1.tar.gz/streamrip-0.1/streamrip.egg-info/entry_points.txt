@@ -1,0 +1,4 @@
+[console_scripts]
+rip = streamrip.cli:main
+streamrip = streamrip.cli:main
+
