@@ -1,0 +1,13 @@
+dwdat2py/DWDataReaderHeader.py,sha256=BGxS9pci7QjGKGPWo6nBBoSdOZ2lFM8yBuuEzgR7tuE,3574
+dwdat2py/__init__.py,sha256=BPp3KcGS6gFxkePh2FruaCnIV7XLa9SYS6jQI42tB7Q,3236
+dwdat2py/wrappers.py,sha256=uZYV58-Kf590VeQQ0jKOE6t-b_6Jd2G-Evd9JgyRGeI,21481
+dwdat2py/libs/DWDataReaderLib.dll,sha256=syhln4QBQ9e4Z0QbV41UBhdDEiea2gjj7vAEUVkksY8,415232
+dwdat2py/libs/DWDataReaderLib.so,sha256=i4LMskuP7EiX94WDyFQu7rX3tJstyVkVw1FJWjbk_AI,476527
+dwdat2py/libs/DWDataReaderLib64.dll,sha256=OVMjgc3HxlBrY4RMlBmdoG4gfLloom1-A4wXPGGhaAQ,488960
+dwdat2py/libs/DWDataReaderLib64.so,sha256=mWEw-iXosLPzKhYjuZQYvLb2uLRVfX6i_na2Y2sxdhY,483963
+dwdat2py/libs/DWDataReaderv.doc.txt,sha256=VxoxNdnpxsCNrALvmTkmeZPmaOTYESqYh3vLo6QrZjI,14056
+dwdat2py-0.3.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dwdat2py-0.3.0.dist-info/METADATA,sha256=Mg5xpEohwSD8X_BTSYjbdZA-n_CILXmerN6-89tgR2Q,5603
+dwdat2py-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dwdat2py-0.3.0.dist-info/top_level.txt,sha256=mziNUe8ejwd9K3qfQttElvrSdh6yYK3VRSufv-AM7Xs,9
+dwdat2py-0.3.0.dist-info/RECORD,,
