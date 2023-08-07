@@ -1,0 +1,3 @@
+[console_scripts]
+jinjarecurse = jinjarecurse.main:main
+
