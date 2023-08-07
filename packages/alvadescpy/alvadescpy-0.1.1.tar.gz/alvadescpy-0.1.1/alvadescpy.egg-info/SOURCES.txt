@@ -1,0 +1,10 @@
+README.md
+setup.py
+alvadescpy/__init__.py
+alvadescpy/functions.py
+alvadescpy/wrapper.py
+alvadescpy.egg-info/PKG-INFO
+alvadescpy.egg-info/SOURCES.txt
+alvadescpy.egg-info/dependency_links.txt
+alvadescpy.egg-info/not-zip-safe
+alvadescpy.egg-info/top_level.txt
