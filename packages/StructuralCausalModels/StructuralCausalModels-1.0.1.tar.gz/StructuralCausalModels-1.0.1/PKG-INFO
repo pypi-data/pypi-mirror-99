@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: StructuralCausalModels
+Version: 1.0.1
+Summary: A Python package for Structural Causal Models.
+Home-page: https://github.com/Black-Swan-ICL/PySCMs
+Author: K. M-H
+Author-email: kmh.pro@protonmail.com
+License: MIT
+Description: # StructuralCausalModels
+        A Python package implementing Structural Causal Models (SCMs).
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
