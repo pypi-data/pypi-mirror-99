@@ -1,0 +1,9 @@
+stan/__init__.py,sha256=W4B5qqNoLsG7UAbPIE8Sg_wpPdoEt1NcSHJyQ_AaYs0,160
+stan/common.py,sha256=0tiQ1V5_vfr39Wu9L2RsaAe-lqAnHrEy1G5378wm-uk,1670
+stan/fit.py,sha256=WyDJER_Btz6ypOf3ZCdvinxOL_JKxlAZdNR0LYKjt9Q,9481
+stan/model.py,sha256=VVy_LLo1HJu6-s8jHwqnFAPCUI23UEaZ5IiSwT_fBas,19405
+stan/plugins.py,sha256=ws97HM6h6Ng7KWb5-QccgjIYVbPGmGmvXuyyDHwMUug,1350
+pystan-3.0.0.dist-info/LICENSE,sha256=nzHyGF-8OaSvIeSvmIUc7YH_F32xWLDFr49Z3RkECz8,749
+pystan-3.0.0.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+pystan-3.0.0.dist-info/METADATA,sha256=PHdMkGj5deMkWZq2SB_wbgazE_hG--0JVH6z1tO5S-I,3610
+pystan-3.0.0.dist-info/RECORD,,
