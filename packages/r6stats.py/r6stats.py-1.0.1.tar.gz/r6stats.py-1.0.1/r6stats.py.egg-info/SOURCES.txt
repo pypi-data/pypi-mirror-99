@@ -1,0 +1,14 @@
+README.md
+setup.py
+r6stats/__init__.py
+r6stats/exceptions.py
+r6stats/operators.py
+r6stats/platforms.py
+r6stats/result.py
+r6stats/seasons.py
+r6stats/stats.py
+r6stats.py.egg-info/PKG-INFO
+r6stats.py.egg-info/SOURCES.txt
+r6stats.py.egg-info/dependency_links.txt
+r6stats.py.egg-info/requires.txt
+r6stats.py.egg-info/top_level.txt
