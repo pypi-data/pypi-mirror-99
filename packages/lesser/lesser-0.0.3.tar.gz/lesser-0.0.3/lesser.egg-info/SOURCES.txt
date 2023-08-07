@@ -1,0 +1,7 @@
+README.md
+lesser.py
+setup.py
+lesser.egg-info/PKG-INFO
+lesser.egg-info/SOURCES.txt
+lesser.egg-info/dependency_links.txt
+lesser.egg-info/top_level.txt
