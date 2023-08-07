@@ -1,0 +1,4 @@
+loguru
+cloudscraper
+requests
+python-box
