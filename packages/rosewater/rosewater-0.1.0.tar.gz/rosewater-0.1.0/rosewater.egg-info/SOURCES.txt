@@ -1,0 +1,9 @@
+README.md
+rosewater.py
+setup.py
+rosewater.egg-info/PKG-INFO
+rosewater.egg-info/SOURCES.txt
+rosewater.egg-info/dependency_links.txt
+rosewater.egg-info/entry_points.txt
+rosewater.egg-info/requires.txt
+rosewater.egg-info/top_level.txt
