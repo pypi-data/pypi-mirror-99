@@ -1,0 +1,6 @@
+pyramid
+pyramid_debugtoolbar>=4.0
+six
+
+[testing]
+pytest
