@@ -1,0 +1,3 @@
+[console_scripts]
+program_9ef5 = program_9ef5.__main__:main
+
