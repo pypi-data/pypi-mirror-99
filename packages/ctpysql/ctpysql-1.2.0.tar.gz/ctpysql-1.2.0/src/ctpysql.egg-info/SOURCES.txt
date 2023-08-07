@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/ctpysql.py
+src/ctpysql.egg-info/PKG-INFO
+src/ctpysql.egg-info/SOURCES.txt
+src/ctpysql.egg-info/dependency_links.txt
+src/ctpysql.egg-info/requires.txt
+src/ctpysql.egg-info/top_level.txt
