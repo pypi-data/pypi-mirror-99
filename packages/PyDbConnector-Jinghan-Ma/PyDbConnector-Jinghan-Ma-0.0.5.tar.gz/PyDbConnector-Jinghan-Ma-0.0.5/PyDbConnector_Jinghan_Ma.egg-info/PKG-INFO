@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PyDbConnector-Jinghan-Ma
+Version: 0.0.5
+Summary: py package for h10 db connection
+Home-page: https://github.com/jm-h10/utility_jma/tree/main/PyDbConnector
+Author: Jinghan Ma
+Author-email: jinghan.m@helium10.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jm-h10/utility_jma/tree/main/PyDbConnector
+Description: # PyDbConnector Package
+        
+        This is a package for helium10 data team. In summary, you need the db_connection.py and oauth_config.py to be able to call the connectors and get connected to the h10 databases.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
